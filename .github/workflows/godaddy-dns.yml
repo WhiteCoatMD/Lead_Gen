@@ -1,12 +1,24 @@
 name: Connect lead-generation domains
 
+# Points each portfolio domain at its Vercel project.
+#
+# SAFETY: this workflow only ever touches web-routing records, namely
+#   - A / AAAA on the apex (@)
+#   - A / AAAA / CNAME on www
+# Every other record is left untouched, including MX, SPF/DKIM/DMARC and any
+# other TXT, SRV, CAA, NS or subdomain record. Vercel required no domain
+# verification TXT records for these zones, so none are added.
+#
+# Manual only. The previous every-5-minutes schedule was removed once the
+# domains were live, so it can no longer rewrite DNS behind your back.
+
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - .github/workflows/godaddy-dns.yml
-  schedule:
-    - cron: "*/5 * * * *"
+    inputs:
+      dry_run:
+        description: "Report the planned changes without writing"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -15,100 +27,231 @@ jobs:
   update-dns:
     runs-on: ubuntu-latest
     steps:
-      - name: Update approved web DNS records
+      - name: Point web records at Vercel
         env:
           GODADDY_PAT: ${{ secrets.GODADDY_PAT || secrets.GODADDY_TOKEN || secrets.GODADDY_API_KEY }}
+          DRY_RUN: ${{ inputs.dry_run }}
         run: |
           node <<'NODE'
           const token = process.env.GODADDY_PAT;
           if (!token) throw new Error("Missing GODADDY_PAT repository secret");
+          const dryRun = process.env.DRY_RUN === "true";
 
           const sites = [
             {
-              zone: "twincityfences.com",
-              a: ["162.159.143.30", "172.66.3.26"],
-              cname: "custom-domains.chatgpt.site.",
-              txt: {
-                "_openai-site-verification": "openai-site-verification=WiCyHQD6ej3tkF-C-8xH6xRGpW2Ui4iX5O0SlSyiCm8",
-                "_cf-custom-hostname": "01c1aa67-69ad-4d61-aacc-9cefe4f27f1e",
-                "_openai-site-verification.www": "openai-site-verification=ehfSTC4aqJu7t9TqsNLF3ZDGGJVwza7Fu5ZOsp8Qoi8",
-                "_cf-custom-hostname.www": "38abdf98-c197-4051-95f4-5e00b1672e8f"
-              }
+              "slug": "birds-nest-flower-shop",
+              "zone": "birdsnestflowershop.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "239462f9ad0df09c.vercel-dns-016.com."
             },
             {
-              zone: "birdsnestflowershop.com",
-              a: ["162.159.143.30", "172.66.3.26"],
-              cname: "custom-domains.chatgpt.site.",
-              txt: {
-                "_openai-site-verification": "openai-site-verification=uI1jn3Rj1hz9gPP8u1q2QQzinFkOvIjcWhrs2gOInKA",
-                "_cf-custom-hostname": "3b84ed62-ed45-4b32-8725-298db9687d2d",
-                "_openai-site-verification.www": "openai-site-verification=ez9RzGRLhxrcIHKdt1WONb2ZhRbezn_fpe_jwA_e_Cw",
-                "_cf-custom-hostname.www": "0621c257-58e5-4703-9523-50c55e5ba0ec"
-              }
+              "slug": "cactus-removal-tucson",
+              "zone": "cactusremovalservice.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "1b6a469942d39fae.vercel-dns-016.com."
+            },
+            {
+              "slug": "chicago-eifs-stucco",
+              "zone": "eifschicago.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "480f1708d7436567.vercel-dns-016.com."
+            },
+            {
+              "slug": "flooring-monroe",
+              "zone": "flooring-monroe.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "8afadbcb4d7b5ee5.vercel-dns-016.com."
+            },
+            {
+              "slug": "lake-charles-fences",
+              "zone": "fenceslakecharles.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "9f03a57670e5ef94.vercel-dns-016.com."
+            },
+            {
+              "slug": "scaffolding-los-angeles",
+              "zone": "scaffoldingrentalusa.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "d9a13b7c90486313.vercel-dns-016.com."
+            },
+            {
+              "slug": "stucco-repair-chicago",
+              "zone": "stuccorepairchicago.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "5af0c0fbd7c99bc4.vercel-dns-016.com."
+            },
+            {
+              "slug": "tow-truck-arlington",
+              "zone": "towing-arlington.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "b304bd82c7a45998.vercel-dns-016.com."
+            },
+            {
+              "slug": "towing-dallas",
+              "zone": "dallastowtrucks.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "d8d6005e5acec2f1.vercel-dns-016.com."
+            },
+            {
+              "slug": "towing-jonesboro",
+              "zone": "towingcompanyjonesboro.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "24f81f30081338db.vercel-dns-016.com."
+            },
+            {
+              "slug": "twin-city-fences",
+              "zone": "twincityfences.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "a26e45dd16eca35c.vercel-dns-016.com."
+            },
+            {
+              "slug": "twin-city-handyman",
+              "zone": "twincity-handyman.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "91dcff257fcef91d.vercel-dns-016.com."
             }
           ];
 
-          const normalized = value => String(value).replace(/\.$/, "").toLowerCase();
+          // The only records this workflow is ever allowed to create, replace or delete.
+          const mayTouch = (record) =>
+            (record.name === "@" && ["A", "AAAA"].includes(record.type)) ||
+            (record.name === "www" && ["A", "AAAA", "CNAME"].includes(record.type));
+
+          const normalized = (value) => String(value).replace(/.$/, "").toLowerCase();
 
           async function request(zone, path = "", options = {}) {
             const base = `https://api.godaddy.com/v3/domains/zones/${zone}/dns-records`;
             const response = await fetch(base + path, {
               ...options,
-              headers: {
-                Authorization: `Bearer ${token}`,
-                "Content-Type": "application/json",
-                ...(options.headers || {})
-              }
+              headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json", ...(options.headers || {}) }
             });
             const body = response.status === 204 ? null : await response.json().catch(() => null);
-            if (!response.ok) throw new Error(`${zone}: ${options.method || "GET"} failed (${response.status}) ${JSON.stringify(body)}`);
+            if (!response.ok) {
+              const error = new Error(`${zone}: ${options.method || "GET"} ${response.status} ${JSON.stringify(body)}`);
+              error.status = response.status;
+              throw error;
+            }
             return body;
           }
 
-          async function list(zone) {
-            return (await request(zone, "?pageSize=100&totalRequired=true")).items || [];
-          }
-          async function create(zone, record) {
-            await request(zone, "", {method:"POST", body:JSON.stringify(record)});
+          const list = async (zone) => (await request(zone, "?pageSize=100&totalRequired=true")).items || [];
+
+          async function apply(zone, record) {
+            if (!mayTouch(record)) throw new Error(`refusing to write ${record.type} ${record.name} in ${zone}`);
+            if (dryRun) return;
+            await request(zone, "", { method: "POST", body: JSON.stringify(record) });
           }
           async function replace(zone, id, record) {
-            await request(zone, `/${encodeURIComponent(id)}`, {method:"PUT", body:JSON.stringify(record)});
+            if (!mayTouch(record)) throw new Error(`refusing to replace into ${record.type} ${record.name} in ${zone}`);
+            if (dryRun) return;
+            await request(zone, `/${encodeURIComponent(id)}`, { method: "PUT", body: JSON.stringify(record) });
           }
-          async function remove(zone, id) {
-            await request(zone, `/${encodeURIComponent(id)}`, {method:"DELETE"});
+          async function remove(zone, record) {
+            if (!mayTouch(record)) throw new Error(`refusing to delete ${record.type} ${record.name} in ${zone}`);
+            if (dryRun) return;
+            await request(zone, `/${encodeURIComponent(record.recordId)}`, { method: "DELETE" });
           }
-          async function setGroup(zone, type, name, values) {
-            const current = (await list(zone)).filter(r => r.type === type && r.name === name);
-            const desired = values.map(data => ({type,name,data,ttl:600}));
-            for (let i=0;i<desired.length;i++) {
-              if (current[i]) await replace(zone,current[i].recordId,desired[i]);
-              else await create(zone,desired[i]);
+
+          async function setGroup(zone, existing, type, name, values) {
+            const current = existing.filter((r) => r.type === type && r.name === name);
+            const desired = values.map((data) => ({ type, name, data, ttl: 600 }));
+            for (let i = 0; i < desired.length; i++) {
+              if (current[i]) await replace(zone, current[i].recordId, desired[i]);
+              else await apply(zone, desired[i]);
             }
-            for (const extra of current.slice(desired.length)) await remove(zone,extra.recordId);
+            for (const extra of current.slice(desired.length)) await remove(zone, extra);
           }
 
+          let failed = 0, skipped = 0, done = 0;
           for (const site of sites) {
-            const existing = await list(site.zone);
-            for (const record of existing.filter(r =>
-              (r.name === "@" && r.type === "AAAA") ||
-              (r.name === "www" && ["A","AAAA"].includes(r.type))
-            )) await remove(site.zone,record.recordId);
+            let existing;
+            try {
+              existing = await list(site.zone);
+            } catch (error) {
+              console.log(`SKIPPED ${site.zone}: cannot read zone (${error.status}). Domain is not manageable in this GoDaddy account.`);
+              skipped++;
+              continue;
+            }
 
-            await setGroup(site.zone,"A","@",site.a);
-            await setGroup(site.zone,"CNAME","www",[site.cname]);
-            for (const [name,data] of Object.entries(site.txt)) await setGroup(site.zone,"TXT",name,[data]);
+            const before = existing.filter(mayTouch).map((r) => `${r.type} ${r.name} -> ${r.data}`);
+            const untouched = existing.filter((r) => !mayTouch(r));
+            console.log(`
+=== ${site.zone} ===`);
+            console.log(`  before: ${before.join(" ; ") || "(none)"}`);
+            console.log(`  preserving ${untouched.length} records, including ${untouched.filter((r) => r.type === "MX").length} MX and ${untouched.filter((r) => r.type === "TXT").length} TXT`);
+
+            try {
+              // drop apex AAAA and any www A/AAAA, then set apex A and www CNAME
+              for (const record of existing.filter((r) => (r.name === "@" && r.type === "AAAA") || (r.name === "www" && ["A", "AAAA"].includes(r.type)))) {
+                await remove(site.zone, record);
+              }
+              const afterRemoval = existing.filter((r) => !((r.name === "@" && r.type === "AAAA") || (r.name === "www" && ["A", "AAAA"].includes(r.type))));
+              await setGroup(site.zone, afterRemoval, "A", "@", site.a);
+              await setGroup(site.zone, afterRemoval, "CNAME", "www", [site.cname]);
+            } catch (error) {
+              console.log(`  FAILED: ${error.message}`);
+              failed++;
+              continue;
+            }
+
+            if (dryRun) { console.log("  dry run, nothing written"); done++; continue; }
 
             const final = await list(site.zone);
-            const expected = [
-              ...site.a.map(data=>["A","@",data]),
-              ["CNAME","www",site.cname],
-              ...Object.entries(site.txt).map(([name,data])=>["TXT",name,data])
-            ];
-            for (const [type,name,data] of expected) {
-              if (!final.some(r=>r.type===type && r.name===name && normalized(r.data)===normalized(data))) {
-                throw new Error(`${site.zone}: verification failed for ${type} ${name}`);
-              }
+            const expected = [...site.a.map((data) => ["A", "@", data]), ["CNAME", "www", site.cname]];
+            const missing = expected.filter(([type, name, data]) =>
+              !final.some((r) => r.type === type && r.name === name && normalized(r.data) === normalized(data)));
+            const mxBefore = existing.filter((r) => r.type === "MX").length;
+            const mxAfter = final.filter((r) => r.type === "MX").length;
+            if (missing.length) {
+              console.log(`  FAILED verification: ${missing.map((m) => m.join(" ")).join(", ")}`);
+              failed++;
+            } else if (mxAfter !== mxBefore) {
+              console.log(`  FAILED: MX count changed ${mxBefore} -> ${mxAfter}`);
+              failed++;
+            } else {
+              console.log(`  after:  ${final.filter(mayTouch).map((r) => `${r.type} ${r.name} -> ${r.data}`).join(" ; ")}`);
+              console.log(`  MX preserved: ${mxAfter}`);
+              done++;
             }
-            console.log(`${site.zone}: DNS updated and verified`);
           }
+
+          console.log(`
+${done} updated, ${skipped} skipped, ${failed} failed`);
+          if (failed) process.exit(1);
           NODE
