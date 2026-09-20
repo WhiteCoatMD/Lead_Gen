@@ -13,7 +13,7 @@ const outputDir = path.join(root, "dist", slug);
 await fs.rm(outputDir, { recursive: true, force: true });
 await fs.mkdir(path.join(outputDir, "assets"), { recursive: true });
 
-const required = ["name", "domain", "phone", "email", "city", "state", "headline", "services"];
+const required = ["name", "domain", "phone", "city", "state", "headline", "services"];
 const missing = required.filter((key) => !config[key] || (Array.isArray(config[key]) && !config[key].length));
 if (missing.length) throw new Error(`${slug} is missing required fields: ${missing.join(", ")}`);
 
