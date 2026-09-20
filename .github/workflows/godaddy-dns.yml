@@ -1,0 +1,121 @@
+name: Connect Twin City Fences domain
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/godaddy-dns.yml
+
+permissions:
+  contents: read
+
+jobs:
+  update-dns:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update only approved web DNS records
+        env:
+          GODADDY_PAT: ${{ secrets.GODADDY_PAT }}
+        run: |
+          node <<'NODE'
+          const zone = "twincityfences.com";
+          const apiBase = `https://api.godaddy.com/v3/domains/zones/${zone}/dns-records`;
+          const token = process.env.GODADDY_PAT;
+          if (!token) throw new Error("Missing GODADDY_PAT repository secret");
+
+          async function request(path = "", options = {}) {
+            const response = await fetch(apiBase + path, {
+              ...options,
+              headers: {
+                Authorization: `Bearer ${token}`,
+                "Content-Type": "application/json",
+                ...(options.headers || {})
+              }
+            });
+            const body = response.status === 204 ? null : await response.json().catch(() => null);
+            if (!response.ok) {
+              throw new Error(`${options.method || "GET"} ${path || "/"} failed (${response.status}): ${JSON.stringify(body)}`);
+            }
+            return body;
+          }
+
+          async function listRecords() {
+            const result = await request("?pageSize=100&totalRequired=true");
+            return result.items || [];
+          }
+
+          async function create(record) {
+            await request("", { method: "POST", body: JSON.stringify(record) });
+          }
+
+          async function replace(recordId, record) {
+            await request(`/${encodeURIComponent(recordId)}`, {
+              method: "PUT",
+              body: JSON.stringify(record)
+            });
+          }
+
+          async function remove(recordId) {
+            await request(`/${encodeURIComponent(recordId)}`, { method: "DELETE" });
+          }
+
+          async function setRecordGroup(records, type, name, desiredData) {
+            const current = records.filter(r => r.type === type && r.name === name);
+            const desired = desiredData.map(data => ({ type, name, data, ttl: 600 }));
+
+            for (let i = 0; i < desired.length; i++) {
+              if (current[i]) await replace(current[i].recordId, desired[i]);
+              else await create(desired[i]);
+            }
+            for (const extra of current.slice(desired.length)) {
+              await remove(extra.recordId);
+            }
+          }
+
+          let before = await listRecords();
+          console.log("Existing web records:", before.filter(r =>
+            (r.name === "@" && ["A", "AAAA"].includes(r.type)) ||
+            (r.name === "www" && ["A", "AAAA", "CNAME"].includes(r.type))
+          ));
+
+          // Remove only incompatible web-routing records. Email and unrelated DNS are untouched.
+          for (const record of before.filter(r =>
+            (r.name === "@" && r.type === "AAAA") ||
+            (r.name === "www" && ["A", "AAAA"].includes(r.type))
+          )) {
+            await remove(record.recordId);
+          }
+
+          let records = await listRecords();
+          await setRecordGroup(records, "A", "@", ["162.159.143.30", "172.66.3.26"]);
+
+          records = await listRecords();
+          await setRecordGroup(records, "CNAME", "www", ["custom-domains.chatgpt.site."]);
+
+          const txt = {
+            "_openai-site-verification": ["openai-site-verification=_tZw9JOZXI07poi7DdFpJgKoNSbofBMO_hp1gbHPdFM"],
+            "_cf-custom-hostname": ["505dd9e3-9eea-4de4-b2ba-a1b68c147a63"],
+            "_openai-site-verification.www": ["openai-site-verification=Ebt0DeSrtRhOq5BxS1My04rdf-DWGsOVJ4LUKjKnrRA"],
+            "_cf-custom-hostname.www": ["c9200de1-e87d-4c9f-aeef-f7bda165721d"]
+          };
+
+          for (const [name, values] of Object.entries(txt)) {
+            records = await listRecords();
+            await setRecordGroup(records, "TXT", name, values);
+          }
+
+          const after = await listRecords();
+          const expected = [
+            ["A", "@", "162.159.143.30"],
+            ["A", "@", "172.66.3.26"],
+            ["CNAME", "www", "custom-domains.chatgpt.site."],
+            ...Object.entries(txt).flatMap(([name, values]) => values.map(data => ["TXT", name, data]))
+          ];
+
+          for (const [type, name, data] of expected) {
+            if (!after.some(r => r.type === type && r.name === name && r.data === data)) {
+              throw new Error(`Verification failed for ${type} ${name} ${data}`);
+            }
+          }
+          console.log("Twin City Fences DNS records updated and verified.");
+          NODE
