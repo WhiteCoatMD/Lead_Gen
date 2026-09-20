@@ -73,3 +73,15 @@ These are not rebuilt, redeployed, or reconnected:
 - Stucco Repair Los Angeles
 - Stucco Repair Orlando
 - DunRite Towing Metairie
+
+## Domain status
+
+`towing-arlington.com` (DunRite Tow Truck Arlington) and
+`towingcompanyjonesboro.com` (DunRite Towing Jonesboro) are **not
+registered**. RDAP reports both as fully deleted, they return NXDOMAIN, and
+GoDaddy returns 409 and 404 for them respectively. Both sites are built and
+deployed, and both hostnames are already attached to their Vercel projects,
+so they will go live as soon as the domains are re-registered and their
+nameservers point at GoDaddy — no code or config change needed.
+
+The other ten domains are live on Vercel.
