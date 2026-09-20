@@ -76,12 +76,20 @@ These are not rebuilt, redeployed, or reconnected:
 
 ## Domain status
 
-`towing-arlington.com` (DunRite Tow Truck Arlington) and
-`towingcompanyjonesboro.com` (DunRite Towing Jonesboro) are **not
-registered**. RDAP reports both as fully deleted, they return NXDOMAIN, and
-GoDaddy returns 409 and 404 for them respectively. Both sites are built and
-deployed, and both hostnames are already attached to their Vercel projects,
-so they will go live as soon as the domains are re-registered and their
-nameservers point at GoDaddy — no code or config change needed.
+Ten of the thirteen domains are live on Vercel. The other three are not:
 
-The other ten domains are live on Vercel.
+- **DunRite Towing Jonesboro** (`towingcompanyjonesboro.com`) — **shelved.**
+  The domain lapsed and is fully deleted per RDAP. Not being re-registered.
+  The site is left built and deployed in case that changes.
+- **DunRite Tow Truck Arlington** (`towing-arlington.com`) — **on hold.**
+  Also lapsed and fully deleted (NXDOMAIN; GoDaddy returns 409). Undecided
+  whether to re-register.
+- **Deck Builder Monroe** (`deckbuildermonroe.com`) — waiting on a call
+  tracking number. The site ships with a placeholder phone that `npm run
+  audit` deliberately rejects, so it cannot reach the domain until the real
+  number is in.
+
+All three are built, deployed, and have both hostnames attached to their
+Vercel projects, so each goes live with no code change: the two towing sites
+as soon as their domains are re-registered and pointed at GoDaddy, and Deck
+Builder Monroe as soon as its phone number is set.
