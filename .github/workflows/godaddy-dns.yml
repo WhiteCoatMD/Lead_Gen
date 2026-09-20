@@ -211,8 +211,8 @@ jobs:
 
             const before = existing.filter(mayTouch).map((r) => `${r.type} ${r.name} -> ${r.data}`);
             const untouched = existing.filter((r) => !mayTouch(r));
-            console.log(`
-=== ${site.zone} ===`);
+          console.log("");
+          console.log(`=== ${site.zone} ===`);
             console.log(`  before: ${before.join(" ; ") || "(none)"}`);
             console.log(`  preserving ${untouched.length} records, including ${untouched.filter((r) => r.type === "MX").length} MX and ${untouched.filter((r) => r.type === "TXT").length} TXT`);
 
@@ -251,7 +251,7 @@ jobs:
             }
           }
 
-          console.log(`
-${done} updated, ${skipped} skipped, ${failed} failed`);
+          console.log("");
+          console.log(`${done} updated, ${skipped} skipped, ${failed} failed`);
           if (failed) process.exit(1);
           NODE
