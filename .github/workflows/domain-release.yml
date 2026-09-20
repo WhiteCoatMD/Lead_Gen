@@ -1,0 +1,81 @@
+name: Release a domain (disable auto-renew)
+
+# Turns OFF auto-renew for one domain so it lapses at its expiry date.
+# Does not delete the registration, so it stays reversible until expiry.
+# Requires an explicit domain name; there is no default and no schedule.
+
+on:
+  workflow_dispatch:
+    inputs:
+      domain:
+        description: "Exact domain to stop renewing"
+        required: true
+        type: string
+      confirm:
+        description: "Type RELEASE to confirm"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disable auto-renew
+        env:
+          GODADDY_PAT: ${{ secrets.GODADDY_PAT || secrets.GODADDY_TOKEN || secrets.GODADDY_API_KEY }}
+          DOMAIN: ${{ inputs.domain }}
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          node <<'NODE'
+          const token = process.env.GODADDY_PAT;
+          if (!token) throw new Error("Missing GODADDY_PAT repository secret");
+          const domain = (process.env.DOMAIN || "").trim().toLowerCase();
+          if (process.env.CONFIRM !== "RELEASE") throw new Error("Confirmation text did not match RELEASE");
+          if (!domain) throw new Error("No domain supplied");
+
+          const auth = { Authorization: "Bearer " + token, "Content-Type": "application/json" };
+
+          (async () => {
+            const readOne = async () => {
+              const res = await fetch("https://api.godaddy.com/v1/domains/" + domain, { headers: auth });
+              if (!res.ok) throw new Error("read failed " + res.status + " " + (await res.text().catch(() => "")).slice(0, 200));
+              return res.json();
+            };
+
+            const before = await readOne();
+            console.log("domain:      " + before.domain);
+            console.log("status:      " + before.status);
+            console.log("expires:     " + String(before.expires).slice(0, 10));
+            console.log("renewAuto:   " + before.renewAuto + "  (before)");
+
+            if (before.renewAuto === false) {
+              console.log("");
+              console.log("Already set to not renew. Nothing to do.");
+              return;
+            }
+
+            const res = await fetch("https://api.godaddy.com/v1/domains/" + domain, {
+              method: "PATCH", headers: auth, body: JSON.stringify({ renewAuto: false })
+            });
+            if (!res.ok) {
+              const detail = (await res.text().catch(() => "")).slice(0, 300);
+              console.log("");
+              console.log("WRITE FAILED " + res.status + " " + detail);
+              if (res.status === 403) console.log("The token is missing the domains.domain:update scope. Turn auto-renew off in the GoDaddy UI instead.");
+              process.exit(1);
+            }
+
+            const after = await readOne();
+            console.log("renewAuto:   " + after.renewAuto + "  (after)");
+            console.log("");
+            if (after.renewAuto === false) {
+              console.log("Released. " + domain + " will lapse on " + String(after.expires).slice(0, 10) + " unless auto-renew is turned back on.");
+            } else {
+              console.log("Verification failed: renewAuto is still " + after.renewAuto);
+              process.exit(1);
+            }
+          })();
+          NODE
