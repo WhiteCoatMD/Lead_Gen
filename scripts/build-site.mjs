@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderSite } from "../shared/render-site.mjs";
+import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const slug = process.argv[2];
@@ -17,8 +18,9 @@ const required = ["name", "domain", "phone", "city", "state", "headline", "servi
 const missing = required.filter((key) => !config[key] || (Array.isArray(config[key]) && !config[key].length));
 if (missing.length) throw new Error(`${slug} is missing required fields: ${missing.join(", ")}`);
 
-await fs.writeFile(path.join(outputDir, "index.html"), renderSite(config), "utf8");
-await fs.copyFile(path.join(root, "shared", "site.css"), path.join(outputDir, "site.css"));
+await fs.writeFile(path.join(outputDir, "index.html"), config.template === "birds-nest" ? renderBirdsNest(config) : renderSite(config), "utf8");
+const customCss = path.join(siteDir, "site.css");
+await fs.copyFile(await fs.stat(customCss).then(() => customCss).catch(() => path.join(root, "shared", "site.css")), path.join(outputDir, "site.css"));
 await fs.copyFile(path.join(root, "shared", "site.js"), path.join(outputDir, "site.js"));
 
 for (const asset of config.assets || []) {
