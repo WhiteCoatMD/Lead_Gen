@@ -1,0 +1,45 @@
+{
+  "name": "Deck Builder Monroe",
+  "domain": "deckbuildermonroe.com",
+  "phone": "318-000-0000",
+  "city": "Monroe",
+  "state": "Louisiana",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#2d6a4f",
+  "accentDark": "#1b4332",
+  "heroStyle": "plain",
+  "kicker": "Custom decks and outdoor living",
+  "headline": "Decks built for Louisiana summers.",
+  "intro": "Pressure-treated, cedar, and composite decks designed around heat, humidity, and afternoon storms, built by a local crew in Monroe and West Monroe.",
+  "sectionKicker": "Built for the Delta",
+  "sectionHeadline": "A deck that survives its first summer.",
+  "about": "North Louisiana is hard on outdoor wood. Standing humidity, long stretches above ninety degrees, and heavy spring rain will find every shortcut in a deck's framing. We build for that: proper footings below the frost line, joists spaced and flashed so water drains instead of sitting, hardware rated for treated lumber, and fasteners that will not bleed rust down your boards after one season. The result costs a little more up front and holds its shape for years longer.",
+  "servicesHeadline": "Decks, porches, and repairs.",
+  "services": [
+    {
+      "title": "Custom Wood Decks",
+      "description": "Pressure-treated pine and cedar decks built to your yard and grade, including multi-level layouts, stairs, and railing that meets code."
+    },
+    {
+      "title": "Composite Decking",
+      "description": "Low-maintenance composite and PVC boards that will not splinter, warp, or need sanding and staining every other spring."
+    },
+    {
+      "title": "Deck Repair and Restoration",
+      "description": "Board and joist replacement, footing and post repair, railing upgrades, and cleaning and re-sealing for decks worth saving."
+    },
+    {
+      "title": "Covered Porches and Pergolas",
+      "description": "Roofed porches, pergolas, and screened enclosures so the space is usable in August and through mosquito season."
+    }
+  ],
+  "serviceAreas": ["Monroe", "West Monroe", "Sterlington", "Ouachita Parish"],
+  "areaHeadline": "Serving Monroe and Ouachita Parish.",
+  "ctaHeadline": "Ready to plan your deck?",
+  "ctaCopy": "Tell us the size of the space, how you want to use it, and whether you are building new or repairing what is there. We will walk you through material options and what each one costs to keep up.",
+  "primaryCta": "Call for a free estimate",
+  "navCall": "Free estimate",
+  "footerLine": "Custom decks, covered porches, and deck repair in Monroe, Louisiana.",
+  "seoTitle": "Deck Builder Monroe LA | Custom Decks & Covered Porches",
+  "seoDescription": "Custom wood and composite decks, covered porches, and deck repair for homes across Monroe, West Monroe, and Ouachita Parish, Louisiana. Free estimates."
+}

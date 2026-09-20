@@ -65,6 +65,8 @@ for (const slug of slugs) {
 
   // --- phone CTAs ---
   const expected = `tel:+1${digits(cfg.phone).slice(-10)}`;
+  // a site must never ship with a stand-in number; every CTA is a tel: link
+  check(new Set(digits(cfg.phone).slice(-7)).size > 1, "placeholder phone number (" + cfg.phone + ")");
   const tels = html.split('href="tel:').slice(1).map((part) => "tel:" + part.slice(0, part.indexOf('"')));
   check(tels.length >= 4, `tel link count (${tels.length})`);
   check(tels.every((href) => href === expected), `tel mismatch: ${[...new Set(tels)].join(", ")}`);

@@ -66,6 +66,15 @@ jobs:
               "cname": "480f1708d7436567.vercel-dns-016.com."
             },
             {
+              "slug": "deck-builder-monroe",
+              "zone": "deckbuildermonroe.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "be3ea0261dc5f988.vercel-dns-016.com."
+            },
+            {
               "slug": "flooring-monroe",
               "zone": "flooring-monroe.com",
               "a": [
