@@ -39,7 +39,7 @@ jobs:
           const snapshot = {};
           (async () => {
             for (const zone of zones) {
-              const res = await fetch(`https://api.godaddy.com/v3/domains/zones/${zone}/dns-records?pageSize=500&totalRequired=true`,
+              const res = await fetch(`https://api.godaddy.com/v3/domains/zones/${zone}/dns-records?pageSize=100&totalRequired=true`,
                 { headers: { Authorization: `Bearer ${token}` } });
               if (!res.ok) {
                 const detail = await res.text().catch(() => "");
