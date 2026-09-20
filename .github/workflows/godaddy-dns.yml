@@ -29,10 +29,10 @@ jobs:
               a: ["162.159.143.30", "172.66.3.26"],
               cname: "custom-domains.chatgpt.site.",
               txt: {
-                "_openai-site-verification": "openai-site-verification=_tZw9JOZXI07poi7DdFpJgKoNSbofBMO_hp1gbHPdFM",
-                "_cf-custom-hostname": "505dd9e3-9eea-4de4-b2ba-a1b68c147a63",
-                "_openai-site-verification.www": "openai-site-verification=Ebt0DeSrtRhOq5BxS1My04rdf-DWGsOVJ4LUKjKnrRA",
-                "_cf-custom-hostname.www": "c9200de1-e87d-4c9f-aeef-f7bda165721d"
+                "_openai-site-verification": "openai-site-verification=WiCyHQD6ej3tkF-C-8xH6xRGpW2Ui4iX5O0SlSyiCm8",
+                "_cf-custom-hostname": "01c1aa67-69ad-4d61-aacc-9cefe4f27f1e",
+                "_openai-site-verification.www": "openai-site-verification=ehfSTC4aqJu7t9TqsNLF3ZDGGJVwza7Fu5ZOsp8Qoi8",
+                "_cf-custom-hostname.www": "38abdf98-c197-4051-95f4-5e00b1672e8f"
               }
             },
             {

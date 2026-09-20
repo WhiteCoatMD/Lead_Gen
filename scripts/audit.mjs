@@ -24,6 +24,7 @@ const rows = [];
 for (const slug of slugs) {
   const cfg = JSON.parse(await fs.readFile(path.join(root, "sites", slug, "site.json"), "utf8"));
   const out = path.join(root, "dist", slug);
+  const shared = !cfg.template;                   // the shared contractor template
   const problems = [];
   const check = (ok, message) => { if (!ok) problems.push(message); };
 
@@ -38,8 +39,9 @@ for (const slug of slugs) {
   check(desc && desc.length > 50 && desc.length <= 175, `description length (${desc ? desc.length : 0})`);
   check(html.includes(`<link rel="canonical" href="https://${cfg.domain}/">`), "canonical URL");
   check(!cfg.domain.startsWith("www."), "domain should be apex");
+  check(html.includes('property="og:title"') && html.includes('property="og:url"'), "Open Graph tags");
 
-  // --- structured data ---
+  // --- local-business structured data ---
   const ld = between(html, '<script type="application/ld+json">', "</script>");
   let schema = null;
   try { schema = JSON.parse(ld); } catch { check(false, "JSON-LD does not parse"); }
@@ -51,13 +53,15 @@ for (const slug of slugs) {
     check(schema.url === `https://${cfg.domain}`, "schema url");
   }
 
-  // --- navigation ---
+  // --- responsive navigation ---
   check(html.includes('<nav id="site-nav"'), "nav element");
   check(occurrences(html, '<nav id="site-nav"') === 1, "duplicate nav");
-  check(html.includes('class="nav-toggle"'), "mobile nav toggle");
-  check(html.includes('aria-controls="site-nav"'), "nav toggle aria-controls");
   const navBlock = between(html, '<nav id="site-nav"', "</nav>") || "";
-  check(occurrences(navBlock, "<a href=") >= 3, "nav link count");
+  check(occurrences(navBlock, "<a ") >= 3, "nav link count");
+  if (shared) {
+    check(html.includes('class="nav-toggle"'), "mobile nav toggle");
+    check(html.includes('aria-controls="site-nav"'), "nav toggle aria-controls");
+  }
 
   // --- phone CTAs ---
   const expected = `tel:+1${digits(cfg.phone).slice(-10)}`;
@@ -65,28 +69,32 @@ for (const slug of slugs) {
   check(tels.length >= 4, `tel link count (${tels.length})`);
   check(tels.every((href) => href === expected), `tel mismatch: ${[...new Set(tels)].join(", ")}`);
   check(html.includes('class="nav-call"'), "header call CTA");
-  check(html.includes('class="button primary"'), "hero primary CTA");
   check(html.includes('class="mobile-call"'), "mobile sticky call button");
-  check(html.includes(`>${cfg.phone}<`), "phone shown in contact card");
+  check(html.includes(`>${cfg.phone}<`), "phone shown on page");
+  if (shared) check(html.includes('class="button primary"'), "hero primary CTA");
 
   // --- content sections ---
-  check(html.includes('id="services"'), "services section");
-  check(occurrences(html, "service-card") - 1 >= 3, "service cards");
+  check(html.includes('id="services"') || html.includes('id="store"'), "services section");
+  check(occurrences(html, 'class="service-card"') + occurrences(html, 'class="product"') >= 3, "service/product cards");
   check(html.includes('id="areas"'), "service-area section");
   check(occurrences(between(html, 'class="area-list"', "</div>") || "", "<span>") >= 1, "service-area list");
-  check(html.includes('id="process"'), "process section");
+  if (shared) check(html.includes('id="process"'), "process section");
 
   // --- assets ---
+  const css = await fs.readFile(path.join(out, "site.css"), "utf8").catch(() => "");
   const refs = new Set();
   for (const part of html.split('src="').slice(1)) refs.add(part.slice(0, part.indexOf('"')));
   for (const part of html.split("url(&quot;").slice(1)) refs.add(part.slice(0, part.indexOf("&quot;")));
+  for (const part of css.split('url("').slice(1)) refs.add(part.slice(0, part.indexOf('"')));
   for (const ref of refs) {
     if (ref.startsWith("http://")) { check(false, `insecure asset ${ref}`); continue; }
     if (ref.startsWith("https://")) { check(false, `remote asset still hotlinked: ${ref}`); continue; }
+    if (ref.startsWith("data:")) continue;
     const onDisk = path.join(out, ref.replace(/^[/]/, ""));
     check(await fs.access(onDisk).then(() => true, () => false), `missing asset ${ref}`);
   }
-  check(!html.includes("cdn-website.com") && !html.includes("snapps.ai"), "old-host reference remains");
+  const combined = html + css;
+  check(!combined.includes("cdn-website.com") && !combined.includes("snapps.ai") && !combined.includes("multiscreensite.com"), "old-host reference remains");
 
   // --- crawl files ---
   const robots = await fs.readFile(path.join(out, "robots.txt"), "utf8").catch(() => "");
@@ -94,8 +102,8 @@ for (const slug of slugs) {
   const sitemap = await fs.readFile(path.join(out, "sitemap.xml"), "utf8").catch(() => "");
   check(sitemap.includes(`https://${cfg.domain}/`), "sitemap loc");
   check((await fs.access(path.join(out, "favicon.svg")).then(() => true, () => false)), "favicon.svg generated");
-  check(html.includes(`<link rel="icon" href="/favicon.svg"`), "favicon link tag");
-  check((await fs.access(path.join(out, "site.css")).then(() => true, () => false)), "site.css copied");
+  check(html.includes('<link rel="icon" href="/favicon.svg"'), "favicon link tag");
+  check(css.length > 0, "site.css copied");
   check((await fs.access(path.join(out, "site.js")).then(() => true, () => false)), "site.js copied");
 
   if (problems.length) failures++;
@@ -103,8 +111,7 @@ for (const slug of slugs) {
 }
 
 for (const [slug, domain, problems] of rows) {
-  const status = problems.length ? `FAIL (${problems.length})` : "PASS";
-  console.log(`${status.padEnd(9)} ${slug.padEnd(26)} ${domain}`);
+  console.log(`${(problems.length ? `FAIL (${problems.length})` : "PASS").padEnd(9)} ${slug.padEnd(26)} ${domain}`);
   for (const problem of problems) console.log(`          - ${problem}`);
 }
 console.log(`\n${rows.length - failures}/${rows.length} sites pass the checklist.`);

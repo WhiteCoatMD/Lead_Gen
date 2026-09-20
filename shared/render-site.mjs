@@ -1,7 +1,9 @@
+export const jsonLd = (schema) => JSON.stringify(schema).replace(/</g, "\\u003c");
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
-const phoneHref = (phone) => `tel:+1${phone.replace(/\D/g, "").slice(-10)}`;
-const assetUrl = (asset = "") => /^https?:\/\//i.test(asset) ? asset : `/assets/${asset}`;
-const absolute = (domain, asset = "") => /^https?:\/\//i.test(asset) ? asset : `https://${domain}${assetUrl(asset)}`;
+export const escapeHtml = esc;
+export const phoneHref = (phone) => `tel:+1${phone.replace(/\D/g, "").slice(-10)}`;
+export const assetUrl = (asset = "") => /^https?:\/\//i.test(asset) ? asset : `/assets/${asset}`;
+export const absolute = (domain, asset = "") => /^https?:\/\//i.test(asset) ? asset : `https://${domain}${assetUrl(asset)}`;
 
 const STATE_CODES = { Alabama:"AL", Arizona:"AZ", Arkansas:"AR", California:"CA", Florida:"FL", Georgia:"GA", Illinois:"IL", Louisiana:"LA", Mississippi:"MS", Missouri:"MO", Nevada:"NV", "New Mexico":"NM", "North Carolina":"NC", Ohio:"OH", Oklahoma:"OK", Tennessee:"TN", Texas:"TX" };
 const stateCode = (state = "") => STATE_CODES[state] || (state.length === 2 ? state.toUpperCase() : state);
@@ -77,7 +79,7 @@ export function renderSite(site) {
 ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">` : ""}
   <link rel="stylesheet" href="/site.css">
   <style>:root{--accent:${esc(site.accent || "#ef342f")};--accent-dark:${esc(site.accentDark || "#c82420")}}</style>
-  <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
+  <script type="application/ld+json">${jsonLd(schema)}</script>
 </head><body>
   <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p><a href="${phoneHref(site.phone)}">Call ${esc(site.phone)}</a></div>
   <header>

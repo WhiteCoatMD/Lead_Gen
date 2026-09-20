@@ -1,53 +1,71 @@
 {
+  "template": "birds-nest",
   "name": "The Bird's Nest Flower Shop",
   "domain": "birdsnestflowershop.com",
   "phone": "318-502-4055",
   "city": "Columbia",
   "state": "Louisiana",
   "schemaType": "Florist",
-  "accent": "#c23867",
-  "accentDark": "#812344",
+  "accent": "#83c4ba",
+  "accentDark": "#c86583",
   "logo": "logo.jpg",
-  "kicker": "Fresh flowers in downtown Columbia",
-  "headline": "Say it beautifully with flowers.",
-  "intro": "Thoughtful bouquets, roses, seasonal arrangements, and flower subscriptions made by friendly local florists.",
-  "sectionKicker": "A cozy shop with a big heart",
-  "sectionHeadline": "Flowers arranged for the moments that matter.",
-  "about": "The Bird's Nest welcomes customers with fresh blooms, cheerful color, and personal help choosing an arrangement. We create flowers for celebrations, meaningful gestures, and everyday joy.",
-  "servicesHeadline": "Flowers for giving, gathering, and home.",
+  "hero": "hero.jpg",
+  "pattern": "pattern.png",
+  "aboutImage": "about.jpg",
+  "headline": "Bouquet Shop",
+  "products": [
+    {
+      "name": "Medium Spring Mix",
+      "price": "55",
+      "image": "product-1.jpg"
+    },
+    {
+      "name": "Large Dozen Roses",
+      "price": "95",
+      "image": "product-2.jpg"
+    },
+    {
+      "name": "3 Rose Arrangement",
+      "price": "30",
+      "image": "product-3.jpg"
+    }
+  ],
+  "about": "Welcome to The Bird's Nest, your go-to place for beautiful flowers right here in downtown Columbia. We're a cozy little flower shop with a big heart, dedicated to making your days brighter with our blooms. Step inside and you'll be greeted by the sweet smell of fresh flowers and a burst of colors that'll make you smile. From classic roses to cheerful daisies, we've got a bunch of beautiful blooms ready to go. Our team of friendly florists loves putting together arrangements that are just right for you. Whether you're celebrating a special occasion or just want to show someone you care, we'll whip up something perfect that speaks from the heart.",
+  "aboutSecond": "So, whether you're planning a big party or just want to brighten someone's day, come on down to The Bird's Nest. Let us sprinkle a little floral magic into your life, one petal at a time.",
   "services": [
     {
-      "title": "Seasonal Bouquets",
-      "description": "Fresh mixed bouquets built around the best colors and flowers of the season."
-    },
-    {
-      "title": "Rose Arrangements",
-      "description": "Classic roses in several sizes for romance, appreciation, celebration, and remembrance."
-    },
-    {
-      "title": "Custom Arrangements",
-      "description": "Personalized floral designs created around your occasion, message, and budget."
-    },
-    {
-      "title": "Flower Subscriptions",
-      "description": "Recurring fresh flowers for homes, offices, gifts, and ongoing celebrations."
+      "title": "Bouquet Shop",
+      "description": "Medium Spring Mix, Large Dozen Roses, and 3 Rose Arrangement."
     }
   ],
   "serviceAreas": [
     "Columbia",
     "Caldwell Parish",
-    "Northeast Louisiana"
+    "Ouachita Parish"
   ],
-  "areaHeadline": "Local flowers for Columbia and surrounding communities.",
-  "ctaHeadline": "Order flowers from The Bird's Nest.",
-  "ctaCopy": "Call the shop to choose an arrangement or ask about a flower subscription.",
-  "primaryCta": "Call the flower shop",
-  "navCall": "Call to order",
-  "footerLine": "Downtown Columbia flower shop | Mon–Fri 8–5, Sat 9–12",
-  "seoTitle": "Flower Shop Columbia LA | The Bird's Nest",
-  "seoDescription": "Local flower shop in Columbia, Louisiana offering bouquets, roses, custom arrangements, and flower subscriptions.",
-  "heroStyle": "plain",
+  "hours": [
+    {
+      "days": "Mon - Fri",
+      "time": "8:00 am - 5:00 pm"
+    },
+    {
+      "days": "Saturday",
+      "time": "9:00 am - 12:00 pm"
+    },
+    {
+      "days": "Sunday",
+      "time": "Closed"
+    }
+  ],
+  "seoTitle": "The Bird's Nest Flower Shop | Columbia, Louisiana",
+  "seoDescription": "Fresh bouquets, roses, and flower subscriptions from The Bird's Nest Flower Shop in downtown Columbia, Louisiana. Call 318-502-4055.",
   "assets": [
-    "logo.jpg"
+    "about.jpg",
+    "hero.jpg",
+    "logo.jpg",
+    "pattern.png",
+    "product-1.jpg",
+    "product-2.jpg",
+    "product-3.jpg"
   ]
 }
