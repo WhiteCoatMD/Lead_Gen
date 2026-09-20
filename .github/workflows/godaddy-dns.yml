@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Update approved web DNS records
         env:
-          GODADDY_PAT: ${{ secrets.GODADDY_PAT }}
+          GODADDY_PAT: ${{ secrets.GODADDY_PAT || secrets.GODADDY_TOKEN || secrets.GODADDY_API_KEY }}
         run: |
           node <<'NODE'
           const token = process.env.GODADDY_PAT;
