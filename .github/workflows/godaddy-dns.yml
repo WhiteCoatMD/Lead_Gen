@@ -119,3 +119,5 @@ jobs:
           }
           console.log("Twin City Fences DNS records updated and verified.");
           NODE
+
+# Triggered after GODADDY_PAT was configured.
