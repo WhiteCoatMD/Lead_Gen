@@ -1,0 +1,78 @@
+name: GoDaddy domain inventory (read-only)
+
+# Read-only. Lists every domain in the GoDaddy account plus its apex/www web
+# records, so unused registrations can be spotted. Never writes.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List domains and their web records
+        env:
+          GODADDY_PAT: ${{ secrets.GODADDY_PAT || secrets.GODADDY_TOKEN || secrets.GODADDY_API_KEY }}
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+          const token = process.env.GODADDY_PAT;
+          if (!token) throw new Error("Missing GODADDY_PAT repository secret");
+          const auth = { Authorization: "Bearer " + token };
+
+          (async () => {
+            let domains = [];
+            let marker = "";
+            for (let page = 0; page < 20; page++) {
+              const url = "https://api.godaddy.com/v1/domains?limit=1000&includes=nameServers"
+                + (marker ? "&marker=" + encodeURIComponent(marker) : "");
+              const res = await fetch(url, { headers: auth });
+              if (!res.ok) {
+                console.log("LIST FAILED " + res.status + " " + (await res.text().catch(() => "")).slice(0, 300));
+                break;
+              }
+              const batch = await res.json();
+              if (!batch.length) break;
+              domains = domains.concat(batch);
+              if (batch.length < 1000) break;
+              marker = batch[batch.length - 1].domain;
+            }
+
+            console.log("total domains returned: " + domains.length);
+            console.log("");
+
+            const out = [];
+            for (const d of domains) {
+              const row = { domain: d.domain, status: d.status, expires: String(d.expires || "").slice(0, 10),
+                renewAuto: d.renewAuto, nameServers: d.nameServers || [], web: [], recordCount: null, error: null };
+              try {
+                const res = await fetch("https://api.godaddy.com/v3/domains/zones/" + d.domain + "/dns-records?pageSize=100&totalRequired=true",
+                  { headers: auth });
+                if (!res.ok) {
+                  row.error = res.status;
+                } else {
+                  const items = (await res.json()).items || [];
+                  row.recordCount = items.length;
+                  row.web = items
+                    .filter((r) => (r.name === "@" && ["A", "AAAA"].includes(r.type)) || (r.name === "www" && ["A", "AAAA", "CNAME"].includes(r.type)))
+                    .map((r) => r.type + " " + r.name + " -> " + r.data);
+                  row.mx = items.filter((r) => r.type === "MX").length;
+                }
+              } catch (e) { row.error = String(e.message).slice(0, 60); }
+              out.push(row);
+              console.log(row.domain.padEnd(34) + String(row.status).padEnd(10) + "exp " + row.expires.padEnd(12)
+                + "recs=" + String(row.recordCount === null ? "ERR" + row.error : row.recordCount).padEnd(6)
+                + "mx=" + String(row.mx || 0).padEnd(4) + (row.web.join(" ; ") || "(NO WEB RECORDS)"));
+            }
+            fs.writeFileSync("domain-inventory.json", JSON.stringify(out, null, 2));
+          })();
+          NODE
+      - name: Upload inventory
+        uses: actions/upload-artifact@v4
+        with:
+          name: domain-inventory
+          path: domain-inventory.json
+          retention-days: 30
