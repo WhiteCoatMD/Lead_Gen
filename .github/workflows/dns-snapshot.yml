@@ -1,0 +1,70 @@
+name: Snapshot GoDaddy DNS (read-only)
+
+# Read-only. Dumps the current DNS records for every portfolio zone so there is
+# a rollback reference before any web records are changed. Never writes.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read current DNS records
+        env:
+          GODADDY_PAT: ${{ secrets.GODADDY_PAT || secrets.GODADDY_TOKEN || secrets.GODADDY_API_KEY }}
+        run: |
+          node <<'NODE'
+          const fs = require("fs");
+          const token = process.env.GODADDY_PAT;
+          if (!token) throw new Error("Missing GODADDY_PAT repository secret");
+
+          const zones = [
+            "twincityfences.com", "fenceslakecharles.com", "stuccorepairchicago.com",
+            "eifschicago.com", "flooring-monroe.com", "towing-arlington.com",
+            "dallastowtrucks.com", "scaffoldingrentalusa.com", "towingcompanyjonesboro.com",
+            "cactusremovalservice.com", "twincity-handyman.com", "birdsnestflowershop.com"
+          ];
+
+          const MAIL_TYPES = ["MX", "SRV"];
+          const MAIL_NAMES = ["_dmarc", "_domainkey", "dkim", "spf", "mail", "email", "autodiscover", "_autodiscover"];
+          const isMailish = (r) =>
+            MAIL_TYPES.includes(r.type) ||
+            (r.type === "TXT" && /spf|dkim|dmarc|google-site|verification/i.test(String(r.data) + r.name)) ||
+            MAIL_NAMES.some((n) => r.name === n || r.name.startsWith(n + ".") || r.name.endsWith("." + n) || r.name.includes(n));
+
+          const snapshot = {};
+          (async () => {
+            for (const zone of zones) {
+              const res = await fetch(`https://api.godaddy.com/v3/domains/zones/${zone}/dns-records?pageSize=500&totalRequired=true`,
+                { headers: { Authorization: `Bearer ${token}` } });
+              if (!res.ok) {
+                const detail = await res.text().catch(() => "");
+                console.log(`${zone}: READ FAILED ${res.status} ${detail.slice(0, 200)}`);
+                snapshot[zone] = { error: res.status };
+                continue;
+              }
+              const items = (await res.json()).items || [];
+              snapshot[zone] = items;
+              const web = items.filter((r) => (r.name === "@" && ["A", "AAAA"].includes(r.type)) || (r.name === "www" && ["A", "AAAA", "CNAME"].includes(r.type)));
+              const mail = items.filter(isMailish);
+              console.log(`\n=== ${zone} (${items.length} records) ===`);
+              console.log("  web routing (will change):");
+              for (const r of web) console.log(`    ${r.type.padEnd(5)} ${r.name.padEnd(22)} ${r.data} (ttl ${r.ttl})`);
+              console.log("  mail//other preserved:");
+              for (const r of mail) console.log(`    ${r.type.padEnd(5)} ${r.name.padEnd(22)} ${String(r.data).slice(0, 70)}`);
+              const rest = items.filter((r) => !web.includes(r) && !mail.includes(r));
+              console.log(`  other untouched records: ${rest.map((r) => r.type + " " + r.name).join(", ") || "(none)"}`);
+            }
+            fs.writeFileSync("dns-snapshot.json", JSON.stringify(snapshot, null, 2));
+          })();
+          NODE
+      - name: Upload snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: dns-snapshot
+          path: dns-snapshot.json
+          retention-days: 90
