@@ -1,1 +1,49 @@
-{"name":"Scaffolding Rental Los Angeles","domain":"www.scaffoldingrentalusa.com","phone":"323-498-3395","email":"Ziphandyman@mail.com","city":"Los Angeles","state":"California","schemaType":"HomeAndConstructionBusiness","accent":"#ed7d22","accentDark":"#a84e0d","logo":"https://go.snapps.ai/storage/app/public/uploads/A61hbkqLDjqeDPD20Hphjpfo.png","hero":"https://go.snapps.ai/storage/app/public/uploads/A61hbkqLDjqeDPD20Hphjpfo.png","kicker":"Scaffolding for projects of every size","headline":"Build higher with the right platform.","intro":"Frame, tube-and-clamp, and rolling scaffolding rentals for contractors and property owners in Los Angeles.","sectionKicker":"Safety and efficiency first","sectionHeadline":"Rental equipment matched to the work.","about":"Scaffolding Rental Los Angeles helps customers select reliable equipment without the storage and maintenance costs of ownership. Our team supports short- and long-term projects with timely delivery and pickup.","servicesHeadline":"Flexible scaffolding rental options.","services":[{"title":"Frame Scaffolding","description":"Versatile, efficient systems for common exterior, construction, and maintenance projects."},{"title":"Tube & Clamp","description":"Adaptable scaffolding configurations for complex structures and unusual access needs."},{"title":"Rolling Scaffolding","description":"Mobile scaffold towers for indoor work, maintenance, painting, and finishing."},{"title":"Delivery & Pickup","description":"Coordinated equipment delivery and prompt removal when the job is complete."}],"serviceAreas":["Los Angeles","Glendale","Pasadena","Greater Los Angeles"],"areaHeadline":"Scaffolding rental throughout Greater Los Angeles.","ctaHeadline":"Plan your scaffolding rental.","ctaCopy":"Call to discuss your project, site requirements, rental period, and delivery.","footerLine":"Scaffolding rental service in Los Angeles, California","seoTitle":"Scaffolding Rental Los Angeles | Equipment Delivery","seoDescription":"Scaffolding rental in Los Angeles. Frame, tube-and-clamp, and rolling scaffolding with project guidance, delivery, and pickup."}
+{
+  "name": "Scaffolding Rental Los Angeles",
+  "domain": "scaffoldingrentalusa.com",
+  "phone": "323-498-3395",
+  "email": "Ziphandyman@mail.com",
+  "city": "Los Angeles",
+  "state": "California",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#ed7d22",
+  "accentDark": "#a84e0d",
+  "kicker": "Scaffolding for projects of every size",
+  "headline": "Build higher with the right platform.",
+  "intro": "Frame, tube-and-clamp, and rolling scaffolding rentals for contractors and property owners in Los Angeles.",
+  "sectionKicker": "Safety and efficiency first",
+  "sectionHeadline": "Rental equipment matched to the work.",
+  "about": "Scaffolding Rental Los Angeles helps customers select reliable equipment without the storage and maintenance costs of ownership. Our team supports short- and long-term projects with timely delivery and pickup.",
+  "servicesHeadline": "Flexible scaffolding rental options.",
+  "services": [
+    {
+      "title": "Frame Scaffolding",
+      "description": "Versatile, efficient systems for common exterior, construction, and maintenance projects."
+    },
+    {
+      "title": "Tube & Clamp",
+      "description": "Adaptable scaffolding configurations for complex structures and unusual access needs."
+    },
+    {
+      "title": "Rolling Scaffolding",
+      "description": "Mobile scaffold towers for indoor work, maintenance, painting, and finishing."
+    },
+    {
+      "title": "Delivery & Pickup",
+      "description": "Coordinated equipment delivery and prompt removal when the job is complete."
+    }
+  ],
+  "serviceAreas": [
+    "Los Angeles",
+    "Glendale",
+    "Pasadena",
+    "Greater Los Angeles"
+  ],
+  "areaHeadline": "Scaffolding rental throughout Greater Los Angeles.",
+  "ctaHeadline": "Plan your scaffolding rental.",
+  "ctaCopy": "Call to discuss your project, site requirements, rental period, and delivery.",
+  "footerLine": "Scaffolding rental service in Los Angeles, California",
+  "seoTitle": "Scaffolding Rental Los Angeles | Equipment Delivery",
+  "seoDescription": "Scaffolding rental in Los Angeles. Frame, tube-and-clamp, and rolling scaffolding with project guidance, delivery, and pickup.",
+  "heroStyle": "plain"
+}

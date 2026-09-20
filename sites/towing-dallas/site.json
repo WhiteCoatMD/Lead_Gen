@@ -1,1 +1,54 @@
-{"name":"24 Hour Towing Dallas","domain":"www.dallastowtrucks.com","phone":"469-457-4462","city":"Dallas","state":"Texas","schemaType":"AutomotiveBusiness","accent":"#e32636","accentDark":"#9c1420","logo":"https://irp.cdn-website.com/defb3147/dms3rep/multi/opt/24+Hour+Towing+Dallas+logo+%281%29-1920w.jpg","hero":"https://irp.cdn-website.com/defb3147/dms3rep/multi/opt/24+Hour+Towing+Dallas+logo+%281%29-1920w.jpg","kicker":"Fast towing services","headline":"Dallas towing, day or night.","intro":"24-hour towing, roadside assistance, recovery, and junk-car removal across Dallas and Fort Worth.","sectionKicker":"Prompt help on Dallas roads","sectionHeadline":"A tow truck when you need one most.","about":"24 Hour Towing Dallas helps stranded motorists get safely moving again with local response and practical roadside solutions for cars, trucks, and motorcycles.","servicesHeadline":"Complete towing and roadside support.","services":[{"title":"24-Hour Towing","description":"Around-the-clock response for breakdowns, accidents, and disabled vehicles."},{"title":"Roadside Assistance","description":"Tire changes, battery service, fuel delivery, and common roadside help."},{"title":"Vehicle Recovery","description":"Winching and recovery for vehicles in difficult or unsafe positions."},{"title":"Junk Car Removal","description":"Removal and transport of unwanted, damaged, and non-running vehicles."}],"serviceAreas":["Dallas","Fort Worth","Irving","Dallas–Fort Worth"],"areaHeadline":"Serving drivers throughout the Dallas–Fort Worth area.","ctaHeadline":"Get a tow truck dispatched.","ctaCopy":"Call our 24-hour line for immediate towing or roadside assistance.","primaryCta":"Call 24/7","navCall":"Call now","footerLine":"24-hour towing and roadside assistance in Dallas, Texas","seoTitle":"24 Hour Towing Dallas TX | Dallas Tow Trucks","seoDescription":"24-hour towing in Dallas and Fort Worth. Emergency tow trucks, roadside assistance, recovery, and junk-car removal."}
+{
+  "name": "24 Hour Towing Dallas",
+  "domain": "dallastowtrucks.com",
+  "phone": "469-457-4462",
+  "city": "Dallas",
+  "state": "Texas",
+  "schemaType": "AutomotiveBusiness",
+  "accent": "#e32636",
+  "accentDark": "#9c1420",
+  "logo": "logo.jpg",
+  "kicker": "Fast towing services",
+  "headline": "Dallas towing, day or night.",
+  "intro": "24-hour towing, roadside assistance, recovery, and junk-car removal across Dallas and Fort Worth.",
+  "sectionKicker": "Prompt help on Dallas roads",
+  "sectionHeadline": "A tow truck when you need one most.",
+  "about": "24 Hour Towing Dallas helps stranded motorists get safely moving again with local response and practical roadside solutions for cars, trucks, and motorcycles.",
+  "servicesHeadline": "Complete towing and roadside support.",
+  "services": [
+    {
+      "title": "24-Hour Towing",
+      "description": "Around-the-clock response for breakdowns, accidents, and disabled vehicles."
+    },
+    {
+      "title": "Roadside Assistance",
+      "description": "Tire changes, battery service, fuel delivery, and common roadside help."
+    },
+    {
+      "title": "Vehicle Recovery",
+      "description": "Winching and recovery for vehicles in difficult or unsafe positions."
+    },
+    {
+      "title": "Junk Car Removal",
+      "description": "Removal and transport of unwanted, damaged, and non-running vehicles."
+    }
+  ],
+  "serviceAreas": [
+    "Dallas",
+    "Fort Worth",
+    "Irving",
+    "Dallas–Fort Worth"
+  ],
+  "areaHeadline": "Serving drivers throughout the Dallas–Fort Worth area.",
+  "ctaHeadline": "Get a tow truck dispatched.",
+  "ctaCopy": "Call our 24-hour line for immediate towing or roadside assistance.",
+  "primaryCta": "Call 24/7",
+  "navCall": "Call now",
+  "footerLine": "24-hour towing and roadside assistance in Dallas, Texas",
+  "seoTitle": "24 Hour Towing Dallas TX | Dallas Tow Trucks",
+  "seoDescription": "24-hour towing in Dallas and Fort Worth. Emergency tow trucks, roadside assistance, recovery, and junk-car removal.",
+  "heroStyle": "plain",
+  "assets": [
+    "logo.jpg"
+  ]
+}

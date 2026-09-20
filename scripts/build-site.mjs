@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { renderSite } from "../shared/render-site.mjs";
+import { renderSite, renderFavicon } from "../shared/render-site.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const slug = process.argv[2];
@@ -18,6 +18,7 @@ const missing = required.filter((key) => !config[key] || (Array.isArray(config[k
 if (missing.length) throw new Error(`${slug} is missing required fields: ${missing.join(", ")}`);
 
 await fs.writeFile(path.join(outputDir, "index.html"), renderSite(config), "utf8");
+await fs.writeFile(path.join(outputDir, "favicon.svg"), renderFavicon(config), "utf8");
 await fs.copyFile(path.join(root, "shared", "site.css"), path.join(outputDir, "site.css"));
 await fs.copyFile(path.join(root, "shared", "site.js"), path.join(outputDir, "site.js"));
 

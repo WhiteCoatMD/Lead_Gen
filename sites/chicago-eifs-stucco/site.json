@@ -1,1 +1,53 @@
-{"name":"Chicago EIFS and Stucco, LLC","domain":"www.eifschicago.com","phone":"773-364-1934","email":"stuccorepairla@gmail.com","city":"Chicago","state":"Illinois","schemaType":"GeneralContractor","accent":"#1b75bb","accentDark":"#105080","logo":"https://irp.cdn-website.com/88960b14/dms3rep/multi/opt/1-1920w.png","hero":"https://irp.cdn-website.com/88960b14/dms3rep/multi/opt/EIFS+repair+Chicago-1920w.jpg","kicker":"EIFS and stucco specialists","headline":"Exterior expertise for Chicago buildings.","intro":"A focused team with more than 25 years of experience repairing and installing EIFS and stucco.","sectionKicker":"Specialized exterior work","sectionHeadline":"We only do EIFS and stucco.","about":"Chicago EIFS and Stucco provides focused experience, free estimates, and repairs designed to stop moisture intrusion before it causes mold, decay, and more costly damage.","servicesHeadline":"Specialized repair and installation.","services":[{"title":"EIFS Repair","description":"Targeted repairs for cracks, impact damage, leaks, and deteriorated finish systems."},{"title":"Stucco Repair","description":"Patchwork, crack repair, finish matching, and larger exterior restoration."},{"title":"EIFS Installation","description":"Complete exterior insulation and finish system installation for residential and commercial projects."},{"title":"Stucco Installation","description":"Durable new stucco applications with carefully prepared substrates and finishes."}],"serviceAreas":["Chicago","Cook County","Chicagoland"],"areaHeadline":"Dedicated EIFS and stucco service across Chicago.","ctaHeadline":"Protect your exterior.","ctaCopy":"Call for a free estimate from an experienced EIFS and stucco specialist.","footerLine":"EIFS and stucco specialists serving Chicago","seoTitle":"EIFS Chicago | Chicago EIFS and Stucco, LLC","seoDescription":"EIFS and stucco repair and installation in Chicago from specialists with over 25 years of experience."}
+{
+  "name": "Chicago EIFS and Stucco, LLC",
+  "domain": "eifschicago.com",
+  "phone": "773-364-1934",
+  "email": "stuccorepairla@gmail.com",
+  "city": "Chicago",
+  "state": "Illinois",
+  "schemaType": "GeneralContractor",
+  "accent": "#1b75bb",
+  "accentDark": "#105080",
+  "logo": "logo.jpg",
+  "hero": "hero.jpg",
+  "kicker": "EIFS and stucco specialists",
+  "headline": "Exterior expertise for Chicago buildings.",
+  "intro": "A focused team with more than 25 years of experience repairing and installing EIFS and stucco.",
+  "sectionKicker": "Specialized exterior work",
+  "sectionHeadline": "We only do EIFS and stucco.",
+  "about": "Chicago EIFS and Stucco provides focused experience, free estimates, and repairs designed to stop moisture intrusion before it causes mold, decay, and more costly damage.",
+  "servicesHeadline": "Specialized repair and installation.",
+  "services": [
+    {
+      "title": "EIFS Repair",
+      "description": "Targeted repairs for cracks, impact damage, leaks, and deteriorated finish systems."
+    },
+    {
+      "title": "Stucco Repair",
+      "description": "Patchwork, crack repair, finish matching, and larger exterior restoration."
+    },
+    {
+      "title": "EIFS Installation",
+      "description": "Complete exterior insulation and finish system installation for residential and commercial projects."
+    },
+    {
+      "title": "Stucco Installation",
+      "description": "Durable new stucco applications with carefully prepared substrates and finishes."
+    }
+  ],
+  "serviceAreas": [
+    "Chicago",
+    "Cook County",
+    "Chicagoland"
+  ],
+  "areaHeadline": "Dedicated EIFS and stucco service across Chicago.",
+  "ctaHeadline": "Protect your exterior.",
+  "ctaCopy": "Call for a free estimate from an experienced EIFS and stucco specialist.",
+  "footerLine": "EIFS and stucco specialists serving Chicago",
+  "seoTitle": "EIFS Chicago | Chicago EIFS and Stucco, LLC",
+  "seoDescription": "EIFS and stucco repair and installation in Chicago from specialists with over 25 years of experience.",
+  "assets": [
+    "hero.jpg",
+    "logo.jpg"
+  ]
+}

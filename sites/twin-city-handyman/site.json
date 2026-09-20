@@ -1,1 +1,52 @@
-{"name":"Twin City Handyman","domain":"www.twincity-handyman.com","phone":"318-594-2300","city":"West Monroe","state":"Louisiana","schemaType":"HomeAndConstructionBusiness","accent":"#2878a8","accentDark":"#175271","logo":"https://irp.cdn-website.com/17418325/dms3rep/multi/opt/handyman+Monroe-1920w.png","hero":"https://irp.cdn-website.com/17418325/dms3rep/multi/opt/Man_working-1920w-1920w.jpg","kicker":"Serving the Twin Cities since 2016","headline":"Repairs and upgrades for a better home.","intro":"Kitchen, bathroom, outdoor, balcony, office, and general handyman projects in Monroe and West Monroe.","sectionKicker":"Pride in every project","sectionHeadline":"Your home deserves careful, dependable work.","about":"Twin City Handyman has completed hundreds of local projects with competitive pricing and guaranteed workmanship. We plan repairs and upgrades around the way your family uses the home.","servicesHeadline":"Help throughout the house.","services":[{"title":"Kitchen Projects","description":"Repairs, fixture updates, finishes, storage improvements, and practical upgrades."},{"title":"Bathroom Projects","description":"Maintenance, repairs, accessibility improvements, and refreshed fixtures and finishes."},{"title":"Outdoor Repairs","description":"Exterior maintenance, porch, fence, trim, and general property repairs."},{"title":"Home Office & General Work","description":"Workspace improvements, drywall repair, mounting, carpentry, and punch-list projects."}],"serviceAreas":["Monroe","West Monroe","Ouachita Parish"],"areaHeadline":"Handyman service across Monroe and West Monroe.","ctaHeadline":"Let’s talk about your project.","ctaCopy":"Call to describe the work and schedule the next step.","footerLine":"Home repair and improvement in Monroe and West Monroe","seoTitle":"Handyman Monroe LA | Twin City Handyman","seoDescription":"Handyman services in Monroe and West Monroe, Louisiana. Kitchen, bathroom, outdoor, office, repair, and improvement projects."}
+{
+  "name": "Twin City Handyman",
+  "domain": "twincity-handyman.com",
+  "phone": "318-594-2300",
+  "city": "West Monroe",
+  "state": "Louisiana",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#2878a8",
+  "accentDark": "#175271",
+  "logo": "logo.jpg",
+  "hero": "hero.jpg",
+  "kicker": "Serving the Twin Cities since 2016",
+  "headline": "Repairs and upgrades for a better home.",
+  "intro": "Kitchen, bathroom, outdoor, balcony, office, and general handyman projects in Monroe and West Monroe.",
+  "sectionKicker": "Pride in every project",
+  "sectionHeadline": "Your home deserves careful, dependable work.",
+  "about": "Twin City Handyman has completed hundreds of local projects with competitive pricing and guaranteed workmanship. We plan repairs and upgrades around the way your family uses the home.",
+  "servicesHeadline": "Help throughout the house.",
+  "services": [
+    {
+      "title": "Kitchen Projects",
+      "description": "Repairs, fixture updates, finishes, storage improvements, and practical upgrades."
+    },
+    {
+      "title": "Bathroom Projects",
+      "description": "Maintenance, repairs, accessibility improvements, and refreshed fixtures and finishes."
+    },
+    {
+      "title": "Outdoor Repairs",
+      "description": "Exterior maintenance, porch, fence, trim, and general property repairs."
+    },
+    {
+      "title": "Home Office & General Work",
+      "description": "Workspace improvements, drywall repair, mounting, carpentry, and punch-list projects."
+    }
+  ],
+  "serviceAreas": [
+    "Monroe",
+    "West Monroe",
+    "Ouachita Parish"
+  ],
+  "areaHeadline": "Handyman service across Monroe and West Monroe.",
+  "ctaHeadline": "Let’s talk about your project.",
+  "ctaCopy": "Call to describe the work and schedule the next step.",
+  "footerLine": "Home repair and improvement in Monroe and West Monroe",
+  "seoTitle": "Handyman Monroe LA | Twin City Handyman",
+  "seoDescription": "Handyman services in Monroe and West Monroe, Louisiana. Kitchen, bathroom, outdoor, office, repair, and improvement projects.",
+  "assets": [
+    "hero.jpg",
+    "logo.jpg"
+  ]
+}
