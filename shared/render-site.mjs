@@ -32,7 +32,7 @@ export function renderSite(site) {
   const services = site.services.map((service, index) => `
     <article class="service-card">
       <span>${String(index + 1).padStart(2, "0")}</span>
-      <h3>${esc(service.title)}</h3>
+      <h3>${service.link ? `<a href="/${esc(service.link)}">${esc(service.title)}</a>` : esc(service.title)}</h3>
       <p>${esc(service.description)}</p>
     </article>`).join("");
   const areas = areaNames.map((area) => `<span>${esc(area)}</span>`).join("");

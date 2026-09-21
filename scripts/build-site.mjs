@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { renderSite, renderFavicon } from "../shared/render-site.mjs";
 import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
 import { renderShop } from "../shared/render-shop.mjs";
+import { renderPage } from "../shared/render-page.mjs";
 
 // slug in site.json `template` -> renderer. No entry means the shared
 // contractor template in render-site.mjs.
@@ -50,7 +51,27 @@ for (const asset of config.assets || []) {
 }
 
 await fs.writeFile(path.join(outputDir, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: https://${config.domain}/sitemap.xml\n`, "utf8");
-await fs.writeFile(path.join(outputDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://${config.domain}/</loc></url></urlset>\n`, "utf8");
+// Secondary pages, where a site has them. These exist because the rebuilds
+// collapsed multi-page originals into one page and Google kept the old URLs;
+// a rebuilt page that is not in the sitemap is only half recovered.
+const pages = Array.isArray(config.pages) ? config.pages : [];
+for (const page of pages) {
+  if (!page.slug || !page.heading || !page.seoTitle || !page.seoDescription) {
+    throw new Error(`${slug} page "${page.slug || "(no slug)"}" needs slug, heading, seoTitle and seoDescription`);
+  }
+  const pageDir = path.join(outputDir, page.slug);
+  await fs.mkdir(pageDir, { recursive: true });
+  await fs.writeFile(path.join(pageDir, "index.html"), renderPage(config, page), "utf8");
+}
+
+const sitemapUrls = [`https://${config.domain}/`, ...pages.map((page) => `https://${config.domain}/${page.slug}`)];
+await fs.writeFile(
+  path.join(outputDir, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
+    sitemapUrls.map((loc) => `<url><loc>${loc}</loc></url>`).join("") +
+    `</urlset>\n`,
+  "utf8"
+);
 
 // IndexNow ownership proof. The protocol verifies a submission by fetching
 // this file from the host and checking it contains the key, so it has to

@@ -1,9 +1,9 @@
 {
-  "name": "Twin City Fences",
+  "name": "Twin City Fence",
   "domain": "twincityfences.com",
   "phone": "318-351-2539",
   "email": "twincityfences@gmail.com",
-  "city": "Monroe",
+  "city": "West Monroe",
   "state": "Louisiana",
   "schemaType": "FenceContractor",
   "accent": "#ef342f",
@@ -21,16 +21,18 @@
   "intro": "Wood, chain-link, ornamental, and ranch-style fencing installed for homes and businesses across Monroe and West Monroe.",
   "sectionKicker": "Built around your property",
   "sectionHeadline": "The right fence should look good, work hard, and last.",
-  "about": "Twin City Fences helps homeowners and businesses choose fencing that fits the property, purpose, and budget. We handle new installations and repairs throughout the Monroe area, with straightforward recommendations and a clear path from estimate to completion.",
+  "about": "Twin City Fence helps homeowners and businesses choose fencing that fits the property, purpose, and budget. We handle new installations and repairs throughout the Monroe area, with straightforward recommendations and a clear path from estimate to completion.",
   "servicesHeadline": "Options for privacy, protection, and curb appeal.",
   "services": [
     {
       "title": "Wood Privacy Fences",
-      "description": "Custom pine and cedar privacy fencing built for security, shade, and a clean finished look."
+      "description": "Custom pine and cedar privacy fencing built for security, shade, and a clean finished look.",
+      "link": "wooden-fences"
     },
     {
       "title": "Chain-Link Fences",
-      "description": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties."
+      "description": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties.",
+      "link": "chain-link-fence"
     },
     {
       "title": "Decorative & Metal Fences",
@@ -49,8 +51,78 @@
   ],
   "areaHeadline": "Local fencing across the Twin Cities and North Louisiana.",
   "ctaHeadline": "Let’s talk about your fence.",
-  "ctaCopy": "Call Twin City Fences to discuss your project and arrange a free estimate.",
+  "ctaCopy": "Call Twin City Fence to discuss your project and arrange a free estimate.",
   "footerLine": "Fence installation and repair in Monroe and West Monroe, Louisiana",
-  "seoTitle": "Fence Builder Monroe LA | Twin City Fences",
-  "seoDescription": "Fence installation and repair in Monroe and West Monroe, Louisiana. Wood privacy, chain-link, ornamental, ranch-style fencing, and gates."
+  "seoTitle": "Fence Builder Monroe LA | Twin City Fence",
+  "seoDescription": "Fence installation and repair in Monroe and West Monroe, Louisiana. Wood privacy, chain-link, ornamental, ranch-style fencing, and gates.",
+  "pages": [
+    {
+      "slug": "wooden-fences",
+      "navLabel": "Wood fences",
+      "kicker": "Wood fencing",
+      "heading": "Wood fences built for North Louisiana.",
+      "intro": "Pine and cedar fencing built to the height and layout your property needs, for privacy, security and shade.",
+      "seoTitle": "Wood Fences Monroe & West Monroe LA | Twin City Fence",
+      "seoDescription": "Custom pine and cedar wood fencing installed across Monroe, West Monroe and Ouachita Parish. Built in varying heights for privacy, security and shade.",
+      "service": "Wood fence installation",
+      "sections": [
+        {
+          "kicker": "Pine or cedar",
+          "heading": "Two woods, built to the same standard.",
+          "body": "We can build a fence for your location from either pine or cedar, and in varying heights. Pine is the budget-conscious choice for a long run of privacy fencing; cedar costs more and holds up better to weather and insects over time. Which one makes sense usually comes down to the length of the run and how long you want to leave it alone."
+        },
+        {
+          "kicker": "What it does",
+          "heading": "Privacy, security and shade.",
+          "body": "Custom pine and cedar privacy fencing built for security, shade, and a clean finished look. Height and picket spacing change what the fence actually does — a full-privacy panel and a spaced picket run are different fences for different problems, and it is worth deciding which one you are buying before the posts go in."
+        }
+      ],
+      "ctaHeadline": "Get a price on a wood fence."
+    },
+    {
+      "slug": "chain-link-fence",
+      "navLabel": "Chain-link fences",
+      "kicker": "Chain-link fencing",
+      "heading": "Chain-link fencing for homes, pets and property lines.",
+      "intro": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties across Monroe and West Monroe.",
+      "seoTitle": "Chain Link Fence Monroe LA | Twin City Fence",
+      "seoDescription": "Chain-link fencing installed in Monroe, West Monroe and Ouachita Parish for homes, pets, businesses, larger properties and sports enclosures.",
+      "service": "Chain-link fence installation",
+      "sections": [
+        {
+          "kicker": "Where it fits",
+          "heading": "The practical choice for a long run.",
+          "body": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties. Chain-link covers more ground per dollar than any other fence we build, which is why it tends to win on acreage, on commercial yards, and anywhere the job is containment rather than privacy."
+        },
+        {
+          "kicker": "Taller work",
+          "heading": "Sports and court enclosures.",
+          "body": "The same system goes up tall — we have built chain-link at tennis courts, where the fence is doing a different job again: keeping a ball in rather than keeping anything out. Taller runs need heavier posts and closer spacing, so it is worth saying up front what the enclosure is for."
+        }
+      ],
+      "ctaHeadline": "Get a price on chain-link."
+    },
+    {
+      "slug": "contact",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Talk to Twin City Fence.",
+      "intro": "Call or email and tell us what you are fencing, where the property is, and roughly how long the run is.",
+      "seoTitle": "Contact Twin City Fence | Monroe & West Monroe LA",
+      "seoDescription": "Contact Twin City Fence for wood, chain-link, ornamental and ranch-style fencing across Monroe, West Monroe and Ouachita Parish. Call 318-351-2539.",
+      "sections": [
+        {
+          "kicker": "What helps",
+          "heading": "What to have ready.",
+          "body": "The three things that decide a price are the type of fence, the length of the run, and what the ground is doing — slope, trees and existing posts all change the job. Rough numbers are fine on a first call; we work the rest out on site."
+        },
+        {
+          "kicker": "Where we work",
+          "heading": "Monroe, West Monroe and Ouachita Parish.",
+          "body": "We install across Monroe, West Monroe and the surrounding Ouachita Parish area, and travel further into North Louisiana for larger jobs. If you are not sure whether you are in range, call and ask."
+        }
+      ],
+      "ctaHeadline": "Call for a free estimate."
+    }
+  ]
 }
