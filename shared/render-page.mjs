@@ -23,6 +23,11 @@ import { businessId } from "./schema.mjs";
 export function renderPage(site, page) {
   const areaNames = site.serviceAreas || [site.city];
   const url = `https://${site.domain}/${page.slug}`;
+  // A page may point its canonical at a different URL. Needed where two URLs
+  // carry the same content because both were once live: Search Console shows
+  // which one actually earns impressions, and that is the one worth
+  // consolidating on, whatever the archive suggested.
+  const canonical = page.canonicalTo ? `https://${site.domain}/${page.canonicalTo}` : url;
 
   const sections = (page.sections || []).map((section) => `
     <section class="shell intro">
@@ -85,7 +90,7 @@ export function renderPage(site, page) {
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${esc(page.seoTitle)}</title>
   <meta name="description" content="${esc(page.seoDescription)}">
-  <link rel="canonical" href="${esc(url)}">
+  <link rel="canonical" href="${esc(canonical)}">
   <meta name="theme-color" content="${esc(site.accent || "#ef342f")}">
   <meta property="og:type" content="article">
   <meta property="og:title" content="${esc(page.seoTitle)}">

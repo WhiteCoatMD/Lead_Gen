@@ -180,7 +180,8 @@
           "body": "We also offer assistance to help you get your vehicle back on the road. From having a tire changed to jumpstarting your car, roadside assistance can be with you in a matter of minutes."
         }
       ],
-      "ctaHeadline": "Which one do you need?"
+      "ctaHeadline": "Which one do you need?",
+      "canonicalTo": "services1"
     },
     {
       "slug": "about.html",
@@ -197,7 +198,8 @@
           "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
         }
       ],
-      "ctaHeadline": "Need a truck?"
+      "ctaHeadline": "Need a truck?",
+      "canonicalTo": "about-us"
     },
     {
       "slug": "contact.html",
@@ -214,7 +216,64 @@
           "body": "Where the vehicle is, what it is doing, and whether it is somewhere safe. Those three answers decide which truck gets sent and how quickly, so it is worth having them ready before you dial."
         }
       ],
+      "ctaHeadline": "Call now.",
+      "canonicalTo": "contact-us"
+    },
+    {
+      "slug": "services1",
+      "navLabel": "All services",
+      "kicker": "Services",
+      "heading": "Towing services in Dallas.",
+      "intro": "Emergency towing and roadside assistance, dispatched 24 hours a day across the Dallas area.",
+      "seoTitle": "Towing Services Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Towing services in Dallas, Texas: 24 hour emergency towing, roadside assistance, battery jumpstarts and junk car removal.",
+      "sections": [
+        {
+          "kicker": "24 hour towing",
+          "heading": "Emergency towing.",
+          "body": "We offer emergency towing for breakdowns, accidents, and more. Call the 24 hour dispatch and we can be headed your way within minutes. We serve the entire Dallas area."
+        },
+        {
+          "kicker": "Roadside assistance",
+          "heading": "Help getting going again.",
+          "body": "We also offer assistance to help you get your vehicle back on the road. From having a tire changed to jumpstarting your car, roadside assistance can be with you in a matter of minutes."
+        }
+      ],
+      "ctaHeadline": "Which one do you need?"
+    },
+    {
+      "slug": "contact-us",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Call 24 Hour Towing Dallas.",
+      "intro": "Dispatch answers 24 hours a day. Tell us where the vehicle is and what it is doing, and we will get a driver headed your way.",
+      "seoTitle": "Contact | 24 Hour Towing Dallas TX",
+      "seoDescription": "Contact 24 Hour Towing Dallas for emergency towing, roadside assistance, battery jumpstarts and junk car removal across the Dallas area.",
+      "sections": [
+        {
+          "kicker": "What helps",
+          "heading": "What to tell dispatch.",
+          "body": "Where the vehicle is, what it is doing, and whether it is somewhere safe. Those three answers decide which truck gets sent and how quickly, so it is worth having them ready before you dial."
+        }
+      ],
       "ctaHeadline": "Call now."
+    },
+    {
+      "slug": "about-us",
+      "navLabel": "About",
+      "kicker": "About us",
+      "heading": "About 24 Hour Towing Dallas.",
+      "intro": "A Dallas towing operation built around emergency work, which is why the phone is answered at three in the morning as readily as at three in the afternoon.",
+      "seoTitle": "About | 24 Hour Towing Dallas TX",
+      "seoDescription": "About 24 Hour Towing Dallas — emergency towing, roadside assistance and junk car removal across the Dallas, Texas area.",
+      "sections": [
+        {
+          "kicker": "What we do",
+          "heading": "Emergency work, around the clock.",
+          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
+        }
+      ],
+      "ctaHeadline": "Need a truck?"
     }
   ]
 }

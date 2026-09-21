@@ -1,7 +1,7 @@
 {
   "startDate": "2025-05-29",
   "endDate": "2026-09-18",
-  "generated": "2026-09-21T23:24:19.761Z",
+  "generated": "2026-09-21T23:36:05.446Z",
   "summary": [
     {
       "slug": "cactus-removal-tucson",
@@ -56,7 +56,61 @@
     {
       "slug": "towing-dallas",
       "domain": "dallastowtrucks.com",
-      "connected": false
+      "connected": true,
+      "clicks": 579,
+      "impressions": 421620,
+      "pages": 13,
+      "queries": 1000,
+      "rebuilt": [
+        {
+          "path": "/tow-trucks.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/roadside-assistance.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/battery-jumpstart.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/we-buy-junk-cars.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/towing-arlington.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/services.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/about.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/contact.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        }
+      ]
     },
     {
       "slug": "twin-city-fences",
