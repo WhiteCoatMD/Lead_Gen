@@ -13,7 +13,7 @@ another project. 17 sites remain.
 |---|------|---------------|--------|--------------|-------|--------|-----|-------------------|
 | 1 | Hippie Chicks Snowballs | 89aa4812 | hippie-chicks-snowballs.invalid | **placeholder** (.invalid, reserved TLD) | **PASS** | pending | frozen | **No domain in GoDaddy.** Built on a placeholder at the owner's instruction. |
 | 2 | Hometown Soap N Sudz | 439dc70e | hometownsoapnsudz.com | ACTIVE, on Snapps | **PASS** | pending | frozen | — |
-| 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
+| 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No street address published on the source site. |
 | 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
@@ -69,3 +69,15 @@ template called *ohmydog*; all real content is pictures of a printed menu.
 - The **`.invalid`** TLD is reserved by RFC 2606 and can never be registered,
   so a placeholder canonical cannot ever point at a stranger's website. Swap
   it for the real domain in `site.json` when one exists.
+- **SeaCoast Hurricane Shutters:** the source site contradicts itself on
+  coverage. Its header says "Serving Daytona and Volusia Counties" and its
+  phone is a 386 (Daytona) number, but a generated section claims Miami,
+  Naples, Fort Lauderdale, Palm Beach, Sarasota, Orlando, Tampa and the Keys.
+  The rebuild uses the specific local claim and drops the statewide list —
+  **worth confirming the real coverage area.** Four customer testimonials
+  ("Jessica R.", "Mark T.", "Linda S.") with relative dates were omitted: they
+  cannot be verified and the brief forbids unverifiable testimonials. The
+  "Florida's #1 Choice" superlative was also dropped. Their own claims that
+  were kept: over twenty years of experience, four colour options, and the
+  five-year parts warranty. Most imagery on the source is AI-generated
+  (`ChatGPT Image...`) or Pexels stock; only the logo was carried across.

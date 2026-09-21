@@ -1,0 +1,47 @@
+{
+  "name": "SeaCoast Hurricane Shutters",
+  "domain": "seacoasthurricaneshutters.com",
+  "phone": "386-338-8955",
+  "email": "nancy@seacoasthurricaneshutters.com",
+  "city": "Daytona Beach",
+  "state": "Florida",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#1c6fb2",
+  "accentDark": "#14507f",
+  "logo": "seacoast-hurricane-shutters-logo.png",
+  "assets": ["seacoast-hurricane-shutters-logo.png"],
+  "kicker": "Serving Daytona and Volusia County",
+  "headline": "Motorized hurricane shutters for Florida storms.",
+  "intro": "Premium motorized roll-down shutters for homes and businesses, installed across Daytona and Volusia County.",
+  "sectionKicker": "About us",
+  "sectionHeadline": "Protect what matters most.",
+  "about": "SeaCoast Hurricane Shutters specialises in premium motorized roll-down shutters designed to protect homes and businesses from Florida's toughest storms. The team brings over twenty years of experience, and every installation is backed by outstanding craftsmanship and personalised customer service.",
+  "servicesHeadline": "What we install.",
+  "areaHeadline": "Serving Daytona and Volusia County.",
+  "ctaHeadline": "Get a quote for your property.",
+  "ctaCopy": "Call or email to talk through your windows, openings and colour choice, and we will put a personalised quote together.",
+  "primaryCta": "Call for a quote",
+  "navCall": "Get a quote",
+  "footerLine": "Motorized hurricane shutters for Daytona and Volusia County.",
+  "seoTitle": "SeaCoast Hurricane Shutters | Daytona Beach, FL",
+  "seoDescription": "Motorized roll-down hurricane shutters for homes and businesses in Daytona and Volusia County, Florida. Four colour options and a five-year parts warranty.",
+  "serviceAreas": ["Daytona Beach", "Volusia County"],
+  "services": [
+    {
+      "title": "Motorized roll-down shutters",
+      "description": "Premium roll-down hurricane shutters for homes and businesses, built for Florida's storm season."
+    },
+    {
+      "title": "Motorized operation",
+      "description": "Motorization means the shutters close at the touch of a button, without the effort of manual installation."
+    },
+    {
+      "title": "Custom colour options",
+      "description": "Four colours to choose from, so the shutters match the look of your home while still doing their job."
+    },
+    {
+      "title": "Five-year parts warranty",
+      "description": "Every shutter we sell carries a five-year parts warranty."
+    }
+  ]
+}
