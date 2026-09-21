@@ -32,6 +32,8 @@ const slugs = (only.length ? only : Object.keys(targets.seo_target).filter((k) =
 // Paths that were never going to be worth recovering.
 const IGNORE = /\.(jpg|jpeg|png|gif|svg|css|js|ico|woff2?|ttf|pdf|xml|txt|webp|mp4)$|^\/(wp-|cgi-bin|feed|tag\/|category\/|author\/|\?|#)/i;
 
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
 const report = [];
 
 for (const slug of slugs) {
@@ -65,17 +67,31 @@ for (const slug of slugs) {
   }
 
   const lost = [];
+  const blocked = [];
   for (const p of [...paths].sort()) {
+    // Pace the requests. Scanning every archived path back to back looks
+    // exactly like the thing Vercel's automatic mitigation exists to stop,
+    // and an earlier run tripped it on two projects.
+    await sleep(400);
     try {
       const res = await fetch(`https://${domain}${p}`, { redirect: "follow", signal: AbortSignal.timeout(15000) });
       if (res.status === 404) lost.push(p);
-    } catch { /* transient; not evidence of a 404 */ }
+      // Anything that is neither a 200 nor a 404 is an unanswered question,
+      // not a pass. A 403 challenge page used to be counted as "fine".
+      else if (res.status !== 200) blocked.push(`${p} (HTTP ${res.status})`);
+    } catch (error) {
+      blocked.push(`${p} (${error.cause?.code || error.name})`);
+    }
   }
 
-  console.log(`${lost.length ? "LOST " : "ok   "} ${slug.padEnd(34)} ${String(paths.size).padStart(3)} archived paths, ${lost.length} now 404`);
-  for (const p of lost.slice(0, 12)) console.log(`        ${p}`);
+  const flag = lost.length ? "LOST " : blocked.length ? "BLOCK" : "ok   ";
+  console.log(`${flag} ${slug.padEnd(34)} ${String(paths.size).padStart(3)} archived paths, ${lost.length} now 404${blocked.length ? `, ${blocked.length} unanswered` : ""}`);
+  for (const p of lost.slice(0, 12)) console.log(`        404 ${p}`);
   if (lost.length > 12) console.log(`        ... and ${lost.length - 12} more`);
-  report.push({ slug, domain, archived: paths.size, lost });
+  for (const b of blocked.slice(0, 5)) console.log(`        ??? ${b}`);
+  if (blocked.length) console.log(`        (unanswered is not a pass — re-run before trusting this site is clean)`);
+  report.push({ slug, domain, archived: paths.size, lost, blocked });
+  await sleep(1500);
 }
 
 await fs.writeFile(path.join(root, "deploy", "lost-pages.json"), JSON.stringify(report, null, 2) + "\n", "utf8");

@@ -3,105 +3,118 @@
     "slug": "cactus-removal-tucson",
     "domain": "cactusremovalservice.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "chicago-eifs-stucco",
     "domain": "eifschicago.com",
     "archived": 8,
-    "lost": [
-      "/contact",
-      "/news"
+    "lost": [],
+    "blocked": [
+      "/about.php (HTTP 403)",
+      "/contact (HTTP 403)",
+      "/contact.php (HTTP 403)",
+      "/index.php (HTTP 403)",
+      "/news (HTTP 403)",
+      "/photos.php (HTTP 403)",
+      "/safety.php (HTTP 403)",
+      "/services.php (HTTP 403)"
     ]
   },
   {
     "slug": "crack-rx",
     "domain": "getcrackrx.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "deck-builder-monroe",
     "domain": "deckbuildermonroe.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "flooring-monroe",
     "domain": "flooring-monroe.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "lake-charles-fences",
     "domain": "fenceslakecharles.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "mbs-pressure-washing-new-orleans",
     "domain": "pressurewashing-neworleans.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "scaffolding-los-angeles",
     "domain": "scaffoldingrentalusa.com",
     "archived": 4,
     "lost": [
-      "/about.html",
-      "/contact.html",
-      "/privacypolicy.html",
-      "/scaffolding-safety.html"
-    ]
+      "/privacypolicy.html"
+    ],
+    "blocked": []
   },
   {
     "slug": "seacoast-hurricane-shutters",
     "domain": "seacoasthurricaneshutters.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "stucco-repair-chicago",
     "domain": "stuccorepairchicago.com",
     "archived": 13,
-    "lost": [
-      "/stucco-repair.html",
-      "/thank-you.html"
+    "lost": [],
+    "blocked": [
+      "/about.php (HTTP 403)",
+      "/contact.html (HTTP 403)",
+      "/contact.php (HTTP 403)",
+      "/drywall.html (HTTP 403)",
+      "/eifs.html (HTTP 403)",
+      "/index.html (HTTP 403)",
+      "/index.php (HTTP 403)",
+      "/painting.html (HTTP 403)",
+      "/photos.php (HTTP 403)",
+      "/safety.php (HTTP 403)",
+      "/services.php (HTTP 403)",
+      "/stucco-repair.html (HTTP 403)",
+      "/thank-you.html (HTTP 403)"
     ]
   },
   {
     "slug": "towing-dallas",
     "domain": "dallastowtrucks.com",
     "archived": 9,
-    "lost": [
-      "/about.html",
-      "/battery-jumpstart.html",
-      "/contact.html",
-      "/roadside-assistance.html",
-      "/services.html",
-      "/tow-trucks.html",
-      "/towing-arlington.html",
-      "/we-buy-junk-cars.html"
-    ]
+    "lost": [],
+    "blocked": []
   },
   {
     "slug": "twin-city-fences",
     "domain": "twincityfences.com",
     "archived": 7,
     "lost": [
-      "/chain-link-fence.html",
-      "/contact-us.html",
-      "/fencing-monroe.html",
-      "/privacy-policy.html",
-      "/split-rail-fences.html",
-      "/wooden-fences.html"
-    ]
+      "/privacy-policy.html"
+    ],
+    "blocked": []
   },
   {
     "slug": "twin-city-handyman",
     "domain": "twincity-handyman.com",
     "archived": 0,
-    "lost": []
+    "lost": [],
+    "blocked": []
   }
 ]
