@@ -3,6 +3,11 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { renderSite, renderFavicon } from "../shared/render-site.mjs";
 import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
+import { renderShop } from "../shared/render-shop.mjs";
+
+// slug in site.json `template` -> renderer. No entry means the shared
+// contractor template in render-site.mjs.
+const RENDERERS = { "birds-nest": renderBirdsNest, shop: renderShop };
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const slug = process.argv[2];
@@ -14,14 +19,26 @@ const outputDir = path.join(root, "dist", slug);
 await fs.rm(outputDir, { recursive: true, force: true });
 await fs.mkdir(path.join(outputDir, "assets"), { recursive: true });
 
-const required = ["name", "domain", "phone", "city", "state", "headline", "services"];
+// Every template needs the identity fields; each one also needs the array it
+// actually renders its cards from, so the check follows the renderer rather
+// than assuming every site sells "services".
+const CONTENT_FIELD = { "birds-nest": "products", shop: "menu" };
+const required = ["name", "domain", "phone", "city", "state", "headline", CONTENT_FIELD[config.template] || "services"];
 const missing = required.filter((key) => !config[key] || (Array.isArray(config[key]) && !config[key].length));
 if (missing.length) throw new Error(`${slug} is missing required fields: ${missing.join(", ")}`);
 
-await fs.writeFile(path.join(outputDir, "index.html"), config.template === "birds-nest" ? renderBirdsNest(config) : renderSite(config), "utf8");
+const render = RENDERERS[config.template] || renderSite;
+if (config.template && !RENDERERS[config.template]) throw new Error(`${slug} names unknown template "${config.template}"`);
+await fs.writeFile(path.join(outputDir, "index.html"), render(config), "utf8");
 await fs.writeFile(path.join(outputDir, "favicon.svg"), renderFavicon(config), "utf8");
-const customCss = path.join(siteDir, "site.css");
-await fs.copyFile(await fs.stat(customCss).then(() => customCss).catch(() => path.join(root, "shared", "site.css")), path.join(outputDir, "site.css"));
+// Stylesheet falls back in order: this site's own, then the one belonging to
+// its template, then the shared contractor stylesheet.
+const exists = async (file) => fs.stat(file).then(() => file, () => null);
+const cssFile =
+  (await exists(path.join(siteDir, "site.css"))) ||
+  (config.template ? await exists(path.join(root, "shared", `${config.template}.css`)) : null) ||
+  path.join(root, "shared", "site.css");
+await fs.copyFile(cssFile, path.join(outputDir, "site.css"));
 await fs.copyFile(path.join(root, "shared", "site.js"), path.join(outputDir, "site.js"));
 
 for (const asset of config.assets || []) {

@@ -1,0 +1,97 @@
+{
+  "template": "shop",
+  "name": "Hippie Chicks Snowballs",
+  "domain": "hippie-chicks-snowballs.invalid",
+  "phone": "318-594-2384",
+  "streetAddress": "106 Chase Street",
+  "city": "Columbia",
+  "state": "Louisiana",
+  "postalCode": "71418",
+  "schemaType": "IceCreamShop",
+  "accent": "#e6007e",
+  "accentDark": "#b30062",
+  "logo": "hippie-chicks-logo.png",
+  "assets": ["hippie-chicks-logo.png"],
+  "kicker": "106 Chase Street, Columbia, Louisiana",
+  "headline": "Snowballs, energy slushes and ice cream on Chase Street.",
+  "intro": "Forty-eight snowball flavours, Alani and Red Bull energy slushes, and add-ins to build it your way.",
+  "about": "Hippie Chicks Snowballs is at 106 Chase Street in Columbia, Louisiana. Snowballs come in small, medium and large, with forty-eight flavours on the board and specialty combinations mixed to order. Energy slushes are served in a 32 oz cup over shaved or nugget ice, and any snowball flavour can be added to one. The stand also carries Blue Bell Ice Cream, Alani Nu and Hunt Brothers Pizza.",
+  "sectionKicker": "On the menu",
+  "servicesHeadline": "What we serve",
+  "menuNote": "Additional flavours are available — ask at the window. Prices and flavours are taken from the stand's own menu board.",
+  "areaHeadline": "Come see us on Chase Street",
+  "ctaHeadline": "Find us in Columbia",
+  "primaryCta": "Call 318-594-2384",
+  "navCall": "Call us",
+  "footerLine": "106 Chase Street, Columbia, Louisiana 71418.",
+  "seoTitle": "Hippie Chicks Snowballs | Columbia, Louisiana",
+  "seoDescription": "Snowballs in 48 flavours, Alani and Red Bull energy slushes, and Blue Bell ice cream at 106 Chase Street in Columbia, LA. Small $4, medium $5, large $6.",
+  "serviceAreas": ["Columbia, Louisiana"],
+  "hours": [
+    { "days": "Monday", "time": "11:00 am – 7:00 pm" },
+    { "days": "Tuesday", "time": "11:00 am – 7:00 pm" },
+    { "days": "Wednesday", "time": "Closed" },
+    { "days": "Thursday", "time": "11:00 am – 7:00 pm" },
+    { "days": "Friday", "time": "7:00 – 8:30 am, 11:00 am – 7:00 pm" },
+    { "days": "Saturday", "time": "11:00 am – 7:00 pm" },
+    { "days": "Sunday", "time": "12:00 – 7:00 pm" }
+  ],
+  "menu": [
+    {
+      "name": "Snowballs",
+      "note": "Small $4 · Medium $5 · Large $6",
+      "description": "Forty-eight flavours on the board.",
+      "items": [
+        "Bahama Mama", "Banana", "Birthday Cake", "Blackberry", "Black Cherry",
+        "Blue Bubblegum", "Blueberry", "Blueberry Cheesecake", "Blue Raspberry",
+        "Butterbeer", "Cake Batter", "Candy Apple", "Cheesecake", "Cherry",
+        "Coconut", "Cookie Dough", "Cream Cheese", "Cream Soda", "Dill Pickle",
+        "Daiquiri", "Dreamcicle", "Grape", "Grape Sour", "Icecream",
+        "Key Lime Pie", "Lemon Lime", "Lemon Sour", "Mango", "Margarita",
+        "Orange", "Pineapple", "Pink Bubblegum", "Pink Cotton Candy",
+        "Pink Lemonade", "Polar Punch", "Red Raspberry", "Red Velvet Cake",
+        "Rootbeer", "Ruston Peach", "Silver Fox", "Sour Apple", "Spearmint",
+        "Strawberry", "Strawberry Cheesecake", "Tigers Blood", "Tutti Frutti",
+        "Watermelon", "Wedding Cake"
+      ]
+    },
+    {
+      "name": "Specialty snowballs",
+      "description": "Flavour combinations mixed to order.",
+      "items": [
+        "Armadillo — Butterbeer & Ice Cream",
+        "Double Bubble — Blue BBG & Pink BBG",
+        "Frog in a Blender — Sour Apple & Cherry"
+      ]
+    },
+    {
+      "name": "Alani energy slush",
+      "note": "$7.00 · 32 oz cup with shaved ice or nugget ice",
+      "items": [
+        "Strawberry Sunrise", "Cotton Candy", "Sherbert Swirl", "Juicy Peach",
+        "Cherry Slush", "Cherry Twist", "Hawaiian Shaved Ice", "Kimade",
+        "Pumpkin Creme", "Witches Brew", "Pink Slush", "Orange Kiss",
+        "Blue Slush", "Breeze Berry", "Cosmic Stardust", "Dream Float",
+        "Watermelon Wave", "Purple Cotton Candy"
+      ]
+    },
+    {
+      "name": "Red Bull energy slush",
+      "note": "$7.00 · 32 oz cup with shaved ice or nugget ice",
+      "description": "Customise with your favourite snowball flavour.",
+      "items": ["Regular", "Sugar Free"]
+    },
+    {
+      "name": "Add-ins",
+      "note": "$1 each",
+      "items": [
+        "Cream", "Cold foam", "Caramel", "Chocolate", "Pineapple juice",
+        "Strawberry puree"
+      ]
+    },
+    {
+      "name": "Also at the stand",
+      "items": ["Blue Bell Ice Cream", "Alani Nu", "Hunt Brothers Pizza"]
+    }
+  ]
+}
