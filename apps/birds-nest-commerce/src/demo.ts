@@ -1,0 +1,7 @@
+import type { Product,StoreSettings } from "./types";
+export const demoProducts:Product[]=[
+ {id:"spring-mix",name:"Medium Spring Mix",slug:"medium-spring-mix",description:"A colorful seasonal mix arranged by our florists.",price_cents:5500,image_url:"https://irp.cdn-website.com/cecc5eca/dms3rep/multi/opt/IMG_9967-1920w.png",category:"Arrangements",active:true,featured:true,inventory_count:null,sort_order:1},
+ {id:"dozen-roses",name:"Large Dozen Roses",slug:"large-dozen-roses",description:"A classic dozen-rose arrangement for the moments that matter.",price_cents:9500,image_url:"https://irp.cdn-website.com/cecc5eca/dms3rep/multi/opt/IMG_9969-1920w.png",category:"Roses",active:true,featured:true,inventory_count:null,sort_order:2},
+ {id:"three-rose",name:"3 Rose Arrangement",slug:"three-rose-arrangement",description:"Three roses arranged with seasonal greenery and accents.",price_cents:3000,image_url:"https://irp.cdn-website.com/cecc5eca/dms3rep/multi/opt/IMG_9970-1920w.png",category:"Roses",active:true,featured:false,inventory_count:null,sort_order:3}
+];
+export const demoSettings:StoreSettings={store_name:"The Bird's Nest Flower Shop",phone:"318-502-4055",email:"",address:"Downtown Columbia, Louisiana",hours:"Monday–Friday 8:00–5:00 · Saturday 9:00–12:00",announcement:"Fresh flowers, made right here in Columbia.",accepting_orders:true,pickup_enabled:true,delivery_enabled:false,delivery_fee_cents:0,payment_provider:"none"};
