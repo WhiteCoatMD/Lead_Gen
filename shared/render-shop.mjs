@@ -1,4 +1,5 @@
 import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./render-site.mjs";
+import { businessId, openingHoursSpecification, postalAddress, productCatalog, serviceCatalog } from "./schema.mjs";
 
 // A counter-service / retail template for businesses people visit or order
 // from, rather than hire. The shared contractor template is wrong for these:
@@ -48,22 +49,23 @@ export function renderShop(site) {
   const schema = {
     "@context": "https://schema.org",
     "@type": site.schemaType || "LocalBusiness",
+    "@id": businessId(site),
     name: site.name,
     url: `https://${site.domain}`,
+    mainEntityOfPage: `https://${site.domain}/`,
     telephone: site.phone,
     email: site.email,
     description: site.seoDescription,
     image: site.logo ? absolute(site.domain, site.logo) : undefined,
     logo: site.logo ? absolute(site.domain, site.logo) : undefined,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.streetAddress,
-      addressLocality: site.city,
-      addressRegion: stateCode(site.state),
-      postalCode: site.postalCode,
-      addressCountry: "US"
-    },
+    address: postalAddress(site, stateCode),
     areaServed: areas.map((name) => ({ "@type": "Place", name })),
+    openingHoursSpecification: openingHoursSpecification(site.hours),
+    // Menu groups on this template are the things the business actually
+    // offers -- "Self-service laundry", "Wash and fold" -- so they read as
+    // a service catalogue. Product prices are only emitted where the source
+    // site published one; several of these deliberately have none.
+    hasOfferCatalog: serviceCatalog(site, groups) || productCatalog(site, site.products),
     contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: site.phone, areaServed: "US", availableLanguage: "English" }
   };
 

@@ -17,15 +17,15 @@ another project. 17 sites remain.
 | 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | **PASS** | live | **LIVE 2026-09-21** | No pricing published on the source site. |
 | 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | **PASS** | live | **LIVE 2026-09-21** | No prices published. Label ingredients not legible enough to transcribe. |
 | 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | **SHELVED 2026-09-21** | — | frozen | Owner shelved it. No phone/email/address on source; store closed for maintenance. |
-| 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
-| 8 | Make Your Own Crap.com | d7417d8e | makeyourowncrap.com | **CANCELLED** exp 2025-09-24 | not started | — | frozen | Domain lapsed. |
+| 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | **SHELVED 2026-09-21** | — |
+| 8 | Make Your Own Crap.com | d7417d8e | makeyourowncrap.com | **CANCELLED** exp 2025-09-24 | not started | — | **SHELVED 2026-09-21** | Domain lapsed. |
 | 9 | Miro's Tree Service Monroe | 58dd2d08 | treeservicemonroe.com | ACTIVE, on Snapps, **has MX** | **DROPPED 2026-09-21** | — | frozen | Owner dropped it. Source is an unedited template with no business content. |
 | 10 | MB's Pressure Washing New Orleans | d4aaf3f8 | pressurewashing-neworleans.com | ACTIVE, on Snapps | **PASS** | live | **LIVE 2026-09-21** | `nolapressurewash.com` also exists but points elsewhere (199.34.228.76) — not this site. |
-| 11 | Cutting Edge Tree Service | ca8eaba7 | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** City unknown. |
+| 11 | Cutting Edge Tree Service | ca8eaba7 | — | **none found** | not started | — | **SHELVED 2026-09-21** | **No domain in GoDaddy.** City unknown. |
 | 12 | Roofing Company Warren | 4dcadec0 | roofingcompanywarren.com | **CANCELLED** exp 2025-09-29 | not started | — | frozen | Domain lapsed. |
 | 13 | Roofing Company of Houma, LLC | b19a02c5 | roofing-houma.com | **CANCELLED** exp 2023-09-27 | not started | — | frozen | Domain lapsed (3 years). |
 | 14 | Millard's Stucco Repair Baton Rouge | a5c1500c | stuccorepairbatonrouge.com | ACTIVE, on Snapps | not started | — | frozen | — |
-| 15 | Drywall & Paint Pros of Chicago | d66af26f | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
+| 15 | Drywall & Paint Pros of Chicago | d66af26f | — | **none found** | not started | — | **SHELVED 2026-09-21** | **No domain in GoDaddy.** |
 | 16 | Spray Foam Insulation Los Angeles | d1a95eff | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
 | 17 | Leyland's Los Angeles Tree Service | e5a4ace7 | — | **none found** | **DROPPED 2026-09-21** | — | frozen | Owner dropped it. Source is an unedited template with no business content. |
 
@@ -164,6 +164,19 @@ does not count.
 The launch checklist requires a real phone (four matching `tel:` links, a
 header call CTA and a sticky mobile call button) and rejects any number whose
 last seven digits are identical, so none of the six can be built without one.
+
+## Shelved 2026-09-21
+
+Four sites were shelved at the owner's request so effort goes to the sites
+that are complete. All four are blocked on a real phone number, which is not
+something to invent:
+
+`custom-letters-from-santa-claus` · `cutting-edge-tree-service` ·
+`drywall-and-paint-pros-chicago` · `make-your-own-crap`
+
+Millard's stays shelved too (card count plus the 225-vs-504 conflict). All
+five are pinned in `deploy/audit-expectations.json`, so the weekly audit
+reports them without failing. Pick them back up by deleting their entry.
 
 ## DNS cutover 2026-09-21 (second wave)
 

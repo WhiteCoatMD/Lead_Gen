@@ -1,0 +1,4 @@
+{
+  "_comment": "IndexNow key for the portfolio. This is NOT a secret -- the protocol requires it to be publicly readable at https://<host>/<key>.txt, which is exactly how ownership is proven. It is committed on purpose. Regenerating it means every site must redeploy before the next submission will be accepted.",
+  "key": "034588aa805b50017edd7733bff74366"
+}

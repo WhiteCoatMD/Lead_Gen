@@ -1,13 +1,12 @@
 {
   "_comment": "Sites whose current broken state is known and accepted. The audit still prints them, but they do not fail the run. If a site's state changes to anything other than the accepted value the audit fails, because a change is new information even when the new state looks better. Delete an entry once the underlying problem is actually fixed.",
-
   "custom-letters-from-santa-claus": {
     "accept": "broken",
-    "reason": "Deliberately frozen. Built with placeholder phone 318-000-0000 and fails the launch checklist on purpose until the owner supplies a real number. Domain still on the old Snapps host."
+    "reason": "SHELVED 2026-09-21 at the owner's request. Built with placeholder phone 318-000-0000 and real products/prices from the source. Needs a real phone before it can go live; not being chased."
   },
   "millards-stucco-repair-baton-rouge": {
     "accept": "broken",
-    "reason": "Deliberately frozen. Fails the checklist on card count (source lists only two services and nothing was invented to pad it), plus an unresolved 225-vs-504 phone conflict. Domain still on the old Snapps host."
+    "reason": "SHELVED. Fails the checklist on card count (source lists only two services; nothing was invented to pad it) and has an unresolved 225-vs-504 phone conflict. Owner said to ignore it."
   },
   "roofing-company-warren": {
     "accept": "broken",
@@ -15,7 +14,7 @@
   },
   "make-your-own-crap": {
     "accept": "no-dns",
-    "reason": "Domain lapsed 2025-09-24. Site was built as a draft at the owner's request; not re-registered."
+    "reason": "SHELVED 2026-09-21 at the owner's request. Domain lapsed 2025-09-24 and the build carries a placeholder phone. Draft only."
   },
   "roofing-company-houma": {
     "accept": "no-dns",
@@ -28,5 +27,13 @@
   "towing-jonesboro": {
     "accept": "no-dns",
     "reason": "Domain lapsed and the owner shelved the site on 2026-09-20. Not being revived."
+  },
+  "cutting-edge-tree-service": {
+    "accept": "placeholder",
+    "reason": "SHELVED 2026-09-21 at the owner's request. No domain in GoDaddy, city unknown, placeholder phone 318-000-0000."
+  },
+  "drywall-and-paint-pros-chicago": {
+    "accept": "placeholder",
+    "reason": "SHELVED 2026-09-21 at the owner's request. Substantial source copy but no phone anywhere and no domain in GoDaddy."
   }
 }

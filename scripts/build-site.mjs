@@ -47,4 +47,12 @@ for (const asset of config.assets || []) {
 
 await fs.writeFile(path.join(outputDir, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: https://${config.domain}/sitemap.xml\n`, "utf8");
 await fs.writeFile(path.join(outputDir, "sitemap.xml"), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://${config.domain}/</loc></url></urlset>\n`, "utf8");
+
+// IndexNow ownership proof. The protocol verifies a submission by fetching
+// this file from the host and checking it contains the key, so it has to
+// ship with every site. It is deliberately public -- that is the mechanism,
+// not a leak. scripts/indexnow.mjs refuses to submit for a host until this
+// file is actually live, which makes it a deploy check as well as a key.
+const indexNow = JSON.parse(await fs.readFile(path.join(root, "deploy", "indexnow.json"), "utf8"));
+await fs.writeFile(path.join(outputDir, `${indexNow.key}.txt`), indexNow.key, "utf8");
 console.log(`Built ${slug} → dist/${slug}`);

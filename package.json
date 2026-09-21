@@ -6,6 +6,7 @@
     "build": "node scripts/build-all.mjs",
     "build:site": "node scripts/build-site.mjs",
     "audit": "node scripts/audit.mjs",
-    "audit:live": "node scripts/audit-portfolio.mjs"
+    "audit:live": "node scripts/audit-portfolio.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   }
 }

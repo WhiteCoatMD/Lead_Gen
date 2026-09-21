@@ -1,3 +1,5 @@
+import { businessId, openingHoursSpecification, postalAddress, serviceCatalog } from "./schema.mjs";
+
 export const jsonLd = (schema) => JSON.stringify(schema).replace(/</g, "\\u003c");
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 export const escapeHtml = esc;
@@ -44,18 +46,27 @@ export function renderSite(site) {
         ${shot.caption ? `<figcaption>${esc(shot.caption)}</figcaption>` : ""}
       </figure>`).join("");
 
+  // The services are the entire substance of a contractor site and nothing
+  // machine-readable used to say what they were, so they now ship as an offer
+  // catalogue. @id gives the business a stable identity for those Service
+  // entities to name as their provider. Everything else here is unchanged;
+  // helpers return undefined when the data is absent and the key vanishes.
   const schema = {
     "@context": "https://schema.org",
     "@type": site.schemaType || "LocalBusiness",
+    "@id": businessId(site),
     name: site.name,
     url: `https://${site.domain}`,
+    mainEntityOfPage: `https://${site.domain}/`,
     telephone: site.phone,
     email: site.email,
     description: site.seoDescription,
     image: site.logo ? absolute(site.domain, site.logo) : undefined,
     logo: site.logo ? absolute(site.domain, site.logo) : undefined,
-    address: { "@type": "PostalAddress", addressLocality: site.city, addressRegion: stateCode(site.state), addressCountry: "US" },
+    address: postalAddress(site, stateCode),
     areaServed: areaNames.map((name) => ({ "@type": "Place", name })),
+    openingHoursSpecification: openingHoursSpecification(site.hours),
+    hasOfferCatalog: serviceCatalog(site, site.services),
     contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: site.phone, areaServed: "US", availableLanguage: "English" }
   };
 

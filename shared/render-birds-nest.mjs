@@ -1,4 +1,5 @@
 import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./render-site.mjs";
+import { businessId, openingHoursSpecification, postalAddress } from "./schema.mjs";
 
 // The Bird's Nest keeps the storefront layout of the original shop rather than
 // the shared contractor template, so it renders from its own markup.
@@ -15,18 +16,19 @@ export function renderBirdsNest(site) {
   const schema = {
     "@context": "https://schema.org",
     "@type": site.schemaType || "Florist",
+    "@id": businessId(site),
     name: site.name,
     url: `https://${site.domain}`,
+    mainEntityOfPage: `https://${site.domain}/`,
     telephone: site.phone,
     description: site.seoDescription,
     image: absolute(site.domain, site.logo),
     logo: absolute(site.domain, site.logo),
-    address: { "@type": "PostalAddress", addressLocality: site.city, addressRegion: "LA", addressCountry: "US" },
+    address: postalAddress(site, () => "LA"),
     areaServed: areas.map((name) => ({ "@type": "Place", name })),
-    openingHoursSpecification: [
-      { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "17:00" },
-      { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "12:00" }
-    ],
+    // Derived from site.hours rather than repeated here, so the structured
+    // data and the hours printed on the page cannot drift apart.
+    openingHoursSpecification: openingHoursSpecification(site.hours),
     makesOffer: site.products.map((product) => ({
       "@type": "Offer", price: product.price, priceCurrency: "USD",
       itemOffered: { "@type": "Product", name: product.name }
