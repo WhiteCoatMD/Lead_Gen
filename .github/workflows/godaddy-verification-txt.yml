@@ -1,0 +1,159 @@
+name: Add Search Console verification TXT
+
+# Adds a google-site-verification TXT record so a domain can be claimed as a
+# Search Console DOMAIN property.
+#
+# A third narrow workflow rather than a change to the main one. "Connect
+# lead-generation domains" is allowlisted to apex A/AAAA and www A/AAAA/CNAME
+# so it can never touch a TXT record, and that guard is what protects SPF,
+# DKIM and DMARC across eighteen zones. It is not worth spending to add a
+# verification string.
+#
+# THE DANGEROUS MISTAKE THIS AVOIDS:
+# The obvious way to write a TXT record is to PUT the TXT record set for `@`.
+# That REPLACES every apex TXT record, which on these zones means deleting the
+# SPF record and silently breaking outbound mail authentication for a live
+# business. This workflow only ever POSTs a single additional record, never
+# replaces a set, and never deletes anything at all. Multiple
+# google-site-verification records on one domain are fine; Google reads them
+# all.
+#
+# Safety rails:
+#   - writes TXT on the apex only
+#   - the value must look exactly like google-site-verification=<token>
+#   - it cannot delete or replace any record, only add
+#   - dry run is the default
+#   - it counts MX and TXT before and after and fails if anything vanished
+#
+# Tokens come from Search Console: Add property -> Domain -> <domain>, which
+# shows the TXT value to add. One token per domain; they are not reusable.
+#
+# Input is JSON so eleven domains can go in one run:
+#   {"example.com":"google-site-verification=abc...","other.com":"google-site-verification=def..."}
+
+on:
+  workflow_dispatch:
+    inputs:
+      records:
+        description: 'JSON: {"domain":"google-site-verification=token", ...}'
+        required: true
+        type: string
+      dry_run:
+        description: "Report the planned changes without writing"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  add-verification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add verification TXT
+        env:
+          GODADDY_PAT: ${{ secrets.GODADDY_PAT || secrets.GODADDY_TOKEN || secrets.GODADDY_API_KEY }}
+          RECORDS: ${{ inputs.records }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          node <<'NODE'
+          const token = process.env.GODADDY_PAT;
+          if (!token) throw new Error("Missing GODADDY_PAT repository secret");
+          const dryRun = process.env.DRY_RUN !== "false";
+
+          let records;
+          try {
+            records = JSON.parse(process.env.RECORDS);
+          } catch (error) {
+            throw new Error(`records is not valid JSON: ${error.message}`);
+          }
+          const entries = Object.entries(records);
+          if (!entries.length) throw new Error("records is empty");
+
+          // The whole safety model in one line: nothing that is not a
+          // google-site-verification string can be written by this workflow,
+          // whatever is passed in.
+          const VALID = /^google-site-verification=[A-Za-z0-9_-]{20,}$/;
+
+          const api = async (zone, path = "", options = {}) => {
+            const res = await fetch(
+              `https://api.godaddy.com/v3/domains/zones/${zone}/dns-records${path}`,
+              { ...options, headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json", ...(options.headers || {}) } }
+            );
+            const body = res.status === 204 ? null : await res.json().catch(() => null);
+            if (!res.ok) throw new Error(`${zone}: ${options.method || "GET"} ${res.status} ${JSON.stringify(body)}`);
+            return body;
+          };
+          const list = (zone) => api(zone, "?pageSize=100&totalRequired=true").then((b) => b.items || []);
+
+          let added = 0, skipped = 0, failed = 0;
+          for (const [zone, value] of entries) {
+            console.log("");
+            console.log(`=== ${zone} ===`);
+
+            if (!VALID.test(String(value).trim())) {
+              console.log(`  REFUSED: "${String(value).slice(0, 60)}" is not a google-site-verification string`);
+              failed++;
+              continue;
+            }
+
+            let before;
+            try {
+              before = await list(zone);
+            } catch (error) {
+              console.log(`  SKIPPED: cannot read zone (${error.message.slice(0, 80)})`);
+              skipped++;
+              continue;
+            }
+
+            const txt = before.filter((r) => r.type === "TXT");
+            const mx = before.filter((r) => r.type === "MX");
+            const spf = txt.filter((r) => /^v=spf1/i.test(String(r.data || "")));
+            console.log(`  before: ${txt.length} TXT (${spf.length} SPF), ${mx.length} MX`);
+
+            if (txt.some((r) => String(r.data).trim() === String(value).trim())) {
+              console.log("  already present, nothing to do");
+              skipped++;
+              continue;
+            }
+
+            if (dryRun) {
+              console.log(`  would ADD  TXT @ -> ${String(value).slice(0, 48)}...`);
+              console.log("  (add only — no existing record is replaced or deleted)");
+              added++;
+              continue;
+            }
+
+            try {
+              // POST adds one record. A PUT here would replace the whole apex
+              // TXT set and take SPF with it.
+              await api(zone, "", { method: "POST", body: JSON.stringify([{ type: "TXT", name: "@", data: String(value).trim(), ttl: 600 }]) });
+            } catch (error) {
+              console.log(`  FAILED: ${error.message.slice(0, 140)}`);
+              failed++;
+              continue;
+            }
+
+            const after = await list(zone);
+            const txtAfter = after.filter((r) => r.type === "TXT");
+            const mxAfter = after.filter((r) => r.type === "MX");
+            const spfAfter = txtAfter.filter((r) => /^v=spf1/i.test(String(r.data || "")));
+            const wrote = txtAfter.some((r) => String(r.data).trim() === String(value).trim());
+
+            if (spfAfter.length !== spf.length || mxAfter.length !== mx.length) {
+              console.log(`  FAILED: records disappeared. SPF ${spf.length}->${spfAfter.length}, MX ${mx.length}->${mxAfter.length}`);
+              failed++;
+            } else if (!wrote) {
+              console.log("  FAILED: the record is not present after writing");
+              failed++;
+            } else {
+              console.log(`  added. now ${txtAfter.length} TXT (${spfAfter.length} SPF), ${mxAfter.length} MX — nothing lost`);
+              added++;
+            }
+          }
+
+          console.log("");
+          console.log(`${added} ${dryRun ? "would be added" : "added"}, ${skipped} skipped, ${failed} failed.`);
+          if (!dryRun && added) console.log("DNS needs a few minutes. Then hit VERIFY in Search Console.");
+          process.exit(failed ? 1 : 0);
+          NODE

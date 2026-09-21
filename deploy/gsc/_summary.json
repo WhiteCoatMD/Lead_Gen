@@ -1,117 +1,8 @@
 {
   "startDate": "2025-05-29",
   "endDate": "2026-09-18",
-  "generated": "2026-09-21T23:36:05.446Z",
+  "generated": "2026-09-21T23:41:03.426Z",
   "summary": [
-    {
-      "slug": "cactus-removal-tucson",
-      "domain": "cactusremovalservice.com",
-      "connected": false
-    },
-    {
-      "slug": "chicago-eifs-stucco",
-      "domain": "eifschicago.com",
-      "connected": false
-    },
-    {
-      "slug": "crack-rx",
-      "domain": "getcrackrx.com",
-      "connected": false
-    },
-    {
-      "slug": "deck-builder-monroe",
-      "domain": "deckbuildermonroe.com",
-      "connected": false
-    },
-    {
-      "slug": "flooring-monroe",
-      "domain": "flooring-monroe.com",
-      "connected": false
-    },
-    {
-      "slug": "lake-charles-fences",
-      "domain": "fenceslakecharles.com",
-      "connected": false
-    },
-    {
-      "slug": "mbs-pressure-washing-new-orleans",
-      "domain": "pressurewashing-neworleans.com",
-      "connected": false
-    },
-    {
-      "slug": "scaffolding-los-angeles",
-      "domain": "scaffoldingrentalusa.com",
-      "connected": false
-    },
-    {
-      "slug": "seacoast-hurricane-shutters",
-      "domain": "seacoasthurricaneshutters.com",
-      "connected": false
-    },
-    {
-      "slug": "stucco-repair-chicago",
-      "domain": "stuccorepairchicago.com",
-      "connected": false
-    },
-    {
-      "slug": "towing-dallas",
-      "domain": "dallastowtrucks.com",
-      "connected": true,
-      "clicks": 579,
-      "impressions": 421620,
-      "pages": 13,
-      "queries": 1000,
-      "rebuilt": [
-        {
-          "path": "/tow-trucks.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        },
-        {
-          "path": "/roadside-assistance.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        },
-        {
-          "path": "/battery-jumpstart.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        },
-        {
-          "path": "/we-buy-junk-cars.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        },
-        {
-          "path": "/towing-arlington.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        },
-        {
-          "path": "/services.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        },
-        {
-          "path": "/about.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        },
-        {
-          "path": "/contact.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
-        }
-      ]
-    },
     {
       "slug": "twin-city-fences",
       "domain": "twincityfences.com",
@@ -170,11 +61,6 @@
           "position": null
         }
       ]
-    },
-    {
-      "slug": "twin-city-handyman",
-      "domain": "twincity-handyman.com",
-      "connected": false
     }
   ]
 }
