@@ -16,7 +16,7 @@ another project. 17 sites remain.
 | 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No street address published on the source site. |
 | 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No pricing published on the source site. |
 | 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No prices published. Label ingredients not legible enough to transcribe. |
-| 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | **BLOCKED** | — | frozen | **No phone, email or address anywhere on the source. Store closed for maintenance, no products.** |
+| 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | **SHELVED 2026-09-21** | — | frozen | Owner shelved it. No phone/email/address on source; store closed for maintenance. |
 | 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 8 | Make Your Own Crap.com | d7417d8e | makeyourowncrap.com | **CANCELLED** exp 2025-09-24 | not started | — | frozen | Domain lapsed. |
 | 9 | Miro's Tree Service Monroe | 58dd2d08 | treeservicemonroe.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
@@ -113,7 +113,9 @@ template called *ohmydog*; all real content is pictures of a printed menu.
   is undated, points off-site, and the campaign may well have ended. The
   header also carries a `555-555-5555` template placeholder, which was ignored
   in favour of the real number in the contact block. No prices are published.
-- **The Velvet Chandelier — BLOCKED, needs the owner.** The whole Snapps site
+- **The Velvet Chandelier — SHELVED 2026-09-21 by the owner.** Do not rebuild
+  or re-pitch it unless he raises it. Recorded here so the findings are not
+  lost if it comes back. The whole Snapps site
   is ~581 characters across Home, About and Store. There is **no phone number,
   no email address and no street address** on any page, the Store page reports
   "The store is closed for maintenance" and lists no products, and there is no
