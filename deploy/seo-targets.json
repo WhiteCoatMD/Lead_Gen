@@ -1,6 +1,5 @@
 {
   "_comment": "Which sites get SEO effort and which are hosted only. Not every live site is a ranking target: some belong to people who pay for hosting and nothing else, and spending effort on those is work nobody asked for. Confirmed with the owner 2026-09-21.",
-
   "seo_target": {
     "_note": "Mitch's own properties. On-page, schema, content and link prospecting all apply here.",
     "cactus-removal-tucson": "lead-gen",
@@ -17,18 +16,15 @@
     "twin-city-fences": "lead-gen",
     "twin-city-handyman": "lead-gen"
   },
-
   "on_hold": {
     "_note": "Mitch's own, but not being worked on. Do not spend effort here without asking.",
     "rev-laundry-soap": "Mitch's business, on hold as of 2026-09-21. Site is live and correct; leave it alone."
   },
-
   "host_only": {
     "_note": "Hosting only. Do not spend time optimising or reporting on these. The shared renderer still emits their structured data, which is accurate and costs nothing.",
     "hometown-soap-n-sudz": "Confirmed 2026-09-21 — owner pays for hosting, not ranking.",
     "birds-nest-flower-shop": "Confirmed 2026-09-21 — hosting only."
   },
-
   "seacoast_status": {
     "_note": "Converted from client site to lead-gen after the operator left the business. The unsupportable claims are gone; the routing decision is still open.",
     "fixed_2026_09_21": [
@@ -42,5 +38,10 @@
       "No contact method at all, so the live page cannot convert. It fails the launch checklist by name ('no phone number on the site at all'), which is correct until Mitch decides where leads should go.",
       "The domain still carries live MX. The DNS cutover preserved it deliberately, so mail continues to reach whoever holds that mailbox."
     ]
+  },
+  "dropped": {
+    "_note": "Removed from the SEO portfolio 2026-09-21 at the owner's instruction. Both domains have lapsed and do not resolve; citations and backlinks pointing at a dead domain are worse than none.",
+    "tow-truck-arlington": "towing-arlington.com lapsed. Dropped.",
+    "towing-jonesboro": "towingcompanyjonesboro.com lapsed; owner shelved the site 2026-09-20. Dropped."
   }
 }

@@ -1,0 +1,57 @@
+{
+  "_comment": "Google Business Profile discovery for the SEO-target properties, run 2026-09-21 via the Places Text Search API (the sanctioned path; scraping Google results is ruled out). Searched each property three ways: business name + city + state, exact phone number, and exact domain. Field mask restricted to id, name, address, phone, website and business status -- no ratings, reviews or photos, per the Places terms constraint that governs the mattress directory and applies equally here.",
+
+  "_absence_caveat": "A property listed as not_found is NOT proven to have no GBP. Unverified and suspended profiles do not appear in the Places API at all, so this method can confirm a profile exists but cannot confirm one does not. The definitive check is signing in to business.google.com on the owning Google account, which only Mitch can do.",
+
+  "found": {
+    "lake-charles-fences": {
+      "place_id": "see gbp-phone-findings",
+      "gbp_name": "Lake Charles Fences and Decks",
+      "gbp_phone": "(337) 324-9657",
+      "gbp_address": "908 Audubon St, Lake Charles, LA 70601, USA",
+      "status": "OPERATIONAL",
+      "matched_on": "domain and phone",
+      "nap_notes": [
+        "Phone matches the site exactly (337-324-9657).",
+        "Name differs in one word: site says 'Lake Charles Fences & Decks', GBP says '...and Decks'. Citations key on exact-string consistency, so pick one and use it everywhere.",
+        "The GBP publishes a street address the website does not carry at all. Adding it to site.json would strengthen the LocalBusiness schema and give citations a real NAP to match."
+      ]
+    },
+    "scaffolding-los-angeles": {
+      "place_id": "see gbp-phone-findings",
+      "gbp_name": "Scaffolding Rental Los Angeles",
+      "gbp_phone": "(323) 498-3395",
+      "gbp_address": "3515 S Norton Ave, Los Angeles, CA 90018, USA",
+      "status": "CLOSED_PERMANENTLY",
+      "matched_on": "domain and phone",
+      "nap_notes": [
+        "URGENT: the profile is flagged CLOSED_PERMANENTLY. A closed GBP is suppressed in Maps and local packs, so this property currently cannot rank locally no matter what the website does.",
+        "Phone matches the site exactly (323-498-3395), so the profile is definitely ours rather than a similarly named business.",
+        "Reopening is done from the GBP dashboard and needs the owning Google account.",
+        "The GBP publishes a street address the website does not carry."
+      ]
+    }
+  },
+
+  "not_found": {
+    "_note": "No profile surfaced for the business name, the published phone, or the domain. See _absence_caveat before concluding these do not exist.",
+    "slugs": [
+      "cactus-removal-tucson",
+      "chicago-eifs-stucco",
+      "crack-rx",
+      "deck-builder-monroe",
+      "flooring-monroe",
+      "mbs-pressure-washing-new-orleans",
+      "stucco-repair-chicago",
+      "towing-dallas",
+      "twin-city-fences",
+      "twin-city-handyman"
+    ]
+  },
+
+  "not_searchable": {
+    "seacoast-hurricane-shutters": "Contact details were removed from the site on 2026-09-21 while its positioning is decided, so there is no phone to search on."
+  },
+
+  "implication": "The brief's premise -- that aged Google Business Profiles already exist across the portfolio -- is confirmed for two properties and unconfirmed for eleven, including Twin City Fences, which was nominated as the pilot. Citation building depends on a real, verifiable NAP; without a GBP there is nothing to make citations consistent WITH, and creating listings for a business that is not eligible is the failure mode that costs an entire Google account. This needs resolving before the citation phase starts."
+}
