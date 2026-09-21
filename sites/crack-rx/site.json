@@ -1,0 +1,96 @@
+{
+  "template": "shop",
+  "name": "Crack Rx",
+  "domain": "getcrackrx.com",
+  "phone": "318-372-7140",
+  "email": "crackdoctor@getcrackrx.com",
+  "city": "Grayson",
+  "state": "Louisiana",
+  "schemaType": "Store",
+  "accent": "#d1342a",
+  "accentDark": "#9e2620",
+  "logo": "crack-rx-logo.png",
+  "hero": "crack-rx-concrete-repair.jpg",
+  "assets": [
+    "crack-rx-logo.png",
+    "crack-rx-concrete-repair.jpg",
+    "crack-rx-bottles.jpg",
+    "crack-rx-before-and-after.jpg",
+    "crack-rx-filling-a-crack.jpg"
+  ],
+  "kicker": "Prescription strength for your concrete's crack problem",
+  "headline": "Got crack? We fix that.",
+  "intro": "Hairline, pothole-lite, or a full-blown driveway grand canyon — CrackRx don't judge. We just fill.",
+  "about": "CrackRx is a dry-fill concrete crack repair compound in an easy-to-handle squeeze bottle. There is no mixing and no mess: pour it into the crack, smooth it off, and mist it with water to activate it. Once it sets it keeps weeds, bugs and water out, and it blends into the surrounding concrete. It is made for driveways and patios, and it is simple enough that anyone can get a professional-looking finish.",
+  "sectionKicker": "The product",
+  "servicesHeadline": "One bottle, four steps.",
+  "menuNote": "Check us out on TikTok for product videos and childish humour.",
+  "areaHeadline": "Talk crack with us",
+  "ctaHeadline": "Made in Grayson, Louisiana",
+  "primaryCta": "Call 318-372-7140",
+  "navCall": "Buy CrackRx",
+  "footerLine": "Prescription strength for your concrete's crack problem.",
+  "seoTitle": "Crack Rx | Easy DIY Concrete Crack Repair",
+  "seoDescription": "Dry-fill concrete crack repair in a 32 oz squeeze bottle. No mixing, no mess — clean it, fill it, smooth it, mist it. Made in Grayson, Louisiana.",
+  "serviceAreas": ["Grayson, Louisiana"],
+  "menu": [
+    {
+      "name": "CrackRx dry-fill compound",
+      "note": "32 oz by weight",
+      "description": "A dry-fill compound in a squeeze bottle with a precision tip, so the filler goes deep into the crack and bonds with the concrete.",
+      "items": [
+        "No mixing",
+        "No mess",
+        "Squeeze bottle with precision tip",
+        "Activates with water"
+      ]
+    },
+    {
+      "name": "How to use it",
+      "description": "The four steps printed on the bottle.",
+      "items": [
+        "Step 1 — Clean it",
+        "Step 2 — Fill it",
+        "Step 3 — Smooth it",
+        "Step 4 — Mist it"
+      ]
+    },
+    {
+      "name": "What it handles",
+      "items": [
+        "Hairline cracks",
+        "Wider cracks",
+        "Driveways",
+        "Patios",
+        "Concrete slabs"
+      ]
+    },
+    {
+      "name": "Once it's set",
+      "items": [
+        "Keeps water out",
+        "Keeps weeds out",
+        "Keeps bugs out",
+        "Blends into the surrounding concrete",
+        "Long-lasting finish"
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "image": "crack-rx-bottles.jpg",
+      "alt": "Two 32 oz CrackRx squeeze bottles standing on a concrete driveway",
+      "caption": "32 oz by weight, in a squeeze bottle with a precision tip."
+    },
+    {
+      "image": "crack-rx-before-and-after.jpg",
+      "alt": "Side-by-side comparison of a cracked concrete surface before treatment and the same surface filled and smoothed afterwards",
+      "caption": "Before and after."
+    },
+    {
+      "image": "crack-rx-filling-a-crack.jpg",
+      "alt": "Illustration of a CrackRx bottle squeezing dry filler into a crack between two concrete slabs",
+      "caption": "Apply straight from the bottle — no bucket, no stirring."
+    }
+  ]
+}

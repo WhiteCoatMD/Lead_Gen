@@ -29,6 +29,14 @@ export function renderShop(site) {
           ${group.items && group.items.length ? `<ul${group.items.some((item) => item.length > 22) ? ' class="long"' : ""}>${group.items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>` : ""}
         </article>`).join("");
 
+  // Same optional gallery contract as the contractor template: no `gallery`
+  // key means no gallery section, and every entry carries its own alt text.
+  const gallery = (site.gallery || []).map((shot) => `
+        <figure>
+          <img src="${esc(assetUrl(shot.image))}" alt="${esc(shot.alt)}" loading="lazy" decoding="async">
+          ${shot.caption ? `<figcaption>${esc(shot.caption)}</figcaption>` : ""}
+        </figure>`).join("");
+
   const hours = (site.hours || []).map((row) => `<div><dt>${esc(row.days)}</dt><dd>${esc(row.time)}</dd></div>`).join("");
   const areaList = areas.map((area) => `<span>${esc(area)}</span>`).join("");
 
@@ -109,6 +117,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
       <div class="products">${cards}</div>
       ${site.menuNote ? `<p class="menu-note">${esc(site.menuNote)}</p>` : ""}
     </section>
+    ${gallery ? `<section class="shell gallery" id="gallery"><div class="section-heading"><p class="eyebrow accent">${esc(site.galleryKicker || "Gallery")}</p><h2>${esc(site.galleryHeadline || "A closer look.")}</h2></div><div class="gallery-grid">${gallery}</div></section>` : ""}
     <section class="visit" id="visit">
       <div class="shell visit-inner">
         <div>

@@ -14,7 +14,7 @@ another project. 17 sites remain.
 | 1 | Hippie Chicks Snowballs | 89aa4812 | hippie-chicks-snowballs.invalid | **placeholder** (.invalid, reserved TLD) | **PASS** | pending | frozen | **No domain in GoDaddy.** Built on a placeholder at the owner's instruction. |
 | 2 | Hometown Soap N Sudz | 439dc70e | hometownsoapnsudz.com | ACTIVE, on Snapps | **PASS** | pending | frozen | — |
 | 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No street address published on the source site. |
-| 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
+| 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No pricing published on the source site. |
 | 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
 | 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
@@ -78,7 +78,7 @@ template called *ohmydog*; all real content is pictures of a printed menu.
   copy never spells out**, so the services section can now state them.
   Three of the four Pexels stock images show decorative European wooden
   shutters and one is a street scene in Zurich; the Zurich photo is vendored
-  but deliberately not displayed, since it has no shutters as its subject.
+  **and has since been deleted at the owner's instruction (2026-09-21).**
   Alt text on the stock images describes what they show and never claims they
   are SeaCoast installations.
 - **SeaCoast Hurricane Shutters:** the source site contradicts itself on
@@ -93,3 +93,11 @@ template called *ohmydog*; all real content is pictures of a printed menu.
   were kept: over twenty years of experience, four colour options, and the
   five-year parts warranty. Most imagery on the source is AI-generated
   (`ChatGPT Image...`) or Pexels stock; only the logo was carried across.
+- **Crack Rx:** three testimonials were omitted, including one written as a
+  joke persona ("Janice H., Still Confused"). The product photo carries facts
+  the web copy never states — **32 oz by weight** and the four-step process
+  printed on the label (clean it, fill it, smooth it, mist it); the site text
+  described only two steps. Both emails appear on the source
+  (`crackdoctor@` in the contact block, `Support@` in the footer); the rebuild
+  uses `crackdoctor@`. No pricing is published anywhere, so none was invented.
+  Source imagery totalled 14 MB and was resized to 1.7 MB.
