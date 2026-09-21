@@ -133,3 +133,34 @@ template called *ohmydog*; all real content is pictures of a printed menu.
   **Needed from the owner: a phone number, ideally an email and a trading
   base/city, and either a product list or permission to ship the page without
   a product section.**
+
+## Contact-details audit, all remaining sites (2026-09-21)
+
+Every remaining Snapps site was checked for a real phone number, in both page
+text and `tel:` links. `555-555-5555` is the Snapps template placeholder and
+does not count.
+
+**Has a real phone — buildable now:**
+
+| Site | Phone | Note |
+|---|---|---|
+| MB's Pressure Washing New Orleans | 504-882-9328 | 8.2k of copy |
+| Roofing Company Warren | 586-800-1593 | 5.8k of copy; 586 = Macomb County, MI |
+| Roofing Company of Houma, LLC | 985-313-8336 | 8.1k of copy; 985 = Houma, LA |
+| Millard's Stucco Repair Baton Rouge | (225) 269-5633 | text also shows 504-269-5633 — **two numbers, confirm which** |
+| Spray Foam Insulation Los Angeles | (310) 861-2301 | 9.4k of copy |
+
+**No real phone anywhere — blocked, needs the owner:**
+
+| Site | Source size | What's there |
+|---|---|---|
+| CustomLettersfromSantaClaus.com | 0.8k | **Real products and prices** ($15.95 letter, $6.95 email) but only a 555 placeholder |
+| Make Your Own Crap.com | 1.1k | Placeholder `myemail@` only; domain also lapsed |
+| Miro's Tree Service Monroe | 1.0k | 555 placeholders only |
+| Cutting Edge Tree Service | 1.3k | 555 placeholder only; no domain either |
+| Leyland's Los Angeles Tree Service | 1.0k | 555 placeholder only; no domain either |
+| Drywall & Paint Pros of Chicago | 4.9k | **Substantial copy** but no phone and no `tel:` link at all; no domain either |
+
+The launch checklist requires a real phone (four matching `tel:` links, a
+header call CTA and a sticky mobile call button) and rejects any number whose
+last seven digits are identical, so none of the six can be built without one.
