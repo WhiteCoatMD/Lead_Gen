@@ -27,7 +27,14 @@ VITE_SUPABASE_URL=...
 VITE_SUPABASE_PUBLISHABLE_KEY=...
 ```
 
-Apply `supabase/migrations/001_birds_nest_store.sql`, create the owner in Supabase Auth, and set the owner's protected `app_metadata.role` to `shop_admin`. Never use editable user metadata for authorization.
+The shop's Supabase project is **`amjbzfugzprirflpydka`** ("Birds Nest
+Commerce"). Both migrations are already applied to it, and the storefront
+products and store settings are seeded.
+
+Still to do by hand: create the owner in Supabase Auth and set that user's
+protected `app_metadata.role` to `shop_admin`. Never use editable user
+metadata for authorization. The store also ships with `accepting_orders`
+**false** — turn it on in the dashboard when the shop is ready to take orders.
 
 ## Checkout
 
