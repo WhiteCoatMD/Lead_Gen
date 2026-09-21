@@ -84,10 +84,9 @@ Ten of the thirteen domains are live on Vercel. The other three are not:
 - **DunRite Tow Truck Arlington** (`towing-arlington.com`) — **on hold.**
   Also lapsed and fully deleted (NXDOMAIN; GoDaddy returns 409). Undecided
   whether to re-register.
-- **Deck Builder Monroe** (`deckbuildermonroe.com`) — waiting on a call
-  tracking number. The site ships with a placeholder phone that `npm run
-  audit` deliberately rejects, so it cannot reach the domain until the real
-  number is in.
+- **Deck Builder Monroe** (`deckbuildermonroe.com`) — **phone received
+  2026-09-21** (318-726-2853) and now in `site.json`; the site builds, passes
+  `npm run audit`, and is ready for its DNS cutover.
 
 All three are built, deployed, and have both hostnames attached to their
 Vercel projects, so each goes live with no code change: the two towing sites
