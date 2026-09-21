@@ -1,8 +1,6 @@
 {
   "name": "SeaCoast Hurricane Shutters",
   "domain": "seacoasthurricaneshutters.com",
-  "phone": "386-338-8955",
-  "email": "nancy@seacoasthurricaneshutters.com",
   "city": "Daytona Beach",
   "state": "Florida",
   "schemaType": "HomeAndConstructionBusiness",
@@ -21,22 +19,24 @@
   ],
   "kicker": "Serving Daytona and Volusia County",
   "headline": "Motorized hurricane shutters for Florida storms.",
-  "intro": "Premium motorized roll-down shutters for homes and businesses, installed across Daytona and Volusia County.",
+  "intro": "Premium motorized roll-down shutters for homes and businesses across Daytona and Volusia County.",
   "sectionKicker": "About us",
   "sectionHeadline": "Protect what matters most.",
-  "about": "SeaCoast Hurricane Shutters specialises in premium motorized roll-down shutters designed to protect homes and businesses from Florida's toughest storms. The team brings over twenty years of experience, and every installation is backed by outstanding craftsmanship and personalised customer service.",
-  "servicesHeadline": "What we install.",
+  "about": "Motorized roll-down shutters are built to protect homes and businesses from Florida's toughest storms, closing at the touch of a button and available in four colours to match the property.",
+  "servicesHeadline": "What these shutters do.",
   "galleryKicker": "Gallery",
   "galleryHeadline": "Roll-down shutters, closed and open.",
   "areaHeadline": "Serving Daytona and Volusia County.",
   "ctaHeadline": "Get a quote for your property.",
-  "ctaCopy": "Call or email to talk through your windows, openings and colour choice, and we will put a personalised quote together.",
-  "primaryCta": "Call for a quote",
+  "ctaCopy": "Talk through your windows, openings and colour choice, and we will put a personalised quote together.",
   "navCall": "Get a quote",
   "footerLine": "Motorized hurricane shutters for Daytona and Volusia County.",
   "seoTitle": "SeaCoast Hurricane Shutters | Daytona Beach, FL",
-  "seoDescription": "Motorized roll-down hurricane shutters for homes and businesses in Daytona and Volusia County, Florida. Almond, white, beige or bronze, with a five-year warranty.",
-  "serviceAreas": ["Daytona Beach", "Volusia County"],
+  "seoDescription": "Motorized roll-down hurricane shutters for homes and businesses in Daytona and Volusia County, Florida. Almond, white, beige or bronze.",
+  "serviceAreas": [
+    "Daytona Beach",
+    "Volusia County"
+  ],
   "services": [
     {
       "title": "Motorized roll-down shutters",
@@ -49,10 +49,6 @@
     {
       "title": "Four colour options",
       "description": "Almond, white, beige and bronze, so the shutters match the look of your home while still doing their job."
-    },
-    {
-      "title": "Five-year parts warranty",
-      "description": "Every shutter we sell carries a five-year parts warranty."
     }
   ],
   "gallery": [

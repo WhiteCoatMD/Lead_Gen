@@ -47,7 +47,7 @@ for (const slug of slugs) {
   try { schema = JSON.parse(ld); } catch { check(false, "JSON-LD does not parse"); }
   if (schema) {
     check(schema.name === cfg.name, "schema name");
-    check(digits(schema.telephone) === digits(cfg.phone), "schema telephone");
+    if (cfg.phone) check(digits(schema.telephone) === digits(cfg.phone), "schema telephone");
     check(!!schema.address && schema.address.addressLocality === cfg.city, "schema address");
     check(Array.isArray(schema.areaServed) && schema.areaServed.length > 0, "schema areaServed");
     check(schema.url === `https://${cfg.domain}`, "schema url");
@@ -64,16 +64,23 @@ for (const slug of slugs) {
   }
 
   // --- phone CTAs ---
-  const expected = `tel:+1${digits(cfg.phone).slice(-10)}`;
-  // a site must never ship with a stand-in number; every CTA is a tel: link
-  check(new Set(digits(cfg.phone).slice(-7)).size > 1, "placeholder phone number (" + cfg.phone + ")");
-  const tels = html.split('href="tel:').slice(1).map((part) => "tel:" + part.slice(0, part.indexOf('"')));
-  check(tels.length >= 4, `tel link count (${tels.length})`);
-  check(tels.every((href) => href === expected), `tel mismatch: ${[...new Set(tels)].join(", ")}`);
-  check(html.includes('class="nav-call"'), "header call CTA");
-  check(html.includes('class="mobile-call"'), "mobile sticky call button");
-  check(html.includes(`>${cfg.phone}<`), "phone shown on page");
-  if (shared) check(html.includes('class="button primary"'), "hero primary CTA");
+  // A site with no number at all fails here by name. Every check below
+  // assumes one exists, and computing a tel: href from undefined would throw
+  // before the checklist could report anything useful.
+  if (!cfg.phone) {
+    check(false, "no phone number on the site at all");
+  } else {
+    const expected = `tel:+1${digits(cfg.phone).slice(-10)}`;
+    // a site must never ship with a stand-in number; every CTA is a tel: link
+    check(new Set(digits(cfg.phone).slice(-7)).size > 1, "placeholder phone number (" + cfg.phone + ")");
+    const tels = html.split('href="tel:').slice(1).map((part) => "tel:" + part.slice(0, part.indexOf('"')));
+    check(tels.length >= 4, `tel link count (${tels.length})`);
+    check(tels.every((href) => href === expected), `tel mismatch: ${[...new Set(tels)].join(", ")}`);
+    check(html.includes('class="nav-call"'), "header call CTA");
+    check(html.includes('class="mobile-call"'), "mobile sticky call button");
+    check(html.includes(`>${cfg.phone}<`), "phone shown on page");
+    if (shared) check(html.includes('class="button primary"'), "hero primary CTA");
+  }
 
   // --- content sections ---
   check(html.includes('id="services"') || html.includes('id="store"'), "services section");

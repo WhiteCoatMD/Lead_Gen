@@ -3,7 +3,7 @@ import { businessId, openingHoursSpecification, postalAddress, primaryImage, ser
 export const jsonLd = (schema) => JSON.stringify(schema).replace(/</g, "\\u003c");
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 export const escapeHtml = esc;
-export const phoneHref = (phone) => `tel:+1${phone.replace(/\D/g, "").slice(-10)}`;
+export const phoneHref = (phone = "") => `tel:+1${String(phone).replace(/\D/g, "").slice(-10)}`;
 export const assetUrl = (asset = "") => /^https?:\/\//i.test(asset) ? asset : `/assets/${asset}`;
 export const absolute = (domain, asset = "") => /^https?:\/\//i.test(asset) ? asset : `https://${domain}${assetUrl(asset)}`;
 
@@ -67,7 +67,7 @@ export function renderSite(site) {
     areaServed: areaNames.map((name) => ({ "@type": "Place", name })),
     openingHoursSpecification: openingHoursSpecification(site.hours),
     hasOfferCatalog: serviceCatalog(site, site.services),
-    contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: site.phone, areaServed: "US", availableLanguage: "English" }
+    contactPoint: site.phone ? { "@type": "ContactPoint", contactType: "customer service", telephone: site.phone, areaServed: "US", availableLanguage: "English" } : undefined
   };
 
   // A site keeps its supplied logo as the hero only when that image is a real
@@ -101,29 +101,29 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
   <style>:root{--accent:${esc(site.accent || "#ef342f")};--accent-dark:${esc(site.accentDark || "#c82420")}}</style>
   <script type="application/ld+json">${jsonLd(schema)}</script>
 </head><body>
-  <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p><a href="${phoneHref(site.phone)}">Call ${esc(site.phone)}</a></div>
+  <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p>${site.phone ? `<a href="${phoneHref(site.phone)}">Call ${esc(site.phone)}</a>` : ""}</div>
   <header>
     <a class="brand${site.logo ? "" : " brand-wordmark"}" href="#top" aria-label="${esc(site.name)} home">${brand}</a>
     <nav id="site-nav" aria-label="Primary">
       <a href="#services">Services</a><a href="#process">How it works</a><a href="#areas">Service area</a>
     </nav>
     <div class="header-actions">
-      <a class="nav-call" href="${phoneHref(site.phone)}">${esc(site.navCall || "Free estimate")}</a>
+      ${site.phone ? `<a class="nav-call" href="${phoneHref(site.phone)}">${esc(site.navCall || "Free estimate")}</a>` : ""}
       <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
   <main>
     <section class="hero${heroImage ? "" : " hero-plain"}" id="top"${heroStyle}>
-      <div class="shell hero-content"><p class="eyebrow">${esc(site.kicker)}</p><h1>${esc(site.headline)}</h1><p class="hero-copy">${esc(site.intro)}</p><div class="actions"><a class="button primary" href="${phoneHref(site.phone)}">${esc(site.primaryCta || "Call for a free estimate")}</a><a class="button ghost" href="#services">Explore services</a></div><div class="trust"><span>Local service</span><span>Clear estimates</span><span>Call-ready help</span></div></div>
+      <div class="shell hero-content"><p class="eyebrow">${esc(site.kicker)}</p><h1>${esc(site.headline)}</h1><p class="hero-copy">${esc(site.intro)}</p><div class="actions">${site.phone ? `<a class="button primary" href="${phoneHref(site.phone)}">${esc(site.primaryCta || "Call for a free estimate")}</a>` : ""}<a class="button ${site.phone ? "ghost" : "primary"}" href="#services">Explore services</a></div><div class="trust"><span>Local service</span><span>Clear estimates</span><span>Call-ready help</span></div></div>
     </section>
     <section class="shell intro"><div><p class="eyebrow accent">${esc(site.sectionKicker)}</p><h2>${esc(site.sectionHeadline)}</h2></div><p>${esc(site.about)}</p></section>
     <section class="shell services" id="services"><div class="section-heading"><p class="eyebrow accent">Services</p><h2>${esc(site.servicesHeadline)}</h2></div><div class="service-grid">${services}</div></section>
     <section class="process shell" id="process"><div class="section-heading centered"><p class="eyebrow accent">Three simple steps</p><h2>From first call to finished work.</h2></div><div class="steps"><article><strong>1</strong><h3>Call or email</h3><p>Tell us what you need and where the property is located.</p></article><article><strong>2</strong><h3>Review the project</h3><p>We discuss the scope, practical options, and the next available step.</p></article><article><strong>3</strong><h3>Schedule service</h3><p>Approve the plan and arrange a time that works for the project.</p></article></div></section>
     ${gallery ? `<section class="shell gallery" id="gallery"><div class="section-heading"><p class="eyebrow accent">${esc(site.galleryKicker || "Gallery")}</p><h2>${esc(site.galleryHeadline || "A closer look.")}</h2></div><div class="gallery-grid">${gallery}</div></section>` : ""}
     <section class="areas" id="areas"><div class="shell areas-inner"><div><p class="eyebrow">Service area</p><h2>${esc(site.areaHeadline)}</h2></div><div class="area-list">${areas}</div></div></section>
-    <section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card"><a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>
+    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
   </main>
   <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>
-  <a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a><script src="/site.js" defer></script>
+  ${site.phone ? `<a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a>` : ""}<script src="/site.js" defer></script>
 </body></html>`;
 }

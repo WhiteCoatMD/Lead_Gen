@@ -23,7 +23,11 @@ await fs.mkdir(path.join(outputDir, "assets"), { recursive: true });
 // actually renders its cards from, so the check follows the renderer rather
 // than assuming every site sells "services".
 const CONTENT_FIELD = { "birds-nest": "products", shop: "menu" };
-const required = ["name", "domain", "phone", "city", "state", "headline", CONTENT_FIELD[config.template] || "services"];
+// `phone` is deliberately absent from this list. A site can legitimately have
+// no contact details for a while, and the build should still produce the
+// page. The launch checklist in scripts/audit.mjs decides whether a site is
+// fit to launch, and it fails any site without a real, non-placeholder number.
+const required = ["name", "domain", "city", "state", "headline", CONTENT_FIELD[config.template] || "services"];
 const missing = required.filter((key) => !config[key] || (Array.isArray(config[key]) && !config[key].length));
 if (missing.length) throw new Error(`${slug} is missing required fields: ${missing.join(", ")}`);
 

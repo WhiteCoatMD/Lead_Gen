@@ -9,28 +9,38 @@
     "deck-builder-monroe": "lead-gen",
     "flooring-monroe": "lead-gen",
     "lake-charles-fences": "lead-gen",
+    "mbs-pressure-washing-new-orleans": "lead-gen. Confirmed 2026-09-21.",
     "scaffolding-los-angeles": "lead-gen",
-    "seacoast-hurricane-shutters": "Converted to lead-gen 2026-09-21 — the original operator left the business. SEE THE BLOCKERS BELOW before treating it as a normal lead-gen page.",
+    "seacoast-hurricane-shutters": "Converted to lead-gen 2026-09-21 after its operator left. NOT FIT TO LAUNCH — see below.",
     "stucco-repair-chicago": "lead-gen",
     "towing-dallas": "lead-gen",
     "twin-city-fences": "lead-gen",
     "twin-city-handyman": "lead-gen"
   },
 
-  "seacoast_conversion_blockers": {
-    "_note": "The page still speaks as an operating installer. It must stop doing that before it runs as a lead-gen site, and none of it is a judgement call to make without the owner.",
-    "warranty": "Service card reads 'Five-year parts warranty — Every shutter we sell carries a five-year parts warranty.' There is no longer a business to honour it. This is an unsupported commercial claim and has to go or be rewritten.",
-    "experience": "About copy claims 'over twenty years of experience' for a team that no longer operates.",
-    "phone": "386-338-8955 is the former business's number. Leads currently ring it.",
-    "email": "nancy@seacoasthurricaneshutters.com routes to a person at the former business.",
-    "mail": "The domain carries live MX. DNS cutover preserved it deliberately, so mail still flows to whoever holds that mailbox."
+  "on_hold": {
+    "_note": "Mitch's own, but not being worked on. Do not spend effort here without asking.",
+    "rev-laundry-soap": "Mitch's business, on hold as of 2026-09-21. Site is live and correct; leave it alone."
   },
 
   "host_only": {
     "_note": "Hosting only. Do not spend time optimising or reporting on these. The shared renderer still emits their structured data, which is accurate and costs nothing.",
     "hometown-soap-n-sudz": "Confirmed 2026-09-21 — owner pays for hosting, not ranking.",
-    "birds-nest-flower-shop": "Assumed host-only; not confirmed. Ask before doing SEO work.",
-    "rev-laundry-soap": "Assumed host-only; not confirmed. Ask before doing SEO work.",
-    "mbs-pressure-washing-new-orleans": "Assumed host-only; not confirmed. Ask before doing SEO work."
+    "birds-nest-flower-shop": "Confirmed 2026-09-21 — hosting only."
+  },
+
+  "seacoast_status": {
+    "_note": "Converted from client site to lead-gen after the operator left the business. The unsupportable claims are gone; the routing decision is still open.",
+    "fixed_2026_09_21": [
+      "Removed the service card promising 'a five-year parts warranty' on 'every shutter we sell'. No remaining business could honour it, and there was no supportable rewrite. Three service cards remain, which still meets the checklist minimum.",
+      "Removed the same warranty claim from the meta description, where it would have kept showing in search results.",
+      "Rewrote the about copy, which claimed 'over twenty years of experience' for a team that no longer exists.",
+      "Removed the phone (386-338-8955) and email (nancy@...) at the owner's request. The contact section, header CTA, sticky mobile call bar and schema contactPoint now omit themselves rather than render empty.",
+      "Changed 'What we install.' to 'What these shutters do.' — first-person operating language with no operator behind it."
+    ],
+    "still_open": [
+      "No contact method at all, so the live page cannot convert. It fails the launch checklist by name ('no phone number on the site at all'), which is correct until Mitch decides where leads should go.",
+      "The domain still carries live MX. The DNS cutover preserved it deliberately, so mail continues to reach whoever holds that mailbox."
+    ]
   }
 }
