@@ -16,7 +16,7 @@ another project. 17 sites remain.
 | 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No street address published on the source site. |
 | 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No pricing published on the source site. |
 | 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No prices published. Label ingredients not legible enough to transcribe. |
-| 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
+| 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | **BLOCKED** | — | frozen | **No phone, email or address anywhere on the source. Store closed for maintenance, no products.** |
 | 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 8 | Make Your Own Crap.com | d7417d8e | makeyourowncrap.com | **CANCELLED** exp 2025-09-24 | not started | — | frozen | Domain lapsed. |
 | 9 | Miro's Tree Service Monroe | 58dd2d08 | treeservicemonroe.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
@@ -113,3 +113,21 @@ template called *ohmydog*; all real content is pictures of a printed menu.
   is undated, points off-site, and the campaign may well have ended. The
   header also carries a `555-555-5555` template placeholder, which was ignored
   in favour of the real number in the contact block. No prices are published.
+- **The Velvet Chandelier — BLOCKED, needs the owner.** The whole Snapps site
+  is ~581 characters across Home, About and Store. There is **no phone number,
+  no email address and no street address** on any page, the Store page reports
+  "The store is closed for maintenance" and lists no products, and there is no
+  domain for it in the GoDaddy account either. Every template requires a phone
+  (the launch checklist wants at least four matching `tel:` links, a header
+  call CTA and a sticky mobile call button), and the checklist wants at least
+  three product cards. Building it would mean inventing a phone number and a
+  product list, which the accuracy rules forbid, so it is skipped rather than
+  faked.
+  What IS known, and enough to build on the moment contact details arrive: it
+  is a boutique selling clothes, accessories, home decor and beauty products;
+  it trades from a vintage camper converted into a mobile boutique at markets
+  around the Southern US, as well as online; and its stated mission is to
+  "provide quality service & a unique shopping experience".
+  **Needed from the owner: a phone number, ideally an email and a trading
+  base/city, and either a product list or permission to ship the page without
+  a product section.**
