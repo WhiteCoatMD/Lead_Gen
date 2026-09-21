@@ -18,7 +18,8 @@
   "services": [
     {
       "title": "Frame Scaffolding",
-      "description": "Versatile, efficient systems for common exterior, construction, and maintenance projects."
+      "description": "Versatile, efficient systems for common exterior, construction, and maintenance projects.",
+      "link": "about.html"
     },
     {
       "title": "Tube & Clamp",
@@ -30,7 +31,8 @@
     },
     {
       "title": "Delivery & Pickup",
-      "description": "Coordinated equipment delivery and prompt removal when the job is complete."
+      "description": "Coordinated equipment delivery and prompt removal when the job is complete.",
+      "link": "contact.html"
     }
   ],
   "serviceAreas": [
@@ -45,5 +47,59 @@
   "footerLine": "Scaffolding rental service in Los Angeles, California",
   "seoTitle": "Scaffolding Rental Los Angeles | Equipment Delivery",
   "seoDescription": "Scaffolding rental in Los Angeles. Frame, tube-and-clamp, and rolling scaffolding with project guidance, delivery, and pickup.",
-  "heroStyle": "plain"
+  "heroStyle": "plain",
+  "pages": [
+    {
+      "slug": "scaffolding-safety.html",
+      "navLabel": "Scaffolding safety",
+      "kicker": "Safety",
+      "heading": "Scaffolding safety.",
+      "intro": "Guardrails, base plates, planking and tie-ins are what separate a working platform from a hazard.",
+      "seoTitle": "Scaffolding Safety | Scaffolding Rental Los Angeles",
+      "seoDescription": "Scaffolding safety basics for rented frame, tube and clamp, and rolling scaffolding in Los Angeles.",
+      "service": "Scaffolding safety guidance",
+      "sections": [
+        {
+          "kicker": "Before anyone climbs",
+          "heading": "Level base, full planking, guardrails.",
+          "body": "Scaffolding fails at the bottom far more often than at the top. A level, load-bearing base with proper plates, full planking at every working level, and guardrails where anyone can fall are the three things worth checking before the first person climbs."
+        }
+      ],
+      "ctaHeadline": "Renting scaffolding?"
+    },
+    {
+      "slug": "about.html",
+      "navLabel": "About",
+      "kicker": "About us",
+      "heading": "About Scaffolding Rental Los Angeles.",
+      "intro": "Frame, tube and clamp, and rolling scaffolding for hire across the Los Angeles area, delivered and collected.",
+      "seoTitle": "About | Scaffolding Rental Los Angeles",
+      "seoDescription": "About Scaffolding Rental Los Angeles — frame scaffolding, tube and clamp, rolling towers, delivery and pickup.",
+      "sections": [
+        {
+          "kicker": "What we hire out",
+          "heading": "Three systems, one delivery.",
+          "body": "Frame scaffolding for straightforward elevations, tube and clamp where the structure has to fit an awkward building, and rolling towers for interior and flat-ground work. Delivery and pickup are part of the hire rather than an extra to arrange."
+        }
+      ],
+      "ctaHeadline": "Need a quote?"
+    },
+    {
+      "slug": "contact.html",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Contact Scaffolding Rental Los Angeles.",
+      "intro": "Tell us the height, the duration and the site, and we can price the hire and the delivery together.",
+      "seoTitle": "Contact | Scaffolding Rental Los Angeles",
+      "seoDescription": "Contact Scaffolding Rental Los Angeles for frame, tube and clamp and rolling scaffolding hire, with delivery and pickup.",
+      "sections": [
+        {
+          "kicker": "What decides the price",
+          "heading": "Height, duration, access.",
+          "body": "How high the work is, how long you need it, and what the delivery vehicle can reach are the three things that set the cost. Awkward access is worth mentioning early rather than on the day."
+        }
+      ],
+      "ctaHeadline": "Get a quote."
+    }
+  ]
 }

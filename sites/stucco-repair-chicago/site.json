@@ -19,11 +19,13 @@
   "services": [
     {
       "title": "Stucco Repair",
-      "description": "Crack, chip, and impact-damage repairs blended into the existing finish."
+      "description": "Crack, chip, and impact-damage repairs blended into the existing finish.",
+      "link": "stucco-repair.html"
     },
     {
       "title": "EIFS Repair",
-      "description": "Exterior insulation finish system inspection, patching, and restoration."
+      "description": "Exterior insulation finish system inspection, patching, and restoration.",
+      "link": "eifs.html"
     },
     {
       "title": "New Installation",
@@ -32,6 +34,16 @@
     {
       "title": "Moisture Damage",
       "description": "Exterior repairs that address vulnerable areas before damage spreads."
+    },
+    {
+      "title": "Drywall Repair",
+      "description": "Patching and finishing interior drywall, with paint matched so the repair disappears.",
+      "link": "drywall.html"
+    },
+    {
+      "title": "Painting",
+      "description": "Interior and exterior painting, including finishing work after a stucco or drywall repair.",
+      "link": "painting.html"
     }
   ],
   "serviceAreas": [
@@ -48,5 +60,106 @@
   "assets": [
     "hero.jpg",
     "logo.jpg"
+  ],
+  "pages": [
+    {
+      "slug": "stucco-repair.html",
+      "navLabel": "Stucco repair",
+      "kicker": "Stucco repair",
+      "heading": "Stucco repair in Chicago.",
+      "intro": "Cracks, blown patches and water damage repaired and blended back into the existing wall.",
+      "seoTitle": "Stucco Repair Chicago IL | Stucco Repair Chicago",
+      "seoDescription": "Stucco repair across Chicago — cracks, failed patches and water damage repaired and matched to the existing wall.",
+      "service": "Stucco repair",
+      "sections": [
+        {
+          "kicker": "What fails",
+          "heading": "Cracks let water in, and water does the real damage.",
+          "body": "Most stucco work starts as a crack and becomes a moisture problem. Repairing the surface without finding how water got behind it just hides the fault until the next season."
+        }
+      ],
+      "ctaHeadline": "Get stucco looked at."
+    },
+    {
+      "slug": "eifs.html",
+      "navLabel": "EIFS repair",
+      "kicker": "EIFS",
+      "heading": "EIFS repair and replacement.",
+      "intro": "EIFS can be repaired, or replaced with hard-coat stucco to remove the water problems the system is known for.",
+      "seoTitle": "EIFS Repair Chicago IL | Stucco Repair Chicago",
+      "seoDescription": "EIFS repair in Chicago, and replacement with hard-coat stucco to eliminate the water intrusion problems associated with the system.",
+      "service": "EIFS repair and replacement",
+      "sections": [
+        {
+          "kicker": "What EIFS is",
+          "heading": "Exterior Insulation and Finish System.",
+          "body": "EIFS is a non-load-bearing cladding that gives exterior walls an insulated, finished surface. It has been used in North America since the 1960s, first on masonry and mainly on wood-framed buildings since the 1990s."
+        },
+        {
+          "kicker": "Why it gets replaced",
+          "heading": "Water intrusion is the known weakness.",
+          "body": "EIFS has a long-documented history of water penetration problems and the structural damage that follows, which is why newer systems incorporate a drainage plane to let water escape from behind the cladding. Where an older system is failing, replacing it with hard-coat stucco removes most of the issue rather than patching around it."
+        }
+      ],
+      "ctaHeadline": "Got an EIFS problem?"
+    },
+    {
+      "slug": "drywall.html",
+      "navLabel": "Drywall",
+      "kicker": "Drywall",
+      "heading": "Drywall repair in Chicago.",
+      "intro": "Holes patched, damage matched to the surrounding paint, and the work area left clean.",
+      "seoTitle": "Drywall Repair Chicago IL | Stucco Repair Chicago",
+      "seoDescription": "Drywall repair in Chicago — patching, floating and finishing, with paint matched so the repair disappears.",
+      "service": "Drywall repair",
+      "sections": [
+        {
+          "kicker": "Why it is worth doing properly",
+          "heading": "Floating and finishing are the hard part.",
+          "body": "Drywall is versatile and cost effective: it takes paint, texture or a wall covering. Hanging it is not the difficult bit. Floating and finishing are, and without the right tools and technique the result announces itself across the wall."
+        },
+        {
+          "kicker": "Left alone it spreads",
+          "heading": "A small hole does not stay small.",
+          "body": "Damaged drywall is a fairly easy fix with the right tools and experience, but left in disrepair the damage spreads and the eventual repair is larger. We patch the board and match the paint so the damage disappears rather than becoming a visible patch."
+        }
+      ],
+      "ctaHeadline": "Need drywall patched?"
+    },
+    {
+      "slug": "painting.html",
+      "navLabel": "Painting",
+      "kicker": "Painting",
+      "heading": "Interior and exterior painting.",
+      "intro": "Painting as its own job, and as the finishing step that makes a stucco or drywall repair invisible.",
+      "seoTitle": "Painting Chicago IL | Stucco Repair Chicago",
+      "seoDescription": "Interior and exterior painting in Chicago, including colour-matched finishing after stucco and drywall repairs.",
+      "service": "Interior and exterior painting",
+      "sections": [
+        {
+          "kicker": "Matching",
+          "heading": "The repair is only finished when it disappears.",
+          "body": "A patched wall that does not match is still a visible repair. Matching the existing paint is the step that turns a fix into a finish, and it is why painting sits alongside the drywall and stucco work rather than apart from it."
+        }
+      ],
+      "ctaHeadline": "Need something painted?"
+    },
+    {
+      "slug": "contact.html",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Contact Stucco Repair Chicago.",
+      "intro": "Tell us what the wall is doing and roughly how much of it, and we can say what the work involves.",
+      "seoTitle": "Contact | Stucco Repair Chicago IL",
+      "seoDescription": "Contact Stucco Repair Chicago for stucco repair, EIFS repair and replacement, drywall repair and painting across Chicago.",
+      "sections": [
+        {
+          "kicker": "What helps",
+          "heading": "Photographs save a visit.",
+          "body": "A picture of the crack, the patch or the damaged area tells us more than a description does, and often decides whether the job is a repair or a replacement before anyone drives out."
+        }
+      ],
+      "ctaHeadline": "Get a free quote."
+    }
   ]
 }

@@ -59,9 +59,17 @@ for (const page of pages) {
   if (!page.slug || !page.heading || !page.seoTitle || !page.seoDescription) {
     throw new Error(`${slug} page "${page.slug || "(no slug)"}" needs slug, heading, seoTitle and seoDescription`);
   }
-  const pageDir = path.join(outputDir, page.slug);
-  await fs.mkdir(pageDir, { recursive: true });
-  await fs.writeFile(path.join(pageDir, "index.html"), renderPage(config, page), "utf8");
+  // A slug ending in .html is written as that exact file, because the URL
+  // Google indexed is the one that has to answer. Anything else becomes a
+  // directory with an index, serving a clean extensionless URL.
+  const html = renderPage(config, page);
+  if (page.slug.endsWith(".html")) {
+    await fs.writeFile(path.join(outputDir, page.slug), html, "utf8");
+  } else {
+    const pageDir = path.join(outputDir, page.slug);
+    await fs.mkdir(pageDir, { recursive: true });
+    await fs.writeFile(path.join(pageDir, "index.html"), html, "utf8");
+  }
 }
 
 const sitemapUrls = [`https://${config.domain}/`, ...pages.map((page) => `https://${config.domain}/${page.slug}`)];

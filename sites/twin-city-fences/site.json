@@ -41,6 +41,11 @@
     {
       "title": "Fence & Gate Repair",
       "description": "Repairs for leaning posts, damaged panels, broken gates, and storm-related fence damage."
+    },
+    {
+      "title": "Split Rail Fences",
+      "description": "Split rail fencing for pasture, grazing areas and homes — for the classic look, or to manage livestock.",
+      "link": "split-rail-fences.html"
     }
   ],
   "serviceAreas": [
@@ -120,6 +125,100 @@
           "kicker": "Where we work",
           "heading": "Monroe, West Monroe and Ouachita Parish.",
           "body": "We install across Monroe, West Monroe and the surrounding Ouachita Parish area, and travel further into North Louisiana for larger jobs. If you are not sure whether you are in range, call and ask."
+        }
+      ],
+      "ctaHeadline": "Call for a free estimate."
+    },
+    {
+      "slug": "split-rail-fences.html",
+      "navLabel": "Split rail fences",
+      "kicker": "Split rail",
+      "heading": "Split rail fences for pasture and property.",
+      "intro": "We can construct split rail fence for your pasture, grazing area, or home — any length.",
+      "seoTitle": "Split Rail Fences Monroe LA | Twin City Fence",
+      "seoDescription": "Split rail fencing built across Monroe, West Monroe and Ouachita Parish for pasture, grazing areas and homes. Any length.",
+      "service": "Split rail fence installation",
+      "sections": [
+        {
+          "kicker": "Two reasons people buy it",
+          "heading": "The look, or the livestock.",
+          "body": "Whether you want it for the classic look, or need it to manage livestock, we can build any length split rail fence for you. Those two jobs pull in different directions on rail count and spacing, so it is worth saying which one you are after."
+        }
+      ],
+      "ctaHeadline": "Get a price on split rail."
+    },
+    {
+      "slug": "fencing-monroe.html",
+      "navLabel": "Fencing in Monroe",
+      "kicker": "Monroe",
+      "heading": "Fencing in Monroe, Louisiana.",
+      "intro": "Wood, chain-link, split rail, ornamental and ranch-style fencing installed across Monroe and the surrounding parish.",
+      "seoTitle": "Fencing Monroe LA | Twin City Fence",
+      "seoDescription": "Fence installation and repair in Monroe, Louisiana — wood, chain-link, split rail and ornamental fencing from a local builder.",
+      "service": "Fence installation in Monroe, Louisiana",
+      "sections": [
+        {
+          "kicker": "Across the river",
+          "heading": "Monroe and West Monroe are one market.",
+          "body": "We are based in West Monroe and install on both sides of the Ouachita. Monroe is the larger half of the market and most of what we build there is residential privacy fencing and chain-link."
+        },
+        {
+          "kicker": "What we build",
+          "heading": "Five kinds of fence.",
+          "body": "Wood privacy in pine or cedar, chain-link for containment and larger runs, split rail for pasture and the classic look, decorative and metal where security should not hide the property, and repairs to any of them."
+        }
+      ],
+      "ctaHeadline": "Fencing a property in Monroe?"
+    },
+    {
+      "slug": "wooden-fences.html",
+      "navLabel": "Wood fences",
+      "kicker": "Wood fencing",
+      "heading": "Wood fences built for North Louisiana.",
+      "intro": "Pine and cedar fencing built to the height and layout your property needs, for privacy, security and shade.",
+      "seoTitle": "Wood Fences Monroe & West Monroe LA | Twin City Fence",
+      "seoDescription": "Custom pine and cedar wood fencing installed across Monroe, West Monroe and Ouachita Parish, in varying heights.",
+      "service": "Wood fence installation",
+      "sections": [
+        {
+          "kicker": "Pine or cedar",
+          "heading": "Two woods, built to the same standard.",
+          "body": "We can build a fence for your location from either pine or cedar, and in varying heights. Pine is the budget-conscious choice for a long run; cedar costs more and holds up better to weather and insects over time."
+        }
+      ],
+      "ctaHeadline": "Get a price on a wood fence."
+    },
+    {
+      "slug": "chain-link-fence.html",
+      "navLabel": "Chain-link fences",
+      "kicker": "Chain-link fencing",
+      "heading": "Chain-link fencing for homes, pets and property lines.",
+      "intro": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties.",
+      "seoTitle": "Chain Link Fence Monroe LA | Twin City Fence",
+      "seoDescription": "Chain-link fencing installed in Monroe, West Monroe and Ouachita Parish for homes, pets, businesses and sports enclosures.",
+      "service": "Chain-link fence installation",
+      "sections": [
+        {
+          "kicker": "Where it fits",
+          "heading": "The practical choice for a long run.",
+          "body": "Chain-link covers more ground per dollar than any other fence we build, which is why it wins on acreage and commercial yards. The same system goes up tall for court and sports enclosures."
+        }
+      ],
+      "ctaHeadline": "Get a price on chain-link."
+    },
+    {
+      "slug": "contact-us.html",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Talk to Twin City Fence.",
+      "intro": "Call or email and tell us what you are fencing, where the property is, and roughly how long the run is.",
+      "seoTitle": "Contact Twin City Fence | Monroe & West Monroe LA",
+      "seoDescription": "Contact Twin City Fence for wood, chain-link, split rail and ornamental fencing across Monroe and West Monroe. Call 318-351-2539.",
+      "sections": [
+        {
+          "kicker": "What helps",
+          "heading": "What to have ready.",
+          "body": "The three things that decide a price are the type of fence, the length of the run, and what the ground is doing. Rough numbers are fine on a first call."
         }
       ],
       "ctaHeadline": "Call for a free estimate."

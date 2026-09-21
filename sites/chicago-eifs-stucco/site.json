@@ -49,5 +49,24 @@
   "assets": [
     "hero.jpg",
     "logo.jpg"
+  ],
+  "pages": [
+    {
+      "slug": "contact",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Contact EIFS Chicago.",
+      "intro": "Tell us what the wall is doing and roughly how much of it, and we can say what the work involves.",
+      "seoTitle": "Contact | EIFS Chicago",
+      "seoDescription": "Contact EIFS Chicago for EIFS repair, stucco repair and new EIFS and stucco installation across the Chicago area.",
+      "sections": [
+        {
+          "kicker": "What helps",
+          "heading": "Photographs save a visit.",
+          "body": "A picture of the crack, the patch or the damaged area usually decides whether the job is a repair or a replacement before anyone drives out to look at it."
+        }
+      ],
+      "ctaHeadline": "Get a free quote."
+    }
   ]
 }
