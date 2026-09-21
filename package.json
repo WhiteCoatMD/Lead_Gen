@@ -7,6 +7,9 @@
     "build:site": "node scripts/build-site.mjs",
     "audit": "node scripts/audit.mjs",
     "audit:live": "node scripts/audit-portfolio.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "gsc": "node scripts/gsc-sync.mjs",
+    "gsc:check": "node scripts/gsc-sync.mjs --check",
+    "lost-pages": "node scripts/find-lost-pages.mjs"
   }
 }

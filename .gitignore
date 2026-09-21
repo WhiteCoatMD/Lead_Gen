@@ -12,3 +12,9 @@ package-lock.json
 # The real one belongs outside this repo entirely.
 .vercel-wiring-token
 *.token
+
+# Service-account keys. The real one lives outside this repo entirely;
+# these patterns are a second line of defence, not the first.
+*service-account*.json
+*-gsc-key.json
+google-credentials.json
