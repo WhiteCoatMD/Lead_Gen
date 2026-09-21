@@ -9,6 +9,7 @@ Dynamic storefront and owner dashboard for The Bird's Nest Flower Shop.
 - Product, price, photo, inventory, and visibility management
 - Order dashboard and fulfillment status
 - Store hours, announcement, pickup, and delivery settings
+- Customer checkout: bag to order, with pickup or delivery, card message and discount code
 - Processor-neutral payment screen for Square or Stripe
 - Supabase schema with RLS and product-image storage policies
 
@@ -28,4 +29,27 @@ VITE_SUPABASE_PUBLISHABLE_KEY=...
 
 Apply `supabase/migrations/001_birds_nest_store.sql`, create the owner in Supabase Auth, and set the owner's protected `app_metadata.role` to `shop_admin`. Never use editable user metadata for authorization.
 
-Online checkout intentionally remains disabled until the shop chooses Square or Stripe. Raw card or bank information must never be saved in Supabase or this application.
+## Checkout
+
+A customer can now place an order. `supabase/migrations/002_checkout.sql` adds
+`place_order()`, which is the only sanctioned way an order is created.
+
+The rule the design rests on: **the client never sends a price.** The browser
+posts product ids and quantities; `place_order()` looks up every price,
+delivery fee and discount from the database and computes the total itself. A
+browser cannot talk itself into a cheaper order, because nothing it says about
+money is read. That is also why `anon` has no INSERT policy on `orders` — the
+function runs as its owner and is the only door in.
+
+It also enforces, server-side: the store is accepting orders; the chosen
+fulfillment type is enabled; a delivery order has an address; products are
+active and in stock; quantities are 1–99; and a discount code is live and
+within its usage limit. An unknown or expired code does not fail the order —
+it is simply not applied, and the response says so.
+
+Orders land as `status: new`, `payment_status: unpaid`. **No payment is taken.**
+The shop confirms and arranges payment as it does today.
+
+Raw card or bank information must never be saved in Supabase or this
+application. When a processor is chosen, it hangs off the order this function
+returns — nothing here needs rebuilding.
