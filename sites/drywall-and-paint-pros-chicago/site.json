@@ -1,0 +1,32 @@
+{
+  "name": "Drywall & Paint Pros Chicago",
+  "domain": "drywall-and-paint-pros-chicago.invalid",
+  "phone": "312-000-0000",
+  "city": "Chicago",
+  "state": "Illinois",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#2d5f8a",
+  "accentDark": "#1f4463",
+  "kicker": "Drywall, painting and remodeling in Chicago",
+  "headline": "Drywall and paint, done properly.",
+  "intro": "We specialise in drywall and painting, and take on other remodeling work alongside it.",
+  "sectionKicker": "About us",
+  "sectionHeadline": "Open since 2018.",
+  "about": "We try our best to make your project come to life, and we guarantee 100% satisfaction with your drywall, painting or other remodeling project. We know your home and business is your life, and we will always ensure the quality of work is beyond reproach. We opened in 2018. We guarantee our work and promise our prices are competitive. We specialise in drywall and painting, but offer other remodeling services as well.",
+  "servicesHeadline": "What we take on.",
+  "areaHeadline": "Serving Chicago.",
+  "ctaHeadline": "Send us your project.",
+  "ctaCopy": "Tell us what the job involves and we will talk you through how we would approach it.",
+  "primaryCta": "Call us",
+  "navCall": "Get a quote",
+  "footerLine": "Drywall, painting and remodeling in Chicago, Illinois.",
+  "seoTitle": "Drywall & Paint Pros Chicago | Drywall and Painting",
+  "seoDescription": "Drywall, painting and remodeling in Chicago. Open since 2018, with a 100% satisfaction guarantee and competitive prices on every project.",
+  "serviceAreas": ["Chicago"],
+  "services": [
+    { "title": "Drywall", "description": "Drywall work is what we specialise in, from single rooms through to whole projects." },
+    { "title": "Painting", "description": "Interior and exterior painting, finished to a standard we are happy to guarantee." },
+    { "title": "Home office", "description": "Fitting out a home office, taking the drywall and paint work end to end." },
+    { "title": "Remodeling", "description": "Other remodeling work alongside the drywall and painting, so one team handles the job." }
+  ]
+}

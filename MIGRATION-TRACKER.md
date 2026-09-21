@@ -164,3 +164,41 @@ does not count.
 The launch checklist requires a real phone (four matching `tel:` links, a
 header call CTA and a sticky mobile call button) and rejects any number whose
 last seven digits are identical, so none of the six can be built without one.
+
+## Status after the 2026-09-21 build pass
+
+Built and passing the launch checklist (9):
+Hippie Chicks Snowballs · Hometown Soap N Sudz · SeaCoast Hurricane Shutters ·
+Crack Rx · Rev Laundry Soap · MB's Pressure Washing New Orleans ·
+Roofing Company Warren · Roofing Company of Houma · Spray Foam Insulation
+Los Angeles
+
+Built, deliberately failing the checklist until the owner supplies something (4):
+
+| Site | Fails on | Needs |
+|---|---|---|
+| Custom Letters from Santa Claus | placeholder phone `318-000-0000` | a real phone |
+| Cutting Edge Tree Service | placeholder phone `318-000-0000` | a real phone |
+| Drywall & Paint Pros Chicago | placeholder phone `312-000-0000` | a real phone |
+| Millard's Stucco Repair Baton Rouge | service/product cards | **a third service.** The source lists only stucco repair and stucco installation, and the checklist wants three cards. Nothing was invented to pad it. |
+
+**Millard's also has a phone conflict:** the page text reads
+`Phone: 504-269-5633` while its click-to-call link is `(225) 269-5633`. Same
+last seven digits, different area codes — 225 is Baton Rouge, 504 is New
+Orleans. The rebuild uses 225 because it matches the city and is what the
+click-to-call actually dials. **Confirm which is right.**
+
+Nothing to migrate — the Snapps site is an unedited template (2):
+
+| Site | What is actually on it |
+|---|---|
+| Miro's Tree Service Monroe | "ADD YOUR BUSINESS SLOGAN HERE", "This is a paragraph. Writing in paragraphs lets your visitor find what they are looking for quickly and easily.", "Short title / Describe some quality or feature of the company." All phones `555-555-5555`. No address, no services, no real copy anywhere. Domain `treeservicemonroe.com` is ACTIVE with MX. |
+| Leyland's Los Angeles Tree Service | Identical untouched template, same placeholder strings. No domain in the account. |
+
+Partly real, not enough to build (1):
+
+| Site | What is real vs. template |
+|---|---|
+| Make Your Own Crap.com | **Real:** the name, the concept — "Gifts for people that you like....but only a little", "Want to send someone a thoughtful gift, but think they should have to work for it?" — and that it is "from the creators of Make Your Own Damn Candle". **Template demo, not theirs:** the entire store (pet products — "Ball $15", "Mouse toy $15", nav of Eat/Play/Walk/Sleep) and the stock claims "24/7 support", "Free delivery", "We donate 5% from every purchase to local animal shelters". Those belong to the *ohmydog* pet template this site was built from, the same template Hippie Chicks used. Domain is also lapsed. Needs a real product list before it can be built. |
+
+Shelved by the owner (1): The Velvet Chandelier.

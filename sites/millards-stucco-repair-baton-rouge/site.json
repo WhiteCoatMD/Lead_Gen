@@ -1,0 +1,30 @@
+{
+  "name": "Millard's Stucco Repair Baton Rouge",
+  "domain": "stuccorepairbatonrouge.com",
+  "phone": "225-269-5633",
+  "city": "Baton Rouge",
+  "state": "Louisiana",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#a8703a",
+  "accentDark": "#7d5029",
+  "kicker": "1423 Commercial Drive, Baton Rouge",
+  "headline": "Stucco repair and installation in Baton Rouge.",
+  "intro": "Stucco work for Baton Rouge properties, whether you need existing stucco repaired or new stucco installed.",
+  "sectionKicker": "About us",
+  "sectionHeadline": "Stucco, repaired and installed.",
+  "about": "Millard's Stucco Repair Baton Rouge works on stucco across Baton Rouge, from 1423 Commercial Drive. We handle both repair of existing stucco and installation of new stucco.",
+  "servicesHeadline": "What we do.",
+  "areaHeadline": "Serving Baton Rouge.",
+  "ctaHeadline": "Talk to us about your stucco.",
+  "ctaCopy": "Call and tell us what you are dealing with, and we will let you know how we would handle it.",
+  "primaryCta": "Call us",
+  "navCall": "Get a quote",
+  "footerLine": "1423 Commercial Drive, Baton Rouge, Louisiana 70802.",
+  "seoTitle": "Millard's Stucco Repair Baton Rouge | Stucco Contractor",
+  "seoDescription": "Stucco repair and stucco installation in Baton Rouge, Louisiana, from 1423 Commercial Drive. Call to talk through what your property needs.",
+  "serviceAreas": ["Baton Rouge"],
+  "services": [
+    { "title": "Stucco repair", "description": "Repairing existing stucco, from damaged patches through to larger areas that have started to fail." },
+    { "title": "Stucco installation", "description": "Installing new stucco on properties in and around Baton Rouge." }
+  ]
+}

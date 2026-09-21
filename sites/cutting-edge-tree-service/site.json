@@ -1,0 +1,33 @@
+{
+  "name": "Cutting Edge Tree Service",
+  "domain": "cutting-edge-tree-service.invalid",
+  "phone": "318-000-0000",
+  "city": "Monroe",
+  "state": "Louisiana",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#3d7a34",
+  "accentDark": "#2a5624",
+  "kicker": "Serving Monroe, West Monroe and Caldwell Parish",
+  "headline": "Locally owned tree service.",
+  "intro": "Tree removal, trimming, land clearing and stump grinding, with emergency work our speciality.",
+  "sectionKicker": "About us",
+  "sectionHeadline": "Over twenty years in the trees.",
+  "about": "We are a locally owned tree service, serving the Monroe and West Monroe area. We also now serve Caldwell Parish, including Columbia and Grayson. With over twenty years of experience in tree service, we proudly offer tree removal, tree trimming, land clearing, stump grinding and more. We specialise in emergency tree removal and trimming.",
+  "servicesHeadline": "What we do.",
+  "areaHeadline": "Serving Monroe, West Monroe and Caldwell Parish.",
+  "ctaHeadline": "Got a problem tree?",
+  "ctaCopy": "Give us a call and we will come and look at what you are dealing with.",
+  "primaryCta": "Call us",
+  "navCall": "Get a quote",
+  "footerLine": "Tree service for Monroe, West Monroe, Columbia and Grayson.",
+  "seoTitle": "Cutting Edge Tree Service | Monroe & West Monroe, LA",
+  "seoDescription": "Locally owned tree service for Monroe, West Monroe and Caldwell Parish. Tree removal, trimming, land clearing and stump grinding, including emergency work.",
+  "serviceAreas": ["Monroe", "West Monroe", "Columbia", "Grayson"],
+  "services": [
+    { "title": "Tree removal", "description": "Don't let a problem tree turn into a large expense. We can remove virtually any size tree, from most any location." },
+    { "title": "Emergency tree removal", "description": "Emergency removal and trimming is what we specialise in — our tree removal experts are on call 24 hours a day." },
+    { "title": "Tree trimming", "description": "Whether you need your trees trimmed to improve their appearance, or you are concerned about falling limbs, we can handle the job." },
+    { "title": "Land clearing", "description": "Clearing land of trees and growth so the ground can be put to use." },
+    { "title": "Stump grinding", "description": "Give us a call to get rid of unsightly stumps in your yard. We grind them down and relocate the chips for you." }
+  ]
+}
