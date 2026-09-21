@@ -1,0 +1,36 @@
+{
+  "_comment": "Which sites get SEO effort and which are hosted only. Not every live site is a ranking target: some belong to people who pay for hosting and nothing else, and spending effort on those is work nobody asked for. Confirmed with the owner 2026-09-21.",
+
+  "seo_target": {
+    "_note": "Mitch's own properties. On-page, schema, content and link prospecting all apply here.",
+    "cactus-removal-tucson": "lead-gen",
+    "chicago-eifs-stucco": "lead-gen",
+    "crack-rx": "Mitch's startup. getcrackrx.com — the product is his, not a client's.",
+    "deck-builder-monroe": "lead-gen",
+    "flooring-monroe": "lead-gen",
+    "lake-charles-fences": "lead-gen",
+    "scaffolding-los-angeles": "lead-gen",
+    "seacoast-hurricane-shutters": "Converted to lead-gen 2026-09-21 — the original operator left the business. SEE THE BLOCKERS BELOW before treating it as a normal lead-gen page.",
+    "stucco-repair-chicago": "lead-gen",
+    "towing-dallas": "lead-gen",
+    "twin-city-fences": "lead-gen",
+    "twin-city-handyman": "lead-gen"
+  },
+
+  "seacoast_conversion_blockers": {
+    "_note": "The page still speaks as an operating installer. It must stop doing that before it runs as a lead-gen site, and none of it is a judgement call to make without the owner.",
+    "warranty": "Service card reads 'Five-year parts warranty — Every shutter we sell carries a five-year parts warranty.' There is no longer a business to honour it. This is an unsupported commercial claim and has to go or be rewritten.",
+    "experience": "About copy claims 'over twenty years of experience' for a team that no longer operates.",
+    "phone": "386-338-8955 is the former business's number. Leads currently ring it.",
+    "email": "nancy@seacoasthurricaneshutters.com routes to a person at the former business.",
+    "mail": "The domain carries live MX. DNS cutover preserved it deliberately, so mail still flows to whoever holds that mailbox."
+  },
+
+  "host_only": {
+    "_note": "Hosting only. Do not spend time optimising or reporting on these. The shared renderer still emits their structured data, which is accurate and costs nothing.",
+    "hometown-soap-n-sudz": "Confirmed 2026-09-21 — owner pays for hosting, not ranking.",
+    "birds-nest-flower-shop": "Assumed host-only; not confirmed. Ask before doing SEO work.",
+    "rev-laundry-soap": "Assumed host-only; not confirmed. Ask before doing SEO work.",
+    "mbs-pressure-washing-new-orleans": "Assumed host-only; not confirmed. Ask before doing SEO work."
+  }
+}
