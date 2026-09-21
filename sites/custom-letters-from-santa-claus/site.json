@@ -1,0 +1,56 @@
+{
+  "template": "shop",
+  "name": "Custom Letters from Santa Claus",
+  "domain": "customlettersfromsantaclaus.com",
+  "phone": "318-000-0000",
+  "city": "Grayson",
+  "state": "Louisiana",
+  "schemaType": "Store",
+  "accent": "#c2241f",
+  "accentDark": "#8e1916",
+  "kicker": "Postmarked from the North Pole USPS facility",
+  "headline": "A letter from Santa, written just for them.",
+  "intro": "Answer a few questions and we will send a personalised letter from Santa to a special child in your life.",
+  "about": "Custom Letters from Santa Claus sends personalised letters and emails from Santa to a special child in your life. You answer a few questions about the child, and the rest is handled for you. Printed letters are postmarked from the North Pole USPS facility, and emails arrive from Santa's personal email address on the date you choose.",
+  "sectionKicker": "From Santa",
+  "servicesHeadline": "Two ways to hear from Santa.",
+  "areaHeadline": "Get in touch",
+  "ctaHeadline": "Letters and emails from Santa",
+  "primaryCta": "Order a letter",
+  "navCall": "Order now",
+  "footerLine": "Personalised letters and emails from Santa Claus.",
+  "seoTitle": "Custom Letters from Santa Claus | Personalised Santa Letters",
+  "seoDescription": "Personalised letters from Santa, postmarked from the North Pole USPS facility, and emails from Santa's own address. Letters $15.95, emails $6.95.",
+  "serviceAreas": ["United States"],
+  "menu": [
+    {
+      "name": "Personalized Letter from Santa",
+      "note": "$15.95",
+      "description": "Answer a few questions and we will send a personalised letter from Santa to a special child in your life.",
+      "items": [
+        "Personalised to the child",
+        "Postmarked from the North Pole USPS facility",
+        "Arrives by post"
+      ]
+    },
+    {
+      "name": "Email from Santa Claus",
+      "note": "$6.95",
+      "description": "Santa has gone high tech. Answer a few questions, tell us when you would like the child to receive it, and the email arrives from Santa's personal email address.",
+      "items": [
+        "Personalised to the child",
+        "Sent from Santa's own email address",
+        "You choose the delivery date"
+      ]
+    },
+    {
+      "name": "How it works",
+      "items": [
+        "Choose a letter or an email",
+        "Answer a few questions about the child",
+        "Pick the delivery date for emails",
+        "Santa takes it from there"
+      ]
+    }
+  ]
+}

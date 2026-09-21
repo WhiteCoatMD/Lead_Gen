@@ -1,0 +1,33 @@
+{
+  "name": "MB's Pressure Washing New Orleans",
+  "domain": "pressurewashing-neworleans.com",
+  "phone": "504-882-9328",
+  "city": "New Orleans",
+  "state": "Louisiana",
+  "schemaType": "HomeAndConstructionBusiness",
+  "accent": "#1f7a8c",
+  "accentDark": "#155a68",
+  "kicker": "Serving New Orleans, Kenner and the Westbank",
+  "headline": "Restore the exterior of your property.",
+  "intro": "Pressure washing for driveways, sidewalks, pool decks, roofs and whole houses across the New Orleans area.",
+  "sectionKicker": "About us",
+  "sectionHeadline": "We take care of all your pressure washing needs.",
+  "about": "Grime does more than look bad — it can damage wood, paint and stone. Pressure washing your own property is tempting, but it is harder than it looks, and doing it wrong can cost more than having it done properly. We handle the job for you across New Orleans, Kenner, the Westbank and Covington.",
+  "servicesHeadline": "What we clean.",
+  "areaHeadline": "Serving the New Orleans area.",
+  "ctaHeadline": "Get your property cleaned up.",
+  "ctaCopy": "Call to talk through the surfaces you need cleaned and we will sort out the details.",
+  "primaryCta": "Call 504-882-9328",
+  "navCall": "Call us",
+  "footerLine": "Pressure washing across New Orleans, Kenner, the Westbank and Covington.",
+  "seoTitle": "MB's Pressure Washing New Orleans | Exterior Cleaning",
+  "seoDescription": "Pressure washing in New Orleans, Kenner, the Westbank and Covington. Driveways, sidewalks, pool decks, roof cleaning and house washing.",
+  "serviceAreas": ["New Orleans", "Kenner", "Westbank", "Covington"],
+  "services": [
+    { "title": "Driveways", "description": "Pressure washing for driveways, clearing the grime that builds up and works into the surface." },
+    { "title": "Sidewalks", "description": "Cleaning sidewalks and walkways back to a surface you are happy to have out front." },
+    { "title": "Pool decks", "description": "Pool decks cleaned down, removing the build-up that collects around water." },
+    { "title": "Roof cleaning", "description": "Roof cleaning to clear growth and staining from the surface of your roof." },
+    { "title": "House washing", "description": "Washing down the exterior of the house, so the whole property looks cared for rather than just the drive." }
+  ]
+}

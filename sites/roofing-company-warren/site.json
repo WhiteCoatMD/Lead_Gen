@@ -1,0 +1,32 @@
+{
+  "name": "Roofing Company Warren",
+  "domain": "roofingcompanywarren.com",
+  "phone": "586-800-1593",
+  "city": "Warren",
+  "state": "Michigan",
+  "schemaType": "RoofingContractor",
+  "accent": "#b4451f",
+  "accentDark": "#8a3416",
+  "kicker": "Locally owned, with locations in Detroit and Warren",
+  "headline": "Roofing for Warren and Detroit.",
+  "intro": "Installation, replacement, repair and cleaning, in every style of roofing from metal to shingle.",
+  "sectionKicker": "About us",
+  "sectionHeadline": "A family business that knows roofs.",
+  "about": "We are a locally owned roofing company with locations in Detroit and Warren. We have been in business for over fifteen years, and our crews have many years of experience across all styles of roofing and the work that goes with it. We are a family oriented business, and we are ready to serve you. We offer all styles of roofing, including metal and shingle roofs, and we repair damage from small to large, including full tear offs.",
+  "servicesHeadline": "What we do.",
+  "areaHeadline": "Serving Warren and Detroit.",
+  "ctaHeadline": "Book a consultation.",
+  "ctaCopy": "Give us a call to schedule your consultation and we will take a look at the condition of your roof.",
+  "primaryCta": "Call 586-800-1593",
+  "navCall": "Free consultation",
+  "footerLine": "Locally owned roofing for Warren and Detroit, Michigan.",
+  "seoTitle": "Roofing Company Warren | Roofers in Warren & Detroit, MI",
+  "seoDescription": "Locally owned roofing company serving Warren and Detroit, Michigan. Roof installation, replacement, repair and cleaning in metal and shingle.",
+  "serviceAreas": ["Warren", "Detroit"],
+  "services": [
+    { "title": "Roof installation", "description": "New roofs in every style we work with, including metal and shingle." },
+    { "title": "Roof replacement", "description": "Full replacement when a roof is past repair, including complete tear offs." },
+    { "title": "Roof repair", "description": "If your roof is leaking or showing signs of structural damage, we assess its condition and advise on repair or replacement." },
+    { "title": "Roof cleaning", "description": "Cleaning the roof surface as part of keeping it in good shape." }
+  ]
+}
