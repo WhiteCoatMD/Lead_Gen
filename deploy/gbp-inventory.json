@@ -1,8 +1,6 @@
 {
   "_comment": "Google Business Profile discovery for the SEO-target properties, run 2026-09-21 via the Places Text Search API (the sanctioned path; scraping Google results is ruled out). Searched each property three ways: business name + city + state, exact phone number, and exact domain. Field mask restricted to id, name, address, phone, website and business status -- no ratings, reviews or photos, per the Places terms constraint that governs the mattress directory and applies equally here.",
-
   "_absence_caveat": "A property listed as not_found is NOT proven to have no GBP. Unverified and suspended profiles do not appear in the Places API at all, so this method can confirm a profile exists but cannot confirm one does not. The definitive check is signing in to business.google.com on the owning Google account, which only Mitch can do.",
-
   "found": {
     "lake-charles-fences": {
       "place_id": "see gbp-phone-findings",
@@ -30,16 +28,34 @@
         "Reopening is done from the GBP dashboard and needs the owning Google account.",
         "The GBP publishes a street address the website does not carry."
       ]
+    },
+    "chicago-eifs-stucco": {
+      "gbp_name": "Chicago EIFS and Stucco, LLC",
+      "gbp_location": "Chicago, IL and Chicago Heights, IL",
+      "status": "Verified",
+      "matched_on": "owner-supplied 2026-09-21, NOT found by the Places sweep",
+      "nap_notes": [
+        "Name matches our site exactly.",
+        "City matches. No conflicts found."
+      ]
+    },
+    "deck-builder-monroe": {
+      "gbp_name": "Deck Builders Monroe",
+      "gbp_address": "155 Biedenharn Dr, Lot 38, West Monroe, LA 71291",
+      "status": "listed by owner",
+      "matched_on": "owner-supplied 2026-09-21, NOT found by the Places sweep",
+      "nap_notes": [
+        "NAME MISMATCH: GBP says \"Deck Builders Monroe\" (plural); our site says \"Deck Builder Monroe\" (singular). Same defect as Twin City Fence, in the opposite direction.",
+        "CITY MISMATCH: the business is in WEST Monroe, 71291. site.json says Monroe, so the schema publishes a city that contradicts the profile. Identical to Twin City Fence.",
+        "The address looks residential (\"Lot 38\"), which suggests a service-area business. Do not publish the street address without confirming the profile shows it."
+      ]
     }
   },
-
   "not_found": {
     "_note": "No profile surfaced for the business name, the published phone, or the domain. See _absence_caveat before concluding these do not exist.",
     "slugs": [
       "cactus-removal-tucson",
-      "chicago-eifs-stucco",
       "crack-rx",
-      "deck-builder-monroe",
       "flooring-monroe",
       "mbs-pressure-washing-new-orleans",
       "stucco-repair-chicago",
@@ -48,10 +64,10 @@
       "twin-city-handyman"
     ]
   },
-
   "not_searchable": {
     "seacoast-hurricane-shutters": "Contact details were removed from the site on 2026-09-21 while its positioning is decided, so there is no phone to search on."
   },
-
-  "implication": "The brief's premise -- that aged Google Business Profiles already exist across the portfolio -- is confirmed for two properties and unconfirmed for eleven, including Twin City Fences, which was nominated as the pilot. Citation building depends on a real, verifiable NAP; without a GBP there is nothing to make citations consistent WITH, and creating listings for a business that is not eligible is the failure mode that costs an entire Google account. This needs resolving before the citation phase starts."
+  "implication": "The brief's premise -- that aged Google Business Profiles already exist across the portfolio -- is confirmed for two properties and unconfirmed for eleven, including Twin City Fences, which was nominated as the pilot. Citation building depends on a real, verifiable NAP; without a GBP there is nothing to make citations consistent WITH, and creating listings for a business that is not eligible is the failure mode that costs an entire Google account. This needs resolving before the citation phase starts.",
+  "_sweep_accuracy": "The Places API sweep found 2 of 13. The owner has since produced 3 more that exist (Twin City Fence, Chicago EIFS, Deck Builders Monroe), so the sweep false-negative rate is high -- at least 3 of the 11 it reported as not-found do exist. Treat not_found as \"not found by this method\", never as \"does not exist\", and ask the owner before concluding anything about a property.",
+  "_systemic_finding": "Both Monroe-area properties checked so far carry the SAME two defects: a singular/plural business-name drift, and a site.json city of Monroe when the business is in West Monroe. That is a migration fault, not a coincidence. Every remaining property should be checked against its GBP for both before any citation work starts -- a citation built on the wrong city is worse than no citation."
 }
