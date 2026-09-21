@@ -10,6 +10,8 @@
     "indexnow": "node scripts/indexnow.mjs",
     "gsc": "node scripts/gsc-sync.mjs",
     "gsc:check": "node scripts/gsc-sync.mjs --check",
-    "lost-pages": "node scripts/find-lost-pages.mjs"
+    "lost-pages": "node scripts/find-lost-pages.mjs",
+    "gsc:tokens": "node scripts/gsc-add-properties.mjs --tokens",
+    "gsc:verify": "node scripts/gsc-add-properties.mjs --verify"
   }
 }
