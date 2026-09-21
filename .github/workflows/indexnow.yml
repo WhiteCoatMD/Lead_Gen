@@ -1,0 +1,61 @@
+name: IndexNow submit
+
+# Tells the IndexNow network a site changed, right after the change ships.
+# Vercel redeploys every project on a push to main, so this runs on the same
+# trigger and submits our own URLs on our own verified hosts.
+#
+# Only content changes are worth an submission, so the paths filter keeps this
+# off commits that touch documentation or workflows. A manual run is available
+# for the occasions where something changed out of band.
+#
+# The script verifies https://<host>/<key>.txt before claiming any host, so
+# dead, placeholder and not-actually-ours domains drop out on their own. That
+# check is not ceremonial: roofingcompanywarren.com answers 200 on that path
+# while serving a stranger's site, and a status-code-only check would have
+# submitted somebody else's domain under our key.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "sites/**"
+      - "shared/**"
+      - "scripts/build-site.mjs"
+      - "deploy/indexnow.json"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # No install step: this repo has zero dependencies and gitignores its
+      # lockfile, so `npm ci` has nothing to read.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      # Vercel builds the same commit in parallel with this job. Waiting for one
+      # known-live host to serve the current build keeps the submission from
+      # arriving before the content it is announcing.
+      - name: Wait for the deploy to land
+        run: |
+          key=$(node -p "require('./deploy/indexnow.json').key")
+          for i in $(seq 1 40); do
+            if curl -fsS --max-time 10 "https://deckbuildermonroe.com/$key.txt" | grep -qx "$key"; then
+              echo "key file live after $((i*15))s"; exit 0
+            fi
+            sleep 15
+          done
+          echo "timed out waiting for the deploy"; exit 1
+
+      - name: Submit
+        run: npm run indexnow
