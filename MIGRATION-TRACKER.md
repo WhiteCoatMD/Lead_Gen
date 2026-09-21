@@ -195,10 +195,31 @@ Nothing to migrate — the Snapps site is an unedited template (2):
 | Miro's Tree Service Monroe | "ADD YOUR BUSINESS SLOGAN HERE", "This is a paragraph. Writing in paragraphs lets your visitor find what they are looking for quickly and easily.", "Short title / Describe some quality or feature of the company." All phones `555-555-5555`. No address, no services, no real copy anywhere. Domain `treeservicemonroe.com` is ACTIVE with MX. |
 | Leyland's Los Angeles Tree Service | Identical untouched template, same placeholder strings. No domain in the account. |
 
-Partly real, not enough to build (1):
+Built as a DRAFT at the owner's request (1): **Make Your Own Crap.com.** The
+concept was clear enough from the three real lines on the source — "Gifts for
+people that you like....but only a little", "Want to send someone a thoughtful
+gift, but think they should have to work for it?", and "from the creators of
+Make Your Own Damn Candle" — so the site is built around it: make-it-yourself
+gift kits, where the recipient has to assemble the thing before they can enjoy
+it. The real copy and the sibling-brand link are carried over verbatim. The
+kit line-up and the buying flow are **explicitly labelled placeholders** in the
+page itself, the topbar says "Draft site", and it keeps the placeholder phone
+so it stays failing the checklist and cannot go live by accident. None of the
+pet-template demo store came across.
+
+Superseded note (kept for the record):
 
 | Site | What is real vs. template |
 |---|---|
 | Make Your Own Crap.com | **Real:** the name, the concept — "Gifts for people that you like....but only a little", "Want to send someone a thoughtful gift, but think they should have to work for it?" — and that it is "from the creators of Make Your Own Damn Candle". **Template demo, not theirs:** the entire store (pet products — "Ball $15", "Mouse toy $15", nav of Eat/Play/Walk/Sleep) and the stock claims "24/7 support", "Free delivery", "We donate 5% from every purchase to local animal shelters". Those belong to the *ohmydog* pet template this site was built from, the same template Hippie Chicks used. Domain is also lapsed. Needs a real product list before it can be built. |
 
 Shelved by the owner (1): The Velvet Chandelier.
+
+## Shop-template wording
+
+The shop template's nav and section labels default to a walk-in shop's wording
+("Menu", "Visit", "Where we are", "Service area"). That is wrong for a
+mail-order business, so `navStore` / `navVisit` / `navAreas` / `visitKicker` /
+`areasKicker` now override them. Crack Rx, Custom Letters from Santa Claus and
+Make Your Own Crap use their own wording; Hippie Chicks, which is an actual
+walk-up stand, keeps the defaults.

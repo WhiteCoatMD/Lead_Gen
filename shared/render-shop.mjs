@@ -9,6 +9,11 @@ import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./rend
 // Content comes from `menu` — an array of groups, each with a name, an
 // optional price note, and its items. A group renders as one card, so a site
 // needs at least three groups to satisfy the launch checklist.
+//
+// Nav and section labels default to a walk-in shop's wording ("Menu",
+// "Visit", "Where we are", "Service area"). A mail-order business overrides
+// them with navStore / navVisit / navAreas / visitKicker / areasKicker,
+// because nothing about it is somewhere you visit.
 
 const STATE_CODES = { Alabama: "AL", Arizona: "AZ", Arkansas: "AR", California: "CA", Florida: "FL", Georgia: "GA", Illinois: "IL", Louisiana: "LA", Mississippi: "MS", Missouri: "MO", Nevada: "NV", "New Mexico": "NM", "North Carolina": "NC", Ohio: "OH", Oklahoma: "OK", Tennessee: "TN", Texas: "TX" };
 const stateCode = (state = "") => STATE_CODES[state] || (state.length === 2 ? state.toUpperCase() : state);
@@ -99,7 +104,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
   <header>
     <a class="brand${site.logo ? "" : " brand-wordmark"}" href="#top" aria-label="${esc(site.name)} home">${brand}</a>
     <nav id="site-nav" aria-label="Primary">
-      <a href="#store">Menu</a><a href="#visit">Visit</a><a href="#areas">Where we are</a>
+      <a href="#store">${esc(site.navStore || "Menu")}</a><a href="#visit">${esc(site.navVisit || "Visit")}</a><a href="#areas">${esc(site.navAreas || "Where we are")}</a>
     </nav>
     <div class="header-actions"><a class="nav-call" href="${tel}">${esc(site.navCall || "Call us")}</a></div>
   </header>
@@ -121,7 +126,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
     <section class="visit" id="visit">
       <div class="shell visit-inner">
         <div>
-          <p class="eyebrow">Visit us</p>
+          <p class="eyebrow">${esc(site.visitKicker || "Visit us")}</p>
           <h2>${esc(site.areaHeadline || "Come see us")}</h2>
           ${site.streetAddress ? `<address>${esc(site.streetAddress)}<br>${esc(site.city)}, ${esc(stateCode(site.state))} ${esc(site.postalCode || "")}</address>` : ""}
           <a class="phone" href="${tel}">${esc(site.phone)}</a>
@@ -132,7 +137,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
     </section>
     <section class="areas" id="areas">
       <div class="shell areas-inner">
-        <div><p class="eyebrow">Service area</p><h2>${esc(site.ctaHeadline || "Who we serve")}</h2></div>
+        <div><p class="eyebrow">${esc(site.areasKicker || "Service area")}</p><h2>${esc(site.ctaHeadline || "Who we serve")}</h2></div>
         <div class="area-list">${areaList}</div>
       </div>
     </section>

@@ -32,7 +32,9 @@
   "footerLine": "Prescription strength for your concrete's crack problem.",
   "seoTitle": "Crack Rx | Easy DIY Concrete Crack Repair",
   "seoDescription": "Dry-fill concrete crack repair in a 32 oz squeeze bottle. No mixing, no mess — clean it, fill it, smooth it, mist it. Made in Grayson, Louisiana.",
-  "serviceAreas": ["Grayson, Louisiana"],
+  "serviceAreas": [
+    "Grayson, Louisiana"
+  ],
   "menu": [
     {
       "name": "CrackRx dry-fill compound",
@@ -92,5 +94,10 @@
       "alt": "Illustration of a CrackRx bottle squeezing dry filler into a crack between two concrete slabs",
       "caption": "Apply straight from the bottle — no bucket, no stirring."
     }
-  ]
+  ],
+  "navStore": "The product",
+  "navVisit": "Contact",
+  "navAreas": "Where we are",
+  "visitKicker": "Talk to us",
+  "areasKicker": "Where we are"
 }

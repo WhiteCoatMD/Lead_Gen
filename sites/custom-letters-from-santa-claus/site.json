@@ -21,7 +21,9 @@
   "footerLine": "Personalised letters and emails from Santa Claus.",
   "seoTitle": "Custom Letters from Santa Claus | Personalised Santa Letters",
   "seoDescription": "Personalised letters from Santa, postmarked from the North Pole USPS facility, and emails from Santa's own address. Letters $15.95, emails $6.95.",
-  "serviceAreas": ["United States"],
+  "serviceAreas": [
+    "United States"
+  ],
   "menu": [
     {
       "name": "Personalized Letter from Santa",
@@ -52,5 +54,10 @@
         "Santa takes it from there"
       ]
     }
-  ]
+  ],
+  "navStore": "Letters",
+  "navVisit": "Contact",
+  "navAreas": "Where we ship",
+  "visitKicker": "Contact",
+  "areasKicker": "Where we ship"
 }

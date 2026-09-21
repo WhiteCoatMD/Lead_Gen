@@ -1,0 +1,72 @@
+{
+  "template": "shop",
+  "name": "Make Your Own Crap",
+  "domain": "makeyourowncrap.com",
+  "phone": "318-000-0000",
+  "city": "Grayson",
+  "state": "Louisiana",
+  "schemaType": "Store",
+  "accent": "#e04e2a",
+  "accentDark": "#a8371c",
+  "kicker": "Draft site — the product line below is a placeholder",
+  "headline": "Gifts for people that you like. But only a little.",
+  "intro": "Want to send someone a thoughtful gift, but think they should have to work for it? You're in the right place.",
+  "about": "Make Your Own Crap sells make-it-yourself gift kits. The recipient gets something genuinely nice — they just have to build the thing themselves before they can enjoy it. It comes from the creators of Make Your Own Damn Candle, which applied the same idea to candles: a real product, a real result, and a small amount of suffering in between.",
+  "sectionKicker": "The idea",
+  "servicesHeadline": "A thoughtful gift, with strings attached.",
+  "menuNote": "Draft site. The kit names, contents and prices below are placeholders to show the shape of the page — replace them with the real line-up. The phone number is a deliberate placeholder too, which keeps this site failing the launch checklist so it cannot go live by accident.",
+  "areaHeadline": "Get in touch",
+  "ctaHeadline": "Made in Grayson, Louisiana",
+  "primaryCta": "Shop the kits",
+  "navCall": "Shop kits",
+  "footerLine": "Gifts for people that you like. But only a little.",
+  "seoTitle": "Make Your Own Crap | Make-It-Yourself Gift Kits",
+  "seoDescription": "Gifts for people that you like, but only a little. Make-it-yourself gift kits from the creators of Make Your Own Damn Candle.",
+  "serviceAreas": [
+    "United States"
+  ],
+  "menu": [
+    {
+      "name": "The idea",
+      "description": "A gift they have to earn. You pick the kit, we send the parts, and they do the work before they get the thing.",
+      "items": [
+        "A real product at the end of it",
+        "Some assembly very much required",
+        "Funnier to give than to receive"
+      ]
+    },
+    {
+      "name": "From the creators of Make Your Own Damn Candle",
+      "description": "The same idea, already proven on candles. Make Your Own Crap is where the format goes next.",
+      "items": [
+        "Make Your Own Damn Candle"
+      ]
+    },
+    {
+      "name": "The kits — placeholder",
+      "note": "Replace with the real line-up",
+      "description": "This card shows where the product range goes. Swap these for the actual kits, with real names, contents and prices.",
+      "items": [
+        "Kit one — name, contents and price to be set",
+        "Kit two — name, contents and price to be set",
+        "Kit three — name, contents and price to be set"
+      ]
+    },
+    {
+      "name": "How it works — placeholder",
+      "note": "Confirm the real process before publishing",
+      "description": "A sketch of the buying flow, to be replaced once ordering and fulfilment are settled.",
+      "items": [
+        "Pick a kit",
+        "We ship the parts",
+        "They build it themselves",
+        "You enjoy their reaction"
+      ]
+    }
+  ],
+  "navStore": "Kits",
+  "navVisit": "Contact",
+  "navAreas": "Where we ship",
+  "visitKicker": "Contact",
+  "areasKicker": "Where we ship"
+}
