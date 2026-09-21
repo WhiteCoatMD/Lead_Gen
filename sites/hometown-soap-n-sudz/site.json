@@ -1,0 +1,72 @@
+{
+  "template": "shop",
+  "name": "Hometown Soap N Sudz",
+  "domain": "hometownsoapnsudz.com",
+  "phone": "361-528-6004",
+  "email": "hometownsoapnsudz@gmail.com",
+  "streetAddress": "355 Davis Rd",
+  "city": "Taft",
+  "state": "Texas",
+  "postalCode": "78390",
+  "schemaType": "LocalBusiness",
+  "accent": "#1c6fb4",
+  "accentDark": "#13527f",
+  "hero": "hometown-soap-n-sudz-interior.jpg",
+  "assets": ["hometown-soap-n-sudz-interior.jpg", "veteran-owned-and-operated.jpg"],
+  "kicker": "355 Davis Rd, Taft, Texas — open daily",
+  "headline": "A full-service laundromat in Taft.",
+  "intro": "Self-service washers and dryers, or drop it off and we will wash, dry and fold it for you.",
+  "about": "Hometown Soap N Sudz is a veteran owned and operated, fully attended laundromat at 355 Davis Rd in Taft, Texas. The laundromat runs Wascomat equipment throughout, and you can either use the machines yourself or leave your laundry with us for same-day wash, dry and fold. Pricing is posted with no hidden fees, and there is free WiFi, free popcorn, snack and drink machines, and a self-serve change machine on site.",
+  "sectionKicker": "What we offer",
+  "servicesHeadline": "Laundry, your way",
+  "menuNote": "Open daily 9:00 am to 10:00 pm. The last wash goes in at 9:00 pm.",
+  "areaHeadline": "Find us on Davis Road",
+  "ctaHeadline": "Serving Taft, Texas",
+  "primaryCta": "Call 361-528-6004",
+  "navCall": "Call us",
+  "footerLine": "Veteran owned and operated. 355 Davis Rd, Taft, Texas 78390.",
+  "seoTitle": "Hometown Soap N Sudz | Laundromat in Taft, TX",
+  "seoDescription": "Veteran owned, fully attended laundromat at 355 Davis Rd in Taft, Texas. Self-service Wascomat machines and drop-off wash, dry and fold at $0.99 per pound.",
+  "serviceAreas": ["Taft, Texas"],
+  "hours": [
+    { "days": "Monday – Sunday", "time": "9:00 am – 10:00 pm" },
+    { "days": "Last wash", "time": "9:00 pm" }
+  ],
+  "menu": [
+    {
+      "name": "Self-service laundry",
+      "description": "Use our machines at your own pace, with staff on site the whole time.",
+      "items": [
+        "Wascomat washers and dryers",
+        "Fully attended",
+        "Posted pricing with no hidden fees",
+        "Self-serve change machine",
+        "Free WiFi"
+      ]
+    },
+    {
+      "name": "Drop-off wash, dry and fold",
+      "note": "$0.99 per pound · 10 lb minimum · same-day service",
+      "description": "Bring your laundry in and we handle the rest — washed with premium detergents, dried, and folded ready for pick-up.",
+      "items": [
+        "Everyday wear",
+        "Linens",
+        "Specialty items"
+      ]
+    },
+    {
+      "name": "Laundry supplies",
+      "description": "Forgot your detergent? We carry a large selection in store.",
+      "items": ["Detergents", "Fabric softeners", "Other laundry items"]
+    },
+    {
+      "name": "While you wait",
+      "items": [
+        "Free WiFi",
+        "Free popcorn with a variety of seasonings",
+        "Snack machine",
+        "Drink machine"
+      ]
+    }
+  ]
+}

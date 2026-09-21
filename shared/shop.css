@@ -25,6 +25,7 @@ nav a:hover{color:var(--accent)}
 .nav-call:hover{background:var(--accent-dark)}
 
 .shop-hero{padding-block:clamp(56px,9vw,104px);background:var(--accent);color:#fff}
+.shop-hero.has-image{min-height:clamp(420px,52vw,620px);display:flex;align-items:center;background-size:cover;background-position:center}
 .shop-hero h1{max-width:18ch;margin:0;font-size:clamp(2.6rem,7vw,5.2rem);line-height:.98;letter-spacing:-.04em}
 .lede{max-width:62ch;margin:22px 0 0;font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.6}
 .button{min-height:54px;display:inline-flex;align-items:center;justify-content:center;margin-top:30px;padding:0 26px;border-radius:3px;text-decoration:none;font-weight:900}

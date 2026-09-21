@@ -11,8 +11,8 @@ another project. 17 sites remain.
 
 | # | Site | Snapps preview | Domain | Domain state | Build | Deploy | DNS | Missing / blocker |
 |---|------|---------------|--------|--------------|-------|--------|-----|-------------------|
-| 1 | Hippie Chicks Snowballs | 89aa4812 | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** Content extracted (see below). |
-| 2 | Hometown Soap N Sudz | 439dc70e | hometownsoapnsudz.com | ACTIVE, on Snapps | not started | — | frozen | — |
+| 1 | Hippie Chicks Snowballs | 89aa4812 | hippie-chicks-snowballs.invalid | **placeholder** (.invalid, reserved TLD) | **PASS** | pending | frozen | **No domain in GoDaddy.** Built on a placeholder at the owner's instruction. |
+| 2 | Hometown Soap N Sudz | 439dc70e | hometownsoapnsudz.com | ACTIVE, on Snapps | **PASS** | pending | frozen | — |
 | 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
@@ -29,7 +29,7 @@ another project. 17 sites remain.
 | 16 | Spray Foam Insulation Los Angeles | d1a95eff | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
 | 17 | Leyland's Los Angeles Tree Service | e5a4ace7 | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
 
-DNS is **frozen for every row** until its replacement is verified on a Vercel
+Checked 2026-09-21. DNS is **frozen for every row** until its replacement is verified on a Vercel
 hostname. No row is cleared for cutover yet.
 
 ## Verified content — Hippie Chicks Snowballs (site 1)
@@ -58,3 +58,14 @@ template called *ohmydog*; all real content is pictures of a printed menu.
   BBG & Pink BBG), Frog in a Blender (Sour Apple & Cherry)
 - Brands shown on the homepage: Blue Bell Ice Cream, Alani Nu, Hunt Brothers
   Pizza
+
+## Notes carried from the rebuilds
+
+- **Hometown Soap N Sudz:** the Snapps page embeds the contact details of a
+  Wascomat equipment sales rep (a named individual and his mobile number).
+  Those are a third party's details, not the business's, and were deliberately
+  left off the rebuilt site. The page also says the shop is "approaching our
+  1 year anniversary" — omitted, because it is undated and will read wrong.
+- The **`.invalid`** TLD is reserved by RFC 2606 and can never be registered,
+  so a placeholder canonical cannot ever point at a stranger's website. Swap
+  it for the real domain in `site.json` when one exists.

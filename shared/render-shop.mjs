@@ -54,6 +54,14 @@ export function renderShop(site) {
     contactPoint: { "@type": "ContactPoint", contactType: "customer service", telephone: site.phone, areaServed: "US", availableLanguage: "English" }
   };
 
+  // A hero photograph is optional. When present it sits behind a dark scrim so
+  // the headline keeps its contrast; without one the hero is a plain accent
+  // panel, which suits businesses whose only imagery is a menu board.
+  const heroImage = site.hero && site.heroStyle !== "plain";
+  const heroAttrs = heroImage
+    ? ` class="shop-hero has-image" style="background-image:linear-gradient(90deg,rgba(10,12,14,.9),rgba(10,12,14,.62) 55%,rgba(10,12,14,.3)),url(&quot;${esc(assetUrl(site.hero))}&quot;)"`
+    : ` class="shop-hero"`;
+
   const brand = site.logo
     ? `<img src="${esc(assetUrl(site.logo))}" alt="${esc(site.name)}" width="180" height="96" decoding="async">`
     : `<span class="brand-text">${esc(site.name)}</span>`;
@@ -88,7 +96,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
     <div class="header-actions"><a class="nav-call" href="${tel}">${esc(site.navCall || "Call us")}</a></div>
   </header>
   <main>
-    <section class="shop-hero" id="top">
+    <section${heroAttrs} id="top">
       <div class="shell">
         <h1>${esc(site.headline)}</h1>
         ${site.intro ? `<p class="lede">${esc(site.intro)}</p>` : ""}
