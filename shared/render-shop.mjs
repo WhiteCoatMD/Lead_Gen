@@ -1,5 +1,5 @@
 import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./render-site.mjs";
-import { businessId, openingHoursSpecification, postalAddress, productCatalog, serviceCatalog } from "./schema.mjs";
+import { businessId, openingHoursSpecification, postalAddress, primaryImage, productCatalog, serviceCatalog } from "./schema.mjs";
 
 // A counter-service / retail template for businesses people visit or order
 // from, rather than hire. The shared contractor template is wrong for these:
@@ -56,7 +56,7 @@ export function renderShop(site) {
     telephone: site.phone,
     email: site.email,
     description: site.seoDescription,
-    image: site.logo ? absolute(site.domain, site.logo) : undefined,
+    image: primaryImage(site, absolute),
     logo: site.logo ? absolute(site.domain, site.logo) : undefined,
     address: postalAddress(site, stateCode),
     areaServed: areas.map((name) => ({ "@type": "Place", name })),

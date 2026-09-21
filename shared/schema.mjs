@@ -151,6 +151,25 @@ export function productCatalog(site, products) {
 // back at their provider instead of describing an anonymous one.
 export const businessId = (site) => `https://${site.domain}/#business`;
 
+// Google flags a missing `image` on LocalBusiness as a non-critical issue, and
+// it only ever had the logo to work with. Any real photograph the site already
+// publishes is a better answer than nothing, so fall through the images the
+// site actually has. Returns undefined when there are none — 11 of these sites
+// currently ship no photography at all, and a stock photo of someone else's
+// deck is not something to invent on their behalf.
+//
+// `priceRange` is the other field Google asks for and is deliberately left
+// unset: it is a commercial claim, and none of these sites publish one.
+export function primaryImage(site, absolute) {
+  const candidate =
+    site.logo ||
+    site.hero ||
+    site.aboutImage ||
+    (Array.isArray(site.gallery) && site.gallery.length ? site.gallery[0].image : undefined) ||
+    (Array.isArray(site.products) && site.products.length ? site.products[0].image : undefined);
+  return candidate ? absolute(site.domain, candidate) : undefined;
+}
+
 export function postalAddress(site, stateCode) {
   return {
     "@type": "PostalAddress",

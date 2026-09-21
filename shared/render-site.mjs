@@ -1,4 +1,4 @@
-import { businessId, openingHoursSpecification, postalAddress, serviceCatalog } from "./schema.mjs";
+import { businessId, openingHoursSpecification, postalAddress, primaryImage, serviceCatalog } from "./schema.mjs";
 
 export const jsonLd = (schema) => JSON.stringify(schema).replace(/</g, "\\u003c");
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
@@ -61,7 +61,7 @@ export function renderSite(site) {
     telephone: site.phone,
     email: site.email,
     description: site.seoDescription,
-    image: site.logo ? absolute(site.domain, site.logo) : undefined,
+    image: primaryImage(site, absolute),
     logo: site.logo ? absolute(site.domain, site.logo) : undefined,
     address: postalAddress(site, stateCode),
     areaServed: areaNames.map((name) => ({ "@type": "Place", name })),
