@@ -1,0 +1,61 @@
+{
+  "slug": "twin-city-fences",
+  "domain": "twincityfences.com",
+  "siteUrl": "sc-domain:twincityfences.com",
+  "startDate": "2025-05-29",
+  "endDate": "2026-09-18",
+  "clicks": 0,
+  "impressions": 0,
+  "pages": [],
+  "queries": [],
+  "rebuilt": [
+    {
+      "path": "/wooden-fences",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/chain-link-fence",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/contact",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/split-rail-fences.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/fencing-monroe.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/wooden-fences.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/chain-link-fence.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/contact-us.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    }
+  ]
+}
