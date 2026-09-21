@@ -1,0 +1,192 @@
+name: Disable mail on one domain
+
+# Turns off inbound mail for a SINGLE named domain.
+#
+# This is deliberately a separate workflow from "Connect lead-generation
+# domains". That one has a hard allowlist -- apex A/AAAA and www A/AAAA/CNAME,
+# nothing else -- so it can never touch mail by accident, and widening it to
+# make this possible would have thrown away the guarantee that protects the
+# other seventeen zones. This workflow is the mirror image: it may touch mail
+# routing and may NEVER touch web routing.
+#
+# Safety rails, because deleting mail routing is not reversible for anything
+# in flight:
+#   - one zone per run, named explicitly; there is no list to sweep
+#   - `confirm` must be typed as the exact zone name
+#   - dry run is the default; a write needs dry_run: false
+#   - SPF and DMARC are KEPT by default (see below)
+#   - A/AAAA/CNAME on @ and www are refused outright
+#
+# WHY NULL MX RATHER THAN DELETE (mode: null-mx, the default):
+# With no MX record at all, RFC 5321 senders fall back to the domain's A
+# record. That is Vercel, which does not answer SMTP, so mail queues and retries
+# for days before bouncing. A null MX -- preference 0, exchange "." per RFC 7505
+# -- says "this domain accepts no mail" and gets an immediate, clean rejection.
+#
+# WHY SPF AND DMARC STAY:
+# They are not delivery records, they are anti-forgery records. This zone has
+# `v=spf1 include:secureserver.net -all` and `p=reject`. Leaving them means
+# nobody can send forged mail AS this domain. Deleting them would make a dormant
+# domain MORE abusable, not less. Removing them needs remove_auth_records: true
+# and a reason to want it.
+
+on:
+  workflow_dispatch:
+    inputs:
+      zone:
+        description: "The one domain to disable mail on (e.g. example.com)"
+        required: true
+        type: string
+      confirm:
+        description: "Type the zone name again to confirm"
+        required: true
+        type: string
+      dry_run:
+        description: "Report the planned changes without writing"
+        type: boolean
+        default: true
+      mode:
+        description: "null-mx (recommended) or delete"
+        type: choice
+        options: ["null-mx", "delete"]
+        default: "null-mx"
+      remove_m365_helpers:
+        description: "Also remove the orphaned Microsoft 365 helper records (autodiscover, sip, lyncdiscover, msoid, email, SIP SRVs)"
+        type: boolean
+        default: false
+      remove_auth_records:
+        description: "DANGER: also remove SPF and DMARC. Leave false unless you know why you want this."
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  disable-mail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disable mail
+        env:
+          GODADDY_PAT: ${{ secrets.GODADDY_PAT || secrets.GODADDY_TOKEN || secrets.GODADDY_API_KEY }}
+          ZONE: ${{ inputs.zone }}
+          CONFIRM: ${{ inputs.confirm }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          MODE: ${{ inputs.mode }}
+          RM_HELPERS: ${{ inputs.remove_m365_helpers }}
+          RM_AUTH: ${{ inputs.remove_auth_records }}
+        run: |
+          node <<'NODE'
+          const token = process.env.GODADDY_PAT;
+          if (!token) throw new Error("Missing GODADDY_PAT repository secret");
+
+          const zone = (process.env.ZONE || "").trim().toLowerCase();
+          const confirm = (process.env.CONFIRM || "").trim().toLowerCase();
+          const dryRun = process.env.DRY_RUN !== "false";
+          const mode = process.env.MODE || "null-mx";
+          const rmHelpers = process.env.RM_HELPERS === "true";
+          const rmAuth = process.env.RM_AUTH === "true";
+
+          if (!zone) throw new Error("zone is required");
+          if (zone !== confirm) throw new Error(`confirm (${confirm}) does not match zone (${zone}) -- refusing`);
+
+          // The inverse guard of the connect workflow: web routing is what this
+          // one must never touch. A mistake here would take the website down
+          // while trying to turn off email.
+          const isWebRouting = (r) =>
+            (r.name === "@" && ["A", "AAAA"].includes(r.type)) ||
+            (r.name === "www" && ["A", "AAAA", "CNAME"].includes(r.type));
+
+          const isSpf = (r) => r.type === "TXT" && /^v=spf1/i.test(String(r.data || ""));
+          const isDmarc = (r) => r.type === "TXT" && r.name === "_dmarc";
+
+          const HELPER_CNAMES = ["autodiscover", "email", "lyncdiscover", "msoid", "sip"];
+          const isHelper = (r) =>
+            (r.type === "CNAME" && HELPER_CNAMES.includes(r.name)) ||
+            (r.type === "SRV" && /lync|sip/i.test(String(r.data || "") + String(r.name || "")));
+
+          const base = `https://api.godaddy.com/v3/domains/zones/${zone}/dns-records`;
+          const request = async (path = "", options = {}) => {
+            const res = await fetch(base + path, {
+              ...options,
+              headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json", ...(options.headers || {}) }
+            });
+            const body = res.status === 204 ? null : await res.json().catch(() => null);
+            if (!res.ok) throw new Error(`${zone}: ${options.method || "GET"} ${res.status} ${JSON.stringify(body)}`);
+            return body;
+          };
+
+          const list = async () => (await request("?pageSize=100&totalRequired=true")).items || [];
+          const remove = async (r) => {
+            if (isWebRouting(r)) throw new Error(`refusing to delete web-routing record ${r.type} ${r.name}`);
+            if (dryRun) return;
+            await request(`/${encodeURIComponent(r.recordId)}`, { method: "DELETE" });
+          };
+
+          const before = await list();
+          const webBefore = before.filter(isWebRouting).map((r) => `${r.type} ${r.name} -> ${r.data}`);
+
+          console.log(`=== ${zone} ===`);
+          console.log(`mode: ${mode}${dryRun ? "  (DRY RUN -- nothing will be written)" : "  *** WRITING ***"}`);
+          console.log("");
+          console.log("web routing, which this workflow will not touch:");
+          for (const line of webBefore) console.log(`    ${line}`);
+          console.log("");
+
+          const mx = before.filter((r) => r.type === "MX");
+          const helpers = before.filter(isHelper);
+          const auth = before.filter((r) => isSpf(r) || isDmarc(r));
+
+          console.log(`MX records found: ${mx.length}`);
+          for (const r of mx) console.log(`    MX ${r.name} -> ${r.data} (priority ${r.priority})`);
+          console.log("");
+          console.log(`anti-forgery records: ${auth.length}${rmAuth ? "  -- WILL BE REMOVED" : "  -- keeping (they stop forged mail as this domain)"}`);
+          for (const r of auth) console.log(`    ${r.type} ${r.name} -> ${String(r.data).slice(0, 70)}`);
+          console.log("");
+          console.log(`Microsoft 365 helper records: ${helpers.length}${rmHelpers ? "  -- WILL BE REMOVED" : "  -- keeping (harmless, point at a tenant that may be gone)"}`);
+          for (const r of helpers) console.log(`    ${r.type} ${r.name} -> ${String(r.data).slice(0, 60)}`);
+          console.log("");
+
+          for (const r of mx) await remove(r);
+
+          if (mode === "null-mx") {
+            // RFC 7505: preference 0, exchange ".". If GoDaddy rejects the bare
+            // dot, say so loudly rather than quietly leaving the domain with no
+            // MX at all, which is the fallback-to-A case we are avoiding.
+            if (!dryRun) {
+              try {
+                await request("", { method: "POST", body: JSON.stringify([{ type: "MX", name: "@", data: ".", ttl: 3600, priority: 0 }]) });
+                console.log('wrote null MX: MX 0 "." -- the domain now explicitly accepts no mail');
+              } catch (error) {
+                console.log(`FAILED to write null MX: ${error.message}`);
+                console.log("The old MX records are already gone, so mail is off, but senders will");
+                console.log("fall back to the A record and bounce slowly. Re-run with mode: delete");
+                console.log("to accept that, or add the null MX by hand.");
+                process.exit(1);
+              }
+            } else {
+              console.log('would write null MX: MX 0 "."');
+            }
+          } else {
+            console.log("mode: delete -- no null MX written. Senders will fall back to the A record.");
+          }
+
+          if (rmHelpers) for (const r of helpers) await remove(r);
+          if (rmAuth) for (const r of auth) await remove(r);
+
+          if (dryRun) {
+            console.log("");
+            console.log("dry run complete, nothing written.");
+            process.exit(0);
+          }
+
+          const after = await list();
+          const webAfter = after.filter(isWebRouting).map((r) => `${r.type} ${r.name} -> ${r.data}`);
+          const sameWeb = webBefore.length === webAfter.length && webBefore.every((line) => webAfter.includes(line));
+
+          console.log("");
+          console.log(`web routing unchanged: ${sameWeb ? "yes" : "NO -- INVESTIGATE"}`);
+          console.log(`MX now: ${after.filter((r) => r.type === "MX").map((r) => `${r.data} (priority ${r.priority})`).join(", ") || "(none)"}`);
+          console.log(`SPF/DMARC still present: ${after.filter((r) => isSpf(r) || isDmarc(r)).length}`);
+          if (!sameWeb) process.exit(1);
+          NODE
