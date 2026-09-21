@@ -108,5 +108,20 @@
     "projectId": "prj_jt5wWpIFyeOhmYhY6g6w66pSjEfq",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
     "projectName": "millards-stucco-repair-baton-rouge"
+  },
+  "rev-laundry-soap": {
+    "projectId": "prj_NXZH9hFeGZhxdJyvCy2lsu8uPeKE",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "rev-laundry-soap"
+  },
+  "roofing-company-houma": {
+    "projectId": "prj_Ipj0SGCTqd1uQhBO33Zn2oTHosed",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "roofing-company-houma"
+  },
+  "roofing-company-warren": {
+    "projectId": "prj_yPGSUEEHSGsvUK3ABJfp2AkDzRVu",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "roofing-company-warren"
   }
 }

@@ -19,7 +19,7 @@ another project. 17 sites remain.
 | 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | **SHELVED 2026-09-21** | — | frozen | Owner shelved it. No phone/email/address on source; store closed for maintenance. |
 | 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 8 | Make Your Own Crap.com | d7417d8e | makeyourowncrap.com | **CANCELLED** exp 2025-09-24 | not started | — | frozen | Domain lapsed. |
-| 9 | Miro's Tree Service Monroe | 58dd2d08 | treeservicemonroe.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
+| 9 | Miro's Tree Service Monroe | 58dd2d08 | treeservicemonroe.com | ACTIVE, on Snapps, **has MX** | **DROPPED 2026-09-21** | — | frozen | Owner dropped it. Source is an unedited template with no business content. |
 | 10 | MB's Pressure Washing New Orleans | d4aaf3f8 | pressurewashing-neworleans.com | ACTIVE, on Snapps | not started | — | frozen | `nolapressurewash.com` also exists but points elsewhere (199.34.228.76) — not this site. |
 | 11 | Cutting Edge Tree Service | ca8eaba7 | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** City unknown. |
 | 12 | Roofing Company Warren | 4dcadec0 | roofingcompanywarren.com | **CANCELLED** exp 2025-09-29 | not started | — | frozen | Domain lapsed. |
@@ -27,7 +27,7 @@ another project. 17 sites remain.
 | 14 | Millard's Stucco Repair Baton Rouge | a5c1500c | stuccorepairbatonrouge.com | ACTIVE, on Snapps | not started | — | frozen | — |
 | 15 | Drywall & Paint Pros of Chicago | d66af26f | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
 | 16 | Spray Foam Insulation Los Angeles | d1a95eff | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
-| 17 | Leyland's Los Angeles Tree Service | e5a4ace7 | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
+| 17 | Leyland's Los Angeles Tree Service | e5a4ace7 | — | **none found** | **DROPPED 2026-09-21** | — | frozen | Owner dropped it. Source is an unedited template with no business content. |
 
 Checked 2026-09-21. DNS is **frozen for every row** until its replacement is verified on a Vercel
 hostname. No row is cleared for cutover yet.
@@ -223,3 +223,22 @@ mail-order business, so `navStore` / `navVisit` / `navAreas` / `visitKicker` /
 `areasKicker` now override them. Crack Rx, Custom Letters from Santa Claus and
 Make Your Own Crap use their own wording; Hippie Chicks, which is an actual
 walk-up stand, keeps the defaults.
+
+## Scope changes, 2026-09-21
+
+- **Miro's Tree Service Monroe** and **Leyland's Los Angeles Tree Service** —
+  **dropped by the owner.** Both were unedited Snapps templates carrying only
+  placeholder strings ("ADD YOUR BUSINESS SLOGAN HERE", "This is a paragraph…")
+  with no services, address or real copy. There was nothing to migrate, and
+  building them would have meant writing two businesses from scratch. Note
+  `treeservicemonroe.com` is still ACTIVE with MX records, so **that domain is
+  live and now points at nothing being maintained** — worth deciding whether to
+  keep paying for it. Cutting Edge Tree Service is unaffected and is built.
+- **Millard's Stucco Repair Baton Rouge** — **left as-is at the owner's
+  request.** It is built and deployed but fails the launch checklist on card
+  count, because its source lists only two services. Its 225-vs-504 phone
+  conflict is also unresolved. It will keep showing as a FAIL in `npm run
+  audit`; that is expected, not a regression.
+
+Active scope is now **14 sites**: 10 passing, 4 awaiting a detail (3 phones,
+plus Millard's which is being ignored).
