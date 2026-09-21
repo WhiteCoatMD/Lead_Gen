@@ -43,8 +43,30 @@ for (const slug of slugs) {
     console.log(`deployed ${slug}`);
   }
 
-  if (links[slug]) results.push({ slug, alias: `https://${links[slug].projectName}.vercel.app` });
+  if (links[slug]) results.push({ slug });
 }
+
+// A project's public URL is NOT always https://<projectName>.vercel.app. That
+// name is global, and when someone else already holds it Vercel gives the
+// project a suffixed alias instead — cutting-edge-tree-service landed on
+// ...-cyan.vercel.app because the bare name belongs to an unrelated site that
+// answers 200. Assuming the bare name meant verifying a stranger's website, so
+// ask Vercel what the alias actually is.
+// `vercel project ls` prints its table to stderr, not stdout, so read both.
+const aliasRun = spawnSync("vercel", ["project", "ls", "--scope", SCOPE], { encoding: "utf8", shell: true });
+const aliasOutput = `${aliasRun.stdout || ""}\n${aliasRun.stderr || ""}`;
+const aliasByProject = {};
+for (const line of aliasOutput.split(/\r?\n/)) {
+  const clean = line.replace(/\u001b\[[0-9;]*m/g, "").trim();
+  const match = clean.match(/^(\S+)\s+(https:\/\/\S+\.vercel\.app)/);
+  if (match) aliasByProject[match[1]] = match[2];
+}
+for (const r of results) {
+  const name = links[r.slug]?.projectName || r.slug;
+  r.alias = aliasByProject[name] || `https://${name}.vercel.app`;
+  if (links[r.slug]) links[r.slug].alias = r.alias;   // record it, so the mapping is the source of truth
+}
+await fs.writeFile(linkFile, JSON.stringify(links, null, 2) + "\n", "utf8");
 
 console.log("\nVerifying public URLs:");
 let bad = 0;

@@ -2,126 +2,163 @@
   "lake-charles-fences": {
     "projectId": "prj_iHHcJoicYIgt7wvHQnM5SKYvjOn8",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "lake-charles-fences"
+    "projectName": "lake-charles-fences",
+    "alias": "https://lake-charles-fences.vercel.app"
   },
   "birds-nest-flower-shop": {
     "projectId": "prj_4qoeBYZLiRGzxC2NDRCVwfp7tYjJ",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "birds-nest-flower-shop"
+    "projectName": "birds-nest-flower-shop",
+    "alias": "https://birds-nest-flower-shop.vercel.app"
   },
   "cactus-removal-tucson": {
     "projectId": "prj_Gy3OdAz4BqSCKzeareMiEklXxvER",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "cactus-removal-tucson"
+    "projectName": "cactus-removal-tucson",
+    "alias": "https://cactus-removal-tucson.vercel.app"
   },
   "chicago-eifs-stucco": {
     "projectId": "prj_za4prJ0wQXjsZt7Jm8TknavkUfpL",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "chicago-eifs-stucco"
+    "projectName": "chicago-eifs-stucco",
+    "alias": "https://chicago-eifs-stucco.vercel.app"
   },
   "flooring-monroe": {
     "projectId": "prj_Ex8KdMVLjrpdamqIVlqUhUq8Q5ti",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "flooring-monroe"
+    "projectName": "flooring-monroe",
+    "alias": "https://flooring-monroe.vercel.app"
   },
   "scaffolding-los-angeles": {
     "projectId": "prj_yqufRy27cqo33UIkzjuN4RRVJZfY",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "scaffolding-los-angeles"
+    "projectName": "scaffolding-los-angeles",
+    "alias": "https://scaffolding-los-angeles.vercel.app"
   },
   "stucco-repair-chicago": {
     "projectId": "prj_VkPQMrMEXsqvV3Fli5p56TV6AXwP",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "stucco-repair-chicago"
+    "projectName": "stucco-repair-chicago",
+    "alias": "https://stucco-repair-chicago.vercel.app"
   },
   "tow-truck-arlington": {
     "projectId": "prj_AKB8EMbSLy3kkNOZEC5AKQZLyGAC",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "tow-truck-arlington"
+    "projectName": "tow-truck-arlington",
+    "alias": "https://tow-truck-arlington.vercel.app"
   },
   "towing-dallas": {
     "projectId": "prj_hSOFRE5Nuq8x9pHbmo80lC0gq1GB",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "towing-dallas"
+    "projectName": "towing-dallas",
+    "alias": "https://towing-dallas.vercel.app"
   },
   "towing-jonesboro": {
     "projectId": "prj_97ZwycqyhPhIxvFbjJB6QmJbNaoS",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "towing-jonesboro"
+    "projectName": "towing-jonesboro",
+    "alias": "https://towing-jonesboro.vercel.app"
   },
   "twin-city-fences": {
     "projectId": "prj_O4il7V2huZu69ERLQyUO49gctuaE",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "twin-city-fences"
+    "projectName": "twin-city-fences",
+    "alias": "https://twin-city-fences.vercel.app"
   },
   "twin-city-handyman": {
     "projectId": "prj_kTU5jA64GVqzSp1JdrWv78mtfzna",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "twin-city-handyman"
+    "projectName": "twin-city-handyman",
+    "alias": "https://twin-city-handyman.vercel.app"
   },
   "deck-builder-monroe": {
     "projectId": "prj_q3zskt9UqHn6AQd8kyyFhaeEuH4Q",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "deck-builder-monroe"
+    "projectName": "deck-builder-monroe",
+    "alias": "https://deck-builder-monroe.vercel.app"
   },
   "crack-rx": {
     "projectId": "prj_IrZMF00w2AILDrj9nzA4Scdisb01",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "crack-rx"
+    "projectName": "crack-rx",
+    "alias": "https://crack-rx.vercel.app"
   },
   "hippie-chicks-snowballs": {
     "projectId": "prj_3w9JHvzYRDitv9r6fI76pIOefY2S",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "hippie-chicks-snowballs"
+    "projectName": "hippie-chicks-snowballs",
+    "alias": "https://hippie-chicks-snowballs.vercel.app"
   },
   "hometown-soap-n-sudz": {
     "projectId": "prj_PUjukptQI4rTuCwLeLg4DU8S6Pm7",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "hometown-soap-n-sudz"
+    "projectName": "hometown-soap-n-sudz",
+    "alias": "https://hometown-soap-n-sudz.vercel.app"
   },
   "custom-letters-from-santa-claus": {
     "projectId": "prj_Cooa6zu0wXv87rdhtKX7M4nj5gVG",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "custom-letters-from-santa-claus"
+    "projectName": "custom-letters-from-santa-claus",
+    "alias": "https://custom-letters-from-santa-claus.vercel.app"
   },
   "cutting-edge-tree-service": {
     "projectId": "prj_KMgYB3ZOACnXzOK4CbIsQazZq4Qj",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "cutting-edge-tree-service"
+    "projectName": "cutting-edge-tree-service",
+    "alias": "https://cutting-edge-tree-service-cyan.vercel.app"
   },
   "drywall-and-paint-pros-chicago": {
     "projectId": "prj_z9nhsX3xdpbGVPBdw3vekTRW2dq9",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "drywall-and-paint-pros-chicago"
+    "projectName": "drywall-and-paint-pros-chicago",
+    "alias": "https://drywall-and-paint-pros-chicago.vercel.app"
   },
   "make-your-own-crap": {
     "projectId": "prj_eJQ4hoANhK4TIa7upupdObEdvAvU",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "make-your-own-crap"
+    "projectName": "make-your-own-crap",
+    "alias": "https://make-your-own-crap.vercel.app"
   },
   "mbs-pressure-washing-new-orleans": {
     "projectId": "prj_WKzMLJwb1Zsf17HPAd6npLqPRDkt",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "mbs-pressure-washing-new-orleans"
+    "projectName": "mbs-pressure-washing-new-orleans",
+    "alias": "https://mbs-pressure-washing-new-orleans.vercel.app"
   },
   "millards-stucco-repair-baton-rouge": {
     "projectId": "prj_jt5wWpIFyeOhmYhY6g6w66pSjEfq",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "millards-stucco-repair-baton-rouge"
+    "projectName": "millards-stucco-repair-baton-rouge",
+    "alias": "https://millards-stucco-repair-baton-rouge.vercel.app"
   },
   "rev-laundry-soap": {
     "projectId": "prj_NXZH9hFeGZhxdJyvCy2lsu8uPeKE",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "rev-laundry-soap"
+    "projectName": "rev-laundry-soap",
+    "alias": "https://rev-laundry-soap.vercel.app"
   },
   "roofing-company-houma": {
     "projectId": "prj_Ipj0SGCTqd1uQhBO33Zn2oTHosed",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "roofing-company-houma"
+    "projectName": "roofing-company-houma",
+    "alias": "https://roofing-company-houma.vercel.app"
   },
   "roofing-company-warren": {
     "projectId": "prj_yPGSUEEHSGsvUK3ABJfp2AkDzRVu",
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
-    "projectName": "roofing-company-warren"
+    "projectName": "roofing-company-warren",
+    "alias": "https://roofing-company-warren.vercel.app"
+  },
+  "seacoast-hurricane-shutters": {
+    "projectId": "prj_4pMjBzmRrZmkcZ7uUU30VImf8uJm",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "seacoast-hurricane-shutters",
+    "alias": "https://seacoast-hurricane-shutters.vercel.app"
+  },
+  "spray-foam-insulation-los-angeles": {
+    "projectId": "prj_Dh1PsQt6lMoC1P9e31YYfVgv21f3",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "spray-foam-insulation-los-angeles",
+    "alias": "https://spray-foam-insulation-los-angeles.vercel.app"
   }
 }

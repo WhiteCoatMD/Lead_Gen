@@ -242,3 +242,22 @@ walk-up stand, keeps the defaults.
 
 Active scope is now **14 sites**: 10 passing, 4 awaiting a detail (3 phones,
 plus Millard's which is being ignored).
+
+## Deployment, 2026-09-21
+
+All 27 sites are deployed and verified: **27/27**. Verification checks the live
+page for the business name, the phone CTA and the canonical tag, not just a
+200 — which is what caught the problem below.
+
+**Bug found and fixed in `scripts/deploy-all.mjs`.** It assumed a project's
+public URL is `https://<projectName>.vercel.app`. That name is global, and
+`cutting-edge-tree-service.vercel.app` already belongs to an unrelated site
+that answers 200 — so the script was verifying a stranger's website and
+reporting FAIL for our perfectly good deployment. Our project actually sits at
+`cutting-edge-tree-service-cyan.vercel.app`. The script now asks Vercel for the
+real alias (reading `vercel project ls`, which prints its table to stderr, not
+stdout) and records it in `deploy/projects.json`.
+
+This is the second time a bare `.vercel.app` name has turned out to belong to
+someone else — `lead-gen-admin.vercel.app` did too. **Never treat a 200 on a
+guessed vercel.app hostname as proof of identity.**
