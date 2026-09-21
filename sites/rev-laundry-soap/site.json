@@ -1,0 +1,71 @@
+{
+  "template": "shop",
+  "name": "Rev Laundry Soap",
+  "domain": "revlaundrysoap.com",
+  "phone": "318-498-6539",
+  "email": "sales@revlaundrysoap.com",
+  "streetAddress": "7640 Highway 165",
+  "city": "Columbia",
+  "state": "Louisiana",
+  "postalCode": "71418",
+  "schemaType": "Store",
+  "accent": "#d2731f",
+  "accentDark": "#a35617",
+  "logo": "rev-laundry-soap-logo.png",
+  "heroStyle": "plain",
+  "assets": ["rev-laundry-soap-logo.png", "rev-laundry-soap-range.jpg"],
+  "kicker": "Fueling your freshness",
+  "headline": "Fuel your freshness.",
+  "intro": "All-natural laundry soaps, scent boosters and re-usable dryer sheets, made and bottled in Columbia, Louisiana.",
+  "about": "At Rev Laundry we take laundry seriously. We use only the highest quality ingredients — for the soaps that leave your clothes clean and refreshed, and for the scent boosters and re-usable laundry sheets. We don't use crazy chemicals and cover them up with artificial colours and chemically rendered scents. We pride ourselves on keeping your clothes clean and in top shape, while protecting your manly image. Can't have the guys noticing your clothes smell like gardenias, can we?",
+  "sectionKicker": "The range",
+  "servicesHeadline": "We live laundry.",
+  "menuNote": "Soaps come in 32 fl oz bottles and are safe for all fabrics.",
+  "galleryKicker": "The range",
+  "galleryHeadline": "Soaps and seasoning.",
+  "areaHeadline": "Made in Columbia, Louisiana",
+  "ctaHeadline": "Where we are",
+  "primaryCta": "Call 318-498-6539",
+  "navCall": "Order now",
+  "footerLine": "Made and bottled in Columbia, Louisiana.",
+  "seoTitle": "Rev Laundry Soap | All-Natural Laundry Soap",
+  "seoDescription": "All-natural laundry soaps, scent boosters and re-usable dryer sheets, made and bottled in Columbia, Louisiana. 32 fl oz bottles, safe for all fabrics.",
+  "serviceAreas": ["Columbia, Louisiana"],
+  "menu": [
+    {
+      "name": "All-natural premium laundry soap",
+      "note": "32 fl oz · safe for all fabrics",
+      "description": "Three scents, each an all-natural detergent.",
+      "items": [
+        "MidNite Timber — cypress and the crisp edge of gin",
+        "Black Sea — sea breeze and dark spices",
+        "Cypress Tonic — gin with the earthy tones of cypress"
+      ]
+    },
+    {
+      "name": "Laundry Seasoning",
+      "description": "An all-natural scent-boosting powder that enhances your detergent's performance and leaves clothes smelling incredible. Not for consumption — seriously, do not eat this.",
+      "items": ["Premium scent booster", "All natural"]
+    },
+    {
+      "name": "Rough & Tumble Sheets",
+      "description": "Re-usable, all-natural dryer sheets: tough on static and wrinkles, gentle on your clothes and on the environment.",
+      "items": ["Re-usable", "All natural", "Tough on static", "Tough on wrinkles"]
+    },
+    {
+      "name": "What we leave out",
+      "items": [
+        "No crazy chemicals",
+        "No artificial colours",
+        "No chemically rendered scents"
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "image": "rev-laundry-soap-range.jpg",
+      "alt": "Two 32 fl oz bottles of Rev Laundry Soap, one labelled Black Sea, beside a tub of Rev Laundry Seasoning scent-boosting powder",
+      "caption": "32 fl oz bottles, and the Laundry Seasoning scent booster."
+    }
+  ]
+}

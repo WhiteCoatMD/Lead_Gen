@@ -15,7 +15,7 @@ another project. 17 sites remain.
 | 2 | Hometown Soap N Sudz | 439dc70e | hometownsoapnsudz.com | ACTIVE, on Snapps | **PASS** | pending | frozen | — |
 | 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No street address published on the source site. |
 | 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No pricing published on the source site. |
-| 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
+| 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No prices published. Label ingredients not legible enough to transcribe. |
 | 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** |
 | 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 8 | Make Your Own Crap.com | d7417d8e | makeyourowncrap.com | **CANCELLED** exp 2025-09-24 | not started | — | frozen | Domain lapsed. |
@@ -101,3 +101,15 @@ template called *ohmydog*; all real content is pictures of a printed menu.
   (`crackdoctor@` in the contact block, `Support@` in the footer); the rebuild
   uses `crackdoctor@`. No pricing is published anywhere, so none was invented.
   Source imagery totalled 14 MB and was resized to 1.7 MB.
+- **Rev Laundry Soap:** a four-page Snapps site (Home, Laundry Soaps, Scent
+  Boosters, Dryer Sheets), all of which were read. Full range captured:
+  three soaps — MidNite Timber, Black Sea, Cypress Tonic — plus Laundry
+  Seasoning and Rough & Tumble Sheets. The product photo confirms **32 fl oz**
+  and "safe for all fabrics", neither of which appears in the site copy. The
+  label also lists ingredients, but not legibly enough at the available
+  resolution to transcribe, so they were left off rather than guessed —
+  **worth adding from the physical label**, since ingredients matter for
+  allergies. A "help us launch on Kickstarter" call-to-action was omitted: it
+  is undated, points off-site, and the campaign may well have ended. The
+  header also carries a `555-555-5555` template placeholder, which was ignored
+  in favour of the real number in the contact block. No prices are published.
