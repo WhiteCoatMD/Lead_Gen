@@ -1,0 +1,82 @@
+{
+  "_comment": "Master property record for the Twin City Fence pilot. This is the source of truth for NAP: site.json, structured data, citations and outreach all have to agree with THIS file, not with each other. Compiled 2026-09-21 from the owner-supplied Google Business Profile link plus the citations Google already surfaces for the business.",
+
+  "property_id": "twin-city-fences",
+  "status": "active",
+  "seo_target": true,
+
+  "identity": {
+    "canonical_business_name": "NEEDS A DECISION — see nap_conflicts.business_name",
+    "name_on_gbp": "Twin City Fence",
+    "name_on_our_site": "Twin City Fences",
+    "domain": "twincityfences.com",
+    "canonical_url": "https://twincityfences.com/",
+    "gbp_share_link": "https://share.google/XTGZHFfX2djw0blDD",
+    "gbp_kgmid": "/g/11fpss007l",
+    "gbp_place_id": null,
+    "_place_id_note": "Not retrievable. The profile does not appear in the Places API under its name, its phone, its domain, or its city — 'Twin City Fence' returns an unrelated contractor in Rosenberg, TX. It is in Google's Knowledge Graph (the kgmid above) but not the Places index, which usually means unverified, suspended, or recently altered. Worth checking in the GBP dashboard, because a profile Google will not return is a profile that cannot win a local pack."
+  },
+
+  "nap": {
+    "street_address": "205 Mane St, Suite C",
+    "city": "West Monroe",
+    "state": "Louisiana",
+    "state_code": "LA",
+    "postal_code": "71292",
+    "phone": "318-351-2539",
+    "email": "twincityfences@gmail.com",
+    "_source": "Consistent across the Facebook page, Yelp, the Chamber of Commerce listing and the business's own former /chain-link-fence page. Not invented."
+  },
+
+  "nap_conflicts": {
+    "_note": "Found before a single citation was submitted. Each one is a reason a directory will treat our listing as a different business from the one Google already knows.",
+    "city": {
+      "severity": "high",
+      "detail": "site.json says city 'Monroe'. The business is at 205 Mane St, WEST Monroe, 71292 — a different municipality. Our LocalBusiness schema currently publishes addressLocality 'Monroe', contradicting every existing citation and the GBP.",
+      "fix": "Set city to West Monroe in site.json and keep Monroe as a service area."
+    },
+    "business_name": {
+      "severity": "medium",
+      "detail": "Split across the web. 'Twin City Fence' on the GBP, Facebook and Porch; 'Twin City Fences' on Yelp, MapQuest, ChamberofCommerce, YouTube and our own site.",
+      "fix": "The GBP spelling normally wins, because it is the one Google matches citations against. That argues for 'Twin City Fence' everywhere — but it is the owner's business name and his call."
+    },
+    "street_address": {
+      "severity": "high",
+      "detail": "site.json carries no street address at all, so the schema publishes a city-level address only while six citations publish 205 Mane St Suite C.",
+      "fix": "Add street_address and postal_code to site.json; the renderer already emits both when present."
+    }
+  },
+
+  "citations_found": {
+    "_note": "Discovered from what Google already surfaces for the business — no paid tool, no submissions. This is the starting citation inventory for the pilot, and every one needs auditing against the NAP above.",
+    "facebook": { "url": "https://www.facebook.com/", "listed_name": "Twin City Fence | West Monroe LA", "address_shown": "205 Mane St Suite C, West Monroe, LA, 71292", "phone_shown": "(318) 351-2539", "note": "770+ followers. Address and phone agree with the GBP." },
+    "yelp": { "listed_name": "TWIN CITY FENCES", "address_shown": "205 Mane St Ste C West Monroe, LA 71292", "phone_shown": "(318) 351-2539", "note": "Updated August 2026. Name disagrees with the GBP. Also publishes an 'over 20 years experience' claim that needs verifying before it is repeated anywhere else." },
+    "chamberofcommerce_com": { "listed_name": "Twin City Fences", "address_shown": "West Monroe, LA 71292", "note": "Name disagrees with the GBP." },
+    "porch": { "url": "https://pro.porch.com/", "listed_name": "Twin City Fence", "note": "Name agrees with the GBP." },
+    "mapquest": { "listed_name": "Twin City Fences", "note": "Name disagrees with the GBP." },
+    "youtube": { "listed_name": "Twin City Fences", "note": "Owned channel. Name disagrees with the GBP." }
+  },
+
+  "lost_pages": {
+    "severity": "P1",
+    "_note": "Google still indexes these URLs with descriptions — they appear as sitelinks for the brand query — but the single-page rebuild dropped them and they now return 404. This is live ranking equity draining away, and it is the highest-value fix on this property.",
+    "urls": [
+      { "path": "/wooden-fences", "status": 404, "indexed_description": "We can build a fence for your location from either pine or cedar, and in varying heights." },
+      { "path": "/chain-link-fence", "status": 404, "indexed_description": "Call us now! 318-351-2539 chain link fence at tennis courts." },
+      { "path": "/contact", "status": 404, "indexed_description": "Contact page for the business." }
+    ],
+    "options": [
+      "301 each to the live single page. Recovers most of the equity, loses the topical page.",
+      "Rebuild them as real service pages. Strictly better — recovers the equity AND creates the service-detail surface the brief wants in Phase 6 — but it is more work than a redirect.",
+      "Do both: redirect now to stop the bleeding, replace with real pages when the service-page work lands."
+    ],
+    "portfolio_risk": "Every Snapps site was rebuilt from a multi-page original into a single page. This is unlikely to be unique to Twin City Fence. Search Console is the only way to find the full set, which makes connecting the GSC API the next real unblock."
+  },
+
+  "services": ["Wood Privacy Fences", "Chain-Link Fences", "Decorative & Metal Fences", "Fence & Gate Repair"],
+  "service_areas": ["Monroe", "West Monroe", "Ouachita Parish", "North Louisiana"],
+  "search_console": { "verified": true, "method": "DNS TXT", "api_connected": false },
+  "hours": null,
+  "tracking_phone": null,
+  "notes": "Nominated as the pilot property. It is a better pilot than it first looked: the GBP exists, six citations already exist, and there are three concrete NAP defects and three dead indexed URLs to fix end to end. It is a worse pilot in one way — the profile is missing from the Places index, so map-rank tracking may not work until that is resolved."
+}
