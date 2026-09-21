@@ -120,7 +120,31 @@ jobs:
           const remove = async (r) => {
             if (isWebRouting(r)) throw new Error(`refusing to delete web-routing record ${r.type} ${r.name}`);
             if (dryRun) return;
-            await request(`/${encodeURIComponent(r.recordId)}`, { method: "DELETE" });
+            try {
+              await request(`/${encodeURIComponent(r.recordId)}`, { method: "DELETE" });
+            } catch (error) {
+              // GoDaddy locks DNS records that belong to a provisioned service
+              // it manages -- Microsoft 365 mail, in particular. The zone API
+              // cannot unlock them at any privilege level; the service itself
+              // has to be removed from the domain in the GoDaddy account
+              // first. Worth naming clearly, because the raw error is a 409
+              // with a stack trace and reads like a bug in this workflow.
+              if (/IMMUTABLE_RECORD|part of \[/.test(error.message)) {
+                console.log("");
+                console.log(`BLOCKED: ${r.type} ${r.name} is locked by a GoDaddy-managed service.`);
+                console.log(`  ${error.message.replace(/^.*?message":"/, "").replace(/".*$/, "")}`);
+                console.log("");
+                console.log("  Nothing has been changed. DNS cannot release this record while the");
+                console.log("  service that owns it is still attached to the domain. Remove the");
+                console.log("  Microsoft 365 / email plan from this domain in the GoDaddy account,");
+                console.log("  then re-run this workflow.");
+                console.log("");
+                console.log("  Note that removing that plan is not a DNS change and may delete the");
+                console.log("  mailbox and its contents. That is a bigger step than editing a zone.");
+                process.exit(1);
+              }
+              throw error;
+            }
           };
 
           const before = await list();
