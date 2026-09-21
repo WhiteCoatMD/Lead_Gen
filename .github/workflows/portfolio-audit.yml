@@ -1,0 +1,67 @@
+name: Portfolio audit
+
+# Asks, every Monday, the question that nothing was asking on 2026-09-21:
+# is each site actually reachable on its own domain, and is it still ours?
+#
+# On that day seven domains were quietly pointed at Duda's old Snapps hosting,
+# which had started returning nginx 404. Deploys were green throughout, because
+# "the deploy succeeded" and "the site is reachable" are different facts and
+# only the first one was ever checked. One of those domains had also been
+# re-registered by a stranger and was serving another company's roofing page
+# with a healthy 200.
+#
+# This run fails only on NEWLY broken sites. The seven already-understood cases
+# live in deploy/audit-expectations.json and are reported without failing, so
+# that a red run here always means something actually changed.
+
+on:
+  schedule:
+    - cron: "0 13 * * 1" # Mondays 13:00 UTC — 8am America/Chicago (7am CDT)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # The audit compares each live page against the build of this commit, so
+      # the build has to happen first or every site reports as "stale".
+      - name: Build
+        run: npm run build
+
+      # Two different questions, both worth asking. The launch checklist is
+      # offline and reads dist/: it catches a site that built wrong, including
+      # placeholder phone numbers. The live audit goes over the network and
+      # catches a site that built fine but is unreachable, stale, or no longer
+      # ours. Neither one subsumes the other.
+      - name: Launch checklist (offline, dist/)
+        run: npm run audit | tee audit.txt
+
+      - name: Live portfolio audit (network)
+        if: always()
+        run: npm run audit:live | tee -a audit.txt
+
+      # Keep the full report even when the step above fails, so the summary is
+      # readable without digging through raw logs.
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo '## Portfolio audit'
+            echo ''
+            echo '```'
+            cat audit.txt || echo 'audit produced no output'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

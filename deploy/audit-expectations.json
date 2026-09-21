@@ -1,0 +1,32 @@
+{
+  "_comment": "Sites whose current broken state is known and accepted. The audit still prints them, but they do not fail the run. If a site's state changes to anything other than the accepted value the audit fails, because a change is new information even when the new state looks better. Delete an entry once the underlying problem is actually fixed.",
+
+  "custom-letters-from-santa-claus": {
+    "accept": "broken",
+    "reason": "Deliberately frozen. Built with placeholder phone 318-000-0000 and fails the launch checklist on purpose until the owner supplies a real number. Domain still on the old Snapps host."
+  },
+  "millards-stucco-repair-baton-rouge": {
+    "accept": "broken",
+    "reason": "Deliberately frozen. Fails the checklist on card count (source lists only two services and nothing was invented to pad it), plus an unresolved 225-vs-504 phone conflict. Domain still on the old Snapps host."
+  },
+  "roofing-company-warren": {
+    "accept": "broken",
+    "reason": "roofingcompanywarren.com lapsed and is now registered to someone else, serving an unrelated roofing company from Cloudflare. The rebuilt site has no domain."
+  },
+  "make-your-own-crap": {
+    "accept": "no-dns",
+    "reason": "Domain lapsed 2025-09-24. Site was built as a draft at the owner's request; not re-registered."
+  },
+  "roofing-company-houma": {
+    "accept": "no-dns",
+    "reason": "roofing-houma.com lapsed 2023-09-27."
+  },
+  "tow-truck-arlington": {
+    "accept": "no-dns",
+    "reason": "towing-arlington.com lapsed. Owner undecided on re-registering."
+  },
+  "towing-jonesboro": {
+    "accept": "no-dns",
+    "reason": "Domain lapsed and the owner shelved the site on 2026-09-20. Not being revived."
+  }
+}
