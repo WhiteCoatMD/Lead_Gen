@@ -16,12 +16,17 @@
 -- trusting it, and both are fixed below:
 --   1. gen_random_bytes() is pgcrypto, which Supabase installs into the
 --      `extensions` schema. A function pinned to search_path = public cannot
---      see it, so order numbers failed. next_order_number() uses md5(), which
---      is core Postgres, and depends on no extension at all.
+--      see it, so order numbers failed. next_order_number() draws from
+--      gen_random_uuid() instead: core Postgres, CSPRNG-backed, no extension.
 --   2. order_items were inserted inside the pricing loop, before the orders
 --      row existed, so the foreign key rejected every order. Lines are now
 --      collected during the loop and written after the order.
 
+-- The printed order number is for humans to read down the phone. It is NOT a
+-- secret and nothing is unlocked by knowing it — see get_order_receipt below,
+-- which is keyed on the order's uuid instead. Entropy still comes from
+-- gen_random_uuid(), which is CSPRNG-backed in core Postgres, rather than
+-- random(), which is a seeded PRNG and must never gate access.
 create or replace function public.next_order_number()
 returns text
 language sql
@@ -29,7 +34,7 @@ volatile
 set search_path = public
 as $$
   select 'BN-' || to_char(now(), 'YYMMDD') || '-' ||
-         upper(substr(md5(random()::text || clock_timestamp()::text), 1, 6));
+         upper(substr(replace(gen_random_uuid()::text, '-', ''), 1, 6));
 $$;
 
 create or replace function public.place_order(payload jsonb)
@@ -141,9 +146,14 @@ grant execute on function public.place_order(jsonb) to anon, authenticated;
 -- Verified against the live database: anon cannot insert an order, cannot read
 -- the order book, and can still read active products.
 
--- Looking an order up after checkout, by its number, without exposing the
--- whole order book. Returns only what a receipt needs.
-create or replace function public.get_order_receipt(p_order_number text)
+-- Looking an order up after checkout without exposing the whole order book.
+--
+-- Keyed on the order's uuid, not its printed number. A six-character number
+-- scoped to a known date is roughly 24 bits — brute-forceable, and it would
+-- have made the number an access token for anyone who guessed it. The uuid is
+-- 122 bits of CSPRNG randomness and is handed to the buyer by place_order().
+-- Returns only what a receipt needs: no name, phone or address.
+create or replace function public.get_order_receipt(p_order_id uuid)
 returns jsonb
 language sql
 security definer
@@ -171,8 +181,8 @@ as $$
     ), '[]'::jsonb)
   )
   from public.orders o
-  where o.order_number = p_order_number;
+  where o.id = p_order_id;
 $$;
 
-revoke all on function public.get_order_receipt(text) from public;
-grant execute on function public.get_order_receipt(text) to anon, authenticated;
+revoke all on function public.get_order_receipt(uuid) from public;
+grant execute on function public.get_order_receipt(uuid) to anon, authenticated;
