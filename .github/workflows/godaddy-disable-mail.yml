@@ -171,9 +171,42 @@ jobs:
           for (const r of helpers) console.log(`    ${r.type} ${r.name} -> ${String(r.data).slice(0, 60)}`);
           console.log("");
 
-          for (const r of mx) await remove(r);
+          // Try a record-set REPLACE before falling back to delete-then-add.
+          //
+          // Two reasons. It is atomic -- delete-then-add leaves a window with
+          // no MX at all, during which senders fall back to the A record.
+          // And GoDaddy refused a DELETE on this zone with IMMUTABLE_RECORD
+          // because the record belongs to a provisioned o365 service; a
+          // type-level replace is a different operation and may be allowed
+          // where deleting the individual record is not.
+          let mxDone = false;
+          if (mode === "null-mx" && !dryRun) {
+            const v1 = `https://api.godaddy.com/v1/domains/${zone}/records/MX/%40`;
+            const body = JSON.stringify([{ data: ".", ttl: 3600, priority: 0 }]);
+            for (const scheme of [`Bearer ${token}`, `sso-key ${token}`]) {
+              try {
+                const res = await fetch(v1, {
+                  method: "PUT",
+                  headers: { Authorization: scheme, "Content-Type": "application/json" },
+                  body
+                });
+                if (res.ok) {
+                  console.log(`replaced the MX record set with a null MX (via ${scheme.split(" ")[0]} auth)`);
+                  mxDone = true;
+                  break;
+                }
+                const detail = await res.text().catch(() => "");
+                console.log(`  replace attempt (${scheme.split(" ")[0]}): HTTP ${res.status} ${detail.slice(0, 160)}`);
+              } catch (error) {
+                console.log(`  replace attempt (${scheme.split(" ")[0]}) failed: ${error.message.slice(0, 120)}`);
+              }
+            }
+            if (!mxDone) console.log("  replace not permitted; falling back to delete");
+          }
 
-          if (mode === "null-mx") {
+          if (!mxDone) for (const r of mx) await remove(r);
+
+          if (mode === "null-mx" && !mxDone) {
             // RFC 7505: preference 0, exchange ".". If GoDaddy rejects the bare
             // dot, say so loudly rather than quietly leaving the domain with no
             // MX at all, which is the fallback-to-A case we are avoiding.
