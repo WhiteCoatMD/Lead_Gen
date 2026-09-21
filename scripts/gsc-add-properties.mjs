@@ -32,7 +32,13 @@ const args = process.argv.slice(2);
 const wantTokens = args.includes("--tokens");
 const wantVerify = args.includes("--verify");
 const ownerIdx = args.indexOf("--owner");
-const owner = ownerIdx >= 0 ? args[ownerIdx + 1] : null;
+// Every property is managed from one account by the owner's choice, so that
+// is the default rather than something to remember on each run. Search Console
+// and Google Business Profile are separate systems -- a property does not need
+// to sit in the same Google account as the business's GBP, and eleven logins
+// would be worse than one.
+const DEFAULT_OWNER = "twincityfences@gmail.com";
+const owner = ownerIdx >= 0 ? args[ownerIdx + 1] : DEFAULT_OWNER;
 const only = args.filter((a) => !a.startsWith("--") && a !== owner);
 
 if (!wantTokens && !wantVerify) {

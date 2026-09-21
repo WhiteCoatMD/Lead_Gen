@@ -1,8 +1,8 @@
 {
-  "name": "Deck Builder Monroe",
+  "name": "Deck Builders Monroe",
   "domain": "deckbuildermonroe.com",
   "phone": "318-726-2853",
-  "city": "Monroe",
+  "city": "West Monroe",
   "state": "Louisiana",
   "schemaType": "HomeAndConstructionBusiness",
   "accent": "#2d6a4f",
@@ -33,13 +33,18 @@
       "description": "Roofed porches, pergolas, and screened enclosures so the space is usable in August and through mosquito season."
     }
   ],
-  "serviceAreas": ["Monroe", "West Monroe", "Sterlington", "Ouachita Parish"],
+  "serviceAreas": [
+    "Monroe",
+    "West Monroe",
+    "Sterlington",
+    "Ouachita Parish"
+  ],
   "areaHeadline": "Serving Monroe and Ouachita Parish.",
   "ctaHeadline": "Ready to plan your deck?",
   "ctaCopy": "Tell us the size of the space, how you want to use it, and whether you are building new or repairing what is there. We will walk you through material options and what each one costs to keep up.",
   "primaryCta": "Call for a free estimate",
   "navCall": "Free estimate",
   "footerLine": "Custom decks, covered porches, and deck repair in Monroe, Louisiana.",
-  "seoTitle": "Deck Builder Monroe LA | Custom Decks & Covered Porches",
+  "seoTitle": "Deck Builders Monroe LA | Custom Decks & Covered Porches",
   "seoDescription": "Custom wood and composite decks, covered porches, and deck repair for homes across Monroe, West Monroe, and Ouachita Parish, Louisiana. Free estimates."
 }
