@@ -24,6 +24,20 @@
 //      property. `--check` prints the email and lists what it can currently
 //      see, so this is easy to verify.
 //   3. Point GSC_KEY_FILE at the service-account JSON, kept outside the repo.
+//
+// WHICH ACCOUNT WORKS, as of 2026-09-21:
+//   bedsync-sheets@bed-sync-delivery.iam.gserviceaccount.com
+// The Search Console API is enabled in its project (bed-sync-delivery) and
+// sites.list returns 200. The other key on this machine,
+// card-sync-sheets@card-sync-491400, authenticates fine but its project does
+// NOT have the API enabled -- signing in as admin@shed-sync.com lands on
+// bed-sync-delivery, so that is where the switch got flipped. Worth knowing
+// before spending another ten minutes waiting for propagation that was never
+// going to arrive.
+//
+// The key currently lives in ~/Downloads, which is not a good home for a
+// private key: move it somewhere stable and point GSC_KEY_FILE there, or drop
+// it at the default path (~/.lead-gen-gsc-key.json) and drop the env var.
 
 import fs from "node:fs/promises";
 import path from "node:path";
