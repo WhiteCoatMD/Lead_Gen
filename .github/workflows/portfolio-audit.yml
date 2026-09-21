@@ -62,6 +62,16 @@ jobs:
 
       # Keep the full report even when the step above fails, so the summary is
       # readable without digging through raw logs.
+      # Optional: only runs if a Places key is configured as a repo secret.
+      # Without it the step is skipped rather than failing the run, because a
+      # missing optional credential is not a portfolio problem.
+      - name: Google Business Profile watch
+        if: always() && env.GOOGLE_MAPS_API_KEY != ''
+        continue-on-error: true
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        run: npm run gbp | tee -a audit.txt
+
       - name: Summary
         if: always()
         run: |

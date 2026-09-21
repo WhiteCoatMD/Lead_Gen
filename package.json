@@ -12,6 +12,7 @@
     "gsc:check": "node scripts/gsc-sync.mjs --check",
     "lost-pages": "node scripts/find-lost-pages.mjs",
     "gsc:tokens": "node scripts/gsc-add-properties.mjs --tokens",
-    "gsc:verify": "node scripts/gsc-add-properties.mjs --verify"
+    "gsc:verify": "node scripts/gsc-add-properties.mjs --verify",
+    "gbp": "node scripts/gbp-watch.mjs"
   }
 }
