@@ -224,7 +224,7 @@ jobs:
             } else {
               console.log('would write null MX: MX 0 "."');
             }
-          } else {
+          } else if (mode !== "null-mx") {
             console.log("mode: delete -- no null MX written. Senders will fall back to the A record.");
           }
 
