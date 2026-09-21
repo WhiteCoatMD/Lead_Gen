@@ -66,6 +66,15 @@ jobs:
               "cname": "480f1708d7436567.vercel-dns-016.com."
             },
             {
+              "slug": "crack-rx",
+              "zone": "getcrackrx.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "cname.vercel-dns-0.com."
+            },
+            {
               "slug": "deck-builder-monroe",
               "zone": "deckbuildermonroe.com",
               "a": [
@@ -84,6 +93,15 @@ jobs:
               "cname": "8afadbcb4d7b5ee5.vercel-dns-016.com."
             },
             {
+              "slug": "hometown-soap-n-sudz",
+              "zone": "hometownsoapnsudz.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "cname.vercel-dns-0.com."
+            },
+            {
               "slug": "lake-charles-fences",
               "zone": "fenceslakecharles.com",
               "a": [
@@ -93,6 +111,24 @@ jobs:
               "cname": "9f03a57670e5ef94.vercel-dns-016.com."
             },
             {
+              "slug": "mbs-pressure-washing-new-orleans",
+              "zone": "pressurewashing-neworleans.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "cname.vercel-dns-0.com."
+            },
+            {
+              "slug": "rev-laundry-soap",
+              "zone": "revlaundrysoap.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "cname.vercel-dns-0.com."
+            },
+            {
               "slug": "scaffolding-los-angeles",
               "zone": "scaffoldingrentalusa.com",
               "a": [
@@ -100,6 +136,15 @@ jobs:
                 "216.150.16.1"
               ],
               "cname": "d9a13b7c90486313.vercel-dns-016.com."
+            },
+            {
+              "slug": "seacoast-hurricane-shutters",
+              "zone": "seacoasthurricaneshutters.com",
+              "a": [
+                "216.150.1.1",
+                "216.150.16.1"
+              ],
+              "cname": "cname.vercel-dns-0.com."
             },
             {
               "slug": "stucco-repair-chicago",

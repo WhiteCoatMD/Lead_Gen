@@ -23,10 +23,12 @@ jobs:
           if (!token) throw new Error("Missing GODADDY_PAT repository secret");
 
           const zones = [
-            "twincityfences.com", "fenceslakecharles.com", "stuccorepairchicago.com",
-            "eifschicago.com", "flooring-monroe.com", "towing-arlington.com",
-            "dallastowtrucks.com", "scaffoldingrentalusa.com", "towingcompanyjonesboro.com",
-            "cactusremovalservice.com", "twincity-handyman.com", "birdsnestflowershop.com"
+            "birdsnestflowershop.com", "cactusremovalservice.com", "dallastowtrucks.com",
+            "deckbuildermonroe.com", "eifschicago.com", "fenceslakecharles.com",
+            "flooring-monroe.com", "getcrackrx.com", "hometownsoapnsudz.com",
+            "pressurewashing-neworleans.com", "revlaundrysoap.com", "scaffoldingrentalusa.com",
+            "seacoasthurricaneshutters.com", "stuccorepairchicago.com", "towing-arlington.com",
+            "towingcompanyjonesboro.com", "twincity-handyman.com", "twincityfences.com"
           ];
 
           const MAIL_TYPES = ["MX", "SRV"];
