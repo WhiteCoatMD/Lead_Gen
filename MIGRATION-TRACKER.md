@@ -12,15 +12,15 @@ another project. 17 sites remain.
 | # | Site | Snapps preview | Domain | Domain state | Build | Deploy | DNS | Missing / blocker |
 |---|------|---------------|--------|--------------|-------|--------|-----|-------------------|
 | 1 | Hippie Chicks Snowballs | 89aa4812 | hippie-chicks-snowballs.invalid | **placeholder** (.invalid, reserved TLD) | **PASS** | pending | frozen | **No domain in GoDaddy.** Built on a placeholder at the owner's instruction. |
-| 2 | Hometown Soap N Sudz | 439dc70e | hometownsoapnsudz.com | ACTIVE, on Snapps | **PASS** | pending | frozen | — |
-| 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No street address published on the source site. |
-| 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No pricing published on the source site. |
-| 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | **PASS** | pending | frozen | No prices published. Label ingredients not legible enough to transcribe. |
+| 2 | Hometown Soap N Sudz | 439dc70e | hometownsoapnsudz.com | ACTIVE, on Snapps | **PASS** | live | **LIVE 2026-09-21** | — |
+| 3 | SeaCoast Hurricane Shutters | 2308be60 | seacoasthurricaneshutters.com | ACTIVE, on Snapps, **has MX** | **PASS** | live | **LIVE 2026-09-21** | No street address published on the source site. |
+| 4 | Crack Rx | d3ae5dd3 | getcrackrx.com | ACTIVE, on Snapps, **has MX** | **PASS** | live | **LIVE 2026-09-21** | No pricing published on the source site. |
+| 5 | Rev Laundry Soap | ff592723 | revlaundrysoap.com | ACTIVE, on Snapps, **has MX** | **PASS** | live | **LIVE 2026-09-21** | No prices published. Label ingredients not legible enough to transcribe. |
 | 6 | The Velvet Chandelier | 8d43dcbd | — | **none found** | **SHELVED 2026-09-21** | — | frozen | Owner shelved it. No phone/email/address on source; store closed for maintenance. |
 | 7 | CustomLettersfromSantaClaus.com | 7c49fbad | customlettersfromsantaclaus.com | ACTIVE, on Snapps, **has MX** | not started | — | frozen | — |
 | 8 | Make Your Own Crap.com | d7417d8e | makeyourowncrap.com | **CANCELLED** exp 2025-09-24 | not started | — | frozen | Domain lapsed. |
 | 9 | Miro's Tree Service Monroe | 58dd2d08 | treeservicemonroe.com | ACTIVE, on Snapps, **has MX** | **DROPPED 2026-09-21** | — | frozen | Owner dropped it. Source is an unedited template with no business content. |
-| 10 | MB's Pressure Washing New Orleans | d4aaf3f8 | pressurewashing-neworleans.com | ACTIVE, on Snapps | not started | — | frozen | `nolapressurewash.com` also exists but points elsewhere (199.34.228.76) — not this site. |
+| 10 | MB's Pressure Washing New Orleans | d4aaf3f8 | pressurewashing-neworleans.com | ACTIVE, on Snapps | **PASS** | live | **LIVE 2026-09-21** | `nolapressurewash.com` also exists but points elsewhere (199.34.228.76) — not this site. |
 | 11 | Cutting Edge Tree Service | ca8eaba7 | — | **none found** | not started | — | frozen | **No domain in GoDaddy.** City unknown. |
 | 12 | Roofing Company Warren | 4dcadec0 | roofingcompanywarren.com | **CANCELLED** exp 2025-09-29 | not started | — | frozen | Domain lapsed. |
 | 13 | Roofing Company of Houma, LLC | b19a02c5 | roofing-houma.com | **CANCELLED** exp 2023-09-27 | not started | — | frozen | Domain lapsed (3 years). |
@@ -164,6 +164,35 @@ does not count.
 The launch checklist requires a real phone (four matching `tel:` links, a
 header call CTA and a sticky mobile call button) and rejects any number whose
 last seven digits are identical, so none of the six can be built without one.
+
+## DNS cutover 2026-09-21 (second wave)
+
+Five domains were still pointed at Duda/`multiscreensite` (100.24.208.97,
+35.172.94.1), the old Snapps host, which had begun returning nginx 404. They
+are now on Vercel and serving the rebuilt sites:
+
+`getcrackrx.com` · `hometownsoapnsudz.com` · `pressurewashing-neworleans.com`
+· `revlaundrysoap.com` · `seacoasthurricaneshutters.com`
+
+Each verified after cutover: apex 200 serving byte-identical output to the
+local build, `www` 308 to apex, and MX/SPF/DMARC unchanged. `getcrackrx.com`
+and `revlaundrysoap.com` carry live Outlook mail (and Mailchimp DKIM on Rev),
+so the allowlist mattered here.
+
+**Still frozen, and why:**
+
+| Domain | Site | Held back because |
+|---|---|---|
+| `customlettersfromsantaclaus.com` | Custom Letters from Santa Claus | Placeholder phone `318-000-0000`; fails the launch checklist on purpose. |
+| `stuccorepairbatonrouge.com` | Millard's Stucco Repair | Fails on card count, plus the unresolved 225-vs-504 phone conflict. |
+
+**Domains that no longer resolve at all** (lapsed, not re-registered):
+`makeyourowncrap.com`, `roofing-houma.com`, `towing-arlington.com`,
+`towingcompanyjonesboro.com`. The last two are still listed in the DNS
+workflow and are skipped cleanly (409/404 on zone read).
+
+**`roofingcompanywarren.com` is not ours.** It resolves to Cloudflare and
+serves a different roofing company. That site has no domain.
 
 ## Status after the 2026-09-21 build pass
 
