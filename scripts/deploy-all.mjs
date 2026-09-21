@@ -30,6 +30,20 @@ for (const slug of slugs) {
       await fs.mkdir(path.join(dir, ".vercel"), { recursive: true });
       await fs.writeFile(path.join(dir, ".vercel", "project.json"), JSON.stringify(links[slug]), "utf8");
     }
+
+    // Each project has its own build settings pointing at the repo root --
+    // `npm run build` into dist/<slug> -- so that a push to main redeploys
+    // the site. Those settings are wrong for THIS path, which uploads the
+    // already-built directory: the build would run again with no package.json
+    // to run it, then look for dist/<slug> inside dist/<slug>. A vercel.json
+    // in the uploaded directory overrides both, so one project accepts
+    // deploys from git and from here. Written at deploy time because
+    // `npm run build` wipes dist/.
+    await fs.writeFile(
+      path.join(dir, "vercel.json"),
+      JSON.stringify({ buildCommand: null, outputDirectory: "." }, null, 2) + "\n",
+      "utf8"
+    );
     const run = spawnSync("vercel", ["deploy", "--prod", "--yes", "--scope", SCOPE], { cwd: dir, encoding: "utf8", shell: true });
     if (run.status !== 0) {
       console.log(`FAIL ${slug}: ${(run.stderr || "").trim().split("\n").slice(-2).join(" | ")}`);
