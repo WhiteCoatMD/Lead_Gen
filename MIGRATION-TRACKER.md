@@ -69,6 +69,18 @@ template called *ohmydog*; all real content is pictures of a printed menu.
 - The **`.invalid`** TLD is reserved by RFC 2606 and can never be registered,
   so a placeholder canonical cannot ever point at a stranger's website. Swap
   it for the real domain in `site.json` when one exists.
+- **SeaCoast Hurricane Shutters — imagery restored 2026-09-21** at the owner's
+  instruction (the site is being turned into a lead-gen property). All eight
+  images are now vendored locally. The hero is their real photo of bronze
+  roll-down shutters; the gallery carries the second real install photo, the
+  colour chart, and three stock shots. **The colour chart is worth noting: it
+  names the four colours — almond, white, beige, bronze — which the site's own
+  copy never spells out**, so the services section can now state them.
+  Three of the four Pexels stock images show decorative European wooden
+  shutters and one is a street scene in Zurich; the Zurich photo is vendored
+  but deliberately not displayed, since it has no shutters as its subject.
+  Alt text on the stock images describes what they show and never claims they
+  are SeaCoast installations.
 - **SeaCoast Hurricane Shutters:** the source site contradicts itself on
   coverage. Its header says "Serving Daytona and Volusia Counties" and its
   phone is a 386 (Daytona) number, but a generated section claims Miami,

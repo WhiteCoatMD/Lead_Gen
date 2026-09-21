@@ -9,7 +9,17 @@
   "accent": "#1c6fb2",
   "accentDark": "#14507f",
   "logo": "seacoast-hurricane-shutters-logo.png",
-  "assets": ["seacoast-hurricane-shutters-logo.png"],
+  "hero": "seacoast-roll-down-shutters-patio.png",
+  "assets": [
+    "seacoast-hurricane-shutters-logo.png",
+    "seacoast-roll-down-shutters-patio.png",
+    "seacoast-roll-down-shutters-building.png",
+    "seacoast-shutter-colour-options.png",
+    "shutters-apartment-building.jpg",
+    "shutters-wooden-doorway.jpg",
+    "shutters-weathered-wooden.jpg",
+    "shutters-old-town-street.jpg"
+  ],
   "kicker": "Serving Daytona and Volusia County",
   "headline": "Motorized hurricane shutters for Florida storms.",
   "intro": "Premium motorized roll-down shutters for homes and businesses, installed across Daytona and Volusia County.",
@@ -17,6 +27,8 @@
   "sectionHeadline": "Protect what matters most.",
   "about": "SeaCoast Hurricane Shutters specialises in premium motorized roll-down shutters designed to protect homes and businesses from Florida's toughest storms. The team brings over twenty years of experience, and every installation is backed by outstanding craftsmanship and personalised customer service.",
   "servicesHeadline": "What we install.",
+  "galleryKicker": "Gallery",
+  "galleryHeadline": "Roll-down shutters, closed and open.",
   "areaHeadline": "Serving Daytona and Volusia County.",
   "ctaHeadline": "Get a quote for your property.",
   "ctaCopy": "Call or email to talk through your windows, openings and colour choice, and we will put a personalised quote together.",
@@ -24,7 +36,7 @@
   "navCall": "Get a quote",
   "footerLine": "Motorized hurricane shutters for Daytona and Volusia County.",
   "seoTitle": "SeaCoast Hurricane Shutters | Daytona Beach, FL",
-  "seoDescription": "Motorized roll-down hurricane shutters for homes and businesses in Daytona and Volusia County, Florida. Four colour options and a five-year parts warranty.",
+  "seoDescription": "Motorized roll-down hurricane shutters for homes and businesses in Daytona and Volusia County, Florida. Almond, white, beige or bronze, with a five-year warranty.",
   "serviceAreas": ["Daytona Beach", "Volusia County"],
   "services": [
     {
@@ -36,12 +48,41 @@
       "description": "Motorization means the shutters close at the touch of a button, without the effort of manual installation."
     },
     {
-      "title": "Custom colour options",
-      "description": "Four colours to choose from, so the shutters match the look of your home while still doing their job."
+      "title": "Four colour options",
+      "description": "Almond, white, beige and bronze, so the shutters match the look of your home while still doing their job."
     },
     {
       "title": "Five-year parts warranty",
       "description": "Every shutter we sell carries a five-year parts warranty."
+    }
+  ],
+  "gallery": [
+    {
+      "image": "seacoast-roll-down-shutters-patio.png",
+      "alt": "Bronze motorized roll-down shutters partly lowered over patio windows and a doorway",
+      "caption": "Roll-down shutters lowered over a covered patio."
+    },
+    {
+      "image": "seacoast-roll-down-shutters-building.png",
+      "alt": "Roll-down shutters fitted across balcony openings on a multi-storey building",
+      "caption": "Shutters fitted to balcony openings on a multi-storey building."
+    },
+    {
+      "image": "seacoast-shutter-colour-options.png",
+      "alt": "Colour chart showing the four shutter colours: almond, white, beige and bronze",
+      "caption": "The four available colours: almond, white, beige and bronze."
+    },
+    {
+      "image": "shutters-apartment-building.jpg",
+      "alt": "Roller shutters fitted to the windows of an apartment building"
+    },
+    {
+      "image": "shutters-wooden-doorway.jpg",
+      "alt": "Hinged wooden shutters flanking a doorway and window"
+    },
+    {
+      "image": "shutters-weathered-wooden.jpg",
+      "alt": "Weathered wooden shutters on a brick building"
     }
   ]
 }

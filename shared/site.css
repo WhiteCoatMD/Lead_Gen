@@ -20,3 +20,11 @@
 }
 @media(max-width:680px){.brand-wordmark{width:auto;max-width:180px}.brand-text{font-size:1rem}}
 .brand,.nav-call,.mobile-call{text-decoration:none}
+
+/* --- optional photo gallery (sites that set `gallery` in site.json) --- */
+.gallery{padding-block:92px 108px;border-top:1px solid #d9d7d0}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.gallery figure{margin:0}
+.gallery img{width:100%;height:260px;object-fit:cover;display:block;background:#f5f2eb}
+.gallery figcaption{margin-top:10px;color:#62666b;font-size:.92rem;line-height:1.5}
+@media(max-width:680px){.gallery{padding-block:70px}.gallery img{height:220px}}
