@@ -12,9 +12,7 @@
   "hero": "decorative-fence.jpg",
   "assets": [
     "decorative-fence.jpg",
-    "twin-city-logo.png",
-    "wood-fence.jpg",
-    "wrought-iron-fence.jpg"
+    "twin-city-logo.png"
   ],
   "kicker": "Local fence builders",
   "headline": "Fences built for North Louisiana.",
@@ -186,7 +184,8 @@
           "body": "We can build a fence for your location from either pine or cedar, and in varying heights. Pine is the budget-conscious choice for a long run; cedar costs more and holds up better to weather and insects over time."
         }
       ],
-      "ctaHeadline": "Get a price on a wood fence."
+      "ctaHeadline": "Get a price on a wood fence.",
+      "canonicalTo": "wooden-fences"
     },
     {
       "slug": "chain-link-fence.html",
@@ -204,7 +203,8 @@
           "body": "Chain-link covers more ground per dollar than any other fence we build, which is why it wins on acreage and commercial yards. The same system goes up tall for court and sports enclosures."
         }
       ],
-      "ctaHeadline": "Get a price on chain-link."
+      "ctaHeadline": "Get a price on chain-link.",
+      "canonicalTo": "chain-link-fence"
     },
     {
       "slug": "contact-us.html",
@@ -221,7 +221,8 @@
           "body": "The three things that decide a price are the type of fence, the length of the run, and what the ground is doing. Rough numbers are fine on a first call."
         }
       ],
-      "ctaHeadline": "Call for a free estimate."
+      "ctaHeadline": "Call for a free estimate.",
+      "canonicalTo": "contact"
     }
   ]
 }
