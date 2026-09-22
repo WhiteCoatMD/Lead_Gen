@@ -93,7 +93,7 @@
         {
           "kicker": "When to call",
           "heading": "Broken down, flat, or damaged.",
-          "body": "Our 24 hour tow service can get you out of a jam when you need it. If your vehicle breaks down or becomes disabled in an accident, call the 24 hour number and a driver is sent to your location."
+          "body": "Our 24 hour tow service can get you out of a jam when you need it. If your vehicle breaks down or becomes disabled in an accident, call the 24 hour number and a licensed tow truck driver is sent to your location."
         },
         {
           "kicker": "What we run",
@@ -179,7 +179,7 @@
         {
           "kicker": "Jump or replace",
           "heading": "Two ways out of a dead battery.",
-          "body": "As one of our roadside assistance services, we can replace or jumpstart your car's dead battery. A driver is sent out and will either provide a jumpstart or fit a new battery, changing it out on the spot."
+          "body": "As one of our roadside assistance services, we can replace or jumpstart your car's dead battery. A licensed driver is sent out and will either provide a jumpstart or fit a new battery, changing it out on the spot."
         },
         {
           "kicker": "Why it matters who does it",
@@ -323,7 +323,7 @@
         {
           "kicker": "What we do",
           "heading": "Emergency work, around the clock.",
-          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and drivers are sent from wherever is nearest."
+          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
         },
         {
           "kicker": "Why the phone is answered at 3am",
@@ -333,7 +333,7 @@
         {
           "kicker": "How this works",
           "heading": "Dispatch, then a driver.",
-          "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
+          "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Drivers are licensed and the operation is insured. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
         }
       ],
       "ctaHeadline": "Need a truck?",
@@ -438,7 +438,7 @@
         {
           "kicker": "What we do",
           "heading": "Emergency work, around the clock.",
-          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and drivers are sent from wherever is nearest."
+          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
         },
         {
           "kicker": "Why the phone is answered at 3am",
@@ -448,7 +448,7 @@
         {
           "kicker": "How this works",
           "heading": "Dispatch, then a driver.",
-          "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
+          "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Drivers are licensed and the operation is insured. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
         }
       ],
       "ctaHeadline": "Need a truck?"
@@ -485,7 +485,17 @@
         }
       ],
       "ctaHeadline": "Need a wrecker?",
-      "diagram": "tow-class"
+      "diagram": "tow-class",
+      "faqs": [
+        {
+          "q": "Is heavy hauling your main business?",
+          "a": "No — most of the work is cars and light pickups, and that is what the fleet is built around. Heavy and wrecker work is genuinely offered rather than advertised for its own sake, which is worth saying plainly: if you are moving a tractor unit, describe the job properly on the call so dispatch can tell you straight away whether it is one we should take."
+        },
+        {
+          "q": "What should I have ready when I call about a heavy vehicle?",
+          "a": "What the vehicle is, roughly what it weighs, whether it still rolls, and what the access is like — surface underfoot, overhead clearance, and how much room there is to bring a truck alongside. A photograph of how it is sitting answers more than a description usually can. Those details decide which truck comes out, and getting them right is the difference between one truck arriving prepared and a second having to follow."
+        }
+      ]
     }
   ],
   "leadForm": {
@@ -502,6 +512,10 @@
     {
       "q": "What decides the cost of a tow?",
       "a": "Mainly the distance, the type of vehicle, and how hard it is to reach. A car on a driveway and the same car nosed into a ditch are different jobs, because one is a hookup and the other is a recovery. Time of day can matter too. Ask for the figure when you call, with the vehicle and the location in front of you — that is when it can actually be answered."
+    },
+    {
+      "q": "Are you licensed and insured?",
+      "a": "Yes — drivers are licensed and the operation is insured. It is a fair thing to ask before handing over a vehicle, and worth asking of anyone you call, because a tow means someone else takes custody of something valuable of yours for the length of the journey."
     },
     {
       "q": "Are you really open at 3am?",
