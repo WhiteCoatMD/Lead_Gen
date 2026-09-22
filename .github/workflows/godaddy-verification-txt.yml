@@ -127,7 +127,7 @@ jobs:
             try {
               // POST adds one record. A PUT here would replace the whole apex
               // TXT set and take SPF with it.
-              await api(zone, "", { method: "POST", body: JSON.stringify([{ type: "TXT", name: "@", data: String(value).trim(), ttl: 600 }]) });
+              await api(zone, "", { method: "POST", body: JSON.stringify({ type: "TXT", name: "@", data: String(value).trim(), ttl: 600 }) });
             } catch (error) {
               console.log(`  FAILED: ${error.message.slice(0, 140)}`);
               failed++;

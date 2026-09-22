@@ -212,7 +212,7 @@ jobs:
             // MX at all, which is the fallback-to-A case we are avoiding.
             if (!dryRun) {
               try {
-                await request("", { method: "POST", body: JSON.stringify([{ type: "MX", name: "@", data: ".", ttl: 3600, priority: 0 }]) });
+                await request("", { method: "POST", body: JSON.stringify({ type: "MX", name: "@", data: ".", ttl: 3600, priority: 0 }) });
                 console.log('wrote null MX: MX 0 "." -- the domain now explicitly accepts no mail');
               } catch (error) {
                 console.log(`FAILED to write null MX: ${error.message}`);
