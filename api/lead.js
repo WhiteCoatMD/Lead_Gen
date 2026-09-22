@@ -34,6 +34,15 @@ const RECIPIENTS = {
     business: "24 Hour Towing Dallas",
     domain: "dallastowtrucks.com",
   },
+  "martins-trash-removal-demolition": {
+    // INTERIM DESTINATION. Leads go to Mitch until the contractor's own
+    // address is supplied, because a lead landing in the portfolio owner's
+    // inbox is recoverable and a lead landing nowhere is not. Swap the `to`
+    // line for the contractor address when it is known.
+    to: "mitch@whitecoat-md.com",
+    business: "Martins Trash Removal and Demolition",
+    domain: "martins-trash-removal-demolition.invalid",
+  },
 };
 
 const FIELDS = ["name", "phone", "email", "message", "service", "city"];

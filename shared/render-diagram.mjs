@@ -117,6 +117,94 @@ export function towClassDiagram(site) {
   return figure("Weight decides which truck is sent. Knowing roughly where a vehicle falls saves a wasted trip.", "", svg);
 }
 
+/**
+ * Single-wide against double-wide. People frequently do not know which they
+ * have, and it is the first thing that changes the job - a double-wide is two
+ * units joined on site, so it has to come apart again before anything moves.
+ */
+export function mobileHomeSizeDiagram(site) {
+  const c = palette(site);
+  const unit = (x, y, w, h, seam) => `
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${c.fill}" stroke="${c.line}"/>
+      ${seam ? `<line x1="${x + w / 2}" y1="${y}" x2="${x + w / 2}" y2="${y + h}" stroke="${c.accent}" stroke-width="2" stroke-dasharray="5 3"/>` : ""}
+      ${Array.from({ length: Math.round(w / 22) }, (_, i) => `<line x1="${x + 11 + i * 22}" y1="${y + 5}" x2="${x + 11 + i * 22}" y2="${y + h - 5}" stroke="${c.line}" stroke-width=".6"/>`).join("")}`;
+
+  const svg = `<svg viewBox="0 0 370 200" role="img" aria-label="A single-wide is one unit; a double-wide is two halves joined on site along a seam, and has to be separated again before it can be moved" xmlns="http://www.w3.org/2000/svg">
+      <text x="16" y="18" font-size="11" font-weight="700" fill="${c.mute}">SINGLE-WIDE</text>
+      ${unit(16, 28, 76, 44, false)}
+      <text x="16" y="88" font-size="10" fill="${c.mute}">One unit, one trip</text>
+
+      <text x="16" y="124" font-size="11" font-weight="700" fill="${c.mute}">DOUBLE-WIDE</text>
+      ${unit(16, 134, 152, 44, true)}
+      <text x="16" y="194" font-size="10" fill="${c.mute}">Two halves joined on site — separated again before it moves</text>
+
+      <line x1="184" y1="134" x2="184" y2="178" stroke="${c.line}"/>
+      <text x="196" y="150" font-size="11" font-weight="700" fill="${c.accent}">Roughly</text>
+      <text x="196" y="166" font-size="11" font-weight="700" fill="${c.accent}">double the debris</text>
+    </svg>`;
+  return figure("A double-wide is two units joined on site. That seam is the reason it is not simply twice the work.", "", svg);
+}
+
+/**
+ * What is left on the ground afterwards. This is the decision people have not
+ * made when they call, and it changes the machine, the passes and the loads
+ * more than acreage does.
+ */
+export function clearingFinishDiagram(site) {
+  const c = palette(site);
+  const col = (x, label, note, draw) => `
+      <text x="${x + 50}" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="${c.accent}">${label}</text>
+      <rect x="${x}" y="30" width="100" height="62" fill="none" stroke="${c.line}"/>
+      ${draw}
+      <line x1="${x}" y1="92" x2="${x + 100}" y2="92" stroke="${c.ink}" stroke-width="1.5"/>
+      <text x="${x + 50}" y="110" text-anchor="middle" font-size="10" fill="${c.mute}">${note}</text>`;
+
+  const chips = Array.from({ length: 22 }, (_, i) =>
+    `<rect x="${18 + (i % 11) * 8}" y="${80 - Math.floor(i / 11) * 6}" width="6" height="3" fill="${c.accent}" opacity=".45"/>`
+  ).join("");
+  const piles = `<path d="M150 92 l18 -26 l18 26 z" fill="${c.fill}" stroke="${c.line}"/><path d="M188 92 l14 -19 l14 19 z" fill="${c.fill}" stroke="${c.line}"/>`;
+  const clean = `<text x="304" y="66" text-anchor="middle" font-size="10" fill="${c.mute}">(nothing)</text>`;
+
+  const svg = `<svg viewBox="0 0 370 120" role="img" aria-label="Three finishes: mulched leaves the material as ground cover, windrowed leaves it in piles, hauled off leaves clean ground" xmlns="http://www.w3.org/2000/svg">
+      ${col(12, "Mulched", "Stays as cover", chips)}
+      ${col(138, "Windrowed", "Piled on site", piles)}
+      ${col(264, "Hauled off", "Clean ground", clean)}
+    </svg>`;
+  return figure("What you want left behind changes the job as much as the acreage does.", "", svg);
+}
+
+/**
+ * Access. Named on almost every page because it is the thing most likely to
+ * change the plan, and the thing least likely to be described accurately.
+ */
+export function siteAccessDiagram(site) {
+  const c = palette(site);
+  const svg = `<svg viewBox="0 0 370 170" role="img" aria-label="The three access measurements that matter: the width of the way in, overhead clearance, and whether there is room to turn" xmlns="http://www.w3.org/2000/svg">
+      <line x1="16" y1="140" x2="354" y2="140" stroke="${c.ink}" stroke-width="1.5"/>
+
+      <rect x="60" y="96" width="14" height="44" fill="${c.fill}" stroke="${c.line}"/>
+      <rect x="150" y="96" width="14" height="44" fill="${c.fill}" stroke="${c.line}"/>
+      <line x1="74" y1="132" x2="150" y2="132" stroke="${c.accent}" stroke-width="1.5"/>
+      <path d="M78 128 l-5 4 l5 4" fill="none" stroke="${c.accent}" stroke-width="1.5"/>
+      <path d="M146 128 l5 4 l-5 4" fill="none" stroke="${c.accent}" stroke-width="1.5"/>
+      <text x="112" y="122" text-anchor="middle" font-size="10" font-weight="700" fill="${c.accent}">width in</text>
+
+      <line x1="196" y1="40" x2="340" y2="40" stroke="${c.line}" stroke-dasharray="4 3"/>
+      <text x="268" y="32" text-anchor="middle" font-size="10" fill="${c.mute}">lines / limbs</text>
+      <line x1="268" y1="44" x2="268" y2="140" stroke="${c.accent}" stroke-width="1.5"/>
+      <path d="M264 48 l4 -5 l4 5" fill="none" stroke="${c.accent}" stroke-width="1.5"/>
+      <path d="M264 134 l4 5 l4 -5" fill="none" stroke="${c.accent}" stroke-width="1.5"/>
+      <text x="278" y="96" font-size="10" font-weight="700" fill="${c.accent}">clearance</text>
+
+      <path d="M40 76 a34 34 0 1 1 .6 0" fill="none" stroke="${c.line}" stroke-dasharray="4 3"/>
+      <text x="40" y="80" text-anchor="middle" font-size="10" fill="${c.mute}">turning</text>
+      <text x="40" y="92" text-anchor="middle" font-size="10" fill="${c.mute}">room</text>
+
+      <text x="16" y="162" font-size="10" fill="${c.mute}">Plus what the ground does after rain — the one that cannot be measured from the road.</text>
+    </svg>`;
+  return figure("Three measurements decide whether equipment reaches the work. A photograph of the approach answers all of them.", "", svg);
+}
+
 export const DIAGRAM_CSS = `
 /* Inline SVG diagrams. Not photographs and not pretending to be — they explain
    something rather than illustrate a claim. */
@@ -129,4 +217,7 @@ export const DIAGRAMS = {
   "fence-height": fenceHeightDiagram,
   "gate-post": gatePostDiagram,
   "tow-class": towClassDiagram,
+  "mobile-home-size": mobileHomeSizeDiagram,
+  "clearing-finish": clearingFinishDiagram,
+  "site-access": siteAccessDiagram,
 };

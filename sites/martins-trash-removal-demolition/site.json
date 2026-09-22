@@ -164,7 +164,8 @@
           "a": "Older manufactured homes can contain materials that need handling under specific rules, and that is not something to guess at from a website or to deal with yourself. Tell us the age of the unit when you call and it gets assessed properly as part of planning the job. We are not going to give you a page of advice on it."
         }
       ],
-      "ctaHeadline": "Got a mobile home to clear?"
+      "ctaHeadline": "Got a mobile home to clear?",
+      "diagram": "mobile-home-size"
     },
     {
       "slug": "abandoned-mobile-home-removal",
@@ -240,7 +241,8 @@
           "a": "Yes. Fence-line and right-of-way clearing is narrow, long work rather than area work, and it is usually about regaining access or being able to maintain a boundary. It suits mulching well because there is rarely anywhere convenient to stack material. Tell us the length rather than the acreage for these."
         }
       ],
-      "ctaHeadline": "Got land that needs clearing?"
+      "ctaHeadline": "Got land that needs clearing?",
+      "diagram": "clearing-finish"
     },
     {
       "slug": "forestry-mulching",
@@ -273,7 +275,17 @@
           "body": "A mulched tract will start coming back, and how fast depends on what was there and what the season does. The mulch layer slows it considerably, which is why mulching works well as maintenance on land you intend to keep open. What it does not do is permanently clear a property in one visit — anything with an established root system is still there under the chip. If the intention is that the land stays open, plan on it being managed rather than done once."
         }
       ],
-      "ctaHeadline": "Want it mulched in place?"
+      "ctaHeadline": "Want it mulched in place?",
+      "faqs": [
+        {
+          "q": "How long before it grows back?",
+          "a": "It depends on what was there and what the season does, but plan on it being managed rather than settled. Mulching cuts what is standing and leaves the root systems in the ground, so anything established is still there under the chip. The mulch layer slows the return considerably, which is why it works well on land you intend to keep open and less well as a one-off on ground you want permanently clear."
+        },
+        {
+          "q": "Can you mulch a building site?",
+          "a": "It is usually the wrong tool for one. A building site wants stumps and root systems out and clean soil to work with, because organic material left under a pad breaks down and the ground settles afterwards. Mulching deliberately leaves that material in place. For a pad, clearing and grubbing is the right approach — say what the ground is for and the method follows from it."
+        }
+      ]
     },
     {
       "slug": "structure-demolition",
@@ -306,7 +318,17 @@
           "body": "The debris leaves the property rather than being piled at the back of it, which is the part people are usually most concerned about and rightly so. Where a slab or foundation is coming out too, the ground gets backfilled and levelled so you are not left with a hole. What the site needs to be ready for afterwards is worth saying, because a footprint that is about to be built on wants a different finish from one that is going back to grass."
         }
       ],
-      "ctaHeadline": "Something that needs to come down?"
+      "ctaHeadline": "Something that needs to come down?",
+      "faqs": [
+        {
+          "q": "Do I need a permit to demolish an outbuilding?",
+          "a": "It depends on the structure and where the property sits, and requirements differ across Rapides and Avoyelles Parish. Check with your parish permit office before work starts. Anything with utilities running to it will also need those isolated first, which is arranged with the utility company rather than by us."
+        },
+        {
+          "q": "What if the building is full of stuff?",
+          "a": "Contents are part of the volume, so it is much better counted in at the start than discovered on the day. Outbuildings accumulate — stored material, equipment, feed, furniture, scrap. Tell us roughly how full it is when you call. If there is anything in there you actually want kept, get it out beforehand, because once demolition starts it is all debris."
+        }
+      ]
     },
     {
       "slug": "concrete-removal",
@@ -367,7 +389,13 @@
           "body": "The approach has to carry heavy vehicles, not just a pickup. That can mean a temporary drive, a culvert at the road, stone on the approach, or somewhere for deliveries to turn. This gets overlooked more than anything else on the list and it is the thing most likely to stop a build in its first week. If a culvert or a driveway crossing is part of what the site needs, it is straightforward to do while the equipment is already there."
         }
       ],
-      "ctaHeadline": "Building? Start with the site."
+      "ctaHeadline": "Building? Start with the site.",
+      "faqs": [
+        {
+          "q": "What is the difference between clearing and grubbing?",
+          "a": "Clearing takes off what is growing above ground. Grubbing takes out the root systems below it. A site that has only been cleared looks ready and is not — the organic material left in the ground breaks down, and the ground above it drops, which shows up later as a cracked slab or a settled driveway. For anything being built on, grubbing is the part that matters."
+        }
+      ]
     },
     {
       "slug": "stump-removal",
@@ -479,7 +507,13 @@
           "body": "On an Alexandria lot the question is rarely whether the work can be done and almost always how the equipment reaches it. Narrow approaches, neighbouring structures close to a boundary, overhead lines, and limited space to load are the common ones. None of them are unusual. They do need to be known in advance, so a description of the approach, or a couple of photographs from the street, is the most useful thing to send with an enquiry."
         }
       ],
-      "ctaHeadline": "Property in Alexandria?"
+      "ctaHeadline": "Property in Alexandria?",
+      "faqs": [
+        {
+          "q": "Do you work inside the city as well as on acreage?",
+          "a": "Yes, and they are fairly different jobs. City lots are usually constrained — narrow approaches, structures close to a boundary, limited room to load — where the question is how equipment reaches the work rather than whether it can be done. Out toward the parish it becomes acreage and ground conditions instead. Both are routine; describing which one you have helps get to an answer faster."
+        }
+      ]
     },
     {
       "slug": "pineville",
@@ -563,7 +597,13 @@
           "body": "Substantial projects justify travelling further than the list above, and there is no useful way to publish a radius that would be accurate in every direction. Rather than guess, describe the property and the work and you will get a straight answer about whether it makes sense. What we would rather not do is quote something at distance that should have gone to somebody closer, because that serves nobody."
         }
       ],
-      "ctaHeadline": "Not sure if you are in range?"
+      "ctaHeadline": "Not sure if you are in range?",
+      "faqs": [
+        {
+          "q": "Will you travel outside the areas listed?",
+          "a": "For a substantial project, usually yes. There is no honest way to publish a single radius, because it depends as much on the size of the job as the distance — mobilising equipment costs the same whether it is a small job or a large one, which is what makes distance and scale a single question rather than two. Describe the property and the work and you will get a straight answer."
+        }
+      ]
     },
     {
       "slug": "our-process",
@@ -624,7 +664,8 @@
           "body": "Single-item pickups, one appliance, a few bags, routine household collection and small cleanouts are not work Martins takes on. That is not a judgement about the job — it is that the equipment and the setup here are built for complete projects and large-volume removal, and a local junk-removal service will do a small job faster and for less. If you are not sure which side of the line yours falls on, ask."
         }
       ],
-      "ctaHeadline": "Tell us about the project."
+      "ctaHeadline": "Tell us about the project.",
+      "diagram": "site-access"
     }
   ]
 }
