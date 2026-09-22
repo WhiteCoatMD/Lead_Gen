@@ -93,7 +93,7 @@
         {
           "kicker": "When to call",
           "heading": "Broken down, flat, or damaged.",
-          "body": "Our 24 hour tow service can get you out of a jam when you need it. If your vehicle breaks down or becomes disabled in an accident, call the 24 hour number and a licensed tow truck driver is sent to your location."
+          "body": "Our 24 hour tow service can get you out of a jam when you need it. If your vehicle breaks down or becomes disabled in an accident, call the 24 hour number and a driver is sent to your location."
         },
         {
           "kicker": "What we run",
@@ -104,9 +104,24 @@
           "kicker": "Where the vehicle is",
           "heading": "The location matters as much as the vehicle.",
           "body": "A car on a driveway and the same car on the shoulder of a highway are different jobs. Traffic, barriers, soft ground and low clearance all change which truck can actually reach it and how long the recovery takes. Saying where you are precisely — the road, the direction of travel, the nearest exit — gets the right truck moving sooner than a postcode does."
+        },
+        {
+          "kicker": "On the call",
+          "heading": "Location is the part people get wrong.",
+          "body": "A street name is enough in a neighbourhood and close to useless on a highway, where the same road runs for miles in both directions. Exit numbers, mile markers, the last sign you passed and which direction you were travelling all narrow it down far faster. If your phone can share a pin, that settles it outright. The second thing worth having ready is where the vehicle is going, because a tow to a shop across town and a tow to your driveway are different jobs to quote and to plan. And if the car will not shift out of park, the keys are missing, or it is boxed in, say so on the call rather than when the driver is standing next to it."
         }
       ],
-      "ctaHeadline": "Need a tow right now?"
+      "ctaHeadline": "Need a tow right now?",
+      "faqs": [
+        {
+          "q": "Flatbed or a regular tow truck?",
+          "a": "A flatbed carries the vehicle with all four wheels off the road, which is what you want for all-wheel drive, low ground clearance, a car with damaged wheels, or anything you would rather not have rolling behind a truck. A conventional tow truck lifts one end and is quicker to hook up. Say what you are driving and dispatch can pick."
+        },
+        {
+          "q": "Can you get to a vehicle in a parking garage?",
+          "a": "Low clearance is the deciding factor and it is worth mentioning on the call, because a flatbed that cannot get under the entrance is a wasted trip for both of us. If you know the height limit posted at the entrance, that single number answers most of the question."
+        }
+      ]
     },
     {
       "slug": "roadside-assistance.html",
@@ -132,9 +147,24 @@
           "kicker": "Staying safe until we arrive",
           "heading": "Get clear of the traffic side.",
           "body": "If you are on a live carriageway, the safest place is usually out of the vehicle and behind a barrier, not sitting in the driver's seat. If the car is somewhere you cannot safely leave it, say so when you call — it changes how urgently the job is treated."
+        },
+        {
+          "kicker": "Fixable or not",
+          "heading": "Some problems move with the vehicle.",
+          "body": "Roadside work is for things that can be put right where the car sits: a flat with a usable spare, a dead battery, an empty tank, keys locked inside. Those are quick and nothing has to be transported. Other problems only look like roadside jobs. A flat with no spare, a shredded sidewall, a car that starts and immediately dies again, or anything involving the transmission means the vehicle has to move regardless. Knowing which one you have before a truck is dispatched saves a trip that cannot fix anything. If you are not sure, describe the symptoms on the call — what happened, what it sounded like, whether anything still works — and dispatch can usually tell which way it will go."
         }
       ],
-      "ctaHeadline": "Stuck on the roadside?"
+      "ctaHeadline": "Stuck on the roadside?",
+      "faqs": [
+        {
+          "q": "Is roadside help cheaper than a tow?",
+          "a": "Usually, because nothing is being transported — but only when the problem is actually fixable at the roadside. A flat tire with a usable spare, a dead battery, or an empty tank are roadside jobs. A failed transmission is not. If it turns out the vehicle has to move, it is better to know that before a truck is dispatched."
+        },
+        {
+          "q": "What if I have no spare tire?",
+          "a": "Then the vehicle needs to move rather than be fixed where it sits, because there is nothing to fit. Plenty of newer cars ship with a sealant kit instead of a spare, which handles a puncture but not a sidewall tear or a blowout. Check before you call — it changes which truck comes out."
+        }
+      ]
     },
     {
       "slug": "battery-jumpstart.html",
@@ -149,7 +179,7 @@
         {
           "kicker": "Jump or replace",
           "heading": "Two ways out of a dead battery.",
-          "body": "As one of our roadside assistance services, we can replace or jumpstart your car's dead battery. A licensed driver is sent out and will either provide a jumpstart or fit a new battery, changing it out on the spot."
+          "body": "As one of our roadside assistance services, we can replace or jumpstart your car's dead battery. A driver is sent out and will either provide a jumpstart or fit a new battery, changing it out on the spot."
         },
         {
           "kicker": "Why it matters who does it",
@@ -160,9 +190,20 @@
           "kicker": "When a jump will not hold",
           "heading": "A battery that dies twice is not a flat battery.",
           "body": "If a car starts on a jump and dies again shortly after, the battery is usually not the fault — it is more often the alternator failing to recharge it. Worth knowing before paying for a replacement battery that will be flat again by the end of the week."
+        },
+        {
+          "kicker": "Battery or alternator",
+          "heading": "What happens after the jump tells you.",
+          "body": "A jump start puts enough charge in to turn the engine over. What happens next is the diagnosis. If the car runs and keeps running, the battery was drained — lights left on, a door not shut, a short trip that never let it recover — and it will likely charge back up as you drive. If it starts and then dies again within minutes, the charging system is not doing its job, and a second jump buys the same few minutes as the first. Either way, get it somewhere it can be tested rather than relying on repeat jumps. A battery that has been run flat several times rarely comes back to full health even once the underlying fault is found."
         }
       ],
-      "ctaHeadline": "Dead battery?"
+      "ctaHeadline": "Dead battery?",
+      "faqs": [
+        {
+          "q": "Will a jump start fix it, or do I need a battery?",
+          "a": "A jump gets the engine running. Whether it stays running is the real test: if the car starts and then dies again shortly after, the battery is not holding charge or the alternator is not charging it, and a second jump only buys the same few minutes. A jump that holds usually means the battery was drained rather than dead."
+        }
+      ]
     },
     {
       "slug": "we-buy-junk-cars.html",
@@ -183,9 +224,20 @@
           "kicker": "What to have ready",
           "heading": "Title and location.",
           "body": "The two things that decide whether a junk car can be collected are whether you hold the title and whether the vehicle can be reached by a truck. A car with no title, or one boxed in behind two others in a garage, is a different job — not impossible, just worth mentioning on the phone rather than on the day."
+        },
+        {
+          "kicker": "Access",
+          "heading": "Whether it rolls matters more than whether it runs.",
+          "body": "Non-running is normal — that is most of what gets collected. The questions that actually change the equipment are different ones. Does it still roll, or are the wheels gone or seized? Is it reachable, or is it behind a gate, up against a fence, or boxed in by other vehicles? Has it sunk into soft ground after sitting through a few seasons? A car that can be winched straight onto a bed is a simple job; one that has to be dragged out of a back yard past two other vehicles is not, and finding that out on arrival helps nobody. Mention ownership paperwork on the call too, since that usually needs to be sorted before anything moves."
         }
       ],
-      "ctaHeadline": "Got a car to get rid of?"
+      "ctaHeadline": "Got a car to get rid of?",
+      "faqs": [
+        {
+          "q": "Does the car need to run?",
+          "a": "No. Non-running, wrecked, flood-damaged and long-dead vehicles are all removable. What matters more than whether it starts is whether it can be reached and whether it rolls — a car with no wheels, or one boxed in behind other vehicles, needs different equipment. Mention that when you call."
+        }
+      ]
     },
     {
       "slug": "towing-arlington.html",
@@ -211,9 +263,20 @@
           "kicker": "What we cover there",
           "heading": "The same services, the same number.",
           "body": "Towing, roadside assistance, jump starts, tyre changes, lockouts, fuel and junk car collection all run in Arlington exactly as they do in Dallas. The only practical difference is the drive, which matters for something urgent and not at all for something planned."
+        },
+        {
+          "kicker": "Straight answer",
+          "heading": "Dallas-based, Arlington covered.",
+          "body": "Arlington sits inside the service area, and the base is in Dallas. That is worth stating plainly, because towing directories are full of suburb pages implying a yard around the corner that does not exist, and the difference shows up in how long a truck takes to reach you. If timing is what decides your call, ask about it directly rather than reading it off a page. What the coverage does mean is a single number for the metro: the same dispatch handles Arlington, Dallas and the suburbs between them, so you are not working through a list trying to find who covers where you happen to have broken down."
         }
       ],
-      "ctaHeadline": "Need a tow in Arlington?"
+      "ctaHeadline": "Need a tow in Arlington?",
+      "faqs": [
+        {
+          "q": "Are you actually based in Arlington?",
+          "a": "No — the base is in Dallas and Arlington is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
+        }
+      ]
     },
     {
       "slug": "services.html",
@@ -238,6 +301,11 @@
           "kicker": "Which one you need",
           "heading": "Most calls are one of three things.",
           "body": "A vehicle that will not start, a vehicle that cannot be driven, or a vehicle that needs to be somewhere else. The first is usually roadside — a jump, a tyre, some fuel. The second is a tow. The third is planned, and planned jobs are worth booking rather than calling in as an emergency, because a truck can be scheduled rather than diverted."
+        },
+        {
+          "kicker": "One number",
+          "heading": "The same line handles all of it.",
+          "body": "Most people calling a towing company do not know in advance which service they need — they know the car will not move. Sorting that out is the job of the call, not the caller. Describe what happened and what the vehicle is doing, and dispatch works out whether it is a jump, a tire, a fuel drop, a straightforward tow or a recovery. That matters because guessing wrong from a list wastes a dispatch. It also means there is one number to keep rather than several, which is the whole point at the roadside at night. Everything listed here runs through the same 24-hour line, whichever of them turns out to be what you actually needed."
         }
       ],
       "ctaHeadline": "Which one do you need?",
@@ -255,12 +323,17 @@
         {
           "kicker": "What we do",
           "heading": "Emergency work, around the clock.",
-          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
+          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and drivers are sent from wherever is nearest."
         },
         {
           "kicker": "Why the phone is answered at 3am",
           "heading": "Most of this work is unplanned.",
           "body": "Almost nobody schedules a breakdown. That shapes how the operation runs: dispatch is staffed around the clock, and the phone is the primary way in rather than a form. It is also why the first question is always where the vehicle is, not what the customer would like to happen — location decides everything that follows."
+        },
+        {
+          "kicker": "How this works",
+          "heading": "Dispatch, then a driver.",
+          "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
         }
       ],
       "ctaHeadline": "Need a truck?",
@@ -284,6 +357,11 @@
           "kicker": "Before you dial",
           "heading": "Four answers get a truck moving.",
           "body": "What the vehicle is, exactly where it is, what it is doing, and where it needs to go. Those four decide which truck is sent and how quickly. If the vehicle is somewhere unsafe — a live carriageway, a blind bend — lead with that, because it changes the priority of the call rather than just its details."
+        },
+        {
+          "kicker": "Before you call",
+          "heading": "Four things get a truck moving.",
+          "body": "Where you are, what you are driving, what is wrong, and where it is going. On a highway, exit numbers and mile markers beat street names, and a shared location pin beats both. For the vehicle, make and model is usually enough, but say if it is all-wheel drive, lowered, or larger than a pickup, because that changes which truck is sent. For the fault, say whether it rolls and whether it shifts out of park. For the destination, have an address if you have one — and if you have not decided yet, say that too rather than working it out while the driver waits."
         }
       ],
       "ctaHeadline": "Call now.",
@@ -312,6 +390,11 @@
           "kicker": "Which one you need",
           "heading": "Most calls are one of three things.",
           "body": "A vehicle that will not start, a vehicle that cannot be driven, or a vehicle that needs to be somewhere else. The first is usually roadside — a jump, a tyre, some fuel. The second is a tow. The third is planned, and planned jobs are worth booking rather than calling in as an emergency, because a truck can be scheduled rather than diverted."
+        },
+        {
+          "kicker": "One number",
+          "heading": "The same line handles all of it.",
+          "body": "Most people calling a towing company do not know in advance which service they need — they know the car will not move. Sorting that out is the job of the call, not the caller. Describe what happened and what the vehicle is doing, and dispatch works out whether it is a jump, a tire, a fuel drop, a straightforward tow or a recovery. That matters because guessing wrong from a list wastes a dispatch. It also means there is one number to keep rather than several, which is the whole point at the roadside at night. Everything listed here runs through the same 24-hour line, whichever of them turns out to be what you actually needed."
         }
       ],
       "ctaHeadline": "Which one do you need?"
@@ -334,6 +417,11 @@
           "kicker": "Before you dial",
           "heading": "Four answers get a truck moving.",
           "body": "What the vehicle is, exactly where it is, what it is doing, and where it needs to go. Those four decide which truck is sent and how quickly. If the vehicle is somewhere unsafe — a live carriageway, a blind bend — lead with that, because it changes the priority of the call rather than just its details."
+        },
+        {
+          "kicker": "Before you call",
+          "heading": "Four things get a truck moving.",
+          "body": "Where you are, what you are driving, what is wrong, and where it is going. On a highway, exit numbers and mile markers beat street names, and a shared location pin beats both. For the vehicle, make and model is usually enough, but say if it is all-wheel drive, lowered, or larger than a pickup, because that changes which truck is sent. For the fault, say whether it rolls and whether it shifts out of park. For the destination, have an address if you have one — and if you have not decided yet, say that too rather than working it out while the driver waits."
         }
       ],
       "ctaHeadline": "Call now."
@@ -350,12 +438,17 @@
         {
           "kicker": "What we do",
           "heading": "Emergency work, around the clock.",
-          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
+          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and drivers are sent from wherever is nearest."
         },
         {
           "kicker": "Why the phone is answered at 3am",
           "heading": "Most of this work is unplanned.",
           "body": "Almost nobody schedules a breakdown. That shapes how the operation runs: dispatch is staffed around the clock, and the phone is the primary way in rather than a form. It is also why the first question is always where the vehicle is, not what the customer would like to happen — location decides everything that follows."
+        },
+        {
+          "kicker": "How this works",
+          "heading": "Dispatch, then a driver.",
+          "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
         }
       ],
       "ctaHeadline": "Need a truck?"
@@ -384,9 +477,15 @@
           "kicker": "Around the clock",
           "heading": "Heavy breakdowns do not keep hours.",
           "body": "Commercial vehicles break down on schedules, which means at night and at weekends as often as not. Wrecker work runs through the same 24-hour dispatch as everything else, so there is one number whichever kind of truck you turn out to need."
+        },
+        {
+          "kicker": "Access",
+          "heading": "Where the vehicle sits changes the job.",
+          "body": "Weight decides which truck, but access decides how the recovery is done. The same tractor unit on a hard shoulder and in a soft yard are two different jobs: one is a straightforward hookup, the other may need winching before anything can be lifted, and possibly room to work that is not there. Overhead clearance, the surface underfoot, how much space there is to bring a truck alongside, and whether the vehicle can roll at all are all worth describing on the call. It is the difference between one truck arriving prepared and a second having to be sent. If you can send a photograph of the position, that answers more than a description usually can."
         }
       ],
-      "ctaHeadline": "Need a wrecker?"
+      "ctaHeadline": "Need a wrecker?",
+      "diagram": "tow-class"
     }
   ],
   "leadForm": {
@@ -396,5 +495,41 @@
     "placeholder": "What the vehicle is, where it is, and where it needs to go.",
     "submit": "Send details",
     "fineprint": "For roadside emergencies please call. Stay with your vehicle only if it is safe to do so."
-  }
+  },
+  "faqKicker": "Common questions",
+  "faqHeading": "What people ask before they call.",
+  "faqs": [
+    {
+      "q": "What decides the cost of a tow?",
+      "a": "Mainly the distance, the type of vehicle, and how hard it is to reach. A car on a driveway and the same car nosed into a ditch are different jobs, because one is a hookup and the other is a recovery. Time of day can matter too. Ask for the figure when you call, with the vehicle and the location in front of you — that is when it can actually be answered."
+    },
+    {
+      "q": "Are you really open at 3am?",
+      "a": "Yes. Dispatch runs 24 hours a day, every day, which is the whole point of the number. Breakdowns and accidents do not keep business hours, and a towing company that only answers in the daytime is not much use at the moment you need one."
+    },
+    {
+      "q": "What should I tell dispatch when I call?",
+      "a": "Four things get the right truck moving: where you are, what you are driving, what is wrong with it, and where you want it taken. Cross streets, a mile marker or an exit number beat a street name on a highway. If the car will not shift out of park, or the keys are gone, say so on the call rather than when the driver arrives."
+    },
+    {
+      "q": "Should I wait in the vehicle?",
+      "a": "On a highway, no. If you can get out safely on the side away from traffic and wait behind a barrier, that is the safer place to be — a stopped vehicle on a shoulder is a target. Put the hazards on, and if you have cones or triangles, set them out behind. On a quiet residential street, staying in the car with the doors locked is usually fine."
+    },
+    {
+      "q": "Can you tow a car that will not start or has no keys?",
+      "a": "Yes. Cars that will not start, will not shift, have a flat battery, or have seized brakes get moved regularly — that is most of the work. Tell dispatch on the call so the right equipment comes out the first time. A car that cannot roll needs a different approach from one that can."
+    },
+    {
+      "q": "Can you take it to my own mechanic?",
+      "a": "Yes. It is your vehicle and your choice of destination — a shop, a dealership, your home, or a body shop after an accident. Have the address ready when you call. If you are not sure where you want it yet, say so, because that changes what the driver needs to know."
+    },
+    {
+      "q": "Do I need the title to have a junk car removed?",
+      "a": "In most cases you need to show you own the vehicle before it can be taken away, and the title is the usual way to do that. Rules vary by situation, so it is worth raising on the call rather than at the kerb. Also mention if the car is behind a gate, blocked in, or has no wheels, because that changes the equipment."
+    },
+    {
+      "q": "What areas do you cover?",
+      "a": "Dallas and the surrounding metro, including Arlington and the neighbouring suburbs. If you are near the edge of that, ask when you call rather than assuming — the answer depends partly on where the vehicle is going as well as where it is now."
+    }
+  ]
 }
