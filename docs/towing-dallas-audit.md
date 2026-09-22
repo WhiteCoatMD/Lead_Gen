@@ -30,8 +30,8 @@ looks like. Impressions on page two are largely never seen.
 | 7 | Previous rankings | 16 months of data, analysed below |
 | 8 | Search Console | Connected, domain property, service account owner |
 | 9 | Citations | Yelp, ShowMeLocal, Sensible Driver, Facebook, preferredprofessionals, PRLog — all carry the right phone and name |
-| 10 | Reviews | Unknown — depends on the GBP question |
-| 11 | Calls / leads | **Unknown, and unknowable — no tracking exists** |
+| 10 | Reviews | **9 reviews, 3.7 average** — the weakest thing on the profile |
+| 11 | Calls / leads | **28 GBP calls, Apr–Sep 2026.** Website calls still untracked |
 | 12 | Fulfilment | **Needs the owner** |
 | 13 | Genuinely 24 hours | **Needs the owner** — owner has said leave the claim alone |
 | 14 | Dallas eligible market | Yes — the profile is verified in Dallas |
@@ -157,6 +157,88 @@ with one entry in the recipients map. That is the cheapest large win available.
    stay permanently off-limits.
 5. **The Google Business Profile, not the 4–20 band.** See the correction
    below — this replaces what this section originally said.
+
+## The baseline: 28 calls in six months
+
+Owner-supplied from GBP Insights, April to September 2026. This is the number
+everything else on this property should be measured against, and it is the
+first hard conversion figure the portfolio has produced.
+
+**It is low.** Roughly 4.7 calls a month, in a metro of 1.3 million people, for
+a 24-hour service with a verified profile and the correct primary category.
+A towing profile ranking well in Dallas would expect that in a week.
+
+The useful part is what it rules out. The profile is verified, the primary
+category is right, the hours are 24/7, the name and phone agree everywhere,
+and the citations are consistent. None of the usual foundational faults apply —
+so the shortfall is not a configuration problem, and time spent re-checking
+configuration is time wasted.
+
+What is left is the set of things that decide local pack position:
+
+1. **Proximity.** The address is in 75232 — south Dallas, Oak Cliff. Local pack
+   results are ranked by distance from the *searcher*, not from the city
+   centre. Someone in Plano or Frisco searching "tow truck near me" gets
+   businesses near them, and this profile cannot appear however good it is.
+   This is a constraint to plan around rather than a fault to fix, and it very
+   likely explains most of the 28.
+2. **Reviews.** The largest controllable factor, and still unmeasured.
+3. **Competition.** The Places sweep turned up Texas Tows, Tow Dallas LLC,
+   AmeriTow and Tow Dallas TX LLC, all using near-identical names in the same
+   market.
+
+**A warning worth writing down before anyone suggests it.** The obvious answer
+to a proximity constraint is more listings in more parts of Dallas. Creating
+Google Business Profiles at addresses the business does not genuinely operate
+from is a direct violation, and the penalty falls on the whole Google account —
+which now holds thirteen verified properties. It is not worth considering.
+
+## Reviews are the answer to the 28 calls
+
+**9 reviews, 3.7 average**, owner-supplied 2026-09-21.
+
+Both halves of that are a problem, and they fail in different ways.
+
+**The count suppresses ranking.** Review volume is a direct local pack factor.
+Nine is very low for a towing business in a metro this size, and the
+competitors the Places sweep surfaced — Texas Tows, Tow Dallas LLC, AmeriTow —
+are established operators who will have far more. A profile with nine reviews
+does not out-rank one with two hundred on anything except raw proximity.
+
+**The rating suppresses clicks even where the ranking works.** 3.7 sits below
+4.0, which is where most people stop considering a result. It is worse than it
+looks for towing specifically: this is a category where customers are already
+having a bad day, so the baseline sentiment is low and a visible 3.7 reads as
+confirmation.
+
+At nine reviews the average is extremely sensitive, which cuts both ways. Nine
+reviews averaging 3.7 is about 33 stars in total, so:
+
+| Additional 5-star reviews | Resulting average |
+|---|---|
+| +5 | 4.06 |
+| +9 | 4.35 |
+| +15 | 4.50 |
+| +25 | 4.65 |
+
+**Nine good reviews takes this from 3.7 to 4.35.** That is a small number of
+real customers, and it is by far the cheapest improvement available on this
+property — cheaper than any page, any link, and any amount of on-site work.
+
+Two things to do alongside collecting them:
+
+- **Reply to every existing review, including the bad ones.** Owner responses
+  are a ranking signal and, more importantly, a reader signal: a measured reply
+  to a one-star review does more for the next customer than the review costs.
+- **Ask at the moment the job finishes.** For towing that is when the vehicle
+  is delivered and the customer is relieved — not a day later by email. This
+  is the same SMS capability the lead work still needs, so the two should be
+  built together rather than separately.
+
+**What must not happen.** Buying reviews, incentivising them, or posting them
+from staff accounts is a direct violation, and the penalty lands on the Google
+account — which now holds thirteen verified properties. Nine real reviews are
+worth more than ninety bought ones, and infinitely more than the account.
 
 ## CORRECTION: organic rank is not the lever here
 

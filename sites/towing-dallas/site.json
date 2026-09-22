@@ -34,6 +34,31 @@
       "title": "Junk Car Removal",
       "description": "Removal and transport of unwanted, damaged, and non-running vehicles.",
       "link": "we-buy-junk-cars.html"
+    },
+    {
+      "title": "Heavy-Duty & Wrecker Service",
+      "description": "Wrecker service for box trucks, buses, RVs and tractor units — the jobs a standard tow truck cannot take.",
+      "link": "wrecker-service.html"
+    },
+    {
+      "title": "Flatbed Towing",
+      "description": "Flatbed transport for low-clearance, all-wheel-drive, non-running and damaged vehicles."
+    },
+    {
+      "title": "Lockout Assistance",
+      "description": "Locked out with the keys inside — opened without damage to the door or the glass."
+    },
+    {
+      "title": "Fuel Delivery",
+      "description": "Enough fuel brought out to get you to a station rather than onto a truck."
+    },
+    {
+      "title": "Tire Changes",
+      "description": "Spare fitted at the roadside, so a flat does not become a tow."
+    },
+    {
+      "title": "Motorcycle Towing",
+      "description": "Bikes moved on proper straps and chocks rather than whatever is on the truck."
     }
   ],
   "serviceAreas": [
@@ -74,6 +99,11 @@
           "kicker": "What we run",
           "heading": "Wreckers and emergency towing.",
           "body": "Tow trucks, wreckers and emergency towing across Dallas. Emergency work is the bulk of what we do, which is why the line is answered around the clock rather than during office hours."
+        },
+        {
+          "kicker": "Where the vehicle is",
+          "heading": "The location matters as much as the vehicle.",
+          "body": "A car on a driveway and the same car on the shoulder of a highway are different jobs. Traffic, barriers, soft ground and low clearance all change which truck can actually reach it and how long the recovery takes. Saying where you are precisely — the road, the direction of travel, the nearest exit — gets the right truck moving sooner than a postcode does."
         }
       ],
       "ctaHeadline": "Need a tow right now?"
@@ -97,6 +127,11 @@
           "kicker": "How fast",
           "heading": "Dispatched from the same 24 hour line.",
           "body": "Roadside calls run through the same dispatch as the tow trucks, so there is one number to remember whichever of the two you turn out to need."
+        },
+        {
+          "kicker": "Staying safe until we arrive",
+          "heading": "Get clear of the traffic side.",
+          "body": "If you are on a live carriageway, the safest place is usually out of the vehicle and behind a barrier, not sitting in the driver's seat. If the car is somewhere you cannot safely leave it, say so when you call — it changes how urgently the job is treated."
         }
       ],
       "ctaHeadline": "Stuck on the roadside?"
@@ -120,6 +155,11 @@
           "kicker": "Why it matters who does it",
           "heading": "Jumping a car wrong can cost you an ECU.",
           "body": "We are equipped with jumper boxes, so a dead battery can be started regardless of where the car is parked. It is worth saying that jumping a vehicle has to be done correctly — done incorrectly it can damage the car’s computer, which is a far more expensive problem than the battery was."
+        },
+        {
+          "kicker": "When a jump will not hold",
+          "heading": "A battery that dies twice is not a flat battery.",
+          "body": "If a car starts on a jump and dies again shortly after, the battery is usually not the fault — it is more often the alternator failing to recharge it. Worth knowing before paying for a replacement battery that will be flat again by the end of the week."
         }
       ],
       "ctaHeadline": "Dead battery?"
@@ -138,6 +178,11 @@
           "kicker": "When it is the right call",
           "heading": "Some vehicles are not worth the tow.",
           "body": "A car that will cost more to repair than it is worth does not need recovering to a shop. Removing it is usually the cheaper end to the story, and it clears the driveway or the yard at the same time."
+        },
+        {
+          "kicker": "What to have ready",
+          "heading": "Title and location.",
+          "body": "The two things that decide whether a junk car can be collected are whether you hold the title and whether the vehicle can be reached by a truck. A car with no title, or one boxed in behind two others in a garage, is a different job — not impossible, just worth mentioning on the phone rather than on the day."
         }
       ],
       "ctaHeadline": "Got a car to get rid of?"
@@ -156,6 +201,16 @@
           "kicker": "Same trucks, same number",
           "heading": "Arlington is on our patch.",
           "body": "The Dallas–Fort Worth corridor is one service area in practice, and Arlington sits in the middle of it. Towing, roadside assistance, jumpstarts and junk car removal all run from the same dispatch."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Arlington is a drive, and that is worth saying.",
+          "body": "Arlington sits between Dallas and Fort Worth, so a truck coming from Dallas covers real distance to reach it. That is fine for a planned tow or a junk car collection. For something urgent it is worth asking what is actually nearest, because the fastest truck is not always ours and saying so is cheaper than a long wait."
+        },
+        {
+          "kicker": "What we cover there",
+          "heading": "The same services, the same number.",
+          "body": "Towing, roadside assistance, jump starts, tyre changes, lockouts, fuel and junk car collection all run in Arlington exactly as they do in Dallas. The only practical difference is the drive, which matters for something urgent and not at all for something planned."
         }
       ],
       "ctaHeadline": "Need a tow in Arlington?"
@@ -178,6 +233,11 @@
           "kicker": "Roadside assistance",
           "heading": "Help getting going again.",
           "body": "We also offer assistance to help you get your vehicle back on the road. From having a tire changed to jumpstarting your car, roadside assistance can be with you in a matter of minutes."
+        },
+        {
+          "kicker": "Which one you need",
+          "heading": "Most calls are one of three things.",
+          "body": "A vehicle that will not start, a vehicle that cannot be driven, or a vehicle that needs to be somewhere else. The first is usually roadside — a jump, a tyre, some fuel. The second is a tow. The third is planned, and planned jobs are worth booking rather than calling in as an emergency, because a truck can be scheduled rather than diverted."
         }
       ],
       "ctaHeadline": "Which one do you need?",
@@ -196,6 +256,11 @@
           "kicker": "What we do",
           "heading": "Emergency work, around the clock.",
           "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
+        },
+        {
+          "kicker": "Why the phone is answered at 3am",
+          "heading": "Most of this work is unplanned.",
+          "body": "Almost nobody schedules a breakdown. That shapes how the operation runs: dispatch is staffed around the clock, and the phone is the primary way in rather than a form. It is also why the first question is always where the vehicle is, not what the customer would like to happen — location decides everything that follows."
         }
       ],
       "ctaHeadline": "Need a truck?",
@@ -214,6 +279,11 @@
           "kicker": "What helps",
           "heading": "What to tell dispatch.",
           "body": "Where the vehicle is, what it is doing, and whether it is somewhere safe. Those three answers decide which truck gets sent and how quickly, so it is worth having them ready before you dial."
+        },
+        {
+          "kicker": "Before you dial",
+          "heading": "Four answers get a truck moving.",
+          "body": "What the vehicle is, exactly where it is, what it is doing, and where it needs to go. Those four decide which truck is sent and how quickly. If the vehicle is somewhere unsafe — a live carriageway, a blind bend — lead with that, because it changes the priority of the call rather than just its details."
         }
       ],
       "ctaHeadline": "Call now.",
@@ -237,6 +307,11 @@
           "kicker": "Roadside assistance",
           "heading": "Help getting going again.",
           "body": "We also offer assistance to help you get your vehicle back on the road. From having a tire changed to jumpstarting your car, roadside assistance can be with you in a matter of minutes."
+        },
+        {
+          "kicker": "Which one you need",
+          "heading": "Most calls are one of three things.",
+          "body": "A vehicle that will not start, a vehicle that cannot be driven, or a vehicle that needs to be somewhere else. The first is usually roadside — a jump, a tyre, some fuel. The second is a tow. The third is planned, and planned jobs are worth booking rather than calling in as an emergency, because a truck can be scheduled rather than diverted."
         }
       ],
       "ctaHeadline": "Which one do you need?"
@@ -254,6 +329,11 @@
           "kicker": "What helps",
           "heading": "What to tell dispatch.",
           "body": "Where the vehicle is, what it is doing, and whether it is somewhere safe. Those three answers decide which truck gets sent and how quickly, so it is worth having them ready before you dial."
+        },
+        {
+          "kicker": "Before you dial",
+          "heading": "Four answers get a truck moving.",
+          "body": "What the vehicle is, exactly where it is, what it is doing, and where it needs to go. Those four decide which truck is sent and how quickly. If the vehicle is somewhere unsafe — a live carriageway, a blind bend — lead with that, because it changes the priority of the call rather than just its details."
         }
       ],
       "ctaHeadline": "Call now."
@@ -271,9 +351,42 @@
           "kicker": "What we do",
           "heading": "Emergency work, around the clock.",
           "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
+        },
+        {
+          "kicker": "Why the phone is answered at 3am",
+          "heading": "Most of this work is unplanned.",
+          "body": "Almost nobody schedules a breakdown. That shapes how the operation runs: dispatch is staffed around the clock, and the phone is the primary way in rather than a form. It is also why the first question is always where the vehicle is, not what the customer would like to happen — location decides everything that follows."
         }
       ],
       "ctaHeadline": "Need a truck?"
+    },
+    {
+      "slug": "wrecker-service.html",
+      "navLabel": "Wrecker service",
+      "kicker": "Wrecker service",
+      "heading": "Wrecker and heavy-duty towing in Dallas.",
+      "intro": "For the vehicles a standard tow truck cannot take — box trucks, buses, RVs and tractor units — dispatched on the same 24-hour line.",
+      "seoTitle": "Wrecker Service Dallas TX | Heavy Duty Towing | 24 Hour Towing Dallas",
+      "seoDescription": "24 hour wrecker service and heavy-duty towing in Dallas, Texas. Box trucks, buses, RVs and tractor units recovered and moved, day or night.",
+      "service": "Heavy-duty wrecker and recovery service",
+      "sections": [
+        {
+          "kicker": "What needs a wrecker",
+          "heading": "Weight is what decides it.",
+          "body": "A standard tow truck is built for cars and light pickups. Once the vehicle is a box truck, a bus, a motorhome or a tractor unit, the job needs a wrecker: heavier boom, heavier winch, and a chassis rated to lift it without being dragged around by it. Putting the wrong truck on a heavy recovery is how both vehicles end up damaged."
+        },
+        {
+          "kicker": "What to tell dispatch",
+          "heading": "Three things decide which truck we send.",
+          "body": "What the vehicle is, roughly what it weighs, and what the access is like. A tractor unit on a hard shoulder and the same unit in a soft yard are different jobs needing different equipment. Getting that right on the phone is the difference between one truck arriving and two."
+        },
+        {
+          "kicker": "Around the clock",
+          "heading": "Heavy breakdowns do not keep hours.",
+          "body": "Commercial vehicles break down on schedules, which means at night and at weekends as often as not. Wrecker work runs through the same 24-hour dispatch as everything else, so there is one number whichever kind of truck you turn out to need."
+        }
+      ],
+      "ctaHeadline": "Need a wrecker?"
     }
   ],
   "leadForm": {
