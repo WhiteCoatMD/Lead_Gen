@@ -102,12 +102,12 @@ being read as a second business.
 |---|---|---|
 | **Google Business Profile** | Name updated; category pending | Phone, then category. The anchor for everything else. |
 | **getvibrato** | Lists the business in **Bordelonville** | **Wrong city — highest priority.** Correct to Deville or remove. Bordelonville is a different parish. |
-| *(all of the above)* | All still carry **318-308-4577** | Every listed citation now has the wrong phone. This is the bulk of the correction work. |
 | **Yelp** | "Martin Trash Service", categorised *Junk Removal & Hauling* | Name, phone, and category. The category actively reinforces the positioning being abandoned. |
 | **BBB** | "Martin Trash Service", categorised *Garbage Removal* | Name, phone, category. |
 | **Hometown Demolition** | Listed, demolition category already correct | Name and phone only. Already pointing the right way. |
 | **Hometown Dumpster Rental** | Listed under old name | Name and phone; consider whether dumpster rental still belongs. |
 | **Facebook** | Group, not a business page | A group is not a citation. A proper Page should be created — see below. |
+| **— all of the above —** | Every one still carries **318-308-4577** | The phone change touches every listing. This is the bulk of the work. |
 
 **The name is inconsistent across every single one of these.** "Martin's Trash
 Service", "Martin Trash Service", and now the rebrand. One canonical spelling has

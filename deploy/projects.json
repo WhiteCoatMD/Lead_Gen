@@ -160,5 +160,11 @@
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
     "projectName": "spray-foam-insulation-los-angeles",
     "alias": "https://spray-foam-insulation-los-angeles.vercel.app"
+  },
+  "martins-trash-removal-demolition": {
+    "projectId": "prj_HG5CET84SSraSWBjlGpz24TXx7ie",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "martins-trash-removal-demolition",
+    "alias": "https://martins-trash-removal-demolition.vercel.app"
   }
 }
