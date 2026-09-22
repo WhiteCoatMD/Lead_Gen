@@ -49,7 +49,13 @@ async function apiKey() {
   return value;
 }
 
-const FIELDS = "id,displayName,formattedAddress,nationalPhoneNumber,websiteUri,businessStatus";
+// regularOpeningHours added 2026-09-22. Scaffolding LA went from
+// CLOSED_PERMANENTLY to "Open 24 hours" and this script could not have seen
+// it, because it watched the status flip and not the hours. Hours are the more
+// dangerous of the two to get wrong: a closed profile is invisible, which is
+// obvious, while an overstated opening time is visible and generates calls
+// nobody answers.
+const FIELDS = "id,displayName,formattedAddress,nationalPhoneNumber,websiteUri,businessStatus,regularOpeningHours";
 const digits = (v) => String(v || "").replace(/\D/g, "").slice(-10);
 
 const key = await apiKey();
@@ -95,6 +101,27 @@ for (const entry of withIds) {
     issues.push(`profile website points at ${place.websiteUri}, not ${cfg.domain}`);
   }
 
+  // Hours the profile publishes, against whatever is recorded for it. A
+  // 24-hour claim gets called out specifically rather than lumped in with any
+  // other change: round-the-clock is true for a towing dispatch line and
+  // almost never true for a trade that sends a crew to a site, and it is the
+  // claim most likely to have been set by accident.
+  const openNow = place.regularOpeningHours?.weekdayDescriptions || [];
+  const summary = openNow.join(" | ");
+  const isAlwaysOpen = /open 24 hours/i.test(summary) && !/closed/i.test(summary);
+  if (isAlwaysOpen && !entry.hours_confirmed_24h) {
+    issues.push(
+      "profile publishes OPEN 24 HOURS — confirm that is true and that somebody answers, " +
+      "or narrow it. Set hours_confirmed_24h on this entry once confirmed."
+    );
+  }
+  if (entry.hours_seen && summary && entry.hours_seen !== summary) {
+    issues.push(`hours changed since last check
+           was: ${entry.hours_seen}
+           now: ${summary}`);
+  }
+  if (summary) entry.hours_seen = summary;
+
   const profileName = place.displayName?.text || "";
   const nameDrift = profileName && cfg.name && profileName.toLowerCase() !== cfg.name.toLowerCase();
 
@@ -122,6 +149,19 @@ if (asJson) {
     }
   }
 }
+
+// Persist what was seen, so the next run can compare against it. Change
+// detection needs a previous value and there is nowhere else to keep one.
+//
+// In CI this write goes nowhere: the audit workflow checks out, runs and
+// discards, so hours_seen only accumulates when this is run locally and the
+// result committed. That weakens change detection there but not the OPEN 24
+// HOURS check, which needs no history to fire.
+await fs.writeFile(
+  path.join(root, "deploy", "gbp-place-ids.json"),
+  `${JSON.stringify(known, null, 2)}\n`,
+  "utf8"
+);
 
 const alerting = results.filter((r) => r.issues.length);
 console.log(`\n${results.length - alerting.length} ok, ${alerting.length} needing attention.`);

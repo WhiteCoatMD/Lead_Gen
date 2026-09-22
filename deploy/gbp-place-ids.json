@@ -47,7 +47,8 @@
     "address": "908 Audubon St, Lake Charles, LA 70601, USA",
     "phone": "(337) 324-9657",
     "website": "http://www.fenceslakecharles.com/",
-    "status": "OPERATIONAL"
+    "status": "OPERATIONAL",
+    "hours_seen": "Monday: 8:00 AM – 5:00 PM | Tuesday: 8:00 AM – 5:00 PM | Wednesday: 8:00 AM – 5:00 PM | Thursday: 8:00 AM – 5:00 PM | Friday: 8:00 AM – 5:00 PM | Saturday: 8:00 AM – 5:00 PM | Sunday: Closed"
   },
   {
     "slug": "mbs-pressure-washing-new-orleans",
@@ -69,7 +70,8 @@
     "status_was": "CLOSED_PERMANENTLY",
     "status_changed_observed": "2026-09-22",
     "hours_reported": "Open 24 hours",
-    "note": "Mitch observed 2026-09-22 that the listing is live again and showing Open 24 hours, having been recorded CLOSED_PERMANENTLY on 2026-09-21. Nobody has said who made the change. Two things to settle: who has edit access, and whether 24 hours is true - scaffolding hire is not usually a 24-hour trade, and hours that are wrong produce calls nobody answers."
+    "note": "Mitch observed 2026-09-22 that the listing is live again and showing Open 24 hours, having been recorded CLOSED_PERMANENTLY on 2026-09-21. Nobody has said who made the change. Two things to settle: who has edit access, and whether 24 hours is true - scaffolding hire is not usually a 24-hour trade, and hours that are wrong produce calls nobody answers.",
+    "hours_seen": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours"
   },
   {
     "slug": "seacoast-hurricane-shutters",
