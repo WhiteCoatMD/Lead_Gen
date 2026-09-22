@@ -44,6 +44,31 @@
       "title": "Split Rail Fences",
       "description": "Split rail fencing for pasture, grazing areas and homes — for the classic look, or to manage livestock.",
       "link": "split-rail-fences.html"
+    },
+    {
+      "title": "Farm & Agricultural Fencing",
+      "description": "Pasture and field fencing for acreage, livestock and property lines across North Louisiana.",
+      "link": "farm-fencing"
+    },
+    {
+      "title": "Commercial Fencing",
+      "description": "Fencing for businesses, yards and larger properties, where the job is security and containment rather than looks.",
+      "link": "commercial-fencing"
+    },
+    {
+      "title": "Gate Installation",
+      "description": "Walk gates and drive gates fitted to match the fence, hung so they still swing true in a year.",
+      "link": "gate-installation"
+    },
+    {
+      "title": "Fence Replacement",
+      "description": "Replacing a fence that has reached the end rather than patching it again.",
+      "link": "fence-replacement"
+    },
+    {
+      "title": "Storm Damage Repair",
+      "description": "Fences pushed over, snapped off or torn out by North Louisiana weather, put back up.",
+      "link": "storm-damage"
     }
   ],
   "serviceAreas": [
@@ -78,6 +103,11 @@
           "kicker": "What it does",
           "heading": "Privacy, security and shade.",
           "body": "Custom pine and cedar privacy fencing built for security, shade, and a clean finished look. Height and picket spacing change what the fence actually does — a full-privacy panel and a spaced picket run are different fences for different problems, and it is worth deciding which one you are buying before the posts go in."
+        },
+        {
+          "kicker": "Posts",
+          "heading": "The posts decide how long it lasts.",
+          "body": "Pickets are what you see and posts are what fails. How deep they go and how they are set matters more to the life of a wood fence than the boards do, and it is the part that cannot be put right later without pulling the fence apart."
         }
       ],
       "ctaHeadline": "Get a price on a wood fence."
@@ -101,6 +131,11 @@
           "kicker": "Taller work",
           "heading": "Sports and court enclosures.",
           "body": "The same system goes up tall — we have built chain-link at tennis courts, where the fence is doing a different job again: keeping a ball in rather than keeping anything out. Taller runs need heavier posts and closer spacing, so it is worth saying up front what the enclosure is for."
+        },
+        {
+          "kicker": "Height and gauge",
+          "heading": "Two numbers change the price.",
+          "body": "Chain-link is priced by height and by the gauge of the wire, and the right answer depends on what the fence is doing. A dog run and a commercial yard are different fences even though both are chain-link, so it is worth saying which you need before comparing quotes."
         }
       ],
       "ctaHeadline": "Get a price on chain-link."
@@ -123,6 +158,11 @@
           "kicker": "Where we work",
           "heading": "Monroe, West Monroe and Ouachita Parish.",
           "body": "We install across Monroe, West Monroe and the surrounding Ouachita Parish area, and travel further into North Louisiana for larger jobs. If you are not sure whether you are in range, call and ask."
+        },
+        {
+          "kicker": "What happens next",
+          "heading": "We come and look.",
+          "body": "For anything beyond a small repair we would rather walk the line than quote from a description. Ground, slope, trees and existing posts all change the job, and a number given without seeing them is a number that changes later."
         }
       ],
       "ctaHeadline": "Call for a free estimate."
@@ -141,6 +181,16 @@
           "kicker": "Two reasons people buy it",
           "heading": "The look, or the livestock.",
           "body": "Whether you want it for the classic look, or need it to manage livestock, we can build any length split rail fence for you. Those two jobs pull in different directions on rail count and spacing, so it is worth saying which one you are after."
+        },
+        {
+          "kicker": "Rails",
+          "heading": "Two rails or three.",
+          "body": "Rail count is the main decision on split rail. Two rails suit a boundary or a decorative run; three hold larger animals more reliably. It changes both the price and what the fence can actually do, so it is worth settling early."
+        },
+        {
+          "kicker": "Ground and corners",
+          "heading": "Corners do the work.",
+          "body": "On a long pasture run the straight sections are the easy part. Corners and gate posts take the strain of every rail pulling against them, so they are set deeper and braced harder than the rest — and it is where a cheap job shows itself first, usually within a season."
         }
       ],
       "ctaHeadline": "Get a price on split rail."
@@ -164,6 +214,11 @@
           "kicker": "What we build",
           "heading": "Five kinds of fence.",
           "body": "Wood privacy in pine or cedar, chain-link for containment and larger runs, split rail for pasture and the classic look, decorative and metal where security should not hide the property, and repairs to any of them."
+        },
+        {
+          "kicker": "Getting a price",
+          "heading": "Three things set the cost.",
+          "body": "Type of fence, length of the run, and what the ground is doing. Rough numbers are fine on a first call — we work the rest out on site, and walking the line is usually quicker than a long conversation about it."
         }
       ],
       "ctaHeadline": "Fencing a property in Monroe?"
@@ -181,7 +236,17 @@
         {
           "kicker": "Pine or cedar",
           "heading": "Two woods, built to the same standard.",
-          "body": "We can build a fence for your location from either pine or cedar, and in varying heights. Pine is the budget-conscious choice for a long run; cedar costs more and holds up better to weather and insects over time."
+          "body": "We can build a fence for your location from either pine or cedar, and in varying heights. Pine is the budget-conscious choice for a long run of privacy fencing; cedar costs more and holds up better to weather and insects over time. Which one makes sense usually comes down to the length of the run and how long you want to leave it alone."
+        },
+        {
+          "kicker": "What it does",
+          "heading": "Privacy, security and shade.",
+          "body": "Custom pine and cedar privacy fencing built for security, shade, and a clean finished look. Height and picket spacing change what the fence actually does — a full-privacy panel and a spaced picket run are different fences for different problems, and it is worth deciding which one you are buying before the posts go in."
+        },
+        {
+          "kicker": "Posts",
+          "heading": "The posts decide how long it lasts.",
+          "body": "Pickets are what you see and posts are what fails. How deep they go and how they are set matters more to the life of a wood fence than the boards do, and it is the part that cannot be put right later without pulling the fence apart."
         }
       ],
       "ctaHeadline": "Get a price on a wood fence.",
@@ -200,7 +265,17 @@
         {
           "kicker": "Where it fits",
           "heading": "The practical choice for a long run.",
-          "body": "Chain-link covers more ground per dollar than any other fence we build, which is why it wins on acreage and commercial yards. The same system goes up tall for court and sports enclosures."
+          "body": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties. Chain-link covers more ground per dollar than any other fence we build, which is why it tends to win on acreage, on commercial yards, and anywhere the job is containment rather than privacy."
+        },
+        {
+          "kicker": "Taller work",
+          "heading": "Sports and court enclosures.",
+          "body": "The same system goes up tall — we have built chain-link at tennis courts, where the fence is doing a different job again: keeping a ball in rather than keeping anything out. Taller runs need heavier posts and closer spacing, so it is worth saying up front what the enclosure is for."
+        },
+        {
+          "kicker": "Height and gauge",
+          "heading": "Two numbers change the price.",
+          "body": "Chain-link is priced by height and by the gauge of the wire, and the right answer depends on what the fence is doing. A dog run and a commercial yard are different fences even though both are chain-link, so it is worth saying which you need before comparing quotes."
         }
       ],
       "ctaHeadline": "Get a price on chain-link.",
@@ -218,11 +293,189 @@
         {
           "kicker": "What helps",
           "heading": "What to have ready.",
-          "body": "The three things that decide a price are the type of fence, the length of the run, and what the ground is doing. Rough numbers are fine on a first call."
+          "body": "The three things that decide a price are the type of fence, the length of the run, and what the ground is doing — slope, trees and existing posts all change the job. Rough numbers are fine on a first call; we work the rest out on site."
+        },
+        {
+          "kicker": "Where we work",
+          "heading": "Monroe, West Monroe and Ouachita Parish.",
+          "body": "We install across Monroe, West Monroe and the surrounding Ouachita Parish area, and travel further into North Louisiana for larger jobs. If you are not sure whether you are in range, call and ask."
+        },
+        {
+          "kicker": "What happens next",
+          "heading": "We come and look.",
+          "body": "For anything beyond a small repair we would rather walk the line than quote from a description. Ground, slope, trees and existing posts all change the job, and a number given without seeing them is a number that changes later."
         }
       ],
       "ctaHeadline": "Call for a free estimate.",
       "canonicalTo": "contact"
+    },
+    {
+      "slug": "farm-fencing",
+      "navLabel": "Farm & agricultural",
+      "kicker": "Farm fencing",
+      "heading": "Farm and agricultural fencing.",
+      "intro": "Pasture, field and boundary fencing for acreage across Ouachita Parish and North Louisiana.",
+      "seoTitle": "Farm & Agricultural Fencing Monroe LA | Twin City Fence",
+      "seoDescription": "Farm and agricultural fencing across Monroe, West Monroe and North Louisiana — pasture fencing, field boundaries and livestock containment.",
+      "service": "Farm and agricultural fence installation",
+      "sections": [
+        {
+          "kicker": "What the fence is for",
+          "heading": "Containment and boundary are different jobs.",
+          "body": "A fence keeping cattle in and a fence marking a property line are built differently. Livestock decides height, spacing and how solid the corners have to be, because the animals lean on it; a boundary run can be lighter. Saying which one you need is the single most useful thing on a first call."
+        },
+        {
+          "kicker": "Acreage",
+          "heading": "Long runs change the economics.",
+          "body": "On acreage the cost is in linear feet, so the choice of material matters more than it does on a back garden. Split rail suits pasture and grazing; chain-link covers ground cheaply where containment matters more than looks. We build both, and on a long run it is worth walking the line before deciding."
+        },
+        {
+          "kicker": "Ground",
+          "heading": "North Louisiana ground is not flat and not dry.",
+          "body": "Slope, soft ground and standing water all change how posts have to be set. A fence line that crosses a low spot or a drainage cut needs planning rather than improvising on the day, which is why we would rather look at it than quote it blind."
+        }
+      ],
+      "ctaHeadline": "Fencing acreage?"
+    },
+    {
+      "slug": "commercial-fencing",
+      "navLabel": "Commercial",
+      "kicker": "Commercial fencing",
+      "heading": "Commercial fencing.",
+      "intro": "Fencing for businesses, yards and larger properties, where the job is security and containment rather than looks.",
+      "seoTitle": "Commercial Fencing Monroe LA | Twin City Fence",
+      "seoDescription": "Commercial fencing in Monroe, West Monroe and Ouachita Parish — business premises, yards, storage and larger properties.",
+      "service": "Commercial fence installation",
+      "sections": [
+        {
+          "kicker": "What commercial work needs",
+          "heading": "Security first, appearance second.",
+          "body": "Chain-link is durable, budget-conscious fencing for homes, pets, businesses, and larger properties, and on commercial work it usually wins for the same reason it wins on acreage: it covers the most ground per dollar and it does not hide what is behind it. Where appearance matters at the frontage, ornamental and metal fencing adds security without closing the property off visually."
+        },
+        {
+          "kicker": "Gates",
+          "heading": "The gate is the part that gets used.",
+          "body": "On a commercial site the gate is opened and closed all day, every day, which is harder on it than the rest of the fence combined. Width, swing direction and how the gate is hung are worth settling before the posts go in rather than after."
+        },
+        {
+          "kicker": "Working around a business",
+          "heading": "The yard usually has to keep working.",
+          "body": "Most commercial fencing goes up around a site that cannot close for the week. Sequencing the work so access stays open is a scheduling question more than a fencing one, and it is easier to solve before we start than halfway through."
+        }
+      ],
+      "ctaHeadline": "Fencing a commercial property?"
+    },
+    {
+      "slug": "gate-installation",
+      "navLabel": "Gates",
+      "kicker": "Gates",
+      "heading": "Gate installation.",
+      "intro": "Walk gates and drive gates fitted to match the fence, and hung so they still swing true in a year.",
+      "seoTitle": "Gate Installation Monroe LA | Twin City Fence",
+      "seoDescription": "Walk gates and drive gates installed across Monroe, West Monroe and Ouachita Parish, matched to wood, chain-link and ornamental fencing.",
+      "service": "Gate installation",
+      "sections": [
+        {
+          "kicker": "Why gates sag",
+          "heading": "A gate is a lever on a post.",
+          "body": "Every gate is a weight hanging off one side of a post, and the wider the gate the harder it pulls. Most sagging gates are not bad gates — they are gates hung on a post that was set for fence and not for leverage. A gate post wants to be bigger, deeper and better braced than the run it sits in."
+        },
+        {
+          "kicker": "Drive gates",
+          "heading": "Width is the decision that costs money later.",
+          "body": "A drive gate that is narrow enough to be awkward gets clipped, and a gate that has been clipped never hangs right again. Measure for the vehicle that actually uses it, including the trailer, before settling on a width."
+        },
+        {
+          "kicker": "Matching the fence",
+          "heading": "The gate should look like part of the run.",
+          "body": "We fit gates to wood, chain-link and ornamental fencing so the gate reads as part of the fence rather than as something bolted on afterwards."
+        }
+      ],
+      "ctaHeadline": "Need a gate?"
+    },
+    {
+      "slug": "fence-replacement",
+      "navLabel": "Replacement",
+      "kicker": "Replacement",
+      "heading": "Fence replacement.",
+      "intro": "When a fence has reached the end, replacing it costs less over time than patching it again.",
+      "seoTitle": "Fence Replacement Monroe LA | Twin City Fence",
+      "seoDescription": "Fence replacement across Monroe, West Monroe and Ouachita Parish — old fence removed and hauled off, new fence built in its place.",
+      "service": "Fence replacement",
+      "sections": [
+        {
+          "kicker": "Repair or replace",
+          "heading": "The posts usually decide it.",
+          "body": "Panels and pickets are cheap to replace; posts are not. If the posts are still solid, a repair is nearly always the better buy. When the posts have gone — leaning, rotted at ground level, or pulling out — you are rebuilding the fence around bad foundations, and that is the point at which replacement stops being the expensive option."
+        },
+        {
+          "kicker": "The old fence",
+          "heading": "Taking it out is part of the job.",
+          "body": "Removal and haul-off is the part people forget when comparing a replacement to a new build. It is real work — old posts set in concrete do not come out easily — and it belongs in the quote rather than appearing as a surprise."
+        },
+        {
+          "kicker": "Doing it once",
+          "heading": "Worth changing what did not work.",
+          "body": "A replacement is the one chance to change height, material or layout without paying twice. If the old fence was the wrong height, or the gate was in the wrong place, say so before we start rather than rebuilding the same problem."
+        }
+      ],
+      "ctaHeadline": "Replacing a fence?"
+    },
+    {
+      "slug": "storm-damage",
+      "navLabel": "Storm damage",
+      "kicker": "Storm damage",
+      "heading": "Storm-damaged fence repair.",
+      "intro": "Fences pushed over, snapped off or torn out by North Louisiana weather, put back up.",
+      "seoTitle": "Storm Damage Fence Repair Monroe LA | Twin City Fence",
+      "seoDescription": "Storm-damaged fence repair in Monroe, West Monroe and Ouachita Parish — wind damage, fallen trees and leaning or broken fence sections.",
+      "service": "Storm-damaged fence repair",
+      "sections": [
+        {
+          "kicker": "What storms do to fences",
+          "heading": "Wind finds the weak post.",
+          "body": "A storm rarely takes a whole fence evenly. It finds the post that was already marginal and takes the sections either side of it, which is why a repair that only replaces the panels tends to fail again in the next blow. We repair leaning posts, damaged panels, broken gates and storm-related fence damage."
+        },
+        {
+          "kicker": "Trees",
+          "heading": "A fallen limb is a different job.",
+          "body": "A tree or a large limb across a fence usually destroys the posts as well as the panels, and sometimes moves the fence line. That is closer to a rebuild of the affected run than a repair, and it is worth knowing which one you are looking at before making a claim."
+        },
+        {
+          "kicker": "Photographs help",
+          "heading": "Send a picture before we drive out.",
+          "body": "A photograph of the damage from a few feet back tells us more than a description does, and it usually decides whether the job is a repair or a replacement without anyone making a trip."
+        }
+      ],
+      "ctaHeadline": "Storm took the fence down?"
+    },
+    {
+      "slug": "west-monroe",
+      "navLabel": "West Monroe",
+      "kicker": "West Monroe",
+      "heading": "Fencing in West Monroe.",
+      "intro": "We are based in West Monroe and build across the city and the rest of Ouachita Parish.",
+      "seoTitle": "Fence Company West Monroe LA | Twin City Fence",
+      "seoDescription": "Fence builder based in West Monroe, Louisiana — wood, chain-link, split rail, ornamental, farm and commercial fencing across Ouachita Parish.",
+      "service": "Fence installation in West Monroe, Louisiana",
+      "sections": [
+        {
+          "kicker": "Local",
+          "heading": "This is where we are.",
+          "body": "Twin City Fence is based in West Monroe. Most of what we build is within a short drive of it, which is the practical reason a small job here is worth doing at all — there is no travel to absorb."
+        },
+        {
+          "kicker": "What we build here",
+          "heading": "Everything on the list.",
+          "body": "Wood privacy in pine or cedar, chain-link for containment and longer runs, split rail for pasture and the classic look, ornamental and metal where security should not hide the property, farm fencing on acreage, commercial work, gates, replacement and storm repair."
+        },
+        {
+          "kicker": "Both sides of the river",
+          "heading": "West Monroe and Monroe are one market.",
+          "body": "The Ouachita divides the two cities on a map and not much else. We work both sides and out into the parish, so if you are not sure whether you are in range it is worth asking rather than assuming."
+        }
+      ],
+      "ctaHeadline": "Fencing a property in West Monroe?"
     }
   ],
   "leadForm": {
