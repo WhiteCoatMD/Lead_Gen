@@ -107,10 +107,26 @@
         {
           "kicker": "Posts",
           "heading": "The posts decide how long it lasts.",
-          "body": "Pickets are what you see and posts are what fails. How deep they go and how they are set matters more to the life of a wood fence than the boards do, and it is the part that cannot be put right later without pulling the fence apart."
+          "body": "Pickets and rails are the part you see, but they are not the part that fails first. A wood fence usually goes because the posts rotted at the ground line or worked loose in soft soil, and once that starts the rest follows regardless of how good the boards were. Depth, spacing and how the post is set are what buy the years. This is also why a fence that looks fine from the road can still be near the end of its life — push on it, and if the posts move, the fence is telling you something the pickets are hiding. It is worth knowing before you spend money on replacement boards that will outlive what holds them up."
+        },
+        {
+          "kicker": "Height",
+          "heading": "Pick the height for the job, not the look.",
+          "body": "Height is the decision people most often get wrong, partly because it is hard to picture from a catalogue. Six feet is the usual privacy answer because it breaks sightlines from a neighbouring yard at standing height. Four feet contains pets and marks a front boundary without walling the property off, which is often what a front yard actually wants. Eight feet screens completely where local rules allow it. It is worth knowing that height drives cost more than the extra material suggests, because taller fencing needs deeper posts and more bracing to stay upright in wind. A four-foot fence bought for privacy is money spent on the wrong problem, and it cannot be raised later without starting again."
         }
       ],
-      "ctaHeadline": "Get a price on a wood fence."
+      "ctaHeadline": "Get a price on a wood fence.",
+      "diagram": "fence-height",
+      "faqs": [
+        {
+          "q": "How tall should a privacy fence be?",
+          "a": "Six feet is the usual answer for privacy, because it screens sightlines from a neighbouring yard at standing height. Four feet contains pets and marks a front boundary without closing the property off. Eight feet screens completely where that is permitted locally. Height also changes the price more than most people expect, since it changes post depth as well as material."
+        },
+        {
+          "q": "Does a wood fence need sealing?",
+          "a": "It extends the life, particularly on pine. Cedar tolerates being left alone better than pine does, which is part of what the extra cost buys. Either way the posts fail before the pickets do, so how they were set matters more to the lifespan than what gets put on the surface afterwards."
+        }
+      ]
     },
     {
       "slug": "chain-link-fence",
@@ -136,9 +152,20 @@
           "kicker": "Height and gauge",
           "heading": "Two numbers change the price.",
           "body": "Chain-link is priced by height and by the gauge of the wire, and the right answer depends on what the fence is doing. A dog run and a commercial yard are different fences even though both are chain-link, so it is worth saying which you need before comparing quotes."
+        },
+        {
+          "kicker": "Where it wins",
+          "heading": "Cost per foot is the whole argument.",
+          "body": "Chain-link covers more ground per dollar than any other fence we build, which is why it keeps winning on long runs, acreage and commercial yards where the job is containment rather than privacy. It also takes weather without needing to be sealed or painted, and a damaged section can be replaced without touching the rest of the run. What it does not do is screen anything, which is the trade you are making. Slats can be woven through the mesh where some privacy is wanted without the cost of a wood run, though they are a compromise rather than a substitute. If the fence exists to keep something in or out over distance, this is usually the right answer."
         }
       ],
-      "ctaHeadline": "Get a price on chain-link."
+      "ctaHeadline": "Get a price on chain-link.",
+      "faqs": [
+        {
+          "q": "What height of chain-link do I need?",
+          "a": "Four feet contains most dogs and marks a boundary. Six feet is the common choice for security and for keeping larger animals in. Taller runs are used for courts and sports enclosures, where the job is keeping a ball in rather than keeping anything out — those need heavier posts and closer spacing."
+        }
+      ]
     },
     {
       "slug": "contact",
@@ -163,6 +190,11 @@
           "kicker": "What happens next",
           "heading": "We come and look.",
           "body": "For anything beyond a small repair we would rather walk the line than quote from a description. Ground, slope, trees and existing posts all change the job, and a number given without seeing them is a number that changes later."
+        },
+        {
+          "kicker": "Before you call",
+          "heading": "Three things speed this up.",
+          "body": "Roughly how long the run is, what the fence is for, and what the ground is doing along the line. Even a pace count is more useful than nothing, and knowing whether the line crosses a slope, runs under trees, or sits in a spot that holds water changes the answer more than most people expect. If there is an existing fence, whether the posts are sound is the single most useful thing you can tell us. If there is an HOA or you are not certain where the property line runs, that is worth raising early rather than after posts are in — both are far cheaper to sort out before work starts than to correct afterwards."
         }
       ],
       "ctaHeadline": "Call for a free estimate."
@@ -191,6 +223,11 @@
           "kicker": "Ground and corners",
           "heading": "Corners do the work.",
           "body": "On a long pasture run the straight sections are the easy part. Corners and gate posts take the strain of every rail pulling against them, so they are set deeper and braced harder than the rest — and it is where a cheap job shows itself first, usually within a season."
+        },
+        {
+          "kicker": "Two rails or three",
+          "heading": "Rail count is the real decision.",
+          "body": "Split rail is chosen for two quite different reasons and the rail count follows from which one applies. As a boundary or a decorative edge along a drive or a property line, two rails do the job and keep the look open — the fence marks without enclosing. As containment for larger animals, three rails hold more reliably, because an animal that can get its head through a gap will usually try. Posts and bracing change with it, since a fence that is leaned on carries load the decorative version never sees. Split rail also suits uneven ground better than panel fencing, which is part of why it keeps appearing on acreage where a rigid run would leave gaps at every dip."
         }
       ],
       "ctaHeadline": "Get a price on split rail."
@@ -219,6 +256,11 @@
           "kicker": "Getting a price",
           "heading": "Three things set the cost.",
           "body": "Type of fence, length of the run, and what the ground is doing. Rough numbers are fine on a first call — we work the rest out on site, and walking the line is usually quicker than a long conversation about it."
+        },
+        {
+          "kicker": "Choosing",
+          "heading": "Start with what the fence is for.",
+          "body": "Most fence decisions get easier once the purpose is named out loud. Privacy points to wood, and height becomes the main variable. Containment over distance points to chain-link, because cost per foot is where it wins. Livestock points to split rail with the rail count set by the animal. Marking a boundary attractively is a different job again and often needs the least fence. The mistakes tend to come from choosing on appearance first and discovering later that the fence does not do the thing it was actually bought for — a four-foot fence that was meant to give privacy, or a decorative run that a horse walks through. Worth settling before material, because material follows from it."
         }
       ],
       "ctaHeadline": "Fencing a property in Monroe?"
@@ -246,11 +288,27 @@
         {
           "kicker": "Posts",
           "heading": "The posts decide how long it lasts.",
-          "body": "Pickets are what you see and posts are what fails. How deep they go and how they are set matters more to the life of a wood fence than the boards do, and it is the part that cannot be put right later without pulling the fence apart."
+          "body": "Pickets and rails are the part you see, but they are not the part that fails first. A wood fence usually goes because the posts rotted at the ground line or worked loose in soft soil, and once that starts the rest follows regardless of how good the boards were. Depth, spacing and how the post is set are what buy the years. This is also why a fence that looks fine from the road can still be near the end of its life — push on it, and if the posts move, the fence is telling you something the pickets are hiding. It is worth knowing before you spend money on replacement boards that will outlive what holds them up."
+        },
+        {
+          "kicker": "Height",
+          "heading": "Pick the height for the job, not the look.",
+          "body": "Height is the decision people most often get wrong, partly because it is hard to picture from a catalogue. Six feet is the usual privacy answer because it breaks sightlines from a neighbouring yard at standing height. Four feet contains pets and marks a front boundary without walling the property off, which is often what a front yard actually wants. Eight feet screens completely where local rules allow it. It is worth knowing that height drives cost more than the extra material suggests, because taller fencing needs deeper posts and more bracing to stay upright in wind. A four-foot fence bought for privacy is money spent on the wrong problem, and it cannot be raised later without starting again."
         }
       ],
       "ctaHeadline": "Get a price on a wood fence.",
-      "canonicalTo": "wooden-fences"
+      "canonicalTo": "wooden-fences",
+      "faqs": [
+        {
+          "q": "How tall should a privacy fence be?",
+          "a": "Six feet is the usual answer for privacy, because it screens sightlines from a neighbouring yard at standing height. Four feet contains pets and marks a front boundary without closing the property off. Eight feet screens completely where that is permitted locally. Height also changes the price more than most people expect, since it changes post depth as well as material."
+        },
+        {
+          "q": "Does a wood fence need sealing?",
+          "a": "It extends the life, particularly on pine. Cedar tolerates being left alone better than pine does, which is part of what the extra cost buys. Either way the posts fail before the pickets do, so how they were set matters more to the lifespan than what gets put on the surface afterwards."
+        }
+      ],
+      "diagram": "fence-height"
     },
     {
       "slug": "chain-link-fence.html",
@@ -276,10 +334,21 @@
           "kicker": "Height and gauge",
           "heading": "Two numbers change the price.",
           "body": "Chain-link is priced by height and by the gauge of the wire, and the right answer depends on what the fence is doing. A dog run and a commercial yard are different fences even though both are chain-link, so it is worth saying which you need before comparing quotes."
+        },
+        {
+          "kicker": "Where it wins",
+          "heading": "Cost per foot is the whole argument.",
+          "body": "Chain-link covers more ground per dollar than any other fence we build, which is why it keeps winning on long runs, acreage and commercial yards where the job is containment rather than privacy. It also takes weather without needing to be sealed or painted, and a damaged section can be replaced without touching the rest of the run. What it does not do is screen anything, which is the trade you are making. Slats can be woven through the mesh where some privacy is wanted without the cost of a wood run, though they are a compromise rather than a substitute. If the fence exists to keep something in or out over distance, this is usually the right answer."
         }
       ],
       "ctaHeadline": "Get a price on chain-link.",
-      "canonicalTo": "chain-link-fence"
+      "canonicalTo": "chain-link-fence",
+      "faqs": [
+        {
+          "q": "What height of chain-link do I need?",
+          "a": "Four feet contains most dogs and marks a boundary. Six feet is the common choice for security and for keeping larger animals in. Taller runs are used for courts and sports enclosures, where the job is keeping a ball in rather than keeping anything out — those need heavier posts and closer spacing."
+        }
+      ]
     },
     {
       "slug": "contact-us.html",
@@ -304,6 +373,11 @@
           "kicker": "What happens next",
           "heading": "We come and look.",
           "body": "For anything beyond a small repair we would rather walk the line than quote from a description. Ground, slope, trees and existing posts all change the job, and a number given without seeing them is a number that changes later."
+        },
+        {
+          "kicker": "Before you call",
+          "heading": "Three things speed this up.",
+          "body": "Roughly how long the run is, what the fence is for, and what the ground is doing along the line. Even a pace count is more useful than nothing, and knowing whether the line crosses a slope, runs under trees, or sits in a spot that holds water changes the answer more than most people expect. If there is an existing fence, whether the posts are sound is the single most useful thing you can tell us. If there is an HOA or you are not certain where the property line runs, that is worth raising early rather than after posts are in — both are far cheaper to sort out before work starts than to correct afterwards."
         }
       ],
       "ctaHeadline": "Call for a free estimate.",
@@ -333,6 +407,11 @@
           "kicker": "Ground",
           "heading": "North Louisiana ground is not flat and not dry.",
           "body": "Slope, soft ground and standing water all change how posts have to be set. A fence line that crosses a low spot or a drainage cut needs planning rather than improvising on the day, which is why we would rather look at it than quote it blind."
+        },
+        {
+          "kicker": "Containment",
+          "heading": "Animals lean on fences.",
+          "body": "A boundary fence marks a line; a containment fence resists an animal pushing against it, and the two are built differently even when they look similar from the road. Posts are set deeper and closer, corners and gate posts are braced because that is where the load concentrates, and the rail count is chosen for what is being held rather than for appearance. Two rails suit a boundary or a decorative run. Three hold larger animals more reliably. Pasture also tends to mean longer runs over uneven ground, which changes how the line is laid out — following the contour rather than cutting across it keeps the fence tight and keeps gaps from opening at the low points where an animal will find them."
         }
       ],
       "ctaHeadline": "Fencing acreage?"
@@ -355,12 +434,17 @@
         {
           "kicker": "Gates",
           "heading": "The gate is the part that gets used.",
-          "body": "On a commercial site the gate is opened and closed all day, every day, which is harder on it than the rest of the fence combined. Width, swing direction and how the gate is hung are worth settling before the posts go in rather than after."
+          "body": "On a commercial site the fence is mostly static and the gate works every day, which means the gate is where wear, cost and frustration concentrate. Width has to suit the largest vehicle that will ever need in, including deliveries rather than just staff vehicles. Hardware takes far more cycles than a residential gate ever will. Where the opening sits relative to the approach matters too: a gate that requires a vehicle to stop on a road to line up will get treated roughly, whichever way it swings. Getting the width and the approach right at the start costs very little; correcting either one afterwards means moving posts."
         },
         {
           "kicker": "Working around a business",
           "heading": "The yard usually has to keep working.",
           "body": "Most commercial fencing goes up around a site that cannot close for the week. Sequencing the work so access stays open is a scheduling question more than a fencing one, and it is easier to solve before we start than halfway through."
+        },
+        {
+          "kicker": "Material",
+          "heading": "Why commercial runs usually end up chain-link.",
+          "body": "Commercial fencing is normally bought by the foot rather than by the panel, and that changes which material makes sense. Chain-link covers distance more economically than anything else, takes weather without being sealed or painted, and can have a damaged section replaced without disturbing the rest of the run — which matters when the fence surrounds something that has to keep operating. It also makes the yard visible, which is a security advantage as often as it is a drawback. Where appearance matters at a street frontage, the usual answer is to treat that stretch differently rather than to pay for the whole perimeter twice. Height is a separate decision from material and worth settling on its own terms."
         }
       ],
       "ctaHeadline": "Fencing a commercial property?"
@@ -389,9 +473,21 @@
           "kicker": "Matching the fence",
           "heading": "The gate should look like part of the run.",
           "body": "We fit gates to wood, chain-link and ornamental fencing so the gate reads as part of the fence rather than as something bolted on afterwards."
+        },
+        {
+          "kicker": "Width",
+          "heading": "Measure for the trailer, not the car.",
+          "body": "The most common regret on a drive gate is width, and it is the one thing that cannot be adjusted afterwards without moving a post. People measure for the vehicle they drive every day and then discover the gate is tight for a trailer, a mower, a delivery truck or a contractor who needs to get a machine into the back yard. A gate that is slightly too narrow gets clipped, and a gate that has been clipped never hangs true again. Walk it through in your head with the widest thing that will ever need to pass, then add room for the fact that nobody lines up perfectly on a first attempt. Extra width costs very little at the start."
         }
       ],
-      "ctaHeadline": "Need a gate?"
+      "ctaHeadline": "Need a gate?",
+      "diagram": "gate-post",
+      "faqs": [
+        {
+          "q": "Why do gates sag?",
+          "a": "Almost always because the gate post was set for fence rather than for leverage. A gate is a weight hanging off one side of a post, and the wider the gate the harder it pulls. A gate post wants to be bigger, deeper and better braced than the run it sits in — which is cheap to do at the start and expensive to correct afterwards."
+        }
+      ]
     },
     {
       "slug": "fence-replacement",
@@ -417,6 +513,11 @@
           "kicker": "Doing it once",
           "heading": "Worth changing what did not work.",
           "body": "A replacement is the one chance to change height, material or layout without paying twice. If the old fence was the wrong height, or the gate was in the wrong place, say so before we start rather than rebuilding the same problem."
+        },
+        {
+          "kicker": "Repair or replace",
+          "heading": "How to tell which one you need.",
+          "body": "The test is the posts. Individual broken pickets, a sagging gate or a couple of damaged panels are repairs, and repairs are worth doing when the structure underneath is sound. Once posts are rotted, leaning or moving when pushed, the arithmetic changes: replacing posts means pulling the fence apart anyway, and a patchwork of new posts under old boards tends to mean returning to the same fence again in a year or two. The other honest signal is how many repairs you have already paid for. A fence that has been fixed three times is usually telling you what it needs. Walking the line and pushing on posts every few feet will answer this faster than any estimate."
         }
       ],
       "ctaHeadline": "Replacing a fence?"
@@ -445,9 +546,20 @@
           "kicker": "Photographs help",
           "heading": "Send a picture before we drive out.",
           "body": "A photograph of the damage from a few feet back tells us more than a description does, and it usually decides whether the job is a repair or a replacement without anyone making a trip."
+        },
+        {
+          "kicker": "Before anything is moved",
+          "heading": "Photograph it first.",
+          "body": "North Louisiana weather takes fences down, and the instinct after a storm is to clear the mess. Take photographs before you do. Whether an insurer covers the damage is between you and your policy, but the claim is far easier to make when there is a record of what the fence looked like before anything was tidied, from a few angles, with something in frame for scale. It also helps to note which way things fell, because wind direction and a fallen limb tell a different story from a post that had already rotted. None of that can be reconstructed once the debris is gone. If a fence is down across a boundary or blocking access, secure the gap first and photograph what you moved."
         }
       ],
-      "ctaHeadline": "Storm took the fence down?"
+      "ctaHeadline": "Storm took the fence down?",
+      "faqs": [
+        {
+          "q": "Will my insurance cover a storm-damaged fence?",
+          "a": "That is between you and your insurer and depends on your policy, so it is worth asking them before committing to work. What helps either way is photographs of the damage taken before anything is moved or cleared."
+        }
+      ]
     },
     {
       "slug": "west-monroe",
@@ -473,6 +585,11 @@
           "kicker": "Both sides of the river",
           "heading": "West Monroe and Monroe are one market.",
           "body": "The Ouachita divides the two cities on a map and not much else. We work both sides and out into the parish, so if you are not sure whether you are in range it is worth asking rather than assuming."
+        },
+        {
+          "kicker": "Local ground",
+          "heading": "What the soil here does to a fence.",
+          "body": "Ouachita Parish ground holds water, and a fence set into soil that stays wet has a harder life than the same fence on dry, firm ground. That affects how posts are set and how deep they go, and it is part of why a fence built to a generic spec somewhere else does not always translate. Drainage across a property matters too — a line that runs through a low spot will see standing water after heavy rain, and that is worth knowing before posts are placed rather than after. We are based in West Monroe and install across West Monroe, Monroe and the surrounding parish, so the conditions on a given property are usually familiar ones rather than a surprise."
         }
       ],
       "ctaHeadline": "Fencing a property in West Monroe?"
@@ -485,5 +602,45 @@
     "placeholder": "Roughly how long a run, what the ground is doing, and when you are hoping to start.",
     "submit": "Send request",
     "fineprint": "We use this to get back to you about the job. Nothing else."
-  }
+  },
+  "faqKicker": "Common questions",
+  "faqHeading": "Before you call.",
+  "faqs": [
+    {
+      "q": "What decides the price of a fence?",
+      "a": "Three things, in this order: the type of fence, how long the run is, and what the ground is doing. Slope, trees, soft ground and existing posts all change the work involved, which is why a figure given over the phone without seeing the line tends to move once someone walks it."
+    },
+    {
+      "q": "Do you repair fences, or only build new ones?",
+      "a": "Both. Leaning posts, damaged panels, broken gates and storm damage are all repair work. Whether a repair is worth doing usually comes down to the posts — panels and pickets are cheap to replace, posts are not."
+    },
+    {
+      "q": "Should I choose wood or chain-link?",
+      "a": "Wood if you want privacy or the look; chain-link if the job is containment over a longer run. Chain-link covers more ground per dollar than anything else we build, which is why it tends to win on acreage and commercial yards. They are different fences for different problems rather than better and worse."
+    },
+    {
+      "q": "Pine or cedar?",
+      "a": "Pine is the budget-conscious choice for a long run of privacy fencing. Cedar costs more and holds up better to weather and insects over time. Which one makes sense usually comes down to the length of the run and how long you want to leave it alone."
+    },
+    {
+      "q": "Do I need a permit for a fence?",
+      "a": "It depends on where the property sits and what you are building, and rules differ between Monroe, West Monroe and the unincorporated parish. Check with your local permitting office before work starts — and if there is an HOA, check with them too, since they often set height and material rules the parish does not."
+    },
+    {
+      "q": "How close to the property line can I build?",
+      "a": "That is set locally rather than by us, and it is worth confirming before posts go in — moving a finished fence is far more expensive than checking first. If you are unsure where the line actually runs, a survey settles it and prevents the argument that a misplaced fence otherwise starts."
+    },
+    {
+      "q": "Do you build fences for livestock?",
+      "a": "Yes. Split rail suits pasture and grazing, and the rail count is the main decision: two rails suit a boundary or a decorative run, three hold larger animals more reliably. Containment fencing is built differently from a boundary run because animals lean on it."
+    },
+    {
+      "q": "Do you fit gates as well?",
+      "a": "Yes, to wood, chain-link and ornamental fencing. The thing worth settling early is width — a drive gate narrow enough to be awkward gets clipped, and a gate that has been clipped never hangs right again. Measure for the vehicle that actually uses it, including the trailer."
+    },
+    {
+      "q": "What areas do you cover?",
+      "a": "We are based in West Monroe and install across West Monroe, Monroe and the surrounding Ouachita Parish area, travelling further into North Louisiana for larger jobs. If you are not sure whether you are in range, it is worth asking rather than assuming."
+    }
+  ]
 }
