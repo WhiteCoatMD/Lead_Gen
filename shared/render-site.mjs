@@ -69,6 +69,12 @@ export function renderFavicon(site) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="${site.name}"><rect width="64" height="64" rx="13" fill="${accent}"/><text x="32" y="${letters.length > 1 ? 42 : 46}" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="${size}" font-weight="700" fill="#ffffff">${letters}</text></svg>`;
 }
 
+
+// The number a visitor sees and dials. Falls back to the NAP number, so a
+// site without call tracking is unaffected.
+// NEVER use this for schema, structured data or anything a machine reads —
+// see the note in the schema block below.
+const dialled = (site) => site.trackingPhone || site.phone;
 export function renderSite(site, slug) {
   const areaNames = site.serviceAreas || [site.city];
   const services = site.services.map((service, index) => `
@@ -100,6 +106,10 @@ export function renderSite(site, slug) {
     name: site.name,
     url: `https://${site.domain}`,
     mainEntityOfPage: `https://${site.domain}/`,
+    // NAP number, deliberately NOT the tracking number. This is the field
+    // Google matches against the Business Profile and every citation; a
+    // tracking number here would break the consistency the citation work
+    // exists to create.
     telephone: site.phone,
     email: site.email,
     description: site.seoDescription,
@@ -143,20 +153,20 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
   <style>:root{--accent:${esc(site.accent || "#ef342f")};--accent-dark:${esc(site.accentDark || "#c82420")}}</style>
   <script type="application/ld+json">${jsonLd(schema)}</script>
 </head><body>
-  <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p>${site.phone ? `<a href="${phoneHref(site.phone)}">Call ${esc(site.phone)}</a>` : ""}</div>
+  <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p>${site.phone ? `<a href="${phoneHref(dialled(site))}">Call ${esc(dialled(site))}</a>` : ""}</div>
   <header>
     <a class="brand${site.logo ? "" : " brand-wordmark"}" href="#top" aria-label="${esc(site.name)} home">${brand}</a>
     <nav id="site-nav" aria-label="Primary">
       <a href="#services">Services</a><a href="#process">How it works</a><a href="#areas">Service area</a>
     </nav>
     <div class="header-actions">
-      ${site.phone ? `<a class="nav-call" href="${phoneHref(site.phone)}">${esc(site.navCall || "Free estimate")}</a>` : ""}
+      ${site.phone ? `<a class="nav-call" href="${phoneHref(dialled(site))}">${esc(site.navCall || "Free estimate")}</a>` : ""}
       <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
   <main>
     <section class="hero${heroImage ? "" : " hero-plain"}" id="top"${heroStyle}>
-      <div class="shell hero-content"><p class="eyebrow">${esc(site.kicker)}</p><h1>${esc(site.headline)}</h1><p class="hero-copy">${esc(site.intro)}</p><div class="actions">${site.phone ? `<a class="button primary" href="${phoneHref(site.phone)}">${esc(site.primaryCta || "Call for a free estimate")}</a>` : ""}<a class="button ${site.phone ? "ghost" : "primary"}" href="#services">Explore services</a></div><div class="trust"><span>Local service</span><span>Clear estimates</span><span>Call-ready help</span></div></div>
+      <div class="shell hero-content"><p class="eyebrow">${esc(site.kicker)}</p><h1>${esc(site.headline)}</h1><p class="hero-copy">${esc(site.intro)}</p><div class="actions">${site.phone ? `<a class="button primary" href="${phoneHref(dialled(site))}">${esc(site.primaryCta || "Call for a free estimate")}</a>` : ""}<a class="button ${site.phone ? "ghost" : "primary"}" href="#services">Explore services</a></div><div class="trust"><span>Local service</span><span>Clear estimates</span><span>Call-ready help</span></div></div>
     </section>
     <section class="shell intro"><div><p class="eyebrow accent">${esc(site.sectionKicker)}</p><h2>${esc(site.sectionHeadline)}</h2></div><p>${esc(site.about)}</p></section>
     <section class="shell services" id="services"><div class="section-heading"><p class="eyebrow accent">Services</p><h2>${esc(site.servicesHeadline)}</h2></div><div class="service-grid">${services}</div></section>
@@ -164,9 +174,9 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
     ${gallery ? `<section class="shell gallery" id="gallery"><div class="section-heading"><p class="eyebrow accent">${esc(site.galleryKicker || "Gallery")}</p><h2>${esc(site.galleryHeadline || "A closer look.")}</h2></div><div class="gallery-grid">${gallery}</div></section>` : ""}
     <section class="areas" id="areas"><div class="shell areas-inner"><div><p class="eyebrow">Service area</p><h2>${esc(site.areaHeadline)}</h2></div><div class="area-list">${areas}</div></div></section>
     ${renderLeadForm(site, slug)}
-    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
+    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(dialled(site))}">${esc(dialled(site))}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
   </main>
   <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>
-  ${site.phone ? `<a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}
+  ${site.phone ? `<a class="mobile-call" href="${phoneHref(dialled(site))}">Call now · ${esc(dialled(site))}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}
 </body></html>`;
 }
