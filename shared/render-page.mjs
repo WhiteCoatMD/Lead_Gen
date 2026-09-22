@@ -1,5 +1,7 @@
 import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./render-site.mjs";
 import { businessId } from "./schema.mjs";
+import { DIAGRAMS } from "./render-diagram.mjs";
+import { renderFaq } from "./render-faq.mjs";
 
 /**
  * A secondary page on a site whose main template is a single scrolling page.
@@ -125,6 +127,8 @@ export function renderPage(site, page) {
       </div>
     </section>
     ${sections}
+    ${page.diagram && DIAGRAMS[page.diagram] ? `<section class="shell intro">${DIAGRAMS[page.diagram](site)}</section>` : ""}
+    ${page.faqs ? renderFaq({ ...site, faqs: page.faqs, faqHeading: page.faqHeading || "Questions about this.", faqKicker: "Common questions" }) : ""}
     ${points}
     ${related}
     ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(page.ctaHeadline || site.ctaHeadline)}</h2><p>${esc(page.ctaCopy || site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
