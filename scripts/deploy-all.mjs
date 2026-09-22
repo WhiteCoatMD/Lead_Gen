@@ -44,6 +44,17 @@ for (const slug of slugs) {
       JSON.stringify({ buildCommand: null, outputDirectory: "." }, null, 2) + "\n",
       "utf8"
     );
+    // The serverless functions live in api/ at the repo root, which a git
+    // build picks up automatically. This path does not: it uploads only
+    // dist/<slug>, so without this copy the deployment ships the site and
+    // silently drops /api/lead and /api/event. The lead form then posts
+    // into a 404 and the lead is gone, which is worse than no form at all.
+    //
+    // It stayed invisible because whichever deploy ran LAST won, and a git
+    // build usually landed after the CLI one. Martins surfaced it by being
+    // deployed from here twice in a row with nothing in between.
+    await fs.cp(path.join(root, "api"), path.join(dir, "api"), { recursive: true });
+
     const run = spawnSync("vercel", ["deploy", "--prod", "--yes", "--scope", SCOPE], { cwd: dir, encoding: "utf8", shell: true });
     if (run.status !== 0) {
       console.log(`FAIL ${slug}: ${(run.stderr || "").trim().split("\n").slice(-2).join(" | ")}`);
