@@ -46,5 +46,274 @@
   "navCall": "Free estimate",
   "footerLine": "Custom decks, covered porches, and deck repair in Monroe, Louisiana.",
   "seoTitle": "Deck Builders Monroe LA | Custom Decks & Covered Porches",
-  "seoDescription": "Custom wood and composite decks, covered porches, and deck repair for homes across Monroe, West Monroe, and Ouachita Parish, Louisiana. Free estimates."
+  "seoDescription": "Custom wood and composite decks, covered porches, and deck repair for homes across Monroe, West Monroe, and Ouachita Parish, Louisiana. Free estimates.",
+  "leadForm": {
+    "kicker": "Request a quote",
+    "heading": "Tell us about the deck.",
+    "intro": "Call if it is easier. If you are reading this at nine at night, leave the details and we will ring you back.",
+    "placeholder": "Roughly what size, what the ground does under it, whether it ties into the house, and when you are hoping to start.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the project. Nothing else."
+  },
+  "faqKicker": "Common questions",
+  "faqHeading": "Before you call.",
+  "faqs": [
+    {
+      "q": "What decides the price of a deck?",
+      "a": "Size, height off the ground, and material, in roughly that order. A ground-level platform and a raised deck of the same square footage are different builds, because height brings stairs, guard rails and heavier framing with it. What the ground is doing matters too — a slope or soft soil changes the footings before a single board goes down."
+    },
+    {
+      "q": "Wood or composite?",
+      "a": "Wood costs less up front and needs cleaning and re-sealing to stay right. Composite costs more and mostly wants washing. In this climate that maintenance question is not academic: humidity and long hot spells are hard on exposed timber, so the real comparison is the build cost against the years of upkeep you are signing up for."
+    },
+    {
+      "q": "Pressure-treated pine or cedar?",
+      "a": "Pine is the budget-conscious option and takes treatment well. Cedar costs more, holds its shape better and resists insects and rot more readily. On a large deck the price gap is significant, which is why plenty of builds use treated pine for the framing nobody sees and something better for the surface you walk on."
+    },
+    {
+      "q": "Do I need a permit for a deck?",
+      "a": "It depends on the size, the height and where the property sits, and the rules differ between Monroe, West Monroe and the unincorporated parish. Check with your local permitting office before work starts. If there is an HOA, check with them too — they often set rules on materials and railings that the parish does not."
+    },
+    {
+      "q": "How long will a deck last here?",
+      "a": "Longer than the boards suggest, if the framing and the footings were done properly, and not very long if they were not. Decks in this climate almost always fail from underneath — joists that hold water, posts set too shallow, or hardware that was not rated for treated lumber and rusted out. The surface is the part you see and the last part to go."
+    },
+    {
+      "q": "Can you repair a deck instead of replacing it?",
+      "a": "Often, and the test is the frame. Boards, railings and stairs are replaceable while the structure under them is sound. Once joists are soft, posts have moved, or footings have shifted, the arithmetic changes — replacing those means pulling the deck apart anyway. Push on the railing and walk the middle: if it moves, the problem is below the surface."
+    },
+    {
+      "q": "What areas do you cover?",
+      "a": "Monroe, West Monroe, Sterlington and the surrounding Ouachita Parish area. If you are just outside that and the project is a substantial one, ask rather than assuming."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "custom-wood-decks",
+      "navLabel": "Wood decks",
+      "kicker": "Custom wood decks",
+      "heading": "Wood decks built for this climate.",
+      "intro": "Pressure-treated pine and cedar decks framed for heat, humidity and heavy spring rain.",
+      "seoTitle": "Custom Wood Deck Builder Monroe LA | Deck Builders Monroe",
+      "seoDescription": "Custom pressure-treated and cedar deck building in Monroe and West Monroe, Louisiana. Multi-level layouts, stairs and code-compliant railing.",
+      "service": "Custom wood deck construction",
+      "sections": [
+        {
+          "kicker": "Framing",
+          "heading": "The part that decides how long it lasts.",
+          "body": "Almost every deck that fails here fails from underneath. Joists that trap water against the ledger, posts set shallower than they should be, hardware that was not rated for treated lumber and bled rust through the boards inside a season. None of that is visible from the surface, which is why a deck can look sound and be halfway gone. Footings below the frost line, joists spaced and flashed so water drains rather than sits, and hardware chosen for the lumber it is going into — that is where the years come from, and it is the part that cannot be put right later without taking the deck apart."
+        },
+        {
+          "kicker": "Pine or cedar",
+          "heading": "A cost question, mostly.",
+          "body": "Treated pine is the economical choice and takes stain and sealer well. Cedar costs more, holds its shape better, and resists insects and rot with less help. On a big deck the difference in material cost is real, which is why plenty of builds split the two: treated pine for the framing nobody sees, cedar or composite for the surface underfoot. Which way it goes usually comes down to the size of the deck and how much upkeep you want to sign up for."
+        },
+        {
+          "kicker": "Height and stairs",
+          "heading": "The thing that changes the price most.",
+          "body": "A platform a step off the ground and a deck at first-floor height are different builds at identical square footage. Height brings guard rails, heavier posts and stairs, and stairs are their own piece of work — rise and run have to be consistent, they need their own footings, and they are where code pays closest attention. Worth knowing before comparing quotes, because two numbers for \"a 16 by 20 deck\" can be describing very different jobs."
+        },
+        {
+          "kicker": "Layout",
+          "heading": "Start with how you will actually use it.",
+          "body": "Where the sun lands in the afternoon, where the door comes out, whether you want the grill away from the seating, and whether the space has to work in August. Those answers shape the deck more than the square footage does. Multi-level layouts solve a sloping yard and also break a large deck into areas that get used differently. It is worth walking the yard and talking it through before drawing anything."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much maintenance does a wood deck need?",
+          "a": "Cleaning and re-sealing on a cycle, and the cycle is shorter here than the product label usually assumes — sun and humidity are hard on finishes. The good news is that it is straightforward work. The bad news is that skipping it for several years is how a deck that was fine becomes a deck that needs boards replaced."
+        },
+        {
+          "q": "Can you build over an existing concrete patio?",
+          "a": "Usually, and it is a common request. The questions are how much height you have to work with before the deck starts interfering with a door threshold, and whether water that currently runs off the slab will still have somewhere to go. Both are answerable on site in a few minutes."
+        }
+      ],
+      "ctaHeadline": "Thinking about a wood deck?"
+    },
+    {
+      "slug": "composite-decking",
+      "navLabel": "Composite",
+      "kicker": "Composite decking",
+      "heading": "Composite and PVC decking.",
+      "intro": "Boards that do not splinter, warp, or need sanding and staining every other spring.",
+      "seoTitle": "Composite Decking Monroe LA | Deck Builders Monroe",
+      "seoDescription": "Composite and PVC deck installation in Monroe and West Monroe, Louisiana. Low-maintenance decking built on a properly framed structure.",
+      "service": "Composite and PVC deck installation",
+      "sections": [
+        {
+          "kicker": "What you are buying",
+          "heading": "Fewer weekends, not zero.",
+          "body": "Composite and PVC boards do not need sanding, staining or sealing, and they will not splinter underfoot or check and crack the way exposed timber does in this sun. What they do need is washing — they hold dirt and pollen like anything else outdoors, and in a humid climate a neglected composite deck grows the same green film everything else does. The honest pitch is far less maintenance rather than none, and anyone promising none has not lived through a North Louisiana August."
+        },
+        {
+          "kicker": "It still needs a wood frame",
+          "heading": "And the frame is still what fails.",
+          "body": "This gets missed constantly. Composite boards sit on a timber structure, so all the framing that decides a deck's life is exactly the same underneath: footing depth, joist spacing, flashing at the ledger, hardware rated for treated lumber. Putting premium boards on a poorly built frame buys a deck that looks new while the part holding it up rots quietly. If anything, the better surface makes the framing matter more, because you will keep the deck long enough for the frame to be tested."
+        },
+        {
+          "kicker": "Heat",
+          "heading": "Worth thinking about before choosing a colour.",
+          "body": "Composite gets hotter underfoot than wood in direct sun, and darker boards get hotter than lighter ones. On a deck that catches full afternoon sun and gets used barefoot, that is a real consideration rather than a footnote. Some product lines handle it better than others. It is worth raising when you are choosing, because it is the sort of thing people notice in July and not in the showroom."
+        },
+        {
+          "kicker": "Cost",
+          "heading": "Front-loaded compared with wood.",
+          "body": "Composite costs more to buy and install than treated pine, and the case for it is what you do not spend afterwards in materials, weekends and eventual board replacement. Whether that trade works depends on how long you plan to keep the house and how you feel about the maintenance. Neither answer is wrong — they are different purchases, and it is worth being clear which one you are making."
+        }
+      ],
+      "ctaHeadline": "Want to compare materials?"
+    },
+    {
+      "slug": "deck-repair",
+      "navLabel": "Repair",
+      "kicker": "Repair and restoration",
+      "heading": "Deck repair and restoration.",
+      "intro": "Board and joist replacement, footing and post repair, railing upgrades, and cleaning and re-sealing.",
+      "seoTitle": "Deck Repair Monroe LA | Deck Builders Monroe",
+      "seoDescription": "Deck repair and restoration in Monroe and West Monroe, Louisiana. Board, joist, post and railing repair for decks worth saving.",
+      "service": "Deck repair and restoration",
+      "sections": [
+        {
+          "kicker": "Repair or replace",
+          "heading": "The frame decides it.",
+          "body": "Boards, railings and stairs are replaceable all day while the structure underneath is sound, and that is a repair worth doing. Once joists have gone soft, posts have moved, or footings have shifted, the arithmetic turns over — fixing those means dismantling the deck anyway, and new boards on a failing frame is money spent on something with a short future. The other honest signal is how many times it has already been patched. A deck repaired three times is telling you something."
+        },
+        {
+          "kicker": "How to check it yourself",
+          "heading": "Two minutes, no tools.",
+          "body": "Walk the middle of each span and feel for give. Push hard on the railing — it is a guard, and it should not move. Look at the ledger where the deck meets the house, because that connection is the single most common failure point and the most dangerous one. Push a screwdriver into the base of a few posts; if it goes in easily the post is done. Anything soft, springy or moving is a structural question rather than a cosmetic one, and worth getting looked at before the season it gets used."
+        },
+        {
+          "kicker": "Safety",
+          "heading": "The failures that matter happen suddenly.",
+          "body": "Deck collapses are almost always a ledger pulling away from the house or a railing giving way, and both tend to happen when the deck is loaded with people. That is worth saying plainly rather than softly. If your deck moves when you lean on the rail, or there is any separation where it meets the house, keep people off it until somebody has looked at it. Nothing about that is alarmist — it is the specific way these structures fail."
+        },
+        {
+          "kicker": "Cleaning and re-sealing",
+          "heading": "Worth doing before it is needed.",
+          "body": "A deck that is structurally fine but grey, rough or growing something is usually a cleaning and re-sealing job rather than a rebuild. Doing that on a cycle is far cheaper than replacing boards that were allowed to go too far, and it is the single most effective thing an owner can do to extend a wood deck here. The right time is before it looks like it needs it."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you match boards on an older deck?",
+          "a": "Sometimes closely, rarely perfectly. New timber will not match weathered timber and will stay obviously newer until it has had a season or two of sun. On a partial repair that is worth expecting. Where the mismatch would be conspicuous, re-finishing the whole surface afterwards is the usual way to even it out."
+        }
+      ],
+      "ctaHeadline": "Deck seen better days?"
+    },
+    {
+      "slug": "covered-porches-and-pergolas",
+      "navLabel": "Porches & pergolas",
+      "kicker": "Covered outdoor living",
+      "heading": "Covered porches, pergolas and screened enclosures.",
+      "intro": "Shade and shelter so the space is usable in August and through mosquito season.",
+      "seoTitle": "Covered Porches & Pergolas Monroe LA | Deck Builders Monroe",
+      "seoDescription": "Covered porches, pergolas and screened enclosures in Monroe and West Monroe, Louisiana. Outdoor space built to be usable in summer.",
+      "service": "Covered porches, pergolas and screened enclosures",
+      "sections": [
+        {
+          "kicker": "Why cover it at all",
+          "heading": "An uncovered deck has a short season here.",
+          "body": "A deck in full sun is pleasant for a few months and unusable for the rest, which is how expensive outdoor space ends up being looked at through a window. Cover changes the arithmetic: shade makes afternoons workable, a roof makes a shower a non-event, and screen makes evenings possible without being eaten alive. Most people who build a deck here and do not cover it end up asking about cover within a couple of summers, which is worth knowing while the framing is still a drawing."
+        },
+        {
+          "kicker": "Pergola, roof or screen",
+          "heading": "Three different problems.",
+          "body": "A pergola filters sun and defines the space while leaving it open — it will not keep rain off. A solid roof handles sun and rain both and darkens whatever is behind it, so the effect on the room inside is worth thinking about. A screened enclosure is the one that solves mosquitoes, and in this part of the state that is often the deciding factor rather than a nice extra. They can be combined, and the right answer starts from which month of the year you are trying to reclaim."
+        },
+        {
+          "kicker": "Attaching to the house",
+          "heading": "This is where it gets structural.",
+          "body": "Anything with a roof puts real load on the structure and has to be tied to the house properly, flashed so water runs out rather than in, and supported on footings sized for the weight. Cover is not a deck with posts added — it is a building, and it draws more attention from inspectors than a deck does for good reason. It is also much cheaper to design in from the start than to retrofit onto a deck that was never framed to carry it."
+        }
+      ],
+      "ctaHeadline": "Want the space usable in summer?"
+    },
+    {
+      "slug": "monroe",
+      "navLabel": "Monroe",
+      "kicker": "Monroe",
+      "heading": "Deck builders in Monroe.",
+      "intro": "Custom decks, porches and repair work across Monroe and the surrounding area.",
+      "seoTitle": "Deck Builders Monroe LA | Custom Decks & Repair",
+      "seoDescription": "Deck building and repair in Monroe, Louisiana. Custom wood and composite decks, covered porches, pergolas and deck restoration.",
+      "service": "Deck building in Monroe",
+      "sections": [
+        {
+          "kicker": "Building here",
+          "heading": "The climate sets the spec.",
+          "body": "Long stretches above ninety, standing humidity, and spring rain that arrives all at once. Those three between them explain most of what separates a deck that lasts here from one that does not, and they are why a build detailed for a drier climate does not translate. Drainage across the frame, hardware rated for treated lumber, footings that go deep enough — none of it is exotic, but all of it is the difference between a deck that is fine in ten years and one that is soft in four."
+        },
+        {
+          "kicker": "Older properties",
+          "heading": "What the house can carry matters.",
+          "body": "Plenty of Monroe housing stock predates current framing practice, and attaching a deck — especially a covered one — to an older house means paying attention to what is actually behind the siding at the ledger. That connection carries the load and is where deck failures concentrate. It is a short check on site and it decides how the deck gets attached, or whether it stands free of the house instead."
+        },
+        {
+          "kicker": "Yards",
+          "heading": "Slope and soil, before anything else.",
+          "body": "What the ground does under a deck decides the footings, and footings decide the deck. Soft ground, a slope, or a spot that stays wet after rain all change the approach before a single board is priced. It is also why a number given over the phone moves once somebody has walked the yard — not a sales tactic, just the part that cannot be seen from a photograph."
+        }
+      ],
+      "ctaHeadline": "Building in Monroe?"
+    },
+    {
+      "slug": "west-monroe",
+      "navLabel": "West Monroe",
+      "kicker": "West Monroe",
+      "heading": "Deck builders in West Monroe.",
+      "intro": "Decks, covered porches and repair work across West Monroe, Sterlington and Ouachita Parish.",
+      "seoTitle": "Deck Builders West Monroe LA | Custom Decks & Repair",
+      "seoDescription": "Deck building and repair in West Monroe and Sterlington, Louisiana. Custom wood and composite decks, covered porches and restoration.",
+      "service": "Deck building in West Monroe",
+      "sections": [
+        {
+          "kicker": "Local ground",
+          "heading": "It holds water.",
+          "body": "Ouachita Parish soil stays wet, and a post set into ground that holds water has a harder life than the same post on dry, firm soil. That shapes footing depth and how the frame is detailed to drain. Where a yard has a low spot, that is worth identifying before the deck is laid out rather than discovering it the first heavy week — a deck can be positioned around a drainage problem far more easily than it can be moved afterwards."
+        },
+        {
+          "kicker": "Bigger lots",
+          "heading": "More room changes what is worth building.",
+          "body": "Out through West Monroe and toward Sterlington the lots open up, and that changes the sensible answer. There is room for multi-level layouts, for a covered section and an open section, and for the deck to relate to the yard rather than fill it. It also means access for materials is usually straightforward, which is not always true on a tight town lot."
+        },
+        {
+          "kicker": "Near the water",
+          "heading": "Different rules can apply.",
+          "body": "Properties on or near water can carry requirements that an ordinary back garden does not — setbacks, and sometimes permitting that takes longer. Worth raising early rather than after a design is settled, because it can change what is buildable and where. Checking costs a phone call; finding out afterwards costs a redesign."
+        }
+      ],
+      "ctaHeadline": "Building in West Monroe?"
+    },
+    {
+      "slug": "contact",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Tell us about the project.",
+      "intro": "A few details get to a useful answer faster than a form full of boxes.",
+      "seoTitle": "Contact | Deck Builders Monroe LA",
+      "seoDescription": "Request a quote for deck building, repair or a covered porch in Monroe, West Monroe and Ouachita Parish, Louisiana.",
+      "service": "Quote requests",
+      "sections": [
+        {
+          "kicker": "What helps",
+          "heading": "Four things.",
+          "body": "Roughly what size you are thinking, how far off the ground it will sit, what the ground does under it, and whether it ties into the house. Even rough answers narrow things considerably. If it is a repair rather than a build, the most useful thing you can tell us is whether anything moves — the railing, the middle of a span, the connection to the house — because that is what separates a surface job from a structural one."
+        },
+        {
+          "kicker": "Photographs",
+          "heading": "Worth more than a description.",
+          "body": "A few pictures answer what is difficult to put into words: how the yard slopes, how the existing deck is holding up, where the door comes out, how tight the access is. For a repair, a photo taken from underneath is the single most useful one you can send, because that is where the answer usually is."
+        },
+        {
+          "kicker": "Before work starts",
+          "heading": "Two things worth checking.",
+          "body": "Whether your build needs a permit — the rules differ between Monroe, West Monroe and the unincorporated parish — and whether an HOA has anything to say about materials, height or railings. Both are much easier to sort out before a design is settled than after, and neither is something to find out about halfway through."
+        }
+      ],
+      "ctaHeadline": "Ready to talk it through?"
+    }
+  ]
 }

@@ -43,6 +43,14 @@ const RECIPIENTS = {
     business: "Martins Trash Removal and Demolition",
     domain: "martins-trash-removal-demolition.invalid",
   },
+  "deck-builder-monroe": {
+    // INTERIM. Leads go to Mitch until the contractor address is supplied.
+    // A lead reaching the portfolio owner is recoverable; one reaching
+    // nowhere is not.
+    to: "mitch@whitecoat-md.com",
+    business: "Deck Builders Monroe",
+    domain: "deckbuildermonroe.com",
+  },
 };
 
 const FIELDS = ["name", "phone", "email", "message", "service", "city"];

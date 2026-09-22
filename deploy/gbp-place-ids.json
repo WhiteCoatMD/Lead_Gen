@@ -43,30 +43,17 @@
   },
   {
     "slug": "deck-builder-monroe",
-    "placeId": null,
+    "placeId": "ChIJKZcZrns5LoYRV3E3jdUcUTo",
     "searched": [
       "318-726-2853",
       "deckbuildermonroe.com"
     ],
-    "lookup": {
-      "checked": "2026-09-22",
-      "result": "name match only — needs human confirmation",
-      "candidates": 11,
-      "near": [
-        {
-          "id": "ChIJKZcZrns5LoYRV3E3jdUcUTo",
-          "name": "Deck Builders Monroe",
-          "phone": "(318) 598-4535",
-          "status": "OPERATIONAL"
-        },
-        {
-          "id": "ChIJKZcZrns5LoYRV3E3jdUcUTo",
-          "name": "Deck Builders Monroe",
-          "phone": "(318) 598-4535",
-          "status": "OPERATIONAL"
-        }
-      ]
-    }
+    "via": "owner confirmed 2026-09-22",
+    "name": "Deck Builders Monroe",
+    "phone": "(318) 598-4535",
+    "status": "OPERATIONAL",
+    "website": null,
+    "note": "Mitch confirmed 2026-09-22 this is his listing. The automatic resolver refused it because the profile carries no website and its phone differs from the site's - by design, since name alone is not evidence. Owner confirmation is.\nTO FIX ON THE PROFILE: no website set, so nothing links the listing to deckbuildermonroe.com. Phone on the profile is (318) 598-4535 while the site publishes 318-726-2853 - one of those is the NAP number and they need to agree."
   },
   {
     "slug": "flooring-monroe",
@@ -119,7 +106,7 @@
     "status_was": "CLOSED_PERMANENTLY",
     "status_changed_observed": "2026-09-22",
     "hours_reported": "8:00 AM - 6:00 PM, seven days (submitted 2026-09-22, pending Google review)",
-    "note": "Listing was recorded CLOSED_PERMANENTLY on 2026-09-21 and found live and publishing Open 24 hours on 2026-09-22. Hours changed to 8:00 AM - 6:00 PM seven days at Mitch's instruction, submitted via the profile editor and pending Google review. Profile is managed by scaffoldinglosangeles@gmail.com, NOT the admin@shed-sync.com account that holds Bed Sync and Shed Sync - worth knowing before looking for it again. Still unanswered: who flipped it from closed to open, and when.",
+    "note": "Mitch reopened this listing himself; it had been recorded CLOSED_PERMANENTLY on 2026-09-21. Hours changed from Open 24 hours to 8:00 AM - 6:00 PM seven days on 2026-09-22 at his instruction. Profile is managed by scaffoldinglosangeles@gmail.com, not admin@shed-sync.com.",
     "hours_seen": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours",
     "gbp_account": "scaffoldinglosangeles@gmail.com"
   },
