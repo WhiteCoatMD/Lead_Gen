@@ -60,10 +60,38 @@ missing address logged as a defect to fix, which was exactly backwards.
 ### 3. MapQuest
 - Listed as "Twin City Fences" → **Twin City Fence**.
 
-### 4. YouTube
-- Channel named "Twin City Fences" → **Twin City Fence**.
-- This one is wholly owned, so it is the easiest correction on the list and
-  needs nobody's approval.
+### 4. YouTube — I had this wrong, and it needs more than a rename
+
+Checked directly at `youtube.com/@twincityfence`. The channel title is already
+**"Twin City Fence "** — singular, correct, but with a **trailing space**.
+Citations key on exact-string matching, so the space is worth removing even
+though it looks like nothing.
+
+The real problem is that the channel carries **no NAP at all**:
+
+| Field | Now |
+|---|---|
+| Description | **empty** |
+| Website link | **none** |
+| Phone | **not shown** |
+| Location | **not shown** |
+
+As a citation it currently contributes nothing. My audit listed it as a name
+fix based on a Google search snippet reading "Twin City Fences"; the live
+channel says otherwise. Checking the source beat trusting the snippet.
+
+**Description to paste** — every claim in it is already published on the site
+or the profile:
+
+> Twin City Fence builds wood privacy, chain-link, split rail, ornamental,
+> farm and commercial fencing across Monroe, West Monroe and Ouachita Parish,
+> Louisiana. We also fit gates, replace fences, and repair storm damage.
+>
+> Call 318-351-2539
+> twincityfences.com
+
+Also set the channel link to `https://twincityfences.com` and the business
+email to `twincityfences@gmail.com`. No street address, for the reason above.
 
 ### 5. Facebook — name is right
 - Listed as "Twin City Fence | West Monroe LA". Name matches, phone matches.
@@ -78,7 +106,7 @@ missing address logged as a defect to fix, which was exactly backwards.
 
 | | Now | After corrections |
 |---|---|---|
-| Name matches the profile | 2 of 6 | 6 of 6 |
+| Name matches the profile | 3 of 6 | 6 of 6 |
 | Street address consistent with the profile | 2 of 6 | 6 of 6 |
 | Phone matches | 6 of 6 | 6 of 6 |
 
