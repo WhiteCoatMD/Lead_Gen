@@ -56,6 +56,42 @@
       "clicks": 0,
       "impressions": 0,
       "position": null
+    },
+    {
+      "path": "/farm-fencing",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/commercial-fencing",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/gate-installation",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/fence-replacement",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/storm-damage",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/west-monroe",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
     }
   ]
 }
