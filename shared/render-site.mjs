@@ -2,6 +2,47 @@ import { businessId, openingHoursSpecification, postalAddress, primaryImage, ser
 import { renderLeadForm, LEAD_FORM_SCRIPT } from "./render-form.mjs";
 
 export const jsonLd = (schema) => JSON.stringify(schema).replace(/</g, "\\u003c");
+
+const ANALYTICS_SCRIPT = `
+(function(){
+  var site = document.documentElement.getAttribute("data-site") || "";
+  function send(type, extra){
+    var payload = JSON.stringify(Object.assign({
+      type: type, site: site, path: location.pathname, ref: document.referrer
+    }, extra || {}));
+    // A call click navigates away immediately and cancels a normal fetch.
+    // sendBeacon is the only thing that reliably survives the handoff.
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon("/api/event", new Blob([payload], {type:"application/json"}));
+    } else {
+      fetch("/api/event", {method:"POST", headers:{"Content-Type":"application/json"}, body:payload, keepalive:true}).catch(function(){});
+    }
+  }
+
+  send("page_view");
+
+  // Every tel: link on the page, however the visitor reaches it.
+  document.addEventListener("click", function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if (a) send("call_click");
+  }, true);
+
+  var form = document.querySelector(".lead-form");
+  if (form) {
+    // Fires once, and only if the form actually came into view. Gives a
+    // denominator for the submit rate rather than guessing at one.
+    if (window.IntersectionObserver) {
+      var seen = false;
+      var io = new IntersectionObserver(function(entries){
+        if (!seen && entries.some(function(x){ return x.isIntersecting; })) { seen = true; send("form_view"); io.disconnect(); }
+      }, {threshold: 0.4});
+      io.observe(form);
+    }
+    form.addEventListener("submit", function(){ send("form_submit"); });
+  }
+})();
+`;
+
 const esc = (value = "") => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 export const escapeHtml = esc;
 export const phoneHref = (phone = "") => `tel:+1${String(phone).replace(/\D/g, "").slice(-10)}`;
@@ -82,7 +123,7 @@ export function renderSite(site, slug) {
     : `<span class="brand-text">${esc(site.name)}</span>`;
 
   return `<!doctype html>
-<html lang="en"><head>
+<html lang="en" data-site="${esc(slug || "")}"><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${esc(site.seoTitle)}</title>
   <meta name="description" content="${esc(site.seoDescription)}">
@@ -126,6 +167,6 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
     ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
   </main>
   <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>
-  ${site.phone ? `<a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}
+  ${site.phone ? `<a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}
 </body></html>`;
 }
