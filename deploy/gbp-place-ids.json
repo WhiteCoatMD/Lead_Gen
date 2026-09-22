@@ -25,7 +25,8 @@
       "result": "not found in Places",
       "candidates": 0,
       "near": []
-    }
+    },
+    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified, listed as 'Chicago EIFS and Stucco, LLC'"
   },
   {
     "slug": "crack-rx",
@@ -53,7 +54,14 @@
     "phone": "(318) 598-4535",
     "status": "OPERATIONAL",
     "website": null,
-    "note": "Mitch confirmed 2026-09-22 this is his listing. The automatic resolver refused it because the profile carries no website and its phone differs from the site's - by design, since name alone is not evidence. Owner confirmation is.\nTO FIX ON THE PROFILE: no website set, so nothing links the listing to deckbuildermonroe.com. Phone on the profile is (318) 598-4535 while the site publishes 318-726-2853 - one of those is the NAP number and they need to agree."
+    "note": "Mitch confirmed 2026-09-22 this is his listing. The automatic resolver refused it because the profile carries no website and its phone differs from the site's - by design, since name alone is not evidence. Owner confirmation is.\nTO FIX ON THE PROFILE: no website set, so nothing links the listing to deckbuildermonroe.com. Phone on the profile is (318) 598-4535 while the site publishes 318-726-2853 - one of those is the NAP number and they need to agree.",
+    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified",
+    "category_primary": "Deck builder",
+    "category_secondary": "Fence contractor",
+    "todo": [
+      "SET THE WEBSITE to https://deckbuildermonroe.com — the profile has no website at all, so nothing connects the listing to the site. This is the single highest-value edit on it.",
+      "Reconcile the phone: profile says (318) 598-4535, site publishes 318-726-2853. One of them is the NAP number and they have to agree."
+    ]
   },
   {
     "slug": "flooring-monroe",
@@ -67,7 +75,8 @@
       "result": "not found in Places",
       "candidates": 20,
       "near": []
-    }
+    },
+    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified, listed as 'Flooring and Shed Sync Monroe', 1400 Forsythe Ave Monroe LA 71201"
   },
   {
     "slug": "lake-charles-fences",
@@ -108,7 +117,7 @@
     "hours_reported": "8:00 AM - 6:00 PM, seven days (submitted 2026-09-22, pending Google review)",
     "note": "Mitch reopened this listing himself; it had been recorded CLOSED_PERMANENTLY on 2026-09-21. Hours changed from Open 24 hours to 8:00 AM - 6:00 PM seven days on 2026-09-22 at his instruction. Profile is managed by scaffoldinglosangeles@gmail.com, not admin@shed-sync.com.",
     "hours_seen": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours",
-    "gbp_account": "scaffoldinglosangeles@gmail.com"
+    "gbp_account": "scaffoldinglosangeles@gmail.com (authuser=3) — Verified"
   },
   {
     "slug": "seacoast-hurricane-shutters",
@@ -154,7 +163,8 @@
           "status": "OPERATIONAL"
         }
       ]
-    }
+    },
+    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — VERIFICATION REQUIRED, not yet verified"
   },
   {
     "slug": "towing-dallas",
