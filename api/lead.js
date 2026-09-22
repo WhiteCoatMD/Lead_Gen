@@ -24,6 +24,16 @@ const RECIPIENTS = {
     business: "Twin City Fence",
     domain: "twincityfences.com",
   },
+  "towing-dallas": {
+    // NEEDS CONFIRMING. This is the Google account that owns the Search
+    // Console property, which makes it the best available guess and still a
+    // guess. A lead delivered to the wrong inbox is a lost job, so the first
+    // test send goes here deliberately — if it lands somewhere unexpected,
+    // that is the answer.
+    to: "towtruckprosdallas@gmail.com",
+    business: "24 Hour Towing Dallas",
+    domain: "dallastowtrucks.com",
+  },
 };
 
 const FIELDS = ["name", "phone", "email", "message", "service", "city"];

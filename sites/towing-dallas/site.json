@@ -275,5 +275,13 @@
       ],
       "ctaHeadline": "Need a truck?"
     }
-  ]
+  ],
+  "leadForm": {
+    "kicker": "Not an emergency?",
+    "heading": "Send us the details.",
+    "intro": "If you need a truck now, call — it is faster. Use this for a quote, a scheduled tow, or a junk car you want gone.",
+    "placeholder": "What the vehicle is, where it is, and where it needs to go.",
+    "submit": "Send details",
+    "fineprint": "For roadside emergencies please call. Stay with your vehicle only if it is safe to do so."
+  }
 }
