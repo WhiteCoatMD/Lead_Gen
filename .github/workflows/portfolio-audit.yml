@@ -56,6 +56,21 @@ jobs:
         continue-on-error: true
         run: npm run audit | tee audit.txt
 
+      # Asks, of every SEO-target site, whether anything on the page is a claim
+      # nobody can back: a licence, a warranty, a founding year, a price, an
+      # arrival time. This is how "over 20 years experience" sat on a listing
+      # for months, and how a five-year parts warranty reached SeaCoast.
+      #
+      # Informational for now, deliberately. It currently finds six real claims
+      # across three sites and would turn this run red every Monday until their
+      # owners are asked. A permanently red gate is a gate nobody reads. Once
+      # those six are confirmed or removed, drop continue-on-error and let it
+      # bite.
+      - name: Unverifiable claims
+        if: always()
+        continue-on-error: true
+        run: npm run claims | tee -a audit.txt
+
       - name: Live portfolio audit (network)
         if: always()
         run: npm run audit:live | tee -a audit.txt

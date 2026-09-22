@@ -1,0 +1,15 @@
+{
+  "_comment": "Claims a business has confirmed it can back, per site. Everything in scripts/check-claims.mjs BANNED is refused everywhere unless it is listed here. Confirmations are per business and never transfer between sites: a credential verified for one operator says nothing about another. Record who confirmed it and when, so a future reader can tell evidence from assumption.",
+  "_how_to_add": "Ask the owner about that specific site. If the answer is yes, add the kind to its 'allow' array with a dated note. If the answer is unclear, leave it out - the copy is rewritten to avoid the claim instead, which is what happened on Dallas before it was confirmed.",
+  "sites": {
+    "towing-dallas": {
+      "allow": [
+        "credential"
+      ],
+      "note": "Mitch confirmed 2026-09-22 that drivers are licensed and the operation is insured. Stripped on 2026-09-22 while unverified, restored the same day once confirmed."
+    }
+  },
+  "_allowed_everywhere": {
+    "free-estimate": "An offer the owner controls rather than a credential, so it is not in BANNED at all. Noted here because it was raised, checked and deliberately left out."
+  }
+}

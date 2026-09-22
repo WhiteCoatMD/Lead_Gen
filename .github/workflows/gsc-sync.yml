@@ -1,0 +1,87 @@
+name: Search Console sync
+
+# Pulls Search Console performance for every connected property and commits the
+# result, every Monday.
+#
+# The commit is the point. gsc-sync.mjs overwrites deploy/gsc/ with a rolling
+# 480-day window each run, so a run that only printed to a log would answer
+# "how is it doing" and never "is it getting better" -- and the second question
+# is the one that decides where effort goes. Committing turns each Monday into
+# a diffable snapshot, so `git log -p deploy/gsc/twin-city-fences.json` is the
+# ranking history. No database, no service, no dependency.
+#
+# Runs an hour after the portfolio audit rather than alongside it, so that if
+# both break on the same morning it is obvious which one broke.
+
+on:
+  schedule:
+    - cron: "0 14 * * 1" # Mondays 14:00 UTC — 9am America/Chicago (8am CDT)
+  workflow_dispatch:
+
+permissions:
+  contents: write # it commits deploy/gsc/
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Zero dependencies, so there is no install step and nothing to cache.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      # The service-account key is written OUTSIDE the workspace on purpose.
+      # RUNNER_TEMP is not part of the checkout, so there is no path by which a
+      # later `git add` could pick the key up, however the job changes.
+      #
+      # A missing secret skips the run rather than failing it: an absent
+      # optional credential is a configuration state, not a portfolio problem,
+      # and a workflow that goes red every Monday for a known reason is a
+      # workflow everybody learns to ignore.
+      - name: Check for credentials
+        id: creds
+        env:
+          KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "GSC_SERVICE_ACCOUNT_KEY is not set — skipping." >> "$GITHUB_STEP_SUMMARY"
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          else
+            printf '%s' "$KEY" > "$RUNNER_TEMP/gsc-key.json"
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Sync Search Console
+        if: steps.creds.outputs.ready == 'true'
+        env:
+          GSC_KEY_FILE: ${{ runner.temp }}/gsc-key.json
+        run: npm run gsc | tee gsc.txt
+
+      # --quiet exits non-zero when there is something to commit, so the check
+      # reads backwards from how it looks. A week with no change is normal and
+      # must not fail the run.
+      - name: Commit the snapshot
+        if: steps.creds.outputs.ready == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add deploy/gsc
+          if git diff --cached --quiet; then
+            echo "No change in Search Console data this week."
+          else
+            git commit -m "Search Console snapshot $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Summary
+        if: always() && steps.creds.outputs.ready == 'true'
+        run: |
+          {
+            echo '## Search Console sync'
+            echo ''
+            echo '```'
+            cat gsc.txt || echo 'sync produced no output'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
