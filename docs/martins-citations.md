@@ -75,6 +75,63 @@ ended up with, though for a different reason.
 That also changes the citation work: the address should not be added anywhere
 new, even where a directory asks for one.
 
+## Do citations still work without a street address?
+
+Yes, and the reason is worth understanding because it changes what to spend
+effort on.
+
+**Google still knows the address.** Registering as a service-area business does
+not mean having no address — the address is given to Google at verification and
+then hidden from public display. Proximity to a searcher is still calculated
+from it. What changes is only what the public NAP shows.
+
+**So the matching keys become name + phone + city.** Phone is the strongest of
+the three because it is unique; a name can be spelled six ways and a city is
+shared with every other business in it. That is exactly why the phone change
+touches every listing and why it is the bulk of the correction work. A complete,
+valid NAP for a service-area business is name + phone + service area, with no
+street address. It is not a degraded citation — it is the correct shape.
+
+**A wrong citation is negative; a missing one is merely neutral.** This is the
+part that decides priority. The Bordelonville listing and the old phone number
+are actively feeding Google conflicting data about which entity this is. A
+directory Martins has never been listed in is doing no harm at all. Correcting
+what exists beats adding to it, every time.
+
+### What citations actually contribute
+
+They are a trust floor, not a growth lever. Going from nothing to a consistent
+core set helps establish the entity. Going from twenty listings to a hundred
+does very little. For a service-area business the things that move local ranking,
+in rough order of weight:
+
+1. GBP primary category
+2. Proximity from the (hidden) address to the searcher — not adjustable
+3. Reviews: count, recency, velocity
+4. GBP completeness and activity
+5. On-site relevance
+6. Citations
+
+Citations are real, and they are sixth. Budget effort accordingly.
+
+### The service-area list does not create local-pack rankings
+
+Worth stating plainly because it is the most common misunderstanding. Listing
+Alexandria, Pineville and Marksville as service areas — on the GBP, on citations,
+or on the website — does not put the business into those local packs. Proximity
+does, and proximity is measured from the real location. Naming fifty towns gets
+fifty mentions and zero additional pack placements.
+
+What the city pages *do* earn is **organic** ranking for queries like "land
+clearing Alexandria", which is a separate result set from the map pack and worth
+having on its own terms. Both matter; they are just won differently.
+
+For Martins specifically the geography is favourable: Pineville and Alexandria
+are eight to twelve miles from Deville, which is comfortably inside normal pack
+range. Marksville at roughly thirty miles is marginal for the pack, which makes
+that page primarily an organic play. That is a reason to keep the page, not to
+drop it — but it should not be expected to produce map visibility.
+
 ## The canonical record
 
 Everything below has to match this once the fields are final. It is the Google
