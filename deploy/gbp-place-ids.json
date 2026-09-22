@@ -65,7 +65,11 @@
     "address": "3515 S Norton Ave, Los Angeles, CA 90018, USA",
     "phone": "(323) 498-3395",
     "website": "http://www.scaffoldingrentalusa.com/",
-    "status": "CLOSED_PERMANENTLY"
+    "status": "OPERATIONAL",
+    "status_was": "CLOSED_PERMANENTLY",
+    "status_changed_observed": "2026-09-22",
+    "hours_reported": "Open 24 hours",
+    "note": "Mitch observed 2026-09-22 that the listing is live again and showing Open 24 hours, having been recorded CLOSED_PERMANENTLY on 2026-09-21. Nobody has said who made the change. Two things to settle: who has edit access, and whether 24 hours is true - scaffolding hire is not usually a 24-hour trade, and hours that are wrong produce calls nobody answers."
   },
   {
     "slug": "seacoast-hurricane-shutters",

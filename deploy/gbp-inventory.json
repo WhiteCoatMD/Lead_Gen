@@ -20,13 +20,21 @@
       "gbp_name": "Scaffolding Rental Los Angeles",
       "gbp_phone": "(323) 498-3395",
       "gbp_address": "3515 S Norton Ave, Los Angeles, CA 90018, USA",
-      "status": "CLOSED_PERMANENTLY",
+      "status": "OPERATIONAL",
       "matched_on": "domain and phone",
       "nap_notes": [
         "URGENT: the profile is flagged CLOSED_PERMANENTLY. A closed GBP is suppressed in Maps and local packs, so this property currently cannot rank locally no matter what the website does.",
         "Phone matches the site exactly (323-498-3395), so the profile is definitely ours rather than a similarly named business.",
         "Reopening is done from the GBP dashboard and needs the owning Google account.",
         "The GBP publishes a street address the website does not carry."
+      ],
+      "status_was": "CLOSED_PERMANENTLY",
+      "status_changed_observed": "2026-09-22",
+      "gbp_hours": "Open 24 hours",
+      "open_questions": [
+        "Who changed this from closed to open? If it was not Mitch, someone else holds edit access.",
+        "Is 'Open 24 hours' true? Scaffolding hire is not usually a 24-hour trade. Wrong hours generate calls at 3am that go unanswered, and unanswered calls cost more than narrow hours do.",
+        "The website publishes no hours at all, so site and profile now disagree by omission rather than by contradiction. Decide the real hours, then put the same ones in both."
       ]
     },
     "chicago-eifs-stucco": {
