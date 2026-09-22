@@ -23,18 +23,18 @@ looks like. Impressions on page two are largely never seen.
 |---|---|---|
 | 1 | Domain | `dallastowtrucks.com`, healthy, HTTPS |
 | 2 | Website | Live, 11 pages, rebuilt 2026-09-21 |
-| 3 | GBP | **NOT FOUND — see below** |
+| 3 | GBP | **EXISTS AND IS VERIFIED** — confirmed by owner 2026-09-21, kgmid `/g/11n0wm6t8m` |
 | 4 | Name consistency | **SETTLED 2026-09-21: 24 Hour Towing Dallas.** The site already matches |
 | 5 | Phone | `469-457-4462`, consistent site-wide. Returns nothing in Places |
 | 6 | Service area | Dallas, Fort Worth, Irving, DFW |
 | 7 | Previous rankings | 16 months of data, analysed below |
 | 8 | Search Console | Connected, domain property, service account owner |
-| 9 | Citations | Not yet audited |
+| 9 | Citations | Yelp, ShowMeLocal, Sensible Driver, Facebook, preferredprofessionals, PRLog — all carry the right phone and name |
 | 10 | Reviews | Unknown — depends on the GBP question |
 | 11 | Calls / leads | **Unknown, and unknowable — no tracking exists** |
 | 12 | Fulfilment | **Needs the owner** |
 | 13 | Genuinely 24 hours | **Needs the owner** — owner has said leave the claim alone |
-| 14 | Dallas eligible market | **Needs the GBP answer first** |
+| 14 | Dallas eligible market | Yes — the profile is verified in Dallas |
 
 ## What the search data actually says
 
@@ -155,9 +155,45 @@ with one entry in the recipients map. That is the cheapest large win available.
    entry; no new code.
 4. **Answer the heavy-duty question.** 30,140 impressions either open up or
    stay permanently off-limits.
-5. **Then, and only then, work the 4–20 band.** `tow truck near me` at
-   position 11.1 with 32,544 impressions is the most valuable single target in
-   the entire portfolio.
+5. **The Google Business Profile, not the 4–20 band.** See the correction
+   below — this replaces what this section originally said.
+
+## CORRECTION: organic rank is not the lever here
+
+The first version of this audit recommended working the position 4–20 band,
+on the reasoning that page two to page one is where movement pays. The CTR
+data in this same property refutes it:
+
+| Position band | Impressions | Clicks | CTR |
+|---|---|---|---|
+| 1–3 | 49 | 2 | 4.08% |
+| 4–7 | 4,928 | 20 | **0.41%** |
+| 8–10 | 20,025 | 47 | **0.23%** |
+| 11–15 | 55,825 | 177 | **0.32%** |
+| 16–20 | 4,118 | 5 | 0.12% |
+
+**CTR is flat across the bands and roughly ten times below what those
+positions normally earn.** Position 4–7 should return 3–8%; it returns 0.41%.
+
+That is the signature of a search results page where ads and the three-result
+local pack consume the clicks before an organic result is visible at all —
+which is exactly what "tow truck near me" looks like on a phone. Organic
+position 4 on that query is a long way down the screen.
+
+So moving position 11 to position 4 would take CTR from 0.32% to 0.41%. On
+32,544 impressions that is a few dozen extra clicks, for a great deal of work.
+
+**Getting into the three-result local pack is worth more than every organic
+improvement available on this property combined**, and that is won on the
+Google Business Profile: categories, services, description, photos, reviews
+and proximity. Reviews in particular.
+
+The profile is **verified**, confirmed by the owner 2026-09-21, so this is
+available rather than hypothetical.
+
+The website still matters — it is what the profile links to, it feeds
+relevance, and it serves the non-local queries like "tow truck dallas" where
+intent is less proximity-driven. It is simply not where the next win is.
 
 ## What I would not do
 
