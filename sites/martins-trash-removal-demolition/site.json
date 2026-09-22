@@ -1,0 +1,630 @@
+{
+  "name": "Martins Trash Removal and Demolition",
+  "domain": "martins-trash-removal-demolition.invalid",
+  "phone": "318-308-4577",
+  "email": "",
+  "city": "Deville",
+  "state": "Louisiana",
+  "schemaType": "GeneralContractor",
+  "accent": "#c2410c",
+  "accentDark": "#9a3412",
+  "assets": [],
+  "kicker": "Central Louisiana land services",
+  "headline": "Land clearing, mobile-home removal and demolition.",
+  "intro": "Large property projects across Deville, Pineville, Alexandria and Marksville — brush and lot clearing, mobile-home removal, structure demolition and site cleanup. Complete projects and large-volume removal, not single-item pickups.",
+  "sectionKicker": "What we take on",
+  "sectionHeadline": "Whole projects, start to cleared.",
+  "about": "Martins works out of Deville and covers Rapides and Avoyelles Parish and the communities around them. The work is land clearing, mobile-home and structure removal, demolition and site preparation — jobs that need machines on the property rather than a truck and a trailer. Equipment is owned rather than hired in, which is what makes it practical to take a property from overgrown or built-on to cleared and ready in one go.",
+  "servicesHeadline": "Land services for property owners, builders and landowners.",
+  "serviceAreas": [
+    "Deville",
+    "Pineville",
+    "Alexandria",
+    "Ball",
+    "Tioga",
+    "Libuse",
+    "Woodworth",
+    "Rapides Parish",
+    "Marksville",
+    "Hessmer",
+    "Avoyelles Parish"
+  ],
+  "areaHeadline": "Working across Central Louisiana.",
+  "ctaHeadline": "Tell us about the property.",
+  "ctaCopy": "Call to talk through the project, or send the details and photographs and we will come back to you.",
+  "footerLine": "Land clearing, mobile-home removal and demolition in Deville, Pineville, Alexandria and Central Louisiana",
+  "seoTitle": "Land Clearing & Demolition Deville LA | Martins",
+  "seoDescription": "Land clearing, mobile-home removal, demolition and site preparation across Deville, Pineville, Alexandria and Central Louisiana. Large property projects and complete removal.",
+  "leadForm": {
+    "kicker": "Request an estimate",
+    "heading": "Tell us about the property.",
+    "intro": "The more you can say about acreage, access and what is on the land, the closer the first answer will be. Photographs help more than anything else.",
+    "placeholder": "Roughly how much land or what structure, how a machine would get in, what is on it now, and when you are hoping to start.",
+    "submit": "Request an estimate",
+    "fineprint": "We use this to get back to you about the project. Nothing else."
+  },
+  "services": [
+    {
+      "title": "Mobile-Home Removal",
+      "description": "Single-wide and double-wide removal, demolition and full debris haul-off.",
+      "link": "mobile-home-removal"
+    },
+    {
+      "title": "Land Clearing",
+      "description": "Brush, undergrowth and lot clearing for acreage, building sites and overgrown property.",
+      "link": "land-clearing"
+    },
+    {
+      "title": "Structure Demolition",
+      "description": "Sheds, outbuildings, barns and small structures taken down and hauled away.",
+      "link": "structure-demolition"
+    },
+    {
+      "title": "Site Preparation",
+      "description": "Getting a building site cleared, levelled and ready for the next trade.",
+      "link": "site-preparation"
+    },
+    {
+      "title": "Forestry Mulching",
+      "description": "Clearing that leaves the material on the ground as mulch instead of hauling it out.",
+      "link": "forestry-mulching"
+    },
+    {
+      "title": "Concrete & Foundation Removal",
+      "description": "Slabs, footings, old foundations and pads broken out and removed.",
+      "link": "concrete-removal"
+    },
+    {
+      "title": "Stump Removal",
+      "description": "Stumps taken out rather than ground down, where the site needs to be built on.",
+      "link": "stump-removal"
+    },
+    {
+      "title": "Culvert & Drainage",
+      "description": "Culvert setting, driveway crossings and drainage work on rural property.",
+      "link": "culvert-and-drainage"
+    },
+    {
+      "title": "Storm Debris Removal",
+      "description": "Large-volume debris clearance after wind, flooding or storm damage.",
+      "link": "storm-debris-removal"
+    }
+  ],
+  "faqKicker": "Common questions",
+  "faqHeading": "Before you call.",
+  "faqs": [
+    {
+      "q": "What decides the cost of a land-clearing job?",
+      "a": "Acreage, what is growing on it, and how a machine gets in. An acre of light brush and an acre of mature hardwood with a soft approach are different jobs even though the acreage is identical. What you want left behind matters too — mulched in place, pushed into piles, or hauled off the property entirely. This is why a number given over the phone without seeing the ground tends to move once someone walks it."
+    },
+    {
+      "q": "Do you take small jobs?",
+      "a": "No. Martins is set up for complete projects and large-volume removal — clearing, structure removal, demolition and site work. Single-item pickups, one appliance, a couple of bags or a small garage cleanout are not work we take on. If that is what you need, a local junk-removal service will do it faster and cheaper than we could."
+    },
+    {
+      "q": "Do you haul the debris away, or leave it?",
+      "a": "Either, and it is worth deciding early because it changes the job. Mulching leaves the material on the ground as cover, which suits pasture and trails. Hauling it off leaves the site clean and ready to build on but adds loads and trips. Some sites want a mix — mulch the light material, haul the timber and the structural debris. Say which outcome you want when you call."
+    },
+    {
+      "q": "Can you get equipment onto my property?",
+      "a": "Usually, but access is the thing most likely to change the plan, so describe it honestly. What matters is the width of the approach, whether there is a gate or a cattle guard, what the ground does after rain, overhead lines, and whether a lowboy can turn in. A property that can only be reached across a neighbour is a different conversation again. A photograph of the approach answers this faster than a description."
+    },
+    {
+      "q": "What areas do you cover?",
+      "a": "The base is Deville, and the work runs across Rapides and Avoyelles Parish — Pineville, Alexandria, Ball, Tioga, Libuse, Woodworth, Marksville and Hessmer among them. Larger projects justify travelling further. If you are outside that and the job is a substantial one, ask rather than assuming."
+    },
+    {
+      "q": "Do you still do trash and junk hauling?",
+      "a": "Large-volume hauling, yes — demolition debris, post-clearing cleanup, storm debris and substantial dumping cleanups. That is the part of the original business that fits what we do now. Routine household pickup and single items are not."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "mobile-home-removal",
+      "navLabel": "Mobile-home removal",
+      "kicker": "Mobile-home removal",
+      "heading": "Mobile-home removal and demolition.",
+      "intro": "Single-wide and double-wide units taken off the property, with the debris, the blocks and the attached additions gone with them.",
+      "seoTitle": "Mobile Home Removal & Demolition Alexandria LA | Martins",
+      "seoDescription": "Mobile-home removal and demolition across Deville, Pineville, Alexandria and Central Louisiana. Single-wide and double-wide, debris and foundation removed.",
+      "service": "Mobile-home removal and demolition",
+      "sections": [
+        {
+          "kicker": "What the job includes",
+          "heading": "The unit and everything under it.",
+          "body": "Taking a mobile home off a property is rarely just the box. There are usually blocks or piers underneath, tie-downs, skirting, steps, and very often a deck, porch, awning or a room that was added later and is now structurally part of it. There may be a slab. Leaving any of that behind means the property is not actually clear and the next thing you want to do with it still cannot happen. The useful question when you call is not \"can you take the trailer\" but \"what do you want the ground to look like when we leave\" — because that is what decides the equipment and the number of loads."
+        },
+        {
+          "kicker": "Single-wide or double-wide",
+          "heading": "Width changes the whole approach.",
+          "body": "A single-wide is one unit and usually one trip. A double-wide is two halves joined on site, which means separating them again before anything moves, and roughly double the debris. Older units complicate it further: the materials are heavier, the structure has often lost integrity, and a home that has been sitting open for years may not hold together when it is lifted. None of that is a problem, but it is the difference between an afternoon and a proper project, and it is better established on the phone than discovered on the day."
+        },
+        {
+          "kicker": "Before we arrive",
+          "heading": "Utilities and ownership come first.",
+          "body": "Power, water, gas and sewer need to be disconnected before a unit can be touched, and that is arranged with the utility companies rather than by us. Septic is its own question — whether the tank stays, gets pumped, or comes out changes the job. On ownership: you will generally need to show the unit is yours to remove, and if there is a title, having it to hand saves a delay. If the home is older, raise it when you call. We will tell you what that means for the plan rather than guessing at it on a website."
+        },
+        {
+          "kicker": "Access",
+          "heading": "How the equipment gets in.",
+          "body": "Mobile homes tend to sit at the end of long drives, behind gates, on soft ground, or with trees that have grown in around them over twenty years. All of that is workable and all of it changes the approach. What helps most is knowing the width of the way in, whether the ground holds up after rain, what is overhead, and whether there is room to turn. A few photographs from the road to the unit answer this better than any description, and they are the single most useful thing you can send."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is it cheaper to move a mobile home than demolish it?",
+          "a": "It depends almost entirely on the age and condition of the unit. A newer home in sound condition may be worth relocating, and there are buyers who will take one away. An older unit that has been sitting, or has storm or water damage, usually will not survive the move and is cheaper to demolish and haul. If you are unsure which you have, say so — it is worth establishing before you commit to either."
+        },
+        {
+          "q": "What happens to the debris?",
+          "a": "It is hauled off the property to a facility that will take it. That is part of the job rather than something left for you to arrange, which matters because mobile-home debris is bulky and most disposal sites treat it differently from general waste. What you should end up with is clear ground, not a pile."
+        },
+        {
+          "q": "What about asbestos in an older unit?",
+          "a": "Older manufactured homes can contain materials that need handling under specific rules, and that is not something to guess at from a website or to deal with yourself. Tell us the age of the unit when you call and it gets assessed properly as part of planning the job. We are not going to give you a page of advice on it."
+        }
+      ],
+      "ctaHeadline": "Got a mobile home to clear?"
+    },
+    {
+      "slug": "abandoned-mobile-home-removal",
+      "navLabel": "Abandoned units",
+      "kicker": "Abandoned mobile homes",
+      "heading": "Abandoned mobile-home removal.",
+      "intro": "For inherited land, rental property and acreage with a unit on it that nobody has lived in for years.",
+      "seoTitle": "Abandoned Mobile Home Removal Central Louisiana | Martins",
+      "seoDescription": "Removal of abandoned and derelict mobile homes from property in Rapides and Avoyelles Parish. Inherited land, rental property and long-vacant units.",
+      "service": "Abandoned mobile-home removal",
+      "sections": [
+        {
+          "kicker": "Who this is for",
+          "heading": "Usually the land, not the home, is the point.",
+          "body": "The people who call about this are rarely the people who put the home there. They have inherited acreage with a derelict unit on it, bought land with something already sitting on it, or had a tenant leave one behind. In almost every case the home is not the asset — the land is, and the unit is the thing preventing it from being sold, built on, farmed or borrowed against. That changes what a good outcome looks like: not a careful removal, but clear ground with nothing left to explain to a buyer or a surveyor."
+        },
+        {
+          "kicker": "What makes these harder",
+          "heading": "Time does most of the damage.",
+          "body": "A unit that has stood open for a decade is a different proposition from one someone moved out of last year. Floors give way, roofs come in, the structure stops holding itself together, and vegetation grows through and around it until the approach has closed up. There is often a good deal left inside. None of that stops the job, but it means it cannot be treated as lifting a home onto a trailer, and it is why an estimate on an abandoned unit really does want eyes on it."
+        },
+        {
+          "kicker": "Ownership and paperwork",
+          "heading": "The awkward part is usually documentation.",
+          "body": "Abandoned units frequently come without a title, or with one in a name nobody can reach. Depending on how the property came to you, that may be straightforward or it may need sorting out before anything can be removed. It is not a reason not to call — it is a reason to raise it early, so the paperwork and the scheduling can move in parallel instead of one holding up the other. Tell us how you came to own the land and what you do and do not have."
+        },
+        {
+          "kicker": "What you get back",
+          "heading": "Clear ground, not a smaller pile.",
+          "body": "The point of the job is that the property stops having a problem on it. That means the unit, the blocks, the skirting, the steps, whatever was added to it, and the debris all leave. If there is a slab or a foundation underneath that you also want gone, say so, because that is a separate decision and it changes the equipment. What you should be left with is land you can do the next thing with."
+        }
+      ],
+      "ctaHeadline": "Derelict unit on your land?"
+    },
+    {
+      "slug": "land-clearing",
+      "navLabel": "Land clearing",
+      "kicker": "Land clearing",
+      "heading": "Land clearing across Central Louisiana.",
+      "intro": "Brush, undergrowth, scrub and overgrown acreage cleared for building, pasture, resale or simply getting a property back.",
+      "seoTitle": "Land Clearing Alexandria & Pineville LA | Martins",
+      "seoDescription": "Land clearing, brush clearing and lot clearing across Deville, Pineville, Alexandria and Rapides Parish. Acreage, building sites and overgrown property.",
+      "service": "Land clearing",
+      "sections": [
+        {
+          "kicker": "What decides the work",
+          "heading": "Three things, and acreage is only one.",
+          "body": "How much land, what is growing on it, and how equipment gets to it. Those three between them account for almost all the variation. An acre of light brush and an acre of mature hardwood over soft ground are entirely different jobs at the same acreage, which is why acreage alone never answers the question. The fourth thing, and people often have not thought about it, is what you want left behind: mulched in place, windrowed into piles, burned where that is permitted, or hauled off the property. That decision changes the machine, the number of passes and the number of loads."
+        },
+        {
+          "kicker": "What the land is for afterwards",
+          "heading": "The finish changes the method.",
+          "body": "Clearing for pasture is not the same as clearing for a house pad. Pasture wants the material broken down and left as ground cover, and it can tolerate stumps below grade. A building site wants stumps and roots out, the ground worked and levelled, and nothing left that will settle under a slab in two years. Clearing for resale usually wants the property to read as open and usable from the road. Say which one you are doing and the rest of the decisions follow from it fairly quickly."
+        },
+        {
+          "kicker": "Access and ground",
+          "heading": "Wet ground is the usual complication.",
+          "body": "Central Louisiana ground holds water, and a tract that works fine in August can be unusable after a wet week. Low spots, sloughs, pond banks and anything near a drainage line all change what can be run across them and when. Fence lines, utilities, property pins and anything you want left standing need to be identified before work starts rather than after — a tree taken out by mistake cannot be put back. If you know where the lines run, or if you do not and a survey would settle it, that is worth raising up front."
+        },
+        {
+          "kicker": "Equipment",
+          "heading": "Owned rather than hired in.",
+          "body": "The machines for this work are owned, which matters for two practical reasons. It means the method is chosen for the ground rather than for whatever was available to rent that week, and it means a job that turns out to need a different approach halfway through does not stall waiting on equipment. For a landowner the difference shows up as fewer days with nothing happening on the property."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much land is worth clearing at once?",
+          "a": "Mobilising equipment costs the same whether it clears a quarter acre or five, so very small jobs carry a disproportionate share of that. If you have several areas on the same property, doing them in one visit is almost always better value than doing them separately over a year. It is worth mentioning everything you eventually want cleared even if you only plan to do part of it now."
+        },
+        {
+          "q": "Do you clear fence lines and rights of way?",
+          "a": "Yes. Fence-line and right-of-way clearing is narrow, long work rather than area work, and it is usually about regaining access or being able to maintain a boundary. It suits mulching well because there is rarely anywhere convenient to stack material. Tell us the length rather than the acreage for these."
+        }
+      ],
+      "ctaHeadline": "Got land that needs clearing?"
+    },
+    {
+      "slug": "forestry-mulching",
+      "navLabel": "Forestry mulching",
+      "kicker": "Forestry mulching",
+      "heading": "Forestry mulching.",
+      "intro": "Clearing that turns the vegetation into ground cover where it stands, instead of hauling it off the property.",
+      "seoTitle": "Forestry Mulching Central Louisiana | Martins",
+      "seoDescription": "Forestry mulching across Rapides and Avoyelles Parish. Brush, undergrowth and small timber cleared and left as mulch, without burning or hauling.",
+      "service": "Forestry mulching",
+      "sections": [
+        {
+          "kicker": "What it actually is",
+          "heading": "One machine, one pass, no pile.",
+          "body": "A mulcher cuts standing vegetation and reduces it to chip in place, so there is no stacking, no burning and nothing to haul away. What you are left with is a layer of mulch across the cleared ground. For a lot of properties that is the whole appeal: the material never becomes a problem that has to be solved separately, and there is no burn pile sitting in the middle of the tract waiting on a dry week and the right permissions."
+        },
+        {
+          "kicker": "Where it is the right call",
+          "heading": "And where it is not.",
+          "body": "Mulching suits undergrowth, scrub, brush and smaller timber, and it suits pasture, trails, fence lines, rights of way and recreational land where a mulch layer is useful rather than in the way. It holds soil, suppresses regrowth for a while, and leaves a property looking finished immediately. Where it is the wrong tool is a building site that needs stumps and roots out and clean soil to work with, or a tract with large mature timber that a mulcher is not the economical way to take down. Those want a different method, and we will say so."
+        },
+        {
+          "kicker": "Versus clearing and hauling",
+          "heading": "It is a trade, not an upgrade.",
+          "body": "Traditional clearing removes the material, which leaves clean ground and costs more in trips and disposal. Mulching leaves the material, which is faster and cheaper and avoids disposal entirely, but you keep the mulch whether you want it or not. On pasture, trails and recreational acreage that is a benefit. Under a future slab it is not. The honest way to choose is to start from what the land is for, not from which method sounds better."
+        },
+        {
+          "kicker": "Regrowth",
+          "heading": "It buys time rather than settling it.",
+          "body": "A mulched tract will start coming back, and how fast depends on what was there and what the season does. The mulch layer slows it considerably, which is why mulching works well as maintenance on land you intend to keep open. What it does not do is permanently clear a property in one visit — anything with an established root system is still there under the chip. If the intention is that the land stays open, plan on it being managed rather than done once."
+        }
+      ],
+      "ctaHeadline": "Want it mulched in place?"
+    },
+    {
+      "slug": "structure-demolition",
+      "navLabel": "Demolition",
+      "kicker": "Structure demolition",
+      "heading": "Structure and outbuilding demolition.",
+      "intro": "Sheds, barns, garages, carports and small structures taken down, with the debris hauled off and the ground left clear.",
+      "seoTitle": "Demolition Contractor Alexandria & Pineville LA | Martins",
+      "seoDescription": "Structure and outbuilding demolition across Deville, Pineville, Alexandria and Central Louisiana. Sheds, barns, garages and small buildings removed.",
+      "service": "Structure and outbuilding demolition",
+      "sections": [
+        {
+          "kicker": "What we take down",
+          "heading": "Outbuildings, barns and small structures.",
+          "body": "Sheds, garages, carports, barns, pole buildings, old shops, and structures that have partly collapsed on their own. The common thread is that they are freestanding and on your property rather than attached to a house you are keeping. Half the calls are about something that has become unsafe or unsightly, and the other half are about needing the footprint back for something else. Either way the job is the same: down, loaded, gone, and the ground left in a state you can use."
+        },
+        {
+          "kicker": "What is inside and underneath",
+          "heading": "Both change the job.",
+          "body": "Outbuildings tend to accumulate. If the structure is full of stored material, equipment, feed, furniture or scrap, that is part of the volume and it is better counted in than discovered. Underneath, there is often a slab, a pad or footings, and whether those stay or come out is a separate decision worth making before we start rather than partway through. A building that has stood a long time may also have services running to it that need isolating first."
+        },
+        {
+          "kicker": "Condition",
+          "heading": "A collapsing building is handled differently.",
+          "body": "A sound structure comes down in a controlled way. One that has already partly failed, has a roof in, or has been standing open for years cannot be treated the same, because what holds it up is no longer predictable. That is not a reason to leave it — a derelict outbuilding is usually more of a liability standing than it is a job to remove — but it is a reason to describe its condition accurately when you call so the right approach is planned from the start."
+        },
+        {
+          "kicker": "What you are left with",
+          "heading": "Clear ground, debris gone.",
+          "body": "The debris leaves the property rather than being piled at the back of it, which is the part people are usually most concerned about and rightly so. Where a slab or foundation is coming out too, the ground gets backfilled and levelled so you are not left with a hole. What the site needs to be ready for afterwards is worth saying, because a footprint that is about to be built on wants a different finish from one that is going back to grass."
+        }
+      ],
+      "ctaHeadline": "Something that needs to come down?"
+    },
+    {
+      "slug": "concrete-removal",
+      "navLabel": "Concrete removal",
+      "kicker": "Concrete and foundations",
+      "heading": "Concrete and foundation removal.",
+      "intro": "Slabs, pads, footings, old foundations and driveways broken out and hauled off.",
+      "seoTitle": "Concrete & Foundation Removal Central Louisiana | Martins",
+      "seoDescription": "Concrete slab, pad, driveway and foundation removal across Rapides and Avoyelles Parish. Broken out, hauled off and the ground backfilled.",
+      "service": "Concrete and foundation removal",
+      "sections": [
+        {
+          "kicker": "What this usually follows",
+          "heading": "Something else came down first.",
+          "body": "Most concrete removal is the second half of another job: a building demolished, a mobile home taken off its pad, a shop or carport gone and the slab left behind. Occasionally it stands alone — an old driveway being replaced, a pad that is in the way of something new, a foundation from a structure that disappeared decades ago. Either way concrete is heavy, disposal is by weight, and that is the main thing separating it from the rest of a demolition job."
+        },
+        {
+          "kicker": "Thickness and reinforcement",
+          "heading": "What is in it matters as much as its size.",
+          "body": "A four-inch unreinforced pad and a reinforced slab of the same dimensions are very different amounts of work. Rebar, mesh, thickened edges, footings running deeper than the slab, and old foundations poured in ways nobody does any more all change the method and the time. It is not always possible to know before breaking in, which is worth saying plainly rather than pretending a slab can be fully priced from a photograph. What we can do is tell you what the likely range of outcomes is."
+        },
+        {
+          "kicker": "Backfill and finish",
+          "heading": "A hole is not a finished job.",
+          "body": "Taking a foundation out leaves a void, and leaving that void is how a site develops a settling problem. Removal includes putting the ground back — backfilled and levelled to something usable. If the area is going to be built on again, or a slab is going back in its place, say so, because the finish wanted is different and it is cheaper to do it right the first time than to come back and rework it."
+        }
+      ],
+      "ctaHeadline": "Slab or foundation to remove?"
+    },
+    {
+      "slug": "site-preparation",
+      "navLabel": "Site prep",
+      "kicker": "Site preparation",
+      "heading": "Site preparation.",
+      "intro": "Getting a building site from raw or cleared ground to something the next trade can actually start on.",
+      "seoTitle": "Site Preparation & Building Pad Central Louisiana | Martins",
+      "seoDescription": "Building site preparation across Deville, Pineville, Alexandria and Rapides Parish. Clearing, grubbing, levelling and access for construction.",
+      "service": "Site preparation",
+      "sections": [
+        {
+          "kicker": "What site prep covers",
+          "heading": "Everything before the first trade arrives.",
+          "body": "Clearing what is there, getting stumps and root systems out rather than just cutting them off, dealing with the spoil, shaping the ground, and making sure there is a way in that a concrete truck or a delivery can actually use. The test of a prepared site is simple: the next contractor can start work the day they turn up without having to solve something first. Sites that fail that test usually fail on access or on drainage, not on the pad itself."
+        },
+        {
+          "kicker": "Grubbing matters more than clearing",
+          "heading": "Roots left in the ground come back as settlement.",
+          "body": "Cutting vegetation off at ground level looks like a cleared site and is not one. Organic material left under a pad breaks down, and when it does the ground above it drops — which shows up later as a cracked slab or a settled driveway, long after everyone has left. Grubbing takes the root systems out so what is under the build is soil rather than something in the process of rotting. It is the least visible part of the job and the part most worth doing properly."
+        },
+        {
+          "kicker": "Drainage and levels",
+          "heading": "Where the water goes decides a lot.",
+          "body": "Central Louisiana ground holds water and most site problems here are water problems. Which way the ground falls, where it drains to, whether the pad sits above the surrounding grade, and what happens to the site in a heavy week are all worth settling before anything is poured. It is much cheaper to move dirt now than to solve a wet slab afterwards. If there is a survey, a plan, or a builder with requirements, working from those from the start avoids doing it twice."
+        },
+        {
+          "kicker": "Access",
+          "heading": "A site nobody can reach is not ready.",
+          "body": "The approach has to carry heavy vehicles, not just a pickup. That can mean a temporary drive, a culvert at the road, stone on the approach, or somewhere for deliveries to turn. This gets overlooked more than anything else on the list and it is the thing most likely to stop a build in its first week. If a culvert or a driveway crossing is part of what the site needs, it is straightforward to do while the equipment is already there."
+        }
+      ],
+      "ctaHeadline": "Building? Start with the site."
+    },
+    {
+      "slug": "stump-removal",
+      "navLabel": "Stump removal",
+      "kicker": "Stump removal",
+      "heading": "Stump removal.",
+      "intro": "Stumps taken out of the ground, root ball included, where the site has to be built on or farmed.",
+      "seoTitle": "Stump Removal & Grubbing Central Louisiana | Martins",
+      "seoDescription": "Stump removal across Rapides and Avoyelles Parish. Stumps and root systems taken out for building sites, pasture and clearing projects.",
+      "service": "Stump removal",
+      "sections": [
+        {
+          "kicker": "Removal or grinding",
+          "heading": "They solve different problems.",
+          "body": "Grinding takes the stump down below grade and leaves the root system in the ground. For a lawn or a garden bed that is usually fine and it is the quicker, cheaper option. Removal takes the stump and the root ball out entirely, leaving a hole to backfill. That is what a building site needs, because anything left in the ground is organic material that will break down and settle. Which one you want depends entirely on what is happening to that ground afterwards."
+        },
+        {
+          "kicker": "When it is worth doing in bulk",
+          "heading": "Rarely a job on its own.",
+          "body": "Bringing equipment out for one stump carries the full mobilisation cost for very little work, which is why single stumps are poor value and why this usually runs alongside clearing or site prep. If you have a line of them, a cleared tract full of them, or a property being prepared, that is when it makes sense. Worth mentioning everything on the property when you call, even the ones you were not planning to deal with yet."
+        },
+        {
+          "kicker": "What is left behind",
+          "heading": "A hole, then backfill.",
+          "body": "Pulling a root ball leaves a crater and a quantity of soil mixed with root material. Part of the job is backfilling and levelling so the ground is usable rather than a hazard. On a site being built on, that backfill wants to be soil rather than the spoil that came out, since the spoil is the organic material you just paid to remove. Say what the ground is for and it gets finished accordingly."
+        }
+      ],
+      "ctaHeadline": "Stumps in the way?"
+    },
+    {
+      "slug": "culvert-and-drainage",
+      "navLabel": "Culverts & drainage",
+      "kicker": "Culverts and drainage",
+      "heading": "Culvert and drainage work.",
+      "intro": "Driveway crossings, culvert setting and drainage work on rural and acreage property.",
+      "seoTitle": "Culvert Installation & Drainage Central Louisiana | Martins",
+      "seoDescription": "Culvert installation, driveway crossings and rural drainage work across Rapides and Avoyelles Parish.",
+      "service": "Culvert installation and drainage work",
+      "sections": [
+        {
+          "kicker": "Driveway crossings",
+          "heading": "Usually the first thing a rural property needs.",
+          "body": "Getting from the road onto acreage generally means crossing a ditch, and that means a culvert sized and set properly rather than a pipe dropped in and covered over. Set too high and water backs up along the road; too low and it silts closed; too small and it fails the first time the ditch actually runs. A crossing is also frequently the reason a building site cannot take delivery vehicles yet, which is why it tends to come first in the order of work."
+        },
+        {
+          "kicker": "Drainage on the property",
+          "heading": "Water is the usual problem here.",
+          "body": "Ground in this part of the state holds water, and a lot of what looks like a soft-ground problem is a drainage problem that has been there for years. Shaping ground so water leaves, opening up a run that has silted in, or putting a crossing where equipment keeps getting stuck are all ordinary parts of working on acreage. It is worth dealing with while machines are already on site for clearing or site prep, rather than as a separate visit later."
+        },
+        {
+          "kicker": "What needs checking first",
+          "heading": "Some of this is not ours to decide.",
+          "body": "Work in a public right of way, a road ditch, or anything that affects a neighbouring property or a drainage district can carry requirements from the parish or the relevant authority. That is worth establishing before work starts rather than after, and we would rather raise it early than have you find out later. Tell us where the work sits relative to the road and the boundary and it gets handled as part of planning."
+        }
+      ],
+      "ctaHeadline": "Need a crossing or drainage sorted?"
+    },
+    {
+      "slug": "storm-debris-removal",
+      "navLabel": "Storm debris",
+      "kicker": "Storm and large debris",
+      "heading": "Storm debris and large-volume removal.",
+      "intro": "Large-volume clearance after wind, flooding or storm damage, and cleanup following demolition or clearing.",
+      "seoTitle": "Storm Debris Removal Central Louisiana | Martins",
+      "seoDescription": "Storm debris and large-volume debris removal across Deville, Pineville, Alexandria and Central Louisiana. Post-storm, post-demolition and post-clearing cleanup.",
+      "service": "Storm and large-volume debris removal",
+      "sections": [
+        {
+          "kicker": "What this covers",
+          "heading": "Volume, not single items.",
+          "body": "Downed timber and limbs after wind, flood debris, demolition debris, post-clearing cleanup, and properties where a substantial amount of material has been dumped or accumulated. The common factor is that it needs equipment and multiple loads rather than a truck and two people. This is where the hauling side of the original business still fits — it is the large-volume end of it, done with the machines that are already here for the clearing and demolition work."
+        },
+        {
+          "kicker": "After a storm",
+          "heading": "Photograph it before it moves.",
+          "body": "If there is any prospect of an insurance claim, photographs taken before anything is cleared are worth more than a description afterwards. Several angles, and something in frame for scale. Whether a policy covers debris removal is between you and your insurer, but the claim is much easier to make when the evidence exists. It also helps to separate what came down in the storm from what was already there, because those are often treated differently."
+        },
+        {
+          "kicker": "Safety first",
+          "heading": "Some of it should not be moved by hand.",
+          "body": "Storm debris routinely includes hung-up limbs, leaning trees under tension, and material tangled with power lines. Downed lines are for the utility company, not for a property owner with a chainsaw, and a tree under load can move unpredictably when it is cut. If any of that is on your property, leave it and say so when you call rather than making a start on it."
+        }
+      ],
+      "ctaHeadline": "Debris that needs clearing?"
+    },
+    {
+      "slug": "alexandria",
+      "navLabel": "Alexandria",
+      "kicker": "Alexandria",
+      "heading": "Land clearing and demolition in Alexandria.",
+      "intro": "Clearing, demolition, mobile-home removal and site work across Alexandria and the surrounding Rapides Parish area.",
+      "seoTitle": "Land Clearing & Demolition Alexandria LA | Martins",
+      "seoDescription": "Land clearing, demolition, mobile-home removal and site preparation in Alexandria, Louisiana and the surrounding Rapides Parish area.",
+      "service": "Land clearing and demolition in Alexandria",
+      "sections": [
+        {
+          "kicker": "The work here",
+          "heading": "City lots and the acreage around them.",
+          "body": "Alexandria covers two fairly different kinds of job. Inside the city it is lots, outbuildings, old slabs and properties that have been left to grow over — usually constrained sites where access and neighbouring property matter as much as the work itself. Out toward the parish it becomes acreage, building sites and mobile-home removal, where the limiting factor is ground conditions rather than space. Both are routine; they just want different equipment and different planning."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Close enough that it is not a factor.",
+          "body": "Deville to Alexandria is a short run, which matters more than it sounds. Mobilising equipment is a real cost on every job, and it is the reason contractors based two hours away price acreage work differently. Being the next community over means a site visit before quoting is practical rather than something to be avoided, and that tends to produce a more accurate number than working from photographs alone."
+        },
+        {
+          "kicker": "Access in town",
+          "heading": "The constraint is usually getting in.",
+          "body": "On an Alexandria lot the question is rarely whether the work can be done and almost always how the equipment reaches it. Narrow approaches, neighbouring structures close to a boundary, overhead lines, and limited space to load are the common ones. None of them are unusual. They do need to be known in advance, so a description of the approach, or a couple of photographs from the street, is the most useful thing to send with an enquiry."
+        }
+      ],
+      "ctaHeadline": "Property in Alexandria?"
+    },
+    {
+      "slug": "pineville",
+      "navLabel": "Pineville",
+      "kicker": "Pineville",
+      "heading": "Land clearing and demolition in Pineville.",
+      "intro": "Clearing, demolition and mobile-home removal across Pineville, Ball, Tioga and the communities north of the river.",
+      "seoTitle": "Land Clearing & Demolition Pineville LA | Martins",
+      "seoDescription": "Land clearing, demolition and mobile-home removal in Pineville, Ball, Tioga and Libuse, Louisiana. Acreage, building sites and structure removal.",
+      "service": "Land clearing and demolition in Pineville",
+      "sections": [
+        {
+          "kicker": "The nearest market",
+          "heading": "This is effectively home ground.",
+          "body": "Deville sits just outside Pineville, and Ball, Tioga and Libuse are all within the same short radius. In practice that makes this the area where a site visit costs least and where equipment can move between jobs without a day lost to travel. For a property owner the useful consequence is that smaller-acreage work here is viable in a way it stops being at distance, because mobilisation is not carrying the whole job."
+        },
+        {
+          "kicker": "What the ground does",
+          "heading": "Wooded, and it holds water.",
+          "body": "The country north and east of Pineville is timber, cut-over and pasture, much of it on ground that stays soft well after rain. Clearing here is as much about timing and machine choice as about acreage, and a tract that is straightforward in a dry month can be impassable in a wet one. Low spots, drainage lines and pond banks all want identifying before a machine goes on, which is part of why walking a property beats quoting it from a map."
+        },
+        {
+          "kicker": "Mobile homes",
+          "heading": "A lot of them, on rural lots.",
+          "body": "Manufactured homes on acreage are common across this area, and so are the situations that follow: a unit that has been vacant for years, one left on inherited land, or one being replaced. Removing them is ordinary work here rather than something unusual, and the recurring complications are the same ones every time — utilities, ownership paperwork, whatever was built onto the side of it, and what is underneath."
+        }
+      ],
+      "ctaHeadline": "Property around Pineville?"
+    },
+    {
+      "slug": "marksville",
+      "navLabel": "Marksville",
+      "kicker": "Marksville and Avoyelles Parish",
+      "heading": "Land clearing and demolition in Avoyelles Parish.",
+      "intro": "Clearing, mobile-home removal, demolition and site work across Marksville, Hessmer and the wider Avoyelles Parish area.",
+      "seoTitle": "Land Clearing & Demolition Marksville LA | Martins",
+      "seoDescription": "Land clearing, mobile-home removal and demolition in Marksville, Hessmer and Avoyelles Parish, Louisiana. Acreage, farmland and rural property.",
+      "service": "Land clearing and demolition in Avoyelles Parish",
+      "sections": [
+        {
+          "kicker": "Rural and agricultural",
+          "heading": "Bigger tracts, fewer constraints.",
+          "body": "Avoyelles is farm country, and the work reflects it: larger acreage, fence lines, field edges, turn rows, pasture being reclaimed, and mobile homes on rural lots. Compared with a town lot there is usually room to work and somewhere to put material, which makes methods practical here that are awkward in a constrained site. It also means jobs tend to be bigger, which is exactly the kind of work this business is set up for."
+        },
+        {
+          "kicker": "Reclaiming land",
+          "heading": "Pasture goes back quickly when it is left.",
+          "body": "A field that has been out of use for a few seasons does not stay a field. Scrub and volunteer timber come in from the edges and the tract steadily shrinks. Getting it back is ordinary clearing work, and mulching often suits it well because the material can stay on the ground as cover rather than being hauled off farmland where it was doing no harm. Where the ground is going back into production, what the finish needs to be is worth settling first."
+        },
+        {
+          "kicker": "Distance and scale",
+          "heading": "Worth asking rather than assuming.",
+          "body": "Marksville is further out than the Rapides Parish communities, which makes job size matter more. A substantial project justifies the travel comfortably; a very small one may not. Rather than publish a radius that would be wrong half the time, the honest answer is to describe what you have and let us tell you. If there are several things on the property, doing them in one visit changes that arithmetic considerably."
+        }
+      ],
+      "ctaHeadline": "Property in Avoyelles Parish?"
+    },
+    {
+      "slug": "service-areas",
+      "navLabel": "Service areas",
+      "kicker": "Where we work",
+      "heading": "Central Louisiana service area.",
+      "intro": "Based in Deville, working across Rapides and Avoyelles Parish and the communities between them.",
+      "seoTitle": "Service Areas | Central Louisiana Land Services | Martins",
+      "seoDescription": "Land clearing, demolition and mobile-home removal across Deville, Pineville, Alexandria, Ball, Tioga, Libuse, Woodworth, Marksville, Hessmer and Central Louisiana.",
+      "service": "Central Louisiana land clearing and demolition",
+      "sections": [
+        {
+          "kicker": "The core area",
+          "heading": "Rapides Parish and the communities around Deville.",
+          "body": "Deville, Pineville, Alexandria, Ball, Tioga, Libuse and Woodworth make up the area where most of the work happens. These are all a short run from the yard, which keeps mobilisation low and makes it practical to walk a property before quoting it rather than working from photographs. For anything in this radius, a site visit is the normal way an estimate gets produced."
+        },
+        {
+          "kicker": "Avoyelles Parish",
+          "heading": "Marksville, Hessmer and the farm country.",
+          "body": "Further out, and the work tends to be larger: acreage, farmland, fence lines and rural mobile-home removal. The travel is comfortably justified by project size, which is most of what gets done out here anyway. Smaller jobs are worth asking about rather than assuming either way."
+        },
+        {
+          "kicker": "Beyond that",
+          "heading": "Ask, and be specific.",
+          "body": "Substantial projects justify travelling further than the list above, and there is no useful way to publish a radius that would be accurate in every direction. Rather than guess, describe the property and the work and you will get a straight answer about whether it makes sense. What we would rather not do is quote something at distance that should have gone to somebody closer, because that serves nobody."
+        }
+      ],
+      "ctaHeadline": "Not sure if you are in range?"
+    },
+    {
+      "slug": "our-process",
+      "navLabel": "How it works",
+      "kicker": "How it works",
+      "heading": "From first call to cleared ground.",
+      "intro": "What actually happens between getting in touch and the equipment leaving your property.",
+      "seoTitle": "Our Process | Land Clearing & Demolition | Martins",
+      "seoDescription": "How a land clearing, demolition or mobile-home removal project runs, from first call through site visit and estimate to completion.",
+      "service": "Project process",
+      "sections": [
+        {
+          "kicker": "First, the conversation",
+          "heading": "Enough detail to know what we are looking at.",
+          "body": "A call or a form with the property location, roughly what is there, and what you want the outcome to be. Photographs do a great deal of work at this stage — of the structure, of the tract, and particularly of the approach from the road. Most projects can be understood well enough from that to say whether it is work we should take and roughly what shape it takes."
+        },
+        {
+          "kicker": "Then, the site visit",
+          "heading": "Because acreage and photographs both lie a little.",
+          "body": "For anything of size, somebody walks it. Ground conditions, access, what is actually growing there, where the lines and pins run, what is underneath a structure — these are the things that decide the job, and they are the things hardest to judge remotely. Being local is what makes this practical: a site visit from Deville to most of this service area costs an hour, not a day, which is why it is the default rather than a favour."
+        },
+        {
+          "kicker": "The estimate",
+          "heading": "Based on what was seen, not on an average.",
+          "body": "What the work involves, what method suits the ground, what happens to the material, and what the property looks like when it is finished. Where something genuinely cannot be known until work starts — what is under a slab is the usual example — that gets said plainly rather than buried, along with what the likely range is. An estimate that hides an unknown is not more accurate, it just moves the surprise later."
+        },
+        {
+          "kicker": "The work",
+          "heading": "And what gets left behind.",
+          "body": "Equipment comes in, the work gets done, the debris goes where it was agreed to go, and the ground is left in the condition the project called for. The last part is worth being explicit about at the start, because \"cleared\" means something different for pasture, for resale and for a building pad. Settle that in the first conversation and there is nothing to argue about at the end."
+        }
+      ],
+      "ctaHeadline": "Ready to talk it through?"
+    },
+    {
+      "slug": "contact",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Request an estimate.",
+      "intro": "Tell us about the property and the project. Photographs help more than anything else.",
+      "seoTitle": "Request an Estimate | Martins Land Clearing & Demolition",
+      "seoDescription": "Request an estimate for land clearing, mobile-home removal, demolition or site preparation in Deville, Pineville, Alexandria and Central Louisiana.",
+      "service": "Estimate requests",
+      "sections": [
+        {
+          "kicker": "What to include",
+          "heading": "Four things get to an answer fastest.",
+          "body": "Where the property is, what is on it, how equipment would get in, and what you want it to look like afterwards. For land, acreage and what is growing. For a structure or a mobile home, roughly what size and what condition. For access, the width of the way in and what the ground does after rain. And for the outcome — mulched, cleared, hauled off, ready to build on — because that changes everything else."
+        },
+        {
+          "kicker": "Photographs",
+          "heading": "Worth more than a paragraph.",
+          "body": "A few pictures answer questions that are difficult to put into words: how tight the approach is, how far gone a structure is, how dense the growth actually is. Photograph the way in from the road as well as the work itself, because access is the thing most likely to change the plan and the thing least likely to get described accurately."
+        },
+        {
+          "kicker": "What we do not take",
+          "heading": "Worth saying so nobody wastes a call.",
+          "body": "Single-item pickups, one appliance, a few bags, routine household collection and small cleanouts are not work Martins takes on. That is not a judgement about the job — it is that the equipment and the setup here are built for complete projects and large-volume removal, and a local junk-removal service will do a small job faster and for less. If you are not sure which side of the line yours falls on, ask."
+        }
+      ],
+      "ctaHeadline": "Tell us about the project."
+    }
+  ]
+}
