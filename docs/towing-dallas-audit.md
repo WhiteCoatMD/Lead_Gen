@@ -120,8 +120,8 @@ whatever profile exists here is competing against a dozen businesses using the
 same words.
 
 One weak signal. The owner-supplied share link resolves to a plain Google
-search with no  attached, whereas the Twin City Fence link carried
- and identified a specific business entity. That is
+search with no `kgmid` attached, whereas the Twin City Fence link carried
+`kgmid=/g/11fpss007l` and identified a specific business entity. That is
 suggestive rather than conclusive, and given how wrong the not-found column
 has already been on this portfolio it is not a conclusion.
 
@@ -131,8 +131,8 @@ has already been on this portfolio it is not a conclusion.
 
 **24 Hour Towing Dallas**, confirmed by the owner 2026-09-21. The site already
 carries it, so unlike Twin City Fence and Deck Builders Monroe there is
-nothing to correct here.  is the Google account
-and not a trading name; Millard Bratton is the verified property owner.
+nothing to correct here. `towtruckprosdallas@gmail.com` is the Google
+account and not a trading name; Millard Bratton is the verified property owner.
 
 This is the first property in the portfolio where the name needed no fixing.
 
@@ -163,5 +163,6 @@ with one entry in the recipients map. That is the cheapest large win available.
 
 - No neighbourhood pages. The data is unambiguous.
 - No more junk-car content. Five impressions.
-- No citation building until the name is settled.
+- No citation building until the GBP question is settled. The name is not
+  the blocker here that it was elsewhere; the profile is.
 - No heavy-duty content until fulfilment is confirmed.
