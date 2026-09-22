@@ -118,9 +118,10 @@
     "status": "OPERATIONAL",
     "status_was": "CLOSED_PERMANENTLY",
     "status_changed_observed": "2026-09-22",
-    "hours_reported": "Open 24 hours",
-    "note": "Mitch observed 2026-09-22 that the listing is live again and showing Open 24 hours, having been recorded CLOSED_PERMANENTLY on 2026-09-21. Nobody has said who made the change. Two things to settle: who has edit access, and whether 24 hours is true - scaffolding hire is not usually a 24-hour trade, and hours that are wrong produce calls nobody answers.",
-    "hours_seen": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours"
+    "hours_reported": "8:00 AM - 6:00 PM, seven days (submitted 2026-09-22, pending Google review)",
+    "note": "Listing was recorded CLOSED_PERMANENTLY on 2026-09-21 and found live and publishing Open 24 hours on 2026-09-22. Hours changed to 8:00 AM - 6:00 PM seven days at Mitch's instruction, submitted via the profile editor and pending Google review. Profile is managed by scaffoldinglosangeles@gmail.com, NOT the admin@shed-sync.com account that holds Bed Sync and Shed Sync - worth knowing before looking for it again. Still unanswered: who flipped it from closed to open, and when.",
+    "hours_seen": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours",
+    "gbp_account": "scaffoldinglosangeles@gmail.com"
   },
   {
     "slug": "seacoast-hurricane-shutters",
