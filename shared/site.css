@@ -28,3 +28,26 @@
 .gallery img{width:100%;height:260px;object-fit:cover;display:block;background:#f5f2eb}
 .gallery figcaption{margin-top:10px;color:#62666b;font-size:.92rem;line-height:1.5}
 @media(max-width:680px){.gallery{padding-block:70px}.gallery img{height:220px}}
+
+/* Lead form. The honeypot is positioned off-screen rather than
+   display:none, because some bots skip fields that are display:none and
+   the point is for them to fill it in. */
+.leadform{padding-block:clamp(3rem,6vw,5rem)}
+.lead-form{max-width:46rem;margin-inline:auto;display:grid;gap:1rem}
+.lead-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lead-form label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+.lead-form .req{color:var(--accent);margin-left:.15rem}
+.lead-form .opt{font-weight:400;opacity:.6;font-size:.85em}
+.lead-form input,.lead-form select,.lead-form textarea{
+  font:inherit;padding:.7rem .8rem;border:1px solid rgba(10,12,14,.22);border-radius:.5rem;
+  background:#fff;color:inherit;width:100%}
+.lead-form input:focus-visible,.lead-form select:focus-visible,.lead-form textarea:focus-visible{
+  outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.lead-form textarea{resize:vertical;min-height:6rem}
+.lead-form .field-row{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
+@media (max-width:640px){.lead-form .field-row{grid-template-columns:1fr}}
+.lead-form button{justify-self:start;cursor:pointer;border:0}
+.lead-form button[disabled]{opacity:.65;cursor:progress}
+.form-note{margin:0;font-size:.95rem;min-height:1.25rem}
+.form-note.ok{color:#1a7f3c;font-weight:600}
+.form-note.error{color:#b3261e;font-weight:600}

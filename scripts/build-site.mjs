@@ -34,7 +34,7 @@ if (missing.length) throw new Error(`${slug} is missing required fields: ${missi
 
 const render = RENDERERS[config.template] || renderSite;
 if (config.template && !RENDERERS[config.template]) throw new Error(`${slug} names unknown template "${config.template}"`);
-await fs.writeFile(path.join(outputDir, "index.html"), render(config), "utf8");
+await fs.writeFile(path.join(outputDir, "index.html"), render(config, slug), "utf8");
 await fs.writeFile(path.join(outputDir, "favicon.svg"), renderFavicon(config), "utf8");
 // Stylesheet falls back in order: this site's own, then the one belonging to
 // its template, then the shared contractor stylesheet.

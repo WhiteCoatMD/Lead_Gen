@@ -224,5 +224,13 @@
       "ctaHeadline": "Call for a free estimate.",
       "canonicalTo": "contact"
     }
-  ]
+  ],
+  "leadForm": {
+    "kicker": "Request a quote",
+    "heading": "Tell us about the fence.",
+    "intro": "Call if it is easier — but if you are reading this at nine at night, leave the details and we will ring you back.",
+    "placeholder": "Roughly how long a run, what the ground is doing, and when you are hoping to start.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the job. Nothing else."
+  }
 }
