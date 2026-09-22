@@ -15,6 +15,7 @@
     "gsc:verify": "node scripts/gsc-add-properties.mjs --verify",
     "gbp": "node scripts/gbp-watch.mjs",
     "claims": "node scripts/check-claims.mjs",
-    "links": "node scripts/link-prospects.mjs"
+    "links": "node scripts/link-prospects.mjs",
+    "gbp:find": "node scripts/gbp-find-ids.mjs"
   }
 }

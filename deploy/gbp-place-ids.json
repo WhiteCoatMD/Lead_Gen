@@ -5,7 +5,13 @@
     "searched": [
       "520-210-5030",
       "cactusremovalservice.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 3,
+      "near": []
+    }
   },
   {
     "slug": "chicago-eifs-stucco",
@@ -13,7 +19,13 @@
     "searched": [
       "773-364-1934",
       "eifschicago.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 0,
+      "near": []
+    }
   },
   {
     "slug": "crack-rx",
@@ -21,7 +33,13 @@
     "searched": [
       "318-372-7140",
       "getcrackrx.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 1,
+      "near": []
+    }
   },
   {
     "slug": "deck-builder-monroe",
@@ -29,7 +47,26 @@
     "searched": [
       "318-726-2853",
       "deckbuildermonroe.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "name match only — needs human confirmation",
+      "candidates": 11,
+      "near": [
+        {
+          "id": "ChIJKZcZrns5LoYRV3E3jdUcUTo",
+          "name": "Deck Builders Monroe",
+          "phone": "(318) 598-4535",
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "ChIJKZcZrns5LoYRV3E3jdUcUTo",
+          "name": "Deck Builders Monroe",
+          "phone": "(318) 598-4535",
+          "status": "OPERATIONAL"
+        }
+      ]
+    }
   },
   {
     "slug": "flooring-monroe",
@@ -37,7 +74,13 @@
     "searched": [
       "318-460-5045",
       "flooring-monroe.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 20,
+      "near": []
+    }
   },
   {
     "slug": "lake-charles-fences",
@@ -56,7 +99,13 @@
     "searched": [
       "504-882-9328",
       "pressurewashing-neworleans.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 2,
+      "near": []
+    }
   },
   {
     "slug": "scaffolding-los-angeles",
@@ -75,7 +124,13 @@
   },
   {
     "slug": "seacoast-hurricane-shutters",
-    "skipped": true
+    "skipped": true,
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 11,
+      "near": []
+    }
   },
   {
     "slug": "stucco-repair-chicago",
@@ -83,7 +138,35 @@
     "searched": [
       "773-694-9295",
       "stuccorepairchicago.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "name match only — needs human confirmation",
+      "candidates": 12,
+      "near": [
+        {
+          "id": "ChIJR0JT7563D4gRIdRrwpiQ86I",
+          "name": "Northwest Stucco Repair & Painting",
+          "phone": "(224) 354-1808",
+          "website": "http://stuccoservicesdesplaines.com/",
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "ChIJRc0Kxns1DogRI0yGVpsbzGM",
+          "name": "TrueVista Stucco Repair & Painting",
+          "phone": "(708) 919-3731",
+          "website": "https://stuccooakpark.com/",
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "ChIJlcpM-hfRD4gRnUzRO2WzxWg",
+          "name": "Northeast Stucco Repair & Painting",
+          "phone": "(224) 714-0706",
+          "website": "https://stuccoevanston.com/",
+          "status": "OPERATIONAL"
+        }
+      ]
+    }
   },
   {
     "slug": "towing-dallas",
@@ -91,7 +174,13 @@
     "searched": [
       "469-457-4462",
       "dallastowtrucks.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 11,
+      "near": []
+    }
   },
   {
     "slug": "twin-city-fences",
@@ -99,7 +188,13 @@
     "searched": [
       "318-351-2539",
       "twincityfences.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 0,
+      "near": []
+    }
   },
   {
     "slug": "twin-city-handyman",
@@ -107,6 +202,12 @@
     "searched": [
       "318-594-2300",
       "twincity-handyman.com"
-    ]
+    ],
+    "lookup": {
+      "checked": "2026-09-22",
+      "result": "not found in Places",
+      "candidates": 0,
+      "near": []
+    }
   }
 ]
