@@ -1,0 +1,126 @@
+{
+  "_comment": "Link prospects, per site. Every entry is a place a real business could legitimately appear: a trade association it could join, a chamber it could belong to, a supplier whose dealer directory it qualifies for, or a page that already mentions it without linking. Nothing here is a link to be bought, spun or blasted, and nothing is sent automatically. scripts/link-prospects.mjs verifies and drafts; a person sends.",
+  "_status_values": "candidate (found, not assessed) | qualified (worth pursuing) | drafted (outreach written, unsent) | sent (a human sent it) | won (link live) | declined (they said no) | unsuitable (we were wrong about it)",
+  "_on_cost": "Association and chamber listings usually cost money. That makes them a business decision about membership, not a link tactic, so cost is recorded on every prospect and never hidden. A link that costs $500 a year may still be worth it for the referrals, but nobody should discover the price after deciding.",
+  "prospects": [
+    {
+      "id": "tcf-afa",
+      "site": "twin-city-fences",
+      "org": "American Fence Association",
+      "url": "https://www.americanfenceassociation.com/membership/",
+      "type": "trade-association",
+      "why": "The fencing industry's main US professional body, ~1,500 member companies, and it runs a contractor locator members are listed in. Genuine trade relevance rather than a generic directory.",
+      "cost": "paid membership — confirm current dues",
+      "status": "drafted",
+      "checked": "2026-09-22",
+      "http": 200,
+      "linksToUs": false,
+      "mentionsUs": false
+    },
+    {
+      "id": "tcf-afa-chapters",
+      "site": "twin-city-fences",
+      "org": "American Fence Association — chapters",
+      "url": "https://www.americanfenceassociation.com/membership/chapters/",
+      "type": "trade-association",
+      "why": "Regional chapters are usually easier to join and more locally relevant than the national body. Worth checking whether a Louisiana or Gulf States chapter exists before pursuing national membership.",
+      "cost": "paid membership — confirm current dues",
+      "status": "drafted",
+      "checked": "2026-09-22",
+      "http": 200,
+      "linksToUs": false,
+      "mentionsUs": false
+    },
+    {
+      "id": "tcf-fca",
+      "site": "twin-city-fences",
+      "org": "Fence Contractors Association",
+      "url": "https://fencecontractors.org/",
+      "type": "directory",
+      "why": "Trade-specific fence contractor directory. Assess quality before pursuing — check whether listings are editorially reviewed or simply accepted, since an open directory is worth very little.",
+      "cost": "unknown",
+      "status": "drafted",
+      "checked": "2026-09-22",
+      "http": 0,
+      "error": "fetch failed"
+    },
+    {
+      "id": "tcf-nafca",
+      "site": "twin-city-fences",
+      "org": "North American Fence Contractors Association",
+      "url": "https://4nafca.com/",
+      "type": "trade-association",
+      "why": "Second fence trade body. Assess against AFA rather than joining both by default.",
+      "cost": "paid membership — confirm current dues",
+      "status": "drafted",
+      "checked": "2026-09-22",
+      "http": 200,
+      "linksToUs": false,
+      "mentionsUs": false
+    },
+    {
+      "id": "dal-ttsa",
+      "site": "towing-dallas",
+      "org": "Texas Towing & Storage Association",
+      "url": "https://web.ttsa.org/atlas/directory/category/members",
+      "type": "trade-association",
+      "why": "State-level association for exactly this trade in exactly this state, with a public member directory carrying contact details. The strongest single prospect on this list: relevant, local, and the directory is the membership benefit rather than an afterthought.",
+      "cost": "paid membership — confirm current dues",
+      "status": "drafted",
+      "checked": "2026-09-22",
+      "http": 200,
+      "linksToUs": false,
+      "mentionsUs": false
+    },
+    {
+      "id": "dal-traa",
+      "site": "towing-dallas",
+      "org": "Towing and Recovery Association of America",
+      "url": "https://traaonline.com/membership/",
+      "type": "trade-association",
+      "why": "National towing body. Members get a listing in the online directory and the annual buyers' guide. Less locally relevant than TTSA, so pursue second.",
+      "cost": "paid membership — confirm current dues",
+      "status": "drafted",
+      "checked": "2026-09-22",
+      "http": 200,
+      "linksToUs": false,
+      "mentionsUs": false
+    }
+  ],
+  "discovery": {
+    "_comment": "Searches that find more prospects. Discovery needs a search engine, which this repo has no key for and should not get one just for this — run these by hand or with an agent, then add what they turn up as prospects above. The verifying and drafting either side of that IS automated.",
+    "_patterns": [
+      "\"<business name>\" -site:<domain>            → mentions that may not link",
+      "<trade> association <state>                   → state trade bodies",
+      "<city> chamber of commerce membership          → local chambers",
+      "<manufacturer> \"find a dealer\" OR \"find an installer\"  → supplier directories",
+      "<city> <trade> sponsor OR sponsorship          → local sponsorships"
+    ],
+    "martins-trash-removal-demolition": {
+      "_blocked": "No domain yet. There is nothing for a link to point at, so prospecting here is premature - revisit once a domain is bought. The targets already named in docs/martins-citations.md (Central Louisiana and Avoyelles chambers, equipment and forestry suppliers) are the starting point.",
+      "queries": [
+        "Central Louisiana Regional Chamber of Commerce membership",
+        "Avoyelles Chamber of Commerce members",
+        "land clearing association Louisiana",
+        "forestry mulching equipment dealer Louisiana \"find a dealer\"",
+        "Louisiana demolition contractors association"
+      ]
+    },
+    "twin-city-fences": {
+      "queries": [
+        "\"Twin City Fence\" -site:twincityfences.com",
+        "Monroe Chamber of Commerce membership West Monroe",
+        "Ouachita Parish contractor directory",
+        "fence manufacturer \"find an installer\" Louisiana"
+      ]
+    },
+    "towing-dallas": {
+      "queries": [
+        "\"24 Hour Towing Dallas\" -site:dallastowtrucks.com",
+        "Dallas chamber of commerce membership small business",
+        "Texas tow truck operator directory",
+        "roadside assistance network provider application Texas"
+      ]
+    }
+  }
+}

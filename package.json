@@ -14,6 +14,7 @@
     "gsc:tokens": "node scripts/gsc-add-properties.mjs --tokens",
     "gsc:verify": "node scripts/gsc-add-properties.mjs --verify",
     "gbp": "node scripts/gbp-watch.mjs",
-    "claims": "node scripts/check-claims.mjs"
+    "claims": "node scripts/check-claims.mjs",
+    "links": "node scripts/link-prospects.mjs"
   }
 }
