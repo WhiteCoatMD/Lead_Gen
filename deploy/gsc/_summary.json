@@ -1,8 +1,242 @@
 {
-  "startDate": "2025-05-29",
-  "endDate": "2026-09-18",
-  "generated": "2026-09-21T23:41:03.426Z",
+  "startDate": "2025-05-30",
+  "endDate": "2026-09-19",
+  "generated": "2026-09-22T00:14:46.991Z",
   "summary": [
+    {
+      "slug": "cactus-removal-tucson",
+      "domain": "cactusremovalservice.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
+    },
+    {
+      "slug": "chicago-eifs-stucco",
+      "domain": "eifschicago.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": [
+        {
+          "path": "/contact",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        }
+      ]
+    },
+    {
+      "slug": "crack-rx",
+      "domain": "getcrackrx.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
+    },
+    {
+      "slug": "deck-builder-monroe",
+      "domain": "deckbuildermonroe.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
+    },
+    {
+      "slug": "flooring-monroe",
+      "domain": "flooring-monroe.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
+    },
+    {
+      "slug": "lake-charles-fences",
+      "domain": "fenceslakecharles.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
+    },
+    {
+      "slug": "mbs-pressure-washing-new-orleans",
+      "domain": "pressurewashing-neworleans.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
+    },
+    {
+      "slug": "scaffolding-los-angeles",
+      "domain": "scaffoldingrentalusa.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": [
+        {
+          "path": "/scaffolding-safety.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/about.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/contact.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        }
+      ]
+    },
+    {
+      "slug": "seacoast-hurricane-shutters",
+      "domain": "seacoasthurricaneshutters.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
+    },
+    {
+      "slug": "stucco-repair-chicago",
+      "domain": "stuccorepairchicago.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": [
+        {
+          "path": "/stucco-repair.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/eifs.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/drywall.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/painting.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/contact.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        }
+      ]
+    },
+    {
+      "slug": "towing-dallas",
+      "domain": "dallastowtrucks.com",
+      "connected": true,
+      "clicks": 579,
+      "impressions": 421505,
+      "pages": 13,
+      "queries": 1000,
+      "rebuilt": [
+        {
+          "path": "/tow-trucks.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/roadside-assistance.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/battery-jumpstart.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/we-buy-junk-cars.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/towing-arlington.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/services.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/about.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/contact.html",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/services1",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/contact-us",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/about-us",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        }
+      ]
+    },
     {
       "slug": "twin-city-fences",
       "domain": "twincityfences.com",
@@ -61,6 +295,16 @@
           "position": null
         }
       ]
+    },
+    {
+      "slug": "twin-city-handyman",
+      "domain": "twincity-handyman.com",
+      "connected": true,
+      "clicks": 0,
+      "impressions": 0,
+      "pages": 0,
+      "queries": 0,
+      "rebuilt": []
     }
   ]
 }

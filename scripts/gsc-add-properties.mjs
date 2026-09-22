@@ -89,6 +89,8 @@ if (wantTokens) {
 
 // --verify
 let verified = 0, addedProps = 0, failed = 0;
+// Fetched once on first use: one list call answers every domain.
+let resourceIds = null;
 for (const { slug, domain } of domains) {
   try {
     await googleFetch(`${SV}/webResource?verificationMethod=DNS_TXT`, auth.token, {
@@ -120,16 +122,30 @@ for (const { slug, domain } of domains) {
   if (owner) {
     // Put a human on the property too, so it is visible in their own Search
     // Console rather than existing only to a service account.
+    //
+    // The resource id is NOT "dns://<domain>/". The API returns it already
+    // URL-encoded and with no trailing slash — dns%3A%2F%2Fexample.com — so
+    // it goes into the path as-is. Constructing and re-encoding it gives
+    // "The ID for this site is missing or invalid", which is what the first
+    // run did on all thirteen.
     try {
-      const current = await googleFetch(`${SV}/webResource/${encodeURIComponent(`dns://${domain}/`)}`, auth.token);
-      const owners = new Set([...(current.owners || []), owner]);
-      await googleFetch(`${SV}/webResource/${encodeURIComponent(current.id)}`, auth.token, {
-        method: "PUT",
-        body: JSON.stringify({ ...current, owners: [...owners] }),
-      });
-      console.log(`          ${" ".repeat(32)} owner added: ${owner}`);
+      if (!resourceIds) {
+        const all = await googleFetch(`${SV}/webResource`, auth.token);
+        resourceIds = new Map((all.items || []).map((i) => [i.site?.identifier, i]));
+      }
+      const resource = resourceIds.get(domain);
+      if (!resource) throw new Error("no verified web resource for this domain");
+      if ((resource.owners || []).includes(owner)) {
+        console.log(`          ${" ".repeat(32)} owner already present: ${owner}`);
+      } else {
+        await googleFetch(`${SV}/webResource/${resource.id}`, auth.token, {
+          method: "PUT",
+          body: JSON.stringify({ ...resource, owners: [...(resource.owners || []), owner] }),
+        });
+        console.log(`          ${" ".repeat(32)} owner added: ${owner}`);
+      }
     } catch (error) {
-      console.log(`          ${" ".repeat(32)} could not add owner: ${String(error.message).slice(0, 80)}`);
+      console.log(`          ${" ".repeat(32)} could not add owner: ${String(error.message).slice(0, 90)}`);
     }
   }
 }

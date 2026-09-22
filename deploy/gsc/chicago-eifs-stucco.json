@@ -1,0 +1,19 @@
+{
+  "slug": "chicago-eifs-stucco",
+  "domain": "eifschicago.com",
+  "siteUrl": "sc-domain:eifschicago.com",
+  "startDate": "2025-05-30",
+  "endDate": "2026-09-19",
+  "clicks": 0,
+  "impressions": 0,
+  "pages": [],
+  "queries": [],
+  "rebuilt": [
+    {
+      "path": "/contact",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    }
+  ]
+}

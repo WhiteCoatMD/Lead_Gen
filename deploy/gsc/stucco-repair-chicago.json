@@ -1,0 +1,43 @@
+{
+  "slug": "stucco-repair-chicago",
+  "domain": "stuccorepairchicago.com",
+  "siteUrl": "sc-domain:stuccorepairchicago.com",
+  "startDate": "2025-05-30",
+  "endDate": "2026-09-19",
+  "clicks": 0,
+  "impressions": 0,
+  "pages": [],
+  "queries": [],
+  "rebuilt": [
+    {
+      "path": "/stucco-repair.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/eifs.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/drywall.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/painting.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/contact.html",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    }
+  ]
+}
