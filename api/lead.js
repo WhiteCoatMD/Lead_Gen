@@ -93,11 +93,22 @@ export default async function handler(req, res) {
       method: "POST",
       headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
       body: JSON.stringify({
-        from: `${site.business} website <leads@${site.domain}>`,
+        // Resend only sends from a domain verified in the account, and
+        // twincityfences.com is not one of them -- the verified list is
+        // bed-sync.com, findamattressstore.com and metaldealerpro.com. So
+        // the envelope sender is a verified domain and the site it came
+        // from is carried in the display name and the body.
+        //
+        // This is a notification to the business's own inbox, so the From
+        // domain matters for spam filtering rather than for branding, and a
+        // verified domain with working DKIM is the better of the two on that
+        // count. Verifying twincityfences.com in Resend later makes this one
+        // environment variable, not a code change.
+        from: `${site.business} website <leads@${process.env.LEAD_FROM_DOMAIN || "bed-sync.com"}>`,
         to: [site.to],
         // Replying to the notification reaches the customer, not us.
         reply_to: lead.email || undefined,
-        subject: `New lead from ${site.domain}: ${lead.name}`,
+        subject: `New ${site.business} lead (${site.domain}): ${lead.name}`,
         text: lines.join("\n"),
       }),
     });
