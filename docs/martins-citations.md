@@ -60,20 +60,26 @@ attribution actually matters.
 If the new number *is* permanent and owned outright, then it can simply be
 `phone` and there is nothing further to think about.
 
-## Is this a service-area business?
+## Service-area business — settled 2026-09-22
 
-Worth settling at the same time. `20 Lee Reeves Rd, Deville` reads like a yard
-or a home rather than premises customers visit. Google's rule is straightforward:
-if customers are not served at the address, the address should be hidden and the
-profile run as a service-area business.
+Confirmed with the owner. Land clearing and demolition happen on the customer's
+property, so customers are never served at the yard, and Google's rule follows
+directly: if customers are not served at the address, hide it and run the profile
+as a service-area business.
 
-Land clearing and demolition are performed on the customer's property by
-definition, so this is almost certainly an SAB. If so the correct NAP is **name
-+ phone + service area, with no street address** — the same shape Twin City
-ended up with, though for a different reason.
+**The canonical NAP is therefore name + phone + service area, with no street
+address.** Same shape Twin City ended up with, for a different reason.
 
-That also changes the citation work: the address should not be added anywhere
-new, even where a directory asks for one.
+For the citation work this means: **do not add the street address anywhere new**,
+including where a directory asks for one. Where a directory already publishes it
+and allows removal, remove it, keeping Deville, LA 71328. Where a directory
+insists on a street address, leaving the existing one is not a disaster — but
+nothing new should be seeded.
+
+The site already renders this correctly: schema carries `addressLocality` and
+`addressRegion` with no `streetAddress`, and all eleven service areas as
+`areaServed`. `scripts/audit.mjs` now asserts it, so a future edit that
+re-introduces a street address fails the audit rather than passing quietly.
 
 ## Do citations still work without a street address?
 
@@ -140,7 +146,7 @@ Business Profile, because that is what Google matches citations against.
 | Field | Value |
 |---|---|
 | Name | **Martins Trash Removal and Demolition** — CONFIRM exact spelling and apostrophe |
-| Street address | **decide** — hide if SAB, see above |
+| Street address | **do not publish** — service-area business, confirmed 2026-09-22 |
 | City | Deville, LA 71328 |
 | Phone | **318-367-0824** (new, confirmed 2026-09-22) |
 | Website | **PENDING — no domain purchased** |

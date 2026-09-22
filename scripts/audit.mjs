@@ -41,6 +41,16 @@ for (const slug of slugs) {
   check(!cfg.domain.startsWith("www."), "domain should be apex");
   check(html.includes('property="og:title"') && html.includes('property="og:url"'), "Open Graph tags");
 
+  // A service-area business must not publish a street address. For Twin City
+  // the address is shared with a competing fence company and publishing it is
+  // what suppressed the listing; for Martins the yard is simply not somewhere
+  // customers go. Both decisions are easy to undo by accident, so they are
+  // asserted rather than remembered.
+  if (cfg.serviceAreaBusiness) {
+    check(!cfg.streetAddress, "service-area business must not set streetAddress");
+    check(!/"streetAddress"/.test(html), "service-area business publishes a street address in schema");
+  }
+
   // --- local-business structured data ---
   const ld = between(html, '<script type="application/ld+json">', "</script>");
   let schema = null;

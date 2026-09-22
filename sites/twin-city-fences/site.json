@@ -5,6 +5,8 @@
   "email": "twincityfences@gmail.com",
   "city": "West Monroe",
   "state": "Louisiana",
+  "serviceAreaBusiness": true,
+  "_serviceAreaBusinessNote": "Address deliberately hidden: another fence company operates at 205 Mane St and the conflict suppressed the listing until it was removed.",
   "schemaType": "FenceContractor",
   "accent": "#ef342f",
   "accentDark": "#c82420",

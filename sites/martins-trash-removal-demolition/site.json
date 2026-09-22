@@ -5,6 +5,8 @@
   "email": "",
   "city": "Deville",
   "state": "Louisiana",
+  "serviceAreaBusiness": true,
+  "_serviceAreaBusinessNote": "Land clearing and demolition happen on the customer's property, so customers are never served at the yard. Confirmed with the owner 2026-09-22.",
   "schemaType": "GeneralContractor",
   "accent": "#c2410c",
   "accentDark": "#9a3412",
