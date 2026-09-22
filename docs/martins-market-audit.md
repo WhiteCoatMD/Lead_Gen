@@ -12,7 +12,8 @@ promoted anywhere public.
 | Name (varies) | "Martin's Trash Service" / "Martin Trash Service" | BBB, Yelp, Hometown |
 | Name (new) | **Martins Trash Removal and Demolition** | Owner, 2026-09-22 |
 | Address | 20 Lee Reeves Rd, Deville, LA 71328 | **CONFIRM** — BBB |
-| Phone | (318) 308-4577 | **CONFIRM** — BBB, Yelp, Hometown ×2 |
+| Phone (old) | (318) 308-4577 | BBB, Yelp, Hometown ×2 — **now superseded** |
+| Phone (new) | **318-367-0824** | Owner, 2026-09-22 |
 | Hours | Open 24/7 | Yelp |
 | Google entity | `/g/11j8k95wqr` | Brief |
 
@@ -100,7 +101,8 @@ name no longer contradicts the service.
 
 ## Open items
 
-- **CONFIRM** phone and address before any public promotion or citation work
+- Phone replaced with 318-367-0824; **every existing citation still has the old number**
+- **CONFIRM** the street address, and decide whether to publish it at all (likely a service-area business)
 - Canonical name spelling, apostrophe included, for NAP consistency
 - Correct or remove the Bordelonville listing
 - Domain not yet purchased — the site is built to a `.invalid` placeholder
