@@ -24,7 +24,7 @@ looks like. Impressions on page two are largely never seen.
 | 1 | Domain | `dallastowtrucks.com`, healthy, HTTPS |
 | 2 | Website | Live, 11 pages, rebuilt 2026-09-21 |
 | 3 | GBP | **NOT FOUND — see below** |
-| 4 | Name consistency | **Three names in play — see below** |
+| 4 | Name consistency | **SETTLED 2026-09-21: 24 Hour Towing Dallas.** The site already matches |
 | 5 | Phone | `469-457-4462`, consistent site-wide. Returns nothing in Places |
 | 6 | Service area | Dallas, Fort Worth, Irving, DFW |
 | 7 | Previous rankings | 16 months of data, analysed below |
@@ -112,16 +112,29 @@ impressions of "near me" demand is won or lost on the profile**, not on the
 website. If no profile exists, that is the single highest-value item on this
 property — worth more than every page rebuild combined.
 
-### 2. Three business names are in circulation
+**Searched again 2026-09-21** under the confirmed name, the domain, the owner
+name and the archived street address. Every result was a different Dallas
+towing company — Texas Tows, Tow Dallas LLC, AmeriTow, Tow Dallas TX LLC. The
+market is crowded with near-identical names, which is itself worth knowing:
+whatever profile exists here is competing against a dozen businesses using the
+same words.
 
-- The site says **24 Hour Towing Dallas**
-- The Search Console property is owned by **towtruckprosdallas@gmail.com**
-- The verified owner is listed as **Millard Bratton**
+One weak signal. The owner-supplied share link resolves to a plain Google
+search with no  attached, whereas the Twin City Fence link carried
+ and identified a specific business entity. That is
+suggestive rather than conclusive, and given how wrong the not-found column
+has already been on this portfolio it is not a conclusion.
 
-"Tow Truck Pros Dallas" may be the real trading name, or the Gmail may be
-incidental. Citations key on exact-string matching, so this has to be settled
-before any citation work — the same defect that cost Twin City Fence and Deck
-Builders Monroe.
+**The definitive check is business.google.com on the owning account.**
+
+### 2. Business name — SETTLED
+
+**24 Hour Towing Dallas**, confirmed by the owner 2026-09-21. The site already
+carries it, so unlike Twin City Fence and Deck Builders Monroe there is
+nothing to correct here.  is the Google account
+and not a trading name; Millard Bratton is the verified property owner.
+
+This is the first property in the portfolio where the name needed no fixing.
 
 ### 3. No lead tracking whatsoever
 
@@ -137,7 +150,7 @@ with one entry in the recipients map. That is the cheapest large win available.
 
 1. **Settle the GBP question.** Everything local depends on it, and 80,628
    impressions of proximity demand hang on the answer.
-2. **Settle the business name.** Before any citation work.
+2. ~~Settle the business name~~ — **done**, no correction needed.
 3. **Port the form, analytics and lead endpoint** from Twin City. One config
    entry; no new code.
 4. **Answer the heavy-duty question.** 30,140 impressions either open up or
