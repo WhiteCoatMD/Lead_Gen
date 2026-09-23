@@ -32,6 +32,13 @@ Backlinks (sites with `backlinks: true`), in this order of value:
 - local sponsorships (youth sports, community events) in the service area;
 - pages that mention the business by name without linking to it (search `"<business name>" -site:<domain>`).
 
+For twin-city-fences and lake-charles-fences, also look for resource pages
+that would genuinely use the site's fence materials calculator
+(`/fence-calculator`) or a city's fence permit guide (`/fence-permit-<city>`):
+HOA and neighbourhood association sites, realtors' moving or homeowner guides,
+home-improvement blogs, and library or city resource lists. The task's
+copy_block pitches that specific page, and its url is the prospect's page.
+
 Citations (sites with `citations: true` only): core directories where the
 business is missing (Google-adjacent and industry directories a real customer
 uses: Bing Places, Apple Business Connect, BBB, Angi, Nextdoor, Thumbtack,
