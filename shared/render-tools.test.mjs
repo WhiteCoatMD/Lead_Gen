@@ -39,7 +39,7 @@ test("permit guide shows every fact with its source and the oldest checked date"
   assert.match(html, /Yes &lt;for new fences&gt;\./); // escaped
   assert.match(html, /tel:\+13185550100/);
   assert.match(html, /not legal advice/i);
-  assert.match(html, /HOA/);
+  assert.match(html, /If you live in a neighborhood with an HOA, its rules can be stricter than these\. /);
   assert.match(html, /href="\/fence-calculator"/);
 });
 

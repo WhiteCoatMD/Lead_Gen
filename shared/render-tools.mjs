@@ -75,7 +75,7 @@ export function renderPermitGuide(site, permit, links) {
         <p>${esc(f.answer)}</p>
         <p class="source">Source: ${safeUrl(f.sourceUrl) ? `<a href="${esc(f.sourceUrl)}" rel="noopener">${esc(f.sourceTitle)}</a>` : esc(f.sourceTitle)}${isDate(f.checked) ? ` · checked ${esc(monthOf(f.checked))}` : ""}</p>
       </article>`).join("")}
-      <p class="fineprint">If you live in a neighbourhood with an HOA, its rules can be stricter than ${esc(permit.name)}'s. This page is a plain-language summary of public rules, not legal advice.</p>
+      <p class="fineprint">If you live in a neighborhood with an HOA, its rules can be stricter than these. This page is a plain-language summary of public rules, not legal advice.</p>
       <p>${links.calculator ? `<a href="/${esc(links.calculator.slug)}">Work out the materials with our ${esc(links.calculator.label)}</a>` : ""}${
         (links.guides || []).length ? ` · Other areas: ${links.guides.map((g) => `<a href="/${esc(g.slug)}">${esc(g.label)}</a>`).join(", ")}` : ""}</p>
     </section>`;
