@@ -1,0 +1,86 @@
+{
+  "id": "sulphur-la",
+  "name": "City of Sulphur",
+  "office": {
+    "name": "City of Sulphur Inspections and Permits",
+    "phone": "337-527-2050",
+    "address": "City Hall, 101 N Huntington Street, Sulphur, LA 70663",
+    "url": "https://www.sulphurla.gov/196/Permits-Inspections",
+    "sourceUrl": "https://www.sulphurla.gov/196/Permits-Inspections",
+    "checked": "2026-09-23"
+  },
+  "facts": [
+    {
+      "topic": "permit",
+      "question": "Do I need a permit to build a fence in Sulphur?",
+      "answer": "The city says to contact its Inspections and Permits office before building a fence to confirm permit requirements, property line concerns, setback rules and other regulations, because rules vary with location, zoning, easements, corner lots and drainage areas. Call Inspections and Permits at 337-527-2050.",
+      "sourceUrl": "https://www.sulphurla.gov/m/faq",
+      "sourceTitle": "City of Sulphur, FAQs: Who should I contact before building a fence?",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "height",
+      "question": "How tall can a fence be?",
+      "answer": "This isn't published online. Ask Sulphur Inspections and Permits at 337-527-2050.",
+      "sourceUrl": "https://www.sulphurla.gov/196/Permits-Inspections",
+      "sourceTitle": "City of Sulphur, Permits & Inspections",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "corner",
+      "question": "Where on the lot can a fence go?",
+      "answer": "Anywhere on the lot, except inside the corner clip or the intersection sight triangle. The corner clip is the triangle formed by the street right-of-way lines and a line joining points 25 feet from where they meet; no structure may be placed there. In the sight triangle defined in section 21-6, fences and other obstructions over 30 inches tall that block the view of drivers, cyclists or pedestrians are prohibited; its size depends on the street's speed limit and width, and the public works department keeps a diagram.",
+      "sourceUrl": "https://library.municode.com/la/sulphur/codes/code_of_ordinances?nodeId=PTIICOOR_APXBLAUS_ARTIVDIES_PT2SPUS",
+      "sourceTitle": "Sulphur Code of Ordinances, Appendix B (Land Use), Art. IV, Part 2, § 2(3) and § 3(2)(b), and §§ 21-5 and 21-6",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "setback",
+      "question": "How close to a utility can I build?",
+      "answer": "No permanent structure, including a fence, may be built within 5 feet of a utility easement in the city's favor, within 10 feet of a city-owned utility, or within a recorded construction easement in the city's favor, whichever is more restrictive. The city may remove an encroaching fence, and the owner bears the cost of restoring or replacing it.",
+      "sourceUrl": "https://library.municode.com/la/sulphur/codes/code_of_ordinances?nodeId=PTIICOOR_CH17STSIOTPUPL_ARTIIUTUSRI-WRE_S17-39RESECL",
+      "sourceTitle": "Sulphur Code of Ordinances § 17-39, Required setbacks or clearances",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "pool",
+      "question": "Does a swimming pool need a fence?",
+      "answer": "Yes, for outdoor pools at least 18 inches deep. The pool must be completely surrounded by a fence or wall at least 6 feet tall with no openings larger than 4 inches (picket gaps included), except doors and gates. Gates and doors into the enclosure must be self-closing and self-latching; a house or accessory building may form part of the enclosure.",
+      "sourceUrl": "https://library.municode.com/la/sulphur/codes/code_of_ordinances?nodeId=PTIICOOR_CH19SWPO",
+      "sourceTitle": "Sulphur Code of Ordinances, Chapter 19, Swimming Pools (§§ 19-1 to 19-3)",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "materials",
+      "question": "Are any fence materials banned?",
+      "answer": "This isn't published online. Ask Sulphur Inspections and Permits at 337-527-2050.",
+      "sourceUrl": "https://www.sulphurla.gov/196/Permits-Inspections",
+      "sourceTitle": "City of Sulphur, Permits & Inspections",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Do I have to call Louisiana 811 before digging fence post holes?",
+      "answer": "Yes. Louisiana law says that before any excavation, the person digging must notify the regional notification center (Louisiana 811) at least 48 hours, but not more than 120 hours, before starting, not counting weekends and holidays. After notifying, you must wait at least 48 hours, counted from 7:00 a.m. on the next working day, before digging, unless Louisiana 811 tells you no utility operators need to be notified.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97829",
+      "sourceTitle": "La. R.S. 40:1749.13, Excavation and demolition; prohibitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Does digging post holes by hand count?",
+      "answer": "Yes. The law defines excavation as moving or removing earth by powered, mechanical or manual means, and names digging and augering as examples. Manual probing is not counted as excavation.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97828",
+      "sourceTitle": "La. R.S. 40:1749.12, Definitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "How do I contact Louisiana 811?",
+      "answer": "Call 811 or 1-800-272-3020, or submit a locate request online through Louisiana 811's website. Louisiana 811 says its service is free to anyone who disturbs the soil, whether with heavy equipment or hand tools.",
+      "sourceUrl": "https://www.louisiana811.com/",
+      "sourceTitle": "Louisiana 811 (official site)",
+      "checked": "2026-09-23"
+    }
+  ]
+}

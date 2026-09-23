@@ -1,0 +1,102 @@
+{
+  "id": "west-monroe-la",
+  "name": "City of West Monroe",
+  "office": {
+    "name": "City of West Monroe Building & Development",
+    "phone": "318-396-2600",
+    "address": "2305 N 7th Street (inside City Hall), West Monroe, LA 71291",
+    "url": "https://www.cityofwestmonroe.com/175/Building-Development",
+    "sourceUrl": "https://www.cityofwestmonroe.com/175/Building-Development",
+    "checked": "2026-09-23"
+  },
+  "facts": [
+    {
+      "topic": "permit",
+      "question": "Do I need a permit to build a fence in West Monroe?",
+      "answer": "Yes. West Monroe's zoning code says a building permit is required for fences and walls, subject to approval by the zoning administrator. The fee is set by the city.",
+      "sourceUrl": "https://library.municode.com/la/west_monroe/codes/code_of_ordinances?nodeId=PT12PLDE_CH5ZO_ARTCSURE_S12-5024SUYARE",
+      "sourceTitle": "West Monroe Code of Ordinances § 12-5024(g), Fences, walls, hedges",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "permit",
+      "question": "How do I apply?",
+      "answer": "Through the city's Building & Development department at City Hall, 2305 N 7th Street, West Monroe (318-396-2600). The department's page links the city's building permit application.",
+      "sourceUrl": "https://www.cityofwestmonroe.com/175/Building-Development",
+      "sourceTitle": "City of West Monroe, Building & Development",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "height",
+      "question": "How tall can a fence be in the front yard or a side-corner yard?",
+      "answer": "No fence, wall, hedge or other object that obstructs sight may exceed 3 feet in any required front or side-corner yard. For homes in residential districts, a chain-link fence in a required front or side-corner yard may not exceed 5 feet.",
+      "sourceUrl": "https://library.municode.com/la/west_monroe/codes/code_of_ordinances?nodeId=PT12PLDE_CH5ZO_ARTCSURE_S12-5024SUYARE",
+      "sourceTitle": "West Monroe Code of Ordinances § 12-5024(g), Fences, walls, hedges",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "height",
+      "question": "How tall can a fence be in a side or rear yard?",
+      "answer": "Up to 8 feet in any required side or rear yard. A residential property whose side-corner yard backs onto another residential side-corner yard may also have a fence up to 8 feet in that side-corner yard.",
+      "sourceUrl": "https://library.municode.com/la/west_monroe/codes/code_of_ordinances?nodeId=PT12PLDE_CH5ZO_ARTCSURE_S12-5024SUYARE",
+      "sourceTitle": "West Monroe Code of Ordinances § 12-5024(g), Fences, walls, hedges",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "corner",
+      "question": "Are there extra limits on a corner lot?",
+      "answer": "Yes. On a corner lot in any residential district, nothing more than 2 feet tall (fence, wall, hedge, structure or planting) may be placed within the triangle formed by the two street lines and a line joining points 30 feet from their intersection. The city's landscape regulations describe a different visibility triangle (3 feet tall, 20 feet from the intersection), so ask Building & Development which applies to your lot.",
+      "sourceUrl": "https://library.municode.com/la/west_monroe/codes/code_of_ordinances?nodeId=PT12PLDE_CH5ZO_ARTCSURE_S12-5022SUARRE",
+      "sourceTitle": "West Monroe Code of Ordinances § 12-5022(c), Visibility at intersections",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "setback",
+      "question": "Can I build a fence in a ditch or right-of-way?",
+      "answer": "No. Building fences, walls or other works in public alleys, ditches, other rights-of-way or other public property is prohibited, except as provided in section 5-1023 of the code.",
+      "sourceUrl": "https://library.municode.com/la/west_monroe/codes/code_of_ordinances?nodeId=PT5PUWO_CH1STSI_ARTBOB_S5-1022ST",
+      "sourceTitle": "West Monroe Code of Ordinances § 5-1022, Structures",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "pool",
+      "question": "Does a swimming pool need a fence?",
+      "answer": "Yes. All swimming pools must be enclosed by a fence or wall at least 4 feet tall with a self-latching gate, kept in good condition to keep out animals and young children.",
+      "sourceUrl": "https://library.municode.com/la/west_monroe/codes/code_of_ordinances?nodeId=PT12PLDE_CH5ZO_ARTCSURE_S12-5024SUYARE",
+      "sourceTitle": "West Monroe Code of Ordinances § 12-5024(g), Fences, walls, hedges",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "materials",
+      "question": "Are any fence materials banned?",
+      "answer": "Yes. It is unlawful to put up any electrically charged fence or electrically charged barrier wire within the city.",
+      "sourceUrl": "https://library.municode.com/la/west_monroe/codes/code_of_ordinances?nodeId=PT12PLDE_CH5ZO_ARTCSURE_S12-5024SUYARE",
+      "sourceTitle": "West Monroe Code of Ordinances § 12-5024(g), Fences, walls, hedges",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Do I have to call Louisiana 811 before digging fence post holes?",
+      "answer": "Yes. Louisiana law says that before any excavation, the person digging must notify the regional notification center (Louisiana 811) at least 48 hours, but not more than 120 hours, before starting, not counting weekends and holidays. After notifying, you must wait at least 48 hours, counted from 7:00 a.m. on the next working day, before digging, unless Louisiana 811 tells you no utility operators need to be notified.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97829",
+      "sourceTitle": "La. R.S. 40:1749.13, Excavation and demolition; prohibitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Does digging post holes by hand count?",
+      "answer": "Yes. The law defines excavation as moving or removing earth by powered, mechanical or manual means, and names digging and augering as examples. Manual probing is not counted as excavation.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97828",
+      "sourceTitle": "La. R.S. 40:1749.12, Definitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "How do I contact Louisiana 811?",
+      "answer": "Call 811 or 1-800-272-3020, or submit a locate request online through Louisiana 811's website. Louisiana 811 says its service is free to anyone who disturbs the soil, whether with heavy equipment or hand tools.",
+      "sourceUrl": "https://www.louisiana811.com/",
+      "sourceTitle": "Louisiana 811 (official site)",
+      "checked": "2026-09-23"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "lake-charles-la",
+  "name": "City of Lake Charles",
+  "office": {
+    "name": "City of Lake Charles Permit Center",
+    "phone": "337-491-1294",
+    "address": "326 Pujo Street, 7th Floor, Lake Charles, LA 70601",
+    "url": "https://www.cityoflakecharles.com/207/Permit-Center",
+    "sourceUrl": "https://www.cityoflakecharles.com/207/Permit-Center",
+    "checked": "2026-09-23"
+  },
+  "facts": [
+    {
+      "topic": "permit",
+      "question": "Do I need a permit to build a fence in Lake Charles?",
+      "answer": "Lake Charles's building code lists fences not over 10 feet tall among work that does not need a building permit. The code adds that this exemption does not authorize work that creates a safety hazard or breaks any other ordinance, so the zoning rules below still apply. Fences on historic properties or in historic districts need separate approval (see below).",
+      "sourceUrl": "https://library.municode.com/la/lake_charles/codes/code_of_ordinances?nodeId=PTIITHCO_CH6BUCOOCCORE_ARTIILOSTUNCOCO_S6-40PENORE",
+      "sourceTitle": "Lake Charles Code of Ordinances § 6-40, Permits not required",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "permit",
+      "question": "Who do I ask about permits and zoning?",
+      "answer": "The Permit Center, 326 Pujo Street, 7th Floor, Lake Charles, handles building permits (337-491-1294). The page lists the Zoning Office at 337-491-1542. Permits can be applied for online through the city's MGO system.",
+      "sourceUrl": "https://www.cityoflakecharles.com/207/Permit-Center",
+      "sourceTitle": "City of Lake Charles, Permit Center",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "height",
+      "question": "How tall can a fence be?",
+      "answer": "No fence may exceed 10 feet. Fences may be placed anywhere on the lot as long as they don't create a traffic hazard or similar problem, but may not extend beyond the front setback line of the building along any arterial or collector roadway corridor.",
+      "sourceUrl": "https://library.municode.com/la/lake_charles/codes/code_of_ordinances?nodeId=PTIITHCO_CH24ZO_ARTVDERE_PT2REGEAP_S24-5-204ACUS",
+      "sourceTitle": "Lake Charles Code of Ordinances § 24-5-204(2)(b), Accessory uses",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "corner",
+      "question": "Are there extra limits near a street intersection?",
+      "answer": "Yes. Fences are not allowed inside the sight triangle at intersections. Its size depends on the intersection: at four-way stops and signals it reaches 40 feet from the intersection, and at stop- or yield-controlled intersections it depends on the speed limit. Separately, within 20 feet of a street corner, fences and other obstructions must be kept no taller than 36 inches. Ask the Zoning Office to confirm the triangle for your lot.",
+      "sourceUrl": "https://library.municode.com/la/lake_charles/codes/code_of_ordinances?nodeId=PTIITHCO_CH24ZO_ARTVDERE_PT2REGEAP_S24-5-203DEST",
+      "sourceTitle": "Lake Charles Code of Ordinances § 24-5-203(2), Sight triangle, and § 18-6",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "materials",
+      "question": "What materials are allowed?",
+      "answer": "Fences must be built of a recognized fencing material: wood, chain-link or decorative iron, vinyl, or masonry, and kept in good condition. Barbed wire is unlawful as a fence or barrier, except on top of a fence at least 6 feet tall made of another material (or barbed wire already in use before May 4, 1966).",
+      "sourceUrl": "https://library.municode.com/la/lake_charles/codes/code_of_ordinances?nodeId=PTIITHCO_CH24ZO_ARTVDERE_PT2REGEAP_S24-5-204ACUS",
+      "sourceTitle": "Lake Charles Code of Ordinances § 24-5-204(2)(b), Accessory uses, and § 6-1, Barbed wire",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "other",
+      "question": "Do historic districts have extra rules?",
+      "answer": "Yes. Putting up, altering or removing a fence on a designated historic property, or in the Charpentier or Margaret Place historic districts, counts as a material change in appearance and needs a Certificate of Appropriateness (issued by the Historic Preservation Commission or, for minor work, its staff); the code says a certificate may be required even for work that doesn't otherwise need a building permit.",
+      "sourceUrl": "https://library.municode.com/la/lake_charles/codes/code_of_ordinances?nodeId=PTIITHCO_CH24ZO_ARTVDERE_PT3DIRE_S24-5-307HIDIHILA",
+      "sourceTitle": "Lake Charles Code of Ordinances § 24-5-307, Historic districts and historic landmarks",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "pool",
+      "question": "Does a swimming pool need a fence?",
+      "answer": "Pool barrier rules aren't printed in Lake Charles's code of ordinances; the building code it adopts may set them. Ask the Lake Charles Permit Center at 337-491-1294.",
+      "sourceUrl": "https://library.municode.com/la/lake_charles/codes/code_of_ordinances?nodeId=PTIITHCO_CH6BUCOOCCORE_ARTIILOSTUNCOCO_S6-35TEMAAD",
+      "sourceTitle": "Lake Charles Code of Ordinances § 6-35, Technical manual adopted (Louisiana State Uniform Construction Code)",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Do I have to call Louisiana 811 before digging fence post holes?",
+      "answer": "Yes. Louisiana law says that before any excavation, the person digging must notify the regional notification center (Louisiana 811) at least 48 hours, but not more than 120 hours, before starting, not counting weekends and holidays. After notifying, you must wait at least 48 hours, counted from 7:00 a.m. on the next working day, before digging, unless Louisiana 811 tells you no utility operators need to be notified.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97829",
+      "sourceTitle": "La. R.S. 40:1749.13, Excavation and demolition; prohibitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Does digging post holes by hand count?",
+      "answer": "Yes. The law defines excavation as moving or removing earth by powered, mechanical or manual means, and names digging and augering as examples. Manual probing is not counted as excavation.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97828",
+      "sourceTitle": "La. R.S. 40:1749.12, Definitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "How do I contact Louisiana 811?",
+      "answer": "Call 811 or 1-800-272-3020, or submit a locate request online through Louisiana 811's website. Louisiana 811 says its service is free to anyone who disturbs the soil, whether with heavy equipment or hand tools.",
+      "sourceUrl": "https://www.louisiana811.com/",
+      "sourceTitle": "Louisiana 811 (official site)",
+      "checked": "2026-09-23"
+    }
+  ]
+}

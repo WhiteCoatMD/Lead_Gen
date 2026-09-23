@@ -1,0 +1,94 @@
+{
+  "id": "ouachita-parish-la",
+  "name": "Ouachita Parish (unincorporated areas)",
+  "office": {
+    "name": "Ouachita Parish Permit Office",
+    "phone": "(318) 398-9780",
+    "address": "1650 Desiard Street, Suite 202, Monroe, LA 71201",
+    "url": "https://www.oppj.org/departments/permit_office/index.php",
+    "sourceUrl": "https://www.oppj.org/departments/permit_office/index.php",
+    "checked": "2026-09-23"
+  },
+  "facts": [
+    {
+      "topic": "permit",
+      "question": "Do I need a permit to build a fence outside city limits in Ouachita Parish?",
+      "answer": "This guide covers homes outside city limits (Monroe and West Monroe have their own rules). The parish building code lists fences not over 6 feet high among work that does not need a building permit, and says that exemption does not authorize work that breaks any other law or ordinance. For a fence taller than 6 feet, or to confirm, contact the Ouachita Parish Permit Office. This follows the 2006 building code the parish adopted; newer state building codes may differ — confirm with the Permit Office.",
+      "sourceUrl": "https://library.municode.com/la/ouachita_parish/codes/code_of_ordinances?nodeId=COOR_CH3_1-2BUST_ARTVBUCOPE_DIV2ADPR_S3_1-2_-123PE",
+      "sourceTitle": "Ouachita Parish Code of Ordinances § 3½-123, Permits, as published on Municode (updated through Feb. 6, 2015)",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "permit",
+      "question": "Where is the parish permit office?",
+      "answer": "The Ouachita Parish Permit Office issues building permits for the unincorporated parish. It is on the second floor of the Ouachita Parish Health Unit, 1650 Desiard Street, Suite 202, Monroe; phone (318) 398-9780, email buildingpermits@oppj.org. The parish also has an online permit portal.",
+      "sourceUrl": "https://www.oppj.org/departments/permit_office/index.php",
+      "sourceTitle": "Ouachita Parish Police Jury, Permit Office",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "height",
+      "question": "How tall can a fence be?",
+      "answer": "This isn't published online. Ask the Ouachita Parish Permit Office at (318) 398-9780.",
+      "sourceUrl": "https://www.oppj.org/departments/permit_office/index.php",
+      "sourceTitle": "Ouachita Parish Police Jury, Permit Office",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "setback",
+      "question": "Can I build a fence across a roadside ditch?",
+      "answer": "No. It is unlawful to build any fence, wall, posts, railings or other structure in or across a ditch along a public road in the parish. The one exception: where a ditch was cut to drain a road but runs away from the road rather than alongside it, the neighboring owner may fence across it if the fence doesn't interfere with the flow of water.",
+      "sourceUrl": "https://library.municode.com/la/ouachita_parish/codes/code_of_ordinances?nodeId=COOR_CH19RODR_ARTIINGE_S19-6PLTIBRDEETSTDIFEACDI",
+      "sourceTitle": "Ouachita Parish Code of Ordinances § 19-6, fences across ditches, as published on Municode (updated through Feb. 6, 2015)",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "corner",
+      "question": "Are there corner-lot or sight-line limits?",
+      "answer": "This isn't published online. Ask the Ouachita Parish Permit Office at (318) 398-9780.",
+      "sourceUrl": "https://www.oppj.org/departments/permit_office/index.php",
+      "sourceTitle": "Ouachita Parish Police Jury, Permit Office",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "pool",
+      "question": "Does a swimming pool need a fence?",
+      "answer": "Pool barrier rules aren't printed in Ouachita Parish's code of ordinances; the building code it adopts may set them. Ask the Ouachita Parish Permit Office at (318) 398-9780.",
+      "sourceUrl": "https://library.municode.com/la/ouachita_parish/codes/code_of_ordinances?nodeId=COOR_CH3_1-2BUST_ARTVBUCOPE_DIV1GE_S3_1-2_-104ADSTUNCOCO",
+      "sourceTitle": "Ouachita Parish Code of Ordinances § 3½-104, Adoption of state uniform construction code, as published on Municode (updated through Feb. 6, 2015)",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "materials",
+      "question": "Are any fence materials banned?",
+      "answer": "This isn't published online. Ask the Ouachita Parish Permit Office at (318) 398-9780.",
+      "sourceUrl": "https://www.oppj.org/departments/permit_office/index.php",
+      "sourceTitle": "Ouachita Parish Police Jury, Permit Office",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Do I have to call Louisiana 811 before digging fence post holes?",
+      "answer": "Yes. Louisiana law says that before any excavation, the person digging must notify the regional notification center (Louisiana 811) at least 48 hours, but not more than 120 hours, before starting, not counting weekends and holidays. After notifying, you must wait at least 48 hours, counted from 7:00 a.m. on the next working day, before digging, unless Louisiana 811 tells you no utility operators need to be notified.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97829",
+      "sourceTitle": "La. R.S. 40:1749.13, Excavation and demolition; prohibitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Does digging post holes by hand count?",
+      "answer": "Yes. The law defines excavation as moving or removing earth by powered, mechanical or manual means, and names digging and augering as examples. Manual probing is not counted as excavation.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97828",
+      "sourceTitle": "La. R.S. 40:1749.12, Definitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "How do I contact Louisiana 811?",
+      "answer": "Call 811 or 1-800-272-3020, or submit a locate request online through Louisiana 811's website. Louisiana 811 says its service is free to anyone who disturbs the soil, whether with heavy equipment or hand tools.",
+      "sourceUrl": "https://www.louisiana811.com/",
+      "sourceTitle": "Louisiana 811 (official site)",
+      "checked": "2026-09-23"
+    }
+  ]
+}

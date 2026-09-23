@@ -1,0 +1,102 @@
+{
+  "id": "monroe-la",
+  "name": "City of Monroe",
+  "office": {
+    "name": "City of Monroe Planning & Zoning",
+    "phone": "(318) 329-2334",
+    "address": "400 Lea Joyner Expy, Monroe, LA 71201",
+    "url": "https://monroela.us/departments/engineering/planning-zoning/",
+    "sourceUrl": "https://monroela.us/city-directory/",
+    "checked": "2026-09-23"
+  },
+  "facts": [
+    {
+      "topic": "permit",
+      "question": "Do I need a permit to build a fence in Monroe?",
+      "answer": "Yes. Monroe's zoning code says no person may construct or rebuild any fence without a fence permit from the city's planning and zoning office. The fee is set by the city council and is available from the planning and zoning director's office.",
+      "sourceUrl": "https://library.municode.com/la/monroe/codes/code_of_ordinances?nodeId=COOR_CH37ZO_ARTVSIDEST_S37-76ACSTUS",
+      "sourceTitle": "Monroe Code of Ordinances § 37-76(f), Fences, gates and walls",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "permit",
+      "question": "How do I apply?",
+      "answer": "Contact the city's Planning & Zoning office (email planning.zoning@ci.monroe.la.us). The Planning & Zoning page provides login instructions for the city's online permit system (MGO).",
+      "sourceUrl": "https://monroela.us/departments/engineering/planning-zoning/",
+      "sourceTitle": "City of Monroe, Planning & Zoning",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "height",
+      "question": "How tall can a fence be in a front yard?",
+      "answer": "In residential (and B-1) districts, a solid fence along the front yard may be up to 36 inches tall, and a fence that is at least 50% open may be up to 42 inches. The code separately says a chain-link fence in a required front or side-corner yard may not exceed 5 feet; ask Planning & Zoning how the two rules apply to your lot.",
+      "sourceUrl": "https://library.municode.com/la/monroe/codes/code_of_ordinances?nodeId=COOR_CH37ZO_ARTVSIDEST_S37-76ACSTUS",
+      "sourceTitle": "Monroe Code of Ordinances § 37-76(f), Fences, gates and walls",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "height",
+      "question": "How tall can a fence be in a side or rear yard?",
+      "answer": "Up to 8 feet along side or rear yard boundaries in residential (and B-1) districts, except in the corner-lot line-of-sight clearance area. No fence may exceed 8 feet unless the zoning administrator grants an exception. Height is measured from the highest grade along the fence or property line on the neighbor's side.",
+      "sourceUrl": "https://library.municode.com/la/monroe/codes/code_of_ordinances?nodeId=COOR_CH37ZO_ARTVSIDEST_S37-76ACSTUS",
+      "sourceTitle": "Monroe Code of Ordinances § 37-76(f), Fences, gates and walls",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "setback",
+      "question": "Can my fence sit on or over the property line?",
+      "answer": "A fence, gate or wall may not extend beyond the property line. Separately, the trunk of a hedge may not be planted closer than 2 feet inside a property line.",
+      "sourceUrl": "https://library.municode.com/la/monroe/codes/code_of_ordinances?nodeId=COOR_CH37ZO_ARTVSIDEST_S37-76ACSTUS",
+      "sourceTitle": "Monroe Code of Ordinances § 37-76(f), Fences, gates and walls",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "corner",
+      "question": "Are there extra limits on a corner lot?",
+      "answer": "Yes. The side- and rear-yard allowance for fences up to 8 feet does not apply inside the line-of-sight clearance area: the triangle formed by measuring 20 feet along both property lines from the corner of a corner lot next to two intersecting streets, plus the diagonal joining those points. Ask Planning & Zoning what may be built inside that triangle.",
+      "sourceUrl": "https://library.municode.com/la/monroe/codes/code_of_ordinances?nodeId=COOR_CH37ZO_ARTIIDERUIN_S37-21DE",
+      "sourceTitle": "Monroe Code of Ordinances §§ 37-21 (definition of line of sight clearance area) and 37-76(f)(4)",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "pool",
+      "question": "Does a swimming pool need a fence?",
+      "answer": "Yes. Every swimming pool holding 5,000 gallons or more must be protected by a safety fence at least 6 feet tall, with a walk space at least 3 feet wide between the pool and the fence.",
+      "sourceUrl": "https://library.municode.com/la/monroe/codes/code_of_ordinances?nodeId=COOR_CH37ZO_ARTVSIDEST_S37-76ACSTUS",
+      "sourceTitle": "Monroe Code of Ordinances § 37-76(i), Swimming pools",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "materials",
+      "question": "Are any fence materials banned?",
+      "answer": "Electrically charged fences are prohibited, except invisible dog fences. Barbed wire and razor wire are prohibited, except up to four top strands on chain-link fences for security in the B-4, I-1, I-2 and C (campus) zones. Solid fences must be wood, brick, stone or rock, masonry, vinyl, hedges or a combination; open fences must be ornamental iron, wood, woven wire or chain link, or ornamental iron combined with brick, stone/rock or masonry.",
+      "sourceUrl": "https://library.municode.com/la/monroe/codes/code_of_ordinances?nodeId=COOR_CH37ZO_ARTVSIDEST_S37-76ACSTUS",
+      "sourceTitle": "Monroe Code of Ordinances § 37-76(f), Fences, gates and walls",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Do I have to call Louisiana 811 before digging fence post holes?",
+      "answer": "Yes. Louisiana law says that before any excavation, the person digging must notify the regional notification center (Louisiana 811) at least 48 hours, but not more than 120 hours, before starting, not counting weekends and holidays. After notifying, you must wait at least 48 hours, counted from 7:00 a.m. on the next working day, before digging, unless Louisiana 811 tells you no utility operators need to be notified.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97829",
+      "sourceTitle": "La. R.S. 40:1749.13, Excavation and demolition; prohibitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "Does digging post holes by hand count?",
+      "answer": "Yes. The law defines excavation as moving or removing earth by powered, mechanical or manual means, and names digging and augering as examples. Manual probing is not counted as excavation.",
+      "sourceUrl": "https://legis.la.gov/legis/Law.aspx?d=97828",
+      "sourceTitle": "La. R.S. 40:1749.12, Definitions",
+      "checked": "2026-09-23"
+    },
+    {
+      "topic": "digging",
+      "question": "How do I contact Louisiana 811?",
+      "answer": "Call 811 or 1-800-272-3020, or submit a locate request online through Louisiana 811's website. Louisiana 811 says its service is free to anyone who disturbs the soil, whether with heavy equipment or hand tools.",
+      "sourceUrl": "https://www.louisiana811.com/",
+      "sourceTitle": "Louisiana 811 (official site)",
+      "checked": "2026-09-23"
+    }
+  ]
+}
