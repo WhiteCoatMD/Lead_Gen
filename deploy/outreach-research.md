@@ -69,6 +69,11 @@ Write the array to /tmp/proposals.json, then:
 
     node scripts/outreach-vet.mjs /tmp/proposals.json --propose
 
+If this command fails or throws — missing or rejected token, network error,
+an HTTP error — stop. Report the error text and list which sites' proposals
+were not submitted. Do not retry in a loop, and do not report the run as a
+success.
+
 Report, per site: proposed, dropped by vetting (with reasons), and skipped by
 the database (with reasons). If everything was dropped or skipped, say so
 plainly — an empty week is a result, not a failure.
