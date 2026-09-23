@@ -6,12 +6,19 @@ never send email, submit forms, create accounts or pay for anything.
 
 ## 1. Get the context
 
+The token is provided by the routine prompt as `OUTREACH_PROPOSE_TOKEN`; the
+script reads it from that environment variable. Never print, echo, log or
+write the token anywhere, including in your report.
+
     node scripts/outreach-vet.mjs --context > /tmp/context.json
 
 `eligibility` says which sites may get backlinks and which may get citations,
-with the exact `nap` block citations must use. `existing` lists every page
-already in the queue in any status — never propose those again. If the
-command fails, stop and report the error; do not guess eligibility.
+with the exact `nap` block citations must use. `existing` lists every task
+already in the queue in any status, with its `site`, `kind`, `target`, `url`
+and `status` — never propose those pages again, and never propose an
+organisation already listed for that site under any URL (compare the
+organisation named in each `target`, not just the address). If the command
+fails, stop and report the error; do not guess eligibility.
 
 ## 2. Research, per eligible site (at most 5 proposals per site)
 
@@ -40,7 +47,16 @@ links, or anything for a site not eligible for that kind.
 
 Open the page. Propose it only if it is live (`page_live: true`), relevant to
 that trade and area, and does not already link to the site's domain (record
-`links_to_us`). Record the cost exactly as the page states it, or
+`links_to_us`).
+
+A page counts as live only if a plain HTTP GET, following redirects, returns
+200:
+
+    curl -s -o /dev/null -w '%{http_code}' -L --max-time 20 <url>
+
+A WebFetch summary or a search snippet is not proof. Anything other than 200
+(a 404, a 403, a timeout) means drop the prospect, or find the organisation's
+page that does return 200 and use that instead. Record the cost exactly as the page states it, or
 "paid — confirm dues" if it is paid and unstated, or "free".
 
 ## 4. Write the task
@@ -54,6 +70,16 @@ Each task is a JSON object:
       "copy_block": "<the exact email or NAP block to paste>",
       "account_note": "<which account to use — never a password>",
       "checked_at": "<ISO date>", "page_live": true, "links_to_us": false }
+
+Money: amounts go only in `cost`. Never put a dollar figure in `target`,
+`why`, `steps`, `copy_block` or `account_note` — the vetting drops any task
+with one there. Say "the listed dues" or "the fee in `cost`" instead.
+
+Citations (`citation_new` and `citation_fix`): `copy_block` must contain the
+site's `nap` block from the context exactly, character for character — same
+line breaks, punctuation and spacing. Put it on its own lines; you may add
+text before or after it, never inside it. The database rejects any citation
+whose copy_block does not contain it.
 
 Emails: first person as the business, short, specific to that organisation,
 built only from site.json facts. No placeholders in square brackets — if you
