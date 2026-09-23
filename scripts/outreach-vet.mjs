@@ -84,8 +84,30 @@ async function buildImport() {
   return [...tasks, ...seed.tasks];
 }
 
+const RPC = "https://oyrcjrcgvmzmkaipapjm.supabase.co/rest/v1/rpc/";
+// Public by design; the token is what authorises the call.
+const KEY = "sb_publishable_vRcp_g2WW01D8SxjLVDTzA_HSoAdjBG";
+
+async function rpc(name, body) {
+  const token = process.env.OUTREACH_PROPOSE_TOKEN;
+  if (!token) throw new Error("OUTREACH_PROPOSE_TOKEN is not set");
+  const res = await fetch(RPC + name, {
+    method: "POST",
+    headers: { apikey: KEY, "Content-Type": "application/json" },
+    body: JSON.stringify({ p_token: token, ...body }),
+    signal: AbortSignal.timeout(20000),
+  });
+  const text = await res.text();
+  if (!res.ok) throw new Error(`${name} failed: HTTP ${res.status} ${text.slice(0, 300)}`);
+  return JSON.parse(text);
+}
+
 async function main() {
   const args = process.argv.slice(2);
+  if (args.includes("--context")) {
+    process.stdout.write(JSON.stringify(await rpc("outreach_context", {}), null, 2) + "\n");
+    return;
+  }
   const allowances = JSON.parse(await fs.readFile(path.join(root, "deploy", "claim-allowances.json"), "utf8"));
   const input = args.includes("--import")
     ? await buildImport()
@@ -97,7 +119,12 @@ async function main() {
     else console.error(`dropped #${i + 1} ${task.site} ${task.target}: ${r.reason}`);
   });
   console.error(`${kept.length} of ${input.length} tasks passed vetting.`);
-  process.stdout.write(JSON.stringify(kept, null, 2) + "\n");
+  if (args.includes("--propose")) {
+    if (!kept.length) return console.error("Nothing to propose.");
+    console.log(JSON.stringify(await rpc("propose_outreach_tasks", { p_tasks: kept }), null, 2));
+  } else {
+    process.stdout.write(JSON.stringify(kept, null, 2) + "\n");
+  }
 }
 
 if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.argv[1])) await main();
