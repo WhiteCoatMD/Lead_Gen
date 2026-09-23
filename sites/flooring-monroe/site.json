@@ -48,5 +48,13 @@
   "assets": [
     "hero.jpg",
     "logo.jpg"
-  ]
+  ],
+  "leadForm": {
+    "kicker": "Request a quote",
+    "heading": "Tell us about the floor.",
+    "intro": "Call if it is easier. If you are reading this at nine at night, leave the details and we will ring you back.",
+    "placeholder": "Which rooms, roughly how many square feet, what is down now, and the material you have in mind if you know.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the project. Nothing else."
+  }
 }

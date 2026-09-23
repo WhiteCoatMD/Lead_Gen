@@ -48,5 +48,13 @@
   "assets": [
     "hero.jpg",
     "logo.jpg"
-  ]
+  ],
+  "leadForm": {
+    "kicker": "Request a quote",
+    "heading": "Tell us about the job.",
+    "intro": "Call if it is easier. If you are reading this at nine at night, leave the details and we will ring you back.",
+    "placeholder": "What needs doing, which room or part of the house, and when you are hoping to have it done.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the job. Nothing else."
+  }
 }

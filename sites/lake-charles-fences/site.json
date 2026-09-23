@@ -49,5 +49,13 @@
   "assets": [
     "hero.jpg",
     "logo.jpg"
-  ]
+  ],
+  "leadForm": {
+    "kicker": "Request a quote",
+    "heading": "Tell us about the fence or deck.",
+    "intro": "Call if it is easier. If you are reading this at nine at night, leave the details and we will ring you back.",
+    "placeholder": "Roughly how long a run or how big a deck, what is there now, and when you are hoping to start.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the job. Nothing else."
+  }
 }

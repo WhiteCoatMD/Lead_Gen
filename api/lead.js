@@ -51,6 +51,49 @@ export const RECIPIENTS = {
     business: "Deck Builders Monroe",
     domain: "deckbuildermonroe.com",
   },
+  // INTERIM, added 2026-09-23. These eight were phone-only, so anyone who
+  // would not call left without a trace. Leads go to Mitch until each site
+  // has a contractor address; swap the `to` line when one is known.
+  "lake-charles-fences": {
+    to: "mitch@whitecoat-md.com",
+    business: "Lake Charles Fences and Decks",
+    domain: "fenceslakecharles.com",
+  },
+  "chicago-eifs-stucco": {
+    to: "mitch@whitecoat-md.com",
+    business: "Chicago EIFS and Stucco, LLC",
+    domain: "eifschicago.com",
+  },
+  "stucco-repair-chicago": {
+    to: "mitch@whitecoat-md.com",
+    business: "Stucco Repair Chicago",
+    domain: "stuccorepairchicago.com",
+  },
+  "scaffolding-los-angeles": {
+    to: "mitch@whitecoat-md.com",
+    business: "Scaffolding Rental Los Angeles",
+    domain: "scaffoldingrentalusa.com",
+  },
+  "cactus-removal-tucson": {
+    to: "mitch@whitecoat-md.com",
+    business: "Cactus Removal Tucson",
+    domain: "cactusremovalservice.com",
+  },
+  "mbs-pressure-washing-new-orleans": {
+    to: "mitch@whitecoat-md.com",
+    business: "MB's Pressure Washing New Orleans",
+    domain: "pressurewashing-neworleans.com",
+  },
+  "twin-city-handyman": {
+    to: "mitch@whitecoat-md.com",
+    business: "Twin City Handyman",
+    domain: "twincity-handyman.com",
+  },
+  "flooring-monroe": {
+    to: "mitch@whitecoat-md.com",
+    business: "Flooring Monroe",
+    domain: "flooring-monroe.com",
+  },
 };
 
 const FIELDS = ["name", "phone", "email", "message", "service", "city"];

@@ -101,5 +101,13 @@
       ],
       "ctaHeadline": "Get a quote."
     }
-  ]
+  ],
+  "leadForm": {
+    "kicker": "Request a rental quote",
+    "heading": "Tell us about the job site.",
+    "intro": "Call if it is easier. If you are reading this at nine at night, leave the details and we will ring you back.",
+    "placeholder": "Roughly how high and how long a run, where the site is, and the dates you need it up.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the rental. Nothing else."
+  }
 }

@@ -29,5 +29,13 @@
     { "title": "Pool decks", "description": "Pool decks cleaned down, removing the build-up that collects around water." },
     { "title": "Roof cleaning", "description": "Roof cleaning to clear growth and staining from the surface of your roof." },
     { "title": "House washing", "description": "Washing down the exterior of the house, so the whole property looks cared for rather than just the drive." }
-  ]
+  ],
+  "leadForm": {
+    "kicker": "Request a quote",
+    "heading": "Tell us what needs washing.",
+    "intro": "Call if it is easier. If you are reading this at nine at night, leave the details and we will ring you back.",
+    "placeholder": "Driveway, house, roof, pool deck — roughly how big, and when you would like it done.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the job. Nothing else."
+  }
 }
