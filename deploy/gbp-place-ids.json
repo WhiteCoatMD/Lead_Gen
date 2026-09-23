@@ -51,17 +51,17 @@
     ],
     "via": "owner confirmed 2026-09-22",
     "name": "Deck Builders Monroe",
-    "phone": "(318) 598-4535",
+    "phone": "(318) 598-4535 — LAPSED, dead line",
     "status": "OPERATIONAL",
     "website": null,
-    "note": "Mitch confirmed 2026-09-22 this is his listing. The automatic resolver refused it because the profile carries no website and its phone differs from the site's - by design, since name alone is not evidence. Owner confirmation is.\nTO FIX ON THE PROFILE: no website set, so nothing links the listing to deckbuildermonroe.com. Phone on the profile is (318) 598-4535 while the site publishes 318-726-2853 - one of those is the NAP number and they need to agree.",
     "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified",
     "category_primary": "Deck builder",
     "category_secondary": "Fence contractor",
     "todo": [
-      "SET THE WEBSITE to https://deckbuildermonroe.com — the profile has no website at all, so nothing connects the listing to the site. This is the single highest-value edit on it.",
-      "Reconcile the phone: profile says (318) 598-4535, site publishes 318-726-2853. One of them is the NAP number and they have to agree."
-    ]
+      "SET THE WEBSITE to https://deckbuildermonroe.com — the profile has no website, so nothing connects the listing to the site. Website edits rarely trigger re-verification, unlike phone, name, address and category, so this one can be done now.",
+      "LATER: the profile's phone (318) 598-4535 has lapsed and no longer reaches anyone. It needs to become 318-726-2853. Deliberately deferred by Mitch 2026-09-22 to avoid triggering a re-verification. Worth doing sooner than later - a verified profile publishing a dead number is losing the calls it earns."
+    ],
+    "phone_correct": "318-726-2853 (live; what the site publishes)"
   },
   {
     "slug": "flooring-monroe",
