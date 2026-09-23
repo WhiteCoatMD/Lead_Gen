@@ -1,7 +1,9 @@
-import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./render-site.mjs";
+import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd, ANALYTICS_SCRIPT } from "./render-site.mjs";
 import { businessId } from "./schema.mjs";
 import { DIAGRAMS } from "./render-diagram.mjs";
 import { renderFaq } from "./render-faq.mjs";
+import { renderLeadForm, LEAD_FORM_SCRIPT } from "./render-form.mjs";
+import { renderCalculator, renderPermitGuide } from "./render-tools.mjs";
 
 /**
  * A secondary page on a site whose main template is a single scrolling page.
@@ -21,8 +23,13 @@ import { renderFaq } from "./render-faq.mjs";
  * Content comes from the site's own data. Nothing here generates prose: if a
  * page has nothing real to say, the answer is not to pad it out, it is to
  * redirect instead.
+ *
+ * Secondary pages carry the same analytics beacon, `data-site` and lead form
+ * as the home page (2026-09-23). They used to carry neither, which meant the
+ * pages built to recover search traffic were the ones nobody could measure —
+ * and a page that is not measured cannot be judged.
  */
-export function renderPage(site, page) {
+export function renderPage(site, page, slug = "", extras = {}) {
   const areaNames = site.serviceAreas || [site.city];
   const url = `https://${site.domain}/${page.slug}`;
   // A page may point its canonical at a different URL. Needed where two URLs
@@ -87,8 +94,18 @@ export function renderPage(site, page) {
     ? `<img src="${esc(assetUrl(site.logo))}" alt="${esc(site.name)}" width="175" height="88" decoding="async">`
     : `<span class="brand-text">${esc(site.name)}</span>`;
 
+  const guidePages = (site.pages || []).filter((p) => p.type === "fence-permit" && p.slug !== page.slug);
+  const calcPage = (site.pages || []).find((p) => p.type === "fence-calculator");
+  const tool =
+    page.type === "fence-calculator" ? renderCalculator(site)
+    : page.type === "fence-permit" && extras.permit ? renderPermitGuide(site, extras.permit, {
+        calculator: calcPage ? { slug: calcPage.slug, label: calcPage.navLabel || "fence calculator" } : undefined,
+        guides: guidePages.map((g) => ({ slug: g.slug, label: g.navLabel || g.heading })),
+      })
+    : "";
+
   return `<!doctype html>
-<html lang="en"><head>
+<html lang="en" data-site="${esc(slug)}"><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${esc(page.seoTitle)}</title>
   <meta name="description" content="${esc(page.seoDescription)}">
@@ -126,14 +143,16 @@ export function renderPage(site, page) {
         <div class="actions">${site.phone ? `<a class="button primary" href="${phoneHref(site.phone)}">${esc(site.primaryCta || "Call for a free estimate")}</a>` : ""}<a class="button ${site.phone ? "ghost" : "primary"}" href="/#services">All services</a></div>
       </div>
     </section>
+    ${tool}
     ${sections}
     ${page.diagram && DIAGRAMS[page.diagram] ? `<section class="shell intro">${DIAGRAMS[page.diagram](site)}</section>` : ""}
     ${page.faqs ? renderFaq({ ...site, faqs: page.faqs, faqHeading: page.faqHeading || "Questions about this.", faqKicker: "Common questions" }) : ""}
     ${points}
     ${related}
+    ${renderLeadForm(site, slug)}
     ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(page.ctaHeadline || site.ctaHeadline)}</h2><p>${esc(page.ctaCopy || site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
   </main>
   <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>
-  ${site.phone ? `<a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a>` : ""}<script src="/site.js" defer></script>
+  ${site.phone ? `<a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}${page.type === "fence-calculator" ? `<script type="module" src="/fence-calc-ui.mjs"></script>` : ""}
 </body></html>`;
 }

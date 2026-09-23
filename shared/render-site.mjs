@@ -1,10 +1,11 @@
 import { businessId, openingHoursSpecification, postalAddress, primaryImage, serviceCatalog } from "./schema.mjs";
 import { renderLeadForm, LEAD_FORM_SCRIPT } from "./render-form.mjs";
 import { renderFaq } from "./render-faq.mjs";
+import { renderPermitLinks } from "./render-tools.mjs";
 
 export const jsonLd = (schema) => JSON.stringify(schema).replace(/</g, "\\u003c");
 
-const ANALYTICS_SCRIPT = `
+export const ANALYTICS_SCRIPT = `
 (function(){
   var site = document.documentElement.getAttribute("data-site") || "";
   function send(type, extra){
@@ -173,6 +174,7 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
     <section class="shell services" id="services"><div class="section-heading"><p class="eyebrow accent">Services</p><h2>${esc(site.servicesHeadline)}</h2></div><div class="service-grid">${services}</div></section>
     <section class="process shell" id="process"><div class="section-heading centered"><p class="eyebrow accent">Three simple steps</p><h2>From first call to finished work.</h2></div><div class="steps"><article><strong>1</strong><h3>Call or email</h3><p>Tell us what you need and where the property is located.</p></article><article><strong>2</strong><h3>Review the project</h3><p>We discuss the scope, practical options, and the next available step.</p></article><article><strong>3</strong><h3>Schedule service</h3><p>Approve the plan and arrange a time that works for the project.</p></article></div></section>
     ${gallery ? `<section class="shell gallery" id="gallery"><div class="section-heading"><p class="eyebrow accent">${esc(site.galleryKicker || "Gallery")}</p><h2>${esc(site.galleryHeadline || "A closer look.")}</h2></div><div class="gallery-grid">${gallery}</div></section>` : ""}
+    ${renderPermitLinks(site)}
     <section class="areas" id="areas"><div class="shell areas-inner"><div><p class="eyebrow">Service area</p><h2>${esc(site.areaHeadline)}</h2></div><div class="area-list">${areas}</div></div></section>
     ${renderFaq(site)}
     ${renderLeadForm(site, slug)}

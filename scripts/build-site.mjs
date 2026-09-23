@@ -5,6 +5,7 @@ import { renderSite, renderFavicon } from "../shared/render-site.mjs";
 import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
 import { renderShop } from "../shared/render-shop.mjs";
 import { renderPage } from "../shared/render-page.mjs";
+import { loadPermit } from "./lib/permits.mjs";
 
 // slug in site.json `template` -> renderer. No entry means the shared
 // contractor template in render-site.mjs.
@@ -62,13 +63,20 @@ for (const page of pages) {
   // A slug ending in .html is written as that exact file, because the URL
   // Google indexed is the one that has to answer. Anything else becomes a
   // directory with an index, serving a clean extensionless URL.
-  const html = renderPage(config, page);
+  const extras = page.type === "fence-permit" ? { permit: await loadPermit(root, page.permit) } : {};
+  const html = renderPage(config, page, slug, extras);
   if (page.slug.endsWith(".html")) {
     await fs.writeFile(path.join(outputDir, page.slug), html, "utf8");
   } else {
     const pageDir = path.join(outputDir, page.slug);
     await fs.mkdir(pageDir, { recursive: true });
     await fs.writeFile(path.join(pageDir, "index.html"), html, "utf8");
+  }
+}
+// The calculator runs in the browser from the same module the tests exercise.
+if (pages.some((page) => page.type === "fence-calculator")) {
+  for (const file of ["fence-calc.mjs", "fence-calc-ui.mjs"]) {
+    await fs.copyFile(path.join(root, "shared", file), path.join(outputDir, file));
   }
 }
 
