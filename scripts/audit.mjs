@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { RECIPIENTS } from "../api/lead.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const digits = (value) => String(value).replace(/[^0-9]/g, "");
@@ -49,6 +50,18 @@ for (const slug of slugs) {
   if (cfg.serviceAreaBusiness) {
     check(!cfg.streetAddress, "service-area business must not set streetAddress");
     check(!/"streetAddress"/.test(html), "service-area business publishes a street address in schema");
+  }
+
+  // --- lead form ---
+  // A form the endpoint does not know answers every submission with "Unknown
+  // site". Whether it can actually SEND is a deploy-time fact (key, verified
+  // sender), checked live by audit-portfolio.mjs; this is the part the repo
+  // alone can prove.
+  if (cfg.leadForm) {
+    const route = RECIPIENTS[slug];
+    check(route, "lead form shown but site missing from RECIPIENTS in api/lead.js");
+    if (route) check(route.domain === cfg.domain, `api/lead.js domain ${route.domain} ≠ site.json ${cfg.domain}`);
+    check(html.includes('action="/api/lead"'), "leadForm set but no form rendered");
   }
 
   // --- local-business structured data ---

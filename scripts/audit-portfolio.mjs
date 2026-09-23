@@ -152,6 +152,26 @@ async function auditSite(slug) {
     warn(`www unreachable (${error.cause?.code || error.name}) — certificate may still be issuing`);
   }
 
+  // Can the lead form deliver? A page that loads with a form that drops every
+  // submission passed this audit on 2026-09-23 (Deck Builders: no key, then an
+  // unverified sender). The endpoint reports on itself without sending.
+  if (config.leadForm && result.match !== "foreign") {
+    try {
+      const res = await fetch(`https://${domain}/api/lead?check=${encodeURIComponent(slug)}`, {
+        signal: AbortSignal.timeout(15000),
+      });
+      const h = res.ok ? await res.json() : null;
+      result.leadForm = h;
+      if (!h) fail(`lead form: /api/lead health check returned HTTP ${res.status} — endpoint missing from deploy?`);
+      else if (!h.known) fail("lead form: endpoint does not know this site — every submission is rejected");
+      else if (!h.key) fail("lead form: RESEND_API_KEY not set on the project — every submission is dropped");
+      else if (h.fromVerified === false) fail(`lead form: sender domain ${h.from} is not verified in Resend — every submission is rejected`);
+      else if (h.fromVerified === null) warn(`lead form: could not confirm sender domain ${h.from} is verified in Resend`);
+    } catch (error) {
+      fail(`lead form: health check failed (${error.cause?.code || error.name})`);
+    }
+  }
+
   for (const file of ["sitemap.xml", "robots.txt"]) {
     try {
       const res = await fetch(`https://${domain}/${file}`, { signal: AbortSignal.timeout(10000) });

@@ -16,7 +16,7 @@
 // unfinished notification path that silently does nothing is worse than one
 // that was never claimed to exist.
 
-const RECIPIENTS = {
+export const RECIPIENTS = {
   // slug -> where its leads go. Adding a site means adding a line here, which
   // is the point: the destination is not something a request can choose.
   "twin-city-fences": {
@@ -65,7 +65,14 @@ const WINDOW_MS = 60_000;
 
 const clean = (v, max) => String(v ?? "").replace(/\s+/g, " ").trim().slice(0, max);
 
+// Resend refuses to send from any domain not verified in the account, so this
+// must be one of those (bed-sync.com, findamattressstore.com,
+// metaldealerpro.com), never the site's own domain unless that has been
+// verified too.
+const senderDomain = () => (process.env.LEAD_FROM_DOMAIN || "bed-sync.com").trim().toLowerCase();
+
 export default async function handler(req, res) {
+  if (req.method === "GET") return healthCheck(req, res);
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Use POST" });
@@ -131,7 +138,7 @@ export default async function handler(req, res) {
         // verified domain with working DKIM is the better of the two on that
         // count. Verifying twincityfences.com in Resend later makes this one
         // environment variable, not a code change.
-        from: `${site.business} website <leads@${process.env.LEAD_FROM_DOMAIN || "bed-sync.com"}>`,
+        from: `${site.business} website <leads@${senderDomain()}>`,
         to: [site.to],
         // Replying to the notification reaches the customer, not us.
         reply_to: lead.email || undefined,
@@ -150,6 +157,58 @@ export default async function handler(req, res) {
   }
 
   return res.status(200).json({ ok: true });
+}
+
+// GET /api/lead?check=<slug> — can this site's form actually deliver?
+//
+// Exists because of 2026-09-23. Deck Builders' form was live for a day with no
+// RESEND_API_KEY, then with a sender domain Resend had never verified, and
+// every submission was dropped while the audit passed the site on every check.
+// A page loading and a lead arriving are different facts; the weekly audit
+// calls this to ask the second one.
+//
+// Sends nothing and reveals nothing secret: whether a key is set, and which
+// sender domain is configured, which every lead email already shows.
+async function healthCheck(req, res) {
+  res.setHeader("Cache-Control", "no-store");
+  const slug = new URL(req.url, "http://localhost").searchParams.get("check");
+  if (slug === null) {
+    res.setHeader("Allow", "POST");
+    return res.status(405).json({ error: "Use POST" });
+  }
+  const from = senderDomain();
+  const hasKey = Boolean(process.env.RESEND_API_KEY);
+  return res.status(200).json({
+    site: slug,
+    known: Object.hasOwn(RECIPIENTS, slug),
+    key: hasKey,
+    from,
+    // true / false, or null when the key cannot list domains (a send-only
+    // key) — unknown is reported as unknown, not guessed either way.
+    fromVerified: hasKey ? await isVerified(from) : null,
+  });
+}
+
+// Cached per instance, so the check cannot be used to hammer Resend.
+let verifiedCache = { at: 0, domains: null };
+async function isVerified(domain) {
+  if (Date.now() - verifiedCache.at > 10 * 60_000) {
+    try {
+      const res = await fetch("https://api.resend.com/domains", {
+        headers: { Authorization: `Bearer ${process.env.RESEND_API_KEY}` },
+        signal: AbortSignal.timeout(8000),
+      });
+      const body = res.ok ? await res.json() : null;
+      verifiedCache = {
+        at: Date.now(),
+        domains: body ? Object.fromEntries((body.data || []).map((d) => [d.name.toLowerCase(), d.status])) : null,
+      };
+    } catch {
+      return null; // not cached: a network blip should not stick for ten minutes
+    }
+  }
+  if (!verifiedCache.domains) return null;
+  return verifiedCache.domains[domain] === "verified";
 }
 
 function safeParse(text) {
