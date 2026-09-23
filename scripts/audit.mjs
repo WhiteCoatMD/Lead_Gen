@@ -4,6 +4,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { RECIPIENTS } from "../api/lead.js";
+import { loadPermit, validatePermit } from "./lib/permits.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const digits = (value) => String(value).replace(/[^0-9]/g, "");
@@ -62,6 +63,21 @@ for (const slug of slugs) {
     check(route, "lead form shown but site missing from RECIPIENTS in api/lead.js");
     if (route) check(route.domain === cfg.domain, `api/lead.js domain ${route.domain} ≠ site.json ${cfg.domain}`);
     check(html.includes('action="/api/lead"'), "leadForm set but no form rendered");
+  }
+
+  // --- linkable assets ---
+  // A permit guide with an unsourced or stale fact fails THIS site only;
+  // other sites still build and deploy.
+  for (const page of cfg.pages || []) {
+    if (page.type === "fence-permit") {
+      let data = null;
+      try { data = await loadPermit(root, page.permit); }
+      catch { check(false, `permit guide ${page.slug}: no deploy/permits/${page.permit}.json`); }
+      if (data) for (const p of validatePermit(data)) check(false, `permit guide ${page.slug}: ${p}`);
+    }
+    if (page.type === "fence-calculator") {
+      check(await fs.access(path.join(out, "fence-calc.mjs")).then(() => true, () => false), "calculator page but dist has no fence-calc.mjs");
+    }
   }
 
   // --- local-business structured data ---

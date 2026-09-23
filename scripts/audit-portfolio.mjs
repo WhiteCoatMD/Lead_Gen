@@ -25,6 +25,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import dns from "node:dns/promises";
 import { fileURLToPath } from "node:url";
+import { loadPermit, oldestCheckedDays, DUE_SOON_DAYS } from "./lib/permits.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -244,4 +245,17 @@ if (broken.length) console.log(`NEWLY BROKEN: ${broken.map((r) => r.slug).join("
 for (const r of drifted) {
   console.log(`CHANGED: ${r.slug} was accepted as "${expectations[r.slug].accept}" but is now "${r.state}" — re-check and update deploy/audit-expectations.json`);
 }
+// Permit guides whose oldest fact is close to the one-year limit. A warning,
+// not a failure: the offline checklist fails the site once it actually lapses.
+const dueSoon = [];
+for (const slug of slugs) {
+  const cfg = JSON.parse(await fs.readFile(path.join(root, "sites", slug, "site.json"), "utf8"));
+  for (const page of cfg.pages || []) {
+    if (page.type !== "fence-permit") continue;
+    const days = oldestCheckedDays(await loadPermit(root, page.permit).catch(() => ({})));
+    if (days >= DUE_SOON_DAYS) dueSoon.push(`${slug}/${page.slug} (oldest fact checked ${days === Infinity ? "never" : days + " days ago"})`);
+  }
+}
+if (dueSoon.length) console.log(`\nPERMIT GUIDES DUE FOR RE-CHECK: ${dueSoon.join(", ")}`);
+
 process.exit(broken.length ? 1 : 0);
