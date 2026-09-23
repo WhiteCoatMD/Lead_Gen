@@ -21,9 +21,10 @@ const num = (v) => (typeof v === "number" ? v : typeof v === "string" && v.trim(
 const one = (n) => Number(n.toFixed(1));
 const fail = (error) => ({ ok: false, error });
 
-function holeBags(diaIn, depthIn, postAreaIn2, bag) {
-  const cuft = (Math.PI * (diaIn / 2) ** 2 * depthIn - postAreaIn2 * depthIn) / 1728;
-  return { cuft, bags: Math.ceil(cuft / BAG_YIELD_CUFT[bag]) };
+// Concrete volume of one hole, in cubic feet: the hole less the post in it.
+// Bags are rounded up once, on the job total, never per hole.
+function holeCuft(diaIn, depthIn, postAreaIn2) {
+  return (Math.PI * (diaIn / 2) ** 2 * depthIn - postAreaIn2 * depthIn) / 1728;
 }
 
 export function fenceMaterials(input) {
@@ -76,7 +77,8 @@ export function fenceMaterials(input) {
     const fencePickets = Math.ceil((fence * 12) / pitch);
     const gatePickets = gates.reduce((sum, w) => sum + Math.ceil((w * 12) / pitch), 0);
     const posts = terminal + linePosts;
-    const perPost = holeBags(10, depthIn, 3.5 * 3.5, bag);
+    const perPost = holeCuft(10, depthIn, 3.5 * 3.5);
+    const yieldCuft = BAG_YIELD_CUFT[bag];
     return {
       ok: true, type, notes,
       lines: [
@@ -85,14 +87,15 @@ export function fenceMaterials(input) {
         { item: "Post length", qty: postFt, unit: "ft each", working: `${height} ft above ground + ${depthIn} in in the ground (a third of the height, at least 24 in) = ${neededIn} in → next standard length` },
         { item: `Rails (at least ${spacing} ft long)`, qty: sections * railsPer, unit: "rails", working: `${sections} sections × ${railsPer} rails (${railsPer === 3 ? "3 for fences over 5 ft" : "2 for fences up to 5 ft"})` },
         { item: `Pickets (${picketWidth} in wide)`, qty: fencePickets + gatePickets, unit: "pickets", working: `${one(fence)} ft × 12 ÷ ${pitch} in per picket = ${fencePickets}, plus ${gatePickets} for the gate${gates.length === 1 ? "" : "s"}` },
-        { item: `Concrete (${bag} lb bags)`, qty: posts * perPost.bags, unit: "bags", working: `10 in hole × ${depthIn} in deep ≈ ${perPost.cuft.toFixed(2)} cu ft per post → ${perPost.bags} bag${perPost.bags === 1 ? "" : "s"} each × ${posts} posts` },
+        { item: `Concrete (${bag} lb bags)`, qty: Math.ceil((posts * perPost) / yieldCuft), unit: "bags", working: `10 in hole × ${depthIn} in deep: ≈ ${(perPost / yieldCuft).toFixed(1)} bags per post (${perPost.toFixed(2)} cu ft) × ${posts} posts, rounded up once` },
       ],
     };
   }
 
   const tensionBars = 2 + 2 * corners + 2 * gates.length;
-  const termBags = holeBags(8, depthIn, Math.PI * 1.1875 ** 2, bag);
-  const lineBags = holeBags(6, depthIn, Math.PI * 0.8125 ** 2, bag);
+  const termCuft = holeCuft(8, depthIn, Math.PI * 1.1875 ** 2);
+  const lineCuft = holeCuft(6, depthIn, Math.PI * 0.8125 ** 2);
+  const totalCuft = terminal * termCuft + linePosts * lineCuft;
   return {
     ok: true, type, notes,
     lines: [
@@ -106,7 +109,7 @@ export function fenceMaterials(input) {
       { item: "Terminal post caps", qty: terminal, unit: "caps", working: "1 per terminal post" },
       { item: "Line post loop caps", qty: linePosts, unit: "caps", working: "1 per line post" },
       { item: "Fence ties", qty: linePosts * height + Math.ceil(fence / 2), unit: "ties", working: `${height} per line post + 1 every 2 ft of top rail` },
-      { item: `Concrete (${bag} lb bags)`, qty: terminal * termBags.bags + linePosts * lineBags.bags, unit: "bags", working: `terminal posts: 8 in hole ≈ ${termBags.cuft.toFixed(2)} cu ft → ${termBags.bags} each; line posts: 6 in hole ≈ ${lineBags.cuft.toFixed(2)} cu ft → ${lineBags.bags} each; ${depthIn} in deep` },
+      { item: `Concrete (${bag} lb bags)`, qty: Math.ceil(totalCuft / BAG_YIELD_CUFT[bag]), unit: "bags", working: `${terminal} terminal posts × ${termCuft.toFixed(2)} cu ft (8 in hole) + ${linePosts} line posts × ${lineCuft.toFixed(2)} cu ft (6 in hole), ${depthIn} in deep = ${totalCuft.toFixed(2)} cu ft ÷ ${BAG_YIELD_CUFT[bag]} cu ft per bag, rounded up once` },
     ],
   };
 }

@@ -16,7 +16,8 @@ test("wood privacy: 100 ft, 6 ft high, 2 corners, one 4 ft gate", () => {
   assert.equal(qty(r, "Post length"), 8);
   assert.equal(qty(r, "Rails"), 36);
   assert.equal(qty(r, "Pickets"), 219);
-  assert.equal(qty(r, "Concrete"), 42);
+  // 14 posts × 0.9207 cu ft (10 in hole, 24 in deep, less a 3.5 in post) = 12.89 cu ft ÷ 0.45 = 28.6 → 29
+  assert.equal(qty(r, "Concrete"), 29);
 });
 
 test("wood privacy 8 ft high needs 3 rails a section and 12 ft posts", () => {
@@ -43,7 +44,8 @@ test("chain-link: 100 ft, 4 ft high, straight, no gates", () => {
   assert.equal(qty(r, "Terminal post caps"), 2);
   assert.equal(qty(r, "Line post loop caps"), 9);
   assert.equal(qty(r, "Fence ties"), 86);
-  assert.equal(qty(r, "Concrete"), 13);
+  // 2 × 0.6366 + 9 × 0.3639 = 4.548 cu ft ÷ 0.45 = 10.1 → 11 (rounded once, not 2×2 + 9×1 = 13)
+  assert.equal(qty(r, "Concrete"), 11);
 });
 
 test("a run shorter than one spacing is one section with no line posts", () => {
