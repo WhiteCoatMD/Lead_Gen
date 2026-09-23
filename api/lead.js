@@ -110,6 +110,15 @@ const WINDOW_MS = 60_000;
 
 const clean = (v, max) => String(v ?? "").replace(/\s+/g, " ").trim().slice(0, max);
 
+// The path of the page the form was sent from, for crediting the lead to a
+// page. Only ever stored with the event, never put in the email. Anything that
+// is not a string starting with "/" is dropped rather than guessed at.
+export const cleanPage = (v) => {
+  if (typeof v !== "string") return "";
+  const page = clean(v, 120);
+  return page.startsWith("/") ? page : "";
+};
+
 // Resend refuses to send from any domain not verified in the account, so this
 // must be one of those (bed-sync.com, findamattressstore.com,
 // metaldealerpro.com), never the site's own domain unless that has been
@@ -203,7 +212,7 @@ export default async function handler(req, res) {
 
   // The authoritative lead count: written only here, only after Resend has
   // accepted the email. No lead content is stored, just that one arrived.
-  await recordEvent({ type: "lead_delivered", site: String(body.site) });
+  await recordEvent({ type: "lead_delivered", site: String(body.site), path: cleanPage(body.page) });
 
   return res.status(200).json({ ok: true });
 }

@@ -177,7 +177,7 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
     ${renderPermitLinks(site)}
     <section class="areas" id="areas"><div class="shell areas-inner"><div><p class="eyebrow">Service area</p><h2>${esc(site.areaHeadline)}</h2></div><div class="area-list">${areas}</div></div></section>
     ${renderFaq(site)}
-    ${renderLeadForm(site, slug)}
+    ${renderLeadForm(site, slug, "/")}
     ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(dialled(site))}">${esc(dialled(site))}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
   </main>
   <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>

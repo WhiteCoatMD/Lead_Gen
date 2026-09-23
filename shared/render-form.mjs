@@ -17,8 +17,13 @@ import { escapeHtml as esc } from "./render-site.mjs";
  * The phone number stays the primary call to action above this. A fencing
  * quote usually starts with a conversation, and the form is for people who
  * are not going to ring at nine at night — not a replacement for the call.
+ *
+ * `pagePath` is the path of the page the form sits on ("/" for a home page),
+ * posted as `page` so a delivered lead can be credited to the page that
+ * produced it. The script overwrites it with location.pathname; the value
+ * rendered here is what a visitor without JavaScript sends.
  */
-export function renderLeadForm(site, slug) {
+export function renderLeadForm(site, slug, pagePath = "/") {
   const cfg = site.leadForm;
   if (!cfg) return "";
 
@@ -34,6 +39,7 @@ export function renderLeadForm(site, slug) {
       </div>
       <form class="lead-form" method="post" action="/api/lead" novalidate>
         <input type="hidden" name="site" value="${esc(slug)}">
+        <input type="hidden" name="page" value="${esc(pagePath)}">
         <!-- Honeypot: hidden from people, irresistible to bots. Anything that
              fills it is discarded server-side. -->
         <div class="hp" aria-hidden="true">
@@ -88,6 +94,8 @@ export const LEAD_FORM_SCRIPT = `
   form.addEventListener('submit', function(e){
     e.preventDefault();
     note.className = 'form-note';
+    var page = form.querySelector('input[name=page]');
+    if (page) page.value = location.pathname;
 
     var data = {};
     new FormData(form).forEach(function(v, k){ data[k] = v; });

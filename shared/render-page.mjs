@@ -151,7 +151,7 @@ export function renderPage(site, page, slug = "", extras = {}) {
     ${page.faqs ? renderFaq({ ...site, faqs: page.faqs, faqHeading: page.faqHeading || "Questions about this.", faqKicker: "Common questions" }) : ""}
     ${points}
     ${related}
-    ${renderLeadForm(site, slug)}
+    ${renderLeadForm(site, slug, `/${page.slug}`)}
     ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(page.ctaHeadline || site.ctaHeadline)}</h2><p>${esc(page.ctaCopy || site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
   </main>
   <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>

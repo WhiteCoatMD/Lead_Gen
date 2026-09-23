@@ -110,3 +110,9 @@ test("every print rule in the shared stylesheet is scoped to the calculator page
     }
   }
 });
+
+test("the lead form carries the page's own path, and the script refreshes it on submit", () => {
+  const html = renderPage(site, site.pages[0], "twin-city-fences");
+  assert.match(html, /<input type="hidden" name="page" value="\/fence-calculator">/);
+  assert.match(html, /page\.value = location\.pathname/);
+});
