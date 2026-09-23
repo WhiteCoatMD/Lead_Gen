@@ -5,7 +5,7 @@ import { renderSite, renderFavicon } from "../shared/render-site.mjs";
 import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
 import { renderShop } from "../shared/render-shop.mjs";
 import { renderPage } from "../shared/render-page.mjs";
-import { loadPermit, validatePermit } from "./lib/permits.mjs";
+import { permitPageProblem } from "./lib/permits.mjs";
 
 // slug in site.json `template` -> renderer. No entry means the shared
 // contractor template in render-site.mjs.
@@ -33,7 +33,7 @@ const required = ["name", "domain", "city", "state", "headline", CONTENT_FIELD[c
 const missing = required.filter((key) => !config[key] || (Array.isArray(config[key]) && !config[key].length));
 if (missing.length) throw new Error(`${slug} is missing required fields: ${missing.join(", ")}`);
 
-// A permit guide that is missing or fails its checks skips its own page
+// A permit guide that is missing or structurally broken skips its own page
 // rather than failing the build, so one bad guide cannot stop all 28 sites.
 // It is dropped from config.pages before anything renders, so neither the
 // home page nor a sibling page links to a URL that will not exist.
@@ -42,14 +42,9 @@ if (Array.isArray(config.pages)) {
   const kept = [];
   for (const page of config.pages) {
     if (page.type === "fence-permit") {
-      let problem;
-      try {
-        const permit = await loadPermit(root, page.permit);
-        problem = validatePermit(permit)[0];
-        permits.set(page.slug, permit);
-      } catch (error) {
-        problem = `cannot load permit "${page.permit}": ${error.message}`;
-      }
+      // Age alone never unpublishes a guide; see permitPageProblem.
+      const { problem, permit } = await permitPageProblem(root, page);
+      if (permit) permits.set(page.slug, permit);
       if (problem) {
         console.warn(`${slug}: skipped page /${page.slug} — ${problem}`);
         continue;

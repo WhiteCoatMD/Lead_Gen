@@ -29,14 +29,19 @@ const ageDays = (iso, today) => {
   return Number.isNaN(t) ? NaN : Math.floor((today.getTime() - t) / 86400000);
 };
 
-function checkDate(label, iso, today, problems) {
+function checkDate(label, iso, today, problems, ignoreAge) {
   const age = ageDays(iso, today);
   if (Number.isNaN(age)) problems.push(`${label}: "checked" must be a date like 2026-09-23`);
+  else if (ignoreAge) return;
   else if (age < 0) problems.push(`${label}: "checked" is in the future`);
   else if (age > MAX_AGE_DAYS) problems.push(`${label}: last checked ${age} days ago — re-check it against the source (limit ${MAX_AGE_DAYS})`);
 }
 
-export function validatePermit(data, today = new Date()) {
+// ignoreAge drops only the "in the future" and "last checked N days ago"
+// problems. The build uses it: a guide that has merely gone stale stays
+// published (the offline checklist and the Monday warning chase the re-check),
+// while a structurally broken guide is still skipped.
+export function validatePermit(data, today = new Date(), { ignoreAge = false } = {}) {
   const problems = [];
   if (!data?.name) problems.push("guide has no jurisdiction name");
   const office = data?.office || {};
@@ -46,7 +51,7 @@ export function validatePermit(data, today = new Date()) {
   for (const key of ["url", "sourceUrl"]) {
     if (office[key] && !/^https?:\/\//i.test(office[key])) problems.push(`office ${key} must be an http(s) link`);
   }
-  if (office.sourceUrl) checkDate("office", office.checked, today, problems);
+  if (office.sourceUrl) checkDate("office", office.checked, today, problems, ignoreAge);
   const facts = Array.isArray(data?.facts) ? data.facts : [];
   if (!facts.length) problems.push("guide has no facts");
   facts.forEach((f, i) => {
@@ -55,13 +60,25 @@ export function validatePermit(data, today = new Date()) {
       if (!f[key]) problems.push(`${label}: missing ${key === "sourceUrl" || key === "sourceTitle" ? "source " + key.slice(6).toLowerCase() : key}`);
     }
     if (f.sourceUrl && !/^https?:\/\//.test(f.sourceUrl)) problems.push(`${label}: source must be an http(s) link`);
-    checkDate(label, f.checked, today, problems);
+    checkDate(label, f.checked, today, problems, ignoreAge);
     for (const [re, what] of BANNED) if (re.test(`${f.question} ${f.answer}`)) problems.push(`${label}: contains ${what}`);
   });
   for (const [topic, what] of Object.entries(REQUIRED_TOPICS)) {
     if (!facts.some((f) => f.topic === topic)) problems.push(`guide must answer ${what} (a "${topic}" fact)`);
   }
   return problems;
+}
+
+// The build's decision for one fence-permit page: the first reason to skip it,
+// or null to publish it. Age is ignored here on purpose (see validatePermit).
+export async function permitPageProblem(root, page, today = new Date()) {
+  let permit;
+  try {
+    permit = await loadPermit(root, page.permit);
+  } catch (error) {
+    return { problem: `cannot load permit "${page.permit}": ${error.message}` };
+  }
+  return { problem: validatePermit(permit, today, { ignoreAge: true })[0] || null, permit };
 }
 
 export function oldestCheckedDays(data, today = new Date()) {
