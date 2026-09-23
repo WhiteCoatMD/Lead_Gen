@@ -7,6 +7,26 @@
         "credential"
       ],
       "note": "Mitch confirmed 2026-09-22 that drivers are licensed and the operation is insured. Stripped on 2026-09-22 while unverified, restored the same day once confirmed."
+    },
+    "chicago-eifs-stucco": {
+      "allow": [
+        "tenure"
+      ],
+      "note": "Mitch confirmed 2026-09-22 that '25 years of experience' is accurate."
+    },
+    "lake-charles-fences": {
+      "allow": [
+        "credential",
+        "tenure"
+      ],
+      "note": "Mitch confirmed 2026-09-22 that licensed, insured and 'since 2005' are all accurate."
+    },
+    "twin-city-handyman": {
+      "allow": [
+        "guarantee",
+        "tenure"
+      ],
+      "note": "Mitch confirmed 2026-09-22 that the guarantee and 'since 2016' are accurate."
     }
   },
   "_allowed_everywhere": {

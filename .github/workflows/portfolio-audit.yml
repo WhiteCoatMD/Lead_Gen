@@ -61,14 +61,16 @@ jobs:
       # arrival time. This is how "over 20 years experience" sat on a listing
       # for months, and how a five-year parts warranty reached SeaCoast.
       #
-      # Informational for now, deliberately. It currently finds six real claims
-      # across three sites and would turn this run red every Monday until their
-      # owners are asked. A permanently red gate is a gate nobody reads. Once
-      # those six are confirmed or removed, drop continue-on-error and let it
-      # bite.
+      # A GATE since 2026-09-22, not a report. The six findings it opened with
+      # were all confirmed accurate by their owners and recorded in
+      # deploy/claim-allowances.json, so the run is clean and any new failure
+      # means a genuinely new claim has appeared on a published page.
+      #
+      # That is the one thing worth stopping for. A claim nobody can back is
+      # not a style problem - it is the thing that cannot be walked back once a
+      # customer has read it and acted on it.
       - name: Unverifiable claims
         if: always()
-        continue-on-error: true
         run: npm run claims | tee -a audit.txt
 
       - name: Live portfolio audit (network)
