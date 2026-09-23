@@ -46,12 +46,12 @@ export function renderCalculator(site) {
       <div id="fence-calc-result" class="calc-result" hidden></div>
       <noscript><p>The calculator needs JavaScript. The worked example below uses the same formulas.</p></noscript>
     </section>
-    <section class="shell intro">
+    <section class="shell intro calc-example">
       <div><p class="eyebrow accent">Worked example</p><h2>100 ft of 6 ft wood privacy, 2 corners, one 4 ft gate.</h2></div>
       ${linesTable(example)}
       <p class="fineprint">${example.notes.map(esc).join(" ")}</p>
     </section>
-    ${guides.length ? `<section class="shell areas"><div class="areas-inner"><div><p class="eyebrow">Before you dig</p><h2>Fence permits by city.</h2></div><div class="area-list">${
+    ${guides.length ? `<section class="areas"><div class="shell areas-inner"><div><p class="eyebrow">Before you dig</p><h2>Fence permits by city.</h2></div><div class="area-list">${
       guides.map((g) => `<span><a href="/${esc(g.slug)}">${esc(g.navLabel || g.heading)}</a></span>`).join("")}</div></div></section>` : ""}`;
 }
 

@@ -87,3 +87,9 @@ test("secondary pages leave the tool pages out of 'Other services'", () => {
 test("the homepage tools band uses the same markup as the areas band", () => {
   assert.match(renderPermitLinks(site), /^<section class="areas"><div class="shell areas-inner">/);
 });
+
+test("the calculator's own permits band uses the same full-bleed markup, and the worked example is marked for print", () => {
+  const html = renderCalculator(site);
+  assert.match(html, /<section class="areas"><div class="shell areas-inner">[\s\S]*Fence permits by city/);
+  assert.match(html, /<section class="shell intro calc-example">/);
+});
