@@ -76,6 +76,7 @@
 .calc-form fieldset{border:0;display:flex;gap:16px;flex-wrap:wrap}
 .calc-form .field-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
 .calc-form label{display:grid;gap:4px;font-weight:600}
+.calc-form [hidden]{display:none}
 .calc-form input,.calc-form select{font:inherit;padding:8px;border:1px solid #cfd6de;border-radius:6px}
 .calc-result{margin-top:16px}
 .calc-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem}
@@ -85,4 +86,5 @@
 .permit-office{border:1px solid #e3e7ec;border-radius:8px;padding:12px 16px;margin:12px 0}
 .permit-fact{padding:12px 0;border-bottom:1px solid #e3e7ec}
 .permit-fact .source{font-size:.85rem;opacity:.8}
-@media print{header,footer,.topbar,.mobile-call,.leadform,.contact,.calc-form{display:none}.has-result .calc-example{display:none}}
+/* Only the calculator page prints stripped down; every other page prints as it always has. */
+@media print{.calc-page header,.calc-page footer,.calc-page .topbar,.calc-page .mobile-call,.calc-page .leadform,.calc-page .contact,.calc-page .calc-form{display:none}.calc-page.has-result .calc-example{display:none}}

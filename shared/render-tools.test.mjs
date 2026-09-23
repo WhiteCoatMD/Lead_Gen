@@ -93,3 +93,20 @@ test("the calculator's own permits band uses the same full-bleed markup, and the
   assert.match(html, /<section class="areas"><div class="shell areas-inner">[\s\S]*Fence permits by city/);
   assert.match(html, /<section class="shell intro calc-example">/);
 });
+
+test("only the calculator page gets the body class its print styles are scoped to", () => {
+  assert.match(renderPage(site, site.pages[0], "twin-city-fences"), /<body class="calc-page">/);
+  assert.match(renderPage(site, site.pages[1], "twin-city-fences", { permit }), /<\/head><body>/);
+  assert.match(renderPage(site, { slug: "x", heading: "X.", seoTitle: "t", seoDescription: "d" }, "twin-city-fences"), /<\/head><body>/);
+});
+
+test("every print rule in the shared stylesheet is scoped to the calculator page", async () => {
+  const css = await (await import("node:fs/promises")).readFile(new URL("./site.css", import.meta.url), "utf8");
+  const blocks = [...css.matchAll(/@media print\{((?:[^{}]*\{[^}]*\})*)\}/g)].map((m) => m[1]);
+  assert.ok(blocks.length);
+  for (const block of blocks) {
+    for (const [, selectors] of block.matchAll(/([^{}]+)\{[^}]*\}/g)) {
+      for (const sel of selectors.split(",")) assert.match(sel.trim(), /^\.calc-page[\s.]/, `unscoped print selector: ${sel}`);
+    }
+  }
+});

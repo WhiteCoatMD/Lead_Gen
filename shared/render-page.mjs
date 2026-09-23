@@ -124,7 +124,7 @@ export function renderPage(site, page, slug = "", extras = {}) {
   <style>:root{--accent:${esc(site.accent || "#ef342f")};--accent-dark:${esc(site.accentDark || "#c82420")}}</style>
   <script type="application/ld+json">${jsonLd(breadcrumb)}</script>
   ${serviceSchema ? `<script type="application/ld+json">${jsonLd(serviceSchema)}</script>` : ""}
-</head><body>
+</head><body${page.type === "fence-calculator" ? ' class="calc-page"' : ""}>
   <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p>${site.phone ? `<a href="${phoneHref(site.phone)}">Call ${esc(site.phone)}</a>` : ""}</div>
   <header>
     <a class="brand${site.logo ? "" : " brand-wordmark"}" href="/" aria-label="${esc(site.name)} home">${brand}</a>
