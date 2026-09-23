@@ -24,6 +24,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { siteUrls } from "./lib/sitemap.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -72,9 +73,9 @@ for (const slug of slugs) {
     continue;
   }
 
-  // One page per site today. Kept as a list so service-area pages can be added
-  // later without touching the submission logic.
-  const urlList = [`https://${host}/`];
+  // Every page the build wrote, from dist/<slug>/sitemap.xml; just the home
+  // page if the site has not been built. Run after `npm run build`.
+  const urlList = await siteUrls(root, slug, host);
 
   if (dryRun) {
     console.log(`would  ${slug.padEnd(33)} ${urlList.length} URL(s) on ${host}`);
