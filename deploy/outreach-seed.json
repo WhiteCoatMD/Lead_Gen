@@ -1,0 +1,45 @@
+{
+  "_comment": "One-time import of citation fixes already researched in docs/twin-city-fences-citations.md (2026-09-21). Martins is excluded until renamed. Loaded with `npm run outreach:import`; after that the dashboard is the working list.",
+  "tasks": [
+    {
+      "site": "twin-city-fences", "kind": "citation_fix", "target": "Yelp — fix the name and remove the street address",
+      "url": "https://www.yelp.com/", "cost": "free",
+      "why": "Listed as \"TWIN CITY FENCES\" with 205 Mane St Ste C. Should be Twin City Fence, city and zip only. The listing also carries an experience claim the business has not confirmed — leave it for Mitch to decide.",
+      "steps": ["Sign in to Yelp for Business with the account in the note.", "Change the business name to exactly: Twin City Fence", "Remove the street address; keep West Monroe, LA 71292.", "Leave the line about experience as it is — mention it in your notes for Mitch.", "Save, then mark Done with the link to the Yelp listing."],
+      "copy_block": "Twin City Fence\n318-351-2539\nWest Monroe, LA 71292\nhttps://twincityfences.com",
+      "account_note": "Needs the owner's Yelp for Business login — ask Mitch."
+    },
+    {
+      "site": "twin-city-fences", "kind": "citation_fix", "target": "ChamberofCommerce.com — fix the name",
+      "url": "https://www.chamberofcommerce.com/", "cost": "free",
+      "why": "Listed as \"Twin City Fences\". Should be Twin City Fence. Address is already right (no street).",
+      "steps": ["Find the Twin City Fences listing and claim or sign in to it.", "Change the name to exactly: Twin City Fence", "Save, then mark Done with the link to the listing."],
+      "copy_block": "Twin City Fence\n318-351-2539\nWest Monroe, LA 71292\nhttps://twincityfences.com",
+      "account_note": "May need the listing claimed with twincityfences@gmail.com — ask Mitch."
+    },
+    {
+      "site": "twin-city-fences", "kind": "citation_fix", "target": "MapQuest — fix the name",
+      "url": "https://www.mapquest.com/", "cost": "free",
+      "why": "Listed as \"Twin City Fences\". Should be Twin City Fence.",
+      "steps": ["Find the Twin City Fences listing on MapQuest.", "Use its edit/suggest option to change the name to exactly: Twin City Fence", "Mark Done with the link to the listing once the change shows."],
+      "copy_block": "Twin City Fence\n318-351-2539\nWest Monroe, LA 71292\nhttps://twincityfences.com",
+      "account_note": "Usually no login needed — ask Mitch if it asks for one."
+    },
+    {
+      "site": "twin-city-fences", "kind": "citation_fix", "target": "YouTube channel — add the business details",
+      "url": "https://www.youtube.com/@twincityfence", "cost": "free",
+      "why": "Channel title has a trailing space and the channel shows no description, website, phone or location, so it counts for nothing as a citation.",
+      "steps": ["Sign in to YouTube Studio with the account in the note.", "Customisation → Basic info: remove the space at the end of the name so it reads exactly: Twin City Fence", "Paste the description below.", "Add the link https://twincityfences.com and the contact email twincityfences@gmail.com. No street address.", "Publish, then mark Done with the channel link."],
+      "copy_block": "Twin City Fence builds wood privacy, chain-link, split rail, ornamental, farm and commercial fencing across Monroe, West Monroe and Ouachita Parish, Louisiana. We also fit gates, replace fences, and repair storm damage.\n\nCall 318-351-2539\ntwincityfences.com",
+      "account_note": "Needs the Google account that owns the channel — ask Mitch."
+    },
+    {
+      "site": "twin-city-fences", "kind": "citation_fix", "target": "Facebook page — remove the street address",
+      "url": "https://www.facebook.com/", "cost": "free",
+      "why": "Name and phone are right, but the page publishes 205 Mane St Suite C. It is the most-seen listing after Google (770+ followers), so it matters most.",
+      "steps": ["Open the Twin City Fence Facebook page as an admin.", "Edit page info → location: remove the street address, keep West Monroe, LA 71292 as the service area.", "Save, then mark Done with the page link."],
+      "copy_block": "Twin City Fence\n318-351-2539\nWest Monroe, LA 71292\nhttps://twincityfences.com",
+      "account_note": "Needs page admin access — ask Mitch."
+    }
+  ]
+}

@@ -17,6 +17,9 @@
     "claims": "node scripts/check-claims.mjs",
     "links": "node scripts/link-prospects.mjs",
     "gbp:find": "node scripts/gbp-find-ids.mjs",
-    "leads": "node scripts/lead-report.mjs"
+    "leads": "node scripts/lead-report.mjs",
+    "outreach:vet": "node scripts/outreach-vet.mjs",
+    "outreach:import": "node scripts/outreach-vet.mjs --import",
+    "test:scripts": "node --test scripts/**/*.test.mjs"
   }
 }
