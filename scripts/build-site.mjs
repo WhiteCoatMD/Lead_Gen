@@ -5,7 +5,7 @@ import { renderSite, renderFavicon } from "../shared/render-site.mjs";
 import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
 import { renderShop } from "../shared/render-shop.mjs";
 import { renderPage } from "../shared/render-page.mjs";
-import { loadPermit } from "./lib/permits.mjs";
+import { loadPermit, validatePermit } from "./lib/permits.mjs";
 
 // slug in site.json `template` -> renderer. No entry means the shared
 // contractor template in render-site.mjs.
@@ -33,6 +33,33 @@ const required = ["name", "domain", "city", "state", "headline", CONTENT_FIELD[c
 const missing = required.filter((key) => !config[key] || (Array.isArray(config[key]) && !config[key].length));
 if (missing.length) throw new Error(`${slug} is missing required fields: ${missing.join(", ")}`);
 
+// A permit guide that is missing or fails its checks skips its own page
+// rather than failing the build, so one bad guide cannot stop all 28 sites.
+// It is dropped from config.pages before anything renders, so neither the
+// home page nor a sibling page links to a URL that will not exist.
+const permits = new Map();
+if (Array.isArray(config.pages)) {
+  const kept = [];
+  for (const page of config.pages) {
+    if (page.type === "fence-permit") {
+      let problem;
+      try {
+        const permit = await loadPermit(root, page.permit);
+        problem = validatePermit(permit)[0];
+        permits.set(page.slug, permit);
+      } catch (error) {
+        problem = `cannot load permit "${page.permit}": ${error.message}`;
+      }
+      if (problem) {
+        console.warn(`${slug}: skipped page /${page.slug} — ${problem}`);
+        continue;
+      }
+    }
+    kept.push(page);
+  }
+  config.pages = kept;
+}
+
 const render = RENDERERS[config.template] || renderSite;
 if (config.template && !RENDERERS[config.template]) throw new Error(`${slug} names unknown template "${config.template}"`);
 await fs.writeFile(path.join(outputDir, "index.html"), render(config, slug), "utf8");
@@ -56,15 +83,18 @@ await fs.writeFile(path.join(outputDir, "robots.txt"), `User-agent: *\nAllow: /\
 // collapsed multi-page originals into one page and Google kept the old URLs;
 // a rebuilt page that is not in the sitemap is only half recovered.
 const pages = Array.isArray(config.pages) ? config.pages : [];
+// Only pages actually written go in the sitemap: a skipped permit guide must
+// not be advertised as a URL that answers 404.
+const written = [];
 for (const page of pages) {
   if (!page.slug || !page.heading || !page.seoTitle || !page.seoDescription) {
     throw new Error(`${slug} page "${page.slug || "(no slug)"}" needs slug, heading, seoTitle and seoDescription`);
   }
+  const extras = page.type === "fence-permit" ? { permit: permits.get(page.slug) } : {};
+  const html = renderPage(config, page, slug, extras);
   // A slug ending in .html is written as that exact file, because the URL
   // Google indexed is the one that has to answer. Anything else becomes a
   // directory with an index, serving a clean extensionless URL.
-  const extras = page.type === "fence-permit" ? { permit: await loadPermit(root, page.permit) } : {};
-  const html = renderPage(config, page, slug, extras);
   if (page.slug.endsWith(".html")) {
     await fs.writeFile(path.join(outputDir, page.slug), html, "utf8");
   } else {
@@ -72,6 +102,7 @@ for (const page of pages) {
     await fs.mkdir(pageDir, { recursive: true });
     await fs.writeFile(path.join(pageDir, "index.html"), html, "utf8");
   }
+  written.push(page);
 }
 // The calculator runs in the browser from the same module the tests exercise.
 if (pages.some((page) => page.type === "fence-calculator")) {
@@ -80,7 +111,7 @@ if (pages.some((page) => page.type === "fence-calculator")) {
   }
 }
 
-const sitemapUrls = [`https://${config.domain}/`, ...pages.map((page) => `https://${config.domain}/${page.slug}`)];
+const sitemapUrls = [`https://${config.domain}/`, ...written.map((page) => `https://${config.domain}/${page.slug}`)];
 await fs.writeFile(
   path.join(outputDir, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +

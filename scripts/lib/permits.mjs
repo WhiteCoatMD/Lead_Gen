@@ -42,6 +42,10 @@ export function validatePermit(data, today = new Date()) {
   const office = data?.office || {};
   for (const key of ["name", "sourceUrl"]) if (!office[key]) problems.push(`office is missing "${key}"`);
   if (!office.phone && !office.url) problems.push("office needs a phone number or an official web page");
+  // These become hrefs on a live page, so anything but http(s) is refused.
+  for (const key of ["url", "sourceUrl"]) {
+    if (office[key] && !/^https?:\/\//i.test(office[key])) problems.push(`office ${key} must be an http(s) link`);
+  }
   if (office.sourceUrl) checkDate("office", office.checked, today, problems);
   const facts = Array.isArray(data?.facts) ? data.facts : [];
   if (!facts.length) problems.push("guide has no facts");

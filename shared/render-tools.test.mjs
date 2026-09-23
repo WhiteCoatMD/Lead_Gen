@@ -66,3 +66,24 @@ test("a site with analytics turned off gets no beacon on secondary pages either"
   const html = renderPage({ ...site, analytics: false }, { slug: "x", heading: "X.", seoTitle: "t", seoDescription: "d" }, "twin-city-fences");
   assert.doesNotMatch(html, /\/api\/event/);
 });
+
+test("javascript: links never reach an href; the source title stays as text", () => {
+  const bad = { ...permit, office: { ...permit.office, url: "javascript:alert(1)" }, facts: permit.facts.map((f, i) => (i ? f : { ...f, sourceUrl: "JavaScript:alert(1)" })) };
+  const html = renderPermitGuide(site, bad, { guides: [] });
+  assert.doesNotMatch(html, /href="javascript/i);
+  assert.match(html, /Monroe Code §9-1/);
+});
+
+test("a guide with no facts renders nothing instead of throwing", () => {
+  assert.equal(renderPermitGuide(site, { ...permit, facts: [] }, { guides: [] }), "");
+  assert.equal(renderPermitGuide(site, { ...permit, facts: undefined }, { guides: [] }), "");
+});
+
+test("secondary pages leave the tool pages out of 'Other services'", () => {
+  const html = renderPage(site, { slug: "west-monroe", heading: "Fences in West Monroe.", seoTitle: "t", seoDescription: "d" }, "twin-city-fences");
+  assert.doesNotMatch(html, /Other services/);
+});
+
+test("the homepage tools band uses the same markup as the areas band", () => {
+  assert.match(renderPermitLinks(site), /^<section class="areas"><div class="shell areas-inner">/);
+});

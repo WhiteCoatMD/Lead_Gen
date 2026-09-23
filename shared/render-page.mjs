@@ -57,7 +57,9 @@ export function renderPage(site, page, slug = "", extras = {}) {
 
   // Sibling pages plus the home page, so a visitor who lands here from search
   // has somewhere to go and the rebuilt pages are not orphans.
-  const siblings = (site.pages || []).filter((other) => other.slug !== page.slug);
+  // The calculator and permit guides are not services; they get their own
+  // links, so they stay out of this list.
+  const siblings = (site.pages || []).filter((other) => other.slug !== page.slug && other.type !== "fence-calculator" && other.type !== "fence-permit");
   const related = siblings.length
     ? `<section class="shell areas"><div class="areas-inner"><div><p class="eyebrow">More from ${esc(site.name)}</p><h2>Other services.</h2></div><div class="area-list">${
         siblings.map((other) => `<span><a href="/${esc(other.slug)}">${esc(other.navLabel || other.heading)}</a></span>`).join("")

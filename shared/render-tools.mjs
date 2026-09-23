@@ -2,7 +2,10 @@ import { escapeHtml as esc, phoneHref } from "./render-site.mjs";
 import { fenceMaterials, EXAMPLE_INPUT } from "./fence-calc.mjs";
 
 const MONTH = new Intl.DateTimeFormat("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
-const monthOf = (iso) => MONTH.format(new Date(`${iso}T00:00:00Z`));
+const isDate = (iso) => /^\d{4}-\d{2}-\d{2}$/.test(String(iso)) && !Number.isNaN(Date.parse(`${iso}T00:00:00Z`));
+const monthOf = (iso) => (isDate(iso) ? MONTH.format(new Date(`${iso}T00:00:00Z`)) : "");
+// Guide data becomes hrefs on a live page: only http(s) links are emitted.
+const safeUrl = (u) => (/^https?:\/\//i.test(String(u ?? "")) ? u : "");
 const toolPages = (site, type) => (site.pages || []).filter((p) => p.type === type);
 
 function linesTable(result) {
@@ -53,32 +56,34 @@ export function renderCalculator(site) {
 }
 
 export function renderPermitGuide(site, permit, links) {
-  const office = permit.office;
-  const oldest = (permit.facts || []).map((f) => f.checked).sort()[0];
+  const facts = Array.isArray(permit.facts) ? permit.facts : [];
+  if (!facts.length) return "";
+  const office = permit.office || {};
+  const oldest = facts.map((f) => f.checked).filter(isDate).sort()[0];
   return `
     <section class="shell permit">
-      <p class="permit-checked">Last checked: ${esc(monthOf(oldest))}. Rules change — confirm with the office before you build.</p>
+      <p class="permit-checked">${oldest ? `Last checked: ${esc(monthOf(oldest))}. ` : ""}Rules change — confirm with the office before you build.</p>
       <div class="permit-office">
         <h2>${esc(office.name)}</h2>
         ${office.address ? `<p>${esc(office.address)}</p>` : ""}
         ${office.phone ? `<p><a href="${phoneHref(office.phone)}">${esc(office.phone)}</a></p>` : ""}
-        ${office.url ? `<p><a href="${esc(office.url)}" rel="noopener">Official permit page</a></p>` : ""}
+        ${safeUrl(office.url) ? `<p><a href="${esc(office.url)}" rel="noopener">Official permit page</a></p>` : ""}
       </div>
-      ${(permit.facts || []).map((f) => `
+      ${facts.map((f) => `
       <article class="permit-fact">
         <h3>${esc(f.question)}</h3>
         <p>${esc(f.answer)}</p>
-        <p class="source">Source: <a href="${esc(f.sourceUrl)}" rel="noopener">${esc(f.sourceTitle)}</a> · checked ${esc(monthOf(f.checked))}</p>
+        <p class="source">Source: ${safeUrl(f.sourceUrl) ? `<a href="${esc(f.sourceUrl)}" rel="noopener">${esc(f.sourceTitle)}</a>` : esc(f.sourceTitle)}${isDate(f.checked) ? ` · checked ${esc(monthOf(f.checked))}` : ""}</p>
       </article>`).join("")}
       <p class="fineprint">If you live in a neighbourhood with an HOA, its rules can be stricter than ${esc(permit.name)}'s. This page is a plain-language summary of public rules, not legal advice.</p>
       <p>${links.calculator ? `<a href="/${esc(links.calculator.slug)}">Work out the materials with our ${esc(links.calculator.label)}</a>` : ""}${
-        links.guides.length ? ` · Other areas: ${links.guides.map((g) => `<a href="/${esc(g.slug)}">${esc(g.label)}</a>`).join(", ")}` : ""}</p>
+        (links.guides || []).length ? ` · Other areas: ${links.guides.map((g) => `<a href="/${esc(g.slug)}">${esc(g.label)}</a>`).join(", ")}` : ""}</p>
     </section>`;
 }
 
 export function renderPermitLinks(site) {
   const pages = [...toolPages(site, "fence-calculator"), ...toolPages(site, "fence-permit")];
   if (!pages.length) return "";
-  return `<section class="shell areas"><div class="areas-inner"><div><p class="eyebrow">Planning a fence?</p><h2>Materials and permits.</h2></div><div class="area-list">${
+  return `<section class="areas"><div class="shell areas-inner"><div><p class="eyebrow">Planning a fence?</p><h2>Materials and permits.</h2></div><div class="area-list">${
     pages.map((p) => `<span><a href="/${esc(p.slug)}">${esc(p.navLabel || p.heading)}</a></span>`).join("")}</div></div></section>`;
 }

@@ -45,3 +45,10 @@ test("oldestCheckedDays reports the stalest fact", () => {
   const d = valid(); d.facts[1].checked = "2025-11-02";
   assert.equal(oldestCheckedDays(d, today), 325);
 });
+
+test("office links must be http(s)", () => {
+  const d = valid(); d.office.url = "javascript:alert(1)"; d.office.sourceUrl = "ftp://x";
+  const out = validatePermit(d, today).join("\n");
+  assert.match(out, /office url must be an http\(s\) link/);
+  assert.match(out, /office sourceUrl must be an http\(s\) link/);
+});
