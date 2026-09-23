@@ -18,3 +18,6 @@ package-lock.json
 *service-account*.json
 *-gsc-key.json
 google-credentials.json
+
+# agent scratch
+.superpowers/
