@@ -87,6 +87,20 @@ jobs:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
         run: npm run gbp | tee -a audit.txt
 
+      # Visits, call taps and delivered form leads per site for the last seven
+      # days, from the Supabase event store. A gate only on SILENCE: a site
+      # with traffic in the previous four weeks and none this week has broken
+      # tracking or a dead page, and a quiet week never reads exactly zero.
+      - name: Lead report
+        if: always()
+        env:
+          EVENTS_REPORT_TOKEN: ${{ secrets.EVENTS_REPORT_TOKEN }}
+        run: |
+          status=0
+          node scripts/lead-report.mjs --markdown > leads.md || status=$?
+          cat leads.md >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+
       # Keep the full report even when the step above fails, so the summary is
       # readable without digging through raw logs.
       - name: Summary

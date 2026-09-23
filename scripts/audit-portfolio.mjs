@@ -167,6 +167,7 @@ async function auditSite(slug) {
       else if (!h.key) fail("lead form: RESEND_API_KEY not set on the project — every submission is dropped");
       else if (h.fromVerified === false) fail(`lead form: sender domain ${h.from} is not verified in Resend — every submission is rejected`);
       else if (h.fromVerified === null) warn(`lead form: could not confirm sender domain ${h.from} is verified in Resend`);
+      if (h && h.events === false) warn("lead form: EVENTS_INGEST_TOKEN not set — leads deliver but are not counted");
     } catch (error) {
       fail(`lead form: health check failed (${error.cause?.code || error.name})`);
     }

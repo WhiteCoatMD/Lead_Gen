@@ -20,6 +20,10 @@
 // stores something identifying it becomes a privacy obligation that the sites
 // have no notice for.
 
+import { recordEvent } from "./_events.js";
+
+// lead_delivered is deliberately absent: only lead.js writes it, server-side,
+// after Resend accepts the email. A browser must not be able to claim a lead.
 const ALLOWED = new Set(["page_view", "call_click", "form_view", "form_submit", "form_error"]);
 const MAX_LEN = 120;
 
@@ -35,19 +39,22 @@ export default async function handler(req, res) {
   const type = clean(body.type);
   if (!ALLOWED.has(type)) return res.status(400).json({ error: "Unknown event" });
 
-  // One structured line per event. Queryable from the log drain, and trivially
-  // redirected into a table later without the client changing.
-  console.log(
-    JSON.stringify({
-      evt: type,
-      site: clean(body.site),
-      path: clean(body.path),
-      // Where they came from, at hostname granularity only. Enough to tell
-      // Google from Facebook from a direct visit; not enough to follow anyone.
-      ref: refHost(body.ref),
-      at: new Date().toISOString(),
-    })
-  );
+  const event = {
+    type,
+    site: clean(body.site),
+    path: clean(body.path),
+    // Where they came from, at hostname granularity only. Enough to tell
+    // Google from Facebook from a direct visit; not enough to follow anyone.
+    ref: refHost(body.ref),
+  };
+
+  // One structured line per event: the fallback record if the store is down.
+  console.log(JSON.stringify({ evt: type, site: event.site, path: event.path, ref: event.ref, at: new Date().toISOString() }));
+
+  // The durable record. Vercel logs last about a day, which is why weekly
+  // counts had no answer until 2026-09-23. A beacon has already been sent by
+  // the time this runs, so the short wait costs the visitor nothing.
+  if (/^[a-z0-9-]{1,60}$/.test(event.site)) await recordEvent(event);
 
   // 204: the browser has nothing to do with the response, and sending a body
   // for a fire-and-forget beacon is wasted bytes on a mobile connection.

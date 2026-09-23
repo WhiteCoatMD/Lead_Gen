@@ -16,6 +16,8 @@
 // unfinished notification path that silently does nothing is worse than one
 // that was never claimed to exist.
 
+import { recordEvent } from "./_events.js";
+
 export const RECIPIENTS = {
   // slug -> where its leads go. Adding a site means adding a line here, which
   // is the point: the destination is not something a request can choose.
@@ -199,6 +201,10 @@ export default async function handler(req, res) {
     return res.status(502).json({ error: "We could not send that just now. Please call us." });
   }
 
+  // The authoritative lead count: written only here, only after Resend has
+  // accepted the email. No lead content is stored, just that one arrived.
+  await recordEvent({ type: "lead_delivered", site: String(body.site) });
+
   return res.status(200).json({ ok: true });
 }
 
@@ -229,6 +235,8 @@ async function healthCheck(req, res) {
     // true / false, or null when the key cannot list domains (a send-only
     // key) — unknown is reported as unknown, not guessed either way.
     fromVerified: hasKey ? await isVerified(from) : null,
+    // Whether delivered leads are being counted (EVENTS_INGEST_TOKEN).
+    events: Boolean(process.env.EVENTS_INGEST_TOKEN),
   });
 }
 
