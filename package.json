@@ -20,6 +20,6 @@
     "leads": "node scripts/lead-report.mjs",
     "outreach:vet": "node scripts/outreach-vet.mjs",
     "outreach:import": "node scripts/outreach-vet.mjs --import",
-    "test:scripts": "node --test scripts/**/*.test.mjs"
+    "test:scripts": "node --test scripts/**/*.test.mjs shared/**/*.test.mjs"
   }
 }
