@@ -7,7 +7,7 @@
       "cactusremovalservice.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 3,
       "near": []
@@ -21,12 +21,13 @@
       "eifschicago.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 0,
       "near": []
     },
-    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified, listed as 'Chicago EIFS and Stucco, LLC'"
+    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified, listed as 'Chicago EIFS and Stucco, LLC'",
+    "gbpName": "Chicago EIFS and Stucco, LLC"
   },
   {
     "slug": "crack-rx",
@@ -36,7 +37,7 @@
       "getcrackrx.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 1,
       "near": []
@@ -61,22 +62,30 @@
       "SET THE WEBSITE to https://deckbuildermonroe.com — the profile has no website, so nothing connects the listing to the site. Website edits rarely trigger re-verification, unlike phone, name, address and category, so this one can be done now.",
       "LATER: the profile's phone (318) 598-4535 has lapsed and no longer reaches anyone. It needs to become 318-726-2853. Deliberately deferred by Mitch 2026-09-22 to avoid triggering a re-verification. Worth doing sooner than later - a verified profile publishing a dead number is losing the calls it earns."
     ],
-    "phone_correct": "318-726-2853 (live; what the site publishes)"
+    "phone_correct": "318-726-2853 (live; what the site publishes)",
+    "hours_seen": "Monday: 8:00 AM – 5:00 PM | Tuesday: 8:00 AM – 5:00 PM | Wednesday: 8:00 AM – 5:00 PM | Thursday: 8:00 AM – 5:00 PM | Friday: 8:00 AM – 5:00 PM | Saturday: 8:00 AM – 4:00 PM | Sunday: Closed"
   },
   {
     "slug": "flooring-monroe",
-    "placeId": null,
+    "placeId": "ChIJReWChStHLoYRPuWLe7Eh7gg",
     "searched": [
       "318-460-5045",
       "flooring-monroe.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
-      "result": "not found in Places",
-      "candidates": 20,
-      "near": []
+      "checked": "2026-09-23",
+      "result": "matched",
+      "how": "phone"
     },
-    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified, listed as 'Flooring and Shed Sync Monroe', 1400 Forsythe Ave Monroe LA 71201"
+    "gbp_account": "deckbuildersmonroe@gmail.com (authuser=4) — Verified, listed as 'Flooring and Shed Sync Monroe', 1400 Forsythe Ave Monroe LA 71201",
+    "gbpName": "Flooring and Shed Sync Monroe",
+    "via": "phone",
+    "name": "Flooring and Shed Sync Monroe",
+    "address": "1400 Forsythe Ave, Monroe, LA 71201, USA",
+    "phone": "(318) 460-5045",
+    "website": "https://www.shed-sync.com/",
+    "status": "OPERATIONAL",
+    "hours_seen": "Monday: 8:00 AM – 5:00 PM | Tuesday: 8:00 AM – 5:00 PM | Wednesday: 8:00 AM – 5:00 PM | Thursday: 8:00 AM – 5:00 PM | Friday: 8:00 AM – 5:00 PM | Saturday: 8:00 AM – 2:00 PM | Sunday: Closed"
   },
   {
     "slug": "lake-charles-fences",
@@ -97,7 +106,7 @@
       "pressurewashing-neworleans.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 2,
       "near": []
@@ -116,14 +125,14 @@
     "status_changed_observed": "2026-09-22",
     "hours_reported": "8:00 AM - 6:00 PM, seven days (submitted 2026-09-22, pending Google review)",
     "note": "Mitch reopened this listing himself; it had been recorded CLOSED_PERMANENTLY on 2026-09-21. Hours changed from Open 24 hours to 8:00 AM - 6:00 PM seven days on 2026-09-22 at his instruction. Profile is managed by scaffoldinglosangeles@gmail.com, not admin@shed-sync.com.",
-    "hours_seen": "Monday: Open 24 hours | Tuesday: Open 24 hours | Wednesday: Open 24 hours | Thursday: Open 24 hours | Friday: Open 24 hours | Saturday: Open 24 hours | Sunday: Open 24 hours",
+    "hours_seen": "Monday: 8:00 AM – 6:00 PM | Tuesday: 8:00 AM – 6:00 PM | Wednesday: 8:00 AM – 6:00 PM | Thursday: 8:00 AM – 6:00 PM | Friday: 8:00 AM – 6:00 PM | Saturday: 8:00 AM – 6:00 PM | Sunday: 8:00 AM – 6:00 PM",
     "gbp_account": "scaffoldinglosangeles@gmail.com (authuser=3) — Verified"
   },
   {
     "slug": "seacoast-hurricane-shutters",
     "skipped": true,
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 11,
       "near": []
@@ -137,17 +146,10 @@
       "stuccorepairchicago.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "name match only — needs human confirmation",
-      "candidates": 12,
+      "candidates": 14,
       "near": [
-        {
-          "id": "ChIJR0JT7563D4gRIdRrwpiQ86I",
-          "name": "Northwest Stucco Repair & Painting",
-          "phone": "(224) 354-1808",
-          "website": "http://stuccoservicesdesplaines.com/",
-          "status": "OPERATIONAL"
-        },
         {
           "id": "ChIJRc0Kxns1DogRI0yGVpsbzGM",
           "name": "TrueVista Stucco Repair & Painting",
@@ -156,10 +158,17 @@
           "status": "OPERATIONAL"
         },
         {
-          "id": "ChIJlcpM-hfRD4gRnUzRO2WzxWg",
-          "name": "Northeast Stucco Repair & Painting",
-          "phone": "(224) 714-0706",
-          "website": "https://stuccoevanston.com/",
+          "id": "ChIJu64JrrhXDogRgxzF9mpzIGU",
+          "name": "Aegis Stucco Repair & Painting",
+          "phone": "(331) 249-3084",
+          "website": "http://aegisstuccocontractor.com/",
+          "status": "OPERATIONAL"
+        },
+        {
+          "id": "ChIJlzY6BTZBDogR9NJs1dpJ_WE",
+          "name": "FacadeFix Stucco Repair And Painting",
+          "phone": "(708) 303-7064",
+          "website": "https://facadefixstuccocontractor.com/",
           "status": "OPERATIONAL"
         }
       ]
@@ -174,7 +183,7 @@
       "dallastowtrucks.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 11,
       "near": []
@@ -188,7 +197,7 @@
       "twincityfences.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 0,
       "near": []
@@ -202,7 +211,7 @@
       "twincity-handyman.com"
     ],
     "lookup": {
-      "checked": "2026-09-22",
+      "checked": "2026-09-23",
       "result": "not found in Places",
       "candidates": 0,
       "near": []

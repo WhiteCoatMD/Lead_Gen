@@ -90,7 +90,14 @@ for (const entry of known) {
   // exactly. The queries are just candidate generators - acceptance is decided
   // entirely by the domain and phone check below, so a loose query costs
   // nothing but an extra request.
+  // entry.gbpName is the name the PROFILE uses when it differs from the site's.
+  // That difference is why the first sweep found nothing for several of these:
+  // the site is "Flooring Monroe" and the profile is "Flooring and Shed Sync
+  // Monroe", so searching the site name returned twenty strangers. Acceptance
+  // still rests entirely on the domain or phone check below - this only
+  // changes which candidates get generated.
   const queries = [
+    entry.gbpName ? `${entry.gbpName} ${cfg.city} ${cfg.state}` : null,
     `${cfg.name} ${cfg.city} ${cfg.state}`,
     realDomain ? domain : null,
     cfg.phone || null,
