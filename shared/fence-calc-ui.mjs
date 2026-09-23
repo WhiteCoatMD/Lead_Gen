@@ -63,8 +63,12 @@ form?.addEventListener("submit", (e) => {
   out.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-// Picket fields only make sense for wood.
-form?.addEventListener("change", () => {
+// Picket fields only make sense for wood. Also run once on load: a
+// browser can restore a "chain-link" selection after back/reload without
+// firing a change event, and the fields would otherwise stay shown.
+function syncPicketFields() {
   const wood = form.querySelector('input[name="type"]:checked')?.value === "wood";
   for (const name of ["picketWidth", "picketGap"]) form.querySelector(`[name="${name}"]`).closest("label").hidden = !wood;
-});
+}
+form?.addEventListener("change", syncPicketFields);
+if (form) syncPicketFields();

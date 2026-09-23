@@ -13,8 +13,11 @@ const TYPES = { ".html": "text/html", ".mjs": "text/javascript", ".js": "text/ja
 http.createServer(async (req, res) => {
   let p = path.normalize(decodeURIComponent(new URL(req.url, "http://x").pathname)).replace(/^([/\\])+/, "");
   let file = path.join(base, p);
-  if (!file.startsWith(base)) { res.writeHead(403).end(); return; }
+  if (file !== base && !file.startsWith(base + path.sep)) { res.writeHead(403).end(); return; }
   try { if ((await fs.stat(file)).isDirectory()) file = path.join(file, "index.html"); } catch {}
-  try { res.writeHead(200, { "Content-Type": TYPES[path.extname(file)] || "application/octet-stream" }); res.end(await fs.readFile(file)); }
-  catch { res.writeHead(404).end("not found"); }
+  try {
+    const data = await fs.readFile(file);
+    res.writeHead(200, { "Content-Type": TYPES[path.extname(file)] || "application/octet-stream" });
+    res.end(data);
+  } catch { res.writeHead(404).end("not found"); }
 }).listen(Number(port), () => console.log(`http://localhost:${port}/`));
