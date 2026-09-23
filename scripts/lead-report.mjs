@@ -24,6 +24,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { pageRows } from "./lib/page-report.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const markdown = process.argv.includes("--markdown");
@@ -76,6 +77,28 @@ for (const r of rows) {
   }
 }
 
+// Per-page view (lead-gen-admin migration 0006). Informational: a failure here
+// prints a note and never fails the run — the SILENT gate above is the gate.
+const pilotPages = {};
+for (const slug of slugs) {
+  const cfg = JSON.parse(await fs.readFile(path.join(root, "sites", slug, "site.json"), "utf8"));
+  const tools = (cfg.pages || []).filter((p) => p.type === "fence-calculator" || p.type === "fence-permit");
+  if (tools.length) pilotPages[slug] = tools.map((p) => `/${p.slug}`);
+}
+let pages = null;
+try {
+  const pageRes = await fetch(URL.replace(/event_counts$/, "event_counts_by_path"), {
+    method: "POST",
+    headers: { apikey: KEY, "Content-Type": "application/json" },
+    body: JSON.stringify({ p_token: token, p_days: 7 }),
+    signal: AbortSignal.timeout(20000),
+  });
+  if (pageRes.ok) pages = pageRows(await pageRes.json(), pilotPages);
+  else console.error(`Per-page counts unavailable: HTTP ${pageRes.status}`);
+} catch (error) {
+  console.error(`Per-page counts unavailable: ${error.message}`);
+}
+
 const silent = slugs.filter((s) => stats[s].priorViews > 0 && stats[s].views === 0);
 const avg = (n) => (n / 4).toFixed(1);
 const active = slugs.filter((s) => stats[s].views || stats[s].priorViews);
@@ -96,6 +119,16 @@ if (markdown) {
     console.log("_No events recorded yet._");
   }
   if (silent.length) console.log(`\n**SILENT:** ${silent.join(", ")} — visits in the previous four weeks, none this week.`);
+  if (pages) {
+    console.log(`\n### Pages that produced leads\n`);
+    console.log("Pages with a call tap or form lead this week. Calculator and permit-guide pages (pilot) are always listed.\n");
+    if (pages.length) {
+      console.log("| site | page | visits | call taps | form leads |\n|---|---|---|---|---|");
+      for (const p of pages) console.log(`| ${p.site} | ${p.path}${p.pilot ? " (pilot)" : ""} | ${p.views} | ${p.calls} | ${p.leads} |`);
+    } else {
+      console.log("_No page produced a call tap or form lead this week._");
+    }
+  }
 } else {
   console.log(header.map((h, i) => (i ? h.padStart(14) : h.padEnd(34))).join(""));
   for (const row of body) console.log(row.map((c, i) => (i ? String(c).padStart(14) : String(c).padEnd(34))).join(""));
@@ -103,6 +136,10 @@ if (markdown) {
   const quiet = slugs.length - active.length;
   if (quiet) console.log(`${quiet} sites have recorded nothing in 35 days.`);
   if (silent.length) console.log(`SILENT: ${silent.join(", ")} — visits in the previous four weeks, none this week. Check tracking and the site.`);
+  if (pages) {
+    console.log(`\nPages that produced leads (pilot pages always listed):`);
+    for (const p of pages) console.log(`  ${`${p.site}${p.path}${p.pilot ? " (pilot)" : ""}`.padEnd(60)} visits ${p.views}  taps ${p.calls}  leads ${p.leads}`);
+  }
 }
 
 process.exit(silent.length ? 1 : 0);
