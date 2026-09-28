@@ -2,11 +2,40 @@
   "slug": "flooring-monroe",
   "domain": "flooring-monroe.com",
   "siteUrl": "sc-domain:flooring-monroe.com",
-  "startDate": "2025-05-30",
-  "endDate": "2026-09-19",
+  "startDate": "2025-06-05",
+  "endDate": "2026-09-25",
   "clicks": 0,
-  "impressions": 0,
-  "pages": [],
-  "queries": [],
+  "impressions": 6,
+  "pages": [
+    {
+      "keys": [
+        "https://flooring-monroe.com/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 33.5
+    },
+    {
+      "keys": [
+        "https://www.flooring-monroe.com/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 16.75
+    }
+  ],
+  "queries": [
+    {
+      "keys": [
+        "monroe la hardwood cleaning"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    }
+  ],
   "rebuilt": []
 }

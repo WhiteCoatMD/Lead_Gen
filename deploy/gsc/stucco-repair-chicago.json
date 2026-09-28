@@ -2,12 +2,59 @@
   "slug": "stucco-repair-chicago",
   "domain": "stuccorepairchicago.com",
   "siteUrl": "sc-domain:stuccorepairchicago.com",
-  "startDate": "2025-05-30",
-  "endDate": "2026-09-19",
+  "startDate": "2025-06-05",
+  "endDate": "2026-09-25",
   "clicks": 0,
-  "impressions": 0,
-  "pages": [],
-  "queries": [],
+  "impressions": 11,
+  "pages": [
+    {
+      "keys": [
+        "https://stuccorepairchicago.com/"
+      ],
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 10.545454545454545
+    }
+  ],
+  "queries": [
+    {
+      "keys": [
+        "eifs inspection chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "keys": [
+        "eifs problems chicago"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "stucco inspection chicago"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2
+    },
+    {
+      "keys": [
+        "stucco repair"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 7
+    }
+  ],
   "rebuilt": [
     {
       "path": "/stucco-repair.html",

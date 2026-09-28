@@ -2,82 +2,82 @@
   "slug": "towing-dallas",
   "domain": "dallastowtrucks.com",
   "siteUrl": "sc-domain:dallastowtrucks.com",
-  "startDate": "2025-05-30",
-  "endDate": "2026-09-19",
-  "clicks": 579,
-  "impressions": 421505,
+  "startDate": "2025-06-05",
+  "endDate": "2026-09-25",
+  "clicks": 586,
+  "impressions": 418634,
   "pages": [
     {
       "keys": [
         "https://dallastowtrucks.com/"
       ],
-      "clicks": 542,
-      "impressions": 285751,
-      "ctr": 0.0018967562668197138,
-      "position": 14.269167911923319
+      "clicks": 547,
+      "impressions": 287409,
+      "ctr": 0.0019032111033405357,
+      "position": 14.257455403275472
     },
     {
       "keys": [
         "http://www.dallastowtrucks.com/"
       ],
-      "clicks": 28,
-      "impressions": 6145,
-      "ctr": 0.004556550040683482,
-      "position": 13.414483319772172
+      "clicks": 30,
+      "impressions": 6072,
+      "ctr": 0.004940711462450593,
+      "position": 13.539525691699605
     },
     {
       "keys": [
         "https://www.dallastowtrucks.com/"
       ],
       "clicks": 8,
-      "impressions": 72080,
-      "ctr": 0.00011098779134295228,
-      "position": 58.12083795782464
+      "impressions": 68235,
+      "ctr": 0.00011724188466329596,
+      "position": 57.80175862826995
     },
     {
       "keys": [
         "https://www.dallastowtrucks.com/services1"
       ],
       "clicks": 1,
-      "impressions": 14800,
-      "ctr": 0.00006756756756756757,
-      "position": 77.37425675675675
+      "impressions": 13791,
+      "ctr": 0.00007251105793633529,
+      "position": 77.42215937930534
     },
     {
       "keys": [
         "https://dallastowtrucks.com/#about"
       ],
       "clicks": 0,
-      "impressions": 10523,
+      "impressions": 10634,
       "ctr": 0,
-      "position": 9.021286705312173
+      "position": 8.993605416588302
     },
     {
       "keys": [
         "https://dallastowtrucks.com/#contact"
       ],
       "clicks": 0,
-      "impressions": 10523,
+      "impressions": 10634,
       "ctr": 0,
-      "position": 9.021286705312173
+      "position": 8.993605416588302
     },
     {
       "keys": [
         "https://dallastowtrucks.com/#faq"
       ],
       "clicks": 0,
-      "impressions": 10523,
+      "impressions": 10634,
       "ctr": 0,
-      "position": 9.021286705312173
+      "position": 8.993605416588302
     },
     {
       "keys": [
         "https://dallastowtrucks.com/#services"
       ],
       "clicks": 0,
-      "impressions": 10523,
+      "impressions": 10634,
       "ctr": 0,
-      "position": 9.021286705312173
+      "position": 8.993605416588302
     },
     {
       "keys": [
@@ -111,18 +111,18 @@
         "https://www.dallastowtrucks.com/about-us"
       ],
       "clicks": 0,
-      "impressions": 132,
+      "impressions": 122,
       "ctr": 0,
-      "position": 10.931818181818182
+      "position": 10.950819672131148
     },
     {
       "keys": [
         "https://www.dallastowtrucks.com/contact-us"
       ],
       "clicks": 0,
-      "impressions": 495,
+      "impressions": 459,
       "ctr": 0,
-      "position": 56.24040404040404
+      "position": 56.04357298474945
     }
   ],
   "queries": [
@@ -130,64 +130,64 @@
       "keys": [
         "tow truck near me"
       ],
-      "clicks": 97,
-      "impressions": 32544,
-      "ctr": 0.0029805801376597838,
-      "position": 11.135293756145526
+      "clicks": 100,
+      "impressions": 32967,
+      "ctr": 0.0030333363666697,
+      "position": 11.017502350835684
     },
     {
       "keys": [
         "tow truck"
       ],
-      "clicks": 50,
-      "impressions": 11542,
-      "ctr": 0.004332004851845434,
-      "position": 14.662276901750129
+      "clicks": 51,
+      "impressions": 11669,
+      "ctr": 0.0043705544605364645,
+      "position": 14.563373039677778
     },
     {
       "keys": [
         "tow truck dallas"
       ],
       "clicks": 41,
-      "impressions": 8462,
-      "ctr": 0.004845190262349326,
-      "position": 15.678681162845663
+      "impressions": 8405,
+      "ctr": 0.004878048780487805,
+      "position": 15.15609756097561
     },
     {
       "keys": [
         "towing near me"
       ],
       "clicks": 17,
-      "impressions": 9334,
-      "ctr": 0.0018212984786800943,
-      "position": 8.104456824512535
+      "impressions": 9328,
+      "ctr": 0.0018224699828473414,
+      "position": 8.155767581475128
     },
     {
       "keys": [
         "tow trucks near me"
       ],
       "clicks": 11,
-      "impressions": 4365,
-      "ctr": 0.0025200458190148913,
-      "position": 13.727835051546391
+      "impressions": 4348,
+      "ctr": 0.002529898804047838,
+      "position": 13.752989880404783
     },
     {
       "keys": [
         "tow company near me"
       ],
       "clicks": 10,
-      "impressions": 4597,
-      "ctr": 0.0021753317380900587,
-      "position": 10.995866869697629
+      "impressions": 4606,
+      "ctr": 0.0021710811984368217,
+      "position": 11.087928788536692
     },
     {
       "keys": [
         "dallas tow truck"
       ],
       "clicks": 9,
-      "impressions": 3619,
-      "ctr": 0.0024868748273003593,
-      "position": 22.81541862392926
+      "impressions": 3573,
+      "ctr": 0.0025188916876574307,
+      "position": 21.91995521970333
     },
     {
       "keys": [
@@ -203,18 +203,18 @@
         "cheap towing service near me"
       ],
       "clicks": 7,
-      "impressions": 2162,
-      "ctr": 0.0032377428307123032,
-      "position": 7.391766882516189
+      "impressions": 2164,
+      "ctr": 0.003234750462107209,
+      "position": 7.425138632162661
     },
     {
       "keys": [
         "tow trucks dallas"
       ],
       "clicks": 7,
-      "impressions": 2936,
-      "ctr": 0.0023841961852861036,
-      "position": 22.565395095367847
+      "impressions": 2897,
+      "ctr": 0.002416292716603383,
+      "position": 21.97100448740076
     },
     {
       "keys": [
@@ -223,43 +223,43 @@
       "clicks": 6,
       "impressions": 1921,
       "ctr": 0.0031233732431025507,
-      "position": 10.583550234252993
+      "position": 10.66215512753774
     },
     {
       "keys": [
         "tow trucks"
       ],
       "clicks": 6,
-      "impressions": 1206,
-      "ctr": 0.004975124378109453,
-      "position": 9.125207296849087
+      "impressions": 1222,
+      "ctr": 0.004909983633387889,
+      "position": 9.330605564648117
     },
     {
       "keys": [
         "towing company near me"
       ],
       "clicks": 6,
-      "impressions": 2828,
-      "ctr": 0.0021216407355021216,
-      "position": 13.761669024045261
+      "impressions": 2824,
+      "ctr": 0.002124645892351275,
+      "position": 13.793555240793202
     },
     {
       "keys": [
         "dallas tow trucks"
       ],
       "clicks": 5,
-      "impressions": 523,
-      "ctr": 0.009560229445506692,
-      "position": 35.30401529636711
+      "impressions": 518,
+      "ctr": 0.009652509652509652,
+      "position": 34.49420849420849
     },
     {
       "keys": [
         "towtruck"
       ],
       "clicks": 5,
-      "impressions": 260,
-      "ctr": 0.019230769230769232,
-      "position": 10.861538461538462
+      "impressions": 262,
+      "ctr": 0.019083969465648856,
+      "position": 10.797709923664122
     },
     {
       "keys": [
@@ -272,84 +272,93 @@
     },
     {
       "keys": [
+        "24 hour towing dallas"
+      ],
+      "clicks": 4,
+      "impressions": 960,
+      "ctr": 0.004166666666666667,
+      "position": 6.036458333333333
+    },
+    {
+      "keys": [
         "24 hour towing near me"
       ],
       "clicks": 4,
-      "impressions": 1501,
-      "ctr": 0.002664890073284477,
-      "position": 10.373084610259827
+      "impressions": 1518,
+      "ctr": 0.002635046113306983,
+      "position": 10.357707509881424
     },
     {
       "keys": [
         "cheap tow truck near me"
       ],
       "clicks": 4,
-      "impressions": 2325,
-      "ctr": 0.0017204301075268817,
-      "position": 7.497634408602151
+      "impressions": 2324,
+      "ctr": 0.0017211703958691911,
+      "position": 7.537865748709122
     },
     {
       "keys": [
         "cheap towing dallas"
       ],
       "clicks": 4,
-      "impressions": 1812,
-      "ctr": 0.002207505518763797,
-      "position": 10.737858719646798
+      "impressions": 1814,
+      "ctr": 0.002205071664829107,
+      "position": 10.677508269018743
     },
     {
       "keys": [
         "tow truck dallas tx"
       ],
       "clicks": 4,
-      "impressions": 2639,
-      "ctr": 0.0015157256536566881,
-      "position": 29.70935960591133
+      "impressions": 2583,
+      "ctr": 0.001548586914440573,
+      "position": 29.018195896244677
     },
     {
       "keys": [
         "tow trucks in dallas"
       ],
       "clicks": 4,
-      "impressions": 533,
-      "ctr": 0.0075046904315197,
-      "position": 25.954971857410882
+      "impressions": 527,
+      "ctr": 0.007590132827324478,
+      "position": 25.364326375711574
     },
     {
       "keys": [
         "towing dallas"
       ],
       "clicks": 4,
-      "impressions": 3956,
-      "ctr": 0.0010111223458038423,
-      "position": 30.78134479271992
+      "impressions": 3904,
+      "ctr": 0.0010245901639344263,
+      "position": 29.54636270491803
     },
     {
       "keys": [
         "dallas tow company"
       ],
       "clicks": 3,
-      "impressions": 1294,
-      "ctr": 0.00231839258114374,
-      "position": 33.891808346213296
+      "impressions": 1260,
+      "ctr": 0.002380952380952381,
+      "position": 32.40396825396826
     },
     {
       "keys": [
         "towing"
       ],
       "clicks": 3,
-      "impressions": 627,
-      "ctr": 0.004784688995215311,
-      "position": 10.277511961722489
+      "impressions": 626,
+      "ctr": 0.004792332268370607,
+      "position": 10.279552715654953
     },
     {
       "keys": [
         "towing company dallas"
       ],
       "clicks": 3,
-      "impressions": 1253,
-      "ctr": 0.0023942537909018356,
-      "position": 41.89704708699122
+      "impressions": 1233,
+      "ctr": 0.0024330900243309003,
+      "position": 39.78588807785888
     },
     {
       "keys": [
@@ -365,27 +374,18 @@
         "24 hour towing"
       ],
       "clicks": 2,
-      "impressions": 3826,
-      "ctr": 0.0005227391531625719,
-      "position": 74.23078933612128
-    },
-    {
-      "keys": [
-        "24 hour towing dallas"
-      ],
-      "clicks": 2,
-      "impressions": 988,
-      "ctr": 0.0020242914979757085,
-      "position": 5.815789473684211
+      "impressions": 3600,
+      "ctr": 0.0005555555555555556,
+      "position": 73.9475
     },
     {
       "keys": [
         "24/7 towing"
       ],
       "clicks": 2,
-      "impressions": 518,
-      "ctr": 0.003861003861003861,
-      "position": 45.04054054054054
+      "impressions": 519,
+      "ctr": 0.0038535645472061657,
+      "position": 44.994219653179194
     },
     {
       "keys": [
@@ -394,16 +394,16 @@
       "clicks": 2,
       "impressions": 48,
       "ctr": 0.041666666666666664,
-      "position": 6.166666666666667
+      "position": 5.979166666666667
     },
     {
       "keys": [
         "cheap tow dallas"
       ],
       "clicks": 2,
-      "impressions": 361,
-      "ctr": 0.00554016620498615,
-      "position": 49.16897506925208
+      "impressions": 336,
+      "ctr": 0.005952380952380952,
+      "position": 46.348214285714285
     },
     {
       "keys": [
@@ -419,108 +419,108 @@
         "cheap tow truck"
       ],
       "clicks": 2,
-      "impressions": 524,
-      "ctr": 0.003816793893129771,
-      "position": 8.805343511450381
+      "impressions": 525,
+      "ctr": 0.0038095238095238095,
+      "position": 8.86095238095238
     },
     {
       "keys": [
         "cheap tow truck dallas tx"
       ],
       "clicks": 2,
-      "impressions": 1375,
-      "ctr": 0.0014545454545454545,
-      "position": 34.88072727272727
+      "impressions": 1315,
+      "ctr": 0.001520912547528517,
+      "position": 32.57642585551331
     },
     {
       "keys": [
         "dallas towing"
       ],
       "clicks": 2,
-      "impressions": 5194,
-      "ctr": 0.0003850596842510589,
-      "position": 31.291682710820176
+      "impressions": 5093,
+      "ctr": 0.00039269585705870805,
+      "position": 30.629884154722166
     },
     {
       "keys": [
         "tow company"
       ],
       "clicks": 2,
-      "impressions": 344,
-      "ctr": 0.005813953488372093,
-      "position": 8.941860465116278
+      "impressions": 354,
+      "ctr": 0.005649717514124294,
+      "position": 8.790960451977401
     },
     {
       "keys": [
         "tow truck 24/7"
       ],
       "clicks": 2,
-      "impressions": 188,
-      "ctr": 0.010638297872340425,
-      "position": 28.361702127659573
+      "impressions": 189,
+      "ctr": 0.010582010582010581,
+      "position": 28.74074074074074
     },
     {
       "keys": [
         "tow truck companies in dallas"
       ],
       "clicks": 2,
-      "impressions": 208,
-      "ctr": 0.009615384615384616,
-      "position": 53.88461538461539
+      "impressions": 201,
+      "ctr": 0.009950248756218905,
+      "position": 52.766169154228855
     },
     {
       "keys": [
         "towing companies near me"
       ],
       "clicks": 2,
-      "impressions": 236,
-      "ctr": 0.00847457627118644,
-      "position": 9.919491525423728
+      "impressions": 233,
+      "ctr": 0.008583690987124463,
+      "position": 9.96137339055794
     },
     {
       "keys": [
         "towing service"
       ],
       "clicks": 2,
-      "impressions": 1934,
-      "ctr": 0.001034126163391934,
-      "position": 16.733712512926576
+      "impressions": 1932,
+      "ctr": 0.0010351966873706005,
+      "position": 16.788819875776397
     },
     {
       "keys": [
-        "towing service near me"
+        "towing service dallas"
       ],
       "clicks": 2,
-      "impressions": 2798,
-      "ctr": 0.0007147962830593281,
-      "position": 8.061115082201573
+      "impressions": 2713,
+      "ctr": 0.0007371913011426465,
+      "position": 38.94434205676373
     },
     {
       "keys": [
         "towing services near me"
       ],
       "clicks": 2,
-      "impressions": 272,
-      "ctr": 0.007352941176470588,
-      "position": 9.533088235294118
+      "impressions": 273,
+      "ctr": 0.007326007326007326,
+      "position": 9.868131868131869
     },
     {
       "keys": [
         "towing truck"
       ],
       "clicks": 2,
-      "impressions": 546,
-      "ctr": 0.003663003663003663,
-      "position": 12.336996336996338
+      "impressions": 549,
+      "ctr": 0.0036429872495446266,
+      "position": 12.296903460837887
     },
     {
       "keys": [
         "wrecker service dallas"
       ],
       "clicks": 2,
-      "impressions": 1458,
-      "ctr": 0.0013717421124828531,
-      "position": 29.23045267489712
+      "impressions": 1413,
+      "ctr": 0.0014154281670205238,
+      "position": 28.478414720452935
     },
     {
       "keys": [
@@ -563,18 +563,18 @@
         "24 hour tow truck"
       ],
       "clicks": 1,
-      "impressions": 776,
-      "ctr": 0.001288659793814433,
-      "position": 39.881443298969074
+      "impressions": 750,
+      "ctr": 0.0013333333333333333,
+      "position": 39.25333333333333
     },
     {
       "keys": [
         "24 hour towing dallas tx"
       ],
       "clicks": 1,
-      "impressions": 681,
-      "ctr": 0.0014684287812041115,
-      "position": 13.274596182085169
+      "impressions": 667,
+      "ctr": 0.0014992503748125937,
+      "position": 12.78110944527736
     },
     {
       "keys": [
@@ -590,9 +590,9 @@
         "24 hours group towing"
       ],
       "clicks": 1,
-      "impressions": 50,
-      "ctr": 0.02,
-      "position": 17.06
+      "impressions": 49,
+      "ctr": 0.02040816326530612,
+      "position": 17.244897959183675
     },
     {
       "keys": [
@@ -608,27 +608,27 @@
         "24 hours towing"
       ],
       "clicks": 1,
-      "impressions": 40,
-      "ctr": 0.025,
-      "position": 55.925
+      "impressions": 37,
+      "ctr": 0.02702702702702703,
+      "position": 53.67567567567568
     },
     {
       "keys": [
         "24 hr towing"
       ],
       "clicks": 1,
-      "impressions": 193,
-      "ctr": 0.0051813471502590676,
-      "position": 46.44041450777202
+      "impressions": 178,
+      "ctr": 0.0056179775280898875,
+      "position": 44.60674157303371
     },
     {
       "keys": [
         "24-hour tow truck"
       ],
       "clicks": 1,
-      "impressions": 79,
-      "ctr": 0.012658227848101266,
-      "position": 42.860759493670884
+      "impressions": 78,
+      "ctr": 0.01282051282051282,
+      "position": 42.17948717948718
     },
     {
       "keys": [
@@ -644,9 +644,9 @@
         "24/7 towing near me"
       ],
       "clicks": 1,
-      "impressions": 843,
-      "ctr": 0.0011862396204033216,
-      "position": 59.19335705812574
+      "impressions": 844,
+      "ctr": 0.001184834123222749,
+      "position": 59.12559241706161
     },
     {
       "keys": [
@@ -662,9 +662,9 @@
         "24hour tow"
       ],
       "clicks": 1,
-      "impressions": 4,
-      "ctr": 0.25,
-      "position": 28
+      "impressions": 3,
+      "ctr": 0.3333333333333333,
+      "position": 36.333333333333336
     },
     {
       "keys": [
@@ -689,9 +689,9 @@
         "24hr towing"
       ],
       "clicks": 1,
-      "impressions": 87,
-      "ctr": 0.011494252873563218,
-      "position": 41.08045977011494
+      "impressions": 85,
+      "ctr": 0.011764705882352941,
+      "position": 40.63529411764706
     },
     {
       "keys": [
@@ -761,9 +761,9 @@
         "car towing dallas tx"
       ],
       "clicks": 1,
-      "impressions": 1497,
-      "ctr": 0.0006680026720106881,
-      "position": 47.936539746158985
+      "impressions": 1465,
+      "ctr": 0.0006825938566552901,
+      "position": 47.01433447098976
     },
     {
       "keys": [
@@ -788,9 +788,9 @@
         "cheap towing near me"
       ],
       "clicks": 1,
-      "impressions": 1576,
-      "ctr": 0.0006345177664974619,
-      "position": 6.592005076142132
+      "impressions": 1577,
+      "ctr": 0.0006341154090044388,
+      "position": 6.637285986049461
     },
     {
       "keys": [
@@ -824,27 +824,27 @@
         "dallas car towing"
       ],
       "clicks": 1,
-      "impressions": 1451,
-      "ctr": 0.0006891798759476223,
-      "position": 59.53893866299104
+      "impressions": 1412,
+      "ctr": 0.000708215297450425,
+      "position": 59.0042492917847
     },
     {
       "keys": [
         "dallas tow"
       ],
       "clicks": 1,
-      "impressions": 1883,
-      "ctr": 0.0005310674455655868,
-      "position": 41.571959638874134
+      "impressions": 1854,
+      "ctr": 0.0005393743257820927,
+      "position": 39.56310679611651
     },
     {
       "keys": [
         "emergency towing"
       ],
       "clicks": 1,
-      "impressions": 481,
-      "ctr": 0.002079002079002079,
-      "position": 10.066528066528067
+      "impressions": 474,
+      "ctr": 0.002109704641350211,
+      "position": 10.20042194092827
     },
     {
       "keys": [
@@ -860,9 +860,9 @@
         "heavy duty towing"
       ],
       "clicks": 1,
-      "impressions": 692,
-      "ctr": 0.001445086705202312,
-      "position": 18.8742774566474
+      "impressions": 694,
+      "ctr": 0.001440922190201729,
+      "position": 19.06628242074928
     },
     {
       "keys": [
@@ -896,9 +896,9 @@
         "roadside assistance near me"
       ],
       "clicks": 1,
-      "impressions": 299,
-      "ctr": 0.0033444816053511705,
-      "position": 10.80267558528428
+      "impressions": 300,
+      "ctr": 0.0033333333333333335,
+      "position": 10.983333333333333
     },
     {
       "keys": [
@@ -950,9 +950,9 @@
         "tow companies in dallas"
       ],
       "clicks": 1,
-      "impressions": 136,
-      "ctr": 0.007352941176470588,
-      "position": 46.63235294117647
+      "impressions": 132,
+      "ctr": 0.007575757575757576,
+      "position": 45.07575757575758
     },
     {
       "keys": [
@@ -968,9 +968,9 @@
         "tow near me"
       ],
       "clicks": 1,
-      "impressions": 985,
-      "ctr": 0.0010152284263959391,
-      "position": 9.460913705583756
+      "impressions": 983,
+      "ctr": 0.001017293997965412,
+      "position": 9.466937945066125
     },
     {
       "keys": [
@@ -995,18 +995,18 @@
         "tow service near me"
       ],
       "clicks": 1,
-      "impressions": 1898,
-      "ctr": 0.0005268703898840885,
-      "position": 9.05163329820864
+      "impressions": 1908,
+      "ctr": 0.0005241090146750524,
+      "position": 9.2374213836478
     },
     {
       "keys": [
         "tow services near me"
       ],
       "clicks": 1,
-      "impressions": 606,
-      "ctr": 0.0016501650165016502,
-      "position": 6.952145214521452
+      "impressions": 605,
+      "ctr": 0.001652892561983471,
+      "position": 6.95702479338843
     },
     {
       "keys": [
@@ -1049,9 +1049,9 @@
         "tow truck service dallas"
       ],
       "clicks": 1,
-      "impressions": 2700,
-      "ctr": 0.00037037037037037035,
-      "position": 29.866666666666667
+      "impressions": 2646,
+      "ctr": 0.0003779289493575208,
+      "position": 29.270219198790628
     },
     {
       "keys": [
@@ -1085,18 +1085,27 @@
         "tow trucking"
       ],
       "clicks": 1,
-      "impressions": 17,
-      "ctr": 0.058823529411764705,
-      "position": 15.176470588235293
+      "impressions": 19,
+      "ctr": 0.05263157894736842,
+      "position": 14
     },
     {
       "keys": [
         "tow trucks dallas tx"
       ],
       "clicks": 1,
-      "impressions": 229,
-      "ctr": 0.004366812227074236,
-      "position": 29.860262008733624
+      "impressions": 225,
+      "ctr": 0.0044444444444444444,
+      "position": 28.946666666666665
+    },
+    {
+      "keys": [
+        "tow trucks in dallas texas"
+      ],
+      "clicks": 1,
+      "impressions": 560,
+      "ctr": 0.0017857142857142857,
+      "position": 10.055357142857142
     },
     {
       "keys": [
@@ -1112,90 +1121,90 @@
         "towing dallas texas"
       ],
       "clicks": 1,
-      "impressions": 194,
-      "ctr": 0.005154639175257732,
-      "position": 77.69587628865979
+      "impressions": 184,
+      "ctr": 0.005434782608695652,
+      "position": 76.75
     },
     {
       "keys": [
         "towing dallas tx"
       ],
       "clicks": 1,
-      "impressions": 2389,
-      "ctr": 0.0004185851820845542,
-      "position": 29.77731268313102
+      "impressions": 2488,
+      "ctr": 0.00040192926045016077,
+      "position": 28.42805466237942
     },
     {
       "keys": [
         "towing in dallas"
       ],
       "clicks": 1,
-      "impressions": 1144,
-      "ctr": 0.0008741258741258741,
-      "position": 39.37587412587413
+      "impressions": 1120,
+      "ctr": 0.0008928571428571428,
+      "position": 38.3125
     },
     {
       "keys": [
         "towing in dallas texas"
       ],
       "clicks": 1,
-      "impressions": 178,
-      "ctr": 0.0056179775280898875,
-      "position": 65.70786516853933
+      "impressions": 172,
+      "ctr": 0.005813953488372093,
+      "position": 64.81395348837209
     },
     {
       "keys": [
         "towing in dallas tx"
       ],
       "clicks": 1,
-      "impressions": 758,
-      "ctr": 0.0013192612137203166,
-      "position": 54.5
-    },
-    {
-      "keys": [
-        "towing service dallas"
-      ],
-      "clicks": 1,
-      "impressions": 2717,
-      "ctr": 0.000368052999631947,
-      "position": 40.1428045638572
+      "impressions": 729,
+      "ctr": 0.0013717421124828531,
+      "position": 52.871056241426615
     },
     {
       "keys": [
         "towing service dallas tx"
       ],
       "clicks": 1,
-      "impressions": 1082,
-      "ctr": 0.0009242144177449168,
-      "position": 54.98336414048059
+      "impressions": 1053,
+      "ctr": 0.000949667616334283,
+      "position": 54.229819563152894
     },
     {
       "keys": [
         "towing service in dallas tx"
       ],
       "clicks": 1,
-      "impressions": 911,
-      "ctr": 0.0010976948408342481,
-      "position": 52.008781558726675
+      "impressions": 892,
+      "ctr": 0.0011210762331838565,
+      "position": 51.12331838565022
+    },
+    {
+      "keys": [
+        "towing service near me"
+      ],
+      "clicks": 1,
+      "impressions": 2794,
+      "ctr": 0.00035790980672870435,
+      "position": 8.114889047959913
     },
     {
       "keys": [
         "towing services"
       ],
       "clicks": 1,
-      "impressions": 847,
-      "ctr": 0.0011806375442739079,
-      "position": 24.521841794569067
+      "impressions": 845,
+      "ctr": 0.001183431952662722,
+      "position": 24.577514792899407
     },
     {
       "keys": [
         "towing services in dallas"
       ],
       "clicks": 1,
-      "impressions": 312,
-      "ctr": 0.003205128205128205,
-      "position": 45.81089743589744
+      "impressions": 306,
+      "ctr": 0.0032679738562091504,
+      "position": 45.049019607843135
     },
     {
       "keys": [
@@ -1211,9 +1220,9 @@
         "truck towing near me"
       ],
       "clicks": 1,
-      "impressions": 227,
-      "ctr": 0.004405286343612335,
-      "position": 6.766519823788546
+      "impressions": 226,
+      "ctr": 0.004424778761061947,
+      "position": 6.721238938053097
     },
     {
       "keys": [
@@ -1229,9 +1238,9 @@
         "vehicle towing near me"
       ],
       "clicks": 1,
-      "impressions": 447,
-      "ctr": 0.0022371364653243847,
-      "position": 7.3042505592841165
+      "impressions": 448,
+      "ctr": 0.002232142857142857,
+      "position": 7.377232142857143
     },
     {
       "keys": [
@@ -1364,9 +1373,9 @@
         "$50 tow truck"
       ],
       "clicks": 0,
-      "impressions": 40,
+      "impressions": 41,
       "ctr": 0,
-      "position": 15.65
+      "position": 16.609756097560975
     },
     {
       "keys": [
@@ -1427,9 +1436,9 @@
         "$50 towing service near me 24 hours free"
       ],
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 28,
       "ctr": 0,
-      "position": 6.814814814814815
+      "position": 7.642857142857143
     },
     {
       "keys": [
@@ -1760,9 +1769,9 @@
         "24 7 towing company"
       ],
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 23,
       "ctr": 0,
-      "position": 60.074074074074076
+      "position": 58.73913043478261
     },
     {
       "keys": [
@@ -1778,9 +1787,9 @@
         "24 7 towing near me"
       ],
       "clicks": 0,
-      "impressions": 114,
+      "impressions": 116,
       "ctr": 0,
-      "position": 13.578947368421053
+      "position": 13.525862068965518
     },
     {
       "keys": [
@@ -1814,9 +1823,9 @@
         "24 7 towing services dallas tx"
       ],
       "clicks": 0,
-      "impressions": 69,
+      "impressions": 68,
       "ctr": 0,
-      "position": 18.159420289855074
+      "position": 17.955882352941178
     },
     {
       "keys": [
@@ -1895,18 +1904,18 @@
         "24 hour cheap towing near me"
       ],
       "clicks": 0,
-      "impressions": 346,
+      "impressions": 347,
       "ctr": 0,
-      "position": 8.953757225433526
+      "position": 8.792507204610951
     },
     {
       "keys": [
         "24 hour emergency car services dallas tx"
       ],
       "clicks": 0,
-      "impressions": 207,
+      "impressions": 195,
       "ctr": 0,
-      "position": 46.7536231884058
+      "position": 47.261538461538464
     },
     {
       "keys": [
@@ -1922,9 +1931,9 @@
         "24 hour emergency towing"
       ],
       "clicks": 0,
-      "impressions": 55,
+      "impressions": 53,
       "ctr": 0,
-      "position": 68.23636363636363
+      "position": 67.98113207547169
     },
     {
       "keys": [
@@ -2111,9 +2120,9 @@
         "24 hour roadside assistance dallas tx"
       ],
       "clicks": 0,
-      "impressions": 1553,
+      "impressions": 1526,
       "ctr": 0,
-      "position": 47.66645202833226
+      "position": 46.84272608125819
     },
     {
       "keys": [
@@ -2255,9 +2264,9 @@
         "24 hour tow"
       ],
       "clicks": 0,
-      "impressions": 119,
+      "impressions": 118,
       "ctr": 0,
-      "position": 20.857142857142858
+      "position": 20.93220338983051
     },
     {
       "keys": [
@@ -2291,9 +2300,9 @@
         "24 hour tow dallas tx"
       ],
       "clicks": 0,
-      "impressions": 184,
+      "impressions": 179,
       "ctr": 0,
-      "position": 18.95108695652174
+      "position": 18.81564245810056
     },
     {
       "keys": [
@@ -2318,18 +2327,18 @@
         "24 hour tow service"
       ],
       "clicks": 0,
-      "impressions": 219,
+      "impressions": 218,
       "ctr": 0,
-      "position": 28.19178082191781
+      "position": 28.25229357798165
     },
     {
       "keys": [
         "24 hour tow service near me"
       ],
       "clicks": 0,
-      "impressions": 61,
+      "impressions": 60,
       "ctr": 0,
-      "position": 61
+      "position": 61.833333333333336
     },
     {
       "keys": [
@@ -2363,9 +2372,9 @@
         "24 hour tow truck company"
       ],
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 13,
       "ctr": 0,
-      "position": 47.25
+      "position": 51.15384615384615
     },
     {
       "keys": [
@@ -2426,18 +2435,18 @@
         "24 hour tow truck near me"
       ],
       "clicks": 0,
-      "impressions": 667,
+      "impressions": 665,
       "ctr": 0,
-      "position": 19.170914542728635
+      "position": 19.2
     },
     {
       "keys": [
         "24 hour tow truck service"
       ],
       "clicks": 0,
-      "impressions": 1786,
+      "impressions": 1687,
       "ctr": 0,
-      "position": 20.715565509518477
+      "position": 21.07705986959099
     },
     {
       "keys": [
@@ -2471,18 +2480,18 @@
         "24 hour tow trucks"
       ],
       "clicks": 0,
-      "impressions": 98,
+      "impressions": 99,
       "ctr": 0,
-      "position": 36.04081632653061
+      "position": 36.696969696969695
     },
     {
       "keys": [
         "24 hour tow trucks near me"
       ],
       "clicks": 0,
-      "impressions": 117,
+      "impressions": 119,
       "ctr": 0,
-      "position": 39.034188034188034
+      "position": 39.73109243697479
     },
     {
       "keys": [
@@ -2498,9 +2507,9 @@
         "24 hour towing and recovery"
       ],
       "clicks": 0,
-      "impressions": 75,
+      "impressions": 69,
       "ctr": 0,
-      "position": 69.77333333333333
+      "position": 68.52173913043478
     },
     {
       "keys": [
@@ -2534,9 +2543,9 @@
         "24 hour towing company"
       ],
       "clicks": 0,
-      "impressions": 315,
+      "impressions": 281,
       "ctr": 0,
-      "position": 59.67619047619048
+      "position": 58.80782918149466
     },
     {
       "keys": [
@@ -2561,18 +2570,18 @@
         "24 hour towing fort worth"
       ],
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 16,
       "ctr": 0,
-      "position": 56.55555555555556
+      "position": 54.625
     },
     {
       "keys": [
         "24 hour towing fort worth tx"
       ],
       "clicks": 0,
-      "impressions": 175,
+      "impressions": 159,
       "ctr": 0,
-      "position": 68.89714285714285
+      "position": 67.26415094339623
     },
     {
       "keys": [
@@ -2633,9 +2642,9 @@
         "24 hour towing near me cheap"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 3.4285714285714284
+      "position": 4.125
     },
     {
       "keys": [
@@ -2678,9 +2687,9 @@
         "24 hour towing service"
       ],
       "clicks": 0,
-      "impressions": 631,
+      "impressions": 608,
       "ctr": 0,
-      "position": 39.614896988906494
+      "position": 38.70723684210526
     },
     {
       "keys": [
@@ -2705,9 +2714,9 @@
         "24 hour towing service near me"
       ],
       "clicks": 0,
-      "impressions": 253,
+      "impressions": 250,
       "ctr": 0,
-      "position": 18.268774703557312
+      "position": 18.388
     },
     {
       "keys": [
@@ -2723,9 +2732,9 @@
         "24 hour towing services"
       ],
       "clicks": 0,
-      "impressions": 52,
+      "impressions": 50,
       "ctr": 0,
-      "position": 69.57692307692308
+      "position": 69.5
     },
     {
       "keys": [
@@ -2813,18 +2822,9 @@
         "24 hour wrecker"
       ],
       "clicks": 0,
-      "impressions": 181,
+      "impressions": 177,
       "ctr": 0,
-      "position": 18.265193370165747
-    },
-    {
-      "keys": [
-        "24 hour wrecker service"
-      ],
-      "clicks": 0,
-      "impressions": 213,
-      "ctr": 0,
-      "position": 34.45070422535211
+      "position": 18.180790960451976
     }
   ],
   "rebuilt": [

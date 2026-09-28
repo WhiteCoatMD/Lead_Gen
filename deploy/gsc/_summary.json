@@ -1,26 +1,26 @@
 {
-  "startDate": "2025-05-30",
-  "endDate": "2026-09-19",
-  "generated": "2026-09-22T02:23:25.428Z",
+  "startDate": "2025-06-05",
+  "endDate": "2026-09-25",
+  "generated": "2026-09-28T20:20:46.430Z",
   "summary": [
     {
       "slug": "cactus-removal-tucson",
       "domain": "cactusremovalservice.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "impressions": 9,
+      "pages": 1,
+      "queries": 1,
       "rebuilt": []
     },
     {
       "slug": "chicago-eifs-stucco",
       "domain": "eifschicago.com",
       "connected": true,
-      "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "clicks": 1,
+      "impressions": 14,
+      "pages": 1,
+      "queries": 6,
       "rebuilt": [
         {
           "path": "/contact",
@@ -35,9 +35,9 @@
       "domain": "getcrackrx.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "impressions": 8,
+      "pages": 2,
+      "queries": 2,
       "rebuilt": []
     },
     {
@@ -45,30 +45,104 @@
       "domain": "deckbuildermonroe.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
-      "rebuilt": []
+      "impressions": 10,
+      "pages": 1,
+      "queries": 4,
+      "rebuilt": [
+        {
+          "path": "/custom-wood-decks",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/composite-decking",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/deck-repair",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/covered-porches-and-pergolas",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/monroe",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/west-monroe",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/contact",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        }
+      ]
     },
     {
       "slug": "flooring-monroe",
       "domain": "flooring-monroe.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "impressions": 6,
+      "pages": 2,
+      "queries": 1,
       "rebuilt": []
     },
     {
       "slug": "lake-charles-fences",
       "domain": "fenceslakecharles.com",
       "connected": true,
-      "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
-      "rebuilt": []
+      "clicks": 2,
+      "impressions": 204,
+      "pages": 10,
+      "queries": 49,
+      "rebuilt": [
+        {
+          "path": "/fence-calculator",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 3
+        },
+        {
+          "path": "/fence-permit-lake-charles",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 5.5
+        },
+        {
+          "path": "/fence-permit-sulphur",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/fence-permit-westlake",
+          "clicks": 0,
+          "impressions": 1,
+          "position": 2
+        },
+        {
+          "path": "/fence-permit-calcasieu-parish",
+          "clicks": 0,
+          "impressions": 2,
+          "position": 3.5
+        }
+      ]
     },
     {
       "slug": "mbs-pressure-washing-new-orleans",
@@ -84,10 +158,10 @@
       "slug": "scaffolding-los-angeles",
       "domain": "scaffoldingrentalusa.com",
       "connected": true,
-      "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "clicks": 3,
+      "impressions": 87,
+      "pages": 2,
+      "queries": 30,
       "rebuilt": [
         {
           "path": "/scaffolding-safety.html",
@@ -114,9 +188,9 @@
       "domain": "seacoasthurricaneshutters.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "impressions": 116,
+      "pages": 2,
+      "queries": 82,
       "rebuilt": []
     },
     {
@@ -124,9 +198,9 @@
       "domain": "stuccorepairchicago.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "impressions": 11,
+      "pages": 1,
+      "queries": 4,
       "rebuilt": [
         {
           "path": "/stucco-repair.html",
@@ -164,8 +238,8 @@
       "slug": "towing-dallas",
       "domain": "dallastowtrucks.com",
       "connected": true,
-      "clicks": 579,
-      "impressions": 421505,
+      "clicks": 586,
+      "impressions": 418634,
       "pages": 13,
       "queries": 1000,
       "rebuilt": [
@@ -247,10 +321,10 @@
       "slug": "twin-city-fences",
       "domain": "twincityfences.com",
       "connected": true,
-      "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "clicks": 8,
+      "impressions": 306,
+      "pages": 13,
+      "queries": 41,
       "rebuilt": [
         {
           "path": "/wooden-fences",
@@ -267,8 +341,8 @@
         {
           "path": "/contact",
           "clicks": 0,
-          "impressions": 0,
-          "position": null
+          "impressions": 4,
+          "position": 3.25
         },
         {
           "path": "/split-rail-fences.html",
@@ -279,8 +353,8 @@
         {
           "path": "/fencing-monroe.html",
           "clicks": 0,
-          "impressions": 0,
-          "position": null
+          "impressions": 2,
+          "position": 8.5
         },
         {
           "path": "/wooden-fences.html",
@@ -290,9 +364,9 @@
         },
         {
           "path": "/chain-link-fence.html",
-          "clicks": 0,
-          "impressions": 0,
-          "position": null
+          "clicks": 1,
+          "impressions": 4,
+          "position": 12
         },
         {
           "path": "/contact-us.html",
@@ -303,14 +377,14 @@
         {
           "path": "/farm-fencing",
           "clicks": 0,
-          "impressions": 0,
-          "position": null
+          "impressions": 3,
+          "position": 14.333333333333334
         },
         {
           "path": "/commercial-fencing",
           "clicks": 0,
-          "impressions": 0,
-          "position": null
+          "impressions": 3,
+          "position": 34
         },
         {
           "path": "/gate-installation",
@@ -321,17 +395,41 @@
         {
           "path": "/fence-replacement",
           "clicks": 0,
-          "impressions": 0,
-          "position": null
+          "impressions": 3,
+          "position": 8.666666666666668
         },
         {
           "path": "/storm-damage",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 29
+        },
+        {
+          "path": "/west-monroe",
+          "clicks": 0,
+          "impressions": 7,
+          "position": 16.857142857142858
+        },
+        {
+          "path": "/fence-calculator",
           "clicks": 0,
           "impressions": 0,
           "position": null
         },
         {
-          "path": "/west-monroe",
+          "path": "/fence-permit-monroe",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/fence-permit-west-monroe",
+          "clicks": 0,
+          "impressions": 0,
+          "position": null
+        },
+        {
+          "path": "/fence-permit-ouachita-parish",
           "clicks": 0,
           "impressions": 0,
           "position": null
@@ -342,10 +440,10 @@
       "slug": "twin-city-handyman",
       "domain": "twincity-handyman.com",
       "connected": true,
-      "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "clicks": 1,
+      "impressions": 5,
+      "pages": 1,
+      "queries": 3,
       "rebuilt": []
     }
   ]

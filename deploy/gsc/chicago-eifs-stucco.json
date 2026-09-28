@@ -2,12 +2,77 @@
   "slug": "chicago-eifs-stucco",
   "domain": "eifschicago.com",
   "siteUrl": "sc-domain:eifschicago.com",
-  "startDate": "2025-05-30",
-  "endDate": "2026-09-19",
-  "clicks": 0,
-  "impressions": 0,
-  "pages": [],
-  "queries": [],
+  "startDate": "2025-06-05",
+  "endDate": "2026-09-25",
+  "clicks": 1,
+  "impressions": 14,
+  "pages": [
+    {
+      "keys": [
+        "https://eifschicago.com/"
+      ],
+      "clicks": 1,
+      "impressions": 14,
+      "ctr": 0.07142857142857142,
+      "position": 29.785714285714285
+    }
+  ],
+  "queries": [
+    {
+      "keys": [
+        "drainage eifs chicago"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 55.5
+    },
+    {
+      "keys": [
+        "eifs chicago"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 25.5
+    },
+    {
+      "keys": [
+        "eifs inspections chicago"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "keys": [
+        "eifs inspector chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "keys": [
+        "eifs issues chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "eifs problems chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 25
+    }
+  ],
   "rebuilt": [
     {
       "path": "/contact",

@@ -2,11 +2,101 @@
   "slug": "deck-builder-monroe",
   "domain": "deckbuildermonroe.com",
   "siteUrl": "sc-domain:deckbuildermonroe.com",
-  "startDate": "2025-05-30",
-  "endDate": "2026-09-19",
+  "startDate": "2025-06-05",
+  "endDate": "2026-09-25",
   "clicks": 0,
-  "impressions": 0,
-  "pages": [],
-  "queries": [],
-  "rebuilt": []
+  "impressions": 10,
+  "pages": [
+    {
+      "keys": [
+        "http://deckbuildermonroe.com/"
+      ],
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 17.5
+    }
+  ],
+  "queries": [
+    {
+      "keys": [
+        "businesses near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 112
+    },
+    {
+      "keys": [
+        "composite deck builders near me"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "deck builder"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "fence contractor"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 21
+    }
+  ],
+  "rebuilt": [
+    {
+      "path": "/custom-wood-decks",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/composite-decking",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/deck-repair",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/covered-porches-and-pergolas",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/monroe",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/west-monroe",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    },
+    {
+      "path": "/contact",
+      "clicks": 0,
+      "impressions": 0,
+      "position": null
+    }
+  ]
 }
