@@ -2,39 +2,75 @@
   "slug": "flooring-monroe",
   "domain": "flooring-monroe.com",
   "siteUrl": "sc-domain:flooring-monroe.com",
-  "startDate": "2025-06-05",
-  "endDate": "2026-09-25",
+  "startDate": "2025-06-12",
+  "endDate": "2026-10-02",
   "clicks": 0,
-  "impressions": 6,
+  "impressions": 20,
   "pages": [
     {
       "keys": [
         "https://flooring-monroe.com/"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 9,
       "ctr": 0,
-      "position": 33.5
+      "position": 20.88888888888889
     },
     {
       "keys": [
         "https://www.flooring-monroe.com/"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 11,
       "ctr": 0,
-      "position": 16.75
+      "position": 7.454545454545454
     }
   ],
   "queries": [
     {
       "keys": [
-        "monroe la hardwood cleaning"
+        "carpet installer"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 38
+      "position": 1
+    },
+    {
+      "keys": [
+        "floor refinishing"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "flooring installation"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "flooring installers near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
+        "monroe la hardwood cleaning"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 42.666666666666664
     }
   ],
   "rebuilt": []

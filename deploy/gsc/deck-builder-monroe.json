@@ -2,19 +2,28 @@
   "slug": "deck-builder-monroe",
   "domain": "deckbuildermonroe.com",
   "siteUrl": "sc-domain:deckbuildermonroe.com",
-  "startDate": "2025-06-05",
-  "endDate": "2026-09-25",
+  "startDate": "2025-06-12",
+  "endDate": "2026-10-02",
   "clicks": 0,
-  "impressions": 10,
+  "impressions": 144,
   "pages": [
     {
       "keys": [
         "http://deckbuildermonroe.com/"
       ],
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 115,
       "ctr": 0,
-      "position": 17.5
+      "position": 2.6347826086956525
+    },
+    {
+      "keys": [
+        "https://deckbuildermonroe.com/"
+      ],
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 31.655172413793103
     }
   ],
   "queries": [
@@ -32,18 +41,81 @@
         "composite deck builders near me"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 8,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "keys": [
+        "custom deck builder monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 25.272727272727273
+    },
+    {
+      "keys": [
+        "custom decks monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 19.857142857142858
     },
     {
       "keys": [
         "deck builder"
       ],
       "clicks": 0,
+      "impressions": 84,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "deck builders"
+      ],
+      "clicks": 0,
       "impressions": 2,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "keys": [
+        "deck builders in my area"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 1.6666666666666665
+    },
+    {
+      "keys": [
+        "deck builders monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "deck builders northeast louisiana"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 66
+    },
+    {
+      "keys": [
+        "deck installation monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 60
     },
     {
       "keys": [
@@ -53,6 +125,24 @@
       "impressions": 2,
       "ctr": 0,
       "position": 21
+    },
+    {
+      "keys": [
+        "porch builders near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "screened porch builders monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 25.8
     }
   ],
   "rebuilt": [

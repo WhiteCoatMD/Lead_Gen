@@ -2,31 +2,49 @@
   "slug": "seacoast-hurricane-shutters",
   "domain": "seacoasthurricaneshutters.com",
   "siteUrl": "sc-domain:seacoasthurricaneshutters.com",
-  "startDate": "2025-06-05",
-  "endDate": "2026-09-25",
+  "startDate": "2025-06-12",
+  "endDate": "2026-10-02",
   "clicks": 0,
-  "impressions": 116,
+  "impressions": 243,
   "pages": [
     {
       "keys": [
         "https://seacoasthurricaneshutters.com/"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 124,
       "ctr": 0,
-      "position": 32.5
+      "position": 32.83064516129032
     },
     {
       "keys": [
         "https://www.seacoasthurricaneshutters.com/"
       ],
       "clicks": 0,
-      "impressions": 112,
+      "impressions": 119,
       "ctr": 0,
-      "position": 49.24107142857143
+      "position": 48.47899159663866
     }
   ],
   "queries": [
+    {
+      "keys": [
+        "accordion shutters daytona"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "keys": [
+        "accordion shutters volusia"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 24.5
+    },
     {
       "keys": [
         "alys beach storm shutters"
@@ -68,9 +86,9 @@
         "custom storm shutter palm coast fl"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 24
+      "position": 35.5
     },
     {
       "keys": [
@@ -80,6 +98,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 49
+    },
+    {
+      "keys": [
+        "east coast hurricane shutters"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
     },
     {
       "keys": [
@@ -119,6 +146,24 @@
     },
     {
       "keys": [
+        "east coast hurricane shutters palm bay"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "exterior shutters daytona"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "keys": [
         "freeport fl storm window shutters"
       ],
       "clicks": 0,
@@ -137,12 +182,111 @@
     },
     {
       "keys": [
-        "hurricane shutters daytona"
+        "hurricane roll down shutters near me"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 19
+      "position": 22
+    },
+    {
+      "keys": [
+        "hurricane shutter companies near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 28.5
+    },
+    {
+      "keys": [
+        "hurricane shutter companies port orange fl"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "keys": [
+        "hurricane shutter installation daytona beach"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 21
+    },
+    {
+      "keys": [
+        "hurricane shutter installers near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "keys": [
+        "hurricane shutter maintenance near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "keys": [
+        "hurricane shutter service near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "keys": [
+        "hurricane shutter service palm coast fl"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "hurricane shutter services lakeland fl"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "hurricane shutter supplies near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 29
+    },
+    {
+      "keys": [
+        "hurricane shutters daytona"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 19.666666666666668
+    },
+    {
+      "keys": [
+        "hurricane shutters daytona beach fl"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 19.4
     },
     {
       "keys": [
@@ -152,6 +296,33 @@
       "impressions": 2,
       "ctr": 0,
       "position": 30.5
+    },
+    {
+      "keys": [
+        "hurricane shutters for sale near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 23
+    },
+    {
+      "keys": [
+        "hurricane shutters ormond"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "keys": [
+        "hurricane shutters ormond beach fl"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 21.5
     },
     {
       "keys": [
@@ -176,18 +347,18 @@
         "hurricane shutters tallahassee"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 6,
       "ctr": 0,
-      "position": 53.333333333333336
+      "position": 60.833333333333336
     },
     {
       "keys": [
         "hurricane shutters topsail"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 7,
       "ctr": 0,
-      "position": 32.5
+      "position": 34
     },
     {
       "keys": [
@@ -197,6 +368,33 @@
       "impressions": 1,
       "ctr": 0,
       "position": 38
+    },
+    {
+      "keys": [
+        "hurricane shutters volusia"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 20
+    },
+    {
+      "keys": [
+        "hurricane storm shutters near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "keys": [
+        "inlet beach storm shutters"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 46.5
     },
     {
       "keys": [
@@ -272,6 +470,105 @@
     },
     {
       "keys": [
+        "palm coast shutters"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "roll down hurricane shutters daytona"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "keys": [
+        "roll down hurricane shutters daytona beach"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 10.8
+    },
+    {
+      "keys": [
+        "roll down hurricane shutters near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "keys": [
+        "roll down hurricane shutters ormond"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 17.666666666666668
+    },
+    {
+      "keys": [
+        "roll down hurricane shutters palm coast"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "keys": [
+        "roll down hurricane shutters volusia"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 15
+    },
+    {
+      "keys": [
+        "roll down shutters daytona"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 12.666666666666666
+    },
+    {
+      "keys": [
+        "roll down shutters daytona beach"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 18.5
+    },
+    {
+      "keys": [
+        "roll down shutters near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "keys": [
+        "roll down shutters ormond"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "keys": [
         "roll down shutters palm coast fl"
       ],
       "clicks": 0,
@@ -281,12 +578,57 @@
     },
     {
       "keys": [
+        "roll down shutters volusia"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "keys": [
+        "roll down storm shutters near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
+    },
+    {
+      "keys": [
+        "roll up hurricane shutters near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 26
+    },
+    {
+      "keys": [
+        "rolling hurricane shutters near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "keys": [
         "santa rosa beach hurricane shutters"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 47
+    },
+    {
+      "keys": [
+        "santa rosa beach storm shutters"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 65.5
     },
     {
       "keys": [
@@ -320,9 +662,9 @@
         "seacrest composite exterior shutters"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 78
+      "position": 81.5
     },
     {
       "keys": [
@@ -332,6 +674,24 @@
       "impressions": 1,
       "ctr": 0,
       "position": 73
+    },
+    {
+      "keys": [
+        "seacrest composite window shutters"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "keys": [
+        "seacrest decorative hurricane shutters"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
     },
     {
       "keys": [
@@ -410,9 +770,9 @@
         "seacrest hurricane roll down shutters"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 20
+      "position": 34.5
     },
     {
       "keys": [
@@ -428,9 +788,18 @@
         "seacrest roll down shutters"
       ],
       "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 66.5
+    },
+    {
+      "keys": [
+        "seacrest roll down storm shutters"
+      ],
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 34
+      "position": 20
     },
     {
       "keys": [
@@ -446,18 +815,18 @@
         "seacrest shutters"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 44
+      "position": 51.5
     },
     {
       "keys": [
         "seacrest shutters for windows"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 38
+      "position": 48
     },
     {
       "keys": [
@@ -479,6 +848,24 @@
     },
     {
       "keys": [
+        "seacrest storm window shutters"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 62
+    },
+    {
+      "keys": [
+        "seacrest window shutters"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 55.5
+    },
+    {
+      "keys": [
         "seacrest window storm shutters"
       ],
       "clicks": 0,
@@ -488,12 +875,21 @@
     },
     {
       "keys": [
+        "seacrest wood shutters"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 96
+    },
+    {
+      "keys": [
         "seacrest wooden shutters"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 41
+      "position": 46.5
     },
     {
       "keys": [
@@ -518,9 +914,9 @@
         "seagrove beach decorative shutters"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 45
+      "position": 54.5
     },
     {
       "keys": [
@@ -590,18 +986,27 @@
         "seagrove beach storm shutters"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 63
+      "position": 60.666666666666664
+    },
+    {
+      "keys": [
+        "seagrove beach storm shutters roll down"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
     },
     {
       "keys": [
         "seagrove beach storm window shutters"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 4,
       "ctr": 0,
-      "position": 87
+      "position": 81.75
     },
     {
       "keys": [
@@ -617,9 +1022,9 @@
         "seagrove beach wooden shutters"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 50
+      "position": 59.5
     },
     {
       "keys": [
@@ -662,9 +1067,18 @@
         "shutter installation daytona"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 3,
       "ctr": 0,
-      "position": 36
+      "position": 25
+    },
+    {
+      "keys": [
+        "shutter installation daytona beach fl"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 25.666666666666668
     },
     {
       "keys": [
@@ -677,12 +1091,21 @@
     },
     {
       "keys": [
-        "shutters ormond"
+        "shutters near me ormond beach fl"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 66
+      "position": 46
+    },
+    {
+      "keys": [
+        "shutters ormond"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 57.5
     },
     {
       "keys": [
@@ -716,6 +1139,33 @@
         "storm protection palm coast fl"
       ],
       "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 24.333333333333332
+    },
+    {
+      "keys": [
+        "storm shutter installers near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "keys": [
+        "storm shutters daytona"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "storm shutters near me"
+      ],
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 23
@@ -728,6 +1178,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 29
+    },
+    {
+      "keys": [
+        "storm shutters volusia"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 20.666666666666668
     },
     {
       "keys": [
