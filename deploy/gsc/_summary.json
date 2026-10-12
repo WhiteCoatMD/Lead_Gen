@@ -1,16 +1,16 @@
 {
-  "startDate": "2025-06-12",
-  "endDate": "2026-10-02",
-  "generated": "2026-10-05T21:24:22.380Z",
+  "startDate": "2025-06-19",
+  "endDate": "2026-10-09",
+  "generated": "2026-10-12T21:56:54.008Z",
   "summary": [
     {
       "slug": "cactus-removal-tucson",
       "domain": "cactusremovalservice.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 31,
       "pages": 1,
-      "queries": 1,
+      "queries": 2,
       "rebuilt": []
     },
     {
@@ -18,9 +18,9 @@
       "domain": "eifschicago.com",
       "connected": true,
       "clicks": 1,
-      "impressions": 37,
+      "impressions": 83,
       "pages": 1,
-      "queries": 12,
+      "queries": 13,
       "rebuilt": [
         {
           "path": "/contact",
@@ -35,7 +35,7 @@
       "domain": "getcrackrx.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 18,
       "pages": 2,
       "queries": 2,
       "rebuilt": []
@@ -45,9 +45,9 @@
       "domain": "deckbuildermonroe.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 144,
+      "impressions": 224,
       "pages": 2,
-      "queries": 13,
+      "queries": 21,
       "rebuilt": [
         {
           "path": "/custom-wood-decks",
@@ -98,49 +98,49 @@
       "domain": "flooring-monroe.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 51,
       "pages": 2,
-      "queries": 5,
+      "queries": 12,
       "rebuilt": []
     },
     {
       "slug": "lake-charles-fences",
       "domain": "fenceslakecharles.com",
       "connected": true,
-      "clicks": 3,
-      "impressions": 411,
+      "clicks": 7,
+      "impressions": 670,
       "pages": 11,
-      "queries": 92,
+      "queries": 123,
       "rebuilt": [
         {
           "path": "/fence-calculator",
           "clicks": 0,
-          "impressions": 4,
-          "position": 48.75
+          "impressions": 15,
+          "position": 46
         },
         {
           "path": "/fence-permit-lake-charles",
-          "clicks": 0,
-          "impressions": 15,
-          "position": 3.6666666666666665
+          "clicks": 1,
+          "impressions": 33,
+          "position": 5.121212121212121
         },
         {
           "path": "/fence-permit-sulphur",
-          "clicks": 0,
-          "impressions": 8,
-          "position": 8.5
+          "clicks": 1,
+          "impressions": 26,
+          "position": 6.346153846153846
         },
         {
           "path": "/fence-permit-westlake",
           "clicks": 0,
-          "impressions": 8,
-          "position": 7
+          "impressions": 15,
+          "position": 8.8
         },
         {
           "path": "/fence-permit-calcasieu-parish",
-          "clicks": 0,
-          "impressions": 10,
-          "position": 7.2
+          "clicks": 1,
+          "impressions": 31,
+          "position": 5.774193548387097
         }
       ]
     },
@@ -149,19 +149,19 @@
       "domain": "pressurewashing-neworleans.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 0,
-      "pages": 0,
-      "queries": 0,
+      "impressions": 1,
+      "pages": 1,
+      "queries": 1,
       "rebuilt": []
     },
     {
       "slug": "scaffolding-los-angeles",
       "domain": "scaffoldingrentalusa.com",
       "connected": true,
-      "clicks": 3,
-      "impressions": 170,
+      "clicks": 4,
+      "impressions": 244,
       "pages": 2,
-      "queries": 46,
+      "queries": 56,
       "rebuilt": [
         {
           "path": "/scaffolding-safety.html",
@@ -188,9 +188,9 @@
       "domain": "seacoasthurricaneshutters.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 243,
+      "impressions": 385,
       "pages": 2,
-      "queries": 133,
+      "queries": 145,
       "rebuilt": []
     },
     {
@@ -198,9 +198,9 @@
       "domain": "stuccorepairchicago.com",
       "connected": true,
       "clicks": 0,
-      "impressions": 35,
+      "impressions": 55,
       "pages": 1,
-      "queries": 8,
+      "queries": 13,
       "rebuilt": [
         {
           "path": "/stucco-repair.html",
@@ -238,22 +238,22 @@
       "slug": "towing-dallas",
       "domain": "dallastowtrucks.com",
       "connected": true,
-      "clicks": 593,
-      "impressions": 414871,
+      "clicks": 602,
+      "impressions": 410760,
       "pages": 19,
       "queries": 1000,
       "rebuilt": [
         {
           "path": "/tow-trucks.html",
           "clicks": 0,
-          "impressions": 1,
-          "position": 3
+          "impressions": 2,
+          "position": 4
         },
         {
           "path": "/roadside-assistance.html",
           "clicks": 0,
-          "impressions": 1,
-          "position": 8
+          "impressions": 2,
+          "position": 5.5
         },
         {
           "path": "/battery-jumpstart.html",
@@ -264,7 +264,7 @@
         {
           "path": "/we-buy-junk-cars.html",
           "clicks": 0,
-          "impressions": 1,
+          "impressions": 2,
           "position": 6
         },
         {
@@ -294,8 +294,8 @@
         {
           "path": "/services1",
           "clicks": 0,
-          "impressions": 1,
-          "position": 5
+          "impressions": 2,
+          "position": 3.5
         },
         {
           "path": "/contact-us",
@@ -312,8 +312,8 @@
         {
           "path": "/wrecker-service.html",
           "clicks": 0,
-          "impressions": 1,
-          "position": 7
+          "impressions": 2,
+          "position": 5.5
         }
       ]
     },
@@ -321,40 +321,40 @@
       "slug": "twin-city-fences",
       "domain": "twincityfences.com",
       "connected": true,
-      "clicks": 15,
-      "impressions": 692,
+      "clicks": 24,
+      "impressions": 1078,
       "pages": 21,
-      "queries": 80,
+      "queries": 111,
       "rebuilt": [
         {
           "path": "/wooden-fences",
           "clicks": 0,
-          "impressions": 6,
-          "position": 13.166666666666666
+          "impressions": 17,
+          "position": 9.882352941176471
         },
         {
           "path": "/chain-link-fence",
           "clicks": 1,
-          "impressions": 9,
-          "position": 16.555555555555557
+          "impressions": 39,
+          "position": 20.41025641025641
         },
         {
           "path": "/contact",
-          "clicks": 0,
-          "impressions": 13,
-          "position": 16.153846153846153
+          "clicks": 1,
+          "impressions": 29,
+          "position": 22.310344827586206
         },
         {
           "path": "/split-rail-fences.html",
           "clicks": 0,
-          "impressions": 4,
-          "position": 108.75
+          "impressions": 8,
+          "position": 103
         },
         {
           "path": "/fencing-monroe.html",
           "clicks": 0,
-          "impressions": 11,
-          "position": 5.181818181818182
+          "impressions": 16,
+          "position": 7.4375
         },
         {
           "path": "/wooden-fences.html",
@@ -365,8 +365,8 @@
         {
           "path": "/chain-link-fence.html",
           "clicks": 1,
-          "impressions": 18,
-          "position": 19.11111111111111
+          "impressions": 19,
+          "position": 21.210526315789473
         },
         {
           "path": "/contact-us.html",
@@ -377,62 +377,62 @@
         {
           "path": "/farm-fencing",
           "clicks": 0,
-          "impressions": 7,
-          "position": 12.142857142857142
+          "impressions": 8,
+          "position": 11
         },
         {
           "path": "/commercial-fencing",
           "clicks": 0,
-          "impressions": 12,
-          "position": 42.583333333333336
+          "impressions": 33,
+          "position": 38.696969696969695
         },
         {
           "path": "/gate-installation",
           "clicks": 0,
-          "impressions": 5,
-          "position": 39.4
+          "impressions": 10,
+          "position": 55
         },
         {
           "path": "/fence-replacement",
           "clicks": 0,
-          "impressions": 12,
-          "position": 44
+          "impressions": 33,
+          "position": 32.93939393939394
         },
         {
           "path": "/storm-damage",
           "clicks": 0,
-          "impressions": 11,
-          "position": 26.09090909090909
+          "impressions": 20,
+          "position": 27.75
         },
         {
           "path": "/west-monroe",
           "clicks": 0,
-          "impressions": 20,
-          "position": 17.65
+          "impressions": 33,
+          "position": 19.21212121212121
         },
         {
           "path": "/fence-calculator",
           "clicks": 0,
-          "impressions": 8,
-          "position": 13.875
+          "impressions": 34,
+          "position": 11.117647058823529
         },
         {
           "path": "/fence-permit-monroe",
-          "clicks": 2,
-          "impressions": 11,
-          "position": 19.545454545454547
+          "clicks": 3,
+          "impressions": 26,
+          "position": 28.846153846153847
         },
         {
           "path": "/fence-permit-west-monroe",
           "clicks": 1,
-          "impressions": 15,
-          "position": 26.333333333333332
+          "impressions": 31,
+          "position": 30.580645161290324
         },
         {
           "path": "/fence-permit-ouachita-parish",
-          "clicks": 1,
-          "impressions": 18,
-          "position": 19.5
+          "clicks": 2,
+          "impressions": 40,
+          "position": 12.375
         }
       ]
     },
@@ -441,9 +441,9 @@
       "domain": "twincity-handyman.com",
       "connected": true,
       "clicks": 1,
-      "impressions": 9,
+      "impressions": 22,
       "pages": 1,
-      "queries": 3,
+      "queries": 4,
       "rebuilt": []
     }
   ]

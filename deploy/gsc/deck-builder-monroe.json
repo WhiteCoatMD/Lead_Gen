@@ -2,31 +2,40 @@
   "slug": "deck-builder-monroe",
   "domain": "deckbuildermonroe.com",
   "siteUrl": "sc-domain:deckbuildermonroe.com",
-  "startDate": "2025-06-12",
-  "endDate": "2026-10-02",
+  "startDate": "2025-06-19",
+  "endDate": "2026-10-09",
   "clicks": 0,
-  "impressions": 144,
+  "impressions": 224,
   "pages": [
     {
       "keys": [
         "http://deckbuildermonroe.com/"
       ],
       "clicks": 0,
-      "impressions": 115,
+      "impressions": 145,
       "ctr": 0,
-      "position": 2.6347826086956525
+      "position": 2.682758620689655
     },
     {
       "keys": [
         "https://deckbuildermonroe.com/"
       ],
       "clicks": 0,
-      "impressions": 29,
+      "impressions": 79,
       "ctr": 0,
-      "position": 31.655172413793103
+      "position": 35.20253164556962
     }
   ],
   "queries": [
+    {
+      "keys": [
+        "affordable deck contractor"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
     {
       "keys": [
         "businesses near me"
@@ -41,7 +50,16 @@
         "composite deck builders near me"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 13,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
+        "covered porch builders"
+      ],
+      "clicks": 0,
+      "impressions": 1,
       "ctr": 0,
       "position": 1
     },
@@ -50,34 +68,34 @@
         "custom deck builder monroe la"
       ],
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 20,
       "ctr": 0,
-      "position": 25.272727272727273
+      "position": 27.6
     },
     {
       "keys": [
         "custom decks monroe la"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 20,
       "ctr": 0,
-      "position": 19.857142857142858
+      "position": 16.5
     },
     {
       "keys": [
         "deck builder"
       ],
       "clicks": 0,
-      "impressions": 84,
+      "impressions": 86,
       "ctr": 0,
-      "position": 1
+      "position": 1.0116279069767442
     },
     {
       "keys": [
         "deck builders"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 5,
       "ctr": 0,
       "position": 1
     },
@@ -95,7 +113,16 @@
         "deck builders monroe la"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 1.8
+    },
+    {
+      "keys": [
+        "deck builders near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
       "ctr": 0,
       "position": 1
     },
@@ -104,18 +131,45 @@
         "deck builders northeast louisiana"
       ],
       "clicks": 0,
+      "impressions": 11,
+      "ctr": 0,
+      "position": 61.63636363636363
+    },
+    {
+      "keys": [
+        "deck builders west monroe la"
+      ],
+      "clicks": 0,
       "impressions": 2,
       "ctr": 0,
-      "position": 66
+      "position": 1
+    },
+    {
+      "keys": [
+        "deck installation"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "keys": [
         "deck installation monroe la"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 13,
       "ctr": 0,
-      "position": 60
+      "position": 57.84615384615385
+    },
+    {
+      "keys": [
+        "fence company near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
     },
     {
       "keys": [
@@ -125,6 +179,15 @@
       "impressions": 2,
       "ctr": 0,
       "position": 21
+    },
+    {
+      "keys": [
+        "ground level deck"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
     },
     {
       "keys": [
@@ -140,9 +203,18 @@
         "screened porch builders monroe la"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 16,
       "ctr": 0,
-      "position": 25.8
+      "position": 25.375
+    },
+    {
+      "keys": [
+        "wood deck builders near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
     }
   ],
   "rebuilt": [

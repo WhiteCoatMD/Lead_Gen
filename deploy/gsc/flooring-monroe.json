@@ -2,28 +2,28 @@
   "slug": "flooring-monroe",
   "domain": "flooring-monroe.com",
   "siteUrl": "sc-domain:flooring-monroe.com",
-  "startDate": "2025-06-12",
-  "endDate": "2026-10-02",
+  "startDate": "2025-06-19",
+  "endDate": "2026-10-09",
   "clicks": 0,
-  "impressions": 20,
+  "impressions": 51,
   "pages": [
     {
       "keys": [
         "https://flooring-monroe.com/"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 30,
       "ctr": 0,
-      "position": 20.88888888888889
+      "position": 19.433333333333334
     },
     {
       "keys": [
         "https://www.flooring-monroe.com/"
       ],
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 21,
       "ctr": 0,
-      "position": 7.454545454545454
+      "position": 14.238095238095237
     }
   ],
   "queries": [
@@ -38,6 +38,24 @@
     },
     {
       "keys": [
+        "dupuy flooring monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "keys": [
+        "floor installers near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
         "floor refinishing"
       ],
       "clicks": 0,
@@ -47,12 +65,21 @@
     },
     {
       "keys": [
+        "flooring company monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "keys": [
         "flooring installation"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 6,
       "ctr": 0,
-      "position": 1
+      "position": 4
     },
     {
       "keys": [
@@ -65,12 +92,48 @@
     },
     {
       "keys": [
+        "flooring monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 12.5
+    },
+    {
+      "keys": [
+        "holton flooring monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 78
+    },
+    {
+      "keys": [
+        "monroe flooring"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "keys": [
         "monroe la hardwood cleaning"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 42.666666666666664
+      "position": 44.4
+    },
+    {
+      "keys": [
+        "tile flooring installers near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8.5
     }
   ],
   "rebuilt": []
