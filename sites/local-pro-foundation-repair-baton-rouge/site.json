@@ -1,0 +1,371 @@
+{
+  "_placeholders": "PLACEHOLDER domain. Name, address and phone are copied from the verified Google Business Profile (store code 15041498610763838735) on 2026-10-16. Replace the domain here and in api/lead.js once it is registered.",
+  "name": "Local Pro Foundation Repair",
+  "domain": "local-pro-foundation-repair.invalid",
+  "phone": "225-535-4926",
+  "email": "",
+  "streetAddress": "2024 Rice Dr",
+  "postalCode": "70802",
+  "city": "Baton Rouge",
+  "state": "Louisiana",
+  "schemaType": "LocalBusiness",
+  "accent": "#8a4321",
+  "accentDark": "#5f2c14",
+  "hero": "hero-foundation-piers.jpg",
+  "assets": [
+    "hero-foundation-piers.jpg",
+    "brick-crack.jpg",
+    "crawlspace.jpg",
+    "drainage.jpg"
+  ],
+  "gallery": [
+    {
+      "image": "hero-foundation-piers.jpg",
+      "alt": "Excavation along a brick house slab with steel piers and a jack installed under the beam",
+      "caption": "Slab piering"
+    },
+    {
+      "image": "crawlspace.jpg",
+      "alt": "New block piers and steel shims under the beams of a raised house",
+      "caption": "Pier and beam"
+    },
+    {
+      "image": "brick-crack.jpg",
+      "alt": "Stair-step crack running through the mortar of a brick wall near a window",
+      "caption": "Brick cracks"
+    },
+    {
+      "image": "drainage.jpg",
+      "alt": "Downspout extension and regraded soil sloping away from a brick home",
+      "caption": "Drainage"
+    }
+  ],
+  "kicker": "Baton Rouge · Central · Denham Springs · Prairieville",
+  "headline": "Foundation repair in Baton Rouge.",
+  "intro": "Cracked brick, sticking doors, sloping floors and slabs that have moved. We look at what is happening, explain why, and tell you what it will take to fix it.",
+  "navCall": "Call for an inspection",
+  "primaryCta": "Call about your foundation",
+  "sectionKicker": "Why foundations move here",
+  "sectionHeadline": "Baton Rouge soil swells when it is wet and shrinks when it is dry.",
+  "about": "Most of the ground around Baton Rouge is clay. After weeks of rain it swells and lifts; after a dry summer it shrinks and drops away from the slab. Do that for twenty or thirty years and a house moves. Local Pro Foundation Repair starts with a look at the whole picture — the cracks, the floors, the drainage and the trees — so the fix matches the actual cause, and you are not paying for piers when a gutter would have done it.",
+  "servicesHeadline": "Foundation work we do around Baton Rouge.",
+  "services": [
+    {
+      "title": "Slab Foundation Repair",
+      "link": "slab-foundation-repair",
+      "description": "Steel or concrete piers driven under a settling slab to lift it back and hold it."
+    },
+    {
+      "title": "Pier & Beam Repair",
+      "link": "pier-and-beam-repair",
+      "description": "Raised houses: new piers, shims, sill and beam repairs and re-leveling."
+    },
+    {
+      "title": "House Leveling",
+      "link": "house-leveling",
+      "description": "Floors that slope, doors that stick and gaps over cabinets brought back toward level."
+    },
+    {
+      "title": "Foundation Inspections",
+      "link": "foundation-inspection",
+      "description": "A walk-through and floor-level readings, with a plain explanation of what we find."
+    },
+    {
+      "title": "Brick & Wall Cracks",
+      "link": "brick-and-wall-cracks",
+      "description": "Stair-step cracks in brick, drywall cracks over doors, and what they say about the foundation."
+    },
+    {
+      "title": "Drainage Correction",
+      "link": "foundation-drainage",
+      "description": "Gutters, downspouts and grading — the water problems that move a foundation to begin with."
+    }
+  ],
+  "serviceAreas": [
+    "Baton Rouge",
+    "Central",
+    "Zachary",
+    "Baker",
+    "Denham Springs",
+    "Walker",
+    "Prairieville",
+    "Gonzales",
+    "Port Allen",
+    "Plaquemine"
+  ],
+  "areaHeadline": "East Baton Rouge, Livingston, Ascension, West Baton Rouge and Iberville.",
+  "ctaHeadline": "Worried about a crack?",
+  "ctaCopy": "Call and tell us what you are seeing — where the cracks are, which doors stick, how long it has been happening. If it is easier, send it over and we will call you back.",
+  "footerLine": "Foundation repair and house leveling in Baton Rouge, Louisiana",
+  "seoTitle": "Foundation Repair Baton Rouge LA | Local Pro Foundation Repair",
+  "seoDescription": "Foundation repair in Baton Rouge, Central, Denham Springs and Prairieville. Slab piering, pier and beam repair, house leveling and inspections.",
+  "leadForm": {
+    "kicker": "Ask about your foundation",
+    "heading": "What are you seeing at the house?",
+    "intro": "Tell us the address and what is going on — cracks, doors, floors. Slab or raised house, if you know.",
+    "placeholder": "The address, slab or raised house, where the cracks are, which doors or windows stick, and how long you have noticed it.",
+    "submit": "Send it over",
+    "fineprint": "We only use this to get back to you about your foundation."
+  },
+  "faqKicker": "Homeowners ask",
+  "faqHeading": "Common foundation questions.",
+  "faqs": [
+    {
+      "q": "Is every crack a foundation problem?",
+      "a": "No. Concrete shrinks as it cures, so thin hairline cracks in a slab are normal. Cracks that are getting wider, cracks wider than a coin's edge, stair-step cracks in brick, and cracks with one side higher than the other are the ones worth having looked at."
+    },
+    {
+      "q": "What are the signs of foundation trouble?",
+      "a": "Doors that stick or will not latch, windows that bind, gaps between the wall and the ceiling or over the kitchen cabinets, floors that slope, and cracks in brick or drywall that run out from the corners of doors and windows."
+    },
+    {
+      "q": "Why do Baton Rouge foundations move?",
+      "a": "Mostly clay soil and water. Clay swells when wet and shrinks when dry, and Baton Rouge swings between both. Poor drainage, big trees close to the house, and plumbing leaks under the slab make it worse."
+    },
+    {
+      "q": "What does an inspection involve?",
+      "a": "A walk around the outside and inside of the house, floor-elevation readings, a look at drainage and nearby trees, and a crawlspace check on raised homes. Then an explanation of what we found and what we would recommend."
+    },
+    {
+      "q": "Do I need to move out during repairs?",
+      "a": "Usually not. Most slab piering is done from the outside, and pier and beam work happens in the crawlspace. You may hear and feel some of it while the house is lifted."
+    },
+    {
+      "q": "Will repair fix the cracks in my walls?",
+      "a": "Lifting the house often closes cracks partway, and doors frequently start working again. Cosmetic patching of drywall and brick is usually done after the house has been stabilized."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "slab-foundation-repair",
+      "hero": "hero-foundation-piers.jpg",
+      "navLabel": "Slab repair",
+      "kicker": "Slab foundations",
+      "heading": "Slab foundation repair in Baton Rouge.",
+      "intro": "When part of a slab settles, piers driven down to firmer soil lift that section back and hold it there.",
+      "seoTitle": "Slab Foundation Repair Baton Rouge LA | Local Pro Foundation",
+      "seoDescription": "Slab foundation repair with steel and concrete piers in Baton Rouge, Central, Prairieville and Denham Springs. Inspections and leveling.",
+      "service": "Slab foundation repair",
+      "sections": [
+        {
+          "kicker": "How it works",
+          "heading": "Dig, drive, lift, hold.",
+          "body": "Holes are dug along the beam where the slab has dropped. Piers are driven down until they reach soil that will hold, then jacks lift the slab back toward level and it is set on the piers. The holes are backfilled when the work is done."
+        },
+        {
+          "kicker": "Steel or concrete",
+          "heading": "Two common pier types.",
+          "body": "Pressed concrete pilings are stacked cylinders pushed into the ground under the weight of the house. Steel push piers go deeper, which matters where firm soil is far down. Which one fits depends on the house and the soil, and we will explain why we recommend one over the other."
+        },
+        {
+          "kicker": "Plumbing",
+          "heading": "Check the pipes under the slab.",
+          "body": "A leaking drain line under a slab can wash out soil and cause settling. Lifting can also stress old pipes. A plumbing test before or after repair is often a good idea, and we will tell you if we think it is needed."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Does the whole house need piers?",
+          "a": "Rarely. Most repairs are on the section that has settled, often one corner or one side."
+        }
+      ],
+      "ctaHeadline": "Think your slab has settled?"
+    },
+    {
+      "slug": "pier-and-beam-repair",
+      "hero": "crawlspace.jpg",
+      "navLabel": "Pier & beam",
+      "kicker": "Pier and beam",
+      "heading": "Pier and beam foundation repair in Baton Rouge.",
+      "intro": "Raised houses move differently from slabs. Piers sink or lean, shims rot or slip, and sills and beams soften where water gets in.",
+      "seoTitle": "Pier & Beam Foundation Repair Baton Rouge | Local Pro Foundation",
+      "seoDescription": "Pier and beam repair for raised homes in Baton Rouge: new piers, shims, sill and beam repair, and re-leveling of sagging floors.",
+      "service": "Pier and beam foundation repair",
+      "sections": [
+        {
+          "kicker": "What goes wrong",
+          "heading": "Bouncy floors and soft spots.",
+          "body": "A floor that dips in the middle of a room, bounces when you walk or slopes toward one wall usually means a pier has settled, a shim has failed, or a beam or joist has rotted. The crawlspace tells the story."
+        },
+        {
+          "kicker": "The fix",
+          "heading": "Support, replace and re-shim.",
+          "body": "Settled piers are reset or new ones added, failed shims are replaced with steel, and damaged sills, beams or joists are repaired or sistered. Then the house is brought back toward level."
+        },
+        {
+          "kicker": "Moisture",
+          "heading": "Keep the crawlspace dry.",
+          "body": "Standing water and humidity under a raised Baton Rouge house rot wood and invite termites. Vents, a vapor barrier and drainage away from the house protect the repair."
+        }
+      ],
+      "ctaHeadline": "Floors feel off?"
+    },
+    {
+      "slug": "house-leveling",
+      "hero": "crawlspace.jpg",
+      "navLabel": "House leveling",
+      "kicker": "House leveling",
+      "heading": "House leveling in Baton Rouge.",
+      "intro": "Sloping floors, sticking doors and gaps over the cabinets usually mean part of the house has dropped. Leveling brings it back.",
+      "seoTitle": "House Leveling Baton Rouge LA | Local Pro Foundation Repair",
+      "seoDescription": "House leveling for slab and raised homes in Baton Rouge, Central, Zachary and Denham Springs. Fix sloping floors and sticking doors.",
+      "service": "House leveling",
+      "sections": [
+        {
+          "kicker": "Measure first",
+          "heading": "Floor readings show where it dropped.",
+          "body": "We take elevation readings across the house to map the high and low spots. That shows which part moved and how much, and it is how we tell you what a repair is likely to accomplish."
+        },
+        {
+          "kicker": "Realistic goals",
+          "heading": "Toward level, without breaking things.",
+          "body": "An older house that has been out of level for decades may not come back to perfectly flat without cracking finishes. The goal is to stabilize it and lift it as far as it will safely go."
+        }
+      ],
+      "ctaHeadline": "Want your floors measured?"
+    },
+    {
+      "slug": "foundation-inspection",
+      "hero": "brick-crack.jpg",
+      "navLabel": "Inspections",
+      "kicker": "Inspections",
+      "heading": "Foundation inspections in Baton Rouge.",
+      "intro": "A look at the house, inside and out, with floor readings and a plain explanation of what is going on and whether it needs work.",
+      "seoTitle": "Foundation Inspection Baton Rouge LA | Local Pro Foundation",
+      "seoDescription": "Foundation inspections for homeowners, buyers and sellers in Baton Rouge and nearby parishes. Floor readings, drainage review and a plain report.",
+      "service": "Foundation inspection",
+      "sections": [
+        {
+          "kicker": "What we check",
+          "heading": "Cracks, floors, doors, drainage and trees.",
+          "body": "The outside brick and slab edge, gutters and grading, trees near the house, interior cracks, doors and windows, and floor elevations. On raised houses, the crawlspace too."
+        },
+        {
+          "kicker": "Buying or selling",
+          "heading": "Before the inspection period runs out.",
+          "body": "If a home inspector flagged the foundation on a house you are buying, call early in your inspection period so there is time to get a look and a repair plan before your deadline."
+        },
+        {
+          "kicker": "Not every house needs piers",
+          "heading": "Sometimes the answer is drainage.",
+          "body": "Minor movement from seasonal moisture can often be handled by fixing gutters, grading and watering. If that is all it needs, we will say so."
+        }
+      ],
+      "ctaHeadline": "Want a second set of eyes?"
+    },
+    {
+      "slug": "brick-and-wall-cracks",
+      "hero": "brick-crack.jpg",
+      "navLabel": "Brick & wall cracks",
+      "kicker": "Cracks",
+      "heading": "Brick and wall cracks: what they mean.",
+      "intro": "Some cracks are cosmetic. Some are the house telling you a part of it has moved. Here is how to tell the difference.",
+      "seoTitle": "Brick & Wall Cracks Foundation Baton Rouge | Local Pro Foundation",
+      "seoDescription": "What stair-step brick cracks, drywall cracks and slab cracks mean for your foundation. Foundation repair in Baton Rouge, Louisiana.",
+      "service": "Foundation crack evaluation",
+      "sections": [
+        {
+          "kicker": "Brick",
+          "heading": "Stair-step cracks follow the mortar.",
+          "body": "A crack that climbs diagonally through the mortar joints, especially from the corner of a window or door, usually means one part of the wall has settled relative to the rest. A crack that goes straight through the bricks themselves is worth a look sooner."
+        },
+        {
+          "kicker": "Inside",
+          "heading": "Drywall cracks at the corners.",
+          "body": "Cracks running up from the corners of doors and windows, gaps where the wall meets the ceiling, and nail pops in a line are common signs of movement. One hairline crack in a hallway may be nothing."
+        },
+        {
+          "kicker": "Watch it",
+          "heading": "Mark the ends with a pencil.",
+          "body": "Put a pencil mark and the date at each end of a crack. If it grows past the marks over a few months, the house is still moving and it is time to call."
+        }
+      ],
+      "ctaHeadline": "Seeing cracks?"
+    },
+    {
+      "slug": "foundation-drainage",
+      "hero": "drainage.jpg",
+      "navLabel": "Drainage",
+      "kicker": "Drainage",
+      "heading": "Drainage and foundation problems in Baton Rouge.",
+      "intro": "Water against the slab is behind a lot of foundation movement. Getting it away from the house is the cheapest repair there is.",
+      "seoTitle": "Foundation Drainage Baton Rouge LA | Local Pro Foundation Repair",
+      "seoDescription": "Gutters, downspouts and grading to keep water away from your foundation in Baton Rouge. Prevent settling before it needs piers.",
+      "service": "Foundation drainage correction",
+      "sections": [
+        {
+          "kicker": "Gutters",
+          "heading": "Downspouts that dump at the slab.",
+          "body": "A downspout that empties right at the foundation soaks the clay in one spot every storm. Extending it several feet out, or into a buried line, keeps that corner from swelling and shrinking more than the rest."
+        },
+        {
+          "kicker": "Grading",
+          "heading": "The ground should slope away.",
+          "body": "Over the years, flower beds get built up and soil settles until water runs toward the house. Regrading so the ground falls away from the slab keeps water from pooling against it."
+        },
+        {
+          "kicker": "Dry spells",
+          "heading": "Drought moves houses too.",
+          "body": "In a long dry summer, clay shrinks away from the slab. Steady watering around the foundation during droughts helps keep the soil from pulling back."
+        }
+      ],
+      "ctaHeadline": "Water pooling by the house?"
+    },
+    {
+      "slug": "central-and-zachary",
+      "hero": "hero-foundation-piers.jpg",
+      "navLabel": "Central & Zachary",
+      "kicker": "Central and Zachary",
+      "heading": "Foundation repair in Central and Zachary.",
+      "intro": "North of Baton Rouge — slab homes on clay, many of them built in the last few decades, and older raised houses on family land.",
+      "seoTitle": "Foundation Repair Central & Zachary LA | Local Pro Foundation",
+      "seoDescription": "Foundation repair, house leveling and inspections in Central and Zachary, Louisiana. Slab piering and pier and beam repair.",
+      "service": "Foundation repair in Central and Zachary",
+      "sections": [
+        {
+          "kicker": "North of town",
+          "heading": "Newer slabs, same clay.",
+          "body": "Newer homes in Central and Zachary sit on the same swelling clay as the rest of the area. Settling often shows up first at a corner nearest a downspout or a big tree."
+        }
+      ],
+      "ctaHeadline": "In Central or Zachary?"
+    },
+    {
+      "slug": "denham-springs-and-prairieville",
+      "hero": "drainage.jpg",
+      "navLabel": "Denham Springs & Prairieville",
+      "kicker": "Denham Springs and Prairieville",
+      "heading": "Foundation repair in Denham Springs and Prairieville.",
+      "intro": "Livingston and Ascension Parishes — homes that have seen high water, heavy rain and long dry summers.",
+      "seoTitle": "Foundation Repair Denham Springs & Prairieville | Local Pro",
+      "seoDescription": "Foundation repair and house leveling in Denham Springs, Walker, Prairieville and Gonzales, LA. Slab and pier and beam repair.",
+      "service": "Foundation repair in Livingston and Ascension Parishes",
+      "sections": [
+        {
+          "kicker": "After floods",
+          "heading": "Water changes the soil under a house.",
+          "body": "Homes that took on water, or sat in saturated ground for weeks, can settle unevenly afterward. If cracks or sticking doors showed up after a flood, it is worth having the foundation looked at."
+        }
+      ],
+      "ctaHeadline": "Out in Livingston or Ascension?"
+    },
+    {
+      "slug": "request-inspection",
+      "navLabel": "Request an inspection",
+      "kicker": "Inspection",
+      "heading": "Request a foundation inspection.",
+      "intro": "Tell us about the house and what you are seeing, and we will get back to you to set up a time.",
+      "seoTitle": "Request a Foundation Inspection | Local Pro Foundation Repair",
+      "seoDescription": "Request a foundation inspection in Baton Rouge, Central, Zachary, Denham Springs or Prairieville. Slab and raised homes.",
+      "service": "Foundation inspection requests",
+      "sections": [
+        {
+          "kicker": "Helpful to know",
+          "heading": "Slab or raised, and what changed.",
+          "body": "Whether the house is on a slab or raised, roughly when it was built, where the cracks or problem doors are, and when you first noticed them. Photos help too — send them once we call you back."
+        }
+      ],
+      "ctaHeadline": "Let's take a look."
+    }
+  ]
+}

@@ -1,0 +1,381 @@
+{
+  "_placeholders": "PLACEHOLDER domain. Name, address and phone are copied from the verified Google Business Profile (store code 03346481665722530905) on 2026-10-16. Replace the domain here and in api/lead.js once it is registered.",
+  "name": "Baton Rouge Dumpster",
+  "domain": "baton-rouge-dumpster.invalid",
+  "phone": "225-535-4926",
+  "email": "",
+  "streetAddress": "5563 Frey St",
+  "postalCode": "70805",
+  "city": "Baton Rouge",
+  "state": "Louisiana",
+  "schemaType": "LocalBusiness",
+  "accent": "#2f6b3a",
+  "accentDark": "#1e4a27",
+  "hero": "hero-baton-rouge-dumpster.jpg",
+  "assets": [
+    "hero-baton-rouge-dumpster.jpg",
+    "commercial.jpg",
+    "flood-cleanout.jpg",
+    "roofing.jpg"
+  ],
+  "gallery": [
+    {
+      "image": "commercial.jpg",
+      "alt": "Two large roll-off dumpsters on a commercial construction site after rain",
+      "caption": "Commercial jobs"
+    },
+    {
+      "image": "roofing.jpg",
+      "alt": "Roll-off dumpster full of torn-off shingles beside a house getting a new roof",
+      "caption": "Roof tear-offs"
+    },
+    {
+      "image": "flood-cleanout.jpg",
+      "alt": "Dumpster loaded with wet carpet and drywall in front of a flooded brick home",
+      "caption": "Flood muck-outs"
+    },
+    {
+      "image": "hero-baton-rouge-dumpster.jpg",
+      "alt": "Roll-off dumpster in the driveway of a raised home under live oaks",
+      "caption": "Home remodels"
+    }
+  ],
+  "kicker": "Baton Rouge · Central · Denham Springs · Prairieville",
+  "headline": "Dumpster rental in Baton Rouge.",
+  "intro": "Roll-off dumpsters for remodels, roofs, flood muck-outs and job sites across East Baton Rouge, Livingston and Ascension. Call, tell us the job, and we will bring the right box.",
+  "navCall": "Call for a dumpster",
+  "primaryCta": "Call about a dumpster",
+  "sectionKicker": "How we work",
+  "sectionHeadline": "Tell us the job. We will tell you the box.",
+  "about": "Baton Rouge throws a lot at a house — heat, hurricanes, high water and the occasional hail storm — and every one of them ends with a pile of debris. Baton Rouge Dumpster sets down roll-off containers in driveways, on job sites and in front of flooded homes, and picks them up when you are finished. Call with what the project is and where, and we will talk through the size before anything gets dropped.",
+  "servicesHeadline": "What Baton Rouge rents a dumpster for.",
+  "services": [
+    {
+      "title": "Home Remodel Dumpsters",
+      "link": "home-remodel-dumpster-rental",
+      "description": "Kitchens, bathrooms, flooring and full gut jobs. Set on boards in the driveway."
+    },
+    {
+      "title": "Commercial & Construction",
+      "link": "commercial-dumpster-rental",
+      "description": "30 and 40 yard roll-offs for builders, GCs and commercial sites, with swap-outs as you fill them."
+    },
+    {
+      "title": "Flood & Hurricane Cleanup",
+      "link": "flood-cleanup-dumpster-rental",
+      "description": "Wet carpet, drywall, cabinets and furniture after high water or a hurricane."
+    },
+    {
+      "title": "Roofing Dumpsters",
+      "link": "roofing-dumpster-rental",
+      "description": "Smaller, heavy-rated boxes for shingle tear-offs, placed close to the eave."
+    },
+    {
+      "title": "Junk & Estate Cleanouts",
+      "link": "junk-removal-dumpster-rental",
+      "description": "Moving, estate cleanouts and rental turnovers. Load it at your own pace."
+    },
+    {
+      "title": "Concrete & Dirt",
+      "link": "concrete-dumpster-rental",
+      "description": "Small boxes for heavy loads: broken concrete, brick, dirt and old driveway."
+    }
+  ],
+  "serviceAreas": [
+    "Baton Rouge",
+    "Central",
+    "Zachary",
+    "Baker",
+    "Denham Springs",
+    "Walker",
+    "Prairieville",
+    "Gonzales",
+    "Port Allen",
+    "St. Gabriel"
+  ],
+  "areaHeadline": "East Baton Rouge, Livingston, Ascension and West Baton Rouge.",
+  "ctaHeadline": "Ready for a dumpster?",
+  "ctaCopy": "Call with the address, what you are throwing out, and when you need it. If it is easier, send it over and we will call you back.",
+  "footerLine": "Roll-off dumpster rental in Baton Rouge, Louisiana",
+  "seoTitle": "Dumpster Rental Baton Rouge LA | Baton Rouge Dumpster",
+  "seoDescription": "Roll-off dumpster rental in Baton Rouge, Central, Denham Springs and Prairieville. Dumpsters for remodels, roofing, flood cleanup and construction.",
+  "leadForm": {
+    "kicker": "Ask about a dumpster",
+    "heading": "Where is it going, and what is going in it?",
+    "intro": "Give us the address, the kind of job and the dates. If the yard is soft or the street is narrow, mention it.",
+    "placeholder": "The address, the kind of job (remodel, roof, flood, construction, cleanout), roughly how much debris, and when you need it.",
+    "submit": "Send it over",
+    "fineprint": "We only use this to get back to you about the dumpster."
+  },
+  "faqKicker": "Common questions",
+  "faqHeading": "What Baton Rouge asks before renting.",
+  "faqs": [
+    {
+      "q": "What size do I need?",
+      "a": "A bathroom or a single room of flooring usually fits in a 10 or 15 yard. A kitchen, a whole-house flooring job or a big cleanout is a 20. A flooded house or new construction usually needs a 30 or 40. Tell us the job and we will help you pick."
+    },
+    {
+      "q": "Can it go on the street?",
+      "a": "On your own driveway or lot, there is usually nothing to file. If it has to sit on a street or right-of-way in Baton Rouge or one of the surrounding cities, check with that city first."
+    },
+    {
+      "q": "My yard is soft. Is that a problem?",
+      "a": "It can be. A loaded roll-off is heavy, and Baton Rouge ground stays wet a long time after rain. Pick a spot on concrete or a firm drive if you can, and tell us about it when you call."
+    },
+    {
+      "q": "What can't go in?",
+      "a": "Paint, chemicals, oil, tires, batteries and refrigerators or freezers with refrigerant are generally not allowed. Heavy materials like concrete and dirt can go in a box sized for them. Ask if you are unsure."
+    },
+    {
+      "q": "How long can I keep it?",
+      "a": "Rentals are set by days, and you can extend. Call when it is full or when you are done and it gets picked up."
+    },
+    {
+      "q": "Do you pick up and swap on job sites?",
+      "a": "Yes. On construction and big cleanouts, a full box can be hauled and an empty one set down in its place."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "home-remodel-dumpster-rental",
+      "hero": "hero-baton-rouge-dumpster.jpg",
+      "navLabel": "Home remodels",
+      "kicker": "Home remodels",
+      "heading": "Remodel dumpster rental in Baton Rouge.",
+      "intro": "A roll-off in the driveway turns a remodel's debris into one trip — cabinets, tile, drywall and old flooring go straight out the door.",
+      "seoTitle": "Remodel Dumpster Rental Baton Rouge LA | Baton Rouge Dumpster",
+      "seoDescription": "Driveway dumpsters for kitchen, bath and flooring remodels in Baton Rouge, Central, Prairieville and Denham Springs.",
+      "service": "Home remodel dumpster rental",
+      "sections": [
+        {
+          "kicker": "Placement",
+          "heading": "Look up before you pick the spot.",
+          "body": "Live oaks and power lines are the two things that stop a roll-off truck in Baton Rouge. The truck needs to back straight in and tip the box down, so pick a spot with clear room overhead."
+        },
+        {
+          "kicker": "Tile and plaster",
+          "heading": "Old houses are heavy houses.",
+          "body": "Older homes in Mid City, the Garden District and Southdowns often have tile set in mortar, plaster walls or layers of old flooring. All of it is heavy. Mention it when you call so the box is sized by weight, not just by space."
+        },
+        {
+          "kicker": "HOAs",
+          "heading": "Check the rules in the newer subdivisions.",
+          "body": "Many subdivisions in south Baton Rouge, Prairieville and Central limit how long a dumpster can sit out. A quick look at the HOA rules before delivery avoids a letter."
+        }
+      ],
+      "ctaHeadline": "Starting a remodel?"
+    },
+    {
+      "slug": "commercial-dumpster-rental",
+      "hero": "commercial.jpg",
+      "navLabel": "Commercial",
+      "kicker": "Commercial and construction",
+      "heading": "Commercial and construction dumpster rental in Baton Rouge.",
+      "intro": "Roll-offs for general contractors, home builders and commercial sites, with swap-outs so the box is never the thing holding the job up.",
+      "seoTitle": "Construction Dumpster Rental Baton Rouge LA | Baton Rouge Dumpster",
+      "seoDescription": "30 and 40 yard construction dumpsters for builders and contractors in Baton Rouge, Zachary, Gonzales and Port Allen, with swap-outs.",
+      "service": "Commercial and construction dumpster rental",
+      "sections": [
+        {
+          "kicker": "Sizing",
+          "heading": "Forties for framing, smaller for demo.",
+          "body": "A 30 or 40 yard handles framing scrap, packaging and drywall on new builds. On demolition or interior tear-outs with a lot of masonry, two smaller boxes are often better than one big one that hits its weight limit half full."
+        },
+        {
+          "kicker": "Wet sites",
+          "heading": "Plan for rain, because it is coming.",
+          "body": "Set the dumpster on the firmest part of the site, and somewhere the truck can still reach after a week of afternoon storms. A rutted access road slows down every swap."
+        },
+        {
+          "kicker": "Multiple boxes",
+          "heading": "Separate when it pays.",
+          "body": "On big jobs, a separate box for concrete or clean metal can make sense. Ask when you set up the job."
+        }
+      ],
+      "ctaHeadline": "Got a job starting?"
+    },
+    {
+      "slug": "flood-cleanup-dumpster-rental",
+      "hero": "flood-cleanout.jpg",
+      "navLabel": "Flood cleanup",
+      "kicker": "Flood and hurricane cleanup",
+      "heading": "Flood and hurricane cleanup dumpsters in Baton Rouge.",
+      "intro": "After high water, everything below the water line has to come out — carpet, drywall, insulation, cabinets and furniture. A dumpster gets it out of the house and off the curb.",
+      "seoTitle": "Flood Cleanup Dumpster Rental Baton Rouge | Baton Rouge Dumpster",
+      "seoDescription": "Dumpster rental for flood muck-outs and hurricane cleanup in Baton Rouge, Denham Springs, Central and the surrounding parishes.",
+      "service": "Flood and hurricane cleanup dumpster rental",
+      "sections": [
+        {
+          "kicker": "First",
+          "heading": "Photograph everything before it goes in.",
+          "body": "Your insurance adjuster or FEMA may want to see damaged items and a sample of the flooring and drywall. Take pictures and measurements of the water line before you start loading."
+        },
+        {
+          "kicker": "Sizing",
+          "heading": "A flooded house fills a big box.",
+          "body": "Wet drywall, carpet and pad are heavy, and a muck-out on a whole house usually takes a 30 or 40 yard, sometimes more than one. Tell us the square footage and how high the water got."
+        },
+        {
+          "kicker": "Curb or dumpster",
+          "heading": "When the curb pickup is weeks away.",
+          "body": "After a big flood, parish debris pickup can take a long time to reach every street. A dumpster lets you start drying the house out now, not when the trucks get to you."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can appliances go in?",
+          "a": "Refrigerators and freezers need to have their refrigerant handled separately, so they usually cannot go in. Ask about washers, dryers and water heaters when you call."
+        }
+      ],
+      "ctaHeadline": "Mucking out a house?"
+    },
+    {
+      "slug": "roofing-dumpster-rental",
+      "hero": "roofing.jpg",
+      "navLabel": "Roofing",
+      "kicker": "Roofing",
+      "heading": "Roofing dumpster rental in Baton Rouge.",
+      "intro": "Tear-offs go fastest when the crew can throw shingles straight into the box. A heavy-rated dumpster, close to the eave, sized for the squares coming off.",
+      "seoTitle": "Roofing Dumpster Rental Baton Rouge LA | Baton Rouge Dumpster",
+      "seoDescription": "Dumpsters for shingle tear-offs and re-roofs in Baton Rouge, Central, Zachary and Prairieville. Sized for heavy roofing debris.",
+      "service": "Roofing dumpster rental",
+      "sections": [
+        {
+          "kicker": "Weight",
+          "heading": "Tell us squares and layers.",
+          "body": "Shingles are heavy, and a second layer nearly doubles it. With the number of squares and layers we can size a box that holds the job without going over weight."
+        },
+        {
+          "kicker": "Placement",
+          "heading": "Close to the roofline.",
+          "body": "Set it as close to the drip edge as the truck can reach and still pick it up. Tarps over the beds and the grass along the throw line make the magnet sweep easier at the end."
+        },
+        {
+          "kicker": "Hurricane season",
+          "heading": "Everyone needs one at once.",
+          "body": "After a hurricane or a hail storm, roofers across Baton Rouge start tear-offs the same week. Book as soon as you have your jobs lined up."
+        }
+      ],
+      "ctaHeadline": "Tearing off a roof?"
+    },
+    {
+      "slug": "junk-removal-dumpster-rental",
+      "hero": "hero-baton-rouge-dumpster.jpg",
+      "navLabel": "Junk & cleanouts",
+      "kicker": "Junk and estate cleanouts",
+      "heading": "Junk and cleanout dumpster rental in Baton Rouge.",
+      "intro": "Estate cleanouts, moving, rental turnovers and garages that have not been touched in years. Load it on your schedule and it leaves in one haul.",
+      "seoTitle": "Junk Removal Dumpster Rental Baton Rouge | Baton Rouge Dumpster",
+      "seoDescription": "Dumpster rental for junk removal, estate cleanouts, moving and rental turnovers in Baton Rouge, Baker, Central and Denham Springs.",
+      "service": "Junk and cleanout dumpster rental",
+      "sections": [
+        {
+          "kicker": "Estates",
+          "heading": "Go at your own pace.",
+          "body": "Keep the dumpster for as long as it takes. Set aside anything to keep, sell or donate first, then load the rest."
+        },
+        {
+          "kicker": "Landlords",
+          "heading": "Turn the unit and move on.",
+          "body": "Furniture left behind, old carpet and a full storage shed can all go in one box. A 20 yard usually handles a unit or two."
+        },
+        {
+          "kicker": "Not allowed",
+          "heading": "Hazardous waste goes elsewhere.",
+          "body": "Paint, chemicals, tires, batteries and refrigerant appliances need a different route. East Baton Rouge Parish holds household hazardous waste collection days; check the parish site for the next one."
+        }
+      ],
+      "ctaHeadline": "Clearing out a place?"
+    },
+    {
+      "slug": "concrete-dumpster-rental",
+      "hero": "commercial.jpg",
+      "navLabel": "Concrete & dirt",
+      "kicker": "Concrete and dirt",
+      "heading": "Concrete and dirt dumpster rental in Baton Rouge.",
+      "intro": "Broken concrete, brick, block and dirt fill a dumpster by weight long before they fill it by volume. A small box rated for it is the right tool.",
+      "seoTitle": "Concrete & Dirt Dumpster Rental Baton Rouge | Baton Rouge Dumpster",
+      "seoDescription": "Small heavy-debris dumpsters for concrete, brick, dirt and driveway tear-outs in Baton Rouge and the surrounding parishes.",
+      "service": "Concrete and dirt dumpster rental",
+      "sections": [
+        {
+          "kicker": "Why small",
+          "heading": "Weight, not space, is the limit.",
+          "body": "A cubic yard of concrete weighs well over a ton. A big dumpster filled with it cannot be lifted or hauled legally, so heavy loads go in a 10 yard, filled no higher than the line we point out."
+        },
+        {
+          "kicker": "Clean loads",
+          "heading": "Keep it clean.",
+          "body": "A load of only concrete or only dirt is easier to handle than one mixed with trash. If you are tearing out a driveway, keep the trash in a separate pile."
+        }
+      ],
+      "ctaHeadline": "Breaking up concrete?"
+    },
+    {
+      "slug": "denham-springs-and-central",
+      "hero": "flood-cleanout.jpg",
+      "navLabel": "Denham Springs & Central",
+      "kicker": "Denham Springs and Central",
+      "heading": "Dumpster rental in Denham Springs, Walker and Central.",
+      "intro": "East of the Amite and north along the Comite, from remodels and new builds to flood muck-outs.",
+      "seoTitle": "Dumpster Rental Denham Springs & Central LA | Baton Rouge Dumpster",
+      "seoDescription": "Roll-off dumpster rental in Denham Springs, Walker and Central, LA for remodels, construction, roofing and flood cleanup.",
+      "service": "Dumpster rental in Denham Springs and Central",
+      "sections": [
+        {
+          "kicker": "Growth",
+          "heading": "Lots of building out this way.",
+          "body": "Central, Walker and Denham Springs keep adding subdivisions, and that means construction dumpsters, landscaping debris and new-homeowner remodels."
+        },
+        {
+          "kicker": "Water",
+          "heading": "Near the rivers, plan for it.",
+          "body": "Homes near the Amite and the Comite have seen high water. If you are cleaning out after a flood, say so when you call so the box is sized for wet debris."
+        }
+      ],
+      "ctaHeadline": "Need a dumpster out this way?"
+    },
+    {
+      "slug": "prairieville-and-gonzales",
+      "hero": "roofing.jpg",
+      "navLabel": "Prairieville & Gonzales",
+      "kicker": "Prairieville and Gonzales",
+      "heading": "Dumpster rental in Prairieville and Gonzales.",
+      "intro": "Ascension Parish — new subdivisions, remodels and roof replacements south of Baton Rouge.",
+      "seoTitle": "Dumpster Rental Prairieville & Gonzales LA | Baton Rouge Dumpster",
+      "seoDescription": "Roll-off dumpster rental in Prairieville and Gonzales, LA for remodels, new construction, roofing and cleanouts.",
+      "service": "Dumpster rental in Ascension Parish",
+      "sections": [
+        {
+          "kicker": "Ascension",
+          "heading": "New homes, new owners, new projects.",
+          "body": "Prairieville and Gonzales are full of newer homes, which means fences, patios, landscaping and the first round of remodels. A 15 or 20 yard covers most of it."
+        },
+        {
+          "kicker": "HOAs",
+          "heading": "Know the rules before it lands.",
+          "body": "Most subdivisions out here have HOA rules on dumpsters. Check how long one can sit and where before it is delivered."
+        }
+      ],
+      "ctaHeadline": "Need a dumpster in Ascension?"
+    },
+    {
+      "slug": "request-pricing",
+      "navLabel": "Request pricing",
+      "kicker": "Pricing",
+      "heading": "Request dumpster pricing.",
+      "intro": "Tell us the job, the size you have in mind and how long you need it, and we will get back to you with a price.",
+      "seoTitle": "Dumpster Rental Pricing Baton Rouge LA | Baton Rouge Dumpster",
+      "seoDescription": "Request pricing on a 10, 15, 20, 30 or 40 yard roll-off dumpster in Baton Rouge, Central, Denham Springs or Prairieville.",
+      "service": "Dumpster rental pricing",
+      "sections": [
+        {
+          "kicker": "What sets the price",
+          "heading": "Size, days, weight and distance.",
+          "body": "The size of the box, how long you keep it, how heavy the load is and how far it travels. Concrete, dirt, shingles and wet flood debris are the usual reasons a price changes, so mention them when you ask."
+        }
+      ],
+      "ctaHeadline": "Let's get you a number."
+    }
+  ]
+}

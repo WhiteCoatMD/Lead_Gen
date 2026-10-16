@@ -1,0 +1,392 @@
+{
+  "_placeholders": "PLACEHOLDER domain. Name, address and phone are copied from the verified Google Business Profile (store code 16088768783950405847) on 2026-10-16. Replace the domain here and in api/lead.js once it is registered.",
+  "name": "Atlas Dumpster Rental",
+  "domain": "atlas-dumpster-rental-shreveport.invalid",
+  "phone": "225-535-4926",
+  "email": "",
+  "streetAddress": "3053 Prentiss Ave",
+  "postalCode": "71109",
+  "city": "Shreveport",
+  "state": "Louisiana",
+  "schemaType": "LocalBusiness",
+  "accent": "#24508c",
+  "accentDark": "#163663",
+  "hero": "hero-shreveport-dumpster.jpg",
+  "assets": [
+    "hero-shreveport-dumpster.jpg",
+    "construction.jpg",
+    "cleanout.jpg",
+    "delivery.jpg"
+  ],
+  "gallery": [
+    {
+      "image": "construction.jpg",
+      "alt": "Large roll-off dumpster with scrap lumber beside a framed house on red clay",
+      "caption": "New construction"
+    },
+    {
+      "image": "cleanout.jpg",
+      "alt": "Small roll-off dumpster with old furniture in front of a cottage-style house",
+      "caption": "Home cleanouts"
+    },
+    {
+      "image": "delivery.jpg",
+      "alt": "Roll-off truck setting an empty dumpster down at a residential curb",
+      "caption": "Delivery and pickup"
+    },
+    {
+      "image": "hero-shreveport-dumpster.jpg",
+      "alt": "Roll-off dumpster on boards in the driveway of a brick ranch house",
+      "caption": "Remodels"
+    }
+  ],
+  "kicker": "Shreveport · Bossier City · the ArkLaTex",
+  "headline": "Roll-off dumpster rental in Shreveport.",
+  "intro": "Remodels, roof tear-offs, cleanouts and job sites. Tell us what you are throwing out and we will help you pick the right size, drop it where you want it and haul it off when you are done.",
+  "navCall": "Call for a dumpster",
+  "primaryCta": "Call about a dumpster",
+  "sectionKicker": "How we look at it",
+  "sectionHeadline": "The right size is the one you only have to rent once.",
+  "about": "Most people guess at a dumpster size, and the guess is usually too small. Then it is a second haul, or a pile in the yard. When you call Atlas Dumpster Rental, expect a couple of questions back — what the project is, roughly how much is coming out, and whether there is anything heavy like concrete or shingles — so the box that shows up is one you can actually finish the job in.",
+  "servicesHeadline": "What folks around Shreveport rent a dumpster for.",
+  "services": [
+    {
+      "title": "Residential Dumpsters",
+      "link": "residential-dumpster-rental",
+      "description": "Kitchen and bath remodels, flooring, garage cleanouts and yard projects. Set in the driveway on boards."
+    },
+    {
+      "title": "Construction Dumpsters",
+      "link": "construction-dumpster-rental",
+      "description": "For builders, remodelers and crews from Shreveport to Benton. Swapped out when it fills up."
+    },
+    {
+      "title": "Roofing Dumpsters",
+      "link": "roofing-dumpster-rental",
+      "description": "Shingle tear-offs are heavy. A smaller box, placed close to the eave, keeps the job moving."
+    },
+    {
+      "title": "Junk & Cleanouts",
+      "link": "cleanout-dumpster-rental",
+      "description": "Estate cleanouts, rental turnovers, moving and decluttering — one load instead of a dozen trips."
+    },
+    {
+      "title": "Dumpster Sizes",
+      "link": "dumpster-sizes",
+      "description": "10, 15, 20, 30 and 40 yard roll-offs, and a plain guide to which one fits your job."
+    },
+    {
+      "title": "Storm Cleanup",
+      "link": "storm-debris-dumpster-rental",
+      "description": "Fallen limbs, wet carpet and torn-out drywall after a storm comes through Northwest Louisiana."
+    }
+  ],
+  "serviceAreas": [
+    "Shreveport",
+    "Bossier City",
+    "Benton",
+    "Haughton",
+    "Blanchard",
+    "Keithville",
+    "Greenwood",
+    "Stonewall",
+    "Vivian",
+    "Mansfield"
+  ],
+  "areaHeadline": "Caddo, Bossier and DeSoto Parishes.",
+  "ctaHeadline": "Ready for a dumpster?",
+  "ctaCopy": "Call with the address, what you are getting rid of, and when you want it dropped. If it is easier, send it over and we will call you back.",
+  "footerLine": "Roll-off dumpster rental in Shreveport, Louisiana",
+  "seoTitle": "Dumpster Rental Shreveport LA | Atlas Dumpster Rental",
+  "seoDescription": "Roll-off dumpster rental in Shreveport, Bossier City and the ArkLaTex. 10 to 40 yard dumpsters for remodels, roofing, cleanouts and construction.",
+  "leadForm": {
+    "kicker": "Ask about a dumpster",
+    "heading": "What is going in it, and where is it going?",
+    "intro": "Give us the address, the kind of project and when you need it. If the driveway is tight or there is a gate, mention it.",
+    "placeholder": "The address, what kind of project (remodel, roof, cleanout, construction), roughly how much debris, and the dates you need it.",
+    "submit": "Send it over",
+    "fineprint": "We only use this to get back to you about the dumpster."
+  },
+  "faqKicker": "Folks usually ask",
+  "faqHeading": "Questions we hear a lot.",
+  "faqs": [
+    {
+      "q": "What size dumpster do I need?",
+      "a": "A one-room remodel or a garage cleanout usually fits in a 10 or 15 yard. A full kitchen, flooring for a whole house or a big cleanout is a 20. New construction and whole-house tear-outs run 30 or 40. Tell us the project and we will help you pick."
+    },
+    {
+      "q": "Will a dumpster damage my driveway?",
+      "a": "A loaded roll-off is heavy. We set it down on boards to spread the weight, and it helps to keep it off fresh concrete and away from the edge of the slab. If you are worried about a spot, point it out when we drop it."
+    },
+    {
+      "q": "What can't go in a dumpster?",
+      "a": "Paint, solvents, oil, tires, batteries, appliances with refrigerant, and anything hazardous are generally not allowed. Concrete, dirt and brick can go in, but they are heavy and usually need their own box. Ask when you call if you are not sure."
+    },
+    {
+      "q": "Do I need a permit in Shreveport?",
+      "a": "On your own driveway or lot, generally no. If the dumpster has to sit on a city street or sidewalk, check with the City of Shreveport or Bossier City before it is dropped."
+    },
+    {
+      "q": "How long can I keep it?",
+      "a": "Rentals are set by the number of days, and you can extend if the job runs long. Call when you are done, or when it is full, and it gets picked up."
+    },
+    {
+      "q": "Can you swap it when it fills up?",
+      "a": "Yes. On construction and big cleanout jobs, a full dumpster can be hauled off and an empty one set down in its place."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "residential-dumpster-rental",
+      "hero": "hero-shreveport-dumpster.jpg",
+      "navLabel": "Residential",
+      "kicker": "Residential",
+      "heading": "Residential dumpster rental in Shreveport.",
+      "intro": "Remodels, flooring, garage cleanouts and yard projects — a roll-off in the driveway so the debris goes straight out the door and into the box.",
+      "seoTitle": "Residential Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "Driveway dumpster rental for remodels, flooring, cleanouts and yard work in Shreveport, Bossier City, Benton and Haughton.",
+      "service": "Residential dumpster rental",
+      "sections": [
+        {
+          "kicker": "Where it goes",
+          "heading": "Pick a flat spot the truck can back straight into.",
+          "body": "A roll-off truck needs room to back up in a straight line and some clearance overhead. Look up for low limbs and power lines before you pick the spot. Most driveways work fine; the end of the driveway closest to the street is usually easiest."
+        },
+        {
+          "kicker": "Loading",
+          "heading": "Heavy on the bottom, flat on top.",
+          "body": "Put heavy, flat things in first and break down furniture and cabinets so they lie flat. Nothing should stick up over the top edge — an overloaded dumpster cannot be hauled on the road safely."
+        },
+        {
+          "kicker": "Neighbors",
+          "heading": "Check your HOA.",
+          "body": "Some neighborhoods in Shreveport and Bossier have rules about how long a dumpster can sit in a driveway. If you have an HOA, a quick check before delivery saves a letter later."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do I have to be home for delivery?",
+          "a": "Not usually. Mark the spot, make sure the driveway is clear and the truck can get in, and it can be set down without you there."
+        }
+      ],
+      "ctaHeadline": "Starting a project at the house?"
+    },
+    {
+      "slug": "construction-dumpster-rental",
+      "hero": "construction.jpg",
+      "navLabel": "Construction",
+      "kicker": "Construction",
+      "heading": "Construction dumpster rental in Shreveport and Bossier.",
+      "intro": "Home builders, remodelers and commercial crews — a roll-off on site, swapped when it fills, so the job stays clean and nobody is hauling scrap in the back of a truck.",
+      "seoTitle": "Construction Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "Roll-off dumpsters for builders and contractors in Shreveport, Bossier City, Benton and Haughton. 20, 30 and 40 yard containers with swap-outs.",
+      "service": "Construction dumpster rental",
+      "sections": [
+        {
+          "kicker": "Sizing",
+          "heading": "Bigger box, fewer swaps.",
+          "body": "A 30 yard is the usual choice for a new house; a 40 handles framing and drywall waste on bigger builds. For a remodel with a lot of tile or plaster, a smaller box keeps you under the weight limit."
+        },
+        {
+          "kicker": "Placement",
+          "heading": "Set it where it can come and go.",
+          "body": "Put the dumpster where the truck can reach it all through the job, not where the driveway or the garage will be poured later. Red River clay gets soft after rain, so a firm, high spot is worth a few extra steps for the crew."
+        },
+        {
+          "kicker": "Keeping it moving",
+          "heading": "Call before it is overflowing.",
+          "body": "A swap is fastest when the box is full but not heaped. Call when it is getting close and a fresh one can be set down when the full one is hauled."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you leave it for the whole build?",
+          "a": "Yes. Construction rentals run as long as the job, with swaps as often as you need them."
+        }
+      ],
+      "ctaHeadline": "Got a job starting?"
+    },
+    {
+      "slug": "roofing-dumpster-rental",
+      "hero": "delivery.jpg",
+      "navLabel": "Roofing",
+      "kicker": "Roofing",
+      "heading": "Roofing dumpster rental in Shreveport.",
+      "intro": "Shingles weigh more than people expect. A properly sized box, close to the eave, lets the crew throw tear-off straight down and keeps nails out of the yard.",
+      "seoTitle": "Roofing Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "Dumpster rental for shingle tear-offs and re-roofs in Shreveport, Bossier City and Northwest Louisiana. Sized for heavy roofing debris.",
+      "service": "Roofing dumpster rental",
+      "sections": [
+        {
+          "kicker": "Weight",
+          "heading": "Size by squares, not by eye.",
+          "body": "Old asphalt shingles are heavy. A typical one-layer tear-off on a house fits in a 10 to 20 yard depending on the number of squares and layers. Tell us the squares and how many layers are coming off."
+        },
+        {
+          "kicker": "Placement",
+          "heading": "As close to the drip edge as the truck allows.",
+          "body": "The closer the box is to the roofline, the less the crew carries. Leave room for the truck to pick it up, and keep it off any part of the driveway that is already cracked."
+        },
+        {
+          "kicker": "After storms",
+          "heading": "Book early in hail season.",
+          "body": "When a hail storm moves through Caddo and Bossier, every roofer needs a dumpster the same week. If you are scheduling roofs after a storm, call as soon as you have the jobs lined up."
+        }
+      ],
+      "ctaHeadline": "Tearing off a roof?"
+    },
+    {
+      "slug": "cleanout-dumpster-rental",
+      "hero": "cleanout.jpg",
+      "navLabel": "Cleanouts",
+      "kicker": "Junk and cleanouts",
+      "heading": "Cleanout dumpster rental in Shreveport.",
+      "intro": "Estate cleanouts, rental turnovers, moving out and decluttering — load it at your own pace and it all leaves in one trip.",
+      "seoTitle": "Cleanout & Junk Dumpster Rental Shreveport LA | Atlas",
+      "seoDescription": "Dumpster rental for estate cleanouts, rental turnovers, moving and junk removal in Shreveport, Bossier City and the ArkLaTex.",
+      "service": "Cleanout dumpster rental",
+      "sections": [
+        {
+          "kicker": "Estates",
+          "heading": "Take the time you need.",
+          "body": "Clearing out a parent's house is slow work. Keep the dumpster for as many days as it takes, and set aside what you want to keep or donate before the heavy loading starts."
+        },
+        {
+          "kicker": "Landlords",
+          "heading": "Turn a unit around in a weekend.",
+          "body": "Left-behind furniture, old carpet and a garage full of junk can all go in one box. For a duplex or a small complex, a 20 yard usually handles a unit or two."
+        },
+        {
+          "kicker": "What stays out",
+          "heading": "A few things need a different trip.",
+          "body": "Paint, chemicals, tires, batteries and refrigerators or freezers cannot go in. Caddo and Bossier hold household hazardous waste days; check with the parish for the next one."
+        }
+      ],
+      "ctaHeadline": "Clearing out a house?"
+    },
+    {
+      "slug": "dumpster-sizes",
+      "hero": "construction.jpg",
+      "navLabel": "Dumpster sizes",
+      "kicker": "Sizes",
+      "heading": "Dumpster sizes, and which one fits your job.",
+      "intro": "A yard is a cubic yard of space. Here is roughly what each size holds, so you can call knowing what to ask for.",
+      "seoTitle": "Dumpster Sizes Guide | Atlas Dumpster Rental Shreveport",
+      "seoDescription": "10, 15, 20, 30 and 40 yard roll-off dumpster sizes explained, with the projects each one fits. Dumpster rental in Shreveport and Bossier City.",
+      "service": "Roll-off dumpster sizes",
+      "sections": [
+        {
+          "kicker": "10 and 15 yard",
+          "heading": "Small jobs and heavy debris.",
+          "body": "A bathroom remodel, a garage cleanout, a small deck or a shingle tear-off on a modest house. Small boxes are also the right choice for concrete, brick and dirt, which hit the weight limit long before they fill the space."
+        },
+        {
+          "kicker": "20 yard",
+          "heading": "The most common size.",
+          "body": "A kitchen remodel, flooring for a whole house, a big cleanout or a larger roof. If you are not sure, this is usually the one to start with."
+        },
+        {
+          "kicker": "30 and 40 yard",
+          "heading": "Construction and whole-house jobs.",
+          "body": "New home builds, full gut remodels, commercial cleanouts and big demolition jobs. These are tall, so plan on a door or a ramp for loading."
+        }
+      ],
+      "ctaHeadline": "Still not sure on size?"
+    },
+    {
+      "slug": "storm-debris-dumpster-rental",
+      "hero": "cleanout.jpg",
+      "navLabel": "Storm cleanup",
+      "kicker": "Storm cleanup",
+      "heading": "Storm debris dumpster rental in Shreveport.",
+      "intro": "Downed limbs, soaked carpet, ruined drywall and fence boards after a storm — get it off the property and out of the way of the repairs.",
+      "seoTitle": "Storm Debris Dumpster Rental Shreveport LA | Atlas",
+      "seoDescription": "Dumpster rental for storm and flood cleanup in Shreveport, Bossier City and Northwest Louisiana. Limbs, wet drywall, carpet and fencing.",
+      "service": "Storm debris dumpster rental",
+      "sections": [
+        {
+          "kicker": "Insurance",
+          "heading": "Take pictures before it goes in.",
+          "body": "Photograph damaged materials and belongings before you throw them out. Your adjuster may want to see them, and once the dumpster is hauled they are gone."
+        },
+        {
+          "kicker": "Limbs and wood",
+          "heading": "Cut it to fit flat.",
+          "body": "Cut limbs into lengths that lie flat in the box. Root balls and stumps carry a lot of dirt and weight; mention them when you call."
+        },
+        {
+          "kicker": "City pickup",
+          "heading": "Curbside or a dumpster?",
+          "body": "After big storms the city may run special debris pickups. A dumpster makes sense when you cannot wait, when there is interior debris, or when the volume is more than a curb pile."
+        }
+      ],
+      "ctaHeadline": "Cleaning up after a storm?"
+    },
+    {
+      "slug": "bossier-city-dumpster-rental",
+      "hero": "delivery.jpg",
+      "navLabel": "Bossier City",
+      "kicker": "Bossier City",
+      "heading": "Dumpster rental in Bossier City.",
+      "intro": "Remodels, new construction and cleanouts across Bossier City, from the older neighborhoods to the new subdivisions up toward Benton.",
+      "seoTitle": "Dumpster Rental Bossier City LA | Atlas Dumpster Rental",
+      "seoDescription": "Roll-off dumpster rental in Bossier City, LA for remodels, roofing, cleanouts and construction. 10 to 40 yard dumpsters.",
+      "service": "Dumpster rental in Bossier City",
+      "sections": [
+        {
+          "kicker": "Bossier",
+          "heading": "Steady building, lots of remodeling.",
+          "body": "Bossier City keeps growing north and east, and the older neighborhoods closer to the river see plenty of remodels. Both mean a lot of dumpsters in driveways."
+        },
+        {
+          "kicker": "Getting in",
+          "heading": "Gates, HOAs and tight cul-de-sacs.",
+          "body": "Newer subdivisions often have HOA rules and tight turnarounds. Let us know about either one, and about any gate code, when you book."
+        }
+      ],
+      "ctaHeadline": "Need a dumpster in Bossier?"
+    },
+    {
+      "slug": "service-area",
+      "hero": "hero-shreveport-dumpster.jpg",
+      "navLabel": "Service area",
+      "kicker": "Service area",
+      "heading": "Where we drop dumpsters in the ArkLaTex.",
+      "intro": "Shreveport and Bossier City, and the towns around them in Caddo, Bossier and DeSoto Parishes.",
+      "seoTitle": "Service Area | Atlas Dumpster Rental Shreveport LA",
+      "seoDescription": "Dumpster delivery in Shreveport, Bossier City, Benton, Haughton, Blanchard, Keithville, Greenwood, Stonewall, Vivian and Mansfield.",
+      "service": "Dumpster rental in Northwest Louisiana",
+      "sections": [
+        {
+          "kicker": "Close in",
+          "heading": "Shreveport, Bossier and nearby.",
+          "body": "Shreveport, Bossier City, Benton, Haughton, Blanchard and Keithville are close by and easy to schedule."
+        },
+        {
+          "kicker": "Further out",
+          "heading": "Greenwood, Stonewall, Vivian and Mansfield.",
+          "body": "The towns further out are covered too. For rural property, send directions or a map pin along with the address."
+        }
+      ],
+      "ctaHeadline": "Not sure if you are in range?"
+    },
+    {
+      "slug": "request-pricing",
+      "navLabel": "Request pricing",
+      "kicker": "Pricing",
+      "heading": "Request dumpster pricing.",
+      "intro": "Tell us the size you think you need, what is going in it and how long you need it, and we will get back to you with a price.",
+      "seoTitle": "Dumpster Rental Pricing Shreveport LA | Atlas Dumpster Rental",
+      "seoDescription": "Request pricing on a roll-off dumpster in Shreveport, Bossier City, Benton or Haughton. 10, 15, 20, 30 and 40 yard dumpsters.",
+      "service": "Dumpster rental pricing",
+      "sections": [
+        {
+          "kicker": "What sets the price",
+          "heading": "Size, days, weight and distance.",
+          "body": "The size of the box, how many days you keep it, how much the load weighs and how far it goes. Heavy materials like concrete, shingles and dirt are the usual reason a price changes, so mention them up front."
+        }
+      ],
+      "ctaHeadline": "Let's get you a number."
+    }
+  ]
+}

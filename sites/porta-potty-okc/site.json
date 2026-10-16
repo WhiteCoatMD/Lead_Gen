@@ -1,0 +1,541 @@
+{
+  "_placeholders": "PLACEHOLDER phone (555-01xx fictional range), streetAddress, postalCode and domain. Replace all four before launch. If the operator does not serve customers at their yard, delete streetAddress/postalCode and set serviceAreaBusiness: true instead (audit forbids both).",
+  "name": "Red Dirt Portable Restrooms",
+  "domain": "porta-potty-okc.invalid",
+  "phone": "405-555-0177",
+  "email": "",
+  "streetAddress": "1234 Placeholder Blvd",
+  "postalCode": "73100",
+  "city": "Oklahoma City",
+  "state": "Oklahoma",
+  "schemaType": "LocalBusiness",
+  "accent": "#b4472a",
+  "accentDark": "#7f2f1b",
+  "hero": "hero-okc.jpg",
+  "assets": [
+    "hero-okc.jpg",
+    "construction.jpg",
+    "event.jpg",
+    "restroom-trailer.jpg",
+    "ada.jpg",
+    "hand-wash.jpg",
+    "long-term.jpg"
+  ],
+  "gallery": [
+    {
+      "image": "construction.jpg",
+      "alt": "Single portable toilet with a sanitizer dispenser next to a framed house",
+      "caption": "Residential builds"
+    },
+    {
+      "image": "restroom-trailer.jpg",
+      "alt": "Restroom trailer with lit steps set up on a lawn for an evening party",
+      "caption": "Trailers for receptions"
+    },
+    {
+      "image": "long-term.jpg",
+      "alt": "Two portable toilets on a gravel drilling location with pickups parked nearby",
+      "caption": "Oilfield locations"
+    },
+    {
+      "image": "event.jpg",
+      "alt": "White portable restrooms lined up near a reception tent with string lights",
+      "caption": "Backyard weddings"
+    }
+  ],
+  "kicker": "Metro OKC portable restrooms",
+  "headline": "Porta potties for Oklahoma City crews and crowds.",
+  "intro": "Job-site toilets, wedding trailers, accessible units and sinks — dropped across Oklahoma City, Edmond, Norman, Moore and Yukon and kept clean for as long as you have them.",
+  "navCall": "Price a rental",
+  "primaryCta": "Call and price it out",
+  "sectionKicker": "The short version",
+  "sectionHeadline": "Tell us three numbers. We handle the rest.",
+  "about": "How many people, how many days, and where. That is what decides a portable restroom order, and it is all Red Dirt needs to price one. Units go out on regular routes across the metro, so a single toilet for a remodel in Bethany and twelve for a festival downtown are handled the same way: dropped, serviced on schedule and hauled off when you are finished.",
+  "servicesHeadline": "Six things people rent from us.",
+  "services": [
+    {
+      "title": "Job-Site Porta Potties",
+      "link": "porta-potties-for-construction",
+      "description": "One unit for a house, a row for a commercial pour. Pumped and restocked weekly until the job closes out."
+    },
+    {
+      "title": "Wedding & Party Units",
+      "link": "wedding-porta-potty-rental",
+      "description": "Clean units placed out of sight lines, counted from your guest list and the hours on your timeline."
+    },
+    {
+      "title": "Luxury Restroom Trailers",
+      "link": "luxury-restroom-trailers",
+      "description": "Flushing toilets, sinks and AC for receptions, galas and company events where a plastic unit will not cut it."
+    },
+    {
+      "title": "Handicap Accessible",
+      "link": "handicap-porta-potty-rental",
+      "description": "Roll-in units with grab bars and turning room. Required at most public events and parks."
+    },
+    {
+      "title": "Hand-Washing Stations",
+      "link": "hand-washing-stations",
+      "description": "Pump sinks with soap and towels for food vendors, petting zoos, ranches and crews without water."
+    },
+    {
+      "title": "Monthly & Oilfield",
+      "link": "monthly-porta-potty-rental",
+      "description": "Four-week rentals for locations, road jobs and long builds, on a service day that fits your schedule."
+    }
+  ],
+  "serviceAreas": [
+    "Oklahoma City",
+    "Edmond",
+    "Norman",
+    "Moore",
+    "Yukon",
+    "Mustang",
+    "Midwest City",
+    "Del City",
+    "Bethany",
+    "Piedmont"
+  ],
+  "areaHeadline": "Across the metro, out to the section lines.",
+  "ctaHeadline": "Price your rental.",
+  "ctaCopy": "Give us the address, the headcount and the dates. You will get a straight answer on how many units it takes.",
+  "footerLine": "Portable toilet and restroom trailer rental in Oklahoma City, Oklahoma",
+  "seoTitle": "Porta Potty Rental Oklahoma City OK | Red Dirt Portable Restrooms",
+  "seoDescription": "Porta potty rental in Oklahoma City, Edmond, Norman and Moore. Construction toilets, wedding units, luxury restroom trailers and handicap units.",
+  "leadForm": {
+    "kicker": "Price a rental",
+    "heading": "Send the address, headcount and dates.",
+    "intro": "That is all it takes to put a number on it. Phone is quicker if you are standing on the site right now.",
+    "placeholder": "Where it is going, how many people, which days, and anything a truck driver should know about getting in.",
+    "submit": "Get my price",
+    "fineprint": "Used only to reply about your rental."
+  },
+  "faqKicker": "Straight answers",
+  "faqHeading": "What people in OKC ask first.",
+  "faqs": [
+    {
+      "q": "What is the most common mistake people make ordering porta potties?",
+      "a": "Ordering too few. People count guests or workers and forget hours. A unit that is fine for a two-hour party will be unusable by the end of a ten-hour festival day. Give us the timeline, not just the headcount."
+    },
+    {
+      "q": "Can a unit sit in the street in front of my house?",
+      "a": "Not without checking first. Oklahoma City and the suburbs each have their own rules about putting anything in the public right-of-way. On your own driveway or yard there is normally nothing to arrange."
+    },
+    {
+      "q": "How do you keep units from blowing over?",
+      "a": "Placement and anchoring. Units go on level ground out of the open, ideally in the lee of a building or a fence line, and are staked or strapped on exposed sites. Central Oklahoma wind takes over a unit that is just set down in a field."
+    },
+    {
+      "q": "Is a restroom trailer worth it for a wedding?",
+      "a": "For an evening reception with older guests or formal clothes, usually yes. For a casual afternoon barbecue, a couple of upgraded units with sinks do the job for less."
+    },
+    {
+      "q": "Do I have to be home for delivery?",
+      "a": "No. Mark the spot with a flag or send a photo of where you want it, and make sure the gate is open or the code is in your notes."
+    },
+    {
+      "q": "How fast can I get a unit?",
+      "a": "It depends on the route schedule that week. Call with your address and date and you will get an actual answer instead of a promise."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "porta-potties-for-construction",
+      "hero": "construction.jpg",
+      "navLabel": "Construction",
+      "kicker": "Job sites",
+      "heading": "Porta potties for construction in Oklahoma City.",
+      "intro": "For builders, remodelers, roofers and road crews. Dropped before the crew shows up, serviced every week, gone when the job is done.",
+      "seoTitle": "Construction Porta Potty Rental Oklahoma City | Red Dirt",
+      "seoDescription": "Job-site porta potty rental for builders and contractors in Oklahoma City, Edmond, Yukon and Mustang. Weekly service and OSHA-based unit counts.",
+      "service": "Construction portable toilet rental",
+      "sections": [
+        {
+          "kicker": "Count",
+          "heading": "Start from OSHA's table.",
+          "body": "29 CFR 1926.51 is the federal rule for job-site toilets. Twenty workers or fewer: one toilet. Twenty to 199: a toilet seat and a urinal per 40 workers. Two hundred or more: a seat and a urinal per 50. That is the legal floor. If your crew works long days, or if subs rotate through and the headcount swings, size for the busy week rather than the average one."
+        },
+        {
+          "kicker": "Metro builds",
+          "heading": "Where the work is right now.",
+          "body": "The steady demand is residential: subdivisions going up in Edmond, Yukon, Mustang and Piedmont, where one unit per lot or one per cul-de-sac sits for the length of the build. Commercial jobs downtown and along the turnpikes run bigger orders for shorter stretches. Both are routine."
+        },
+        {
+          "kicker": "Spot",
+          "heading": "Put it where the truck can reach it all job long.",
+          "body": "The usual problem is not delivery day, it is week six, when the driveway is poured, the yard is graded and the unit is now behind a pallet of brick. Pick a spot near the curb or the site entrance that will stay reachable from start to finish."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can I add a second unit mid-job?",
+          "a": "Yes. Call when framing crews or finishers pile on, and it rides out on the next route."
+        },
+        {
+          "q": "What does weekly service actually cover?",
+          "a": "Tank pumped, unit washed down, paper and sanitizer topped up. Extra visits can be added for big crews or summer heat."
+        }
+      ],
+      "ctaHeadline": "Setting up a site?"
+    },
+    {
+      "slug": "wedding-porta-potty-rental",
+      "hero": "event.jpg",
+      "navLabel": "Weddings & parties",
+      "kicker": "Weddings and parties",
+      "heading": "Wedding and party porta potty rental in OKC.",
+      "intro": "Backyard weddings, graduation parties, reunions and church picnics. Clean units, sized to your guest list and placed where nobody has to look at them.",
+      "seoTitle": "Wedding & Party Porta Potty Rental OKC | Red Dirt",
+      "seoDescription": "Porta potty rental for weddings, graduation parties, reunions and backyard events in Oklahoma City, Edmond and Norman. Sized to your guest count.",
+      "service": "Wedding and party portable restroom rental",
+      "sections": [
+        {
+          "kicker": "The math",
+          "heading": "Guests, hours, and whether there is a bar.",
+          "body": "A working number for a party of about four hours is one unit per 50 guests. Stretch it to six hours and you want closer to one per 35. Add an open bar and go up again. So a 200-guest backyard wedding that runs from four to ten with drinks is not four units — it is more like six, or a trailer plus a couple of standard units for overflow."
+        },
+        {
+          "kicker": "Out of the photos",
+          "heading": "Close, but behind something.",
+          "body": "The best spot is a short walk from the party, behind the tent, the barn or a row of trees — not in the background of every photo. Keep units away from the food and downwind of it. If the reception runs past sunset, a string of lights on the path saves a lot of phone flashlights."
+        },
+        {
+          "kicker": "Upgrades",
+          "heading": "Small changes guests notice.",
+          "body": "Units with an interior sink and mirror cost a little more and change how a backyard wedding feels. So does a hand-wash station placed next to standard units. For formal or evening events, look at a restroom trailer instead."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "When do the units show up?",
+          "a": "The day before or the morning of, and they are collected after the weekend. If your venue limits delivery times, tell us when you book."
+        },
+        {
+          "q": "We are getting married on a ranch outside the city. Is that a problem?",
+          "a": "No. Send a pin and describe the drive in — dirt, gravel, a cattle guard, a gate. The more we know, the smoother delivery day goes."
+        }
+      ],
+      "ctaHeadline": "Counting guests?"
+    },
+    {
+      "slug": "luxury-restroom-trailers",
+      "hero": "restroom-trailer.jpg",
+      "navLabel": "Luxury trailers",
+      "kicker": "Luxury trailers",
+      "heading": "Luxury restroom trailers in Oklahoma City.",
+      "intro": "For receptions, galas, company events and anything where guests are dressed up. Flushing toilets, real sinks, lighting and climate control.",
+      "seoTitle": "Luxury Restroom Trailer Rental Oklahoma City | Red Dirt",
+      "seoDescription": "Luxury restroom trailer rental for weddings, galas and corporate events in Oklahoma City, Edmond and Norman. Flushing toilets, sinks and AC.",
+      "service": "Luxury restroom trailer rental",
+      "sections": [
+        {
+          "kicker": "Why a trailer",
+          "heading": "It is the difference guests remember.",
+          "body": "Standard units are fine for a ball game. At a reception in an Oklahoma July, guests in suits and long dresses notice the difference between a plastic box and an air-conditioned room with a mirror and a sink. A trailer is the one restroom upgrade people mention afterward."
+        },
+        {
+          "kicker": "Checklist",
+          "heading": "Four things to confirm before you book.",
+          "body": "A flat place to park it. Room for a truck to back a trailer in — check gate widths, low limbs and soft turf. A power source within reach, usually a dedicated outlet or the caterer's generator. And whether you want an attendant, which is worth it for big guest lists and long nights."
+        },
+        {
+          "kicker": "Size",
+          "heading": "Count stations, not trailers.",
+          "body": "Trailers are rated by stations — each toilet or urinal is one. Smaller trailers suit rehearsal dinners and small receptions; big weddings and corporate events need a larger trailer or a trailer backed up by a few standard units off to one side."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How far in advance should I reserve?",
+          "a": "As soon as the date and venue are set. Trailers are limited and the spring and fall Saturdays go first."
+        },
+        {
+          "q": "Does it need a water line?",
+          "a": "Usually not — most trailers carry their own fresh and waste tanks. Power is the one hookup you will need."
+        }
+      ],
+      "ctaHeadline": "Want a trailer for the big day?"
+    },
+    {
+      "slug": "handicap-porta-potty-rental",
+      "hero": "ada.jpg",
+      "navLabel": "Handicap units",
+      "kicker": "Handicap accessible",
+      "heading": "Handicap porta potty rental in Oklahoma City.",
+      "intro": "Roll-in accessible units for public events, parks, schools and job sites — and for any private party where a guest uses a wheelchair.",
+      "seoTitle": "Handicap Accessible Porta Potty Rental OKC | Red Dirt",
+      "seoDescription": "Handicap and wheelchair-accessible porta potty rental for events, parks and job sites in Oklahoma City, Edmond, Norman and Moore.",
+      "service": "Handicap accessible portable restroom rental",
+      "sections": [
+        {
+          "kicker": "The rule",
+          "heading": "One in twenty, and never zero.",
+          "body": "When portable units are grouped at one spot, the 2010 ADA Standards require at least five percent of them to be accessible, with a minimum of one. A festival with twenty units needs at least one accessible unit; one with forty needs two. Event organizers and parks departments check for this."
+        },
+        {
+          "kicker": "Inside",
+          "heading": "Room to turn around.",
+          "body": "Accessible units sit flat on the ground with no step, have a wide door, grab bars on the walls and enough floor space to turn a wheelchair. Anyone can use them, which makes them a good single-unit choice for small gatherings too."
+        },
+        {
+          "kicker": "Getting there",
+          "heading": "The path counts as much as the unit.",
+          "body": "Put it on firm, level ground with a clear route from where people are — not across gravel, up a slope or through wet grass. Leave a clear patch in front of the door so a chair can line up."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can I order only accessible units?",
+          "a": "Yes. Some customers do exactly that for family events, since every guest can use them."
+        }
+      ],
+      "ctaHeadline": "Need accessible units?"
+    },
+    {
+      "slug": "hand-washing-stations",
+      "hero": "hand-wash.jpg",
+      "navLabel": "Hand-washing stations",
+      "kicker": "Hand washing",
+      "heading": "Hand-washing stations for rent in Oklahoma City.",
+      "intro": "Freestanding sinks with water, soap and towels. No plumbing, no hose, nothing to hook up.",
+      "seoTitle": "Hand Washing Station Rental Oklahoma City | Red Dirt",
+      "seoDescription": "Portable hand-washing station rental for food vendors, fairs, ranches and job sites in Oklahoma City, Edmond, Norman and Moore.",
+      "service": "Portable hand-washing station rental",
+      "sections": [
+        {
+          "kicker": "Who rents them",
+          "heading": "Food, livestock and dirty work.",
+          "body": "Vendors at fairs and festivals, petting zoos and livestock shows, ranch events, and crews mixing concrete or handling chemicals. If the people on site touch food, animals or anything you would not want on a sandwich, they need somewhere to wash."
+        },
+        {
+          "kicker": "Permits",
+          "heading": "The health department sets the rule, not us.",
+          "body": "Food vendors usually need hand washing to get an event permit. The Oklahoma City-County Health Department and the event organizer decide what qualifies. Check with them before you order so the station you get is the one your permit asks for."
+        },
+        {
+          "kicker": "Ratio",
+          "heading": "One station per cluster of units.",
+          "body": "A double-basin station next to a group of three or four porta potties covers most events. Food lines should have their own, separate from the restrooms."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do they need power or a hose?",
+          "a": "No. They carry their own fresh water and a gray-water tank, and are refilled at service."
+        }
+      ],
+      "ctaHeadline": "Need a place to wash up?"
+    },
+    {
+      "slug": "monthly-porta-potty-rental",
+      "hero": "long-term.jpg",
+      "navLabel": "Monthly & oilfield",
+      "kicker": "Monthly rentals",
+      "heading": "Monthly and oilfield porta potty rental around OKC.",
+      "intro": "Four-week rentals for drilling and completion locations, road jobs, ranches, ballfields and long builds across central Oklahoma.",
+      "seoTitle": "Monthly & Oilfield Porta Potty Rental Oklahoma City | Red Dirt",
+      "seoDescription": "Monthly porta potty rental for oilfield locations, road construction, ranches and long projects around Oklahoma City, Yukon, Mustang and Piedmont.",
+      "service": "Monthly and oilfield portable toilet rental",
+      "sections": [
+        {
+          "kicker": "On location",
+          "heading": "Units that follow the rig.",
+          "body": "Locations in Canadian, Kingfisher, Grady and Logan counties need restrooms for the life of the job and often need them moved when the crew does. Give us the lease name, a pin and the gate combination, and say who signs for the site — the company man, the pusher or the office."
+        },
+        {
+          "kicker": "Schedule",
+          "heading": "Pick a service day and forget about it.",
+          "body": "Long-term units run on a fixed weekly service day. Small crews at remote spots can sometimes stretch longer; large crews and July heat need more. Set it once and adjust only when the job changes."
+        },
+        {
+          "kicker": "Lease roads",
+          "heading": "Tell us what the road does when it rains.",
+          "body": "Red clay roads that are fine in August turn impassable after a storm. Say so up front, so the unit goes somewhere the service truck can still reach on a wet week."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How is a monthly rental billed?",
+          "a": "Every four weeks for as long as the unit is out. Call for a quote on your location."
+        },
+        {
+          "q": "Can you move units between locations?",
+          "a": "Yes. Ask before the next service day and the move is done on that run."
+        }
+      ],
+      "ctaHeadline": "Need a unit on location?"
+    },
+    {
+      "slug": "tailgate-porta-potty-rental",
+      "hero": "event.jpg",
+      "navLabel": "Tailgates & game days",
+      "kicker": "Game days",
+      "heading": "Tailgate and game-day porta potty rental in Norman and OKC.",
+      "intro": "For tailgate lots, watch parties, tournaments and anywhere a few hundred fans gather for an afternoon.",
+      "seoTitle": "Tailgate Porta Potty Rental Norman & OKC | Red Dirt",
+      "seoDescription": "Porta potty rental for tailgates, watch parties, tournaments and game days in Norman and Oklahoma City. Units sized to the crowd and the kickoff time.",
+      "service": "Tailgate and game-day portable restroom rental",
+      "sections": [
+        {
+          "kicker": "Crowd math",
+          "heading": "Game days burn through units.",
+          "body": "Tailgates run long, start early and involve a cooler. Plan more units than you would for a party of the same size — roughly one per 30 to 40 people for an all-day tailgate — and put a hand-wash station beside them."
+        },
+        {
+          "kicker": "The lot",
+          "heading": "Clear it with whoever runs the lot.",
+          "body": "Private lots, church lots and businesses near the stadium each have their own rules. Confirm with the owner where units can sit and when they have to be gone, then tell us so delivery and pickup fit inside that window."
+        },
+        {
+          "kicker": "Tournaments",
+          "heading": "Same idea, longer weekend.",
+          "body": "Softball, soccer and baseball tournaments that run Friday to Sunday need units serviced between days. Tell us the schedule and the fields, and the units are cleaned overnight."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can units stay for a whole season of home games?",
+          "a": "Yes. Season-long setups can stay in place and be serviced after each game."
+        }
+      ],
+      "ctaHeadline": "Planning game day?"
+    },
+    {
+      "slug": "edmond",
+      "hero": "hero-okc.jpg",
+      "navLabel": "Edmond",
+      "kicker": "Edmond",
+      "heading": "Porta potty rental in Edmond.",
+      "intro": "Construction units for new subdivisions, and party units for graduations, weddings and campus events.",
+      "seoTitle": "Porta Potty Rental Edmond OK | Red Dirt Portable Restrooms",
+      "seoDescription": "Porta potty rental in Edmond, OK for home builders, remodels, graduation parties, weddings and university events.",
+      "service": "Portable restroom rental in Edmond",
+      "sections": [
+        {
+          "kicker": "Edmond jobs",
+          "heading": "Builders and backyard parties.",
+          "body": "Edmond is heavy on residential construction, school and university events, and backyard weddings and graduation parties."
+        },
+        {
+          "kicker": "HOAs",
+          "heading": "Check the neighborhood rules.",
+          "body": "For residential jobs the unit usually goes near the curb or on the driveway apron, where the service truck can reach it without crossing the lawn. HOA neighbourhoods sometimes have rules about where and how long a unit can sit — worth checking before delivery."
+        }
+      ],
+      "ctaHeadline": "Need a unit in Edmond?"
+    },
+    {
+      "slug": "norman",
+      "hero": "hero-okc.jpg",
+      "navLabel": "Norman",
+      "kicker": "Norman",
+      "heading": "Porta potty rental in Norman.",
+      "intro": "Game days, campus events, construction and rural property toward Lake Thunderbird.",
+      "seoTitle": "Porta Potty Rental Norman OK | Red Dirt Portable Restrooms",
+      "seoDescription": "Porta potty rental in Norman, OK for tailgates, game days, campus events, construction and rural property.",
+      "service": "Portable restroom rental in Norman",
+      "sections": [
+        {
+          "kicker": "Norman jobs",
+          "heading": "The university calendar drives it.",
+          "body": "Norman runs on the university calendar: tailgates, game days and campus-adjacent events, alongside construction and rural property work toward Lake Thunderbird."
+        },
+        {
+          "kicker": "Lots",
+          "heading": "Confirm with the lot owner.",
+          "body": "Game-day and event placements need to be confirmed with whoever controls the lot or venue. If units are going on a private lot for a tailgate, say how many people you expect and how long you will be there."
+        }
+      ],
+      "ctaHeadline": "Need units in Norman?"
+    },
+    {
+      "slug": "moore-and-south-okc",
+      "hero": "hero-okc.jpg",
+      "navLabel": "Moore & South OKC",
+      "kicker": "Moore and South OKC",
+      "heading": "Porta potty rental in Moore and South OKC.",
+      "intro": "Residential building and storm rebuilds, sports complexes and community events.",
+      "seoTitle": "Porta Potty Rental Moore OK & South OKC | Red Dirt",
+      "seoDescription": "Porta potty rental in Moore and south Oklahoma City for construction, storm rebuilds, sports complexes and community events.",
+      "service": "Portable restroom rental in Moore",
+      "sections": [
+        {
+          "kicker": "South side jobs",
+          "heading": "Building and rebuilding.",
+          "body": "Moore and south Oklahoma City see a lot of residential construction and rebuilding, plus sports complexes and community events."
+        },
+        {
+          "kicker": "After a storm",
+          "heading": "Say how big the crew is.",
+          "body": "Storm-season projects often need units quickly. Tell us how many crews are on site and whether the job has power and water — that decides whether a hand-wash station or a restroom trailer makes sense alongside standard units."
+        }
+      ],
+      "ctaHeadline": "Need units in Moore?"
+    },
+    {
+      "slug": "areas-we-serve",
+      "hero": "hero-okc.jpg",
+      "navLabel": "Areas we serve",
+      "kicker": "Coverage",
+      "heading": "Where Red Dirt delivers.",
+      "intro": "Oklahoma County and the counties around it, from Edmond down to Norman and from Yukon over to Midwest City.",
+      "seoTitle": "Areas We Serve | Red Dirt Portable Restrooms OKC",
+      "seoDescription": "Portable toilet delivery across Oklahoma City, Edmond, Norman, Moore, Yukon, Mustang, Midwest City, Del City, Bethany and Piedmont.",
+      "service": "Portable restroom rental in the Oklahoma City metro",
+      "sections": [
+        {
+          "kicker": "Every week",
+          "heading": "On the regular routes.",
+          "body": "Oklahoma City, Edmond, Norman, Moore, Yukon and Mustang are on the routes every week. Midwest City, Del City, Bethany and Piedmont are too. Inside that ring, scheduling is simple."
+        },
+        {
+          "kicker": "Out past the metro",
+          "heading": "Rural jobs and locations.",
+          "body": "Farms, ranches and oilfield locations in the counties around the metro are served on request. Send a pin and road conditions with the order."
+        }
+      ],
+      "ctaHeadline": "Outside the metro?"
+    },
+    {
+      "slug": "how-to-order",
+      "navLabel": "How to order",
+      "kicker": "Ordering",
+      "heading": "How ordering a porta potty works.",
+      "intro": "Four steps, and most of them are ours.",
+      "seoTitle": "How to Order a Porta Potty in OKC | Red Dirt",
+      "seoDescription": "How to rent a porta potty in Oklahoma City: what to tell us, how delivery and service work, and when units are picked up.",
+      "service": "How to order a portable restroom",
+      "sections": [
+        {
+          "kicker": "You",
+          "heading": "Call or send the form.",
+          "body": "Address, headcount, dates. Mention gates, soft ground or a tricky drive. That is your part."
+        },
+        {
+          "kicker": "Us",
+          "heading": "Count, drop, service, haul.",
+          "body": "We work out how many and what type, drop them before you need them, service them on schedule, and haul them off when the job or the party is over. If something changes in the middle — more people, an extra day — call and it is adjusted."
+        }
+      ],
+      "ctaHeadline": "Ready when you are."
+    },
+    {
+      "slug": "get-a-price",
+      "navLabel": "Get a price",
+      "kicker": "Pricing",
+      "heading": "Get a price on your rental.",
+      "intro": "Prices depend on the unit type, how long you keep it and how often it is serviced. Send the details for an exact number.",
+      "seoTitle": "Porta Potty Rental Prices OKC | Get a Quote | Red Dirt",
+      "seoDescription": "Get a price on porta potty, restroom trailer or hand-washing station rental in Oklahoma City, Edmond, Norman and Moore.",
+      "service": "Price quotes",
+      "sections": [
+        {
+          "kicker": "What moves the price",
+          "heading": "Type, time and service.",
+          "body": "A standard unit for a weekend costs less than one with a sink; a trailer costs more than either. Long rentals work out cheaper per day than short ones. Extra service visits add to it. Tell us the job and you will get the number, not a range."
+        }
+      ],
+      "ctaHeadline": "Get your number."
+    }
+  ]
+}

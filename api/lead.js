@@ -36,6 +36,45 @@ export const RECIPIENTS = {
     business: "24 Hour Towing Dallas",
     domain: "dallastowtrucks.com",
   },
+  // The three porta potty sites have no operator yet. Leads go to Mitch until
+  // one is signed per city; swap each `to` line for the operator's address then.
+  "porta-potty-tulsa": {
+    to: "mitch@whitecoat-md.com",
+    business: "Green Country Portable Restrooms",
+    domain: "porta-potty-tulsa.invalid",
+  },
+  "porta-potty-okc": {
+    to: "mitch@whitecoat-md.com",
+    business: "Red Dirt Portable Restrooms",
+    domain: "porta-potty-okc.invalid",
+  },
+  "porta-potty-shreveport": {
+    to: "mitch@whitecoat-md.com",
+    business: "ArkLaTex Portable Toilets",
+    domain: "porta-potty-shreveport.invalid",
+  },
+  // Four GBP-backed sites built 2026-10-16. No operator and no domain yet, so
+  // leads go to Mitch; swap `to` and `domain` as each one is placed.
+  "atlas-dumpster-rental-shreveport": {
+    to: "mitch@whitecoat-md.com",
+    business: "Atlas Dumpster Rental",
+    domain: "atlas-dumpster-rental-shreveport.invalid",
+  },
+  "baton-rouge-dumpster": {
+    to: "mitch@whitecoat-md.com",
+    business: "Baton Rouge Dumpster",
+    domain: "baton-rouge-dumpster.invalid",
+  },
+  "local-pro-foundation-repair-baton-rouge": {
+    to: "mitch@whitecoat-md.com",
+    business: "Local Pro Foundation Repair",
+    domain: "local-pro-foundation-repair.invalid",
+  },
+  "topone-mobile-mechanic-baton-rouge": {
+    to: "mitch@whitecoat-md.com",
+    business: "TopOne Mobile Mechanic Service",
+    domain: "topone-mobile-mechanic.invalid",
+  },
   "martins-trash-removal-demolition": {
     // INTERIM DESTINATION. Leads go to Mitch until the contractor's own
     // address is supplied, because a lead landing in the portfolio owner's

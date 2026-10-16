@@ -1,0 +1,355 @@
+{
+  "_placeholders": "PLACEHOLDER domain. Name, address and phone are copied from the verified Google Business Profile (store code 09721941445350793591) on 2026-10-16. Replace the domain here and in api/lead.js once it is registered.",
+  "name": "TopOne Mobile Mechanic Service",
+  "domain": "topone-mobile-mechanic.invalid",
+  "phone": "225-535-4926",
+  "email": "",
+  "streetAddress": "4024 Washington Ave",
+  "postalCode": "70802",
+  "city": "Baton Rouge",
+  "state": "Louisiana",
+  "schemaType": "AutoRepair",
+  "accent": "#b03a1e",
+  "accentDark": "#7c2512",
+  "hero": "hero-mobile-mechanic.jpg",
+  "assets": [
+    "hero-mobile-mechanic.jpg",
+    "brakes.jpg",
+    "battery.jpg",
+    "diagnostics.jpg"
+  ],
+  "gallery": [
+    {
+      "image": "hero-mobile-mechanic.jpg",
+      "alt": "Mobile mechanic van with tool drawers open beside a sedan with its hood up in a driveway",
+      "caption": "At your driveway"
+    },
+    {
+      "image": "brakes.jpg",
+      "alt": "Car on a jack stand with the wheel off and a new brake rotor and caliper installed",
+      "caption": "Brakes"
+    },
+    {
+      "image": "battery.jpg",
+      "alt": "Gloved hands connecting a new battery with a jump pack on the fender",
+      "caption": "Batteries and no-starts"
+    },
+    {
+      "image": "diagnostics.jpg",
+      "alt": "Diagnostic scan tool plugged in under a dashboard with the check engine light on",
+      "caption": "Check engine lights"
+    }
+  ],
+  "kicker": "Baton Rouge · Central · Denham Springs · Prairieville",
+  "headline": "A mechanic who comes to you in Baton Rouge.",
+  "intro": "Brakes, batteries, starters, alternators, check engine lights and no-starts — fixed in your driveway or your work parking lot, so you are not stuck waiting at a shop or paying for a tow.",
+  "navCall": "Call a mechanic",
+  "primaryCta": "Call about your car",
+  "sectionKicker": "Why mobile",
+  "sectionHeadline": "A lot of repairs do not need a lift. They need a mechanic and the right part.",
+  "about": "Brakes, batteries, starters, alternators, belts, sensors and most diagnostic work can be done right where the car is sitting. TopOne Mobile Mechanic Service brings the tools and the parts to your home or job across Baton Rouge, works on the car while you go about your day, and tells you plainly if a job really needs a shop. Call with the year, make and model and what it is doing, and we will tell you if it is something we can handle on site.",
+  "servicesHeadline": "What we fix on site.",
+  "services": [
+    {
+      "title": "Brake Repair",
+      "link": "mobile-brake-repair",
+      "description": "Pads, rotors, calipers and brake fluid — the most common job we do in a driveway."
+    },
+    {
+      "title": "Battery & No-Start",
+      "link": "car-wont-start",
+      "description": "Dead batteries, bad starters, corroded cables and cars that click but will not turn over."
+    },
+    {
+      "title": "Check Engine Light",
+      "link": "check-engine-light-diagnostics",
+      "description": "Scan-tool diagnostics on site, and an explanation of what the code actually means."
+    },
+    {
+      "title": "Alternators & Starters",
+      "link": "alternator-and-starter-replacement",
+      "description": "Charging and starting problems diagnosed and the part replaced where the car sits."
+    },
+    {
+      "title": "Pre-Purchase Inspection",
+      "link": "pre-purchase-car-inspection",
+      "description": "A mechanic's look at a used car before you buy it — at the seller's place."
+    },
+    {
+      "title": "Fleet & Work Trucks",
+      "link": "fleet-mobile-mechanic",
+      "description": "Service for small business vehicles at your lot, so trucks are not off the road for a shop visit."
+    }
+  ],
+  "serviceAreas": [
+    "Baton Rouge",
+    "Central",
+    "Zachary",
+    "Baker",
+    "Denham Springs",
+    "Walker",
+    "Prairieville",
+    "Gonzales",
+    "Port Allen",
+    "St. Gabriel"
+  ],
+  "areaHeadline": "Baton Rouge and the surrounding parishes.",
+  "ctaHeadline": "Car giving you trouble?",
+  "ctaCopy": "Call with the year, make and model, what it is doing, and where it is parked. If it is easier, send it over and we will call you back.",
+  "footerLine": "Mobile mechanic and on-site auto repair in Baton Rouge, Louisiana",
+  "seoTitle": "Mobile Mechanic Baton Rouge LA | TopOne Mobile Mechanic",
+  "seoDescription": "Mobile mechanic in Baton Rouge. Brakes, batteries, starters, alternators, check engine lights and no-starts repaired at your home or work.",
+  "leadForm": {
+    "kicker": "Tell us about the car",
+    "heading": "What is it doing, and where is it?",
+    "intro": "Year, make and model, what is going on, and where the car is parked. The more detail, the better we can bring the right part.",
+    "placeholder": "Year, make and model. What it is doing (noise, light on, won't start). Where it is parked — home, work, apartment lot.",
+    "submit": "Send it over",
+    "fineprint": "We only use this to get back to you about your car."
+  },
+  "faqKicker": "Drivers ask",
+  "faqHeading": "Questions about mobile repair.",
+  "faqs": [
+    {
+      "q": "What can a mobile mechanic fix?",
+      "a": "Brakes, batteries, starters, alternators, belts, many sensors, ignition parts, diagnostics and a lot of other bolt-on repairs. Jobs that need a lift or pulling the engine or transmission are shop jobs, and we will tell you if that is what you have."
+    },
+    {
+      "q": "Can you work in my apartment or office parking lot?",
+      "a": "Usually, yes. Some complexes and offices do not allow repairs on the property, so check if you are not sure. A flat, paved spot with a little room around the car works best."
+    },
+    {
+      "q": "Do you bring the parts?",
+      "a": "Yes. With the year, make, model and the problem, the part is picked up before we head your way. For some diagnostics the part comes after we know what failed."
+    },
+    {
+      "q": "What if it rains?",
+      "a": "Baton Rouge weather changes fast. Light rain is workable for many jobs; heavy storms may mean moving the appointment or working under a carport or garage."
+    },
+    {
+      "q": "Do I need to be there?",
+      "a": "It helps to be there at the start and the end, and we will need the keys. In between, you can go about your day."
+    },
+    {
+      "q": "Is it more than a shop?",
+      "a": "Often it is comparable, and you save the tow, the ride and the time off work. Ask for a quote with your car's details and compare."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "mobile-brake-repair",
+      "hero": "brakes.jpg",
+      "navLabel": "Brakes",
+      "kicker": "Brakes",
+      "heading": "Mobile brake repair in Baton Rouge.",
+      "intro": "Squealing, grinding, a pulsing pedal or a car that pulls when you stop — pads, rotors and calipers replaced in your driveway.",
+      "seoTitle": "Mobile Brake Repair Baton Rouge LA | TopOne Mobile Mechanic",
+      "seoDescription": "Brake pads, rotors and calipers replaced at your home or work in Baton Rouge, Central, Prairieville and Denham Springs.",
+      "service": "Mobile brake repair",
+      "sections": [
+        {
+          "kicker": "Signs",
+          "heading": "What your brakes are telling you.",
+          "body": "A high squeal often means the pad wear indicator is touching. Grinding means the pad is gone and metal is on metal — stop driving it if you can. A pulsing pedal usually means warped rotors, and pulling to one side can be a sticking caliper."
+        },
+        {
+          "kicker": "On site",
+          "heading": "Flat pavement and an hour or two.",
+          "body": "Most pad and rotor jobs take an hour or two per axle on a flat driveway or parking lot. Calipers and brake lines take a bit longer and include bleeding the system."
+        },
+        {
+          "kicker": "Don't wait",
+          "heading": "Grinding gets expensive.",
+          "body": "Pads caught early are a simple job. Driving on metal chews up the rotor and can damage the caliper, which turns a pad swap into a much bigger repair."
+        }
+      ],
+      "ctaHeadline": "Brakes making noise?"
+    },
+    {
+      "slug": "car-wont-start",
+      "hero": "battery.jpg",
+      "navLabel": "Won't start",
+      "kicker": "No-start",
+      "heading": "Car won't start in Baton Rouge? We come to you.",
+      "intro": "A click, a slow crank or nothing at all. We find out whether it is the battery, the cables, the starter or something else, and fix it where the car sits.",
+      "seoTitle": "Car Won't Start Baton Rouge | Mobile Battery & Starter | TopOne",
+      "seoDescription": "Mobile no-start repair in Baton Rouge: dead batteries, starters, cables and ignition problems diagnosed and fixed at your home or work.",
+      "service": "No-start diagnosis and battery replacement",
+      "sections": [
+        {
+          "kicker": "Heat",
+          "heading": "Louisiana summers kill batteries.",
+          "body": "Heat is harder on a car battery than cold. Many batteries in south Louisiana give out after a few summers, often with little warning. A slow crank on a hot morning is the usual first sign."
+        },
+        {
+          "kicker": "Click or crank",
+          "heading": "What the sound tells us.",
+          "body": "Rapid clicking usually points to a weak battery or bad connection. One loud click and nothing can be the starter. Cranking but not firing is a fuel, spark or sensor problem — diagnosable on site in many cases."
+        },
+        {
+          "kicker": "Before you call a tow",
+          "heading": "Most no-starts do not need one.",
+          "body": "A battery, cable or starter can almost always be replaced in a driveway or parking lot. Call first — it may save you the tow and the shop wait."
+        }
+      ],
+      "ctaHeadline": "Stuck in the driveway?"
+    },
+    {
+      "slug": "check-engine-light-diagnostics",
+      "hero": "diagnostics.jpg",
+      "navLabel": "Check engine light",
+      "kicker": "Diagnostics",
+      "heading": "Check engine light diagnostics in Baton Rouge.",
+      "intro": "A code is a starting point, not an answer. We read it, test the parts it points to, and explain what is actually wrong before anything gets replaced.",
+      "seoTitle": "Check Engine Light Diagnostics Baton Rouge | TopOne Mobile",
+      "seoDescription": "Mobile check engine light diagnostics in Baton Rouge. Code scans, testing and repair of sensors, ignition and emissions problems on site.",
+      "service": "Check engine light diagnostics",
+      "sections": [
+        {
+          "kicker": "Steady or flashing",
+          "heading": "A flashing light means slow down now.",
+          "body": "A steady check engine light means something is out of range and should be looked at soon. A flashing light usually means the engine is misfiring badly enough to damage the catalytic converter. Drive gently and get it checked right away."
+        },
+        {
+          "kicker": "Codes",
+          "heading": "Why a free code read is not a diagnosis.",
+          "body": "A parts store scan tells you which system is complaining, not which part failed. An oxygen sensor code can be a bad sensor, a vacuum leak or a wiring problem. Testing is what keeps you from buying parts you did not need."
+        },
+        {
+          "kicker": "Common fixes",
+          "heading": "Many are done on the spot.",
+          "body": "Loose gas caps, spark plugs, ignition coils, sensors and vacuum leaks are common causes, and most can be repaired in a driveway once they are found."
+        }
+      ],
+      "ctaHeadline": "Light on the dash?"
+    },
+    {
+      "slug": "alternator-and-starter-replacement",
+      "hero": "hero-mobile-mechanic.jpg",
+      "navLabel": "Alternators & starters",
+      "kicker": "Charging and starting",
+      "heading": "Mobile alternator and starter replacement in Baton Rouge.",
+      "intro": "Dim lights, a battery light on the dash, a car that dies while driving or will not crank — tested and replaced on site.",
+      "seoTitle": "Alternator & Starter Replacement Baton Rouge | TopOne Mobile",
+      "seoDescription": "Mobile alternator and starter testing and replacement in Baton Rouge, Central, Zachary and Denham Springs. Repaired at your home or work.",
+      "service": "Alternator and starter replacement",
+      "sections": [
+        {
+          "kicker": "Alternator",
+          "heading": "When the battery keeps dying.",
+          "body": "If a new battery keeps going flat, the alternator may not be charging it. Dimming lights, a battery warning light and a whining noise from the engine are other signs. A quick test tells us which part has failed."
+        },
+        {
+          "kicker": "Starter",
+          "heading": "One click and nothing.",
+          "body": "A starter on its way out often clicks, grinds or works only some of the time. On most cars it can be replaced in a driveway."
+        }
+      ],
+      "ctaHeadline": "Battery light on?"
+    },
+    {
+      "slug": "pre-purchase-car-inspection",
+      "hero": "diagnostics.jpg",
+      "navLabel": "Pre-purchase inspection",
+      "kicker": "Used car inspection",
+      "heading": "Pre-purchase car inspections in Baton Rouge.",
+      "intro": "Before you hand over the money for a used car, have a mechanic look it over at the seller's driveway or the lot.",
+      "seoTitle": "Pre-Purchase Car Inspection Baton Rouge | TopOne Mobile Mechanic",
+      "seoDescription": "Mobile pre-purchase used car inspections in Baton Rouge. A mechanic checks the car at the seller's location before you buy.",
+      "service": "Pre-purchase vehicle inspection",
+      "sections": [
+        {
+          "kicker": "What we look at",
+          "heading": "The things a test drive does not show.",
+          "body": "Stored and pending codes, fluid condition, leaks, brakes, tires, suspension, belts and hoses, signs of accidents and signs of flood damage."
+        },
+        {
+          "kicker": "Flood cars",
+          "heading": "A real risk in south Louisiana.",
+          "body": "After every major storm, flood-damaged cars end up for sale. Musty smells, silt under the carpet, corrosion in odd places and fogged lights are warning signs. A vehicle history report helps, but it does not catch everything."
+        }
+      ],
+      "ctaHeadline": "Looking at a used car?"
+    },
+    {
+      "slug": "fleet-mobile-mechanic",
+      "hero": "hero-mobile-mechanic.jpg",
+      "navLabel": "Fleet & work trucks",
+      "kicker": "Fleet service",
+      "heading": "Mobile fleet service for Baton Rouge businesses.",
+      "intro": "Contractors, delivery businesses and service companies — brakes, batteries and repairs done at your yard, so the truck is not gone for a day at the shop.",
+      "seoTitle": "Mobile Fleet Mechanic Baton Rouge LA | TopOne Mobile Mechanic",
+      "seoDescription": "On-site fleet repair and maintenance for work trucks and company vehicles in Baton Rouge and the surrounding parishes.",
+      "service": "Mobile fleet repair",
+      "sections": [
+        {
+          "kicker": "Downtime",
+          "heading": "The truck stays at the yard.",
+          "body": "Dropping a work truck at a shop means a driver off the road twice and a vehicle gone for the day. Repairs at your lot, early or after the trucks come in, keep the schedule intact."
+        },
+        {
+          "kicker": "Scheduling",
+          "heading": "Line up several at once.",
+          "body": "If more than one vehicle needs brakes or a battery, schedule them together and they can be done in one visit."
+        }
+      ],
+      "ctaHeadline": "Running a few trucks?"
+    },
+    {
+      "slug": "central-and-denham-springs",
+      "hero": "battery.jpg",
+      "navLabel": "Central & Denham Springs",
+      "kicker": "Central and Denham Springs",
+      "heading": "Mobile mechanic in Central, Denham Springs and Walker.",
+      "intro": "East and north of Baton Rouge, repairs at home so you are not driving a car with bad brakes across the river or up the interstate.",
+      "seoTitle": "Mobile Mechanic Central & Denham Springs LA | TopOne Mobile",
+      "seoDescription": "Mobile auto repair in Central, Denham Springs and Walker, LA. Brakes, batteries, starters and diagnostics at your home or work.",
+      "service": "Mobile mechanic in Central and Denham Springs",
+      "sections": [
+        {
+          "kicker": "Out this way",
+          "heading": "Long drives to the shop.",
+          "body": "From Central or Walker, a shop visit can mean a long drive each way, twice. A mobile repair means the car never leaves your driveway."
+        }
+      ],
+      "ctaHeadline": "Out in Central or Livingston?"
+    },
+    {
+      "slug": "prairieville-and-gonzales",
+      "hero": "brakes.jpg",
+      "navLabel": "Prairieville & Gonzales",
+      "kicker": "Prairieville and Gonzales",
+      "heading": "Mobile mechanic in Prairieville and Gonzales.",
+      "intro": "Ascension Parish — brakes, batteries and no-starts fixed at home or at work.",
+      "seoTitle": "Mobile Mechanic Prairieville & Gonzales LA | TopOne Mobile",
+      "seoDescription": "Mobile auto repair in Prairieville and Gonzales, LA. Brakes, batteries, alternators, starters and check engine diagnostics on site.",
+      "service": "Mobile mechanic in Ascension Parish",
+      "sections": [
+        {
+          "kicker": "Commuters",
+          "heading": "Fix it while you work.",
+          "body": "A lot of Ascension Parish commutes into Baton Rouge or the plants along the river. If your employer allows it, the repair can be done in the parking lot while you are on shift."
+        }
+      ],
+      "ctaHeadline": "In Ascension Parish?"
+    },
+    {
+      "slug": "request-a-quote",
+      "navLabel": "Request a quote",
+      "kicker": "Quote",
+      "heading": "Request a repair quote.",
+      "intro": "Tell us the car and what it is doing, and we will get back to you with a price and a time.",
+      "seoTitle": "Mobile Mechanic Quote Baton Rouge | TopOne Mobile Mechanic",
+      "seoDescription": "Request a quote for mobile auto repair in Baton Rouge, Central, Denham Springs or Prairieville. Brakes, batteries, starters and more.",
+      "service": "Repair quote requests",
+      "sections": [
+        {
+          "kicker": "What we need",
+          "heading": "Year, make, model and the symptom.",
+          "body": "With the year, make, model, engine if you know it, and a description of the problem — the noise, the light, when it happens — we can price the part and the labor and tell you whether it is a job we can do on site."
+        }
+      ],
+      "ctaHeadline": "Let's get you a price."
+    }
+  ]
+}
