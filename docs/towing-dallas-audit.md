@@ -11,7 +11,7 @@ average position of **14.3**.
 
 Position 14.3 is the top of page two on real volume. That single number is the
 most valuable fact in this audit, and it means the work here is *not* the same
-work as Twin City Fences. Twin City may be starting from nothing. Dallas is
+work as Twin City Fence. Twin City may be starting from nothing. Dallas is
 already visible and failing to convert that visibility into clicks.
 
 Overall CTR is **0.137%**. That is not a broken site — it is what page two

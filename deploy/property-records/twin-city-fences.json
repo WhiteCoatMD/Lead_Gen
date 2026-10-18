@@ -6,14 +6,14 @@
   "identity": {
     "canonical_business_name": "Twin City Fence",
     "name_on_gbp": "Twin City Fence",
-    "name_on_our_site": "Twin City Fences",
+    "name_on_our_site": "Twin City Fence",
     "domain": "twincityfences.com",
     "canonical_url": "https://twincityfences.com/",
     "gbp_share_link": "https://share.google/bg28FSlPYt1IFmVG3",
     "gbp_kgmid": "/g/11fpss007l",
     "gbp_place_id": null,
     "_place_id_note": "The 2026-10-18 share link redirects to the same kgmid as the older share link (https://share.google/XTGZHFfX2djw0blDD). It opens a Search knowledge panel, not a google.com/maps place URL, so gbp_place_id is still unknown. The 2026-09-21 claim that this is a hidden-address service-area business is outdated.",
-    "_name_note": "2026-09-21: the Google listing title was Twin City Fence (singular). 2026-10-18: the website name is Twin City Fences, and that is what the site publishes. Do not rename the site back to the singular."
+    "_name_note": "Canonical name is Twin City Fence, matching the Google Business Profile. The website used the plural until 2026-10-18, then was changed to the singular. Domain stays twincityfences.com. Do not put the plural back on the site."
   },
   "nap": {
     "city": "West Monroe",
@@ -34,9 +34,9 @@
       "fix": "Set city to West Monroe in site.json and keep Monroe as a service area."
     },
     "business_name": {
-      "severity": "fixed 2026-09-21",
-      "detail": "Split across the web. 'Twin City Fence' on the GBP, Facebook and Porch; 'Twin City Fences' on Yelp, MapQuest, ChamberofCommerce, YouTube and our own site.",
-      "fix": "The GBP spelling normally wins, because it is the one Google matches citations against. That argues for 'Twin City Fence' everywhere — but it is the owner's business name and his call."
+      "severity": "fixed on the site 2026-10-18",
+      "detail": "Split across the web. 'Twin City Fence' on the GBP, Facebook and Porch; 'Twin City Fences' on Yelp, MapQuest, ChamberofCommerce and YouTube. The website used the plural until 2026-10-18.",
+      "fix": "The site, titles, footer and schema now say Twin City Fence, matching the GBP. Directory listings that still use the plural should be corrected to Twin City Fence. Domain stays twincityfences.com."
     },
     "street_address": {
       "severity": "superseded 2026-10-18",
