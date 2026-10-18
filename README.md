@@ -53,7 +53,7 @@ consistent `tel:` links, service and service-area sections, local assets,
 
 ## Planned sites
 
-- Twin City Fences
+- Twin City Fence
 - Lake Charles Fences and Decks
 - Chicago EIFS and Stucco
 - Stucco Repair Chicago
