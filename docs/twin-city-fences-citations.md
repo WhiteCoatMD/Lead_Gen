@@ -6,6 +6,10 @@ hand* in that directory's own dashboard — none of it can be automated, and a
 citation service would only re-submit the same data, not fix what is already
 published.
 
+**Address update, 2026-10-18.** Mitch confirmed that the site and citations
+should publish **205 Mane St, Ste C, West Monroe, LA 71292**. The September
+instruction to hide that street address is outdated. Do not remove it.
+
 ## The canonical record
 
 Everything else has to match this. It is the Google Business Profile, because
@@ -14,33 +18,21 @@ that is what Google matches citations against.
 | Field | Value |
 |---|---|
 | Name | **Twin City Fence** (singular) |
-| Street address | **do not publish — see below** |
+| Street address | **205 Mane St, Ste C, West Monroe, LA 71292** (publish; confirmed 2026-10-18) |
 | City | West Monroe, LA 71292 |
 | Phone | 318-351-2539 |
 | Website | https://twincityfences.com |
 | Email | twincityfences@gmail.com |
 
-## The address is the important part
+## The address is published
 
-Four citations publish **205 Mane St, Suite C**. The Google Business Profile
-deliberately does not, because another fence company operates at that address
-and the conflict suppressed the listing until the address was hidden.
+Mitch confirmed on 2026-10-18 that **205 Mane St, Ste C, West Monroe, LA 71292**
+is the address to publish on twincityfences.com and in citations.
 
-That makes this a service-area business, and the correct NAP for one is **name
-+ phone + service area, with no street address**.
-
-Publishing the street address on citations works against the fix: it keeps
-feeding Google the association between this business and an address shared
-with a competitor in the same trade. It is also why the profile does not
-appear in the Places API at all.
-
-**So the correction is to remove the street address where the directory
-allows it, keeping West Monroe, LA 71292.** Where a directory insists on a
-street address, leaving it is not a disaster — but it should not be added
-anywhere new.
-
-This reverses what the first version of the property record said. It had the
-missing address logged as a defect to fix, which was exactly backwards.
+A 2026-09-21 note said the opposite: hide the street because another fence
+company at that address had suppressed the Google listing. That note is
+outdated. Keep the street address where a directory already shows it, and use
+it when a listing is missing one.
 
 ## Corrections, most valuable first
 
@@ -51,7 +43,7 @@ missing address logged as a defect to fix, which was exactly backwards.
   site. It may well be true, but it is currently an unverifiable claim sitting
   on a third-party listing, and it is the kind of thing that has to come off
   or be substantiated. **Confirm it before it gets repeated anywhere else.**
-- Address: 205 Mane St Ste C → remove, keep West Monroe, LA 71292.
+- Address: keep **205 Mane St, Ste C, West Monroe, LA 71292**. Do not remove it.
 
 ### 2. ChamberofCommerce.com
 - Listed as "Twin City Fences" → **Twin City Fence**.
@@ -88,14 +80,16 @@ or the profile:
 > Louisiana. We also fit gates, replace fences, and repair storm damage.
 >
 > Call 318-351-2539
+> 205 Mane St, Ste C, West Monroe, LA 71292
 > twincityfences.com
 
-Also set the channel link to `https://twincityfences.com` and the business
-email to `twincityfences@gmail.com`. No street address, for the reason above.
+Also set the channel link to `https://twincityfences.com`, the business
+email to `twincityfences@gmail.com`, and the address to 205 Mane St, Ste C,
+West Monroe, LA 71292.
 
 ### 5. Facebook — name is right
 - Listed as "Twin City Fence | West Monroe LA". Name matches, phone matches.
-- Publishes 205 Mane St Suite C → remove the street address, keep the city.
+- Publishes 205 Mane St Suite C. Keep it. The current form to match is **205 Mane St, Ste C, West Monroe, LA 71292**.
 - 770+ followers, so this is the most-seen citation after Google. Worth
   getting exactly right.
 
@@ -115,12 +109,15 @@ most for a business whose leads arrive by telephone. The name is the field
 that is wrong nearly everywhere, and the one Google uses to decide whether two
 listings describe the same business.
 
+The street-address row in that scorecard followed the withdrawn hide-address
+instruction. Consistency now means publishing 205 Mane St, Ste C.
+
 ## What NOT to do
 
 - **Do not buy a citation-building package for this business yet.** Six
   citations already exist and four of them are wrong. Adding forty more before
   fixing six means paying to spread the error.
-- **Do not create new listings with the street address.** See above.
+- **Do not strip 205 Mane St, Ste C from a listing.** That instruction was withdrawn on 2026-10-18.
 - **Do not repeat the "20 years" claim** anywhere until it is confirmed.
 
 ## Then, and only then

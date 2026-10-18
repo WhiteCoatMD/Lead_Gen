@@ -934,10 +934,13 @@
     "longitude": -92.17381
   },
   "_geoNote": "US Census Bureau geocoder, Public_AR_Current address-range match for 205 Mane St, West Monroe, LA 71292, retrieved 2026-10-18. Not a surveyed rooftop pin.",
-  "gbpUrl": "",
-  "hasMap": "",
-  "sameAs": [],
-  "_gbpNote": "Paste the Google Business Profile or Maps URL into gbpUrl. Left blank so schema does not invent a link. An older note in this repo said the address was hidden to resolve a conflict with another fence company at the same street. This build publishes it because the current brief says 205 Mane St, Ste C is the GBP address. Confirm that before relying on it.",
+  "gbpUrl": "https://share.google/bg28FSlPYt1IFmVG3",
+  "hasMap": "https://share.google/bg28FSlPYt1IFmVG3",
+  "sameAs": [
+    "https://share.google/bg28FSlPYt1IFmVG3"
+  ],
+  "_gbpNote": "Owner-supplied Google share link, confirmed 2026-10-18. It redirects to a Search knowledge panel for kgmid /g/11fpss007l (Twin City Fence). A canonical google.com/maps place URL could not be resolved. Do not replace this with a generic Maps search.",
+  "_addressNote": "Mitch confirmed 2026-10-18: publish 205 Mane St, Ste C, West Monroe, LA 71292. The 2026-09-21 note that said to hide this address is outdated.",
   "_hoursNote": "Leave hours unset until they are confirmed for this business. MapQuest has listed weekday and Saturday hours; those figures are not in this repo as a confirmed schedule, so they are not published.",
   "updated": "2026-10-18",
   "footerNav": true,

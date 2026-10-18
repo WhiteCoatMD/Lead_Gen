@@ -1510,10 +1510,13 @@
     "longitude": -96.8416
   },
   "_geoNote": "US Census Bureau geocoder, Public_AR_Current address-range match for 1241 Willow Glen Dr, Dallas, TX 75232, retrieved 2026-10-18. Not a surveyed rooftop pin.",
-  "gbpUrl": "",
-  "hasMap": "",
-  "sameAs": [],
-  "_gbpNote": "Paste the Google Business Profile or Maps URL into gbpUrl. hasMap uses it when set. Left blank so the schema does not invent a link.",
+  "_addressNote": "Mitch confirmed 2026-10-18 that 1241 Willow Glen Dr, Dallas, TX 75232 is the real staffed address. Keep it published.",
+  "gbpUrl": "https://share.google/mj4rnP282LSQAxJe4",
+  "hasMap": "https://share.google/mj4rnP282LSQAxJe4",
+  "sameAs": [
+    "https://share.google/mj4rnP282LSQAxJe4"
+  ],
+  "_gbpNote": "Owner-supplied Google share link, confirmed 2026-10-18. It redirects to a Search knowledge panel for kgmid /g/11n0wm6t8m (24 Hour Towing Dallas). A canonical google.com/maps place URL could not be resolved: Maps requests with that kgmid did not land on a /maps/place/ page. Do not replace this with a generic Maps search.",
   "license": {
     "label": "Texas TDLR towing license",
     "number": ""
