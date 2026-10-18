@@ -8,6 +8,31 @@ import path from "node:path";
 const unescapeXml = (s) =>
   s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, "&");
 
+const escapeXml = (s) =>
+  String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
+
+// Pages that answer 200 at their own URL. A duplicate that only exists to
+// point a canonical elsewhere, or a page flagged out of the sitemap, is not
+// listed. Redirects live in site.redirects, not in this list.
+export function indexablePages(pages = []) {
+  return pages.filter((page) => page?.slug && !page.canonicalTo && page.sitemap !== false);
+}
+
+export function sitemapXml(domain, pages, updated) {
+  const homeMod = ISO_DATE.test(updated || "") ? `<lastmod>${updated}</lastmod>` : "";
+  const entries = [
+    `<url><loc>https://${escapeXml(domain)}/</loc>${homeMod}</url>`,
+    ...indexablePages(pages).map((page) => {
+      const mod = page.updated || updated;
+      const lastmod = ISO_DATE.test(mod || "") ? `<lastmod>${mod}</lastmod>` : "";
+      return `<url><loc>https://${escapeXml(domain)}/${escapeXml(page.slug)}</loc>${lastmod}</url>`;
+    }),
+  ];
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${entries.join("")}</urlset>\n`;
+}
+
 // Only URLs on `host` are kept: IndexNow rejects a submission containing a URL
 // on any other host, and a sitemap should never contain one anyway.
 export function sitemapUrls(xml, host) {

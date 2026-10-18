@@ -81,6 +81,30 @@ export function renderPermitGuide(site, permit, links) {
     </section>`;
 }
 
+// Opt-in via site.linkPlanningTools. Service pages (kind: "service") pick up
+// the calculator and permit guides; every other site renders nothing here.
+export function renderPlanningLinks(site, page) {
+  if (!site.linkPlanningTools || page?.kind !== "service") return "";
+  const guides = toolPages(site, "fence-permit");
+  const calc = toolPages(site, "fence-calculator");
+  if (!guides.length && !calc.length) return "";
+  const links = [
+    ...calc.map((item) => `<a href="/${esc(item.slug)}">${esc(item.navLabel || "fence calculator")}</a>`),
+    ...guides.map((item) => `<a href="/${esc(item.slug)}">${esc(item.navLabel || item.heading)}</a>`),
+  ];
+  return `<section class="shell intro"><div><p class="eyebrow accent">Before you build</p><h2>Permits and materials.</h2></div><p>The permit guides cite the city and parish rules, and the calculator counts posts, rails and pickets. ${links.join(". ")}.</p></section>`;
+}
+
+// Rows come from site.priceGuide. An empty list renders nothing, so a cost
+// page can explain what drives price without publishing a number nobody confirmed.
+export function renderPriceGuide(site) {
+  const rows = (site.priceGuide || []).filter((row) => row?.material && row?.range);
+  if (!rows.length) return "";
+  return `<section class="shell intro"><div><p class="eyebrow accent">Planning figures</p><h2>Typical ranges, not a quote.</h2></div><div><table class="calc-table"><thead><tr><th>Fence</th><th>Typical range</th><th>Notes</th></tr></thead><tbody>${
+    rows.map((row) => `<tr><td>${esc(row.material)}</td><td>${esc(row.range)}</td><td>${esc(row.note || "")}</td></tr>`).join("")
+  }</tbody></table><p class="fineprint">These are labeled estimates for planning. The price for a property is the one given after the line is walked.</p></div></section>`;
+}
+
 export function renderPermitLinks(site) {
   const pages = [...toolPages(site, "fence-calculator"), ...toolPages(site, "fence-permit")];
   if (!pages.length) return "";

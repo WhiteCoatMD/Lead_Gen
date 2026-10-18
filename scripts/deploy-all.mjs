@@ -39,11 +39,13 @@ for (const slug of slugs) {
     // in the uploaded directory overrides both, so one project accepts
     // deploys from git and from here. Written at deploy time because
     // `npm run build` wipes dist/.
-    await fs.writeFile(
-      path.join(dir, "vercel.json"),
-      JSON.stringify({ buildCommand: null, outputDirectory: "." }, null, 2) + "\n",
-      "utf8"
-    );
+    // Keep redirects the build wrote. Overwriting the whole file used to drop
+    // them, so a CLI deploy of an already-built site served the duplicate URLs.
+    let builtConfig = {};
+    try { builtConfig = JSON.parse(await fs.readFile(path.join(dir, "vercel.json"), "utf8")); } catch { /* none yet */ }
+    const vercelConfig = { buildCommand: null, outputDirectory: "." };
+    if (Array.isArray(builtConfig.redirects) && builtConfig.redirects.length) vercelConfig.redirects = builtConfig.redirects;
+    await fs.writeFile(path.join(dir, "vercel.json"), JSON.stringify(vercelConfig, null, 2) + "\n", "utf8");
     // The serverless functions live in api/ at the repo root, which a git
     // build picks up automatically. This path does not: it uploads only
     // dist/<slug>, so without this copy the deployment ships the site and
