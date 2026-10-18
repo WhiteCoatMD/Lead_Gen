@@ -1,4 +1,4 @@
-import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./render-site.mjs";
+import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd, displayPhone } from "./render-site.mjs";
 import { businessId, openingHoursSpecification, postalAddress, primaryImage, productCatalog, serviceCatalog } from "./schema.mjs";
 
 // A counter-service / retail template for businesses people visit or order
@@ -20,7 +20,8 @@ const STATE_CODES = { Alabama: "AL", Arizona: "AZ", Arkansas: "AR", California: 
 const stateCode = (state = "") => STATE_CODES[state] || (state.length === 2 ? state.toUpperCase() : state);
 
 export function renderShop(site) {
-  const tel = phoneHref(site.phone);
+  const shown = displayPhone(site);
+  const tel = phoneHref(shown);
   const areas = site.serviceAreas || [site.city];
   const groups = site.menu || [];
 
@@ -102,7 +103,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
   <style>:root{--accent:${esc(site.accent || "#e5288f")};--accent-dark:${esc(site.accentDark || "#b41d6f")}}</style>
   <script type="application/ld+json">${jsonLd(schema)}</script>
 </head><body>
-  <div class="topbar"><p>${esc(site.kicker || `Serving ${areas.slice(0, 3).join(", ")}`)}</p><a href="${tel}">Call ${esc(site.phone)}</a></div>
+  <div class="topbar"><p>${esc(site.kicker || `Serving ${areas.slice(0, 3).join(", ")}`)}</p><a href="${tel}">Call ${esc(shown)}</a></div>
   <header>
     <a class="brand${site.logo ? "" : " brand-wordmark"}" href="#top" aria-label="${esc(site.name)} home">${brand}</a>
     <nav id="site-nav" aria-label="Primary">
@@ -115,7 +116,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
       <div class="shell">
         <h1>${esc(site.headline)}</h1>
         ${site.intro ? `<p class="lede">${esc(site.intro)}</p>` : ""}
-        <a class="button primary" href="${tel}">${esc(site.primaryCta || `Call ${site.phone}`)}</a>
+        <a class="button primary" href="${tel}">${esc(site.primaryCta || `Call ${shown}`)}</a>
       </div>
     </section>
     ${site.about ? `<section class="shell about"><p>${esc(site.about)}</p></section>` : ""}
@@ -131,7 +132,7 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
           <p class="eyebrow">${esc(site.visitKicker || "Visit us")}</p>
           <h2>${esc(site.areaHeadline || "Come see us")}</h2>
           ${site.streetAddress ? `<address>${esc(site.streetAddress)}<br>${esc(site.city)}, ${esc(stateCode(site.state))} ${esc(site.postalCode || "")}</address>` : ""}
-          <a class="phone" href="${tel}">${esc(site.phone)}</a>
+          <a class="phone" href="${tel}">${esc(shown)}</a>
           ${site.email ? `<a class="email" href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}
         </div>
         ${hours ? `<div class="hours"><h3>Hours</h3><dl>${hours}</dl></div>` : ""}
@@ -145,6 +146,6 @@ ${site.logo ? `  <link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}"
     </section>
   </main>
   <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine || `Serving ${areas.join(", ")}.`)}</p></div></footer>
-  <a class="mobile-call" href="${tel}">Call now · ${esc(site.phone)}</a><script src="/site.js" defer></script>
+  <a class="mobile-call" href="${tel}">Call now · ${esc(shown)}</a><script src="/site.js" defer></script>
 </body></html>`;
 }

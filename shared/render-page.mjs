@@ -1,9 +1,9 @@
-import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd, ANALYTICS_SCRIPT } from "./render-site.mjs";
-import { businessId } from "./schema.mjs";
+import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd, ANALYTICS_SCRIPT, displayPhone, renderNav, renderFooter, napBlock } from "./render-site.mjs";
+import { areaNames, businessId } from "./schema.mjs";
 import { DIAGRAMS } from "./render-diagram.mjs";
 import { renderFaq } from "./render-faq.mjs";
 import { renderLeadForm, LEAD_FORM_SCRIPT } from "./render-form.mjs";
-import { renderCalculator, renderPermitGuide } from "./render-tools.mjs";
+import { renderCalculator, renderPermitGuide, renderPlanningLinks, renderPriceGuide } from "./render-tools.mjs";
 
 /**
  * A secondary page on a site whose main template is a single scrolling page.
@@ -29,8 +29,27 @@ import { renderCalculator, renderPermitGuide } from "./render-tools.mjs";
  * pages built to recover search traffic were the ones nobody could measure —
  * and a page that is not measured cannot be judged.
  */
+
+function renderRelated(site, siblings) {
+  if (!siblings.length) return "";
+  const link = (other) => `<span><a href="/${esc(other.slug)}">${esc(other.navLabel || other.heading)}</a></span>`;
+  // Sites that have not classified pages keep the single list they have always
+  // had. Splitting is opt-in via `kind` so the rest of the portfolio is unchanged.
+  if (!siblings.some((other) => other.kind)) {
+    return `<section class="shell areas"><div class="areas-inner"><div><p class="eyebrow">More from ${esc(site.name)}</p><h2>Other services.</h2></div><div class="area-list">${siblings.map(link).join("")}</div></div></section>`;
+  }
+  const services = siblings.filter((other) => other.kind === "service" || !other.kind);
+  const places = siblings.filter((other) => other.kind === "area");
+  const info = siblings.filter((other) => other.kind === "info");
+  const block = (eyebrow, heading, items) => items.length
+    ? `<section class="shell areas"><div class="areas-inner"><div><p class="eyebrow">${esc(eyebrow)}</p><h2>${esc(heading)}</h2></div><div class="area-list">${items.map(link).join("")}</div></div></section>`
+    : "";
+  return block(`More from ${site.name}`, "Other services.", services) + block("Service area", "Cities we cover.", places) + block(site.name, "More pages.", info);
+}
+
 export function renderPage(site, page, slug = "", extras = {}) {
-  const areaNames = site.serviceAreas || [site.city];
+  const areas = areaNames(site);
+  const phone = displayPhone(site);
   const url = `https://${site.domain}/${page.slug}`;
   // A page may point its canonical at a different URL. Needed where two URLs
   // carry the same content because both were once live: Search Console shows
@@ -59,12 +78,8 @@ export function renderPage(site, page, slug = "", extras = {}) {
   // has somewhere to go and the rebuilt pages are not orphans.
   // The calculator and permit guides are not services; they get their own
   // links, so they stay out of this list.
-  const siblings = (site.pages || []).filter((other) => other.slug !== page.slug && other.type !== "fence-calculator" && other.type !== "fence-permit");
-  const related = siblings.length
-    ? `<section class="shell areas"><div class="areas-inner"><div><p class="eyebrow">More from ${esc(site.name)}</p><h2>Other services.</h2></div><div class="area-list">${
-        siblings.map((other) => `<span><a href="/${esc(other.slug)}">${esc(other.navLabel || other.heading)}</a></span>`).join("")
-      }</div></div></section>`
-    : "";
+  const siblings = (site.pages || []).filter((other) => other.slug !== page.slug && !other.canonicalTo && other.sitemap !== false && other.type !== "fence-calculator" && other.type !== "fence-permit");
+  const related = renderRelated(site, siblings);
 
   // Breadcrumbs give the page a place in the site rather than leaving it
   // floating, and they are one of the few rich results a service page can win.
@@ -87,7 +102,7 @@ export function renderPage(site, page, slug = "", extras = {}) {
         name: page.service,
         description: page.seoDescription,
         provider: { "@id": businessId(site) },
-        areaServed: areaNames.map((name) => ({ "@type": "Place", name })),
+        areaServed: (Array.isArray(page.areaServed) && page.areaServed.length ? page.areaServed : areas).map((name) => ({ "@type": "Place", name })),
         url,
       }
     : null;
@@ -125,14 +140,14 @@ export function renderPage(site, page, slug = "", extras = {}) {
   <script type="application/ld+json">${jsonLd(breadcrumb)}</script>
   ${serviceSchema ? `<script type="application/ld+json">${jsonLd(serviceSchema)}</script>` : ""}
 </head><body${page.type === "fence-calculator" ? ' class="calc-page"' : ""}>
-  <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p>${site.phone ? `<a href="${phoneHref(site.phone)}">Call ${esc(site.phone)}</a>` : ""}</div>
+  <div class="topbar"><p>Serving ${esc(areas.slice(0, 3).join(", "))}</p>${phone ? `<a href="${phoneHref(phone)}">Call ${esc(phone)}</a>` : ""}</div>
   <header>
     <a class="brand${site.logo ? "" : " brand-wordmark"}" href="/" aria-label="${esc(site.name)} home">${brand}</a>
     <nav id="site-nav" aria-label="Primary">
-      <a href="/">Home</a><a href="/#services">Services</a><a href="/#areas">Service area</a>
+      ${renderNav(site)}
     </nav>
     <div class="header-actions">
-      ${site.phone ? `<a class="nav-call" href="${phoneHref(site.phone)}">${esc(site.navCall || "Free estimate")}</a>` : ""}
+      ${phone ? `<a class="nav-call" href="${phoneHref(phone)}">${esc(site.navCall || "Free estimate")}</a>` : ""}
       <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -142,7 +157,7 @@ export function renderPage(site, page, slug = "", extras = {}) {
         <p class="eyebrow">${esc(page.kicker || site.kicker)}</p>
         <h1>${esc(page.heading)}</h1>
         <p class="hero-copy">${esc(page.intro)}</p>
-        <div class="actions">${site.phone ? `<a class="button primary" href="${phoneHref(site.phone)}">${esc(site.primaryCta || "Call for a free estimate")}</a>` : ""}<a class="button ${site.phone ? "ghost" : "primary"}" href="/#services">All services</a></div>
+        <div class="actions">${phone ? `<a class="button primary" href="${phoneHref(phone)}">${esc(site.primaryCta || "Call for a free estimate")}</a>` : ""}<a class="button ${phone ? "ghost" : "primary"}" href="/#services">All services</a></div>
       </div>
     </section>
     ${tool}
@@ -150,11 +165,11 @@ export function renderPage(site, page, slug = "", extras = {}) {
     ${page.diagram && DIAGRAMS[page.diagram] ? `<section class="shell intro">${DIAGRAMS[page.diagram](site)}</section>` : ""}
     ${page.faqs ? renderFaq({ ...site, faqs: page.faqs, faqHeading: page.faqHeading || "Questions about this.", faqKicker: "Common questions" }) : ""}
     ${points}
-    ${related}
+    ${page.type === "cost-guide" ? renderPriceGuide(site) : ""}${renderPlanningLinks(site, page)}${related}
     ${renderLeadForm(site, slug, `/${page.slug}`)}
-    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(page.ctaHeadline || site.ctaHeadline)}</h2><p>${esc(page.ctaCopy || site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(site.phone)}">${esc(site.phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
+    ${phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(page.ctaHeadline || site.ctaHeadline)}</h2><p>${esc(page.ctaCopy || site.ctaCopy)}</p></div><div class="contact-card">${napBlock(site) ? `<address class="nap">${esc(napBlock(site).street)}<br>${esc(napBlock(site).cityLine)}</address>` : ""}${phone ? `<a class="phone" href="${phoneHref(phone)}">${esc(phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areas.join(", "))}.</p></div></section>` : ""}
   </main>
-  <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>
-  ${site.phone ? `<a class="mobile-call" href="${phoneHref(site.phone)}">Call now · ${esc(site.phone)}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}${page.type === "fence-calculator" ? `<script type="module" src="/fence-calc-ui.mjs"></script>` : ""}
+  ${renderFooter(site)}
+  ${phone ? `<a class="mobile-call" href="${phoneHref(phone)}">Call now · ${esc(phone)}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}${page.type === "fence-calculator" ? `<script type="module" src="/fence-calc-ui.mjs"></script>` : ""}
 </body></html>`;
 }

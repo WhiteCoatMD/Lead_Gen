@@ -1,4 +1,5 @@
 import { escapeHtml as esc } from "./render-site.mjs";
+import { areaNames } from "./schema.mjs";
 
 /**
  * The lead form, and the script that submits it.
@@ -28,7 +29,7 @@ export function renderLeadForm(site, slug, pagePath = "/") {
   if (!cfg) return "";
 
   const services = (site.services || []).map((s) => s.title);
-  const areas = site.serviceAreas || [site.city];
+  const areas = areaNames(site);
 
   return `
     <section class="shell leadform" id="quote">

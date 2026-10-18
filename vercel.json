@@ -1,0 +1,499 @@
+{
+  "redirects": [
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/services1",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/services1/",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about-us",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact-us",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/services1",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/services1/",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about-us",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact-us",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.dallastowtrucks.com"
+        }
+      ]
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "towing-dallas.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/services1",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "towing-dallas.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/services1/",
+      "destination": "/services",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "towing-dallas.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about-us",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "towing-dallas.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact-us",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "towing-dallas.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "towing-dallas.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/wooden-fences.html",
+      "destination": "/wooden-fences",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/chain-link-fence.html",
+      "destination": "/chain-link-fence",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact-us.html",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/findusonline",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/findusonline/",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/wooden-fences.html",
+      "destination": "/wooden-fences",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/chain-link-fence.html",
+      "destination": "/chain-link-fence",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/contact-us.html",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/findusonline",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/findusonline/",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.twincityfences.com"
+        }
+      ]
+    },
+    {
+      "source": "/wooden-fences.html",
+      "destination": "/wooden-fences",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/chain-link-fence.html",
+      "destination": "/chain-link-fence",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/contact-us.html",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/findusonline",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/findusonline/",
+      "destination": "/contact",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "/privacy",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "twin-city-fences.vercel.app"
+        }
+      ]
+    }
+  ]
+}

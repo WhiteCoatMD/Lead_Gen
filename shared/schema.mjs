@@ -68,6 +68,10 @@ function to24Hour(value, inheritedMeridiem) {
 export function parseTimes(text = "") {
   const cleaned = String(text).replace(/[–—]/g, "-").trim();
   if (/^closed$/i.test(cleaned)) return [];
+  // "Open 24 hours" / "24/7" is a known answer, not a guess at a closing time.
+  if (/^(open\s+)?24\s*(hours?|hrs?|\/\s*7)(\s+a\s+day)?$/i.test(cleaned)) {
+    return [{ opens: "00:00", closes: "23:59" }];
+  }
 
   const intervals = [];
   for (const chunk of cleaned.split(",")) {
@@ -117,7 +121,7 @@ export function serviceCatalog(site, services) {
           name,
           description: service.description || undefined,
           provider: { "@id": businessId(site) },
-          areaServed: (site.serviceAreas || [site.city]).map((area) => ({ "@type": "Place", name: area })),
+          areaServed: areaNames(site).map((area) => ({ "@type": "Place", name: area })),
         },
       };
     })
@@ -168,6 +172,37 @@ export function primaryImage(site, absolute) {
     (Array.isArray(site.gallery) && site.gallery.length ? site.gallery[0].image : undefined) ||
     (Array.isArray(site.products) && site.products.length ? site.products[0].image : undefined);
   return candidate ? absolute(site.domain, candidate) : undefined;
+}
+
+// serviceAreas entries are either "Dallas" or { name, href }. Callers that
+// print or mark up the list always want the name.
+export function areaNames(site) {
+  // Match the old `serviceAreas || [city]` fallback: a present array, even an
+  // empty one, is intentional. Only a missing list falls back to the city.
+  const raw = Array.isArray(site.serviceAreas) ? site.serviceAreas : [site.city];
+  return raw.map((area) => (typeof area === "string" ? area : area?.name)).filter(Boolean);
+}
+
+// Only a real https URL is emitted. An empty placeholder in site.json stays
+// out of the markup until someone fills it in.
+export function httpUrls(...values) {
+  const out = [];
+  for (const value of values.flat()) {
+    const url = String(value ?? "").trim();
+    if (/^https?:\/\//i.test(url) && !out.includes(url)) out.push(url);
+  }
+  return out;
+}
+
+export function geoCoordinates(site) {
+  const latRaw = site.geo?.latitude;
+  const lngRaw = site.geo?.longitude;
+  // Number("") is 0, which would publish a pin in the Atlantic for an empty slot.
+  if (latRaw === "" || latRaw == null || lngRaw === "" || lngRaw == null) return undefined;
+  const lat = Number(latRaw);
+  const lng = Number(lngRaw);
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return undefined;
+  return { "@type": "GeoCoordinates", latitude: lat, longitude: lng };
 }
 
 export function postalAddress(site, stateCode) {

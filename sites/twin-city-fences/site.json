@@ -1,13 +1,14 @@
 {
-  "name": "Twin City Fence",
+  "name": "Twin City Fences",
   "domain": "twincityfences.com",
   "phone": "318-351-2539",
   "email": "twincityfences@gmail.com",
   "city": "West Monroe",
   "state": "Louisiana",
-  "serviceAreaBusiness": true,
-  "_serviceAreaBusinessNote": "Address deliberately hidden: another fence company operates at 205 Mane St and the conflict suppressed the listing until it was removed.",
-  "schemaType": "FenceContractor",
+  "schemaType": [
+    "GeneralContractor",
+    "HomeAndConstructionBusiness"
+  ],
   "accent": "#ef342f",
   "accentDark": "#c82420",
   "logo": "twin-city-logo.png",
@@ -17,11 +18,11 @@
     "twin-city-logo.png"
   ],
   "kicker": "Local fence builders",
-  "headline": "Fences built for North Louisiana.",
+  "headline": "Fence company in Monroe and West Monroe.",
   "intro": "Wood, chain-link, ornamental, and ranch-style fencing installed for homes and businesses across Monroe and West Monroe.",
   "sectionKicker": "Built around your property",
   "sectionHeadline": "The right fence should look good, work hard, and last.",
-  "about": "Twin City Fence helps homeowners and businesses choose fencing that fits the property, purpose, and budget. We handle new installations and repairs throughout the Monroe area, with straightforward recommendations and a clear path from estimate to completion.",
+  "about": "Twin City Fences helps homeowners and businesses choose fencing that fits the property, purpose, and budget. We handle new installations and repairs throughout Monroe and West Monroe, with straightforward recommendations and a clear path from estimate to completion.",
   "servicesHeadline": "Options for privacy, protection, and curb appeal.",
   "services": [
     {
@@ -36,11 +37,13 @@
     },
     {
       "title": "Decorative & Metal Fences",
-      "description": "Wrought-iron and ornamental options that add security without hiding your property."
+      "description": "Wrought-iron and ornamental options that add security without hiding your property.",
+      "link": "aluminum-fence"
     },
     {
       "title": "Fence & Gate Repair",
-      "description": "Repairs for leaning posts, damaged panels, broken gates, and storm-related fence damage."
+      "description": "Repairs for leaning posts, damaged panels, broken gates, and storm-related fence damage.",
+      "link": "fence-repair"
     },
     {
       "title": "Split Rail Fences",
@@ -71,28 +74,52 @@
       "title": "Storm Damage Repair",
       "description": "Fences pushed over, snapped off or torn out by North Louisiana weather, put back up.",
       "link": "storm-damage"
+    },
+    {
+      "title": "Vinyl Fencing",
+      "description": "Privacy and picket vinyl for yards that should not need painting, built for the heat and the posts.",
+      "link": "vinyl-fence"
+    },
+    {
+      "title": "Privacy Fencing",
+      "description": "Wood or vinyl privacy fences, with height checked against the Monroe or West Monroe rules.",
+      "link": "privacy-fence"
+    },
+    {
+      "title": "Fence Cost Guide",
+      "description": "What actually moves the price of a fence in Monroe and West Monroe, without a made-up rate card.",
+      "link": "fence-cost-monroe"
     }
   ],
   "serviceAreas": [
-    "Monroe",
-    "West Monroe",
-    "Ouachita Parish",
+    {
+      "name": "Monroe",
+      "href": "/fencing-monroe.html"
+    },
+    {
+      "name": "West Monroe",
+      "href": "/west-monroe"
+    },
+    {
+      "name": "Ouachita Parish",
+      "href": "/fence-permit-ouachita-parish"
+    },
     "North Louisiana"
   ],
   "areaHeadline": "Local fencing across the Twin Cities and North Louisiana.",
   "ctaHeadline": "Let’s talk about your fence.",
-  "ctaCopy": "Call Twin City Fence to discuss your project and arrange a free estimate.",
-  "footerLine": "Fence installation and repair in Monroe and West Monroe, Louisiana",
-  "seoTitle": "Fence Builder Monroe LA | Twin City Fence",
-  "seoDescription": "Fence installation and repair in Monroe and West Monroe, Louisiana. Wood privacy, chain-link, ornamental, ranch-style fencing, and gates.",
+  "ctaCopy": "Call Twin City Fences to discuss your project and arrange a free estimate.",
+  "footerLine": "Fence installation and repair from 205 Mane St, Ste C, West Monroe, Louisiana",
+  "seoTitle": "Fence Company Monroe & West Monroe LA | Twin City Fences",
+  "seoDescription": "Fence company in Monroe and West Monroe, Louisiana. Wood, vinyl, chain-link, aluminum, and privacy fencing, plus repair and gates.",
   "pages": [
     {
       "slug": "wooden-fences",
       "navLabel": "Wood fences",
       "kicker": "Wood fencing",
-      "heading": "Wood fences built for North Louisiana.",
+      "heading": "Wood fences in Monroe and West Monroe.",
       "intro": "Pine and cedar fencing built to the height and layout your property needs, for privacy, security and shade.",
-      "seoTitle": "Wood Fences Monroe & West Monroe LA | Twin City Fence",
+      "seoTitle": "Wood Fences Monroe & West Monroe LA | Twin City Fences",
       "seoDescription": "Custom pine and cedar wood fencing installed across Monroe, West Monroe and Ouachita Parish. Built in varying heights for privacy, security and shade.",
       "service": "Wood fence installation",
       "sections": [
@@ -128,15 +155,16 @@
           "q": "Does a wood fence need sealing?",
           "a": "It extends the life, particularly on pine. Cedar tolerates being left alone better than pine does, which is part of what the extra cost buys. Either way the posts fail before the pickets do, so how they were set matters more to the lifespan than what gets put on the surface afterwards."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "chain-link-fence",
       "navLabel": "Chain-link fences",
       "kicker": "Chain-link fencing",
-      "heading": "Chain-link fencing for homes, pets and property lines.",
+      "heading": "Chain-link fencing in Monroe, LA.",
       "intro": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties across Monroe and West Monroe.",
-      "seoTitle": "Chain Link Fence Monroe LA | Twin City Fence",
+      "seoTitle": "Chain Link Fence Monroe LA | Twin City Fences",
       "seoDescription": "Chain-link fencing installed in Monroe, West Monroe and Ouachita Parish for homes, pets, businesses, larger properties and sports enclosures.",
       "service": "Chain-link fence installation",
       "sections": [
@@ -167,16 +195,17 @@
           "q": "What height of chain-link do I need?",
           "a": "Four feet contains most dogs and marks a boundary. Six feet is the common choice for security and for keeping larger animals in. Taller runs are used for courts and sports enclosures, where the job is keeping a ball in rather than keeping anything out — those need heavier posts and closer spacing."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "contact",
       "navLabel": "Contact",
       "kicker": "Get in touch",
-      "heading": "Talk to Twin City Fence.",
+      "heading": "Talk to Twin City Fences in West Monroe.",
       "intro": "Call or email and tell us what you are fencing, where the property is, and roughly how long the run is.",
-      "seoTitle": "Contact Twin City Fence | Monroe & West Monroe LA",
-      "seoDescription": "Contact Twin City Fence for wood, chain-link, ornamental and ranch-style fencing across Monroe, West Monroe and Ouachita Parish. Call 318-351-2539.",
+      "seoTitle": "Contact Twin City Fences | Monroe & West Monroe LA",
+      "seoDescription": "Contact Twin City Fences for wood, chain-link, ornamental and ranch-style fencing across Monroe, West Monroe and Ouachita Parish. Call 318-351-2539.",
       "sections": [
         {
           "kicker": "What helps",
@@ -199,15 +228,16 @@
           "body": "Roughly how long the run is, what the fence is for, and what the ground is doing along the line. Even a pace count is more useful than nothing, and knowing whether the line crosses a slope, runs under trees, or sits in a spot that holds water changes the answer more than most people expect. If there is an existing fence, whether the posts are sound is the single most useful thing you can tell us. If there is an HOA or you are not certain where the property line runs, that is worth raising early rather than after posts are in — both are far cheaper to sort out before work starts than to correct afterwards."
         }
       ],
-      "ctaHeadline": "Call for a free estimate."
+      "ctaHeadline": "Call for a free estimate.",
+      "kind": "info"
     },
     {
       "slug": "split-rail-fences.html",
       "navLabel": "Split rail fences",
       "kicker": "Split rail",
-      "heading": "Split rail fences for pasture and property.",
+      "heading": "Split rail fences in Monroe, LA.",
       "intro": "We can construct split rail fence for your pasture, grazing area, or home — any length.",
-      "seoTitle": "Split Rail Fences Monroe LA | Twin City Fence",
+      "seoTitle": "Split Rail Fences Monroe LA | Twin City Fences",
       "seoDescription": "Split rail fencing built across Monroe, West Monroe and Ouachita Parish for pasture, grazing areas and homes. Any length.",
       "service": "Split rail fence installation",
       "sections": [
@@ -232,15 +262,16 @@
           "body": "Split rail is chosen for two quite different reasons and the rail count follows from which one applies. As a boundary or a decorative edge along a drive or a property line, two rails do the job and keep the look open — the fence marks without enclosing. As containment for larger animals, three rails hold more reliably, because an animal that can get its head through a gap will usually try. Posts and bracing change with it, since a fence that is leaned on carries load the decorative version never sees. Split rail also suits uneven ground better than panel fencing, which is part of why it keeps appearing on acreage where a rigid run would leave gaps at every dip."
         }
       ],
-      "ctaHeadline": "Get a price on split rail."
+      "ctaHeadline": "Get a price on split rail.",
+      "kind": "service"
     },
     {
       "slug": "fencing-monroe.html",
       "navLabel": "Fencing in Monroe",
       "kicker": "Monroe",
-      "heading": "Fencing in Monroe, Louisiana.",
+      "heading": "Fencing in Monroe, LA.",
       "intro": "Wood, chain-link, split rail, ornamental and ranch-style fencing installed across Monroe and the surrounding parish.",
-      "seoTitle": "Fencing Monroe LA | Twin City Fence",
+      "seoTitle": "Fencing Monroe LA | Twin City Fences",
       "seoDescription": "Fence installation and repair in Monroe, Louisiana — wood, chain-link, split rail and ornamental fencing from a local builder.",
       "service": "Fence installation in Monroe, Louisiana",
       "sections": [
@@ -265,133 +296,19 @@
           "body": "Most fence decisions get easier once the purpose is named out loud. Privacy points to wood, and height becomes the main variable. Containment over distance points to chain-link, because cost per foot is where it wins. Livestock points to split rail with the rail count set by the animal. Marking a boundary attractively is a different job again and often needs the least fence. The mistakes tend to come from choosing on appearance first and discovering later that the fence does not do the thing it was actually bought for — a four-foot fence that was meant to give privacy, or a decorative run that a horse walks through. Worth settling before material, because material follows from it."
         }
       ],
-      "ctaHeadline": "Fencing a property in Monroe?"
-    },
-    {
-      "slug": "wooden-fences.html",
-      "navLabel": "Wood fences",
-      "kicker": "Wood fencing",
-      "heading": "Wood fences built for North Louisiana.",
-      "intro": "Pine and cedar fencing built to the height and layout your property needs, for privacy, security and shade.",
-      "seoTitle": "Wood Fences Monroe & West Monroe LA | Twin City Fence",
-      "seoDescription": "Custom pine and cedar wood fencing installed across Monroe, West Monroe and Ouachita Parish, in varying heights.",
-      "service": "Wood fence installation",
-      "sections": [
-        {
-          "kicker": "Pine or cedar",
-          "heading": "Two woods, built to the same standard.",
-          "body": "We can build a fence for your location from either pine or cedar, and in varying heights. Pine is the budget-conscious choice for a long run of privacy fencing; cedar costs more and holds up better to weather and insects over time. Which one makes sense usually comes down to the length of the run and how long you want to leave it alone."
-        },
-        {
-          "kicker": "What it does",
-          "heading": "Privacy, security and shade.",
-          "body": "Custom pine and cedar privacy fencing built for security, shade, and a clean finished look. Height and picket spacing change what the fence actually does — a full-privacy panel and a spaced picket run are different fences for different problems, and it is worth deciding which one you are buying before the posts go in."
-        },
-        {
-          "kicker": "Posts",
-          "heading": "The posts decide how long it lasts.",
-          "body": "Pickets and rails are the part you see, but they are not the part that fails first. A wood fence usually goes because the posts rotted at the ground line or worked loose in soft soil, and once that starts the rest follows regardless of how good the boards were. Depth, spacing and how the post is set are what buy the years. This is also why a fence that looks fine from the road can still be near the end of its life — push on it, and if the posts move, the fence is telling you something the pickets are hiding. It is worth knowing before you spend money on replacement boards that will outlive what holds them up."
-        },
-        {
-          "kicker": "Height",
-          "heading": "Pick the height for the job, not the look.",
-          "body": "Height is the decision people most often get wrong, partly because it is hard to picture from a catalogue. Six feet is the usual privacy answer because it breaks sightlines from a neighbouring yard at standing height. Four feet contains pets and marks a front boundary without walling the property off, which is often what a front yard actually wants. Eight feet screens completely where local rules allow it. It is worth knowing that height drives cost more than the extra material suggests, because taller fencing needs deeper posts and more bracing to stay upright in wind. A four-foot fence bought for privacy is money spent on the wrong problem, and it cannot be raised later without starting again."
-        }
-      ],
-      "ctaHeadline": "Get a price on a wood fence.",
-      "canonicalTo": "wooden-fences",
-      "faqs": [
-        {
-          "q": "How tall should a privacy fence be?",
-          "a": "Six feet is the usual answer for privacy, because it screens sightlines from a neighbouring yard at standing height. Four feet contains pets and marks a front boundary without closing the property off. Eight feet screens completely where that is permitted locally. Height also changes the price more than most people expect, since it changes post depth as well as material."
-        },
-        {
-          "q": "Does a wood fence need sealing?",
-          "a": "It extends the life, particularly on pine. Cedar tolerates being left alone better than pine does, which is part of what the extra cost buys. Either way the posts fail before the pickets do, so how they were set matters more to the lifespan than what gets put on the surface afterwards."
-        }
-      ],
-      "diagram": "fence-height"
-    },
-    {
-      "slug": "chain-link-fence.html",
-      "navLabel": "Chain-link fences",
-      "kicker": "Chain-link fencing",
-      "heading": "Chain-link fencing for homes, pets and property lines.",
-      "intro": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties.",
-      "seoTitle": "Chain Link Fence Monroe LA | Twin City Fence",
-      "seoDescription": "Chain-link fencing installed in Monroe, West Monroe and Ouachita Parish for homes, pets, businesses and sports enclosures.",
-      "service": "Chain-link fence installation",
-      "sections": [
-        {
-          "kicker": "Where it fits",
-          "heading": "The practical choice for a long run.",
-          "body": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties. Chain-link covers more ground per dollar than any other fence we build, which is why it tends to win on acreage, on commercial yards, and anywhere the job is containment rather than privacy."
-        },
-        {
-          "kicker": "Taller work",
-          "heading": "Sports and court enclosures.",
-          "body": "The same system goes up tall — we have built chain-link at tennis courts, where the fence is doing a different job again: keeping a ball in rather than keeping anything out. Taller runs need heavier posts and closer spacing, so it is worth saying up front what the enclosure is for."
-        },
-        {
-          "kicker": "Height and gauge",
-          "heading": "Two numbers change the price.",
-          "body": "Chain-link is priced by height and by the gauge of the wire, and the right answer depends on what the fence is doing. A dog run and a commercial yard are different fences even though both are chain-link, so it is worth saying which you need before comparing quotes."
-        },
-        {
-          "kicker": "Where it wins",
-          "heading": "Cost per foot is the whole argument.",
-          "body": "Chain-link covers more ground per dollar than any other fence we build, which is why it keeps winning on long runs, acreage and commercial yards where the job is containment rather than privacy. It also takes weather without needing to be sealed or painted, and a damaged section can be replaced without touching the rest of the run. What it does not do is screen anything, which is the trade you are making. Slats can be woven through the mesh where some privacy is wanted without the cost of a wood run, though they are a compromise rather than a substitute. If the fence exists to keep something in or out over distance, this is usually the right answer."
-        }
-      ],
-      "ctaHeadline": "Get a price on chain-link.",
-      "canonicalTo": "chain-link-fence",
-      "faqs": [
-        {
-          "q": "What height of chain-link do I need?",
-          "a": "Four feet contains most dogs and marks a boundary. Six feet is the common choice for security and for keeping larger animals in. Taller runs are used for courts and sports enclosures, where the job is keeping a ball in rather than keeping anything out — those need heavier posts and closer spacing."
-        }
+      "ctaHeadline": "Fencing a property in Monroe?",
+      "kind": "area",
+      "areaServed": [
+        "Monroe, Louisiana"
       ]
-    },
-    {
-      "slug": "contact-us.html",
-      "navLabel": "Contact",
-      "kicker": "Get in touch",
-      "heading": "Talk to Twin City Fence.",
-      "intro": "Call or email and tell us what you are fencing, where the property is, and roughly how long the run is.",
-      "seoTitle": "Contact Twin City Fence | Monroe & West Monroe LA",
-      "seoDescription": "Contact Twin City Fence for wood, chain-link, split rail and ornamental fencing across Monroe and West Monroe. Call 318-351-2539.",
-      "sections": [
-        {
-          "kicker": "What helps",
-          "heading": "What to have ready.",
-          "body": "The three things that decide a price are the type of fence, the length of the run, and what the ground is doing — slope, trees and existing posts all change the job. Rough numbers are fine on a first call; we work the rest out on site."
-        },
-        {
-          "kicker": "Where we work",
-          "heading": "Monroe, West Monroe and Ouachita Parish.",
-          "body": "We install across Monroe, West Monroe and the surrounding Ouachita Parish area, and travel further into North Louisiana for larger jobs. If you are not sure whether you are in range, call and ask."
-        },
-        {
-          "kicker": "What happens next",
-          "heading": "We come and look.",
-          "body": "For anything beyond a small repair we would rather walk the line than quote from a description. Ground, slope, trees and existing posts all change the job, and a number given without seeing them is a number that changes later."
-        },
-        {
-          "kicker": "Before you call",
-          "heading": "Three things speed this up.",
-          "body": "Roughly how long the run is, what the fence is for, and what the ground is doing along the line. Even a pace count is more useful than nothing, and knowing whether the line crosses a slope, runs under trees, or sits in a spot that holds water changes the answer more than most people expect. If there is an existing fence, whether the posts are sound is the single most useful thing you can tell us. If there is an HOA or you are not certain where the property line runs, that is worth raising early rather than after posts are in — both are far cheaper to sort out before work starts than to correct afterwards."
-        }
-      ],
-      "ctaHeadline": "Call for a free estimate.",
-      "canonicalTo": "contact"
     },
     {
       "slug": "farm-fencing",
       "navLabel": "Farm & agricultural",
       "kicker": "Farm fencing",
-      "heading": "Farm and agricultural fencing.",
+      "heading": "Farm fencing in Monroe and West Monroe.",
       "intro": "Pasture, field and boundary fencing for acreage across Ouachita Parish and North Louisiana.",
-      "seoTitle": "Farm & Agricultural Fencing Monroe LA | Twin City Fence",
+      "seoTitle": "Farm & Agricultural Fencing Monroe LA | Twin City Fences",
       "seoDescription": "Farm and agricultural fencing across Monroe, West Monroe and North Louisiana — pasture fencing, field boundaries and livestock containment.",
       "service": "Farm and agricultural fence installation",
       "sections": [
@@ -416,15 +333,16 @@
           "body": "A boundary fence marks a line; a containment fence resists an animal pushing against it, and the two are built differently even when they look similar from the road. Posts are set deeper and closer, corners and gate posts are braced because that is where the load concentrates, and the rail count is chosen for what is being held rather than for appearance. Two rails suit a boundary or a decorative run. Three hold larger animals more reliably. Pasture also tends to mean longer runs over uneven ground, which changes how the line is laid out — following the contour rather than cutting across it keeps the fence tight and keeps gaps from opening at the low points where an animal will find them."
         }
       ],
-      "ctaHeadline": "Fencing acreage?"
+      "ctaHeadline": "Fencing acreage?",
+      "kind": "service"
     },
     {
       "slug": "commercial-fencing",
       "navLabel": "Commercial",
       "kicker": "Commercial fencing",
-      "heading": "Commercial fencing.",
+      "heading": "Commercial fencing in Monroe, LA.",
       "intro": "Fencing for businesses, yards and larger properties, where the job is security and containment rather than looks.",
-      "seoTitle": "Commercial Fencing Monroe LA | Twin City Fence",
+      "seoTitle": "Commercial Fencing Monroe LA | Twin City Fences",
       "seoDescription": "Commercial fencing in Monroe, West Monroe and Ouachita Parish — business premises, yards, storage and larger properties.",
       "service": "Commercial fence installation",
       "sections": [
@@ -449,15 +367,16 @@
           "body": "Commercial fencing is normally bought by the foot rather than by the panel, and that changes which material makes sense. Chain-link covers distance more economically than anything else, takes weather without being sealed or painted, and can have a damaged section replaced without disturbing the rest of the run — which matters when the fence surrounds something that has to keep operating. It also makes the yard visible, which is a security advantage as often as it is a drawback. Where appearance matters at a street frontage, the usual answer is to treat that stretch differently rather than to pay for the whole perimeter twice. Height is a separate decision from material and worth settling on its own terms."
         }
       ],
-      "ctaHeadline": "Fencing a commercial property?"
+      "ctaHeadline": "Fencing a commercial property?",
+      "kind": "service"
     },
     {
       "slug": "gate-installation",
       "navLabel": "Gates",
       "kicker": "Gates",
-      "heading": "Gate installation.",
+      "heading": "Gate installation in Monroe, LA.",
       "intro": "Walk gates and drive gates fitted to match the fence, and hung so they still swing true in a year.",
-      "seoTitle": "Gate Installation Monroe LA | Twin City Fence",
+      "seoTitle": "Gate Installation Monroe LA | Twin City Fences",
       "seoDescription": "Walk gates and drive gates installed across Monroe, West Monroe and Ouachita Parish, matched to wood, chain-link and ornamental fencing.",
       "service": "Gate installation",
       "sections": [
@@ -489,15 +408,16 @@
           "q": "Why do gates sag?",
           "a": "Almost always because the gate post was set for fence rather than for leverage. A gate is a weight hanging off one side of a post, and the wider the gate the harder it pulls. A gate post wants to be bigger, deeper and better braced than the run it sits in — which is cheap to do at the start and expensive to correct afterwards."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "fence-replacement",
       "navLabel": "Replacement",
       "kicker": "Replacement",
-      "heading": "Fence replacement.",
+      "heading": "Fence replacement in Monroe, LA.",
       "intro": "When a fence has reached the end, replacing it costs less over time than patching it again.",
-      "seoTitle": "Fence Replacement Monroe LA | Twin City Fence",
+      "seoTitle": "Fence Replacement Monroe LA | Twin City Fences",
       "seoDescription": "Fence replacement across Monroe, West Monroe and Ouachita Parish — old fence removed and hauled off, new fence built in its place.",
       "service": "Fence replacement",
       "sections": [
@@ -522,15 +442,16 @@
           "body": "The test is the posts. Individual broken pickets, a sagging gate or a couple of damaged panels are repairs, and repairs are worth doing when the structure underneath is sound. Once posts are rotted, leaning or moving when pushed, the arithmetic changes: replacing posts means pulling the fence apart anyway, and a patchwork of new posts under old boards tends to mean returning to the same fence again in a year or two. The other honest signal is how many repairs you have already paid for. A fence that has been fixed three times is usually telling you what it needs. Walking the line and pushing on posts every few feet will answer this faster than any estimate."
         }
       ],
-      "ctaHeadline": "Replacing a fence?"
+      "ctaHeadline": "Replacing a fence?",
+      "kind": "service"
     },
     {
       "slug": "storm-damage",
       "navLabel": "Storm damage",
       "kicker": "Storm damage",
-      "heading": "Storm-damaged fence repair.",
+      "heading": "Storm-damaged fence repair in Monroe, LA.",
       "intro": "Fences pushed over, snapped off or torn out by North Louisiana weather, put back up.",
-      "seoTitle": "Storm Damage Fence Repair Monroe LA | Twin City Fence",
+      "seoTitle": "Storm Damage Fence Repair Monroe LA | Twin City Fences",
       "seoDescription": "Storm-damaged fence repair in Monroe, West Monroe and Ouachita Parish — wind damage, fallen trees and leaning or broken fence sections.",
       "service": "Storm-damaged fence repair",
       "sections": [
@@ -561,22 +482,23 @@
           "q": "Will my insurance cover a storm-damaged fence?",
           "a": "That is between you and your insurer and depends on your policy, so it is worth asking them before committing to work. What helps either way is photographs of the damage taken before anything is moved or cleared."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "west-monroe",
       "navLabel": "West Monroe",
       "kicker": "West Monroe",
-      "heading": "Fencing in West Monroe.",
+      "heading": "Fencing in West Monroe, LA.",
       "intro": "We are based in West Monroe and build across the city and the rest of Ouachita Parish.",
-      "seoTitle": "Fence Company West Monroe LA | Twin City Fence",
+      "seoTitle": "Fence Company West Monroe LA | Twin City Fences",
       "seoDescription": "Fence builder based in West Monroe, Louisiana — wood, chain-link, split rail, ornamental, farm and commercial fencing across Ouachita Parish.",
       "service": "Fence installation in West Monroe, Louisiana",
       "sections": [
         {
           "kicker": "Local",
           "heading": "This is where we are.",
-          "body": "Twin City Fence is based in West Monroe. Most of what we build is within a short drive of it, which is the practical reason a small job here is worth doing at all — there is no travel to absorb."
+          "body": "Twin City Fences is based in West Monroe. Most of what we build is within a short drive of it, which is the practical reason a small job here is worth doing at all — there is no travel to absorb."
         },
         {
           "kicker": "What we build here",
@@ -594,12 +516,367 @@
           "body": "Ouachita Parish ground holds water, and a fence set into soil that stays wet has a harder life than the same fence on dry, firm ground. That affects how posts are set and how deep they go, and it is part of why a fence built to a generic spec somewhere else does not always translate. Drainage across a property matters too — a line that runs through a low spot will see standing water after heavy rain, and that is worth knowing before posts are placed rather than after. We are based in West Monroe and install across West Monroe, Monroe and the surrounding parish, so the conditions on a given property are usually familiar ones rather than a surprise."
         }
       ],
-      "ctaHeadline": "Fencing a property in West Monroe?"
+      "ctaHeadline": "Fencing a property in West Monroe?",
+      "kind": "area",
+      "areaServed": [
+        "West Monroe, Louisiana"
+      ]
     },
-    { "slug": "fence-calculator", "type": "fence-calculator", "navLabel": "Fence materials calculator", "kicker": "Plan your fence", "heading": "Fence materials calculator.", "intro": "Enter the length, height, corners and gates, and get the posts, rails, pickets or fabric, and concrete you would need — with the arithmetic shown.", "seoTitle": "Fence Materials Calculator: Posts, Pickets, Concrete | Twin City Fence", "seoDescription": "Work out how many posts, rails, pickets and bags of concrete a wood privacy or chain-link fence needs. Free calculator with every number explained." },
-    { "slug": "fence-permit-monroe", "type": "fence-permit", "permit": "monroe-la", "navLabel": "Monroe fence permits", "kicker": "Before you build", "heading": "Fence permits in Monroe, LA.", "intro": "What the City of Monroe's rules say about building a residential fence, with a link to the official source for every answer.", "seoTitle": "Monroe, LA Fence Permit Rules & Height Limits | Twin City Fence", "seoDescription": "Do you need a permit for a fence in Monroe, Louisiana? Height limits, setbacks, corner lots and who to call, each linked to the city's own rules." },
-    { "slug": "fence-permit-west-monroe", "type": "fence-permit", "permit": "west-monroe-la", "navLabel": "West Monroe fence permits", "kicker": "Before you build", "heading": "Fence permits in West Monroe, LA.", "intro": "What the City of West Monroe's rules say about building a residential fence, with a link to the official source for every answer.", "seoTitle": "West Monroe, LA Fence Permit Rules & Height Limits | Twin City Fence", "seoDescription": "Do you need a permit for a fence in West Monroe, Louisiana? Height limits, setbacks, corner lots and who to call, each linked to the city's own rules." },
-    { "slug": "fence-permit-ouachita-parish", "type": "fence-permit", "permit": "ouachita-parish-la", "navLabel": "Ouachita Parish fence permits", "kicker": "Before you build", "heading": "Fence permits in unincorporated Ouachita Parish.", "intro": "For homes outside Monroe and West Monroe city limits: what the parish rules say about fences, each answer linked to its source.", "seoTitle": "Ouachita Parish Fence Permit Rules | Twin City Fence", "seoDescription": "Fence rules for unincorporated Ouachita Parish, Louisiana: when a fence needs no building permit, the roadside ditch rule and who to call, with sources." }
+    {
+      "slug": "fence-calculator",
+      "type": "fence-calculator",
+      "navLabel": "Fence materials calculator",
+      "kicker": "Plan your fence",
+      "heading": "Fence materials calculator.",
+      "intro": "Enter the length, height, corners and gates, and get the posts, rails, pickets or fabric, and concrete you would need — with the arithmetic shown.",
+      "seoTitle": "Fence Materials Calculator: Posts, Pickets, Concrete | Twin City Fences",
+      "seoDescription": "Work out how many posts, rails, pickets and bags of concrete a wood privacy or chain-link fence needs. Free calculator with every number explained.",
+      "kind": "tool"
+    },
+    {
+      "slug": "fence-permit-monroe",
+      "type": "fence-permit",
+      "permit": "monroe-la",
+      "navLabel": "Monroe fence permits",
+      "kicker": "Before you build",
+      "heading": "Fence permits in Monroe, LA.",
+      "intro": "What the City of Monroe's rules say about building a residential fence, with a link to the official source for every answer.",
+      "seoTitle": "Monroe, LA Fence Permit Rules & Height Limits | Twin City Fences",
+      "seoDescription": "Do you need a permit for a fence in Monroe, Louisiana? Height limits, setbacks, corner lots and who to call, each linked to the city's own rules.",
+      "kind": "tool"
+    },
+    {
+      "slug": "fence-permit-west-monroe",
+      "type": "fence-permit",
+      "permit": "west-monroe-la",
+      "navLabel": "West Monroe fence permits",
+      "kicker": "Before you build",
+      "heading": "Fence permits in West Monroe, LA.",
+      "intro": "What the City of West Monroe's rules say about building a residential fence, with a link to the official source for every answer.",
+      "seoTitle": "West Monroe, LA Fence Permit Rules & Height Limits | Twin City Fences",
+      "seoDescription": "Do you need a permit for a fence in West Monroe, Louisiana? Height limits, setbacks, corner lots and who to call, each linked to the city's own rules.",
+      "kind": "tool"
+    },
+    {
+      "slug": "fence-permit-ouachita-parish",
+      "type": "fence-permit",
+      "permit": "ouachita-parish-la",
+      "navLabel": "Ouachita Parish fence permits",
+      "kicker": "Before you build",
+      "heading": "Fence permits in unincorporated Ouachita Parish.",
+      "intro": "For homes outside Monroe and West Monroe city limits: what the parish rules say about fences, each answer linked to its source.",
+      "seoTitle": "Ouachita Parish Fence Permit Rules | Twin City Fences",
+      "seoDescription": "Fence rules for unincorporated Ouachita Parish, Louisiana: when a fence needs no building permit, the roadside ditch rule and who to call, with sources.",
+      "kind": "tool"
+    },
+    {
+      "slug": "fence-repair",
+      "navLabel": "Fence repair",
+      "kind": "service",
+      "kicker": "Fence repair",
+      "heading": "Fence repair in Monroe and West Monroe.",
+      "intro": "A leaning post, a gate that drags, or a run of broken pickets is often a repair. Sometimes it is the start of a replacement. The posts usually tell you which, and we would rather look than guess from a photo alone.",
+      "seoTitle": "Fence Repair Monroe & West Monroe LA | Twin City Fences",
+      "seoDescription": "Fence repair in Monroe and West Monroe, Louisiana. Posts, panels, gates, and storm damage, with an honest call on repair versus replacement.",
+      "service": "Fence repair in Monroe and West Monroe",
+      "sections": [
+        {
+          "kicker": "Repair or replace",
+          "heading": "Push on the posts before you buy boards.",
+          "body": "Pickets and panels are the part you see. Posts are the part that fails. If the posts are still tight in the ground, replacing a few boards, a rail, or a latch is usually the right spend. If the posts move when you push them, or they are soft at the soil line, new boards are going onto a fence that is already done. Ouachita Parish ground holds water. A post that has been sitting in a wet line along the Ouachita, or in a low backyard in West Monroe, often rots at the surface while the pickets still look fine. That is the check we make before recommending a repair."
+        },
+        {
+          "kicker": "What we fix",
+          "heading": "Gates, panels, and sections, not just storm piles.",
+          "body": "Storm damage has its own page because a tree on a fence is a different job. Everyday repair is quieter: a gate that sags because the post was set for fence and not for the leverage of the gate, a section a vehicle clipped, a dog that found the one loose board, a chain-link run that is leaning after years of people climbing it. Wood, chain-link, and ornamental fences all come in. Vinyl repairs depend on whether the broken piece is a rail or a post and whether that style is still made. Bring a photo. It often tells us whether to bring boards or to come and look at posts."
+        },
+        {
+          "kicker": "Local ground",
+          "heading": "Wet soil is why the same repair fails twice.",
+          "body": "A post reset in the same soft hole, without thinking about water, leans again. Monroe and West Monroe yards after a heavy rain show you where the water sits. A repair on that line either moves the post, sets it so water is not the whole story, or it is a temporary fix and we should say so. Slope changes it too. A fence that stair-steps down toward a drainage ditch needs the low end planned, not improvised. If the line is the property line and you are not sure where that is, sort that out before posts are pulled. Moving a repaired fence is the expensive version of a survey."
+        },
+        {
+          "kicker": "What helps the quote",
+          "heading": "Length, material, and whether the posts move.",
+          "body": "On the call, three things matter: about how many feet are damaged, what the fence is made of, and whether the posts are solid. A phone photo of the worst post and of the whole run from a few steps back is enough for a lot of small repairs. A whole side of a yard wants a visit. We are at 205 Mane St, Ste C, West Monroe. Most repair work is in West Monroe, Monroe, and the rest of Ouachita Parish. If you are comparing a repair to a new fence, the materials calculator and the permit guides are the next stop after this page, especially if the repair is about to become a replacement tall enough that the city cares."
+        }
+      ],
+      "ctaHeadline": "Got a fence to fix?",
+      "faqs": [
+        {
+          "q": "Is a repair worth it?",
+          "a": "Usually yes when the posts are solid and the damage is a section, a gate, or some pickets. When the posts are rotted or loose, you are paying to decorate a fence that needs to be rebuilt. We would rather say that on site than sell boards."
+        },
+        {
+          "q": "Do you repair chain-link and metal fences too?",
+          "a": "Yes. Chain-link that is leaning, ornamental fences with a broken picket or a dragging gate, and wood. Vinyl depends on the parts. A photo is the quickest way to know."
+        },
+        {
+          "q": "How is this different from storm repair?",
+          "a": "Storm work is a fence that weather or a tree took down, often with an insurance photo to take first. This page is the ordinary repair: age, a vehicle, a gate, a few bad posts. If a storm did it, use the storm damage page so you photograph it before anything is cleared."
+        }
+      ]
+    },
+    {
+      "slug": "vinyl-fence",
+      "navLabel": "Vinyl fencing",
+      "kind": "service",
+      "kicker": "Vinyl fencing",
+      "heading": "Vinyl fencing in Monroe and West Monroe.",
+      "intro": "Vinyl is the fence people pick when they do not want to paint or seal. It still depends on the posts, and in this climate the style and the gate hardware matter more than the brochure.",
+      "seoTitle": "Vinyl Fence Monroe & West Monroe LA | Twin City Fences",
+      "seoDescription": "Vinyl fence installation in Monroe and West Monroe, Louisiana. Privacy and picket styles, with straight talk on posts, gates, heat, and what it costs relative to wood.",
+      "service": "Vinyl fence installation in Monroe and West Monroe",
+      "sections": [
+        {
+          "kicker": "Where vinyl fits",
+          "heading": "Privacy without a paint can.",
+          "body": "A vinyl privacy fence does the same job as a wood privacy fence: it breaks the sightline into the next yard. Picket and spaced styles mark a front yard without walling it off. Homeowners in Monroe and West Monroe usually ask about vinyl after they have painted a pine fence once and do not want to do it again. That is a fair reason. Vinyl does not need stain. It also does not hide a bad post. The panels are only as straight as what holds them, and a vinyl fence with a leaning post looks worse than a wood one because the panels stay bright while the line goes crooked."
+        },
+        {
+          "kicker": "Heat, sun, and color",
+          "heading": "North Louisiana sun is not a mild test.",
+          "body": "Summer here is long. Dark vinyl runs hotter and shows heat distortion sooner than a light color, which is why white and clay are the styles you see holding up on streets in West Monroe. We will talk about color on site rather than sell a dark fence that looks sharp in a photo and waves by August. Rails and pickets also expand. A fence built tight on a cold morning can bind a gate in July if the hardware and the gaps were not planned for it. That is a build detail, not a reason to avoid vinyl. It is a reason to build it with the season in mind."
+        },
+        {
+          "kicker": "Compared with wood",
+          "heading": "Usually near pine on a short run, not a bargain on a long one.",
+          "body": "We do not print a dollar-per-foot price. Length, height, gates, and the ground move it too much, and a number given without walking the line gets revised. In relative terms, vinyl privacy often lands near a pine privacy fence and sometimes above it once the gates and the style are counted. Cedar costs more than pine and still wants occasional care. Vinyl is the one you are buying so you can leave the surface alone. Chain-link is cheaper per foot when the job is keeping a dog in a long yard and privacy does not matter. If privacy is the point, vinyl and wood are the conversation, and the permit rules for height are the same either way."
+        },
+        {
+          "kicker": "Posts and gates",
+          "heading": "The expensive parts are the ones you do not see.",
+          "body": "Vinyl posts on a privacy fence need to be set for wind. A six-foot solid panel is a sail in a spring storm coming across open yards in Ouachita Parish. Gate posts need to be heavier than line posts, same as wood, because the gate is a lever. A drive gate that is too narrow gets clipped, and vinyl does not forgive a clip the way a board you can replace does. Measure for the widest thing that will use the drive, including a trailer. We install from our West Monroe shop at 205 Mane St, Ste C, across Monroe and West Monroe. If the fence is new rather than a repair, check the Monroe or West Monroe permit guide before the posts go in. Height and the front-yard rules are local, and they are easier to read first than to rebuild."
+        }
+      ],
+      "ctaHeadline": "Pricing a vinyl fence?",
+      "faqs": [
+        {
+          "q": "Is vinyl cheaper than wood?",
+          "a": "Sometimes it is close to pine privacy, and sometimes the style and the gates put it higher. It is not the cheap fence. Chain-link is, when you do not need privacy. Call with the length and the style and we will look at the line before naming a figure."
+        },
+        {
+          "q": "Does vinyl work in Louisiana heat?",
+          "a": "Light colors do better than dark ones. The build has to leave room for the material to move, and the posts have to be set for wind on a solid panel. Those are the details that decide whether it still looks right in a few summers."
+        },
+        {
+          "q": "Can you match an existing vinyl fence?",
+          "a": "Sometimes, if that profile is still sold. A photo of the post, the rail, and the panel from the side tells us whether a repair section will match or whether the run wants to be replaced together."
+        }
+      ]
+    },
+    {
+      "slug": "aluminum-fence",
+      "navLabel": "Aluminum fencing",
+      "kind": "service",
+      "kicker": "Aluminum fencing",
+      "heading": "Aluminum and ornamental fencing in Monroe, LA.",
+      "intro": "Ornamental fence is for when you want a line and a boundary without hiding the house. Aluminum is the version that does not ask you to paint it every few years. The posts and the gates are the job.",
+      "seoTitle": "Aluminum Fence Monroe LA | Twin City Fences",
+      "seoDescription": "Aluminum and ornamental fencing in Monroe and West Monroe, Louisiana. Open fencing for front yards, pools edges, and commercial frontage, built around the posts and gates.",
+      "service": "Aluminum and ornamental fence installation in Monroe and West Monroe",
+      "sections": [
+        {
+          "kicker": "What it is for",
+          "heading": "Security and a boundary, not privacy.",
+          "body": "An aluminum picket fence lets you see through it. That is the point on a front yard in Monroe, on a commercial frontage where you want the building visible, and anywhere a solid wall would look like the back of the property facing the street. It will not stop a sightline. If that is what you need, the privacy fence page is the wood or vinyl conversation. Ornamental fence marks the line, keeps a casual cut-through honest, and holds a gate. It is a poor choice for a dog that can squeeze pickets, unless the spacing is chosen for that animal and not for the look."
+        },
+        {
+          "kicker": "Aluminum, not a rust project",
+          "heading": "The old iron fences around town explain the choice.",
+          "body": "There is plenty of older steel and iron fence in Monroe and West Monroe, and a lot of it is being painted because it rusts at the joints. Aluminum ornamental fence is what people switch to so the maintenance is hardware and posts, not a wire brush. It is lighter, which is nice to carry and which means the post has to be set properly or the whole run feels flimsy in a wind. We do not describe it as wrought iron. If you have true iron you want repaired, say that, because repair and a new aluminum run are different work."
+        },
+        {
+          "kicker": "Gates and openings",
+          "heading": "The gate is where ornamental fence gets expensive.",
+          "body": "A walk gate is straightforward if the post is big enough and deep enough. A drive gate is the piece that sags, drags, and gets hit. Width is the decision you cannot undo without moving a post. Measure the vehicle and the trailer, then add room for a bad angle on the way in. On a corner lot, the gate and the fence also have to stay out of the sightline at the intersection. West Monroe and Monroe both treat corner lots differently from a mid-block backyard. The permit guides spell out whose rules apply. Read them before we set a corner post you then have to move."
+        },
+        {
+          "kicker": "Where it gets used here",
+          "heading": "Front yards, small commercial lots, and pool surrounds.",
+          "body": "The usual residential job is a front or side yard that a privacy fence would close off, especially on streets where the house is the thing you want to see. Small commercial lots on the West Monroe side use it along the street and chain-link or a taller fence at the back. Pool surrounds are a different rule set: a fence around a pool has to do a safety job, and the city's pool-barrier rules are not the same as a decorative front fence. We will not guess those on a sales page. If the fence is for a pool, say so on the call and check the permit guide for the city you are actually in. We work from 205 Mane St, Ste C, West Monroe, on both sides of the river."
+        }
+      ],
+      "ctaHeadline": "Planning an ornamental fence?",
+      "faqs": [
+        {
+          "q": "Is aluminum the same as wrought iron?",
+          "a": "No. Aluminum ornamental fence is the lower-maintenance stand-in for that look. Existing iron can sometimes be repaired. A new run is usually aluminum, and we will say which one you are buying."
+        },
+        {
+          "q": "Will it give me privacy?",
+          "a": "No. You can see through it. That is why people put it on a front yard. For privacy, look at wood or vinyl."
+        },
+        {
+          "q": "Can it go around a pool?",
+          "a": "Only if it meets the barrier rules for that city, which cover height, gaps, and the gate latch. Tell us it is a pool fence at the start, and check the Monroe or West Monroe permit page before anyone digs."
+        }
+      ]
+    },
+    {
+      "slug": "privacy-fence",
+      "navLabel": "Privacy fencing",
+      "kind": "service",
+      "kicker": "Privacy fencing",
+      "heading": "Privacy fencing in Monroe and West Monroe.",
+      "intro": "Privacy is a height and a solid panel, not a brand of fence. In this market that usually means wood or vinyl, six feet where the rules allow it, built on posts that can hold a wall of wind.",
+      "seoTitle": "Privacy Fence Monroe & West Monroe LA | Twin City Fences",
+      "seoDescription": "Privacy fences in Monroe and West Monroe, Louisiana. Wood and vinyl, height, neighbors, wind, and the permit rules that decide how tall you can build.",
+      "service": "Privacy fence installation in Monroe and West Monroe",
+      "sections": [
+        {
+          "kicker": "What privacy actually means",
+          "heading": "Six feet is the usual answer, and it is not always allowed.",
+          "body": "A six-foot solid fence blocks the sightline from a neighboring yard at standing height. Four feet does not, no matter how nice the pickets are. Eight feet screens more and needs a stronger build, and it is the height most likely to run into a local limit. Monroe, West Monroe, and the unincorporated parish do not share one rule. A backyard in the city and a lot outside the city limits can be different jobs. The permit guides on this site point at the city's own text for height, front yards, and corner lots. Read the one that matches the address before you fall in love with a picture of an eight-foot fence."
+        },
+        {
+          "kicker": "Wood or vinyl",
+          "heading": "Same job, different upkeep.",
+          "body": "Pine is the common privacy fence because it covers the run for less than cedar or a fancy vinyl style. It wants seal if you care how it looks in five years, and the posts still outlast the argument about stain. Cedar costs more and weathers better. Vinyl privacy is the option when you do not want to coat it at all. All three fail the same way if the posts are shallow in wet Ouachita ground: the panels stay pretty and the line leans. A privacy fence is a sail. Spring wind across an open yard in West Monroe will find the weak post. That is why post depth and spacing are the part of the quote worth understanding, not just the price of the board."
+        },
+        {
+          "kicker": "Neighbors and the line",
+          "heading": "The pretty side and the property line are separate questions.",
+          "body": "People ask which side of the fence the 'good side' faces. That is a build choice and a neighbor choice, and it is cheaper to agree before posts are in the ground. Where the fence sits is not a choice we get to invent. If you are not sure the line is where the old fence was, a survey is less painful than moving a finished run. Shared fences and fences just inside your line get handled differently, and an HOA can be stricter than the city about height, color, and which side faces out. If you have an HOA, their paper rules over a page like this one."
+        },
+        {
+          "kicker": "From here",
+          "heading": "West Monroe base, both sides of the river.",
+          "body": "Twin City Fences is at 205 Mane St, Ste C, West Monroe. Privacy fences are most of the residential work in Monroe and West Monroe: back yards in neighborhoods off the river, side yards where a patio faces a neighbor, and the occasional full enclose. Chain-link with slats is a compromise when budget is the whole story and full privacy is not. It is not the same fence. If you want a number, we need the approximate length, the height you are allowed to build, and whether a gate has to fit a mower or a truck. The materials calculator will count boards and posts for a length you already know. It will not know your property line or your city's height cap. Those are the permit pages."
+        }
+      ],
+      "ctaHeadline": "Want a privacy fence priced?",
+      "faqs": [
+        {
+          "q": "How tall should a privacy fence be?",
+          "a": "Six feet is the height that actually blocks a standing neighbor. Taller than that depends on the city and, if you have one, the HOA. Four feet will disappoint you if privacy was the reason you called."
+        },
+        {
+          "q": "Wood or vinyl for privacy?",
+          "a": "Wood if you want the lower material cost of pine or the longer-weathering cedar and you will live with some upkeep. Vinyl if you want to stop painting. The posts matter more than that choice. Both need to be set for wet ground and wind."
+        },
+        {
+          "q": "Do I need a permit?",
+          "a": "Often the answer depends on height, the front yard, and whether you are in Monroe, West Monroe, or the parish. Use the permit guide for the place the property actually sits, and call the office if the guide and your lot do not obviously match."
+        }
+      ]
+    },
+    {
+      "slug": "fence-cost-monroe",
+      "navLabel": "Fence cost guide",
+      "kind": "service",
+      "type": "cost-guide",
+      "kicker": "Cost guide",
+      "heading": "Fence cost in Monroe and West Monroe.",
+      "intro": "A fence price is the length, the material, the gates, and the ground. This page says which choices move the number. It is not a quote, and it does not invent a dollar-per-foot rate for your yard.",
+      "seoTitle": "Fence Cost Monroe & West Monroe LA | Twin City Fences",
+      "seoDescription": "What changes the cost of a fence in Monroe and West Monroe, Louisiana. Material, length, gates, and ground, with no made-up price list.",
+      "service": "Fence cost guidance for Monroe and West Monroe",
+      "sections": [
+        {
+          "kicker": "No flat rate",
+          "heading": "Why this page does not list a price per foot.",
+          "body": "Twin City Fences does not publish a rate card. A 100-foot pine privacy fence on flat, open ground and a 100-foot fence that steps down a wet slope with two gates and a stump in the line are different jobs, and a single number would be a fiction. Anyone who gives you a firm figure from a phone description, without seeing the line, is guessing. We would rather walk it. What this page can do is put the choices in order so you know what you are comparing when two estimates do not match."
+        },
+        {
+          "kicker": "Material, in order",
+          "heading": "What usually costs more than what.",
+          "body": "Chain-link usually costs less per foot than the other fences we build. It wins on long runs, dogs, and commercial yards where privacy is not the job. Pine privacy costs more than chain-link and is the usual backyard fence. Vinyl privacy often lands near pine and sometimes above it once style and gates are included. Cedar costs more than pine. Aluminum ornamental is usually the highest per foot of the residential fences we install, because the posts and the gates are a large share of a shorter, more detailed run. Those are relative statements, not a price list. They are also typical of how bids come out in Monroe and West Monroe, not a promise that your yard will sort itself the same way if the ground is difficult."
+        },
+        {
+          "kicker": "The things that move a bid",
+          "heading": "Length is obvious. The rest surprises people.",
+          "body": "Height costs more than the extra board suggests, because taller fence needs deeper posts and more brace in the wind. Gates cost more than the same width of fence, and a drive gate costs more than a walk gate. Removing an old fence, especially posts set in concrete, is part of a replacement and it gets forgotten when someone prices 'just the new fence.' Trees, a slope toward a ditch, and soil that stays wet along the Ouachita all add work. So does a corner lot, where the fence may have to sit back so drivers can see. None of that shows up in a national average you found online. If a planning table appears under this page later, it will be labeled as an estimate. Until then, the honest figure is the one from a visit."
+        },
+        {
+          "kicker": "How to get a useful number",
+          "heading": "Measure roughly, then have us look.",
+          "body": "Pace the run or step it off. Note the corners and every gate, with the width you actually need. Say what the fence is for: privacy, a dog, cattle, a pool, a shop front. Photos of the line, the worst slope, and any old posts help. Then call or use the form. We are at 205 Mane St, Ste C, West Monroe, and we work in Monroe, West Monroe, and Ouachita Parish. The materials calculator will turn a length into a count of posts and pickets so you can see the scale. It does not price labor or haul-off. The permit guides tell you whether height or the front yard is going to change the design before you pay for the wrong fence. Use both. Then get a number from someone who has stood on the line."
+        }
+      ],
+      "ctaHeadline": "Want a number for your line?",
+      "pointsKicker": "Relative cost",
+      "pointsHeading": "Which fence usually costs more.",
+      "points": [
+        {
+          "title": "Chain-link",
+          "description": "Usually the lowest per foot. The right fence when the job is containment over a long run and you do not need to block a view."
+        },
+        {
+          "title": "Pine privacy",
+          "description": "More than chain-link. The common wood privacy fence in Monroe and West Monroe. Upkeep is part of owning it."
+        },
+        {
+          "title": "Vinyl privacy",
+          "description": "Often near pine, sometimes more once gates and style are counted. You are paying to avoid painting it."
+        },
+        {
+          "title": "Cedar privacy",
+          "description": "More than pine. The extra is the wood. The posts are still what decide how long the fence stands."
+        },
+        {
+          "title": "Aluminum ornamental",
+          "description": "Usually the highest per foot of these. It does not provide privacy. Gates and posts are a big part of the price."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you give me a price per foot over the phone?",
+          "a": "A range is a guess until someone sees the length, the gates, and the ground. Call with those and we will either look or tell you what is still missing. This page deliberately does not invent a rate."
+        },
+        {
+          "q": "Why do two fence bids look so different?",
+          "a": "Usually the posts, the gates, or whether removal is included. A low bid that skips haul-off or uses fewer posts is not the same fence. Ask each bidder what is in the number."
+        },
+        {
+          "q": "Does the calculator give me a price?",
+          "a": "No. It counts materials for a length and a height. Labor, gates beyond the widths you enter, removal, and bad ground are not in that count."
+        }
+      ]
+    },
+    {
+      "slug": "privacy",
+      "navLabel": "Privacy",
+      "kind": "info",
+      "kicker": "Privacy",
+      "heading": "Privacy policy for Twin City Fences.",
+      "intro": "This page says what the site collects when you call or send the form, and what we do with it. It is the policy for twincityfences.com.",
+      "seoTitle": "Privacy Policy | Twin City Fences",
+      "seoDescription": "How Twin City Fences uses the name, phone number, and message you send from twincityfences.com. No sale of that information.",
+      "sections": [
+        {
+          "kicker": "Who we are",
+          "heading": "The business this site belongs to.",
+          "body": "Twin City Fences is at 205 Mane St, Ste C, West Monroe, LA 71292. The phone number on this site is 318-351-2539. The email is twincityfences@gmail.com. If you want a copy of what a form submission said, or you want it deleted, write to that email or call. This is a small fence contractor's site, not a separate app with its own account system."
+        },
+        {
+          "kicker": "The form",
+          "heading": "What you type is used to answer you.",
+          "body": "The quote form asks for your name and phone number, and optionally your email, the city, the kind of fence, and a message. It is posted to this site so we can call or write you back about the job. That is the use. We do not sell the form contents, and we do not hand them to a lead broker. A hidden field on the form is there to catch automated spam. If you fill it in, the submission is discarded. Do not put anything sensitive in the message, such as a full payment card number. A fence estimate does not need it."
+        },
+        {
+          "kicker": "Calls and pages",
+          "heading": "What the site records when you tap call.",
+          "body": "The phone links dial the number configured for this site. The site also sends a small note to our own server that a call button was tapped, and which page you were on, so we can see which pages lead to calls. That note is not a recording of the call and it does not include what you say on the phone. Page views are counted the same way, with the path and the referring site. There is no third-party advertising pixel described here because the site does not run one. If that changes, this page should change with it."
+        },
+        {
+          "kicker": "How long and who else",
+          "heading": "Keeping what we need to do the work.",
+          "body": "Messages are kept long enough to answer you, schedule the work, and look back at what was asked if there is a dispute about the job. They are not kept as a marketing list. Hosting and email providers see the traffic and the mail the way any host does. We do not control their own policies. The site is aimed at homeowners and businesses in Monroe and West Monroe. It is not directed at children, and we do not want a child's information in the form. If you reached this page from an old link, the address you wanted is this one."
+        }
+      ],
+      "ctaHeadline": "Rather talk about a fence?",
+      "faqs": [
+        {
+          "q": "Do you sell my phone number?",
+          "a": "No. The number is used to respond about the fence you asked about."
+        },
+        {
+          "q": "How do I ask you to delete a message?",
+          "a": "Email twincityfences@gmail.com or call 318-351-2539 and say which submission you mean. Include the phone number you used on the form so we can find it."
+        }
+      ]
+    }
   ],
   "leadForm": {
     "kicker": "Request a quote",
@@ -647,6 +924,84 @@
     {
       "q": "What areas do you cover?",
       "a": "We are based in West Monroe and install across West Monroe, Monroe and the surrounding Ouachita Parish area, travelling further into North Louisiana for larger jobs. If you are not sure whether you are in range, it is worth asking rather than assuming."
+    }
+  ],
+  "streetAddress": "205 Mane St, Ste C",
+  "postalCode": "71292",
+  "showAddress": true,
+  "geo": {
+    "latitude": 32.50767,
+    "longitude": -92.17381
+  },
+  "_geoNote": "US Census Bureau geocoder, Public_AR_Current address-range match for 205 Mane St, West Monroe, LA 71292, retrieved 2026-10-18. Not a surveyed rooftop pin.",
+  "gbpUrl": "https://share.google/bg28FSlPYt1IFmVG3",
+  "hasMap": "https://share.google/bg28FSlPYt1IFmVG3",
+  "sameAs": [
+    "https://share.google/bg28FSlPYt1IFmVG3"
+  ],
+  "_gbpNote": "Owner-supplied Google share link, confirmed 2026-10-18. It redirects to a Search knowledge panel for kgmid /g/11fpss007l (Twin City Fence). A canonical google.com/maps place URL could not be resolved. Do not replace this with a generic Maps search.",
+  "_addressNote": "Mitch confirmed 2026-10-18: publish 205 Mane St, Ste C, West Monroe, LA 71292. The 2026-09-21 note that said to hide this address is outdated.",
+  "_hoursNote": "Leave hours unset until they are confirmed for this business. MapQuest has listed weekday and Saturday hours; those figures are not in this repo as a confirmed schedule, so they are not published.",
+  "updated": "2026-10-18",
+  "footerNav": true,
+  "linkPlanningTools": true,
+  "priceGuide": [],
+  "_priceGuideNote": "Optional rows of { material, range, note } for the cost page. Empty on purpose. Dollar amounts are not invented here. The page compares materials without a rate card until real ranges are added.",
+  "nav": [
+    {
+      "label": "Services",
+      "href": "/#services"
+    },
+    {
+      "label": "Repair",
+      "href": "/fence-repair"
+    },
+    {
+      "label": "Cost guide",
+      "href": "/fence-cost-monroe"
+    },
+    {
+      "label": "Permits",
+      "href": "/fence-permit-monroe"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "redirectHosts": [
+    "twincityfences.com",
+    "www.twincityfences.com",
+    "twin-city-fences.vercel.app"
+  ],
+  "redirects": [
+    {
+      "source": "/wooden-fences.html",
+      "destination": "/wooden-fences"
+    },
+    {
+      "source": "/chain-link-fence.html",
+      "destination": "/chain-link-fence"
+    },
+    {
+      "source": "/contact-us.html",
+      "destination": "/contact"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/"
+    },
+    {
+      "source": "/findusonline",
+      "destination": "/contact"
+    },
+    {
+      "source": "/privacy-policy.html",
+      "destination": "/privacy"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy"
     }
   ]
 }

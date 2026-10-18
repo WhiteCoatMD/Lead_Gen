@@ -1,10 +1,11 @@
-import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd } from "./render-site.mjs";
+import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd, displayPhone } from "./render-site.mjs";
 import { businessId, openingHoursSpecification, postalAddress } from "./schema.mjs";
 
 // The Bird's Nest keeps the storefront layout of the original shop rather than
 // the shared contractor template, so it renders from its own markup.
 export function renderBirdsNest(site) {
-  const tel = phoneHref(site.phone);
+  const shown = displayPhone(site);
+  const tel = phoneHref(shown);
   const areas = site.serviceAreas || [site.city];
   const products = site.products.map((product) => `
       <article class="product">
@@ -60,7 +61,7 @@ export function renderBirdsNest(site) {
   </header>
   <nav id="site-nav" aria-label="Primary">
     <a href="#home">Home</a><a href="#about">About</a><a href="#store">Store</a><a href="#subscriptions">Flower Subscriptions</a>
-    <a class="nav-call" href="${tel}">Call ${esc(site.phone)}</a>
+    <a class="nav-call" href="${tel}">Call ${esc(shown)}</a>
   </nav>
   <main>
     <section class="hero" role="img" aria-label="Fresh flowers from The Bird's Nest"></section>
@@ -78,11 +79,11 @@ export function renderBirdsNest(site) {
       <div class="area-list">${areas.map((area) => `<span>${esc(area)}</span>`).join("")}</div>
     </section>
     <section class="contact" id="contact">
-      <div><h2>Call Us</h2><a class="phone" href="${tel}">${esc(site.phone)}</a></div>
+      <div><h2>Call Us</h2><a class="phone" href="${tel}">${esc(shown)}</a></div>
       <div><h2>Business Hours</h2><dl>${hours}</dl></div>
     </section>
   </main>
   <footer><div class="footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>Serving ${esc(areas.join(", "))}.</p></div></footer>
-  <a class="mobile-call" href="${tel}">Call now · ${esc(site.phone)}</a><script src="/site.js" defer></script>
+  <a class="mobile-call" href="${tel}">Call now · ${esc(shown)}</a><script src="/site.js" defer></script>
 </body></html>`;
 }

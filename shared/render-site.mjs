@@ -1,4 +1,4 @@
-import { businessId, openingHoursSpecification, postalAddress, primaryImage, serviceCatalog } from "./schema.mjs";
+import { areaNames, businessId, geoCoordinates, httpUrls, openingHoursSpecification, postalAddress, primaryImage, serviceCatalog } from "./schema.mjs";
 import { renderLeadForm, LEAD_FORM_SCRIPT } from "./render-form.mjs";
 import { renderFaq } from "./render-faq.mjs";
 import { renderPermitLinks } from "./render-tools.mjs";
@@ -72,20 +72,90 @@ export function renderFavicon(site) {
 }
 
 
-// The number a visitor sees and dials. Falls back to the NAP number, so a
-// site without call tracking is unaffected.
+// The number a visitor sees and dials. One config value: `trackingPhone` when
+// a site is on call tracking, otherwise `phone`. Falls back so a site without
+// tracking is unaffected.
 // NEVER use this for schema, structured data or anything a machine reads —
-// see the note in the schema block below.
-const dialled = (site) => site.trackingPhone || site.phone;
+// schema keeps `phone`, the permanent NAP number.
+export const displayPhone = (site) => site.trackingPhone || site.phone;
+const dialled = displayPhone;
+// Street address is opt-in (`showAddress: true`) so a site that stores an
+// address only for its own records, or hides it as a service-area business,
+// does not suddenly publish it.
+export function napBlock(site) {
+  if (site.showAddress !== true || !site.streetAddress) return null;
+  const region = stateCode(site.state);
+  const cityLine = [site.city, region].filter(Boolean).join(", ") + (site.postalCode ? ` ${site.postalCode}` : "");
+  return { street: site.streetAddress, cityLine };
+}
+
+export function licenseText(site) {
+  const number = String(site.license?.number ?? "").trim();
+  if (!number) return "";
+  const label = String(site.license?.label || "License").trim();
+  return `${label} ${number}`;
+}
+
+export function renderNav(site, { home = false } = {}) {
+  const links = Array.isArray(site.nav) && site.nav.length
+    ? site.nav
+    : home
+      ? [{ label: "Services", href: "#services" }, { label: "How it works", href: "#process" }, { label: "Service area", href: "#areas" }]
+      : [{ label: "Home", href: "/" }, { label: "Services", href: "/#services" }, { label: "Service area", href: "/#areas" }];
+  return links.map((link) => `<a href="${esc(link.href)}">${esc(link.label)}</a>`).join("");
+}
+
+export function renderFooter(site) {
+  const nap = napBlock(site);
+  const license = licenseText(site);
+  const phone = displayPhone(site);
+  const groups = footerGroups(site);
+  if (!nap && !license && !groups.length) {
+    return `<footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>`;
+  }
+  const address = nap
+    ? `<address class="footer-address"><span>${esc(nap.street)}</span><span>${esc(nap.cityLine)}</span>${phone ? `<a href="${phoneHref(phone)}">${esc(phone)}</a>` : ""}</address>`
+    : "";
+  const licenseHtml = license ? `<p class="footer-license">${esc(license)}</p>` : "";
+  const nav = groups.length
+    ? `<nav class="shell footer-links" aria-label="Site">${groups.map(([label, pages]) => `<div><p>${esc(label)}</p>${pages.map((page) => `<a href="/${esc(page.slug)}">${esc(page.navLabel || page.heading)}</a>`).join("")}</div>`).join("")}</nav>`
+    : "";
+  return `<footer><div class="shell footer-inner"><div class="footer-id"><p>© <span id="year"></span> ${esc(site.name)}</p>${address}${licenseHtml}</div><p>${esc(site.footerLine)}</p></div>${nav}</footer>`;
+}
+
+function footerGroups(site) {
+  if (!site.footerNav) return [];
+  const pages = (site.pages || []).filter((page) => page.slug && !page.canonicalTo && page.sitemap !== false && page.footer !== false);
+  const groups = [
+    ["Services", pages.filter((page) => page.kind === "service")],
+    ["Service area", pages.filter((page) => page.kind === "area")],
+    ["Guides", pages.filter((page) => page.kind === "tool")],
+    ["More", pages.filter((page) => page.kind === "info" || !page.kind)],
+  ];
+  return groups.filter(([, items]) => items.length);
+}
+
+const DEFAULT_STEPS = [
+  { title: "Call or email", text: "Tell us what you need and where the property is located." },
+  { title: "Review the project", text: "We discuss the scope, practical options, and the next available step." },
+  { title: "Schedule service", text: "Approve the plan and arrange a time that works for the project." },
+];
+
 export function renderSite(site, slug) {
-  const areaNames = site.serviceAreas || [site.city];
+  const areas = areaNames(site).map((name, index) => {
+    const raw = (site.serviceAreas || [])[index];
+    const href = raw && typeof raw === "object" ? (raw.href || raw.link || "") : "";
+    return href
+      ? `<span><a href="${esc(href)}">${esc(name)}</a></span>`
+      : `<span>${esc(name)}</span>`;
+  }).join("");
+  const areaLabel = areaNames(site);
   const services = site.services.map((service, index) => `
     <article class="service-card">
       <span>${String(index + 1).padStart(2, "0")}</span>
       <h3>${service.link ? `<a href="/${esc(service.link)}">${esc(service.title)}</a>` : esc(service.title)}</h3>
       <p>${esc(service.description)}</p>
     </article>`).join("");
-  const areas = areaNames.map((area) => `<span>${esc(area)}</span>`).join("");
 
   // Optional photo gallery. Sites without a `gallery` key render exactly as
   // before, so this is additive for the existing portfolio. Every entry needs
@@ -118,9 +188,13 @@ export function renderSite(site, slug) {
     image: primaryImage(site, absolute),
     logo: site.logo ? absolute(site.domain, site.logo) : undefined,
     address: postalAddress(site, stateCode),
-    areaServed: areaNames.map((name) => ({ "@type": "Place", name })),
+    geo: geoCoordinates(site),
+    hasMap: httpUrls(site.hasMap)[0] || httpUrls(site.gbpUrl)[0],
+    sameAs: httpUrls(site.gbpUrl, site.sameAs).length ? httpUrls(site.gbpUrl, site.sameAs) : undefined,
+    areaServed: areaLabel.map((name) => ({ "@type": "Place", name })),
     openingHoursSpecification: openingHoursSpecification(site.hours),
     hasOfferCatalog: serviceCatalog(site, site.services),
+    identifier: licenseText(site) ? { "@type": "PropertyValue", name: site.license?.label || "License", value: String(site.license.number).trim() } : undefined,
     contactPoint: site.phone ? { "@type": "ContactPoint", contactType: "customer service", telephone: site.phone, areaServed: "US", availableLanguage: "English" } : undefined
   };
 
@@ -155,11 +229,11 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
   <style>:root{--accent:${esc(site.accent || "#ef342f")};--accent-dark:${esc(site.accentDark || "#c82420")}}</style>
   <script type="application/ld+json">${jsonLd(schema)}</script>
 </head><body>
-  <div class="topbar"><p>Serving ${esc(areaNames.slice(0, 3).join(", "))}</p>${site.phone ? `<a href="${phoneHref(dialled(site))}">Call ${esc(dialled(site))}</a>` : ""}</div>
+  <div class="topbar"><p>Serving ${esc(areaLabel.slice(0, 3).join(", "))}</p>${site.phone ? `<a href="${phoneHref(dialled(site))}">Call ${esc(dialled(site))}</a>` : ""}</div>
   <header>
     <a class="brand${site.logo ? "" : " brand-wordmark"}" href="#top" aria-label="${esc(site.name)} home">${brand}</a>
     <nav id="site-nav" aria-label="Primary">
-      <a href="#services">Services</a><a href="#process">How it works</a><a href="#areas">Service area</a>
+      ${renderNav(site, { home: true })}
     </nav>
     <div class="header-actions">
       ${site.phone ? `<a class="nav-call" href="${phoneHref(dialled(site))}">${esc(site.navCall || "Free estimate")}</a>` : ""}
@@ -172,15 +246,15 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
     </section>
     <section class="shell intro"><div><p class="eyebrow accent">${esc(site.sectionKicker)}</p><h2>${esc(site.sectionHeadline)}</h2></div><p>${esc(site.about)}</p></section>
     <section class="shell services" id="services"><div class="section-heading"><p class="eyebrow accent">Services</p><h2>${esc(site.servicesHeadline)}</h2></div><div class="service-grid">${services}</div></section>
-    <section class="process shell" id="process"><div class="section-heading centered"><p class="eyebrow accent">Three simple steps</p><h2>From first call to finished work.</h2></div><div class="steps"><article><strong>1</strong><h3>Call or email</h3><p>Tell us what you need and where the property is located.</p></article><article><strong>2</strong><h3>Review the project</h3><p>We discuss the scope, practical options, and the next available step.</p></article><article><strong>3</strong><h3>Schedule service</h3><p>Approve the plan and arrange a time that works for the project.</p></article></div></section>
+    <section class="process shell" id="process"><div class="section-heading centered"><p class="eyebrow accent">${esc(site.stepsKicker || "Three simple steps")}</p><h2>${esc(site.stepsHeadline || "From first call to finished work.")}</h2></div><div class="steps">${(Array.isArray(site.steps) && site.steps.length ? site.steps : DEFAULT_STEPS).map((step, index) => `<article><strong>${index + 1}</strong><h3>${esc(step.title)}</h3><p>${esc(step.text)}</p></article>`).join("")}</div></section>
     ${gallery ? `<section class="shell gallery" id="gallery"><div class="section-heading"><p class="eyebrow accent">${esc(site.galleryKicker || "Gallery")}</p><h2>${esc(site.galleryHeadline || "A closer look.")}</h2></div><div class="gallery-grid">${gallery}</div></section>` : ""}
     ${renderPermitLinks(site)}
     <section class="areas" id="areas"><div class="shell areas-inner"><div><p class="eyebrow">Service area</p><h2>${esc(site.areaHeadline)}</h2></div><div class="area-list">${areas}</div></div></section>
     ${renderFaq(site)}
     ${renderLeadForm(site, slug, "/")}
-    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${site.phone ? `<a class="phone" href="${phoneHref(dialled(site))}">${esc(dialled(site))}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaNames.join(", "))}.</p></div></section>` : ""}
+    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${napBlock(site) ? `<address class="nap">${esc(napBlock(site).street)}<br>${esc(napBlock(site).cityLine)}</address>` : ""}${site.phone ? `<a class="phone" href="${phoneHref(dialled(site))}">${esc(dialled(site))}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaLabel.join(", "))}.</p></div></section>` : ""}
   </main>
-  <footer><div class="shell footer-inner"><p>© <span id="year"></span> ${esc(site.name)}</p><p>${esc(site.footerLine)}</p></div></footer>
+  ${renderFooter(site)}
   ${site.phone ? `<a class="mobile-call" href="${phoneHref(dialled(site))}">Call now · ${esc(dialled(site))}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}
 </body></html>`;
 }

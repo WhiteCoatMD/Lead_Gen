@@ -4,7 +4,10 @@
   "phone": "469-457-4462",
   "city": "Dallas",
   "state": "Texas",
-  "schemaType": "AutomotiveBusiness",
+  "schemaType": [
+    "AutomotiveBusiness",
+    "EmergencyService"
+  ],
   "accent": "#e32636",
   "accentDark": "#9c1420",
   "logo": "logo.jpg",
@@ -13,13 +16,13 @@
   "intro": "24-hour towing, roadside assistance, recovery, and junk-car removal across Dallas and Fort Worth.",
   "sectionKicker": "Prompt help on Dallas roads",
   "sectionHeadline": "A tow truck when you need one most.",
-  "about": "24 Hour Towing Dallas helps stranded motorists get safely moving again with local response and practical roadside solutions for cars, trucks, and motorcycles.",
+  "about": "24 Hour Towing Dallas helps stranded motorists get safely moving again with local response and practical roadside solutions for cars, trucks, and motorcycles. The business address is 1241 Willow Glen Dr, Dallas, TX 75232, in south Dallas, and dispatch answers 24 hours.",
   "servicesHeadline": "Complete towing and roadside support.",
   "services": [
     {
       "title": "24-Hour Towing",
       "description": "Around-the-clock response for breakdowns, accidents, and disabled vehicles.",
-      "link": "tow-trucks.html"
+      "link": "emergency-towing.html"
     },
     {
       "title": "Roadside Assistance",
@@ -28,7 +31,8 @@
     },
     {
       "title": "Vehicle Recovery",
-      "description": "Winching and recovery for vehicles in difficult or unsafe positions."
+      "description": "Winching and recovery for vehicles in difficult or unsafe positions.",
+      "link": "winch-out.html"
     },
     {
       "title": "Junk Car Removal",
@@ -42,37 +46,105 @@
     },
     {
       "title": "Flatbed Towing",
-      "description": "Flatbed transport for low-clearance, all-wheel-drive, non-running and damaged vehicles."
+      "description": "Flatbed transport for low-clearance, all-wheel-drive, non-running and damaged vehicles.",
+      "link": "flatbed-towing.html"
     },
     {
       "title": "Lockout Assistance",
-      "description": "Locked out with the keys inside — opened without damage to the door or the glass."
+      "description": "Locked out with the keys inside — opened without damage to the door or the glass.",
+      "link": "lockout-service.html"
     },
     {
       "title": "Fuel Delivery",
-      "description": "Enough fuel brought out to get you to a station rather than onto a truck."
+      "description": "Enough fuel brought out to get you to a station rather than onto a truck.",
+      "link": "fuel-delivery.html"
     },
     {
       "title": "Tire Changes",
-      "description": "Spare fitted at the roadside, so a flat does not become a tow."
+      "description": "Spare fitted at the roadside, so a flat does not become a tow.",
+      "link": "tire-change.html"
     },
     {
       "title": "Motorcycle Towing",
-      "description": "Bikes moved on proper straps and chocks rather than whatever is on the truck."
+      "description": "Bikes moved on proper straps and chocks rather than whatever is on the truck.",
+      "link": "motorcycle-towing.html"
+    },
+    {
+      "title": "Accident Towing",
+      "description": "Crash-damaged cars moved to the shop you choose, once people are clear of the lanes.",
+      "link": "accident-towing.html"
+    },
+    {
+      "title": "Long-Distance Towing",
+      "description": "A planned haul to another city, quoted from the two addresses and the vehicle.",
+      "link": "long-distance-towing.html"
+    },
+    {
+      "title": "Parking Garage Towing",
+      "description": "Low-clearance decks and garages, with the posted height checked before a truck is sent.",
+      "link": "parking-garage-towing.html"
     }
   ],
   "serviceAreas": [
-    "Dallas",
-    "Fort Worth",
-    "Irving",
-    "Dallas–Fort Worth"
+    {
+      "name": "Dallas",
+      "href": "/"
+    },
+    {
+      "name": "Oak Cliff",
+      "href": "/towing-oak-cliff.html"
+    },
+    {
+      "name": "Pleasant Grove",
+      "href": "/towing-pleasant-grove.html"
+    },
+    {
+      "name": "Duncanville",
+      "href": "/towing-duncanville.html"
+    },
+    {
+      "name": "DeSoto",
+      "href": "/towing-desoto.html"
+    },
+    {
+      "name": "Lancaster",
+      "href": "/towing-lancaster.html"
+    },
+    {
+      "name": "Arlington",
+      "href": "/towing-arlington.html"
+    },
+    {
+      "name": "Grand Prairie",
+      "href": "/towing-grand-prairie.html"
+    },
+    {
+      "name": "Irving",
+      "href": "/towing-irving.html"
+    },
+    {
+      "name": "Fort Worth",
+      "href": "/towing-fort-worth.html"
+    },
+    {
+      "name": "Garland",
+      "href": "/towing-garland.html"
+    },
+    {
+      "name": "Mesquite",
+      "href": "/towing-mesquite.html"
+    },
+    {
+      "name": "Plano",
+      "href": "/towing-plano.html"
+    }
   ],
-  "areaHeadline": "Serving drivers throughout the Dallas–Fort Worth area.",
+  "areaHeadline": "Based in south Dallas, covering the metro.",
   "ctaHeadline": "Get a tow truck dispatched.",
   "ctaCopy": "Call our 24-hour line for immediate towing or roadside assistance.",
   "primaryCta": "Call 24/7",
   "navCall": "Call now",
-  "footerLine": "24-hour towing and roadside assistance in Dallas, Texas",
+  "footerLine": "24-hour towing and roadside assistance from 1241 Willow Glen Dr, Dallas, Texas",
   "seoTitle": "24 Hour Towing Dallas TX | Emergency Tow Trucks",
   "seoDescription": "24-hour towing in Dallas and Fort Worth. Emergency tow trucks, roadside assistance, recovery, and junk-car removal.",
   "heroStyle": "plain",
@@ -121,7 +193,8 @@
           "q": "Can you get to a vehicle in a parking garage?",
           "a": "Low clearance is the deciding factor and it is worth mentioning on the call, because a flatbed that cannot get under the entrance is a wasted trip for both of us. If you know the height limit posted at the entrance, that single number answers most of the question."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "roadside-assistance.html",
@@ -164,7 +237,8 @@
           "q": "What if I have no spare tire?",
           "a": "Then the vehicle needs to move rather than be fixed where it sits, because there is nothing to fit. Plenty of newer cars ship with a sealant kit instead of a spare, which handles a puncture but not a sidewall tear or a blowout. Check before you call — it changes which truck comes out."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "battery-jumpstart.html",
@@ -203,7 +277,8 @@
           "q": "Will a jump start fix it, or do I need a battery?",
           "a": "A jump gets the engine running. Whether it stays running is the real test: if the car starts and then dies again shortly after, the battery is not holding charge or the alternator is not charging it, and a second jump only buys the same few minutes. A jump that holds usually means the battery was drained rather than dead."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "we-buy-junk-cars.html",
@@ -237,11 +312,12 @@
           "q": "Does the car need to run?",
           "a": "No. Non-running, wrecked, flood-damaged and long-dead vehicles are all removable. What matters more than whether it starts is whether it can be reached and whether it rolls — a car with no wheels, or one boxed in behind other vehicles, needs different equipment. Mention that when you call."
         }
-      ]
+      ],
+      "kind": "service"
     },
     {
       "slug": "towing-arlington.html",
-      "navLabel": "Towing Arlington",
+      "navLabel": "Arlington",
       "kicker": "Arlington",
       "heading": "Towing in Arlington.",
       "intro": "Arlington sits inside the area our Dallas trucks already cover, so the same 24 hour dispatch answers for it.",
@@ -276,10 +352,14 @@
           "q": "Are you actually based in Arlington?",
           "a": "No — the base is in Dallas and Arlington is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
         }
+      ],
+      "kind": "area",
+      "areaServed": [
+        "Arlington, Texas"
       ]
     },
     {
-      "slug": "services.html",
+      "slug": "services",
       "navLabel": "All services",
       "kicker": "Services",
       "heading": "Towing services in Dallas.",
@@ -309,95 +389,7 @@
         }
       ],
       "ctaHeadline": "Which one do you need?",
-      "canonicalTo": "services1"
-    },
-    {
-      "slug": "about.html",
-      "navLabel": "About",
-      "kicker": "About us",
-      "heading": "About 24 Hour Towing Dallas.",
-      "intro": "A Dallas towing operation built around emergency work, which is why the phone is answered at three in the morning as readily as at three in the afternoon.",
-      "seoTitle": "About | 24 Hour Towing Dallas TX",
-      "seoDescription": "About 24 Hour Towing Dallas — emergency towing, roadside assistance and junk car removal across the Dallas, Texas area.",
-      "sections": [
-        {
-          "kicker": "What we do",
-          "heading": "Emergency work, around the clock.",
-          "body": "Most of what we are called for is unplanned: a breakdown, an accident, a battery that died in a car park. That shapes the operation — dispatch runs 24 hours and licensed drivers are sent from wherever is nearest."
-        },
-        {
-          "kicker": "Why the phone is answered at 3am",
-          "heading": "Most of this work is unplanned.",
-          "body": "Almost nobody schedules a breakdown. That shapes how the operation runs: dispatch is staffed around the clock, and the phone is the primary way in rather than a form. It is also why the first question is always where the vehicle is, not what the customer would like to happen — location decides everything that follows."
-        },
-        {
-          "kicker": "How this works",
-          "heading": "Dispatch, then a driver.",
-          "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Drivers are licensed and the operation is insured. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
-        }
-      ],
-      "ctaHeadline": "Need a truck?",
-      "canonicalTo": "about-us"
-    },
-    {
-      "slug": "contact.html",
-      "navLabel": "Contact",
-      "kicker": "Get in touch",
-      "heading": "Call 24 Hour Towing Dallas.",
-      "intro": "Dispatch answers 24 hours a day. Tell us where the vehicle is and what it is doing, and we will get a driver headed your way.",
-      "seoTitle": "Contact | 24 Hour Towing Dallas TX",
-      "seoDescription": "Contact 24 Hour Towing Dallas for emergency towing, roadside assistance, battery jumpstarts and junk car removal across the Dallas area.",
-      "sections": [
-        {
-          "kicker": "What helps",
-          "heading": "What to tell dispatch.",
-          "body": "Where the vehicle is, what it is doing, and whether it is somewhere safe. Those three answers decide which truck gets sent and how quickly, so it is worth having them ready before you dial."
-        },
-        {
-          "kicker": "Before you dial",
-          "heading": "Four answers get a truck moving.",
-          "body": "What the vehicle is, exactly where it is, what it is doing, and where it needs to go. Those four decide which truck is sent and how quickly. If the vehicle is somewhere unsafe — a live carriageway, a blind bend — lead with that, because it changes the priority of the call rather than just its details."
-        },
-        {
-          "kicker": "Before you call",
-          "heading": "Four things get a truck moving.",
-          "body": "Where you are, what you are driving, what is wrong, and where it is going. On a highway, exit numbers and mile markers beat street names, and a shared location pin beats both. For the vehicle, make and model is usually enough, but say if it is all-wheel drive, lowered, or larger than a pickup, because that changes which truck is sent. For the fault, say whether it rolls and whether it shifts out of park. For the destination, have an address if you have one — and if you have not decided yet, say that too rather than working it out while the driver waits."
-        }
-      ],
-      "ctaHeadline": "Call now.",
-      "canonicalTo": "contact-us"
-    },
-    {
-      "slug": "services1",
-      "navLabel": "All services",
-      "kicker": "Services",
-      "heading": "Towing services in Dallas.",
-      "intro": "Emergency towing and roadside assistance, dispatched 24 hours a day across the Dallas area.",
-      "seoTitle": "Towing Services Dallas TX | 24 Hour Towing Dallas",
-      "seoDescription": "Towing services in Dallas, Texas: 24 hour emergency towing, roadside assistance, battery jumpstarts and junk car removal.",
-      "sections": [
-        {
-          "kicker": "24 hour towing",
-          "heading": "Emergency towing.",
-          "body": "We offer emergency towing for breakdowns, accidents, and more. Call the 24 hour dispatch and we can be headed your way within minutes. We serve the entire Dallas area."
-        },
-        {
-          "kicker": "Roadside assistance",
-          "heading": "Help getting going again.",
-          "body": "We also offer assistance to help you get your vehicle back on the road. From having a tire changed to jumpstarting your car, roadside assistance can be with you in a matter of minutes."
-        },
-        {
-          "kicker": "Which one you need",
-          "heading": "Most calls are one of three things.",
-          "body": "A vehicle that will not start, a vehicle that cannot be driven, or a vehicle that needs to be somewhere else. The first is usually roadside — a jump, a tyre, some fuel. The second is a tow. The third is planned, and planned jobs are worth booking rather than calling in as an emergency, because a truck can be scheduled rather than diverted."
-        },
-        {
-          "kicker": "One number",
-          "heading": "The same line handles all of it.",
-          "body": "Most people calling a towing company do not know in advance which service they need — they know the car will not move. Sorting that out is the job of the call, not the caller. Describe what happened and what the vehicle is doing, and dispatch works out whether it is a jump, a tire, a fuel drop, a straightforward tow or a recovery. That matters because guessing wrong from a list wastes a dispatch. It also means there is one number to keep rather than several, which is the whole point at the roadside at night. Everything listed here runs through the same 24-hour line, whichever of them turns out to be what you actually needed."
-        }
-      ],
-      "ctaHeadline": "Which one do you need?"
+      "kind": "info"
     },
     {
       "slug": "contact-us",
@@ -424,7 +416,8 @@
           "body": "Where you are, what you are driving, what is wrong, and where it is going. On a highway, exit numbers and mile markers beat street names, and a shared location pin beats both. For the vehicle, make and model is usually enough, but say if it is all-wheel drive, lowered, or larger than a pickup, because that changes which truck is sent. For the fault, say whether it rolls and whether it shifts out of park. For the destination, have an address if you have one — and if you have not decided yet, say that too rather than working it out while the driver waits."
         }
       ],
-      "ctaHeadline": "Call now."
+      "ctaHeadline": "Call now.",
+      "kind": "info"
     },
     {
       "slug": "about-us",
@@ -451,7 +444,8 @@
           "body": "Calls come into a 24-hour dispatch line rather than to a driver directly, which is why the number answers at three in the morning when an individual phone might not. Dispatch takes the location, the vehicle and the fault, decides what equipment the job needs, and sends the truck that fits it. That step is what keeps a flatbed from being sent to something that needed a wrecker, or the reverse. It is also why the detail you give on the call matters more than it seems at the time: everything downstream is decided from it. Drivers are licensed and the operation is insured. Coverage is Dallas and the surrounding metro, around the clock, every day of the year."
         }
       ],
-      "ctaHeadline": "Need a truck?"
+      "ctaHeadline": "Need a truck?",
+      "kind": "info"
     },
     {
       "slug": "wrecker-service.html",
@@ -494,6 +488,968 @@
         {
           "q": "What should I have ready when I call about a heavy vehicle?",
           "a": "What the vehicle is, roughly what it weighs, whether it still rolls, and what the access is like — surface underfoot, overhead clearance, and how much room there is to bring a truck alongside. A photograph of how it is sitting answers more than a description usually can. Those details decide which truck comes out, and getting them right is the difference between one truck arriving prepared and a second having to follow."
+        }
+      ],
+      "kind": "service"
+    },
+    {
+      "slug": "flatbed-towing.html",
+      "navLabel": "Flatbed towing",
+      "kicker": "Flatbed towing",
+      "heading": "Flatbed towing in Dallas.",
+      "intro": "All four wheels off the ground, for the vehicles that should not be towed on two — dispatched from the same 24-hour line.",
+      "seoTitle": "Flatbed Towing Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Flatbed towing in Dallas, Texas for all-wheel-drive, low-clearance, non-running and accident-damaged vehicles. 24 hour dispatch.",
+      "service": "Flatbed towing",
+      "sections": [
+        {
+          "kicker": "Why a flatbed",
+          "heading": "Some vehicles should not be towed on two wheels.",
+          "body": "A wheel-lift tow picks up one end of the car and rolls it on the other. For most front-wheel-drive cars that is fine. For all-wheel-drive and many four-wheel-drive vehicles, rolling on two wheels can damage the drivetrain, and the repair costs far more than the tow did. A flatbed carries the whole vehicle on the deck, so nothing turns that should not."
+        },
+        {
+          "kicker": "When to ask for one",
+          "heading": "Low, damaged, or worth a lot.",
+          "body": "Ask for a flatbed for all-wheel-drive vehicles, low sports cars that would scrape on a ramp angle, cars with damaged wheels or suspension after an accident, classics, and anything you would rather not see bounced along the road behind a truck. If you are not sure, say what the vehicle is and dispatch can tell you."
+        },
+        {
+          "kicker": "Non-runners",
+          "heading": "It does not need to start.",
+          "body": "A flatbed is often the simplest way to move a car that will not run, because the winch pulls it up onto the deck rather than relying on it to drive on. Say whether the wheels still turn and whether the steering is locked, since both change how it is loaded."
+        },
+        {
+          "kicker": "On the call",
+          "heading": "What helps dispatch send the right truck.",
+          "body": "The make and model settles most of it, because that tells dispatch whether the vehicle is all-wheel drive and roughly how low it sits. After that, the useful details are where the car is and what is around it. A flatbed is longer than a wheel-lift truck and needs room to tilt the deck, so a tight parking garage, a low ceiling, or a car wedged between two others is worth mentioning up front. Say where it is going too. A flatbed tow to a shop across Dallas and one to your driveway are planned differently, and knowing both ends of the trip is what makes the quote you hear on the phone the one you pay."
+        }
+      ],
+      "ctaHeadline": "Need a flatbed?",
+      "faqs": [
+        {
+          "q": "Does my car need a flatbed?",
+          "a": "If it is all-wheel drive, very low, damaged at the wheels or suspension, or something you would not want rolling on the road, yes. Most front-wheel-drive cars can be towed either way. Tell dispatch the make and model and they will say which."
+        },
+        {
+          "q": "Can a flatbed get into a parking garage?",
+          "a": "Often not. A flatbed is long and needs room and height to tilt the deck. If the car is in a garage or a tight lot, say so on the call — it may need moving out with a smaller truck first."
+        }
+      ],
+      "kind": "service"
+    },
+    {
+      "slug": "fuel-delivery.html",
+      "navLabel": "Fuel delivery",
+      "kicker": "Fuel delivery",
+      "heading": "Out of gas in Dallas? Fuel brought to you.",
+      "intro": "Enough fuel delivered to get you to a station, so running out of gas does not turn into a tow.",
+      "seoTitle": "Emergency Fuel Delivery Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Ran out of gas in Dallas? 24 hour emergency fuel delivery brings enough fuel to get you to the nearest station.",
+      "service": "Emergency fuel delivery",
+      "sections": [
+        {
+          "kicker": "How it works",
+          "heading": "Enough to get you to a pump.",
+          "body": "Fuel delivery is not a fill-up. A driver brings enough fuel to get the car running and to the nearest gas station, where you fill it properly. It is the cheaper alternative to towing a car that has nothing wrong with it except an empty tank."
+        },
+        {
+          "kicker": "Gas or diesel",
+          "heading": "Say which one the car takes.",
+          "body": "It sounds basic, but it is the one detail that has to be right. Putting the wrong fuel in a tank causes far more trouble than running out did. Tell dispatch whether the vehicle takes regular gasoline or diesel."
+        },
+        {
+          "kicker": "Where you are",
+          "heading": "Get somewhere safe first.",
+          "body": "If the car is still rolling when the gauge hits empty, get it off the highway — onto the shoulder as far as it will go, or better, into a parking lot or onto a side street. Turn the hazards on. Stay in the vehicle with your seatbelt on if you are stopped on a busy road, or out of it and well away from traffic if it is safe to do so."
+        },
+        {
+          "kicker": "When fuel is not the fix",
+          "heading": "If it still will not start.",
+          "body": "Sometimes the car runs out of fuel and something else turns out to be wrong as well, or the gauge read empty because of a fault rather than an empty tank. If the car will not start after fuel goes in, a modern engine may need a few tries to prime the fuel lines — but if it still will not catch, do not keep cranking until the battery dies too. At that point it is a tow or a jump, not more fuel, and since it is the same dispatch, the driver who is already there can tell you which."
+        }
+      ],
+      "ctaHeadline": "Ran out of gas?",
+      "faqs": [
+        {
+          "q": "How much fuel do you bring?",
+          "a": "Enough to get you to the nearest gas station, not a full tank. It is meant to get you moving, then you fill up properly at a pump."
+        },
+        {
+          "q": "Can you bring diesel?",
+          "a": "Ask when you call and say clearly which fuel the vehicle takes. Getting that right matters more than anything else on the call."
+        }
+      ],
+      "kind": "service"
+    },
+    {
+      "slug": "lockout-service.html",
+      "navLabel": "Lockouts",
+      "kicker": "Lockouts",
+      "heading": "Car lockout service in Dallas.",
+      "intro": "Keys locked inside the car — opened without damage to the door, the lock or the glass.",
+      "seoTitle": "Car Lockout Service Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Locked out of your car in Dallas? 24 hour lockout service to open your vehicle without damaging the door, lock or window.",
+      "service": "Vehicle lockout service",
+      "sections": [
+        {
+          "kicker": "What we do",
+          "heading": "Getting you back in without breaking anything.",
+          "body": "Most lockouts are keys left on the seat or in the ignition. The job is to open the door with the right tools, not to force it. Done properly, the car is opened without marks on the paint, damage to the weather seal, or a broken window."
+        },
+        {
+          "kicker": "Before you call",
+          "heading": "Check the other doors first.",
+          "body": "It sounds obvious, but a back door or the trunk release is sometimes left unlocked, and it is worth trying every door before waiting on a truck. If there is a spare key at home and someone can bring it, that may be quicker still."
+        },
+        {
+          "kicker": "When it is urgent",
+          "heading": "A child or a pet inside is an emergency.",
+          "body": "If a child or an animal is locked in the car, especially in Texas heat, call 911 first. Do not wait for a lockout service. Emergency services will treat it as the urgent situation it is."
+        },
+        {
+          "kicker": "On the call",
+          "heading": "What to have ready.",
+          "body": "Say where the car is, what the make and model are, and where the keys are — on the seat, in the ignition, or lost entirely. That last one matters: if the keys are inside, opening the door solves it; if they are lost, opening the door does not get the car started, and you may need a locksmith or a tow to the dealer instead. Be ready to show that the car is yours once it is open, with an ID that matches the registration or insurance card inside. Nobody should open a car for someone who cannot show it belongs to them, and a lockout service that does not ask is not one to trust."
+        }
+      ],
+      "ctaHeadline": "Locked out?",
+      "faqs": [
+        {
+          "q": "Will opening the car damage it?",
+          "a": "It should not. Lockout tools are designed to open the door without forcing the lock or breaking glass. That is the whole point of calling someone rather than trying it with a coat hanger."
+        },
+        {
+          "q": "What if I have lost the keys altogether?",
+          "a": "Then opening the door only solves half of it. Say so on the call — the car may need a locksmith to cut a new key or a tow to the dealer, and it is better to know that before anyone drives out."
+        }
+      ],
+      "kind": "service"
+    },
+    {
+      "slug": "motorcycle-towing.html",
+      "navLabel": "Motorcycle towing",
+      "kicker": "Motorcycle towing",
+      "heading": "Motorcycle towing in Dallas.",
+      "intro": "Bikes moved on proper straps and wheel chocks, not tied down with whatever happens to be on the truck.",
+      "seoTitle": "Motorcycle Towing Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Motorcycle towing in Dallas, Texas. Bikes secured properly for transport after a breakdown or accident, 24 hours a day.",
+      "service": "Motorcycle towing",
+      "sections": [
+        {
+          "kicker": "Why it is different",
+          "heading": "A bike does not tow like a car.",
+          "body": "A motorcycle cannot be hooked up and pulled. It has to ride on a deck, held upright in a wheel chock and strapped down at points that will not bend a fairing, scratch the tank or compress the forks too far. Done badly, a bike can arrive with more damage than it left with."
+        },
+        {
+          "kicker": "After a crash",
+          "heading": "Take care of yourself first.",
+          "body": "If the bike went down, get yourself checked before you think about the motorcycle. Call 911 if anyone is hurt. Once that is handled, a tow can take the bike to a shop, your home, or wherever the insurance adjuster needs to see it."
+        },
+        {
+          "kicker": "What to tell dispatch",
+          "heading": "Size, condition, and where it is.",
+          "body": "Say what the bike is — a sport bike, a cruiser, a touring bike or a dirt bike — and whether it is upright or down. Mention damage to the wheels or forks, because a bike that will not roll straight needs to be loaded differently. If it has hard bags or a top case, say so; they change where straps can go."
+        },
+        {
+          "kicker": "Your gear",
+          "heading": "What happens to your helmet and bags.",
+          "body": "Riders often forget that they are stranded with the bike and everything on it. Helmets, jackets and anything in the saddlebags can usually travel with the motorcycle, but secure them or take them with you rather than assuming they will be fine loose on the deck. If you need a ride as well as a tow, ask about it when you call, because there is not always room in the cab and it is better to know before the truck leaves than when it arrives."
+        }
+      ],
+      "ctaHeadline": "Need your bike moved?",
+      "faqs": [
+        {
+          "q": "Will my motorcycle be scratched or damaged in the tow?",
+          "a": "It should not be. The bike rides upright on a flat deck, held in a wheel chock and strapped at points that do not press on paint or fairings. Tell dispatch about any existing damage so it is known before loading."
+        },
+        {
+          "q": "Can you tow a motorcycle that will not roll?",
+          "a": "Yes, though it is a different loading job. Say on the call if a wheel is locked or bent, or the forks are damaged, so the driver comes prepared."
+        }
+      ],
+      "kind": "service"
+    },
+    {
+      "slug": "tire-change.html",
+      "navLabel": "Tire changes",
+      "kicker": "Tire changes",
+      "heading": "Flat tire changes in Dallas.",
+      "intro": "Your spare fitted at the roadside, so a flat tire does not become a tow.",
+      "seoTitle": "Flat Tire Change Dallas TX | Roadside Tire Service | 24 Hour Towing Dallas",
+      "seoDescription": "Flat tire in Dallas? 24 hour roadside tire change service fits your spare so you can keep driving. Towing if the spare is missing.",
+      "service": "Roadside tire change",
+      "sections": [
+        {
+          "kicker": "What we do",
+          "heading": "Spare on, flat in the trunk.",
+          "body": "A driver comes out, jacks the car up safely, takes the flat off and puts your spare on. It is a simple job on a quiet street and a far less simple one on a highway shoulder with traffic passing a few feet away, which is the main reason to have someone else do it."
+        },
+        {
+          "kicker": "Check the spare",
+          "heading": "The spare has to be there, and it has to hold air.",
+          "body": "A tire change depends on the car having a usable spare. Many newer cars come with an inflation kit instead, and spares that have sat in the trunk for years are often flat themselves. If you can, check before you call. If there is no spare, or it will not hold air, the answer is a tow to a tire shop instead."
+        },
+        {
+          "kicker": "Locking lug nuts",
+          "heading": "Find the key before the truck arrives.",
+          "body": "If the wheels have locking lug nuts, there is a special key for them, usually in the glove box, the center console, or with the jack and tools under the trunk floor. Without it the wheel cannot come off. Finding it before the driver arrives saves the most time of anything you can do."
+        },
+        {
+          "kicker": "After the change",
+          "heading": "A spare is a way to get to a shop.",
+          "body": "Most spares are compact temporary tires, the narrow ones, and they are not meant for highway speeds or long distances. Check the sidewall for the speed limit printed on it and drive to a tire shop rather than carrying on with your day. If the flat was caused by damage to the wheel itself — a bent rim from a pothole or a curb — mention it, because a spare does not fix a wheel that will not seat properly, and that is a tow rather than a tire change."
+        }
+      ],
+      "ctaHeadline": "Got a flat?",
+      "faqs": [
+        {
+          "q": "What if I do not have a spare?",
+          "a": "Then a tire change cannot be done at the roadside, and the answer is a tow to a tire shop. Say so on the call so the right truck is sent the first time."
+        },
+        {
+          "q": "Can you change a flat on the highway?",
+          "a": "Yes, though on a busy highway the safest answer is sometimes to move the car somewhere quieter first. Get as far onto the shoulder as you can, turn on the hazards, and stay clear of traffic while you wait."
+        }
+      ],
+      "kind": "service"
+    },
+    {
+      "slug": "towing-fort-worth.html",
+      "navLabel": "Fort Worth",
+      "kicker": "Fort Worth",
+      "heading": "Towing in Fort Worth.",
+      "intro": "Fort Worth is within the area our Dallas trucks cover, so the same 24-hour dispatch answers for it.",
+      "seoTitle": "Towing Fort Worth TX | 24 Hour Towing Dallas",
+      "seoDescription": "Tow trucks and roadside assistance in Fort Worth, Texas, dispatched 24 hours a day from the same Dallas operation.",
+      "service": "Towing in Fort Worth, Texas",
+      "sections": [
+        {
+          "kicker": "Same trucks, same number",
+          "heading": "Fort Worth is on our patch.",
+          "body": "Fort Worth is the western half of the Dallas–Fort Worth metro, and the service area runs across to it. Towing, roadside assistance, jump starts and junk car removal all run from the same dispatch."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Fort Worth is a drive, and that is worth saying.",
+          "body": "Fort Worth is the far end of the metro from Dallas, so a truck coming from our side covers real distance to reach it. That is fine for a planned tow, a flatbed transport or a junk car collection. For something urgent on the west side of Fort Worth, it is worth asking what is actually nearest, because the fastest truck is not always ours and saying so is cheaper than a long wait."
+        },
+        {
+          "kicker": "Where breakdowns happen",
+          "heading": "Knowing the Fort Worth roads helps.",
+          "body": "Most calls from Fort Worth come from the interstates: I-30 and I-20 running east toward Dallas, I-35W north and south through the city, and the I-820 loop around it. On any of those, the direction of travel and the nearest exit number matter more than the street name. If you are in a parking lot or on a side street, the cross streets or a business name nearby will get the truck to you faster."
+        },
+        {
+          "kicker": "Straight answer",
+          "heading": "Dallas-based, Fort Worth covered.",
+          "body": "Fort Worth is a big city in its own right, with its own towing companies. The base is in Dallas, and that is worth stating plainly, because towing directories are full of suburb pages implying a yard around the corner that does not exist, and the difference shows up in how long a truck takes to reach you. If timing is what decides your call, ask about it directly rather than reading it off a page. What the coverage does mean is a single number for the metro: the same dispatch handles Fort Worth, Dallas and the suburbs between them."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Fort Worth?",
+      "faqs": [
+        {
+          "q": "Are you actually based in Fort Worth?",
+          "a": "No — the base is in Dallas and Fort Worth is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
+        },
+        {
+          "q": "What services do you offer in Fort Worth?",
+          "a": "The same as in Dallas: towing, flatbed transport, roadside assistance, jump starts, tire changes, lockouts, fuel delivery and junk car removal. One number covers all of it."
+        }
+      ],
+      "kind": "area",
+      "areaServed": [
+        "Fort Worth, Texas"
+      ]
+    },
+    {
+      "slug": "towing-garland.html",
+      "navLabel": "Garland",
+      "kicker": "Garland",
+      "heading": "Towing in Garland.",
+      "intro": "Garland is within the area our Dallas trucks cover, so the same 24-hour dispatch answers for it.",
+      "seoTitle": "Towing Garland TX | 24 Hour Towing Dallas",
+      "seoDescription": "Tow trucks and roadside assistance in Garland, Texas, dispatched 24 hours a day from the same Dallas operation.",
+      "service": "Towing in Garland, Texas",
+      "sections": [
+        {
+          "kicker": "Same trucks, same number",
+          "heading": "Garland is on our patch.",
+          "body": "Garland sits northeast of Dallas and shares a long border with it, so it falls inside the area our trucks already cover. Towing, roadside assistance, jump starts and junk car removal all run from the same dispatch."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Garland is next door.",
+          "body": "Garland borders Dallas, so a truck does not cross the metro to reach it. That still is not a promise of a particular time — traffic on 635 has its own opinions — but Garland is well within the area rather than at its edge. Ask on the call if timing decides it."
+        },
+        {
+          "kicker": "Where breakdowns happen",
+          "heading": "Knowing the Garland roads helps.",
+          "body": "Garland breakdowns tend to happen on I-635, the President George Bush Turnpike, I-30 along the south edge and SH 78 through the middle of town. The turnpike is a toll road with long stretches between exits, so the nearest exit and direction of travel are the details that matter most there. On surface streets, a cross street or a business nearby is enough."
+        },
+        {
+          "kicker": "Straight answer",
+          "heading": "Dallas-based, Garland covered.",
+          "body": "Garland borders Dallas to the northeast. The base is in Dallas, and that is worth stating plainly, because towing directories are full of suburb pages implying a yard around the corner that does not exist, and the difference shows up in how long a truck takes to reach you. If timing is what decides your call, ask about it directly rather than reading it off a page. What the coverage does mean is a single number for the metro: the same dispatch handles Garland, Dallas and the suburbs between them."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Garland?",
+      "faqs": [
+        {
+          "q": "Are you actually based in Garland?",
+          "a": "No — the base is in Dallas and Garland is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
+        },
+        {
+          "q": "What services do you offer in Garland?",
+          "a": "The same as in Dallas: towing, flatbed transport, roadside assistance, jump starts, tire changes, lockouts, fuel delivery and junk car removal. One number covers all of it."
+        }
+      ],
+      "kind": "area",
+      "areaServed": [
+        "Garland, Texas"
+      ]
+    },
+    {
+      "slug": "towing-grand-prairie.html",
+      "navLabel": "Grand Prairie",
+      "kicker": "Grand Prairie",
+      "heading": "Towing in Grand Prairie.",
+      "intro": "Grand Prairie is within the area our Dallas trucks cover, so the same 24-hour dispatch answers for it.",
+      "seoTitle": "Towing Grand Prairie TX | 24 Hour Towing Dallas",
+      "seoDescription": "Tow trucks and roadside assistance in Grand Prairie, Texas, dispatched 24 hours a day from the same Dallas operation.",
+      "service": "Towing in Grand Prairie, Texas",
+      "sections": [
+        {
+          "kicker": "Same trucks, same number",
+          "heading": "Grand Prairie is on our patch.",
+          "body": "Grand Prairie sits between Dallas and Arlington, in the middle of the corridor our trucks already cover. Towing, roadside assistance, jump starts and junk car removal all run from the same dispatch."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Grand Prairie is between us and Arlington.",
+          "body": "Grand Prairie sits west of Dallas, closer than Arlington and nowhere near as far as Fort Worth. The northern end along I-30 is nearer than the southern end past I-20, so tell dispatch where you are and ask about timing if it matters. A planned tow or a junk car collection is no trouble anywhere in the city."
+        },
+        {
+          "kicker": "Where breakdowns happen",
+          "heading": "Knowing the Grand Prairie roads helps.",
+          "body": "Grand Prairie is crossed by I-30 and I-20 running east to west and by SH 360 and SH 161 running north to south, and it is long and narrow, so two addresses in the same city can be a fair drive apart. Give the highway and the nearest exit if you are on one, or the cross streets if you are not. Mention if you are near the lake, because access roads there are not always where a map suggests."
+        },
+        {
+          "kicker": "Straight answer",
+          "heading": "Dallas-based, Grand Prairie covered.",
+          "body": "Grand Prairie runs a long way north to south, so where in Grand Prairie matters. The base is in Dallas, and that is worth stating plainly, because towing directories are full of suburb pages implying a yard around the corner that does not exist, and the difference shows up in how long a truck takes to reach you. If timing is what decides your call, ask about it directly rather than reading it off a page. What the coverage does mean is a single number for the metro: the same dispatch handles Grand Prairie, Dallas and the suburbs between them."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Grand Prairie?",
+      "faqs": [
+        {
+          "q": "Are you actually based in Grand Prairie?",
+          "a": "No — the base is in Dallas and Grand Prairie is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
+        },
+        {
+          "q": "What services do you offer in Grand Prairie?",
+          "a": "The same as in Dallas: towing, flatbed transport, roadside assistance, jump starts, tire changes, lockouts, fuel delivery and junk car removal. One number covers all of it."
+        }
+      ],
+      "kind": "area",
+      "areaServed": [
+        "Grand Prairie, Texas"
+      ]
+    },
+    {
+      "slug": "towing-irving.html",
+      "navLabel": "Irving",
+      "kicker": "Irving",
+      "heading": "Towing in Irving.",
+      "intro": "Irving is within the area our Dallas trucks cover, so the same 24-hour dispatch answers for it.",
+      "seoTitle": "Towing Irving TX | 24 Hour Towing Dallas",
+      "seoDescription": "Tow trucks and roadside assistance in Irving, Texas, dispatched 24 hours a day from the same Dallas operation.",
+      "service": "Towing in Irving, Texas",
+      "sections": [
+        {
+          "kicker": "Same trucks, same number",
+          "heading": "Irving is on our patch.",
+          "body": "Irving sits directly west of Dallas, between the city and DFW Airport, and is one of the closest parts of the service area. Towing, roadside assistance, jump starts and junk car removal all run from the same dispatch."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Irving is close.",
+          "body": "Irving borders Dallas, so it is one of the nearer parts of the metro for our trucks. That does not make every call quick — traffic on 183 and 114 at rush hour is its own problem — but it does mean Irving is not at the edge of the map. If timing matters for your call, ask, and you will get a straight answer."
+        },
+        {
+          "kicker": "Where breakdowns happen",
+          "heading": "Knowing the Irving roads helps.",
+          "body": "In Irving the calls come off SH 183, SH 114, Loop 12 and I-635, and from the roads around Las Colinas and the airport. Those highways split, merge and run alongside frontage roads, so it is easy to be on the wrong one of two parallel lanes in a description. Give the highway, the direction, and the last exit or cross street you passed, and share a location pin if your phone can."
+        },
+        {
+          "kicker": "Straight answer",
+          "heading": "Dallas-based, Irving covered.",
+          "body": "Irving borders Dallas, so it is one of the shorter drives in the service area. The base is in Dallas, and that is worth stating plainly, because towing directories are full of suburb pages implying a yard around the corner that does not exist, and the difference shows up in how long a truck takes to reach you. If timing is what decides your call, ask about it directly rather than reading it off a page. What the coverage does mean is a single number for the metro: the same dispatch handles Irving, Dallas and the suburbs between them."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Irving?",
+      "faqs": [
+        {
+          "q": "Are you actually based in Irving?",
+          "a": "No — the base is in Dallas and Irving is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
+        },
+        {
+          "q": "What services do you offer in Irving?",
+          "a": "The same as in Dallas: towing, flatbed transport, roadside assistance, jump starts, tire changes, lockouts, fuel delivery and junk car removal. One number covers all of it."
+        }
+      ],
+      "kind": "area",
+      "areaServed": [
+        "Irving, Texas"
+      ]
+    },
+    {
+      "slug": "towing-mesquite.html",
+      "navLabel": "Mesquite",
+      "kicker": "Mesquite",
+      "heading": "Towing in Mesquite.",
+      "intro": "Mesquite is within the area our Dallas trucks cover, so the same 24-hour dispatch answers for it.",
+      "seoTitle": "Towing Mesquite TX | 24 Hour Towing Dallas",
+      "seoDescription": "Tow trucks and roadside assistance in Mesquite, Texas, dispatched 24 hours a day from the same Dallas operation.",
+      "service": "Towing in Mesquite, Texas",
+      "sections": [
+        {
+          "kicker": "Same trucks, same number",
+          "heading": "Mesquite is on our patch.",
+          "body": "Mesquite sits just east of Dallas along I-30 and I-635, inside the area our trucks already cover. Towing, roadside assistance, jump starts and junk car removal all run from the same dispatch."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Mesquite is close.",
+          "body": "Mesquite sits right on the eastern edge of Dallas, so it is one of the nearer parts of the metro for our trucks. If timing is what decides your call, ask about it directly — you will get a straight answer rather than a number off a website."
+        },
+        {
+          "kicker": "Where breakdowns happen",
+          "heading": "Knowing the Mesquite roads helps.",
+          "body": "In Mesquite the calls mostly come from I-30, I-635, I-20 and US 80, and from the busy retail areas around the interchanges. Where I-635 meets I-30 and I-20, it is easy to be unsure which road you are actually on, so the direction you were heading and the last exit you passed narrow it down faster than a road name alone."
+        },
+        {
+          "kicker": "Straight answer",
+          "heading": "Dallas-based, Mesquite covered.",
+          "body": "Mesquite borders Dallas to the east. The base is in Dallas, and that is worth stating plainly, because towing directories are full of suburb pages implying a yard around the corner that does not exist, and the difference shows up in how long a truck takes to reach you. If timing is what decides your call, ask about it directly rather than reading it off a page. What the coverage does mean is a single number for the metro: the same dispatch handles Mesquite, Dallas and the suburbs between them."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Mesquite?",
+      "faqs": [
+        {
+          "q": "Are you actually based in Mesquite?",
+          "a": "No — the base is in Dallas and Mesquite is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
+        },
+        {
+          "q": "What services do you offer in Mesquite?",
+          "a": "The same as in Dallas: towing, flatbed transport, roadside assistance, jump starts, tire changes, lockouts, fuel delivery and junk car removal. One number covers all of it."
+        }
+      ],
+      "kind": "area",
+      "areaServed": [
+        "Mesquite, Texas"
+      ]
+    },
+    {
+      "slug": "towing-plano.html",
+      "navLabel": "Plano",
+      "kicker": "Plano",
+      "heading": "Towing in Plano.",
+      "intro": "Plano is within the area our Dallas trucks cover, so the same 24-hour dispatch answers for it.",
+      "seoTitle": "Towing Plano TX | 24 Hour Towing Dallas",
+      "seoDescription": "Tow trucks and roadside assistance in Plano, Texas, dispatched 24 hours a day from the same Dallas operation.",
+      "service": "Towing in Plano, Texas",
+      "sections": [
+        {
+          "kicker": "Same trucks, same number",
+          "heading": "Plano is on our patch.",
+          "body": "Plano sits north of Dallas up the US 75 corridor, inside the area our trucks already cover. Towing, roadside assistance, jump starts and junk car removal all run from the same dispatch."
+        },
+        {
+          "kicker": "Distance",
+          "heading": "Plano is a drive up 75.",
+          "body": "Plano is north of Dallas, so a truck covers some distance to reach it, and rush hour on Central or the tollway can add to that. For a planned tow, a flatbed transport or a junk car, that does not matter. For something urgent, ask on the call what timing looks like, and you will get a straight answer."
+        },
+        {
+          "kicker": "Where breakdowns happen",
+          "heading": "Knowing the Plano roads helps.",
+          "body": "In Plano the calls come from US 75 (Central Expressway), the Dallas North Tollway, the President George Bush Turnpike and SH 121. Two of those are toll roads with long gaps between exits, and the tollway and Central run parallel a few miles apart, so say which road you are on, which direction, and the last exit or cross street. In an office park or a shopping center lot, the building or store name is often the fastest way to be found."
+        },
+        {
+          "kicker": "Straight answer",
+          "heading": "Dallas-based, Plano covered.",
+          "body": "Plano is north of Dallas, past Richardson. The base is in Dallas, and that is worth stating plainly, because towing directories are full of suburb pages implying a yard around the corner that does not exist, and the difference shows up in how long a truck takes to reach you. If timing is what decides your call, ask about it directly rather than reading it off a page. What the coverage does mean is a single number for the metro: the same dispatch handles Plano, Dallas and the suburbs between them."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Plano?",
+      "faqs": [
+        {
+          "q": "Are you actually based in Plano?",
+          "a": "No — the base is in Dallas and Plano is within the service area. That is worth saying plainly, because a local address on every suburb page is a thing towing directories do and it is not true. Where the truck starts from matters for how long it takes, so ask on the call if timing is the deciding factor."
+        },
+        {
+          "q": "What services do you offer in Plano?",
+          "a": "The same as in Dallas: towing, flatbed transport, roadside assistance, jump starts, tire changes, lockouts, fuel delivery and junk car removal. One number covers all of it."
+        }
+      ],
+      "kind": "area",
+      "areaServed": [
+        "Plano, Texas"
+      ]
+    },
+    {
+      "slug": "accident-towing.html",
+      "navLabel": "Accident towing",
+      "kind": "service",
+      "kicker": "Accident towing",
+      "heading": "Accident towing in Dallas.",
+      "intro": "After a crash the car has to move, and it has to move to the shop you choose. Call 24 Hour Towing Dallas once everyone is out of the lanes and the police have what they need.",
+      "seoTitle": "Accident Towing Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Accident towing in Dallas, Texas. We move crash-damaged cars to the body shop you choose, including from I-35E, I-30, I-20, US 67 and I-45.",
+      "service": "Accident towing in Dallas",
+      "sections": [
+        {
+          "kicker": "First things",
+          "heading": "Get people clear, then call.",
+          "body": "If anyone is hurt, that call is 911, not a tow truck. Once people are out of the traffic lanes and the scene is as safe as you can make it, the tow is the next practical problem. On a Dallas freeway — I-35E through Oak Cliff, I-30, the I-20 southern loop, US 67, or I-45 — say the highway, the direction you were traveling, and the last exit or mile marker. A street name is enough in a neighborhood and close to useless on a freeway that runs for miles in both directions. If the car is still in a live lane, say that first."
+        },
+        {
+          "kicker": "Where it goes",
+          "heading": "Your shop, not a default one.",
+          "body": "A car you asked us to tow goes where you tell us: your body shop, the dealership, your driveway, or a shop a family member names while you are still on the scene. Have an address if you have one. If you have not picked a shop yet, say so on the call rather than deciding it while the driver is hooked up and traffic is stacking behind you. A private tow you requested is a different job from a non-consent tow off private property. The city regulates those, and we are not going to pretend a page can settle a fee dispute. Ask for the price of your tow on the call, with the vehicle and the destination in front of you."
+        },
+        {
+          "kicker": "The damage",
+          "heading": "Wheels, steering, and whether it rolls.",
+          "body": "Crash damage changes the truck. A car that still rolls and steers can often leave on a wheel-lift. A car with a locked wheel, a collapsed suspension, or fluid under it usually wants a flatbed, and sometimes a winch before it can be loaded. All-wheel drive is the other reason to ask for a flatbed: rolling a vehicle like that on two wheels can hurt the drivetrain. Tell dispatch the make and model, which corner is damaged, and whether the wheels still turn. A photo of the car from a few steps back answers more than a long description, if you can take one without standing in a lane."
+        },
+        {
+          "kicker": "South Dallas base",
+          "heading": "Closer to the south side than to Plano.",
+          "body": "The address is 1241 Willow Glen Dr in south Dallas, 75232. A crash on I-35E south, I-20, US 67, or in Oak Cliff is a shorter run from that base than a crash on the Dallas North Tollway or in Plano. That is worth saying plainly, because a page that implies a truck around the corner in every suburb is how people end up waiting longer than they expected. If timing is what you are deciding on, ask on the call. Dispatch can tell you whether we are the right truck or whether someone closer should take it. The line is the same 24-hour number either way."
+        }
+      ],
+      "ctaHeadline": "Need a tow after a crash?",
+      "faqs": [
+        {
+          "q": "Do I have to use the tow company someone at the scene recommends?",
+          "a": "No. If you are arranging the tow, you pick the company and you pick the destination. A shop, a dealership, or your home are all normal answers. If you are not sure where it should go yet, say that when you call."
+        },
+        {
+          "q": "What if the car will not roll?",
+          "a": "Say so before the truck leaves. A locked wheel or a collapsed suspension changes the equipment, and finding it out at the scene means a second truck. A flatbed and a winch cover most of those cars."
+        },
+        {
+          "q": "Should I stay in the car?",
+          "a": "On a freeway, no, if you can get out on the side away from traffic and wait behind a barrier. Hazards on. On a quiet street, staying in the car with the doors locked is usually fine. If you are not sure it is safe to get out, say that when you call."
+        }
+      ]
+    },
+    {
+      "slug": "winch-out.html",
+      "navLabel": "Winch-out",
+      "kind": "service",
+      "kicker": "Winch-out",
+      "heading": "Winch-out and vehicle recovery in Dallas.",
+      "intro": "A car in a ditch, a median, or soft ground is a recovery, not a hookup. The winch comes out first. The tow, if there is one, comes after the vehicle is back on something solid.",
+      "seoTitle": "Winch-Out & Vehicle Recovery Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Winch-out and vehicle recovery in Dallas, Texas. Ditches, medians, mud, and Trinity River low ground, handled from a south Dallas base.",
+      "service": "Winch-out and vehicle recovery in Dallas",
+      "sections": [
+        {
+          "kicker": "When a winch is the job",
+          "heading": "Off the pavement is a different call.",
+          "body": "If all four tires are on a hard surface and the car rolls, you need a tow. If it is nose-down in a ditch along I-20, sitting in the mud of a construction entrance, or slid off a gravel shoulder on US 67, the first move is a winch. Hooking up and pulling from the wrong angle bends sheet metal and drags the truck toward the same hole. Tell dispatch how far off the pavement the vehicle is, what the ground is doing, and whether it is still upright. Those three answers decide whether one truck can do it."
+        },
+        {
+          "kicker": "Where it happens here",
+          "heading": "South Dallas ground stays soft after rain.",
+          "body": "The Trinity River bottoms, the low ground along Five Mile Creek, and the ditches beside I-35E and I-20 hold water. A car that left the road in a storm may be in mud that looked like grass an hour earlier. Construction sites off Loop 12 and the southern industrial stretches do the same thing to a delivery truck that followed a GPS pin onto unfinished ground. Say if the vehicle is in standing water. A winch from solid ground is a normal recovery. A vehicle already in deep water is a different problem, and dispatch needs to know before anyone drives to the edge of it."
+        },
+        {
+          "kicker": "On the scene",
+          "heading": "Stay clear of the cable.",
+          "body": "A winch cable under load can snap back. The useful place to stand is well off to the side, not behind the truck and not next to the car. If you can do it safely, set the hazards and keep other people back. You do not need to attach anything yourself. Tell the driver about all-wheel drive, a trailer still hooked on, or a wheel that is folded under, because each one changes how the pull is rigged. Keys help if the steering lock is on. If the keys are gone, say that on the phone so the plan includes it."
+        },
+        {
+          "kicker": "After it is out",
+          "heading": "Sometimes the recovery is the whole job.",
+          "body": "Plenty of winch-outs end with the car back on the shoulder, checked, and driven away. If it will not start, will not steer, or took a hit on the way off the road, the same truck can tow it. The destination is yours: home, a shop, or a tire store if the only damage is a shredded sidewall from the ditch. The base is 1241 Willow Glen Dr in south Dallas. Recoveries on the south side are the short runs. A vehicle in a Plano ditch is still a job we take, and it is a longer one. Ask on the call if you are choosing between companies by time."
+        }
+      ],
+      "ctaHeadline": "Vehicle off the road?",
+      "faqs": [
+        {
+          "q": "Is a winch-out the same price as a tow?",
+          "a": "Not usually. A hookup on pavement and a pull out of a ditch are different jobs, and the second takes more time and equipment. Ask for the figure on the call, once dispatch knows where the vehicle is sitting and how far off the road it is."
+        },
+        {
+          "q": "Can you pull a car out of mud?",
+          "a": "Often, if there is solid ground close enough to set the truck and the vehicle is still upright. Deep water, a car on its side, or ground that will not hold the tow truck are the cases to describe carefully before anyone is dispatched."
+        }
+      ]
+    },
+    {
+      "slug": "long-distance-towing.html",
+      "navLabel": "Long-distance towing",
+      "kind": "service",
+      "kicker": "Long-distance",
+      "heading": "Long-distance towing from Dallas.",
+      "intro": "A tow across town and a tow to another city are planned differently. Long-distance work is scheduled around the truck, and the price is mostly miles plus the vehicle.",
+      "seoTitle": "Long-Distance Towing Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Long-distance towing from Dallas, Texas. Planned flatbed and wrecker transport to another city, quoted from the miles and the vehicle rather than a published rate.",
+      "service": "Long-distance towing from Dallas",
+      "sections": [
+        {
+          "kicker": "Planned, not a dash",
+          "heading": "This is a scheduled trip.",
+          "body": "Emergency dispatch is for a car that is stuck now, somewhere in the Dallas area. A haul to Austin, Houston, Oklahoma, or across the state is a different shape of job. The truck is committed for hours, the route matters, and the quote has to include the empty miles back unless there is a load the other way, which we will not pretend we have. Call with both addresses. A pickup in south Dallas and a drop at a shop in Waco is a number we can give. A pickup 'somewhere near Dallas' and a drop 'near Houston' is not."
+        },
+        {
+          "kicker": "What rides on the truck",
+          "heading": "Flatbed for the cars that should not roll.",
+          "body": "All-wheel drive, a low car, a vehicle with a bad wheel, or anything you do not want bouncing on two tires for a few hundred miles should go on a flatbed. A running, front-wheel-drive car can travel on a wheel-lift for a shorter hop, and dispatch will say which they would actually use. Motorcycles, a second vehicle, or a car that will not go into neutral need to be mentioned before the truck is booked, because they change the equipment and the time at each end. We do not publish a per-mile card. The honest answer is the one given for your two addresses and your vehicle."
+        },
+        {
+          "kicker": "What to have ready",
+          "heading": "Keys, a destination that is open, and someone at both ends.",
+          "body": "A long tow fails in boring ways: the destination shop is closed, nobody can sign, the car is blocked in a garage the flatbed cannot enter, or the keys are with a person who is already on a flight. Say who will meet the truck in Dallas and who will meet it at the other end. If the car is at 1241 Willow Glen's side of town or anywhere else in the metro, the pickup is the easy half. The drop is the half to plan. If you need it moved overnight, ask. Do not assume a long haul leaves the moment you hang up. Emergency calls in Dallas come first, and a planned trip is fitted around them."
+        },
+        {
+          "kicker": "Inside the metro",
+          "heading": "DFW is not long-distance.",
+          "body": "Arlington, Fort Worth, Irving, and the southern suburbs are ordinary local tows from our Dallas base, even when the drive is a real one. Long-distance starts when the drop is outside that working area. If you are not sure which you are asking for, give both addresses and let dispatch sort it. A junk car that has to leave the state is the same conversation: distance, whether it rolls, and whether you can show you own it. The phone number is the same 24-hour line. For a planned haul, calling in the daytime just makes it easier to line up a shop's hours at the far end."
+        }
+      ],
+      "ctaHeadline": "Need a car moved out of town?",
+      "faqs": [
+        {
+          "q": "Do you charge by the mile?",
+          "a": "Miles are most of the price, along with the type of vehicle and how it has to be loaded. There is no rate card on this page. Ask for a figure with both addresses and the make and model."
+        },
+        {
+          "q": "Can you take it today?",
+          "a": "Sometimes. A long tow ties up a truck for the whole trip, and a breakdown in Dallas can move it back. Ask what the day actually looks like rather than assuming a departure time."
+        }
+      ]
+    },
+    {
+      "slug": "emergency-towing.html",
+      "navLabel": "Emergency towing",
+      "kind": "service",
+      "kicker": "24-hour towing",
+      "heading": "24-hour emergency towing in Dallas.",
+      "intro": "The line is answered at 3 a.m. the same way it is answered at 3 p.m. Tell dispatch where the vehicle is and what it is doing, and the right truck gets sent.",
+      "seoTitle": "24 Hour Emergency Towing Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "24-hour emergency towing in Dallas, Texas. One number for breakdowns, accidents, and winch-outs, dispatched from 1241 Willow Glen Dr in south Dallas.",
+      "service": "24-hour emergency towing in Dallas",
+      "sections": [
+        {
+          "kicker": "One number",
+          "heading": "You do not have to know which service you need.",
+          "body": "Most people who call at night know the car will not move and not much else. That is enough to start. Dispatch sorts a dead battery from a tow, a flat with a spare from a flat without one, and a car in a ditch from a car on a shoulder. Guessing wrong from a menu wastes the trip. Describe what happened, whether it still rolls, and whether anyone is in a live lane. The same line covers roadside help, flatbed towing, accident towing, and winch-outs. If it turns out you need a jump instead of a truck, that is a better outcome and it is handled on this call."
+        },
+        {
+          "kicker": "What speeds the truck up",
+          "heading": "Location first, then the vehicle.",
+          "body": "On I-35E, I-30, I-45, I-20, US 67, Loop 12, or the Dallas North Tollway, give the direction of travel and the nearest exit. In Oak Cliff, Pleasant Grove, or a parking lot, a cross street or a store name beats a ZIP code. Then the vehicle: make and model is usually enough, plus all-wheel drive, a lowered car, or anything larger than a pickup. Then where it should go, if you know. Four answers — where you are, what you drive, what is wrong, where it is going — are the whole dispatch. A dropped pin from your phone settles the first one outright."
+        },
+        {
+          "kicker": "While you wait",
+          "heading": "Get off the traffic side.",
+          "body": "Hazards on. If you are on a freeway and you can exit the car on the side away from traffic, wait behind a barrier rather than in the driver's seat. A stopped car on a shoulder is easy to hit. On a residential street, staying inside with the doors locked is usually the right call. Do not stand behind the car in the lane to wave people around. If the scene is not safe to stay at, say that when you call so it is treated as the urgent part of the job and not just another detail."
+        },
+        {
+          "kicker": "Where the truck starts",
+          "heading": "South Dallas, around the clock.",
+          "body": "24 Hour Towing Dallas is at 1241 Willow Glen Dr, Dallas, TX 75232. Dispatch runs 24 hours. A breakdown in Oak Cliff, Pleasant Grove, Duncanville, DeSoto, or along I-35E south is closer to that address than a breakdown in Plano, Garland, or far north Dallas. We still cover those places. The drive is longer, and anyone who tells you otherwise is selling a truck they do not have sitting in your suburb. Ask what the run looks like if time is the reason you are choosing a company. There is no published arrival promise on this page, because the honest answer depends on where the trucks already are."
+        }
+      ],
+      "ctaHeadline": "Need a truck now?",
+      "faqs": [
+        {
+          "q": "Are you actually open all night?",
+          "a": "Yes. The dispatch line is answered 24 hours a day, including weekends and holidays. Breakdowns do not keep office hours, and the number is the way in."
+        },
+        {
+          "q": "Will you tell me a price before the truck rolls?",
+          "a": "Ask for it. Distance, the vehicle, and how hard it is to reach are what the number is made of. A car on a driveway and the same car off the road are different jobs, so have the location ready when you ask."
+        }
+      ]
+    },
+    {
+      "slug": "parking-garage-towing.html",
+      "navLabel": "Parking garage towing",
+      "kind": "service",
+      "kicker": "Low clearance",
+      "heading": "Parking garage and low-clearance towing in Dallas.",
+      "intro": "A flatbed that cannot get under the posted bar is a wasted trip. Low-clearance work is about which truck fits, and the number on the sign at the entrance is the fact that decides it.",
+      "seoTitle": "Parking Garage Towing Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Low-clearance and parking garage towing in Dallas. Downtown decks, hospital garages, and apartment garages, with the posted height checked before a truck is sent.",
+      "service": "Parking garage and low-clearance towing in Dallas",
+      "sections": [
+        {
+          "kicker": "The number on the bar",
+          "heading": "Read the clearance before you call, if you can.",
+          "body": "Garage entrances in downtown Dallas, at the hospitals along Harry Hines, and under apartment buildings in Uptown and Oak Cliff post a height. That single number tells dispatch whether a flatbed can tilt its bed inside or whether a smaller wheel-lift truck has to go in and bring the car to the street. If you cannot see the sign, look at the entrance you actually drove through. The exit is sometimes taller than the way in, or the other way around. A guess of 'it felt low' is not as useful as the figure painted on the beam."
+        },
+        {
+          "kicker": "Which truck",
+          "heading": "Flatbeds need room to tilt.",
+          "body": "A flatbed is the right truck for all-wheel drive, a low sports car, or a car with a ruined wheel, and it is the wrong truck if the deck cannot get under the concrete. The workaround is often a wheel-lift or a dolly that can reach the stall, then a transfer if the car still needs to ride on a bed for the trip. Tight turns, a car boxed against a wall, and a stall on a slope all change the plan. Say which level you are on and whether the car can roll. A dead car on the roof of a garage and a dead car on the ground floor are different jobs even when the clearance is the same."
+        },
+        {
+          "kicker": "Where this comes up",
+          "heading": "Downtown decks, hospitals, and apartments.",
+          "body": "The calls cluster in a few places: office and hotel garages downtown and in the Arts District, hospital garages, apartment decks where a resident's car will not start on a Sunday night, and the occasional car that followed a GPS into a freight or service entrance it should not have. Surface lots at NorthPark, or a store lot in Duncanville, are ordinary tows. The garage is the special case, and it is worth naming as a garage on the first sentence of the call. If the car is in a private garage at a house, say whether the door is open and how much driveway is in front of it. A residential garage is usually a clearance problem and a space problem together."
+        },
+        {
+          "kicker": "If it will not come out",
+          "heading": "Say so before a second truck is the answer.",
+          "body": "Some cars in garages are not stuck because of height. The steering is locked, the parking brake is on and the release is dead, or the car is against a column with no angle to pull. Those are recovery details, and they belong on the first call. We are based at 1241 Willow Glen Dr in south Dallas. A garage in Oak Cliff or downtown is a reasonable run. A garage in Plano is a longer one, and the clearance question does not change with the distance. Give the posted height, the level, and the make of the car. That is enough to pick a truck instead of sending one that has to turn around at the bar."
+        }
+      ],
+      "ctaHeadline": "Car stuck in a garage?",
+      "faqs": [
+        {
+          "q": "Can a flatbed enter a parking garage?",
+          "a": "Only if the posted clearance and the ramps allow it, and only if there is room to tilt the bed. If you can read the height at the entrance, that number is the first thing to give dispatch. Otherwise a smaller truck may have to bring the car out to the street."
+        },
+        {
+          "q": "What if I do not know the clearance?",
+          "a": "Look at the entrance. The limit is usually painted on the bar or the beam. If you truly cannot see it, say which garage and which level, and dispatch will plan for a truck that can work in a low deck rather than assuming a flatbed fits."
+        }
+      ]
+    },
+    {
+      "slug": "towing-oak-cliff.html",
+      "navLabel": "Oak Cliff",
+      "kind": "area",
+      "areaServed": [
+        "Oak Cliff, Dallas, Texas"
+      ],
+      "kicker": "Oak Cliff",
+      "heading": "Towing in Oak Cliff, Dallas.",
+      "intro": "Oak Cliff is on the south side of the Trinity, close to our base at 1241 Willow Glen Dr. The same 24-hour dispatch covers it. We are not going to pretend the yard is on Jefferson Boulevard.",
+      "seoTitle": "Towing Oak Cliff Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Towing and roadside help in Oak Cliff, Dallas. I-35E, I-30, US 67 and Jefferson Boulevard, dispatched from a south Dallas base on Willow Glen Dr.",
+      "service": "Towing in Oak Cliff, Dallas",
+      "sections": [
+        {
+          "kicker": "The roads",
+          "heading": "Freeways on three sides, and a lot of neighborhood streets.",
+          "body": "Oak Cliff sits south of the Trinity. I-30 is the north edge, through the Mixmaster toward downtown. I-35E runs north-south and splits the older neighborhoods from the west side toward Cockrell Hill. US 67, Marvin D. Love Freeway, carries traffic southwest toward Duncanville. Loop 12 and Illinois Avenue are the surface roads people actually name when they break down. A pin or a cross street matters here because 'Oak Cliff' covers Bishop Arts, Winnetka Heights, Kessler, and a lot of streets that do not look like a freeway shoulder."
+        },
+        {
+          "kicker": "Landmarks that help",
+          "heading": "Name a place a driver can find.",
+          "body": "Jefferson Boulevard, the Bishop Arts District, the Texas Theatre, Lake Cliff Park, and the Dallas Zoo are the landmarks people reach for, and they work. So does a hospital or a school if that is what is actually nearest. Kessler Park and the steep streets dropping toward the river are a different kind of call: a car that quit on a hill, or one that will not hold on a slope, needs the parking brake described honestly. Construction and event traffic around the zoo and Bishop Arts can block a big truck even when the car itself is easy. Say if you are in a narrow street with cars on both sides."
+        },
+        {
+          "kicker": "How close we are",
+          "heading": "South Dallas base, not a fictional Oak Cliff yard.",
+          "body": "1241 Willow Glen Dr, 75232, is south Dallas, a short hop from northern Oak Cliff and a real drive from the far southwest corner near Duncanville. That is the truth of the response, and it is better than a page that swaps 'Oak Cliff' into a template and implies a truck on Colorado Boulevard. Towing, flatbeds, jump starts, tire changes, lockouts, fuel, and winch-outs all run on the same number. If you are choosing a company because the car is in a live lane on I-35E, ask what the current run looks like. If the car is in a driveway and can wait, the distance barely matters."
+        },
+        {
+          "kicker": "What to say",
+          "heading": "Direction on 35E is the part people skip.",
+          "body": "Northbound and southbound I-35E through Oak Cliff feel like the same road until a truck tries to reach you from the opposite frontage. Name the direction and the exit: Marsalis, Illinois, Zang, or the one you can actually see. On Jefferson or Davis, a cross street is enough. If the car is in a garage under an apartment building, read the clearance if it is posted and say which level. The rest of the call is the usual four things: where you are, what you drive, what is wrong, and where you want it taken."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Oak Cliff?",
+      "faqs": [
+        {
+          "q": "Are you based in Oak Cliff?",
+          "a": "The base is 1241 Willow Glen Dr in south Dallas, 75232, not a separate Oak Cliff yard. Oak Cliff is close, which is why it is one of the areas a south Dallas address can actually serve well. Ask on the call if timing is the deciding factor."
+        },
+        {
+          "q": "Do you cover Bishop Arts and Kessler as well as the freeways?",
+          "a": "Yes. Neighborhood streets, driveways, and the freeways around Oak Cliff are the same dispatch. A tight street or a steep hill is worth mentioning so the truck that shows up can actually get to the car."
+        }
+      ]
+    },
+    {
+      "slug": "towing-pleasant-grove.html",
+      "navLabel": "Pleasant Grove",
+      "kind": "area",
+      "areaServed": [
+        "Pleasant Grove, Dallas, Texas"
+      ],
+      "kicker": "Pleasant Grove",
+      "heading": "Towing in Pleasant Grove, Dallas.",
+      "intro": "Pleasant Grove is southeast Dallas. Our base on Willow Glen Dr is on the south side of the city, and the drive over is a surface-street or I-20 run, not a trip from another county.",
+      "seoTitle": "Towing Pleasant Grove Dallas TX | 24 Hour Towing Dallas",
+      "seoDescription": "Towing in Pleasant Grove, southeast Dallas. US 175, I-20, Buckner Boulevard and Lake June, from a south Dallas base. Call 469-457-4462.",
+      "service": "Towing in Pleasant Grove, Dallas",
+      "sections": [
+        {
+          "kicker": "The roads",
+          "heading": "175, I-20, and Buckner do most of the work.",
+          "body": "Pleasant Grove is tied together by US 175, C.F. Hawn Freeway, running northwest toward downtown and southeast out of the city. I-20 is the southern edge. Buckner Boulevard and Lake June Road are the commercial strips where a lot of breakdowns actually sit: a parking lot, a shoulder, a car that will not restart after an errand. Loop 12 is the west side of the area. If you are on 175, the direction and the last exit matter more than the neighborhood name, because the freeway is the same road for a long way on either side of Lake June."
+        },
+        {
+          "kicker": "The ground",
+          "heading": "Prairie Creek and low lots after rain.",
+          "body": "Parts of southeast Dallas drain slowly. A car that left the pavement near Prairie Creek, or a truck that cut across a soft shoulder off 175, can be a winch job rather than a hookup. Say if the tires are in mud or if the car is still on asphalt. Apartment-complex lots along Lake June and Buckner are the other common scene: a car blocked in, a car with no room for a flatbed to tilt, or a garage under the building. The posted clearance, if you can see it, saves a truck that does not fit."
+        },
+        {
+          "kicker": "Honest distance",
+          "heading": "South Dallas to southeast Dallas is a real but short run.",
+          "body": "We are at 1241 Willow Glen Dr, 75232. Pleasant Grove is east of that, across south Dallas, not across the metro. It is still not a truck parked at the Buckner and Lake June intersection waiting for your call. Nobody reputable has that in every neighborhood. What you get is the same 24-hour dispatch that covers Oak Cliff and the southern suburbs, and a drive that is shorter than the one to Plano or Alliance. If the car is in a dangerous spot on 175, lead with that. If it is in a driveway, the drive over is ordinary."
+        },
+        {
+          "kicker": "Same services",
+          "heading": "Tow, roadside, or a winch. One number.",
+          "body": "Battery jumps, tire changes, fuel, lockouts, flatbeds, accident tows, and winch-outs are all on the Pleasant Grove call. You do not need a different company because the problem turned out to be a spare tire instead of a tow. Tell dispatch what the car is doing. A non-running car that rolls is simple. A car with a seized brake or no keys is still movable, and it needs different gear. Where it goes is your choice: a shop on Buckner, a house off Lake June, or somewhere else in Dallas. Have the address if you have picked one."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Pleasant Grove?",
+      "faqs": [
+        {
+          "q": "Do you sit in Pleasant Grove?",
+          "a": "No. The base is 1241 Willow Glen Dr in south Dallas. Pleasant Grove is in the area we cover from there. The page says so because a lot of towing sites imply a yard in every neighborhood they name."
+        },
+        {
+          "q": "What should I tell you if I am on US 175?",
+          "a": "Direction, the last exit or cross street, and whether you are on the main lanes, the shoulder, or a frontage road. That is the difference between a truck that finds you and a truck that passes you."
+        }
+      ]
+    },
+    {
+      "slug": "towing-duncanville.html",
+      "navLabel": "Duncanville",
+      "kind": "area",
+      "areaServed": [
+        "Duncanville, Texas"
+      ],
+      "kicker": "Duncanville",
+      "heading": "Towing in Duncanville, TX.",
+      "intro": "Duncanville is the suburb directly southwest of our south Dallas base. US 67 and I-20 meet here, and a tow from Willow Glen Dr does not start from the other side of the metro.",
+      "seoTitle": "Towing Duncanville TX | 24 Hour Towing Dallas",
+      "seoDescription": "Towing in Duncanville, Texas, near US 67 and I-20. Dispatched from 1241 Willow Glen Dr in south Dallas, not from a Duncanville yard we do not have.",
+      "service": "Towing in Duncanville, Texas",
+      "sections": [
+        {
+          "kicker": "The interchange",
+          "heading": "67 and I-20 are where the hard calls are.",
+          "body": "Duncanville's freeway trouble concentrates where US 67 meets I-20, and along 67 toward the Dallas line and south toward Cedar Hill. Main Street and Camp Wisdom Road are the surface streets drivers name. A breakdown on the 67 main lanes needs a direction: toward Dallas or toward Cedar Hill. The frontage roads are a separate answer. Wheatland Road and the streets feeding the retail along 67 are parking-lot calls more often than freeway calls, and a lot name or a store name is the fastest way to be found in those."
+        },
+        {
+          "kicker": "Close to the base",
+          "heading": "This is one of the short drives.",
+          "body": "1241 Willow Glen Dr is north and east of Duncanville, in Dallas 75232. Duncanville is one of the suburbs that address can actually reach without crossing the whole county. We still do not have a Duncanville yard, a Duncanville phone number, or a truck assigned to sit at the interchange. The operation is 24 Hour Towing Dallas, and Duncanville is inside the area that dispatch covers. If two companies answer and time is the only difference, ask both what the run looks like right now. A page cannot know which truck is closer at 1 a.m."
+        },
+        {
+          "kicker": "Neighborhood streets",
+          "heading": "Hills, cul-de-sacs, and cars that will not start at home.",
+          "body": "A lot of Duncanville calls are not on the freeway at all. A car in a driveway off Clark Road or Main Street that will not start, a flat with no usable spare, a lockout in a school or church lot. Those are ordinary roadside or tow jobs. Cul-de-sacs and tight driveways are the detail that changes the truck: a flatbed needs room to tilt. If the car is behind a gate or boxed in by other vehicles, say so. If it quit on a slope, say whether it is in park and whether the parking brake holds."
+        },
+        {
+          "kicker": "Where it can go",
+          "heading": "A shop in Duncanville or back into Dallas.",
+          "body": "The destination is yours. A repair shop on Main Street, a dealer back up 67 in Dallas, or your own garage are all normal. Accident damage is the same rule: we take it to the body shop you name, not to one we pick. Junk cars that have been sitting in a side yard are a different call — whether it rolls, whether it can be reached, and whether you can show you own it. The phone number does not change with the city. It is the Dallas 24-hour line, and Duncanville is on it."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Duncanville?",
+      "faqs": [
+        {
+          "q": "Is there a Duncanville shop I should come to?",
+          "a": "No. The address is 1241 Willow Glen Dr, Dallas, TX 75232. Customers do not drop cars there for this. We come to the vehicle. Duncanville is covered from that base."
+        },
+        {
+          "q": "Do you tow from the US 67 and I-20 interchange?",
+          "a": "Yes. Tell dispatch which freeway, which direction, and whether you are on the main lanes or a frontage road. Those ramps are easy to describe badly and slow to search."
+        }
+      ]
+    },
+    {
+      "slug": "towing-desoto.html",
+      "navLabel": "DeSoto",
+      "kind": "area",
+      "areaServed": [
+        "DeSoto, Texas"
+      ],
+      "kicker": "DeSoto",
+      "heading": "Towing in DeSoto, TX.",
+      "intro": "DeSoto sits on I-35E immediately south of Dallas. From 1241 Willow Glen Dr that is a southbound run, which is the direction our base actually faces.",
+      "seoTitle": "Towing DeSoto TX | 24 Hour Towing Dallas",
+      "seoDescription": "Towing in DeSoto, Texas along I-35E, Hampton Road and Pleasant Run. South Dallas base at 1241 Willow Glen Dr. Call 469-457-4462, 24 hours.",
+      "service": "Towing in DeSoto, Texas",
+      "sections": [
+        {
+          "kicker": "I-35E",
+          "heading": "The freeway is the spine of the city.",
+          "body": "DeSoto is built along I-35E. Pleasant Run Road and Belt Line Road cross it, and Hampton Road carries a lot of the local traffic on the west side. A disabled car on 35E south of the Dallas city limit needs the direction — toward Dallas or toward Duncanville and Waxahachie — plus the exit. The frontage roads through the retail at Pleasant Run are their own scene: parking-lot breakdowns, cars that will not restart outside a store, and the occasional vehicle left along the frontage overnight. Name the store or the cross street. 'DeSoto' alone is a three-mile guess."
+        },
+        {
+          "kicker": "Why this page exists",
+          "heading": "The base is just north of here.",
+          "body": "South Dallas 75232 shares a border with this part of the metro. DeSoto is one of the few suburbs where a Willow Glen Drive address is genuinely nearby, along with Duncanville and the south side of Oak Cliff. That is the reason for the page. It is not a claim that we keep a truck in a DeSoto bay. 24 Hour Towing Dallas has one published address. Dispatch is 24 hours. If you are comparing companies for a car sitting in a dangerous spot on 35E, ask who can actually roll. If the car is at home off Hampton, schedule it like any other local tow."
+        },
+        {
+          "kicker": "Houses and lots",
+          "heading": "Driveways, HOA streets, and low garage entries.",
+          "body": "Residential calls in DeSoto are usually a car that died in a driveway or a flat with a spare that is also flat. Some of the newer streets are narrow once cars are parked on both sides, and a flatbed needs a straight run to load. If your house has a garage the car is stuck inside, the door height and the depth of the driveway matter more than the neighborhood. Apartment and townhome garages are the same question as a downtown deck, just lower stakes: read the clearance if it is posted. A car that has sunk into a yard after sitting is a winch conversation, not a surprise for the driver."
+        },
+        {
+          "kicker": "The rest of the job",
+          "heading": "Same menu as Dallas, same phone.",
+          "body": "Roadside service, flatbed towing, accident tows, motorcycle towing, and junk-car removal are available in DeSoto on the same terms as in Dallas. The practical difference is the drive from 1241 Willow Glen Dr, which for most of DeSoto is short. Where the vehicle goes is still your decision. A shop in DeSoto, a dealer up 35E in Dallas, or a house in Lancaster are all fine. Tell dispatch if the car is all-wheel drive or will not come out of park. Both change the truck, and both are cheaper to hear on the phone than at the curb."
+        }
+      ],
+      "ctaHeadline": "Need a tow in DeSoto?",
+      "faqs": [
+        {
+          "q": "Are you a DeSoto company?",
+          "a": "We are 24 Hour Towing Dallas, at 1241 Willow Glen Dr, Dallas, TX 75232. DeSoto is covered from that address because it is immediately south of us. There is not a second office in DeSoto."
+        },
+        {
+          "q": "Can you pick up on I-35E at Pleasant Run?",
+          "a": "Yes. Say whether you are northbound or southbound, and whether you are on the freeway, the shoulder, or the frontage road by the businesses. Those are three different places to send a truck."
+        }
+      ]
+    },
+    {
+      "slug": "towing-lancaster.html",
+      "navLabel": "Lancaster",
+      "kind": "area",
+      "areaServed": [
+        "Lancaster, Texas"
+      ],
+      "kicker": "Lancaster",
+      "heading": "Towing in Lancaster, TX.",
+      "intro": "Lancaster is farther down I-35E than DeSoto. We cover it from south Dallas. The drive is longer than Oak Cliff and still nothing like a run to the north suburbs.",
+      "seoTitle": "Towing Lancaster TX | 24 Hour Towing Dallas",
+      "seoDescription": "Towing in Lancaster, Texas. I-35E, Pleasant Run, Belt Line and the downtown square, dispatched from 1241 Willow Glen Dr in south Dallas.",
+      "service": "Towing in Lancaster, Texas",
+      "sections": [
+        {
+          "kicker": "Getting there",
+          "heading": "35E south, then a real surface street.",
+          "body": "I-35E is the way into Lancaster from our base, past DeSoto. Pleasant Run Road and Belt Line Road are the big crosses. Dallas Avenue runs toward the older downtown square, which is the landmark people use when they are not on the freeway. A breakdown on 35E through Lancaster, or on the frontage near the retail, should come with a direction and an exit. Downtown Lancaster is the opposite kind of call: slow streets, angled parking, and a car that quit in a spot a large truck has to approach carefully. Say if you are on the square or in a neighborhood east or west of 35E. Those are different drives once the truck leaves the freeway."
+        },
+        {
+          "kicker": "Distance, said plainly",
+          "heading": "Farther than DeSoto. Much closer than Plano.",
+          "body": "1241 Willow Glen Dr is in south Dallas. Lancaster is south again, past DeSoto. A truck covers real miles to get there, especially to the east side of town or to a car south of town toward Wilmer. We would rather say that than publish a Lancaster page that reads like we have a yard on the square. For a planned tow or a junk car, the miles are just part of the quote. For a car in a live lane, ask dispatch what the timing looks like and decide with that answer, not with a sentence on a website. The line is answered 24 hours either way."
+        },
+        {
+          "kicker": "What the calls are",
+          "heading": "Highway shoulders, home driveways, and cars that have sat.",
+          "body": "Highway calls are the urgent ones. The everyday ones are a battery at a house off Pleasant Run, a flat with no spare, a lockout, or a car that has been sitting long enough that the tires are down and the brakes are doubtful. A car that has sat in a yard may not roll, and it may not be reachable without moving something else. Mention both. If it is an accident on 35E, the same rules apply as in Dallas: people first, then the location, then the shop you want the car taken to. We do not pick the body shop."
+        },
+        {
+          "kicker": "One operation",
+          "heading": "Dallas dispatch, Lancaster included.",
+          "body": "There is not a separate Lancaster fleet. Flatbeds, wreckers for the occasional box truck, roadside service, and winch-outs are sent from the same dispatch that covers Dallas. If the vehicle is a motorcycle, or it is all-wheel drive and you care about how it is towed, say so. If you need it taken out of Lancaster to a shop in Dallas, that is a normal local-plus tow and not a long-distance haul. Long-distance is a different page and a different kind of schedule. For Lancaster itself, call the 24-hour number and give the cross street."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Lancaster?",
+      "faqs": [
+        {
+          "q": "How far is Lancaster from you?",
+          "a": "The base is 1241 Willow Glen Dr in south Dallas. Lancaster is south on I-35E, past DeSoto. It is a real drive and one of the closer suburbs, not a north-Dallas trip. Ask on the call if you need a picture of the current run."
+        },
+        {
+          "q": "Do you cover the square and the east side, or only the freeway?",
+          "a": "Both. The freeway, Dallas Avenue, and the neighborhoods off Pleasant Run and Belt Line are the same service. A tight street around the square is worth describing so the truck can get in."
         }
       ]
     }
@@ -543,7 +1499,100 @@
     },
     {
       "q": "What areas do you cover?",
-      "a": "Dallas and the surrounding metro, including Arlington and the neighbouring suburbs. If you are near the edge of that, ask when you call rather than assuming — the answer depends partly on where the vehicle is going as well as where it is now."
+      "a": "Dallas, including Oak Cliff and Pleasant Grove, and the southern suburbs closest to the south Dallas base: Duncanville, DeSoto, and Lancaster. Also Arlington, Grand Prairie, Irving, Fort Worth, Garland, Mesquite, and Plano. The address is 1241 Willow Glen Dr, 75232, so the south side is the short run and Plano is the long one. If you are near the edge, ask when you call."
+    }
+  ],
+  "streetAddress": "1241 Willow Glen Dr",
+  "postalCode": "75232",
+  "showAddress": true,
+  "geo": {
+    "latitude": 32.67524,
+    "longitude": -96.8416
+  },
+  "_geoNote": "US Census Bureau geocoder, Public_AR_Current address-range match for 1241 Willow Glen Dr, Dallas, TX 75232, retrieved 2026-10-18. Not a surveyed rooftop pin.",
+  "_addressNote": "Mitch confirmed 2026-10-18 that 1241 Willow Glen Dr, Dallas, TX 75232 is the real staffed address. Keep it published.",
+  "gbpUrl": "https://share.google/mj4rnP282LSQAxJe4",
+  "hasMap": "https://share.google/mj4rnP282LSQAxJe4",
+  "sameAs": [
+    "https://share.google/mj4rnP282LSQAxJe4"
+  ],
+  "_gbpNote": "Owner-supplied Google share link, confirmed 2026-10-18. It redirects to a Search knowledge panel for kgmid /g/11n0wm6t8m (24 Hour Towing Dallas). A canonical google.com/maps place URL could not be resolved: Maps requests with that kgmid did not land on a /maps/place/ page. Do not replace this with a generic Maps search.",
+  "license": {
+    "label": "Texas TDLR towing license",
+    "number": ""
+  },
+  "_licenseNote": "Footer and schema omit the license until number is a real value. Do not invent one.",
+  "hours": [
+    {
+      "days": "Monday - Sunday",
+      "time": "Open 24 hours"
+    }
+  ],
+  "updated": "2026-10-18",
+  "footerNav": true,
+  "stepsKicker": "How a tow works",
+  "stepsHeadline": "From the call to the truck.",
+  "steps": [
+    {
+      "title": "Call",
+      "text": "Tell dispatch where the vehicle is, what you are driving, and what it is doing. The line is answered day and night."
+    },
+    {
+      "title": "We dispatch and head out",
+      "text": "Dispatch sends the truck that fits the vehicle and the spot it is sitting in, and tells you what the job involves."
+    },
+    {
+      "title": "Tow or roadside, done",
+      "text": "The driver completes the tow, the winch-out, or the roadside fix and gets you and the vehicle where you need to go."
+    }
+  ],
+  "nav": [
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Emergency",
+      "href": "/emergency-towing.html"
+    },
+    {
+      "label": "Service area",
+      "href": "/#areas"
+    },
+    {
+      "label": "About",
+      "href": "/about-us"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact-us"
+    }
+  ],
+  "redirectHosts": [
+    "dallastowtrucks.com",
+    "www.dallastowtrucks.com",
+    "towing-dallas.vercel.app"
+  ],
+  "redirects": [
+    {
+      "source": "/services.html",
+      "destination": "/services"
+    },
+    {
+      "source": "/services1",
+      "destination": "/services"
+    },
+    {
+      "source": "/about.html",
+      "destination": "/about-us"
+    },
+    {
+      "source": "/contact.html",
+      "destination": "/contact-us"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/"
     }
   ]
 }

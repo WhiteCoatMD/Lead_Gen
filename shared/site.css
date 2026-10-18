@@ -88,3 +88,15 @@
 .permit-fact .source{font-size:.85rem;opacity:.8}
 /* Only the calculator page prints stripped down; every other page prints as it always has. */
 @media print{.calc-page header,.calc-page footer,.calc-page .topbar,.calc-page .mobile-call,.calc-page .leadform,.calc-page .contact,.calc-page .calc-form{display:none}.calc-page.has-result .calc-example{display:none}}
+
+/* Opt-in NAP, license line and footer link groups. Absent unless a site asks. */
+.area-list a{color:inherit}
+.footer-id{display:flex;flex-direction:column;gap:6px}
+.footer-id p{margin:0}
+.footer-address,.nap{font-style:normal;line-height:1.55}
+.footer-address{display:flex;flex-direction:column;gap:2px}
+.footer-address a{color:#fff}
+.footer-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px 28px;padding-bottom:36px}
+.footer-links p{margin:0 0 8px;font-weight:900;color:#fff;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.footer-links a{display:block;color:#c9cbcd;text-decoration:none;padding:3px 0}
+.footer-links a:hover{color:#fff}

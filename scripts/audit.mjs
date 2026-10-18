@@ -109,15 +109,18 @@ for (const slug of slugs) {
   if (!cfg.phone) {
     check(false, "no phone number on the site at all");
   } else {
-    const expected = `tel:+1${digits(cfg.phone).slice(-10)}`;
+    // Visible and tel: numbers follow trackingPhone when a site sets one,
+    // otherwise phone. Schema keeps the NAP number, checked above.
+    const shown = cfg.trackingPhone || cfg.phone;
+    const expected = `tel:+1${digits(shown).slice(-10)}`;
     // a site must never ship with a stand-in number; every CTA is a tel: link
-    check(new Set(digits(cfg.phone).slice(-7)).size > 1, "placeholder phone number (" + cfg.phone + ")");
+    check(new Set(digits(shown).slice(-7)).size > 1, "placeholder phone number (" + shown + ")");
     const tels = html.split('href="tel:').slice(1).map((part) => "tel:" + part.slice(0, part.indexOf('"')));
     check(tels.length >= 4, `tel link count (${tels.length})`);
     check(tels.every((href) => href === expected), `tel mismatch: ${[...new Set(tels)].join(", ")}`);
     check(html.includes('class="nav-call"'), "header call CTA");
     check(html.includes('class="mobile-call"'), "mobile sticky call button");
-    check(html.includes(`>${cfg.phone}<`), "phone shown on page");
+    check(html.includes(`>${shown}<`), "phone shown on page");
     if (shared) check(html.includes('class="button primary"'), "hero primary CTA");
   }
 

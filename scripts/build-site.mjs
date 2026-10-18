@@ -6,6 +6,8 @@ import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
 import { renderShop } from "../shared/render-shop.mjs";
 import { renderPage } from "../shared/render-page.mjs";
 import { permitPageProblem } from "./lib/permits.mjs";
+import { sitemapXml } from "./lib/sitemap.mjs";
+import { distVercelConfig, rootVercelConfig } from "./lib/redirects.mjs";
 
 // slug in site.json `template` -> renderer. No entry means the shared
 // contractor template in render-site.mjs.
@@ -106,14 +108,16 @@ if (pages.some((page) => page.type === "fence-calculator")) {
   }
 }
 
-const sitemapUrls = [`https://${config.domain}/`, ...written.map((page) => `https://${config.domain}/${page.slug}`)];
+await fs.writeFile(path.join(outputDir, "sitemap.xml"), sitemapXml(config.domain, written, config.updated), "utf8");
+// CLI deploys upload dist/<slug> as the project root, so the redirects have
+// to live here. Git deploys read the repo-root vercel.json instead, which
+// build-all (and a single-site build) refresh from every site.json.
 await fs.writeFile(
-  path.join(outputDir, "sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">` +
-    sitemapUrls.map((loc) => `<url><loc>${loc}</loc></url>`).join("") +
-    `</urlset>\n`,
+  path.join(outputDir, "vercel.json"),
+  JSON.stringify(distVercelConfig(config), null, 2) + "\n",
   "utf8"
 );
+await writeRootRedirects(root);
 
 // IndexNow ownership proof. The protocol verifies a submission by fetching
 // this file from the host and checking it contains the key, so it has to
@@ -123,3 +127,25 @@ await fs.writeFile(
 const indexNow = JSON.parse(await fs.readFile(path.join(root, "deploy", "indexnow.json"), "utf8"));
 await fs.writeFile(path.join(outputDir, `${indexNow.key}.txt`), indexNow.key, "utf8");
 console.log(`Built ${slug} → dist/${slug}`);
+
+async function writeRootRedirects(repoRoot) {
+  const siteRoot = path.join(repoRoot, "sites");
+  const names = (await fs.readdir(siteRoot, { withFileTypes: true }))
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name);
+  const sites = [];
+  for (const name of names) {
+    try {
+      sites.push(JSON.parse(await fs.readFile(path.join(siteRoot, name, "site.json"), "utf8")));
+    } catch {
+      // A site without a readable config contributes no redirects.
+    }
+  }
+  const config = rootVercelConfig(sites);
+  const file = path.join(repoRoot, "vercel.json");
+  if (!config.redirects) {
+    await fs.rm(file, { force: true });
+    return;
+  }
+  await fs.writeFile(file, JSON.stringify(config, null, 2) + "\n", "utf8");
+}
