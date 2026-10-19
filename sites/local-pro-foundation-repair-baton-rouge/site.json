@@ -1,7 +1,7 @@
 {
-  "_placeholders": "PLACEHOLDER domain. Name and address are copied from the verified Google Business Profile (store code 15041498610763838735) on 2026-10-16; the phone is its own tracking number, set 2026-10-18. Replace the domain here and in api/lead.js once it is registered.",
+  "_placeholders": "Domain is localprofoundationrepair.com (apex, https), set 2026-10-19. Name and address are copied from the verified Google Business Profile (store code 15041498610763838735) on 2026-10-16; the phone is its own tracking number, set 2026-10-18.",
   "name": "Local Pro Foundation Repair",
-  "domain": "local-pro-foundation-repair.invalid",
+  "domain": "localprofoundationrepair.com",
   "phone": "225-438-6341",
   "email": "",
   "streetAddress": "2024 Rice Dr",
