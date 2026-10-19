@@ -1,0 +1,557 @@
+{
+  "_placeholders": "PLACEHOLDER phone (555-01xx fictional range), streetAddress, postalCode and domain. Replace all four before launch. If the operator does not serve customers at their yard, delete streetAddress/postalCode and set serviceAreaBusiness: true instead (audit forbids both).",
+  "name": "Green Country Portable Restrooms",
+  "domain": "porta-potty-tulsa.invalid",
+  "phone": "918-555-0142",
+  "email": "",
+  "streetAddress": "1234 Placeholder Ave",
+  "postalCode": "74100",
+  "city": "Tulsa",
+  "state": "Oklahoma",
+  "schemaType": "LocalBusiness",
+  "accent": "#2f7d4f",
+  "accentDark": "#1f5636",
+  "hero": "hero-tulsa.jpg",
+  "assets": [
+    "hero-tulsa.jpg",
+    "construction.jpg",
+    "event.jpg",
+    "restroom-trailer.jpg",
+    "ada.jpg",
+    "hand-wash.jpg",
+    "long-term.jpg"
+  ],
+  "gallery": [
+    {
+      "image": "event.jpg",
+      "alt": "A row of white portable restrooms beside an outdoor wedding reception under string lights",
+      "caption": "Weddings and events"
+    },
+    {
+      "image": "restroom-trailer.jpg",
+      "alt": "A restroom trailer with steps and potted plants on a lawn at an evening event",
+      "caption": "Restroom trailers"
+    },
+    {
+      "image": "construction.jpg",
+      "alt": "A portable toilet with a hand sanitizer dispenser beside a house under construction",
+      "caption": "Construction sites"
+    },
+    {
+      "image": "hand-wash.jpg",
+      "alt": "A two-basin portable hand-wash station on grass near food trucks",
+      "caption": "Hand-wash stations"
+    }
+  ],
+  "kicker": "Portable restrooms across Green Country",
+  "headline": "Porta potty rental in Tulsa.",
+  "intro": "Portable toilets, restroom trailers, accessible units and hand-wash stations for job sites, weddings and events across Tulsa, Broken Arrow, Owasso, Jenks and Bixby.",
+  "navCall": "Get a quote",
+  "primaryCta": "Call for a quote",
+  "sectionKicker": "What we rent",
+  "sectionHeadline": "The right units, delivered and serviced.",
+  "about": "Green Country Portable Restrooms delivers and services portable restrooms across Green Country — single units for a house build, rows of units for a festival, and restroom trailers for weddings. Tell us the site, the headcount and the dates, and we will recommend what you actually need.",
+  "servicesHeadline": "Units for job sites, events and long-term rentals.",
+  "services": [
+    {
+      "title": "Construction Site Toilets",
+      "link": "construction-porta-potty-rental",
+      "description": "Standard units for job sites across Tulsa and Broken Arrow, Owasso and Jenks, delivered and serviced on a weekly schedule."
+    },
+    {
+      "title": "Event & Wedding Rentals",
+      "link": "event-porta-potty-rental",
+      "description": "Units for weddings, festivals, parties, tailgates and fundraisers, sized to your guest count and how long the event runs."
+    },
+    {
+      "title": "Restroom Trailers",
+      "link": "restroom-trailer-rental",
+      "description": "Flushing restroom trailers with sinks and lighting, for weddings and events where standard units will not do."
+    },
+    {
+      "title": "ADA Accessible Units",
+      "link": "ada-portable-toilets",
+      "description": "Wheelchair-accessible portable restrooms with a ground-level entrance and room to turn, for events and public sites."
+    },
+    {
+      "title": "Hand-Wash Stations",
+      "link": "hand-wash-stations",
+      "description": "Freestanding sinks with water and soap, for food events, job sites and anywhere units go without a sink."
+    },
+    {
+      "title": "Long-Term & Monthly Rentals",
+      "link": "long-term-portable-toilet-rental",
+      "description": "Monthly rentals for pipeline and well-site crews, ranch operations and long residential builds, with a fixed service schedule."
+    }
+  ],
+  "serviceAreas": [
+    "Tulsa",
+    "Broken Arrow",
+    "Owasso",
+    "Jenks",
+    "Bixby",
+    "Sand Springs",
+    "Sapulpa",
+    "Glenpool",
+    "Coweta",
+    "Claremore"
+  ],
+  "areaHeadline": "Delivering across Green Country.",
+  "ctaHeadline": "Get your units booked.",
+  "ctaCopy": "Call with the site, the headcount and the dates for a quote, or send the details and we will call you back.",
+  "footerLine": "Porta potty and restroom trailer rental in Tulsa, Oklahoma",
+  "seoTitle": "Porta Potty Rental Tulsa OK | Green Country Portable Restrooms",
+  "seoDescription": "Porta potty rental in Tulsa, Broken Arrow, Owasso and Jenks. Portable toilets, restroom trailers, ADA units and hand-wash stations for construction and events.",
+  "leadForm": {
+    "kicker": "Request a quote",
+    "heading": "Tell us about the site and the dates.",
+    "intro": "Call if it is easier. Otherwise send the details and we will get back to you with a quote.",
+    "placeholder": "Where the units are going, how many people and for how long, delivery and pickup dates, and anything about access.",
+    "submit": "Request a quote",
+    "fineprint": "We use this to get back to you about the rental. Nothing else."
+  },
+  "faqKicker": "Common questions",
+  "faqHeading": "Before you call.",
+  "faqs": [
+    {
+      "q": "How many porta potties do I need?",
+      "a": "For events, a common starting point is one unit for every 50 guests for around four hours, with more for longer events or when alcohol is served. For construction, OSHA requires at least one toilet for up to 20 workers and one seat and one urinal for every 40 workers above that. Call with your numbers and the count can be worked out exactly."
+    },
+    {
+      "q": "How far ahead should I book?",
+      "a": "For construction, a few days is usually enough. For events, book as soon as the date is set — spring and fall weekends fill first, and restroom trailers go before standard units."
+    },
+    {
+      "q": "What is included in servicing?",
+      "a": "Pumping the tank, cleaning and sanitizing the unit, and restocking toilet paper and hand sanitizer. Long-term units are usually serviced weekly."
+    },
+    {
+      "q": "Where should the units go?",
+      "a": "On level ground, somewhere a service truck can pull alongside, away from food service and out of the way of equipment. Avoid soft ground, steep slopes and spots where water collects after rain."
+    },
+    {
+      "q": "Do you deliver outside the city?",
+      "a": "Yes — Broken Arrow, Owasso, Jenks, Bixby, Sand Springs and Sapulpa and rural sites beyond. Send a map pin for remote locations."
+    },
+    {
+      "q": "Do I need a permit?",
+      "a": "Usually not on private property. Units placed on a street, sidewalk or public right-of-way, or at a public event, may need approval from the city or the event organizer. Check with them before delivery day."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "construction-porta-potty-rental",
+      "hero": "construction.jpg",
+      "navLabel": "Construction sites",
+      "kicker": "Construction sites",
+      "heading": "Construction site porta potty rental in Tulsa.",
+      "intro": "Portable toilets for job sites across Tulsa, Broken Arrow, Owasso and Jenks — dropped where the crew needs them and serviced every week the job runs.",
+      "seoTitle": "Construction Porta Potty Rental Tulsa OK | Green Country",
+      "seoDescription": "Portable toilet rental for construction sites in Tulsa, Broken Arrow, Owasso and Jenks. Weekly service, hand-wash stations and units sized to your crew.",
+      "service": "Construction site portable toilet rental",
+      "sections": [
+        {
+          "kicker": "How many you need",
+          "heading": "Federal rules set the minimum.",
+          "body": "OSHA's sanitation standard for construction (29 CFR 1926.51) sets the floor. With 20 or fewer workers on site, one toilet is the minimum. With 20 to 199, it is one toilet seat and one urinal for every 40 workers. Over 200, one seat and one urinal for every 50. Those numbers assume regular servicing — a single unit shared by a busy crew fills faster than the weekly schedule allows, and that is when a second unit or an extra service visit is the cheaper answer."
+        },
+        {
+          "kicker": "The work here",
+          "heading": "What job sites around Tulsa look like.",
+          "body": "Oil and gas service yards, new subdivisions spreading south and east of the city, and farm and ranch work further out. Each has its own rhythm — a house build might need one unit for months, a commercial pour might need four for two weeks — so the order is built around the crew size and how long the job runs, not a package."
+        },
+        {
+          "kicker": "Placement",
+          "heading": "Where the unit goes decides how well it works.",
+          "body": "A unit should sit on level ground, away from where equipment swings and backs up, and somewhere a service truck can pull alongside it on service day. If the site changes as the job progresses — slab poured, fence up, driveway closed — tell us, and the unit moves with the work instead of getting boxed in."
+        },
+        {
+          "kicker": "Weather",
+          "heading": "Plan for the wind.",
+          "body": "Green Country storms move fast in spring, and wind is the thing that knocks portable units over. Units on open ground should be staked or tied off, and placed out of the path of runoff. If you have had a unit go over before, say so — the placement probably needs to change."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How often are construction units serviced?",
+          "a": "Weekly is standard: the tank is pumped, the unit cleaned and the paper and sanitizer restocked. Larger crews, hot weather and long shifts can need more than that, and it is cheaper to add a service visit than to deal with an overflowing unit."
+        },
+        {
+          "q": "Do I need a hand-wash station too?",
+          "a": "If there is no running water on site and the crew handles food, concrete or chemicals, a hand-wash station is worth having. Some units come with a built-in sink; a freestanding station serves several units at once."
+        },
+        {
+          "q": "Can the unit stay for the whole build?",
+          "a": "Yes. Most construction rentals run month to month and stay until the job is finished. Call when the site is ready to clear and the unit is picked up on the next route."
+        }
+      ],
+      "ctaHeadline": "Got a job site to set up?"
+    },
+    {
+      "slug": "event-porta-potty-rental",
+      "hero": "event.jpg",
+      "navLabel": "Events & weddings",
+      "kicker": "Events and weddings",
+      "heading": "Event and wedding porta potty rental in Tulsa.",
+      "intro": "Portable restrooms for weddings, festivals, parties, tailgates and fundraisers across Green Country, sized to your headcount and the length of the event.",
+      "seoTitle": "Event & Wedding Porta Potty Rental Tulsa OK | Green Country",
+      "seoDescription": "Porta potty and restroom trailer rental for weddings, festivals, parties and events in Tulsa, Broken Arrow, Owasso and Jenks. Sized to your guest count.",
+      "service": "Event portable restroom rental",
+      "sections": [
+        {
+          "kicker": "How many you need",
+          "heading": "Start with guests and hours.",
+          "body": "The industry rule of thumb is about one unit for every 50 guests for an event of around four hours. Longer events need more, and so do events where alcohol is served — people use restrooms more often. A 150-person wedding reception running five or six hours is usually three or four standard units, or one restroom trailer. Tell us the headcount, the start and finish times and whether the bar is open, and the count can be worked out properly."
+        },
+        {
+          "kicker": "The calendar here",
+          "heading": "Event season in Tulsa.",
+          "body": "Demand around Tulsa follows spring festival season, the fall fair calendar, graduation parties and the long run of outdoor weddings from April to October. Popular weekends book early. If your date is fixed, it is worth reserving as soon as the venue is confirmed."
+        },
+        {
+          "kicker": "Placement",
+          "heading": "Close enough to use, far enough to forget.",
+          "body": "Units should be close enough that guests can find them without a walk, but downwind and away from food service. Put them on level ground with a clear path, and with lighting nearby if the event runs after dark. Groups of two or three are easier to keep stocked than units spread around the site."
+        },
+        {
+          "kicker": "Choosing the type",
+          "heading": "Standard, upgraded or trailer.",
+          "body": "Standard units suit festivals, sports and casual gatherings. Upgraded units with a sink and a mirror suit most backyard weddings. Restroom trailers — flushing toilets, running water and lighting — are the choice when the event is formal or the guest list is older. One accessible unit should be part of any event order that is open to the public."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "When are units delivered and picked up?",
+          "a": "Usually the day before or the morning of the event, and picked up the next business day. Tell us if the venue has access windows or noise rules, and delivery is scheduled around them."
+        },
+        {
+          "q": "Do I need an accessible unit?",
+          "a": "For events open to the public, plan on at least one. The 2010 ADA Standards call for at least 5 percent of clustered portable units, and never fewer than one, to be accessible. For a private party it is still worth having one if any guests use a wheelchair or walker."
+        },
+        {
+          "q": "Can units be serviced during a multi-day event?",
+          "a": "Yes. Festivals and events running two or more days are usually serviced overnight or early each morning so the units start every day clean and stocked."
+        }
+      ],
+      "ctaHeadline": "Planning an event?"
+    },
+    {
+      "slug": "restroom-trailer-rental",
+      "hero": "restroom-trailer.jpg",
+      "navLabel": "Restroom trailers",
+      "kicker": "Restroom trailers",
+      "heading": "Restroom trailer rental in Tulsa.",
+      "intro": "Flushing toilets, running water, sinks, mirrors and lighting in a climate-controlled trailer — the restroom guests expect at a wedding or a formal event.",
+      "seoTitle": "Restroom Trailer Rental Tulsa OK | Luxury Portable Restrooms",
+      "seoDescription": "Luxury restroom trailer rental for weddings, corporate events and parties in Tulsa and Broken Arrow, Owasso and Jenks. Flushing toilets, sinks and climate control.",
+      "service": "Restroom trailer rental",
+      "sections": [
+        {
+          "kicker": "What they are",
+          "heading": "A real bathroom on wheels.",
+          "body": "A restroom trailer has separate men's and women's sides with flushing toilets, sinks with running water, mirrors, lighting and heating or air conditioning. Guests walk up a short set of steps into something that looks and works like a bathroom indoors. For weddings, rehearsal dinners, corporate events and anything where the restroom is part of the guest experience, they are the right choice."
+        },
+        {
+          "kicker": "What the site needs",
+          "heading": "Power, level ground and a way in.",
+          "body": "Trailers need a level spot that a truck can back a trailer into, and a standard power source nearby — usually a dedicated outdoor outlet or a generator. Most have an onboard freshwater tank and a holding tank, so a water hookup is helpful but not always required. Check the gate width, tree limbs and turning room on the way in before you book."
+        },
+        {
+          "kicker": "Sizing",
+          "heading": "Stations, not just one trailer.",
+          "body": "Trailers are sized by the number of stations — a toilet or urinal counts as one. A two-station trailer suits a small gathering; larger weddings and corporate events generally need a trailer with more stations, or a trailer plus standard units placed away from the main area for overflow."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How far ahead should I book a restroom trailer?",
+          "a": "As soon as your date is set. There are fewer trailers than standard units, and spring and fall weekends are the first to go."
+        },
+        {
+          "q": "Will someone stay with the trailer during the event?",
+          "a": "Attendants are available for some events, which matters most for large or long receptions. Ask when you book."
+        },
+        {
+          "q": "Can a trailer go on grass?",
+          "a": "Yes, if the ground is firm and level. After heavy rain, soft lawns can be a problem for the trailer and for the truck pulling it."
+        }
+      ],
+      "ctaHeadline": "Want a restroom trailer for your event?"
+    },
+    {
+      "slug": "ada-portable-toilets",
+      "hero": "ada.jpg",
+      "navLabel": "ADA accessible units",
+      "kicker": "Accessible units",
+      "heading": "ADA accessible portable toilet rental in Tulsa.",
+      "intro": "Wheelchair-accessible portable restrooms with a ground-level entrance, handrails and room inside to turn around.",
+      "seoTitle": "ADA Portable Toilet Rental Tulsa OK | Handicap Porta Potty",
+      "seoDescription": "Wheelchair-accessible ADA portable restroom rental for events, parks and job sites in Tulsa, Broken Arrow, Owasso and Jenks.",
+      "service": "ADA accessible portable restroom rental",
+      "sections": [
+        {
+          "kicker": "What makes them accessible",
+          "heading": "Built to be used from a wheelchair.",
+          "body": "An accessible unit has a ground-level floor with no step, a wider door, enough interior space to turn a wheelchair, and grab bars beside the toilet. The toilet seat is set at a usable height and the door can be opened and locked from inside without strain."
+        },
+        {
+          "kicker": "When you need one",
+          "heading": "Any public site, and most private ones.",
+          "body": "Under the 2010 ADA Standards, where portable units are clustered together, at least 5 percent of them — and never fewer than one — must be accessible. That covers festivals, fairs, parks, public events and most commercial sites. For private events the rule may not apply, but if anyone attending uses a wheelchair, walker or cane, it makes the difference between the event working for them or not."
+        },
+        {
+          "kicker": "Placement",
+          "heading": "Accessible means the route too.",
+          "body": "An accessible unit only works if someone can reach it. Place it on firm, level ground with a smooth path from the main area — not across loose gravel, a slope or wet grass — and keep the area in front of the door clear."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do accessible units cost more than standard units?",
+          "a": "They are larger and are usually priced a little higher. Call with your event details for a quote."
+        },
+        {
+          "q": "Can an accessible unit be the only unit?",
+          "a": "Yes. Some small gatherings and job sites use one accessible unit, since anyone can use it."
+        }
+      ],
+      "ctaHeadline": "Need an accessible unit?"
+    },
+    {
+      "slug": "hand-wash-stations",
+      "hero": "hand-wash.jpg",
+      "navLabel": "Hand-wash stations",
+      "kicker": "Hand-wash stations",
+      "heading": "Portable hand-wash station rental in Tulsa.",
+      "intro": "Freestanding sinks with fresh water, soap and paper towels, for events, food service and job sites without running water.",
+      "seoTitle": "Portable Hand Wash Station Rental Tulsa OK | Green Country",
+      "seoDescription": "Portable hand-washing station rental for events, food vendors, farms and construction sites in Tulsa and Broken Arrow, Owasso and Jenks.",
+      "service": "Portable hand-wash station rental",
+      "sections": [
+        {
+          "kicker": "What they are",
+          "heading": "A sink that goes anywhere.",
+          "body": "A portable hand-wash station is a freestanding unit with one or two basins, a foot pump for fresh water, soap and paper towels, and a gray-water tank underneath. No hookup is needed — it is filled and serviced with the units."
+        },
+        {
+          "kicker": "Where they are needed",
+          "heading": "Food, animals and dirty hands.",
+          "body": "Food vendors at fairs and festivals are usually required to provide hand washing, and local health departments set the specifics — check with the event organizer or the health department for your permit. Petting zoos, farm events and job sites where crews handle concrete or chemicals are the other common uses."
+        },
+        {
+          "kicker": "How many",
+          "heading": "One station for every few units.",
+          "body": "A single double-basin station placed beside a group of three or four units works for most events. Food areas need their own station, away from the restrooms."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long does the water last?",
+          "a": "It depends on how busy the station is. A busy event day can empty a station, so long events are serviced along with the units."
+        }
+      ],
+      "ctaHeadline": "Need hand-wash stations?"
+    },
+    {
+      "slug": "long-term-portable-toilet-rental",
+      "hero": "long-term.jpg",
+      "navLabel": "Long-term rentals",
+      "kicker": "Long-term rentals",
+      "heading": "Long-term and monthly portable toilet rental in Tulsa.",
+      "intro": "Monthly rentals for pipeline and well-site crews, ranch operations and long residential builds across Green Country, with service on a fixed schedule for as long as you need the unit.",
+      "seoTitle": "Monthly Porta Potty Rental Tulsa OK | Long-Term Units",
+      "seoDescription": "Long-term and monthly portable toilet rental in Tulsa, Broken Arrow, Owasso and Jenks for job sites, farms, oilfield and remote work.",
+      "service": "Long-term portable toilet rental",
+      "sections": [
+        {
+          "kicker": "Who rents long term",
+          "heading": "Sites without a restroom for months at a time.",
+          "body": "Oil and gas service yards, new subdivisions spreading south and east of the city, and farm and ranch work further out — plus parks, sports fields, farms and properties under renovation. Anywhere people work or gather for weeks or months without a building restroom is a long-term rental."
+        },
+        {
+          "kicker": "Service schedule",
+          "heading": "Set it once, adjust as the job changes.",
+          "body": "Most long-term units are serviced weekly. Remote sites with small crews can sometimes go longer between visits; busy sites and summer heat need more. The schedule is set at the start and changed if the crew grows or shrinks — you should not have to call every week."
+        },
+        {
+          "kicker": "Remote sites",
+          "heading": "Directions matter more than the address.",
+          "body": "For lease roads, pads, pastures and rural acreage, a map pin or written directions from the nearest highway is worth more than an address. Say what the road is like in wet weather and whether a gate needs to be opened, so the service truck gets there every time."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is monthly cheaper than weekly?",
+          "a": "Long-term rentals are normally billed every four weeks and work out cheaper per day than short event rentals. Call for a quote on your site."
+        },
+        {
+          "q": "Can a unit be moved during the rental?",
+          "a": "Yes. As work moves around a site or from one site to the next, units can be relocated — just ask ahead of the next service visit."
+        }
+      ],
+      "ctaHeadline": "Need a unit for the long haul?"
+    },
+    {
+      "slug": "broken-arrow",
+      "hero": "hero-tulsa.jpg",
+      "navLabel": "Broken Arrow",
+      "kicker": "Broken Arrow",
+      "heading": "Porta potty rental in Broken Arrow.",
+      "intro": "Portable toilets, hand-wash stations and restroom trailers for job sites, events and properties in Broken Arrow.",
+      "seoTitle": "Porta Potty Rental Broken Arrow OK | Green Country",
+      "seoDescription": "Portable toilet and restroom trailer rental in Broken Arrow, OK for construction sites, weddings, events and long-term rentals.",
+      "service": "Portable restroom rental in Broken Arrow",
+      "sections": [
+        {
+          "kicker": "The work here",
+          "heading": "What we see in Broken Arrow.",
+          "body": "Broken Arrow is mostly residential construction and family events. New-build subdivisions run one or two units per site for months at a time, and backyard parties and church events make up most of the weekend work."
+        },
+        {
+          "kicker": "Delivery and placement",
+          "heading": "Getting the unit to the right spot.",
+          "body": "Delivery to a residential lot is usually easy, but placement matters more here than on an open job site: units go where the truck can reach them on service day and where neighbours are not looking straight at them. A level patch near the curb or driveway apron is usually the right spot."
+        },
+        {
+          "kicker": "What to have ready",
+          "heading": "Four details make the quote quick.",
+          "body": "The address or a map pin, how many people will use the units and for how long, the delivery and pickup dates, and anything unusual about access — a gate, a narrow drive, soft ground or a spot that is hard for a truck to reach."
+        }
+      ],
+      "ctaHeadline": "Need units in Broken Arrow?"
+    },
+    {
+      "slug": "owasso",
+      "hero": "hero-tulsa.jpg",
+      "navLabel": "Owasso",
+      "kicker": "Owasso",
+      "heading": "Porta potty rental in Owasso.",
+      "intro": "Portable toilets, hand-wash stations and restroom trailers for job sites, events and properties in Owasso.",
+      "seoTitle": "Porta Potty Rental Owasso OK | Green Country",
+      "seoDescription": "Portable toilet and restroom trailer rental in Owasso, OK for construction sites, weddings, events and long-term rentals.",
+      "service": "Portable restroom rental in Owasso",
+      "sections": [
+        {
+          "kicker": "The work here",
+          "heading": "What we see in Owasso.",
+          "body": "Owasso has grown fast, and a lot of the demand is construction — homes, retail pads and road work along the main corridors — with youth sports and community events filling weekends."
+        },
+        {
+          "kicker": "Delivery and placement",
+          "heading": "Getting the unit to the right spot.",
+          "body": "On active commercial sites the general contractor usually decides placement. Tell us who the site contact is so the driver can find them, and whether there is a gate code or a sign-in point."
+        },
+        {
+          "kicker": "What to have ready",
+          "heading": "Four details make the quote quick.",
+          "body": "The address or a map pin, how many people will use the units and for how long, the delivery and pickup dates, and anything unusual about access — a gate, a narrow drive, soft ground or a spot that is hard for a truck to reach."
+        }
+      ],
+      "ctaHeadline": "Need units in Owasso?"
+    },
+    {
+      "slug": "jenks-and-bixby",
+      "hero": "hero-tulsa.jpg",
+      "navLabel": "Jenks and Bixby",
+      "kicker": "Jenks and Bixby",
+      "heading": "Porta potty rental in Jenks and Bixby.",
+      "intro": "Portable toilets, hand-wash stations and restroom trailers for job sites, events and properties in Jenks and Bixby.",
+      "seoTitle": "Porta Potty Rental Jenks and Bixby OK | Green Country",
+      "seoDescription": "Portable toilet and restroom trailer rental in Jenks and Bixby, OK for construction sites, weddings, events and long-term rentals.",
+      "service": "Portable restroom rental in Jenks and Bixby",
+      "sections": [
+        {
+          "kicker": "The work here",
+          "heading": "What we see in Jenks and Bixby.",
+          "body": "Jenks and Bixby are a mix of riverside events, school and sports facilities, farm property and new housing south of the city."
+        },
+        {
+          "kicker": "Delivery and placement",
+          "heading": "Getting the unit to the right spot.",
+          "body": "Farm and acreage properties sometimes have soft ground after rain. If the approach to the placement spot is grass or dirt, say so, so the unit can go somewhere a service truck can reach in wet weather too."
+        },
+        {
+          "kicker": "What to have ready",
+          "heading": "Four details make the quote quick.",
+          "body": "The address or a map pin, how many people will use the units and for how long, the delivery and pickup dates, and anything unusual about access — a gate, a narrow drive, soft ground or a spot that is hard for a truck to reach."
+        }
+      ],
+      "ctaHeadline": "Need units in Jenks and Bixby?"
+    },
+    {
+      "slug": "service-areas",
+      "hero": "hero-tulsa.jpg",
+      "navLabel": "Service areas",
+      "kicker": "Where we deliver",
+      "heading": "Porta potty rental across Green Country.",
+      "intro": "Delivery and service across Tulsa and the surrounding communities: Broken Arrow, Owasso, Jenks, Bixby, Sand Springs, Sapulpa, Glenpool, Coweta and Claremore.",
+      "seoTitle": "Service Areas | Tulsa Porta Potty Rental | Green Country Portable Restrooms",
+      "seoDescription": "Portable toilet and restroom trailer delivery across Tulsa, Broken Arrow, Owasso, Jenks, Bixby, Sand Springs, Sapulpa, Glenpool, Coweta and Claremore.",
+      "service": "Portable restroom rental in Green Country",
+      "sections": [
+        {
+          "kicker": "The core area",
+          "heading": "Tulsa and the closest suburbs.",
+          "body": "Tulsa, Broken Arrow, Owasso, Jenks, Bixby and Sand Springs make up the core service area. Units are delivered and serviced on regular routes through these communities, which keeps scheduling straightforward."
+        },
+        {
+          "kicker": "Further out",
+          "heading": "Rural and outlying sites.",
+          "body": "Sapulpa, Glenpool, Coweta and Claremore and rural sites beyond them are served too. For remote locations, send a map pin and a note about the road, and say whether the unit is for a single event or a longer rental."
+        }
+      ],
+      "ctaHeadline": "Not sure if we cover your site?"
+    },
+    {
+      "slug": "our-process",
+      "navLabel": "How it works",
+      "kicker": "How it works",
+      "heading": "From first call to pickup.",
+      "intro": "What happens between getting in touch and the units leaving your site.",
+      "seoTitle": "How Porta Potty Rental Works | Green Country Portable Restrooms",
+      "seoDescription": "How portable toilet rental works in Tulsa: quote, delivery, servicing and pickup for events, job sites and long-term rentals.",
+      "service": "Portable restroom rental process",
+      "sections": [
+        {
+          "kicker": "The quote",
+          "heading": "Headcount, dates and the site.",
+          "body": "Call or send the form with where the units are going, how many people will use them, for how long, and anything about access. That is enough to recommend the right number and type of units and give you a quote."
+        },
+        {
+          "kicker": "Delivery",
+          "heading": "Placed where they will be used.",
+          "body": "Units are delivered before the event or the start of work and placed on level ground where a service truck can reach them. If you will not be on site, mark the spot or send a photo."
+        },
+        {
+          "kicker": "Service",
+          "heading": "Pumped, cleaned and restocked.",
+          "body": "Long-term units are serviced on a schedule — usually weekly — and multi-day events are serviced between days. Every visit includes pumping the tank, cleaning the unit, and restocking paper and sanitizer."
+        },
+        {
+          "kicker": "Pickup",
+          "heading": "Gone when you are done.",
+          "body": "Event units are picked up after the event, usually the next business day. For long-term rentals, call when the site is finished and the unit comes off the next route."
+        }
+      ],
+      "ctaHeadline": "Ready to book?"
+    },
+    {
+      "slug": "contact",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Request a quote.",
+      "intro": "Tell us where, when and how many people. A quick call is often fastest.",
+      "seoTitle": "Request a Porta Potty Quote | Green Country Portable Restrooms",
+      "seoDescription": "Request a quote for portable toilet, hand-wash station or restroom trailer rental in Tulsa, Broken Arrow, Owasso and Jenks.",
+      "service": "Quote requests",
+      "sections": [
+        {
+          "kicker": "What to include",
+          "heading": "Four details get the quickest answer.",
+          "body": "Where the units are going, how many people and for how long, the delivery and pickup dates, and anything about access — gates, narrow drives, soft ground or a placement spot far from the road."
+        }
+      ],
+      "ctaHeadline": "Get a quote today."
+    }
+  ]
+}

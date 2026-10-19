@@ -1,0 +1,487 @@
+{
+  "_placeholders": "PLACEHOLDER phone (555-01xx fictional range), streetAddress, postalCode and domain. Replace all four before launch. If the operator does not serve customers at their yard, delete streetAddress/postalCode and set serviceAreaBusiness: true instead (audit forbids both).",
+  "name": "ArkLaTex Portable Toilets",
+  "domain": "porta-potty-shreveport.invalid",
+  "phone": "318-555-0163",
+  "email": "",
+  "streetAddress": "1234 Placeholder St",
+  "postalCode": "71100",
+  "city": "Shreveport",
+  "state": "Louisiana",
+  "schemaType": "LocalBusiness",
+  "accent": "#2b5f8f",
+  "accentDark": "#1b4064",
+  "hero": "hero-shreveport.jpg",
+  "assets": [
+    "hero-shreveport.jpg",
+    "construction.jpg",
+    "event.jpg",
+    "restroom-trailer.jpg",
+    "ada.jpg",
+    "hand-wash.jpg",
+    "long-term.jpg"
+  ],
+  "gallery": [
+    {
+      "image": "long-term.jpg",
+      "alt": "Two portable toilets parked on a gravel well site with trucks and a rig behind",
+      "caption": "Gas field locations"
+    },
+    {
+      "image": "event.jpg",
+      "alt": "Line of white portable toilets at the edge of an outdoor reception at sunset",
+      "caption": "Receptions and parties"
+    },
+    {
+      "image": "hand-wash.jpg",
+      "alt": "Double sink hand-wash station standing in the grass by food trucks",
+      "caption": "Portable sinks"
+    },
+    {
+      "image": "restroom-trailer.jpg",
+      "alt": "Restroom trailer with steps, planters and string lights overhead",
+      "caption": "Restroom trailers"
+    }
+  ],
+  "kicker": "Shreveport · Bossier · the ArkLaTex",
+  "headline": "Portable toilets for Shreveport and Bossier.",
+  "intro": "From a crawfish boil in the backyard to a frac crew down in DeSoto Parish — porta potties, restroom trailers and portable sinks, delivered and kept clean.",
+  "navCall": "Call for pricing",
+  "primaryCta": "Call about a rental",
+  "sectionKicker": "How we look at it",
+  "sectionHeadline": "Every rental is really a question about people and heat.",
+  "about": "Here in Northwest Louisiana the summer does more to a portable toilet than anything else. A unit that holds up fine for a spring weekend needs more attention in August. So when you call ArkLaTex Portable Toilets, expect a couple of questions back — how many folks, how long, and how hot it is likely to be — before anybody quotes you a number.",
+  "servicesHeadline": "What folks around here rent.",
+  "services": [
+    {
+      "title": "Job-Site Toilets",
+      "link": "job-site-portable-toilets",
+      "description": "For home builders, contractors and road crews from Shreveport to Benton. Cleaned on a set day every week."
+    },
+    {
+      "title": "Parties & Events",
+      "link": "party-and-event-portable-toilets",
+      "description": "Crawfish boils, family reunions, weddings, church homecomings and festivals."
+    },
+    {
+      "title": "Restroom Trailers",
+      "link": "restroom-trailers",
+      "description": "A bathroom with flushing toilets, sinks and air conditioning, for when the event deserves it."
+    },
+    {
+      "title": "Wheelchair Accessible",
+      "link": "wheelchair-accessible-portable-toilets",
+      "description": "Ground-level units with grab bars and room to turn, for public events and anyone who needs one."
+    },
+    {
+      "title": "Portable Sinks",
+      "link": "portable-sinks",
+      "description": "Freestanding hand-wash sinks for food vendors, livestock shows and dusty jobs."
+    },
+    {
+      "title": "Gas Field & Pipeline",
+      "link": "oilfield-portable-toilets",
+      "description": "Units on location across the Haynesville, moved when the crew moves."
+    }
+  ],
+  "serviceAreas": [
+    "Shreveport",
+    "Bossier City",
+    "Benton",
+    "Haughton",
+    "Blanchard",
+    "Keithville",
+    "Greenwood",
+    "Stonewall",
+    "Minden",
+    "Mansfield"
+  ],
+  "areaHeadline": "Caddo, Bossier, DeSoto and Webster.",
+  "ctaHeadline": "Let's get you set up.",
+  "ctaCopy": "Call with where it is going, how many people, and when. If it is easier, send it over and we will call you back.",
+  "footerLine": "Porta potty, restroom trailer and portable sink rental in Shreveport, Louisiana",
+  "seoTitle": "Porta Potty Rental Shreveport LA | ArkLaTex Portable Toilets",
+  "seoDescription": "Porta potty rental in Shreveport, Bossier City and the ArkLaTex. Job-site toilets, event units, restroom trailers, portable sinks and gas field rentals.",
+  "leadForm": {
+    "kicker": "Ask about a rental",
+    "heading": "Where, how many folks, and when?",
+    "intro": "Give us those three and we can get you a price. If the road in is rough or the spot is tight, mention it.",
+    "placeholder": "The address or the lease road, about how many people, the dates, and anything tricky about getting there.",
+    "submit": "Send it over",
+    "fineprint": "We only use this to get back to you about the rental."
+  },
+  "faqKicker": "Folks usually ask",
+  "faqHeading": "Questions we hear a lot.",
+  "faqs": [
+    {
+      "q": "How many toilets for a crawfish boil?",
+      "a": "Figure on one for every 40 or 50 people for an afternoon, and more if it runs into the evening — boils go long and the drinks keep coming. Put a hand-wash station next to them; peeling crawfish is messy."
+    },
+    {
+      "q": "Does summer heat really make a difference?",
+      "a": "It does. Heat makes a busy unit unpleasant faster, so in July and August a job site or a long event may need an extra service visit or an extra unit. We would rather mention it up front than hear about it later."
+    },
+    {
+      "q": "Can you get a unit down a gravel or dirt road?",
+      "a": "Usually, yes. Tell us what the road is like after a rain. A truck that can get in on a dry day may not on a wet one, and the unit should sit where it can be reached either way."
+    },
+    {
+      "q": "Do I need a permit in Shreveport or Bossier?",
+      "a": "On your own property, generally no. If a unit has to sit on a street, a sidewalk or city property, or it is for a public event, check with the city or the event organizer first."
+    },
+    {
+      "q": "How long can I keep a unit?",
+      "a": "A day, a weekend, a month or the whole length of a job. Longer rentals are serviced on a regular weekly schedule."
+    },
+    {
+      "q": "Who do I call if something is wrong with a unit?",
+      "a": "Call the same number on this page. Tell us the address and what is going on, and a service visit gets scheduled."
+    }
+  ],
+  "pages": [
+    {
+      "slug": "job-site-portable-toilets",
+      "hero": "construction.jpg",
+      "navLabel": "Job sites",
+      "kicker": "Construction",
+      "heading": "Job-site portable toilets in Shreveport and Bossier.",
+      "intro": "Home builders, remodelers, roofers, road crews and commercial contractors — a clean toilet on site keeps the crew there instead of driving to a gas station.",
+      "seoTitle": "Job Site Portable Toilet Rental Shreveport LA | ArkLaTex",
+      "seoDescription": "Construction porta potty rental for contractors in Shreveport, Bossier City, Benton and Haughton. Weekly cleaning and units sized to your crew.",
+      "service": "Construction site portable toilet rental",
+      "sections": [
+        {
+          "kicker": "The cost of not having one",
+          "heading": "A crew that leaves to find a bathroom is a crew that is not working.",
+          "body": "Every trip off site to a convenience store is twenty people-minutes gone. That alone usually pays for a unit. And the federal rule says you need one anyway: OSHA's construction standard calls for at least one toilet for a crew of up to 20, then a seat and a urinal for every 40 workers until you pass 200, and one of each per 50 after that."
+        },
+        {
+          "kicker": "Our summers",
+          "heading": "Plan service around August, not April.",
+          "body": "A unit shared by a big framing crew in a Louisiana summer needs more than the once-a-week visit that works fine in spring. If your crew is large or the job runs through the hot months, ask about a second unit or a twice-a-week service — either one beats a unit nobody wants to open."
+        },
+        {
+          "kicker": "Rain",
+          "heading": "Keep it out of the low spot.",
+          "body": "Red River country clay holds water. Set the unit on the high side of the lot, out of where runoff collects, and close to a firm drive so the service truck is not leaving ruts across your job every week."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can it stay until we get a certificate of occupancy?",
+          "a": "Yes. Construction rentals run as long as the job does. Call when you are done and it is picked up."
+        },
+        {
+          "q": "Do you put a sink in the unit?",
+          "a": "Some units have a sink inside, or a separate hand-wash station can sit next to it. Either works well if the crew is pouring concrete or eating on site."
+        }
+      ],
+      "ctaHeadline": "Starting a job?"
+    },
+    {
+      "slug": "party-and-event-portable-toilets",
+      "hero": "event.jpg",
+      "navLabel": "Parties & events",
+      "kicker": "Parties and events",
+      "heading": "Portable toilets for parties and events in Shreveport.",
+      "intro": "Crawfish boils, family reunions, church homecomings, weddings and festivals — enough clean restrooms that nobody ends up waiting in line at the house.",
+      "seoTitle": "Party & Event Porta Potty Rental Shreveport LA | ArkLaTex",
+      "seoDescription": "Porta potty rental for crawfish boils, reunions, weddings, church events and festivals in Shreveport, Bossier City and the ArkLaTex.",
+      "service": "Party and event portable toilet rental",
+      "sections": [
+        {
+          "kicker": "Save the house",
+          "heading": "Keep the guests out of your bathroom.",
+          "body": "One indoor bathroom will not hold up to a backyard of people, and a septic system out in the parish may not either. A couple of units by the yard keeps the line — and the mess — outside."
+        },
+        {
+          "kicker": "Figuring the number",
+          "heading": "People, hours, and what is in the cooler.",
+          "body": "Start with about one unit per 50 guests for a party of a few hours. Longer gatherings and anything with beer need more, roughly one per 35 or 40. A 120-person reunion running from lunch to dark is three or four units with a hand-wash station beside them."
+        },
+        {
+          "kicker": "Where to put them",
+          "heading": "Downwind, on level ground, away from the food.",
+          "body": "Set them where folks can find them without walking across the whole property, but well away from the cooking. Shade helps a lot in summer. If the party goes past dark, make sure there is a light on the path."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can you deliver on a Saturday morning?",
+          "a": "Usually delivery is the day before or the morning of. Tell us your date when you call and we will work it out."
+        },
+        {
+          "q": "What about a festival with vendors?",
+          "a": "Festivals need units spread out by crowd, plus hand-wash stations near the food. Send the expected crowd and a site map, and the layout can be planned from there."
+        }
+      ],
+      "ctaHeadline": "Having folks over?"
+    },
+    {
+      "slug": "restroom-trailers",
+      "hero": "restroom-trailer.jpg",
+      "navLabel": "Restroom trailers",
+      "kicker": "Restroom trailers",
+      "heading": "Restroom trailer rental in Shreveport.",
+      "intro": "Flushing toilets, running water, mirrors and air conditioning — the next best thing to indoor restrooms at a wedding, a gala or a corporate event.",
+      "seoTitle": "Restroom Trailer Rental Shreveport & Bossier | ArkLaTex",
+      "seoDescription": "Restroom trailer rental for weddings, galas and corporate events in Shreveport, Bossier City and Northwest Louisiana. Air conditioned with flushing toilets.",
+      "service": "Restroom trailer rental",
+      "sections": [
+        {
+          "kicker": "Air conditioning",
+          "heading": "In a Louisiana summer, that is the whole point.",
+          "body": "Guests in their good clothes do not want to step into a hot plastic box at an outdoor reception in June. A trailer gives them a cool, lit room with a sink and a mirror. For weddings, galas, debutante parties and corporate events, it is the one rental people actually remember."
+        },
+        {
+          "kicker": "Before you book",
+          "heading": "Check the drive, the ground and the power.",
+          "body": "A trailer comes in behind a truck, so look at the gate width, low branches and how soft the yard is. It needs a flat spot and a power outlet or generator nearby. Most trailers carry their own water, so a hose hookup is nice but not required."
+        },
+        {
+          "kicker": "Big guest lists",
+          "heading": "Pair a trailer with a few standard units.",
+          "body": "For large events, put the trailer close to the main tent and a few standard units off to the side for overflow. Guests use the trailer, and the line never backs up."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is there someone there during the event?",
+          "a": "An attendant can be arranged for some events. Ask when you book — it helps most at long receptions."
+        },
+        {
+          "q": "How early do I need to book?",
+          "a": "Trailers are limited, so as soon as your date is set. Spring and fall weekends go first."
+        }
+      ],
+      "ctaHeadline": "Want a trailer?"
+    },
+    {
+      "slug": "wheelchair-accessible-portable-toilets",
+      "hero": "ada.jpg",
+      "navLabel": "Wheelchair accessible",
+      "kicker": "Wheelchair accessible",
+      "heading": "Wheelchair-accessible portable toilets in Shreveport.",
+      "intro": "Ground-level units with a wide door, grab bars and room inside to turn a chair — for festivals, parks, schools and family events.",
+      "seoTitle": "Wheelchair Accessible Porta Potty Rental Shreveport LA",
+      "seoDescription": "ADA and wheelchair-accessible portable toilet rental for festivals, parks, schools and family events in Shreveport, Bossier City and the ArkLaTex.",
+      "service": "Wheelchair-accessible portable toilet rental",
+      "sections": [
+        {
+          "kicker": "Who needs one",
+          "heading": "Any public event, and a lot of private ones.",
+          "body": "If units are grouped together at a public event or site, the 2010 ADA Standards say at least five percent must be accessible — and at least one, even if you only have a handful. For a family reunion or a church picnic it is not a legal question, but if Grandpa uses a walker or a guest uses a chair, it matters just as much."
+        },
+        {
+          "kicker": "What is different",
+          "heading": "No step, more room, something to hold onto.",
+          "body": "The floor sits at ground level, the door is wider, there are grab bars by the seat and enough space inside to turn around. Anyone can use one, so it can be your only unit at a small gathering."
+        },
+        {
+          "kicker": "Placement",
+          "heading": "A smooth way to get to it.",
+          "body": "Put it on firm, level ground with a clear path — not across gravel, a ditch or soggy grass after a rain — and keep the area in front of the door open."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Are they bigger than regular units?",
+          "a": "Yes, noticeably. Make sure the spot you pick has room for the larger footprint."
+        }
+      ],
+      "ctaHeadline": "Need an accessible unit?"
+    },
+    {
+      "slug": "portable-sinks",
+      "hero": "hand-wash.jpg",
+      "navLabel": "Portable sinks",
+      "kicker": "Portable sinks",
+      "heading": "Portable sink rental in Shreveport and Bossier.",
+      "intro": "A stand-alone sink with fresh water, soap and paper towels for anywhere there is no faucet.",
+      "seoTitle": "Portable Sink & Hand Wash Station Rental Shreveport LA",
+      "seoDescription": "Portable sink and hand-wash station rental for food vendors, crawfish boils, livestock shows and job sites in Shreveport and Bossier City.",
+      "service": "Portable sink rental",
+      "sections": [
+        {
+          "kicker": "Common uses",
+          "heading": "Crawfish, cattle and concrete.",
+          "body": "Crawfish boils and fish fries, food vendors at festivals, livestock shows and 4-H events, and crews working with concrete or chemicals. Anywhere hands get dirty and the nearest faucet is a long walk away."
+        },
+        {
+          "kicker": "Food vendors",
+          "heading": "Ask about your permit first.",
+          "body": "If you are selling food at an event, the parish health unit and the event organizer decide what kind of hand washing your permit needs. Ask them before you order so you show up with the right setup."
+        },
+        {
+          "kicker": "How it works",
+          "heading": "Pump, wash, done.",
+          "body": "A foot or hand pump pushes fresh water from a tank; the used water drains to a separate tank underneath. No hose, no power. It is refilled and emptied when the units are serviced."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How many people can use one sink?",
+          "a": "A double sink handles a good-sized party. Very busy events or food lines may need more than one, or a service visit partway through."
+        }
+      ],
+      "ctaHeadline": "Need a sink out there?"
+    },
+    {
+      "slug": "oilfield-portable-toilets",
+      "hero": "long-term.jpg",
+      "navLabel": "Gas field & pipeline",
+      "kicker": "Gas field and pipeline",
+      "heading": "Gas field and pipeline portable toilets in the Haynesville.",
+      "intro": "Units on well pads, frac sites and pipeline spreads across Caddo, DeSoto and Bossier Parishes, serviced on a schedule that fits the work.",
+      "seoTitle": "Oilfield & Pipeline Portable Toilets Haynesville | ArkLaTex",
+      "seoDescription": "Portable toilet rental for natural gas well pads, frac sites and pipeline crews across the Haynesville Shale in Caddo, DeSoto and Bossier Parishes.",
+      "service": "Oilfield and pipeline portable toilet rental",
+      "sections": [
+        {
+          "kicker": "On location",
+          "heading": "Tell us the lease and who to ask for.",
+          "body": "Send the lease name or a map pin, the gate combination if there is one, and who signs for the site — the company man, a site supervisor or the office. Lease road directions from the nearest parish road save a lot of wrong turns."
+        },
+        {
+          "kicker": "Moving with the crew",
+          "heading": "Pipeline work does not stay put.",
+          "body": "As a spread moves down the right-of-way, units can move with it. Let us know a day or so ahead of a move, and the units are picked up and reset on the next run."
+        },
+        {
+          "kicker": "Wet weather",
+          "heading": "Lease roads after a rain.",
+          "body": "A lease road that is fine dry can be a different story after a storm. Say what it is like in wet weather, so units go where the service truck can still get to them."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Are units billed monthly?",
+          "a": "Long rentals on location are typically billed every four weeks. Call for a quote."
+        },
+        {
+          "q": "Can we get a sink too?",
+          "a": "Yes. A hand-wash station on location is common, especially where crews are eating on site."
+        }
+      ],
+      "ctaHeadline": "Got a location?"
+    },
+    {
+      "slug": "bossier-city",
+      "hero": "hero-shreveport.jpg",
+      "navLabel": "Bossier City",
+      "kicker": "Bossier City",
+      "heading": "Porta potty rental in Bossier City.",
+      "intro": "Construction, events and parties across Bossier City.",
+      "seoTitle": "Porta Potty Rental Bossier City LA | ArkLaTex Portable Toilets",
+      "seoDescription": "Porta potty and restroom trailer rental in Bossier City, LA for construction sites, events, parties and weddings.",
+      "service": "Portable toilet rental in Bossier City",
+      "sections": [
+        {
+          "kicker": "Bossier",
+          "heading": "What gets rented here.",
+          "body": "Bossier City has steady commercial and residential construction, plus events, sports and gatherings from spring through fall."
+        },
+        {
+          "kicker": "Getting in",
+          "heading": "Gates, contacts and driveways.",
+          "body": "For commercial sites, tell us who the site contact is and whether there is a gate or a check-in point. For residential jobs, a level spot near the driveway that the truck can reach on service day is ideal."
+        }
+      ],
+      "ctaHeadline": "Need a unit in Bossier?"
+    },
+    {
+      "slug": "benton-and-haughton",
+      "hero": "hero-shreveport.jpg",
+      "navLabel": "Benton & Haughton",
+      "kicker": "Benton and Haughton",
+      "heading": "Porta potty rental in Benton and Haughton.",
+      "intro": "New subdivisions, schools, churches, farms and family land north and east of Bossier.",
+      "seoTitle": "Porta Potty Rental Benton & Haughton LA | ArkLaTex",
+      "seoDescription": "Porta potty rental in Benton and Haughton, LA for home builders, churches, schools, farms and family events.",
+      "service": "Portable toilet rental in Benton and Haughton",
+      "sections": [
+        {
+          "kicker": "Out this way",
+          "heading": "Growing towns with country roads.",
+          "body": "Benton and Haughton are growing — new subdivisions, schools and churches — with acreage, farms and family events further out."
+        },
+        {
+          "kicker": "Rural drives",
+          "heading": "Tell us about the road.",
+          "body": "Rural properties often have gravel or dirt approaches. Say what the drive is like and whether it gets soft after rain, so the unit is placed somewhere a service truck can reach all year."
+        }
+      ],
+      "ctaHeadline": "Need units out in the parish?"
+    },
+    {
+      "slug": "where-we-deliver",
+      "hero": "hero-shreveport.jpg",
+      "navLabel": "Where we deliver",
+      "kicker": "Delivery area",
+      "heading": "Where we deliver in the ArkLaTex.",
+      "intro": "Shreveport and Bossier City, and the towns around them in Caddo, Bossier, DeSoto and Webster Parishes.",
+      "seoTitle": "Delivery Area | ArkLaTex Portable Toilets Shreveport",
+      "seoDescription": "Portable toilet delivery in Shreveport, Bossier City, Benton, Haughton, Blanchard, Keithville, Greenwood, Stonewall, Minden and Mansfield.",
+      "service": "Portable toilet rental in Northwest Louisiana",
+      "sections": [
+        {
+          "kicker": "Close in",
+          "heading": "Shreveport, Bossier and the nearby towns.",
+          "body": "Shreveport, Bossier City, Benton, Haughton, Blanchard and Keithville are close by and easy to schedule."
+        },
+        {
+          "kicker": "Further out",
+          "heading": "Greenwood to Minden, and down to Mansfield.",
+          "body": "Greenwood, Stonewall, Minden, Mansfield and the gas field locations in between are covered too. Send a pin or directions for anything off the highway."
+        }
+      ],
+      "ctaHeadline": "Not sure if you are in range?"
+    },
+    {
+      "slug": "rental-faq",
+      "navLabel": "Rental FAQ",
+      "kicker": "Before you rent",
+      "heading": "What to know before renting a porta potty.",
+      "intro": "A plain rundown of how rentals work, from the first call to the day the units leave.",
+      "seoTitle": "Porta Potty Rental FAQ Shreveport | ArkLaTex Portable Toilets",
+      "seoDescription": "How porta potty rental works in Shreveport and Bossier City: ordering, delivery, cleaning, how long you can keep a unit and pickup.",
+      "service": "Porta potty rental information",
+      "sections": [
+        {
+          "kicker": "Calling in",
+          "heading": "Have three things handy.",
+          "body": "Where the unit is going, about how many people will use it, and the days you need it. Anything else — a locked gate, a soft yard, a spot way back from the road — is good to mention but not required."
+        },
+        {
+          "kicker": "Cleaning",
+          "heading": "What a service visit covers.",
+          "body": "The tank gets pumped, the unit is cleaned and sanitized, and the paper and hand sanitizer are restocked. Long rentals get this every week; events running more than a day get it between days."
+        },
+        {
+          "kicker": "When you are done",
+          "heading": "Pickup.",
+          "body": "Event units are usually picked up the next business day. For a job or a long rental, just call when you are finished."
+        }
+      ],
+      "ctaHeadline": "Any other questions?"
+    },
+    {
+      "slug": "request-pricing",
+      "navLabel": "Request pricing",
+      "kicker": "Pricing",
+      "heading": "Request pricing.",
+      "intro": "Tell us about the job or the event and we will get back to you with a price.",
+      "seoTitle": "Porta Potty Rental Pricing Shreveport | ArkLaTex Portable Toilets",
+      "seoDescription": "Request pricing on porta potty, restroom trailer or portable sink rental in Shreveport, Bossier City, Benton and Haughton.",
+      "service": "Pricing requests",
+      "sections": [
+        {
+          "kicker": "What we need",
+          "heading": "The more we know, the closer the number.",
+          "body": "Where it is going, how many people, how long, and whether you need anything beyond a standard unit — a sink, an accessible unit, a trailer. With that, we can give you a real number."
+        }
+      ],
+      "ctaHeadline": "Let's talk numbers."
+    }
+  ]
+}

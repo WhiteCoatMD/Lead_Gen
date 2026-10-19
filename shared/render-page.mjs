@@ -121,6 +121,13 @@ export function renderPage(site, page, slug = "", extras = {}) {
       })
     : "";
 
+  // Optional per-page hero photo, same treatment as the home page hero. Pages
+  // without one keep the plain accent panel, so existing sites are unchanged.
+  const heroStyle = page.hero
+    ? ` style="background-image:linear-gradient(90deg,rgba(10,12,14,.91),rgba(10,12,14,.68) 48%,rgba(10,12,14,.08)),url(&quot;${esc(assetUrl(page.hero))}&quot;)"`
+    : "";
+  const ogImage = page.hero || site.logo;
+
   return `<!doctype html>
 <html lang="en" data-site="${esc(slug)}"><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -133,7 +140,7 @@ export function renderPage(site, page, slug = "", extras = {}) {
   <meta property="og:description" content="${esc(page.seoDescription)}">
   <meta property="og:url" content="${esc(url)}">
   <meta property="og:site_name" content="${esc(site.name)}">
-  ${site.logo ? `<meta property="og:image" content="${esc(absolute(site.domain, site.logo))}">` : ""}
+  ${ogImage ? `<meta property="og:image" content="${esc(absolute(site.domain, ogImage))}">` : ""}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/site.css">
   <style>:root{--accent:${esc(site.accent || "#ef342f")};--accent-dark:${esc(site.accentDark || "#c82420")}}</style>
@@ -152,7 +159,7 @@ export function renderPage(site, page, slug = "", extras = {}) {
     </div>
   </header>
   <main>
-    <section class="hero hero-plain" id="top">
+    <section class="hero${page.hero ? "" : " hero-plain"}" id="top"${heroStyle}>
       <div class="shell hero-content">
         <p class="eyebrow">${esc(page.kicker || site.kicker)}</p>
         <h1>${esc(page.heading)}</h1>

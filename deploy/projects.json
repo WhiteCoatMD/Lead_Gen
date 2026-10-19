@@ -166,5 +166,47 @@
     "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
     "projectName": "martins-trash-removal-demolition",
     "alias": "https://martins-trash-removal-demolition.vercel.app"
+  },
+  "atlas-dumpster-rental-shreveport": {
+    "projectId": "prj_VEUwPsGhauTWa7n8fPzzEB2iXSgi",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "atlas-dumpster-rental-shreveport",
+    "alias": "https://atlas-dumpster-rental-shreveport.vercel.app"
+  },
+  "baton-rouge-dumpster": {
+    "projectId": "prj_lkeeSLOUKKBZkqic7cZCVNzqq7B6",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "baton-rouge-dumpster",
+    "alias": "https://baton-rouge-dumpster.vercel.app"
+  },
+  "local-pro-foundation-repair-baton-rouge": {
+    "projectId": "prj_PK1YvKiFiIVBnKt6tPKaXw19rvk9",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "local-pro-foundation-repair-baton-rouge",
+    "alias": "https://local-pro-foundation-repair-baton-r.vercel.app"
+  },
+  "topone-mobile-mechanic-baton-rouge": {
+    "projectId": "prj_kDAuZvqilV1pEQIdFuxeCgIeBkdV",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "topone-mobile-mechanic-baton-rouge",
+    "alias": "https://topone-mobile-mechanic-baton-rouge.vercel.app"
+  },
+  "porta-potty-okc": {
+    "projectId": "prj_lQkQ3sHSVMRXTDyf5Ph91w891Gd8",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "porta-potty-okc",
+    "alias": "https://porta-potty-okc.vercel.app"
+  },
+  "porta-potty-shreveport": {
+    "projectId": "prj_YsfdQKjgQt6FlvYN8Vb1VQMUGqnM",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "porta-potty-shreveport",
+    "alias": "https://porta-potty-shreveport.vercel.app"
+  },
+  "porta-potty-tulsa": {
+    "projectId": "prj_h1PKf24kpWc6JmVhVCfT9HdHiNPF",
+    "orgId": "team_MVHBiqKAxVK5ml7HVd7qbhzX",
+    "projectName": "porta-potty-tulsa",
+    "alias": "https://porta-potty-tulsa.vercel.app"
   }
 }
