@@ -1,7 +1,7 @@
 {
-  "_placeholders": "PLACEHOLDER domain. Name, address and phone are copied from the verified Google Business Profile (store code 03346481665722530905) on 2026-10-16. Replace the domain here and in api/lead.js once it is registered.",
+  "_placeholders": "Domain is batonrougedumpsterla.com (apex, https), set 2026-10-19. Name, address and phone are copied from the verified Google Business Profile (store code 03346481665722530905) on 2026-10-16.",
   "name": "Baton Rouge Dumpster",
-  "domain": "baton-rouge-dumpster.invalid",
+  "domain": "batonrougedumpsterla.com",
   "phone": "225-535-4926",
   "email": "",
   "streetAddress": "5563 Frey St",

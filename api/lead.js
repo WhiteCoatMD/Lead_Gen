@@ -53,27 +53,28 @@ export const RECIPIENTS = {
     business: "ArkLaTex Portable Toilets",
     domain: "porta-potty-shreveport.invalid",
   },
-  // Four GBP-backed sites built 2026-10-16. No operator and no domain yet, so
-  // leads go to Mitch; swap `to` and `domain` as each one is placed.
+  // Four GBP-backed sites built 2026-10-16. Domains are live (apex, https).
+  // Leads still go to Mitch until each site has an operator inbox; swap `to`
+  // when that address is known.
   "atlas-dumpster-rental-shreveport": {
     to: "mitch@whitecoat-md.com",
     business: "Atlas Dumpster Rental",
-    domain: "atlas-dumpster-rental-shreveport.invalid",
+    domain: "atlasdumpstershreveport.com",
   },
   "baton-rouge-dumpster": {
     to: "mitch@whitecoat-md.com",
     business: "Baton Rouge Dumpster",
-    domain: "baton-rouge-dumpster.invalid",
+    domain: "batonrougedumpsterla.com",
   },
   "local-pro-foundation-repair-baton-rouge": {
     to: "mitch@whitecoat-md.com",
     business: "Local Pro Foundation Repair",
-    domain: "local-pro-foundation-repair.invalid",
+    domain: "localprofoundationrepair.com",
   },
   "topone-mobile-mechanic-baton-rouge": {
     to: "mitch@whitecoat-md.com",
     business: "TopOne Mobile Mechanic Service",
-    domain: "topone-mobile-mechanic.invalid",
+    domain: "toponemobilemechanicservice.com",
   },
   "martins-trash-removal-demolition": {
     // INTERIM DESTINATION. Leads go to Mitch until the contractor's own
