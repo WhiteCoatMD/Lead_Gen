@@ -1,4 +1,4 @@
-import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd, ANALYTICS_SCRIPT, displayPhone, renderNav, renderFooter, napBlock } from "./render-site.mjs";
+import { escapeHtml as esc, phoneHref, assetUrl, absolute, jsonLd, ANALYTICS_SCRIPT, displayPhone, renderNav, renderFooter, napBlock, mapLink } from "./render-site.mjs";
 import { areaNames, businessId } from "./schema.mjs";
 import { DIAGRAMS } from "./render-diagram.mjs";
 import { renderFaq } from "./render-faq.mjs";
@@ -167,7 +167,7 @@ export function renderPage(site, page, slug = "", extras = {}) {
     ${points}
     ${page.type === "cost-guide" ? renderPriceGuide(site) : ""}${renderPlanningLinks(site, page)}${related}
     ${renderLeadForm(site, slug, `/${page.slug}`)}
-    ${phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(page.ctaHeadline || site.ctaHeadline)}</h2><p>${esc(page.ctaCopy || site.ctaCopy)}</p></div><div class="contact-card">${napBlock(site) ? `<address class="nap">${esc(napBlock(site).street)}<br>${esc(napBlock(site).cityLine)}</address>` : ""}${phone ? `<a class="phone" href="${phoneHref(phone)}">${esc(phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areas.join(", "))}.</p></div></section>` : ""}
+    ${phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(page.ctaHeadline || site.ctaHeadline)}</h2><p>${esc(page.ctaCopy || site.ctaCopy)}</p></div><div class="contact-card">${napBlock(site) ? `<address class="nap">${esc(napBlock(site).street)}<br>${esc(napBlock(site).cityLine)}</address>` : ""}${phone ? `<a class="phone" href="${phoneHref(phone)}">${esc(phone)}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}${mapLink(site)}<p>Serving ${esc(areas.join(", "))}.</p></div></section>` : ""}
   </main>
   ${renderFooter(site)}
   ${phone ? `<a class="mobile-call" href="${phoneHref(phone)}">Call now · ${esc(phone)}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}${page.type === "fence-calculator" ? `<script type="module" src="/fence-calc-ui.mjs"></script>` : ""}
