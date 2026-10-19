@@ -2,28 +2,55 @@
   "slug": "scaffolding-los-angeles",
   "domain": "scaffoldingrentalusa.com",
   "siteUrl": "sc-domain:scaffoldingrentalusa.com",
-  "startDate": "2025-06-19",
-  "endDate": "2026-10-09",
-  "clicks": 4,
-  "impressions": 244,
+  "startDate": "2025-06-26",
+  "endDate": "2026-10-16",
+  "clicks": 7,
+  "impressions": 351,
   "pages": [
     {
       "keys": [
         "http://www.scaffoldingrentalusa.com/"
       ],
-      "clicks": 4,
-      "impressions": 184,
-      "ctr": 0.021739130434782608,
-      "position": 4.940217391304348
+      "clicks": 7,
+      "impressions": 232,
+      "ctr": 0.03017241379310345,
+      "position": 5.474137931034483
+    },
+    {
+      "keys": [
+        "http://scaffoldingrentalusa.com/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "keys": [
         "https://scaffoldingrentalusa.com/"
       ],
       "clicks": 0,
-      "impressions": 60,
+      "impressions": 114,
       "ctr": 0,
-      "position": 50.55
+      "position": 38.280701754385966
+    },
+    {
+      "keys": [
+        "https://scaffoldingrentalusa.com/about.html"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 16.333333333333336
+    },
+    {
+      "keys": [
+        "https://scaffoldingrentalusa.com/scaffolding-safety.html"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
     }
   ],
   "queries": [
@@ -32,9 +59,27 @@
         "scaffolding"
       ],
       "clicks": 1,
-      "impressions": 20,
-      "ctr": 0.05,
-      "position": 4.05
+      "impressions": 22,
+      "ctr": 0.045454545454545456,
+      "position": 3.9545454545454546
+    },
+    {
+      "keys": [
+        "spectrum scaffolding"
+      ],
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 1,
+      "position": 12
+    },
+    {
+      "keys": [
+        "20 foot scaffolding rental"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
     },
     {
       "keys": [
@@ -53,6 +98,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 87
+    },
+    {
+      "keys": [
+        "asian scaffolding"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 13
     },
     {
       "keys": [
@@ -80,6 +134,24 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "keys": [
+        "cuplock scaffolding rental"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
+        "escafos de renta"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
     },
     {
       "keys": [
@@ -113,9 +185,9 @@
         "hiring scaffolding for painting"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 11
+      "position": 10.666666666666666
     },
     {
       "keys": [
@@ -140,9 +212,9 @@
         "portable scaffold hire"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 67
+      "position": 64.5
     },
     {
       "keys": [
@@ -209,12 +281,21 @@
     },
     {
       "keys": [
+        "rolling scaffolding rental"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 10.333333333333334
+    },
+    {
+      "keys": [
         "scaffold"
       ],
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 15,
       "ctr": 0,
-      "position": 4.571428571428571
+      "position": 4.6
     },
     {
       "keys": [
@@ -275,9 +356,9 @@
         "scaffold los angeles"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 37.5
+      "position": 37.666666666666664
     },
     {
       "keys": [
@@ -293,9 +374,9 @@
         "scaffold rental"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 1
+      "position": 3
     },
     {
       "keys": [
@@ -305,6 +386,15 @@
       "impressions": 3,
       "ctr": 0,
       "position": 15.333333333333334
+    },
+    {
+      "keys": [
+        "scaffolding companies in los angeles"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "keys": [
@@ -320,9 +410,18 @@
         "scaffolding for hire"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 73
+      "position": 73.5
+    },
+    {
+      "keys": [
+        "scaffolding for rent"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 27.5
     },
     {
       "keys": [
@@ -338,18 +437,18 @@
         "scaffolding los angeles"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 7,
       "ctr": 0,
-      "position": 20.5
+      "position": 16.857142857142858
     },
     {
       "keys": [
         "scaffolding los angeles ca"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 38
+      "position": 36
     },
     {
       "keys": [
@@ -383,27 +482,45 @@
         "scaffolding rental"
       ],
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 21,
       "ctr": 0,
-      "position": 7.0588235294117645
+      "position": 8.714285714285715
     },
     {
       "keys": [
         "scaffolding rental los angeles"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 10,
       "ctr": 0,
-      "position": 16.5
+      "position": 17.9
+    },
+    {
+      "keys": [
+        "scaffolding rental los angeles ca"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 28
+    },
+    {
+      "keys": [
+        "scaffolding rental near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 24
     },
     {
       "keys": [
         "scaffolding rental service"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 6,
       "ctr": 0,
-      "position": 66.66666666666667
+      "position": 61.833333333333336
     },
     {
       "keys": [
@@ -416,21 +533,30 @@
     },
     {
       "keys": [
+        "scaffolding rental with delivery"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
         "scaffolding rentals"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 36.5
+      "position": 31.2
     },
     {
       "keys": [
         "scaffolding rentals los angeles"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 10,
       "ctr": 0,
-      "position": 28.714285714285715
+      "position": 27.6
     },
     {
       "keys": [
@@ -530,20 +656,29 @@
       "impressions": 1,
       "ctr": 0,
       "position": 3
+    },
+    {
+      "keys": [
+        "swing stage company"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
     }
   ],
   "rebuilt": [
     {
       "path": "/scaffolding-safety.html",
       "clicks": 0,
-      "impressions": 0,
-      "position": null
+      "impressions": 1,
+      "position": 2
     },
     {
       "path": "/about.html",
       "clicks": 0,
-      "impressions": 0,
-      "position": null
+      "impressions": 3,
+      "position": 16.333333333333336
     },
     {
       "path": "/contact.html",

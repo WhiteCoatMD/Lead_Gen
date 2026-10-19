@@ -2,31 +2,40 @@
   "slug": "flooring-monroe",
   "domain": "flooring-monroe.com",
   "siteUrl": "sc-domain:flooring-monroe.com",
-  "startDate": "2025-06-19",
-  "endDate": "2026-10-09",
+  "startDate": "2025-06-26",
+  "endDate": "2026-10-16",
   "clicks": 0,
-  "impressions": 51,
+  "impressions": 77,
   "pages": [
     {
       "keys": [
         "https://flooring-monroe.com/"
       ],
       "clicks": 0,
-      "impressions": 30,
+      "impressions": 50,
       "ctr": 0,
-      "position": 19.433333333333334
+      "position": 17.96
     },
     {
       "keys": [
         "https://www.flooring-monroe.com/"
       ],
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 27,
       "ctr": 0,
-      "position": 14.238095238095237
+      "position": 15.185185185185185
     }
   ],
   "queries": [
+    {
+      "keys": [
+        "carpet installation near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
     {
       "keys": [
         "carpet installer"
@@ -44,6 +53,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 59
+    },
+    {
+      "keys": [
+        "floor installation near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 21
     },
     {
       "keys": [
@@ -68,9 +86,9 @@
         "flooring company monroe la"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 16
+      "position": 17.5
     },
     {
       "keys": [
@@ -95,9 +113,45 @@
         "flooring monroe la"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 10,
       "ctr": 0,
-      "position": 12.5
+      "position": 13.6
+    },
+    {
+      "keys": [
+        "flooring repair services"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "keys": [
+        "flooring repair services near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "keys": [
+        "flooring stores monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "keys": [
+        "flooring west monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
     },
     {
       "keys": [
@@ -107,6 +161,42 @@
       "impressions": 1,
       "ctr": 0,
       "position": 78
+    },
+    {
+      "keys": [
+        "industrial flooring monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "laminate floor installation near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "keys": [
+        "laminate flooring"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "keys": [
+        "luxury vinyl flooring near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 21
     },
     {
       "keys": [
@@ -134,6 +224,24 @@
       "impressions": 2,
       "ctr": 0,
       "position": 8.5
+    },
+    {
+      "keys": [
+        "tile installation near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 14
+    },
+    {
+      "keys": [
+        "wood flooring installation near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 15
     }
   ],
   "rebuilt": []
