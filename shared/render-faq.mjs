@@ -20,14 +20,31 @@ import { escapeHtml as esc, jsonLd } from "./render-site.mjs";
  * Rendered as <details> so the page stays short while the content stays
  * crawlable — the text is in the HTML whether or not anyone expands it.
  */
+function faqLink(faq) {
+  const href = String(faq.link?.href || "");
+  const label = String(faq.link?.label || "").trim();
+  if (!label || !href.startsWith("/") || href.startsWith("//") || /[\s"'<>]/.test(href)) return null;
+  return { href, label };
+}
+
+function faqAnswerText(faq) {
+  const link = faqLink(faq);
+  return link ? `${faq.a} ${link.label}: ${link.href}` : faq.a;
+}
+
 export function renderFaq(site) {
   const faqs = site.faqs;
   if (!Array.isArray(faqs) || !faqs.length) return "";
 
+  const answerHtml = (f) => {
+    const link = faqLink(f);
+    return `<p>${esc(f.a)}${link ? ` <a href="${esc(link.href)}">${esc(link.label)}</a>` : ""}</p>`;
+  };
+
   const items = faqs.map((f) => `
       <details class="faq-item">
         <summary>${esc(f.q)}</summary>
-        <div class="faq-answer"><p>${esc(f.a)}</p></div>
+        <div class="faq-answer">${answerHtml(f)}</div>
       </details>`).join("");
 
   const schema = {
@@ -36,7 +53,7 @@ export function renderFaq(site) {
     mainEntity: faqs.map((f) => ({
       "@type": "Question",
       name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      acceptedAnswer: { "@type": "Answer", text: faqAnswerText(f) },
     })),
   };
 

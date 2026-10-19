@@ -89,6 +89,12 @@ export function napBlock(site) {
   return { street: site.streetAddress, cityLine };
 }
 
+export function mapLink(site) {
+  const url = httpUrls(site.gbpUrl)[0];
+  if (!url) return "";
+  return `<a href="${esc(url)}">Find us on Google Maps</a>`;
+}
+
 export function licenseText(site) {
   const number = String(site.license?.number ?? "").trim();
   if (!number) return "";
@@ -252,7 +258,7 @@ ${site.logo ? `<link rel="apple-touch-icon" href="${esc(assetUrl(site.logo))}">`
     <section class="areas" id="areas"><div class="shell areas-inner"><div><p class="eyebrow">Service area</p><h2>${esc(site.areaHeadline)}</h2></div><div class="area-list">${areas}</div></div></section>
     ${renderFaq(site)}
     ${renderLeadForm(site, slug, "/")}
-    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${napBlock(site) ? `<address class="nap">${esc(napBlock(site).street)}<br>${esc(napBlock(site).cityLine)}</address>` : ""}${site.phone ? `<a class="phone" href="${phoneHref(dialled(site))}">${esc(dialled(site))}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}<p>Serving ${esc(areaLabel.join(", "))}.</p></div></section>` : ""}
+    ${site.phone || site.email ? `<section class="shell contact"><div><p class="eyebrow accent">Ready to get started?</p><h2>${esc(site.ctaHeadline)}</h2><p>${esc(site.ctaCopy)}</p></div><div class="contact-card">${napBlock(site) ? `<address class="nap">${esc(napBlock(site).street)}<br>${esc(napBlock(site).cityLine)}</address>` : ""}${site.phone ? `<a class="phone" href="${phoneHref(dialled(site))}">${esc(dialled(site))}</a>` : ""}${site.email ? `<a href="mailto:${esc(site.email)}">${esc(site.email)}</a>` : ""}${mapLink(site)}<p>Serving ${esc(areaLabel.join(", "))}.</p></div></section>` : ""}
   </main>
   ${renderFooter(site)}
   ${site.phone ? `<a class="mobile-call" href="${phoneHref(dialled(site))}">Call now · ${esc(dialled(site))}</a>` : ""}<script src="/site.js" defer></script>${site.leadForm ? `<script>${LEAD_FORM_SCRIPT}</script>` : ""}${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}
