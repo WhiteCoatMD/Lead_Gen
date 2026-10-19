@@ -79,21 +79,56 @@
       "title": "Storm Cleanup",
       "link": "storm-debris-dumpster-rental",
       "description": "Fallen limbs, wet carpet and torn-out drywall after a storm comes through Northwest Louisiana."
+    },
+    {
+      "title": "Concrete & Heavy Debris",
+      "link": "concrete-dumpster-rental",
+      "description": "Small boxes for concrete, brick, and dirt. A big box of concrete is an overload, not a bargain."
+    },
+    {
+      "title": "Yard Waste",
+      "link": "yard-waste-dumpster-rental",
+      "description": "Limbs, pine, and pecan wood, cut flat. Dirt and stumps are a different box."
     }
   ],
   "serviceAreas": [
     "Shreveport",
-    "Bossier City",
-    "Benton",
-    "Haughton",
-    "Blanchard",
-    "Keithville",
-    "Greenwood",
-    "Stonewall",
+    {
+      "name": "Bossier City",
+      "href": "/bossier-city-dumpster-rental"
+    },
+    {
+      "name": "Benton",
+      "href": "/benton-dumpster-rental"
+    },
+    {
+      "name": "Haughton",
+      "href": "/haughton-dumpster-rental"
+    },
+    {
+      "name": "Blanchard",
+      "href": "/blanchard-dumpster-rental"
+    },
+    {
+      "name": "Keithville",
+      "href": "/keithville-dumpster-rental"
+    },
+    {
+      "name": "Greenwood",
+      "href": "/greenwood-dumpster-rental"
+    },
+    {
+      "name": "Stonewall",
+      "href": "/stonewall-dumpster-rental"
+    },
     "Vivian",
-    "Mansfield"
+    "Mansfield",
+    {
+      "name": "Minden",
+      "href": "/minden-dumpster-rental"
+    }
   ],
-  "areaHeadline": "Caddo, Bossier and DeSoto Parishes.",
+  "areaHeadline": "Caddo, Bossier, DeSoto, and Webster Parishes.",
   "ctaHeadline": "Ready for a dumpster?",
   "ctaCopy": "Call with the address, what you are getting rid of, and when you want it dropped. If it is easier, send it over and we will call you back.",
   "footerLine": "Roll-off dumpster rental in Shreveport, Louisiana",
@@ -169,7 +204,8 @@
           "a": "Not usually. Mark the spot, make sure the driveway is clear and the truck can get in, and it can be set down without you there."
         }
       ],
-      "ctaHeadline": "Starting a project at the house?"
+      "ctaHeadline": "Starting a project at the house?",
+      "kind": "service"
     },
     {
       "slug": "construction-dumpster-rental",
@@ -204,7 +240,8 @@
           "a": "Yes. Construction rentals run as long as the job, with swaps as often as you need them."
         }
       ],
-      "ctaHeadline": "Got a job starting?"
+      "ctaHeadline": "Got a job starting?",
+      "kind": "service"
     },
     {
       "slug": "roofing-dumpster-rental",
@@ -233,7 +270,8 @@
           "body": "When a hail storm moves through Caddo and Bossier, every roofer needs a dumpster the same week. If you are scheduling roofs after a storm, call as soon as you have the jobs lined up."
         }
       ],
-      "ctaHeadline": "Tearing off a roof?"
+      "ctaHeadline": "Tearing off a roof?",
+      "kind": "service"
     },
     {
       "slug": "cleanout-dumpster-rental",
@@ -262,7 +300,8 @@
           "body": "Paint, chemicals, tires, batteries and refrigerators or freezers cannot go in. Caddo and Bossier hold household hazardous waste days; check with the parish for the next one."
         }
       ],
-      "ctaHeadline": "Clearing out a house?"
+      "ctaHeadline": "Clearing out a house?",
+      "kind": "service"
     },
     {
       "slug": "dumpster-sizes",
@@ -291,7 +330,43 @@
           "body": "New home builds, full gut remodels, commercial cleanouts and big demolition jobs. These are tall, so plan on a door or a ramp for loading."
         }
       ],
-      "ctaHeadline": "Still not sure on size?"
+      "ctaHeadline": "Still not sure on size?",
+      "kind": "service",
+      "faqs": [
+        {
+          "q": "Need the small heavy box?",
+          "a": "A 10 yard is the bathroom, the tight drive, and the concrete.",
+          "link": {
+            "href": "/10-yard-dumpster-rental",
+            "label": "10 yard dumpster rental"
+          }
+        },
+        {
+          "q": "What about a 15?",
+          "a": "The in-between size for a small kitchen, a few rooms of floor, or a single-layer ranch roof.",
+          "link": {
+            "href": "/15-yard-dumpster-rental",
+            "label": "15 yard dumpster rental"
+          }
+        },
+        {
+          "q": "Which size do most remodels take?",
+          "a": "A 20. Kitchens, whole-house floors, and cleanouts.",
+          "link": {
+            "href": "/20-yard-dumpster-rental",
+            "label": "20 yard dumpster rental"
+          }
+        },
+        {
+          "q": "Building a house?",
+          "a": "Start at a 30, and look at a 40 if the debris is light and bulky.",
+          "link": {
+            "href": "/30-yard-dumpster-rental",
+            "label": "30 yard dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Pick a size."
     },
     {
       "slug": "storm-debris-dumpster-rental",
@@ -320,7 +395,8 @@
           "body": "After big storms the city may run special debris pickups. A dumpster makes sense when you cannot wait, when there is interior debris, or when the volume is more than a curb pile."
         }
       ],
-      "ctaHeadline": "Cleaning up after a storm?"
+      "ctaHeadline": "Cleaning up after a storm?",
+      "kind": "service"
     },
     {
       "slug": "bossier-city-dumpster-rental",
@@ -344,7 +420,26 @@
           "body": "Newer subdivisions often have HOA rules and tight turnarounds. Let us know about either one, and about any gate code, when you book."
         }
       ],
-      "ctaHeadline": "Need a dumpster in Bossier?"
+      "ctaHeadline": "Need a dumpster in Bossier?",
+      "kind": "area",
+      "faqs": [
+        {
+          "q": "North of Bossier, in Benton?",
+          "a": "We drop Benton too. LA 3, Palmetto, and the Kingston corridor.",
+          "link": {
+            "href": "/benton-dumpster-rental",
+            "label": "Dumpster rental in Benton"
+          }
+        },
+        {
+          "q": "East in Haughton?",
+          "a": "US 80, Sligo Road, and the streets by I-20.",
+          "link": {
+            "href": "/haughton-dumpster-rental",
+            "label": "Dumpster rental in Haughton"
+          }
+        }
+      ]
     },
     {
       "slug": "service-area",
@@ -352,23 +447,59 @@
       "navLabel": "Service area",
       "kicker": "Service area",
       "heading": "Where we drop dumpsters in the ArkLaTex.",
-      "intro": "Shreveport and Bossier City, and the towns around them in Caddo, Bossier and DeSoto Parishes.",
+      "intro": "Shreveport and Bossier City, and the towns around them in Caddo, Bossier, DeSoto, and Webster Parishes.",
       "seoTitle": "Service Area | Atlas Dumpster Rental Shreveport LA",
-      "seoDescription": "Dumpster delivery in Shreveport, Bossier City, Benton, Haughton, Blanchard, Keithville, Greenwood, Stonewall, Vivian and Mansfield.",
+      "seoDescription": "Dumpster delivery in Shreveport, Bossier City, Benton, Haughton, Blanchard, Keithville, Greenwood, Stonewall, Minden, Vivian and Mansfield.",
       "service": "Dumpster rental in Northwest Louisiana",
       "sections": [
         {
           "kicker": "Close in",
           "heading": "Shreveport, Bossier and nearby.",
-          "body": "Shreveport, Bossier City, Benton, Haughton, Blanchard and Keithville are close by and easy to schedule."
+          "body": "We drop dumpsters in Shreveport, Bossier City, Benton, Haughton, Blanchard, and Keithville. Each of those towns has its own page if you want the streets and the jobs we see there. Call 318-225-7589 and we will put it on the schedule."
         },
         {
-          "kicker": "Further out",
-          "heading": "Greenwood, Stonewall, Vivian and Mansfield.",
-          "body": "The towns further out are covered too. For rural property, send directions or a map pin along with the address."
+          "kicker": "Those towns",
+          "heading": "Greenwood, Stonewall, Vivian, Mansfield, and Minden.",
+          "body": "We drop dumpsters in Greenwood, Stonewall, Vivian, Mansfield, and Minden. On a rural driveway, send directions or a map pin with the address so the truck hits the right gate."
         }
       ],
-      "ctaHeadline": "Not sure if you are in range?"
+      "ctaHeadline": "Tell us the town.",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Shreveport and the towns listed on this page. Have the address ready.",
+      "kind": "area",
+      "faqs": [
+        {
+          "q": "Benton or north Bossier?",
+          "a": "Benton has its own page. LA 3, Palmetto, and Kingston.",
+          "link": {
+            "href": "/benton-dumpster-rental",
+            "label": "Dumpster rental in Benton"
+          }
+        },
+        {
+          "q": "West toward Texas?",
+          "a": "We drop Greenwood. I-20, US 80, and Highway 169.",
+          "link": {
+            "href": "/greenwood-dumpster-rental",
+            "label": "Dumpster rental in Greenwood"
+          }
+        },
+        {
+          "q": "South on 171?",
+          "a": "Keithville and Stonewall are both on the schedule.",
+          "link": {
+            "href": "/keithville-dumpster-rental",
+            "label": "Dumpster rental in Keithville"
+          }
+        },
+        {
+          "q": "Minden?",
+          "a": "Yes. Main Street, Germantown Road, and the I-20 side of town.",
+          "link": {
+            "href": "/minden-dumpster-rental",
+            "label": "Dumpster rental in Minden"
+          }
+        }
+      ]
     },
     {
       "slug": "request-pricing",
@@ -384,9 +515,784 @@
           "kicker": "What sets the price",
           "heading": "Size, days, weight and distance.",
           "body": "The size of the box, how many days you keep it, how much the load weighs and how far it goes. Heavy materials like concrete, shingles and dirt are the usual reason a price changes, so mention them up front."
+        },
+        {
+          "kicker": "What to have ready",
+          "heading": "Address, debris, size, days.",
+          "body": "That is the whole quote. Concrete, dirt, shingles, and red clay weigh more than furniture, and the weight changes the number. Call 318-225-7589 with those four facts. The form works if you would rather type it, and we will call you back."
+        },
+        {
+          "kicker": "No rate card",
+          "heading": "We price the drop you described.",
+          "body": "A published list would be wrong for half the calls. A 10 yard of concrete in Keithville and a 10 yard of garage junk in Broadmoor are not the same job. Tell us the pile and the address. We will give you a number for that one."
         }
       ],
-      "ctaHeadline": "Let's get you a number."
+      "ctaHeadline": "Let's get you a number.",
+      "kind": "info",
+      "faqs": [
+        {
+          "q": "Where do I start on size?",
+          "a": "The size guide, then the page for the box you think you need. Call if you are between two.",
+          "link": {
+            "href": "/dumpster-sizes",
+            "label": "Dumpster sizes"
+          }
+        },
+        {
+          "q": "I have concrete.",
+          "a": "Say so first. It takes the small heavy box, and it changes the quote.",
+          "link": {
+            "href": "/concrete-dumpster-rental",
+            "label": "Concrete dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Pricing questions."
+    },
+    {
+      "slug": "10-yard-dumpster-rental",
+      "hero": "hero-shreveport-dumpster.jpg",
+      "navLabel": "10 yard",
+      "kicker": "10 yard roll-offs",
+      "heading": "10 yard dumpster rental in Shreveport.",
+      "intro": "A 10 yard is the small roll-off. Bathroom tear-outs, a one-car garage, a modest roof, and the heavy stuff: concrete, brick, and dirt. Call 318-225-7589 and tell us which of those you have.",
+      "seoTitle": "10 Yard Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "10 yard dumpster rental in Shreveport for bathrooms, garage cleanouts, small roofs, and concrete or dirt. Call 318-225-7589.",
+      "service": "10 yard dumpster rental",
+      "kind": "service",
+      "sections": [
+        {
+          "kicker": "What fits",
+          "heading": "One room. Maybe the garage. Not the whole kitchen.",
+          "body": "A Broadmoor bath, a South Highlands half-bath, or the junk in a Cedar Grove garage. That is a 10. A Highland bungalow kitchen with the cabinets and the plaster will run past it. Say the rooms out loud when you call. We would rather bring a 15 the first time than swap you onto a second haul on Saturday."
+        },
+        {
+          "kicker": "Heavy",
+          "heading": "Driveways and dirt use this box on purpose.",
+          "body": "A busted driveway in Queensborough, brick from an old chimney in Highland, or red clay from a pad in south Shreveport hits the weight limit fast. The 10 is the legal way to haul it, and it should not be filled to the rim. Keep trash out of it. A mixed load of concrete and household junk is the one we do not want to guess at."
+        },
+        {
+          "kicker": "Small drives",
+          "heading": "Line Avenue, Kings Highway, and the older grids.",
+          "body": "A lot of Shreveport drives off Line Avenue and Kings Highway were built for a sedan. The 10 is the box that sits there without blocking the neighbor. You still need a straight back-in and a clear drop from the power line. Pine limbs hang low in south Shreveport. Look up, then call 318-225-7589 with the street."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is the pile a little bigger than a bath?",
+          "a": "Look at the 15. It is the step up that still fits a tight driveway.",
+          "link": {
+            "href": "/15-yard-dumpster-rental",
+            "label": "15 yard dumpster rental"
+          }
+        },
+        {
+          "q": "This is a concrete tear-out.",
+          "a": "Stay with a small heavy box. The concrete page is the short version of the rules.",
+          "link": {
+            "href": "/concrete-dumpster-rental",
+            "label": "Concrete dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "10 yard questions.",
+      "ctaHeadline": "Need a 10 yard in Shreveport?",
+      "ctaCopy": "Call 318-225-7589. Address and debris. We drop 10 yard dumpsters in Shreveport and Bossier, and we will tell you if you need the next size."
+    },
+    {
+      "slug": "15-yard-dumpster-rental",
+      "hero": "cleanout.jpg",
+      "navLabel": "15 yard",
+      "kicker": "15 yard roll-offs",
+      "heading": "15 yard dumpster rental in Shreveport.",
+      "intro": "The 15 is the step between a small box and the 20 most full kitchens need. A short kitchen, two rooms of flooring, a single-layer roof on a ranch. Call 318-225-7589.",
+      "seoTitle": "15 Yard Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "15 yard dumpster rental in Shreveport and Bossier for small kitchens, a few rooms of flooring, and single-layer roofs. Call 318-225-7589.",
+      "service": "15 yard dumpster rental",
+      "kind": "service",
+      "sections": [
+        {
+          "kicker": "Where it lands",
+          "heading": "The job that outgrows a 10 and does not need a 20.",
+          "body": "A Highland bungalow with a small kitchen. Flooring in a Spring Lake house that is not the whole footprint. A garage plus the shed, but not the attic. People in Bossier ranches call this size for a bath and a hallway. If you are also tossing a couch and a full set of cabinets, you are describing a 20. We will say that on the phone."
+        },
+        {
+          "kicker": "Roofs",
+          "heading": "One layer on a regular ranch.",
+          "body": "A single layer of shingles on a typical Bossier or south Shreveport ranch often fits a 15, sometimes a 10 if the house is small. A second layer, or a bigger roof along Youree or in Benton, moves up. Have the squares if you know them. If you do not, describe the house. Shingles are the load that surprises people who sized the box by eye."
+        },
+        {
+          "kicker": "How to load it",
+          "heading": "Flat on the bottom, nothing over the rail.",
+          "body": "Break cabinets down. Lay lumber flat. Do not stand mattresses on end and then wonder why the doors will not close on the pile. Plaster from an older Shreveport house is heavy. Mention it. A 15 of plaster is a weight conversation. A 15 of empty furniture is a space conversation. Call 318-225-7589 and we will treat them differently."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Should this have been a 20?",
+          "a": "A full kitchen, a whole-house floor, or a real cleanout is a 20. Use that page if the pile keeps growing while you look at it.",
+          "link": {
+            "href": "/20-yard-dumpster-rental",
+            "label": "20 yard dumpster rental"
+          }
+        },
+        {
+          "q": "Renting for a house, not a job site?",
+          "a": "The residential page covers driveway placement. The 15 is one of the sizes on it.",
+          "link": {
+            "href": "/residential-dumpster-rental",
+            "label": "Residential dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "15 yard questions.",
+      "ctaHeadline": "Need a 15 yard?",
+      "ctaCopy": "Call 318-225-7589. We drop 15 yard dumpsters in Shreveport and Bossier City. Tell us the rooms, or the squares if it is a roof."
+    },
+    {
+      "slug": "20-yard-dumpster-rental",
+      "hero": "hero-shreveport-dumpster.jpg",
+      "navLabel": "20 yard",
+      "kicker": "20 yard roll-offs",
+      "heading": "20 yard dumpster rental in Shreveport.",
+      "intro": "The 20 is the dumpster most Shreveport remodels should have ordered first. Full kitchen, flooring for the house, a big cleanout, a larger roof. Call 318-225-7589 and we will drop it.",
+      "seoTitle": "20 Yard Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "20 yard dumpster rental in Shreveport for kitchens, whole-house flooring, cleanouts, and larger roofs. Call 318-225-7589.",
+      "service": "20 yard dumpster rental",
+      "kind": "service",
+      "sections": [
+        {
+          "kicker": "The common job",
+          "heading": "Youree, Ellerbe, and the houses that are actually being gutted.",
+          "body": "Remodels along Youree Drive, the houses off Ellerbe Road, and estate cleanouts in Querbes and South Highlands land on a 20 more than any other size. Cabinets, tile, carpet, and the furniture nobody wants. If you are opening more than a bath and a closet, start here. A 10 will embarrass you by lunch."
+        },
+        {
+          "kicker": "HOA streets",
+          "heading": "Provenance and Twelve Oaks count the days.",
+          "body": "Southeast Shreveport subdivisions and a lot of Bossier neighborhoods will let you have a dumpster and then tell you when it has to go. Get the number of days from the association and give it to us with the address. We drop the 20 and we book the pickup. The rule is a calendar fact. It is not a reason to make twelve trips to the dump."
+        },
+        {
+          "kicker": "Not this box",
+          "heading": "Heavy debris does not go in a 20.",
+          "body": "Concrete, dirt, and brick belong in a 10. A new house or a whole-house gut belongs in a 30 or a 40. The 20 is the household and remodel size. If your pile is a mix, separate the heavy material and tell us. Call 318-225-7589. We would rather spec two boxes than pull an overweight 20 off a driveway in Broadmoor."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What are the other sizes?",
+          "a": "10 and 15 for small or heavy loads. 30 and 40 for construction and whole-house guts. The size guide is the map.",
+          "link": {
+            "href": "/dumpster-sizes",
+            "label": "Dumpster sizes"
+          }
+        },
+        {
+          "q": "Cleaning out the whole house?",
+          "a": "A 20 handles a lot of estates. If it is the attic, the garage, and every room, ask about a 30.",
+          "link": {
+            "href": "/cleanout-dumpster-rental",
+            "label": "Cleanout dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "20 yard questions.",
+      "ctaHeadline": "Want the size most remodels use?",
+      "ctaCopy": "Call 318-225-7589. We drop 20 yard dumpsters in Shreveport, Bossier, and the towns around them. Address and what is coming out."
+    },
+    {
+      "slug": "30-yard-dumpster-rental",
+      "hero": "construction.jpg",
+      "navLabel": "30 yard",
+      "kicker": "30 yard roll-offs",
+      "heading": "30 yard dumpster rental in Shreveport.",
+      "intro": "A 30 yard is the new-house box and the whole-gut box. Tall sides, room for a swap, wrong tool for concrete. Call 318-225-7589 and tell us where the truck gets back in after it rains.",
+      "seoTitle": "30 Yard Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "30 yard dumpsters in Shreveport and Bossier for new builds, whole-house guts, and commercial scrap, with swaps. Call 318-225-7589.",
+      "service": "30 yard dumpster rental",
+      "kind": "service",
+      "sections": [
+        {
+          "kicker": "Who rents it",
+          "heading": "Builders north of the river, guts on the older grids.",
+          "body": "New houses going up in north Bossier and Benton throw framing scrap and drywall all month. A whole-house tear-out in Queensborough or Mooretown throws a denser pile: plaster, floors, cabinets. Commercial interiors on Bert Kouns and Mansfield Road throw bulky demo. All three are 30 yard calls. The loading is not the same, so say who is throwing the debris."
+        },
+        {
+          "kicker": "Clay",
+          "heading": "Red River clay will swallow a bad set.",
+          "body": "Put the box on high, firm ground. After a week of rain the low side of a Shreveport lot ruts, and a swap truck will not invent a new road. Builders who set the dumpster where the driveway is about to be poured get to move the debris by hand. Set it where we can reach it on the last day of the job, the same as on the first."
+        },
+        {
+          "kicker": "Height and swaps",
+          "heading": "Call at the rail, not over it.",
+          "body": "A 30 is tall. Crews tip into it. If a homeowner is loading, say so and we will talk about a door or a smaller box. On a real build, call for the swap when the scrap is at the rail. Heaped boxes sit. Call 318-225-7589 with the site address. We drop 30s in Shreveport and Bossier and we turn them around."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "The build is bigger than one house.",
+          "a": "A 40 holds more light debris. Read that page before you order two 30s out of habit.",
+          "link": {
+            "href": "/40-yard-dumpster-rental",
+            "label": "40 yard dumpster rental"
+          }
+        },
+        {
+          "q": "This is a construction site.",
+          "a": "Swaps, placement, and the clay are the whole game. The construction page walks through it.",
+          "link": {
+            "href": "/construction-dumpster-rental",
+            "label": "Construction dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "30 yard questions.",
+      "ctaHeadline": "Starting a build in Shreveport?",
+      "ctaCopy": "Call 318-225-7589. We drop 30 yard dumpsters on job sites in Shreveport, Bossier, and Benton, and we swap them when they fill."
+    },
+    {
+      "slug": "40-yard-dumpster-rental",
+      "hero": "construction.jpg",
+      "navLabel": "40 yard",
+      "kicker": "40 yard roll-offs",
+      "heading": "40 yard dumpster rental in Shreveport.",
+      "intro": "The 40 is the big volume box. Commercial demo, multi-unit cleanouts, and builds that eat a 30 too fast. Call 318-225-7589. Leave the concrete out.",
+      "seoTitle": "40 Yard Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "40 yard roll-offs for commercial sites and big builds in Shreveport and Bossier. Light, bulky debris and swap-outs. Call 318-225-7589.",
+      "service": "40 yard dumpster rental",
+      "kind": "service",
+      "sections": [
+        {
+          "kicker": "The right pile",
+          "heading": "Bulky scrap, not a slab.",
+          "body": "Packaging, framing offcuts, drywall, and a cleanout of several units. An I-20 commercial interior or a big frame off I-49. That is a 40. A driveway, a brick wall, or a load of dirt is not. Those blow the weight limit while the box still looks empty. Order the 10 for the heavy pile and the 40 for the bulky one if the site has both."
+        },
+        {
+          "kicker": "Access",
+          "heading": "The truck is long. Say so if the street is not.",
+          "body": "Cul-de-sacs in Provenance, Twelve Oaks, and the newer Bossier courts are a bad surprise for the long truck that carries a 40. Tell us the street. If the 40 will not turn, we still deliver a dumpster. It may be a 30 we swap more often. We do not skip the job because the bulb is tight. Commercial lots on Bert Kouns and Mansfield Road usually have the room. Subdivision driveways sometimes do not."
+        },
+        {
+          "kicker": "Keep it moving",
+          "heading": "Call when it is full to the rail.",
+          "body": "Call before the pile is over the rail. We pull the full box and set an empty one where it was. Leave that spot clear. If the crew parks the trailer in front of it, the swap waits. Call 318-225-7589 when you are getting close, not when the drywall is stacked in a pyramid. We drop 40 yard dumpsters across Shreveport and Bossier."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can concrete go in it?",
+          "a": "No. Use the small heavy box. Mixing it in is how a 40 becomes a problem.",
+          "link": {
+            "href": "/concrete-dumpster-rental",
+            "label": "Concrete dumpster rental"
+          }
+        },
+        {
+          "q": "Not sure between 30 and 40?",
+          "a": "The size guide puts them side by side. Then call and describe the debris along with the building.",
+          "link": {
+            "href": "/dumpster-sizes",
+            "label": "Dumpster sizes"
+          }
+        }
+      ],
+      "faqHeading": "40 yard questions.",
+      "ctaHeadline": "Need a 40 on the site?",
+      "ctaCopy": "Call 318-225-7589. We drop 40 yard dumpsters in Shreveport and Bossier. Tell us the street and what the crew is throwing."
+    },
+    {
+      "slug": "concrete-dumpster-rental",
+      "hero": "construction.jpg",
+      "navLabel": "Concrete",
+      "kicker": "Concrete and heavy debris",
+      "heading": "Concrete and heavy-debris dumpster rental in Shreveport.",
+      "intro": "Concrete, brick, block, and dirt fill a dumpster by weight. We put those loads in a small box and we keep the trash out of it. Call 318-225-7589 and say the word concrete first.",
+      "seoTitle": "Concrete Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "Small heavy-debris dumpsters for concrete, brick, and dirt in Shreveport, Bossier, Keithville, and Stonewall. Call 318-225-7589.",
+      "service": "Concrete and heavy debris dumpster rental",
+      "kind": "service",
+      "sections": [
+        {
+          "kicker": "Why the box is small",
+          "heading": "A big dumpster of concrete is not a haul. It is an overload.",
+          "body": "The 10 yard is the concrete box. Fill it to the line we give you, not to the top. A south Shreveport driveway, a brick chimney in an older Highland house, a sidewalk along a Bossier ranch. All of that is heavy long before it looks like a full load. If you also have household junk, make a second pile. Do not toss it on the concrete to save a trip."
+        },
+        {
+          "kicker": "Dirt and clay",
+          "heading": "Red clay counts. So does a root ball.",
+          "body": "Dirt from a pool, a pad, or a muddy root ball is the same kind of problem as concrete. People on acreage in Keithville and Stonewall hit this when they clear a building spot and then try to treat the spoil like yard waste. It is not yard waste. Tell us it is dirt. We will send the heavy box and you will actually get it off the property."
+        },
+        {
+          "kicker": "Clean loads",
+          "heading": "Concrete by itself is the load we can take.",
+          "body": "A clean pile of broken slab is straightforward. Concrete mixed with carpet, cabinets, and bags of trash is not. If you are breaking a driveway and remodeling the kitchen in the same week, rent the heavy box and a separate remodel box. Call 318-225-7589 with both. We drop them in Shreveport and the towns around it."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Which size is the heavy box?",
+          "a": "A 10 yard. The page on that size covers tight driveways too, but the weight rule is the same.",
+          "link": {
+            "href": "/10-yard-dumpster-rental",
+            "label": "10 yard dumpster rental"
+          }
+        },
+        {
+          "q": "The rest is limbs and pine straw.",
+          "a": "That is a different load. Keep it out of the concrete box.",
+          "link": {
+            "href": "/yard-waste-dumpster-rental",
+            "label": "Yard waste dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Concrete questions.",
+      "ctaHeadline": "Breaking concrete in Shreveport?",
+      "ctaCopy": "Call 318-225-7589 and say concrete, brick, or dirt. We will quote the small heavy box and drop it where the truck can get it back out."
+    },
+    {
+      "slug": "yard-waste-dumpster-rental",
+      "hero": "cleanout.jpg",
+      "navLabel": "Yard waste",
+      "kicker": "Yard waste",
+      "heading": "Yard waste dumpster rental in Shreveport.",
+      "intro": "Limbs, pine straw, pecan wood, fence boards, and a lot you are clearing before a slab. Not a storm-insurance pile and not a load of dirt. Call 318-225-7589 and describe the pile.",
+      "seoTitle": "Yard Waste Dumpster Rental Shreveport LA | Atlas Dumpster",
+      "seoDescription": "Yard waste dumpsters in Shreveport and Bossier for limbs, pine, pecan wood, and lot clearing. Cut it flat. Call 318-225-7589.",
+      "service": "Yard waste dumpster rental",
+      "kind": "service",
+      "sections": [
+        {
+          "kicker": "What belongs",
+          "heading": "Brush you cut on purpose.",
+          "body": "South Shreveport pines along Ellerbe and out toward Wallace Lake, pecan limbs in the older neighborhoods, a fence line in Bossier, a Haughton lot that grew up in sweetgum. Cut it so it lies flat in the box. Long limbs stacked like pickup sticks waste the space and they hang over the rail, which means the box does not leave. A 15 or a 20 handles most yard piles. A cleared acre is a different phone call."
+        },
+        {
+          "kicker": "What does not",
+          "heading": "Stumps, dirt, and a house full of wet carpet are not yard waste.",
+          "body": "A stump with a root ball is mostly soil. Dirt is a heavy-box load. Wet carpet and drywall after a storm belong on the storm page, because the adjuster may want photos before it disappears. Bagged household trash mixed into the brush is how a clean yard load turns into a mess at the scale. Keep those piles apart and tell us what you actually have."
+        },
+        {
+          "kicker": "Where it sits",
+          "heading": "Do not set it on the septic, and do not hide it under a pine.",
+          "body": "A lot of these jobs are beside the house, not in a wide commercial lot. Look up. A roll-off truck needs clearance, and Shreveport pines do not care about your plan. If the pile is already on the ground in the back, you will be moving it to the box by the drive. Call 318-225-7589 before you stack it somewhere the truck cannot see. We drop yard-waste dumpsters in Shreveport, Bossier, and the towns around them."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "A storm just put a tree on the house.",
+          "a": "That is the storm page: photos first, then a box for limbs and whatever came out of the rooms.",
+          "link": {
+            "href": "/storm-debris-dumpster-rental",
+            "label": "Storm debris dumpsters"
+          }
+        },
+        {
+          "q": "There is a bunch of dirt in the pile.",
+          "a": "Pull the dirt out and put it in a heavy box. Brush can stay in this one.",
+          "link": {
+            "href": "/concrete-dumpster-rental",
+            "label": "Concrete and dirt dumpsters"
+          }
+        }
+      ],
+      "faqHeading": "Yard waste questions.",
+      "ctaHeadline": "Got a brush pile in Shreveport?",
+      "ctaCopy": "Call 318-225-7589. We drop yard-waste dumpsters in Shreveport. Tell us limbs, pine straw, or a lot you are clearing, and where the truck can stand."
+    },
+    {
+      "slug": "benton-dumpster-rental",
+      "hero": "delivery.jpg",
+      "navLabel": "Benton",
+      "kicker": "Benton",
+      "heading": "Dumpster rental in Benton.",
+      "intro": "We drop dumpsters in Benton. LA 3, Palmetto Road, the courthouse square, and the subdivisions filling in along Kingston as it leaves north Bossier. Call 318-225-7589.",
+      "seoTitle": "Dumpster Rental Benton LA | Atlas Dumpster Rental",
+      "seoDescription": "Dumpster rental in Benton, LA. New builds, remodels, and cleanouts on LA 3, Palmetto Road, and Kingston. Call 318-225-7589.",
+      "service": "Dumpster rental in Benton",
+      "kind": "area",
+      "areaServed": [
+        "Benton, Louisiana"
+      ],
+      "sections": [
+        {
+          "kicker": "Parish seat",
+          "heading": "In town is one job. The new streets are another.",
+          "body": "Around the square and the older blocks, the calls are remodels and cleanouts on lots that were there before the growth. North and south along LA 3, and on the streets tying back toward Kingston and Palmetto, it is new houses and the scrap that comes with them. A remodel is often a 20 in the drive. A frame is a 30 with a swap. Tell us which street. We deliver in Benton."
+        },
+        {
+          "kicker": "Acreage",
+          "heading": "Linton and Bellevue are longer drives.",
+          "body": "Off Linton Road and Bellevue Road the driveway may be gravel and the gate may be well off the parish road. That is still a Benton drop. Say gravel or dirt, and say if there is a cattle guard or a low limb. We bring the box to the spot. A map pin helps when the mailbox is not the house."
+        },
+        {
+          "kicker": "What goes in",
+          "heading": "Construction scrap, roofs, and the occasional heavy pile.",
+          "body": "Benton builds throw lumber and drywall. Benton roofs throw shingles, and those need a smaller heavy-rated box if the house is not huge. Dirt from a pad is not yard waste. Keep it separate and say so. Call 318-225-7589 with the address. Benton is on the schedule with Bossier, not a side trip we have to think about."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Building a house in Benton?",
+          "a": "A 30 and a swap is the usual setup. Put it where the truck can reach it after rain.",
+          "link": {
+            "href": "/30-yard-dumpster-rental",
+            "label": "30 yard dumpster rental"
+          }
+        },
+        {
+          "q": "Closer to Bossier than to the square?",
+          "a": "We drop Bossier City too. If you are on Kingston, call and name the cross street.",
+          "link": {
+            "href": "/bossier-city-dumpster-rental",
+            "label": "Dumpster rental in Bossier City"
+          }
+        }
+      ],
+      "faqHeading": "Benton questions.",
+      "ctaHeadline": "Need a dumpster in Benton?",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Benton. LA 3, Palmetto, Kingston, or a gravel drive off Linton. Tell us the spot."
+    },
+    {
+      "slug": "haughton-dumpster-rental",
+      "hero": "hero-shreveport-dumpster.jpg",
+      "navLabel": "Haughton",
+      "kicker": "Haughton",
+      "heading": "Dumpster rental in Haughton.",
+      "intro": "We drop dumpsters in Haughton. The older streets along US 80, the houses off Sligo Road, and the newer cuts east of town by I-20. Call 318-225-7589.",
+      "seoTitle": "Dumpster Rental Haughton LA | Atlas Dumpster Rental",
+      "seoDescription": "Dumpster rental in Haughton, LA for remodels, roofs, and new builds on US 80, Sligo Road, and the I-20 side of town. Call 318-225-7589.",
+      "service": "Dumpster rental in Haughton",
+      "kind": "area",
+      "areaServed": [
+        "Haughton, Louisiana"
+      ],
+      "sections": [
+        {
+          "kicker": "US 80",
+          "heading": "The old grid and the highway are different drops.",
+          "body": "Through the middle of Haughton, US 80 has older houses, shorter drives, and remodel piles: a kitchen, a floor, a roof. Those are 15s and 20s. A driveway on 80 with a clear apron is an easy set. Tell us if the box has to go beside a ditch. We still drop it. We need to know the culvert before the truck is committed."
+        },
+        {
+          "kicker": "Sligo and the east side",
+          "heading": "Newer houses, and roads that get soft.",
+          "body": "Off Sligo Road and on the newer streets east of town, the jobs are construction scrap and the first round of homeowner projects. A 30 belongs on a build, up on firm ground, because Bossier Parish clay ruts. If you are on a camp road toward the Bodcau, send a pin with the address. We deliver that dumpster in Haughton. The pin is so we hit your gate, not the next camp."
+        },
+        {
+          "kicker": "Roofs and brush",
+          "heading": "Shingles are heavy. Sweetgum is just bulky.",
+          "body": "A Haughton reroof gets sized by squares and layers, same as Shreveport. A lot full of sweetgum and pine is yard waste, cut flat, usually a 15 or a 20. Do not mix dirt from the lot into the brush box. Call 318-225-7589 and say roof or brush or build. Three different boxes, all of them dropped in Haughton."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Need the box sized for a roof?",
+          "a": "Squares and layers. The roofing page is the weight conversation, then call.",
+          "link": {
+            "href": "/roofing-dumpster-rental",
+            "label": "Roofing dumpster rental"
+          }
+        },
+        {
+          "q": "Clearing brush, not demoing a house?",
+          "a": "Cut it flat and keep the dirt out. That is the yard-waste box.",
+          "link": {
+            "href": "/yard-waste-dumpster-rental",
+            "label": "Yard waste dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Haughton questions.",
+      "ctaHeadline": "Need a dumpster in Haughton?",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Haughton. US 80, Sligo, or the new streets by I-20. Have the address."
+    },
+    {
+      "slug": "blanchard-dumpster-rental",
+      "hero": "delivery.jpg",
+      "navLabel": "Blanchard",
+      "kicker": "Blanchard",
+      "heading": "Dumpster rental in Blanchard.",
+      "intro": "We drop dumpsters in Blanchard. North Market Street by I-49, Dixie Blanchard Road, and the older streets in the middle of town. Call 318-225-7589 with the cross street.",
+      "seoTitle": "Dumpster Rental Blanchard LA | Atlas Dumpster Rental",
+      "seoDescription": "Dumpster rental in Blanchard, LA. North Market, Dixie Blanchard Road, and the older part of town. Remodels, roofs, and builds. Call 318-225-7589.",
+      "service": "Dumpster rental in Blanchard",
+      "kind": "area",
+      "areaServed": [
+        "Blanchard, Louisiana"
+      ],
+      "sections": [
+        {
+          "kicker": "North Market",
+          "heading": "The retail corridor and the houses behind it.",
+          "body": "North Market Street at the I-49 exit is the busy commercial run: pads, shops, and construction debris that wants a 30 or a 40 and a swap. Step off that road and Blanchard is pine lots, older houses, and driveways that were not poured for a roll-off. A remodel there is a 15 or a 20. Tell us which side of the job you are on. We drop both."
+        },
+        {
+          "kicker": "Dixie Blanchard and the lake",
+          "heading": "Cross Lake is south of you. The lots are not all level.",
+          "body": "Dixie Blanchard Road and Old Mooringsport Road run through a mix of houses and pine. Some drives fall off toward a ditch. Some sit under limbs. Cross Lake is the big water to the south, and camps and houses on that side can have a narrow approach. Describe it. We deliver the dumpster in Blanchard. A low limb is something to say on the phone."
+        },
+        {
+          "kicker": "The pile",
+          "heading": "Roofs, brush, and new-house scrap.",
+          "body": "A Blanchard ranch roof, one layer, is often a 10 or a 15. Pine and sweetgum from a lot clean-up is yard waste, cut so it lies down. A new slab on the Market Street side is construction scrap in a 30. Dirt stays in the small heavy box. Call 318-225-7589. Blanchard is a regular drop, from the older streets to the interstate."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "The pile is pine limbs.",
+          "a": "Cut them flat. The yard-waste page covers what has to stay out, like stumps and dirt.",
+          "link": {
+            "href": "/yard-waste-dumpster-rental",
+            "label": "Yard waste dumpster rental"
+          }
+        },
+        {
+          "q": "Commercial pad on North Market?",
+          "a": "That is a 30 or a 40 and a place the truck can swap. The construction page has the set-up.",
+          "link": {
+            "href": "/construction-dumpster-rental",
+            "label": "Construction dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Blanchard questions.",
+      "ctaHeadline": "Need a dumpster in Blanchard?",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Blanchard. North Market, Dixie Blanchard, or a pine lot closer to the lake."
+    },
+    {
+      "slug": "greenwood-dumpster-rental",
+      "hero": "construction.jpg",
+      "navLabel": "Greenwood",
+      "kicker": "Greenwood",
+      "heading": "Dumpster rental in Greenwood.",
+      "intro": "We drop dumpsters in Greenwood, on the west side of Caddo along I-20 and US 80. Houses on Greenwood Road, lots off Highway 169, and commercial spots by the interstate. Call 318-225-7589.",
+      "seoTitle": "Dumpster Rental Greenwood LA | Atlas Dumpster Rental",
+      "seoDescription": "Dumpster rental in Greenwood, LA. I-20, US 80, Greenwood Road, and Highway 169. Remodels, roofs, and job sites. Call 318-225-7589.",
+      "service": "Dumpster rental in Greenwood",
+      "kind": "area",
+      "areaServed": [
+        "Greenwood, Louisiana"
+      ],
+      "sections": [
+        {
+          "kicker": "The town",
+          "heading": "Greenwood Road and the interstate are the two addresses.",
+          "body": "US 80 and Greenwood Road carry the older houses and the small commercial lots. I-20 is the faster way in, and the businesses stacked near the exits throw cleanouts and light demo. Highway 169 runs north and south through a quieter grid. A house remodel is a 15 or a 20 in the drive. A site with room is a 30. We drop dumpsters at all three. Name the road."
+        },
+        {
+          "kicker": "West Caddo",
+          "heading": "The Texas line is the next town. Your dumpster still shows up.",
+          "body": "Greenwood sits on the Caddo side of the state line. That is geography, not a catch. Call with a Greenwood address and we schedule the drop. If the driveway is on a parish road off 169, say how the truck gets from the highway to the house. A pin is useful. The box still gets set in Greenwood."
+        },
+        {
+          "kicker": "Loads we see",
+          "heading": "Roofs, shop cleanouts, and slab debris.",
+          "body": "A reroof on a Greenwood house follows the same weight rule as Shreveport: squares and layers, smaller box. A shop being emptied along 80 is bulky and wants a 20 or a 30. Broken concrete from a lot by the interstate is the small heavy box, kept clean of trash. Call 318-225-7589 and lead with the material. We deliver in Greenwood."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "The roof is coming off a Greenwood house.",
+          "a": "Tell us the squares. We will size a roofing box and drop it by the eave.",
+          "link": {
+            "href": "/roofing-dumpster-rental",
+            "label": "Roofing dumpster rental"
+          }
+        },
+        {
+          "q": "There is a concrete pile too.",
+          "a": "Keep it separate. The heavy box is a 10, not the big commercial one.",
+          "link": {
+            "href": "/concrete-dumpster-rental",
+            "label": "Concrete dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Greenwood questions.",
+      "ctaHeadline": "Need a dumpster in Greenwood?",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Greenwood. Greenwood Road, Highway 169, or a lot by I-20. Tell us the address."
+    },
+    {
+      "slug": "keithville-dumpster-rental",
+      "hero": "construction.jpg",
+      "navLabel": "Keithville",
+      "kicker": "Keithville",
+      "heading": "Dumpster rental in Keithville.",
+      "intro": "We drop dumpsters in Keithville, south Caddo on Highway 171. Acreage off Colquitt and Ellerbe, new houses, shops, and cleanouts. Call 318-225-7589. If the gate is past a cattle guard, say so.",
+      "seoTitle": "Dumpster Rental Keithville LA | Atlas Dumpster Rental",
+      "seoDescription": "Dumpster rental in Keithville, LA on Highway 171, Colquitt Road, and Ellerbe. Construction, cleanouts, concrete, and brush. Call 318-225-7589.",
+      "service": "Dumpster rental in Keithville",
+      "kind": "area",
+      "areaServed": [
+        "Keithville, Louisiana"
+      ],
+      "sections": [
+        {
+          "kicker": "171",
+          "heading": "The highway is shops and houses. The parish roads are acreage.",
+          "body": "Highway 171 through Keithville mixes houses, metal buildings, and traffic that includes log trucks. A cleanout or a remodel on the highway is usually a 20, set where a roll-off truck can get off the road. Off Colquitt and the Ellerbe end of town, the driveways get longer and the jobs turn into pads, brush, and dirt. We drop dumpsters on both. Tell us which one before we roll."
+        },
+        {
+          "kicker": "Heavy loads",
+          "heading": "Pads and driveways are not brush piles.",
+          "body": "People clearing a home site in Keithville often have three piles and want one box. Brush can go in a yard-waste dumpster if it is cut flat. Dirt, concrete, and root balls go in a small heavy box. Mixing them gets you a load that cannot be hauled. Call them out separately. We will put the right box on the property."
+        },
+        {
+          "kicker": "The gate",
+          "heading": "Mailbox, then cattle guard, then the house.",
+          "body": "A Keithville address can be a half-mile off 171. Send a pin. Say if the truck has to cross a cattle guard, a narrow bridge, or a low pine. We still deliver. The pin is how the driver finds the set, not a test you have to pass. Call 318-225-7589. Keithville is a regular drop south out of Shreveport."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Clearing brush before you build?",
+          "a": "Cut it flat and keep the dirt out. The yard-waste page is that job.",
+          "link": {
+            "href": "/yard-waste-dumpster-rental",
+            "label": "Yard waste dumpster rental"
+          }
+        },
+        {
+          "q": "Pouring a pad or breaking concrete?",
+          "a": "Small heavy box, filled to the line. Not a 30.",
+          "link": {
+            "href": "/concrete-dumpster-rental",
+            "label": "Concrete dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Keithville questions.",
+      "ctaHeadline": "Need a dumpster in Keithville?",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Keithville. 171, Colquitt, or a gate off Ellerbe. Send the pin if the house is off the highway."
+    },
+    {
+      "slug": "minden-dumpster-rental",
+      "hero": "hero-shreveport-dumpster.jpg",
+      "navLabel": "Minden",
+      "kicker": "Minden",
+      "heading": "Dumpster rental in Minden.",
+      "intro": "We drop dumpsters in Minden. Downtown off Main Street, the houses out Germantown Road, and the builds on the edge of town by I-20. Call 318-225-7589 with the address and the debris.",
+      "seoTitle": "Dumpster Rental Minden LA | Atlas Dumpster Rental",
+      "seoDescription": "Dumpster rental in Minden, LA. Remodels, roofs, and construction near Main Street, Germantown Road, and I-20. Call 318-225-7589.",
+      "service": "Dumpster rental in Minden",
+      "kind": "area",
+      "areaServed": [
+        "Minden, Louisiana"
+      ],
+      "sections": [
+        {
+          "kicker": "Webster Parish",
+          "heading": "Minden gets a dumpster on the schedule.",
+          "body": "Minden is in Webster Parish, east on I-20. We deliver there. Older brick houses near downtown throw remodel debris: plaster, floors, a kitchen that has been due for a decade. That is often a 20, sometimes a 15 if it is one room. Newer construction toward the interstate throws framing scrap and wants a 30. Call and say which part of town. The truck is coming to Minden."
+        },
+        {
+          "kicker": "Main and Germantown",
+          "heading": "Tight downtown streets, longer drives on the edge.",
+          "body": "The brick streets off Main are a placement problem, not a coverage problem. A smaller box fits. Tell us about the overhead lines and whether the box has to sit on your lot instead of the street. If it has to sit on a city street, check with Minden first. Out Germantown Road the lots open up and a 20 or a 30 sets easier. We drop both places."
+        },
+        {
+          "kicker": "Roofs and cleanouts",
+          "heading": "Same weight rules as Shreveport.",
+          "body": "A Minden roof is sized by squares and layers. Shingles do not get a pass because the house is east of Shreveport. An estate cleanout is a 20 if you give yourself the days to load it, and you should. Paint, tires, and refrigerant appliances stay out. Call 318-225-7589. Have the Minden address, what is going in, and how many days you want the box."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What size is a Minden kitchen gut?",
+          "a": "Most full kitchens are a 20. One room can be a 15. We will say which on the call.",
+          "link": {
+            "href": "/20-yard-dumpster-rental",
+            "label": "20 yard dumpster rental"
+          }
+        },
+        {
+          "q": "The roof is the whole job.",
+          "a": "Squares and layers decide the box. Start with the roofing page, then call.",
+          "link": {
+            "href": "/roofing-dumpster-rental",
+            "label": "Roofing dumpster rental"
+          }
+        }
+      ],
+      "faqHeading": "Minden questions.",
+      "ctaHeadline": "Need a dumpster in Minden?",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Minden. Main Street, Germantown Road, or a site by I-20. Tell us the job."
+    },
+    {
+      "slug": "stonewall-dumpster-rental",
+      "hero": "cleanout.jpg",
+      "navLabel": "Stonewall",
+      "kicker": "Stonewall",
+      "heading": "Dumpster rental in Stonewall.",
+      "intro": "We drop dumpsters in Stonewall, in DeSoto Parish on US 171 south of Keithville. Pine, acreage tracts, new houses, and the small commercial spots on the highway. Call 318-225-7589.",
+      "seoTitle": "Dumpster Rental Stonewall LA | Atlas Dumpster Rental",
+      "seoDescription": "Dumpster rental in Stonewall, LA for houses, lot clearing, roofs, and highway commercial spots on US 171. Call 318-225-7589.",
+      "service": "Dumpster rental in Stonewall",
+      "kind": "area",
+      "areaServed": [
+        "Stonewall, Louisiana"
+      ],
+      "sections": [
+        {
+          "kicker": "US 171",
+          "heading": "Get the truck off the highway.",
+          "body": "171 through Stonewall carries log trucks. A roll-off set where the driver has to stop in the lane is a bad set. Give us a driveway or a lot we can pull into clear of the road. Houses on the highway and the small commercial spots are usually a 20 for a cleanout or a remodel, and a 30 if you are framing. We drop those dumpsters in Stonewall."
+        },
+        {
+          "kicker": "Acreage",
+          "heading": "Brush, dirt, and a pad are three loads.",
+          "body": "New houses on tracts outside the middle of town come with a clearing pile. Limbs and pine, cut flat, can go in a yard-waste box. Spoil dirt and concrete from the pad go in a small heavy box. Do not combine them because they are sitting in the same pasture. Tell us both. We will bring what the weight actually allows."
+        },
+        {
+          "kicker": "The approach",
+          "heading": "Parish roads and gates.",
+          "body": "A Stonewall address off 171 may be a gravel drive with a gate and a dog. Send a pin and a way to get in. Low pines are the other stopper. Look up before you pick the spot in the yard. Call 318-225-7589. We deliver dumpsters in Stonewall, highway lots and acreage both."
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Lot clearing before the slab?",
+          "a": "Brush in one box, dirt in another. Start with the yard-waste page if the pile is mostly wood.",
+          "link": {
+            "href": "/yard-waste-dumpster-rental",
+            "label": "Yard waste dumpster rental"
+          }
+        },
+        {
+          "q": "Also working in Keithville?",
+          "a": "Yes. Keithville is the next town north on 171 and it has its own page.",
+          "link": {
+            "href": "/keithville-dumpster-rental",
+            "label": "Dumpster rental in Keithville"
+          }
+        }
+      ],
+      "faqHeading": "Stonewall questions.",
+      "ctaHeadline": "Need a dumpster in Stonewall?",
+      "ctaCopy": "Call 318-225-7589. We drop dumpsters in Stonewall. Tell us 171 or the parish road, and whether the pile is brush, dirt, or a house."
     }
-  ]
+  ],
+  "nav": [
+    {
+      "label": "Services",
+      "href": "/#services"
+    },
+    {
+      "label": "Sizes",
+      "href": "/dumpster-sizes"
+    },
+    {
+      "label": "Bossier",
+      "href": "/bossier-city-dumpster-rental"
+    },
+    {
+      "label": "Service area",
+      "href": "/service-area"
+    },
+    {
+      "label": "Pricing",
+      "href": "/request-pricing"
+    }
+  ],
+  "footerNav": true,
+  "updated": "2026-10-19"
 }
