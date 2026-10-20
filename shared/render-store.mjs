@@ -18,6 +18,26 @@ const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 const hex = (value, fallback) => (/^#[0-9a-fA-F]{6}$/.test(value || "") ? value : fallback);
 
+// Same stand-in rule as the launch checklist: fewer than 10 digits, or a
+// last-seven that is all one digit (318-000-0000). Stores hide that number.
+function isPlaceholderPhone(value) {
+  const d = String(value || "").replace(/\D/g, "");
+  if (d.length < 10) return true;
+  return new Set(d.slice(-7)).size <= 1;
+}
+
+function publicPhone(site) {
+  const shown = displayPhone(site);
+  if (!shown || isPlaceholderPhone(shown)) return "";
+  return shown;
+}
+
+function schemaPhone(site) {
+  const nap = String(site.phone || "").trim();
+  if (!nap || isPlaceholderPhone(nap)) return "";
+  return nap;
+}
+
 function paletteOf(site) {
   const workshop = site.brand === "workshop";
   return {
@@ -158,19 +178,14 @@ function meter(product) {
 
 function productCard(product) {
   const href = `/products/${product.slug}`;
-  const sample = product.placeholder
-    ? `<span class="flag">Sample</span>`
-    : "";
-  const priceFlag = product.placeholder ? ` <span class="flag">Sample price</span>` : "";
   const meta = [product.difficulty, product.snarkLabel].filter(Boolean);
   return `<article class="product" data-placeholder="${product.placeholder ? "true" : "false"}">
     <a class="product-media" href="${href}">
       <img src="${esc(imageSrc(product))}" alt="${esc(product.imageAlt || product.name)}" width="640" height="480" loading="lazy" decoding="async">
-      ${sample}
     </a>
     <div class="product-body">
       <h3><a href="${href}">${esc(product.name)}</a></h3>
-      <p class="price"><span class="price-num">${esc(formatPrice(product.price))}</span>${priceFlag}</p>
+      <p class="price"><span class="price-num">${esc(formatPrice(product.price))}</span></p>
       ${meta.length ? `<p class="meta">${esc(meta.join(" · "))}</p>` : ""}
       ${product.blurb ? `<p class="blurb">${esc(product.blurb)}</p>` : ""}
       <a class="text-link" href="${href}">View details</a>
@@ -186,20 +201,18 @@ function buyBox(site, product) {
     ? `<a class="button ghost" data-buy-link href="${esc(checkout)}">${esc(ready)}</a>`
     : `<button type="button" class="button ghost" data-notify>${esc(waiting)}</button>`;
   const notify = checkout ? "" : `<div class="notify-panel" data-notify-panel hidden>
-      <p>Checkout is not open for this product yet. Leave an email and this browser will remember it. Nothing is sent unless a contact address is added to the site.</p>
+      <p>Leave your email. We'll be in touch.</p>
       <form>
         <label class="field">Email<input type="email" name="notifyEmail" required autocomplete="email" maxlength="160"></label>
         <button type="submit" class="button primary">Notify me</button>
         <p class="form-status" role="status"></p>
       </form>
     </div>`;
-  const note = product.placeholderNote ? `<p class="draft-note">${esc(product.placeholderNote)}</p>` : "";
   const includes = (product.includes || []).length
     ? `<div><p class="kicker">What's included</p><ul class="includes">${product.includes.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div>`
     : "";
   return `<div class="buy-box">
-    ${note}
-    <p class="price"><span class="price-num">${esc(formatPrice(product.price))}</span>${product.placeholder ? ` <span class="flag">Sample price</span>` : ""}</p>
+    <p class="price"><span class="price-num">${esc(formatPrice(product.price))}</span></p>
     ${product.description ? `<p>${esc(product.description)}</p>` : ""}
     ${meter(product)}
     ${includes}
@@ -252,15 +265,15 @@ function businessSchema(site) {
     name: site.name,
     url: `https://${site.domain}`,
     mainEntityOfPage: `https://${site.domain}/`,
-    telephone: site.phone,
+    telephone: schemaPhone(site) || undefined,
     email: (site.contactEmail || site.email || "").trim() || undefined,
     description: site.seoDescription,
     image: first ? absolute(site.domain, imageFile(first)) : undefined,
     address: postalAddress(site, stateCode),
     areaServed: areas.map((name) => ({ "@type": "Place", name })),
     hasOfferCatalog: productCatalog(site, site.products),
-    contactPoint: site.phone
-      ? { "@type": "ContactPoint", contactType: "customer service", telephone: site.phone, areaServed: "US", availableLanguage: "English" }
+    contactPoint: schemaPhone(site)
+      ? { "@type": "ContactPoint", contactType: "customer service", telephone: schemaPhone(site), areaServed: "US", availableLanguage: "English" }
       : undefined,
   };
 }
@@ -268,7 +281,7 @@ function businessSchema(site) {
 function shell(site, slug, { title, description, path, current, main, schemas, image, ogType = "website" }) {
   assertSeo(path || "home", title, description);
   const brand = site.brand === "workshop" ? "workshop" : "hearth";
-  const phone = displayPhone(site);
+  const phone = publicPhone(site);
   const tel = phone ? phoneHref(phone) : "";
   const canonical = path ? `https://${site.domain}/${path}` : `https://${site.domain}/`;
   const contact = String(site.contactEmail || "").trim();
@@ -325,7 +338,7 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   <footer><div class="shell footer-grid">
     <div><p class="brand-text">${esc(site.name)}</p><p class="legal">${esc(site.footerLine || "")}</p><p class="legal">${esc(site.city)}, ${esc(stateCode(site.state))}</p><p class="legal">© <span id="year"></span> ${esc(site.name)}</p></div>
     <nav class="footer-links" aria-label="Footer">${footerLinks}</nav>
-    <div>${phone ? `<a class="footer-phone" href="${tel}">${esc(phone)}</a>` : ""}<p class="legal">A product without a payment link stays on coming soon.</p></div>
+    <div>${phone ? `<a class="footer-phone" href="${tel}">${esc(phone)}</a>` : ""}${contact ? `<p class="legal"><a href="mailto:${esc(contact)}">${esc(contact)}</a></p>` : `<p class="legal">We'll be in touch.</p>`}</div>
   </div></footer>
   ${phone ? `<a class="mobile-call" href="${tel}" aria-label="Call ${esc(phone)}">${esc(phone)}</a>` : ""}
   <script src="/site.js" defer></script>
@@ -335,7 +348,7 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
 }
 
 function homeMain(site) {
-  const phone = displayPhone(site);
+  const phone = publicPhone(site);
   const tel = phone ? phoneHref(phone) : "";
   const featured = featuredProducts(site);
   const more = productsOf(site).length > featured.length
@@ -392,32 +405,36 @@ function faqSchema(items) {
 
 function infoMain(site, key, page) {
   const trail = crumbs([{ href: "/", label: "Home" }, { href: `/${page.slug}`, label: page.heading }]);
-  const draft = page.draft ? `<p class="draft-note">${esc(page.draftNote || "Working draft. Confirm this page before the store takes payment.")}</p>` : "";
   if (key === "faq") {
     return `${trail}<section class="shell page-hero"><p class="kicker">${esc(page.kicker || "FAQ")}</p><h1>${esc(page.heading)}</h1>${page.intro ? `<p class="lede">${esc(page.intro)}</p>` : ""}</section><section class="section shell"><div class="faq-list">${faqItems(page.items || [])}</div></section>`;
   }
   if (key === "contact") {
-    const phone = displayPhone(site);
+    const phone = publicPhone(site);
     const tel = phone ? phoneHref(phone) : "";
     const email = String(site.contactEmail || "").trim();
+    const emailLine = email
+      ? `<p>Email <a href="mailto:${esc(email)}">${esc(email)}</a></p>`
+      : `<p>Leave a note. We'll be in touch.</p>`;
+    const quiet = email
+      ? "This opens your mail app addressed to the shop."
+      : "We'll be in touch.";
     return `${trail}<section class="shell page-hero"><p class="kicker">${esc(page.kicker || "Contact")}</p><h1>${esc(page.heading)}</h1>${page.intro ? `<p class="lede">${esc(page.intro)}</p>` : ""}</section>
       <section class="shell prose">
-        ${draft}
         ${phone ? `<p>Phone <a href="${tel}">${esc(phone)}</a></p>` : ""}
-        ${email ? `<p>Email <a href="mailto:${esc(email)}">${esc(email)}</a></p>` : `<p>A public email address is not listed on this site yet.</p>`}
+        ${emailLine}
         ${(page.sections || []).map((section) => `<section><h2>${esc(section.heading)}</h2>${paragraphs(section.body)}</section>`).join("")}
         <form class="contact-form" data-contact-form>
           <label class="field">Your name<input type="text" name="name" required maxlength="160" autocomplete="name"></label>
           <label class="field">Your email<input type="email" name="email" required maxlength="160" autocomplete="email"></label>
           <label class="field">Message<textarea name="message" required maxlength="800"></textarea></label>
-          <button type="submit" class="button primary">Save this note</button>
+          <button type="submit" class="button primary">${email ? "Email the shop" : "Send a note"}</button>
           <p class="form-status" role="status"></p>
-          <p class="quiet">If a contact email is configured, this opens your mail app. If it is not, the note stays in this browser and nothing is sent.</p>
+          <p class="quiet">${esc(quiet)}</p>
         </form>
       </section>`;
   }
   const sections = (page.sections || []).map((section) => `<section><h2>${esc(section.heading)}</h2>${paragraphs(section.body)}</section>`).join("");
-  return `${trail}<section class="shell page-hero"><p class="kicker">${esc(page.kicker || "")}</p><h1>${esc(page.heading)}</h1>${page.intro ? `<p class="lede">${esc(page.intro)}</p>` : ""}</section><section class="shell prose">${draft}${sections}</section>`;
+  return `${trail}<section class="shell page-hero"><p class="kicker">${esc(page.kicker || "")}</p><h1>${esc(page.heading)}</h1>${page.intro ? `<p class="lede">${esc(page.intro)}</p>` : ""}</section><section class="shell prose">${sections}</section>`;
 }
 
 export function renderStore(site, slug = "") {
@@ -485,7 +502,7 @@ export function storeDocuments(site, slug = "") {
           <article class="shell pdp">
             <div class="pdp-media"><img src="${esc(imageSrc(product))}" alt="${esc(product.imageAlt || product.name)}" width="640" height="480" decoding="async" fetchpriority="high"></div>
             <div>
-              <p class="kicker">${esc(product.kicker || (product.placeholder ? "Sample" : site.name))}</p>
+              <p class="kicker">${esc(product.kicker || site.name)}</p>
               <h1>${esc(product.name)}</h1>
               ${buyBox(site, product)}
             </div>

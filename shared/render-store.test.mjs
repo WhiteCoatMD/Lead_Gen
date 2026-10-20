@@ -96,7 +96,11 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.equal(letterPage.includes("stripe.com"), false);
   assert.equal(letterPage.includes("shopify.com"), false);
   assert.match(letterPage, /data-checkout=""/);
-  assert.match(docs.pages.find((page) => page.slug === "products/sibling-bundle").html, /Sample price/);
+  const bundlePage = docs.pages.find((page) => page.slug === "products/sibling-bundle").html;
+  assert.equal(bundlePage.includes("Sample price"), false);
+  assert.equal(bundlePage.includes(">Sample<"), false);
+  assert.match(bundlePage, /\$28\.95/);
+  assert.equal(bundlePage.includes("draft"), false);
 
   const productLd = blocks(letterPage).find((block) => block["@type"] === "Product");
   assert.equal(productLd.name, letter.name);
@@ -116,13 +120,23 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.ok((html.match(/class="product"/g) || []).length >= 3);
   assert.match(html, /id="store"/);
   assert.match(html, /id="areas"/);
-  assert.match(html, /class="nav-call"/);
-  assert.match(html, /class="mobile-call"/);
   assert.match(html, /id="site-nav"/);
-  assert.ok((html.match(/href="tel:/g) || []).length >= 4);
-  assert.match(html, />318-000-0000</);
+  assert.equal(html.includes("318-000-0000"), false);
+  assert.equal(html.includes('href="tel:'), false);
+  assert.equal(html.includes('class="nav-call"'), false);
+  assert.equal(html.includes('class="mobile-call"'), false);
+  assert.equal(html.includes("Sample price"), false);
+  assert.equal(html.includes("draft"), false);
+  assert.match(html, /rel="canonical" href="https:\/\/customlettersfromsantaclaus.com\/"/);
+  const contact = docs.pages.find((page) => page.slug === "contact").html;
+  assert.equal(contact.includes("mailto:"), false);
+  assert.match(contact, /We'll be in touch/);
+  assert.match(docs.pages.find((page) => page.slug === "privacy").html, /We'll be in touch/);
+  assert.equal(docs.pages.find((page) => page.slug === "terms").html.includes("draft"), false);
+  assert.equal(docs.pages.find((page) => page.slug === "refunds").html.includes("draft"), false);
   const business = blocks(html)[0];
   assert.equal(business.name, site.name);
+  assert.equal(business.telephone, undefined);
   assert.equal(business.address.addressLocality, "Grayson");
   assert.ok(Array.isArray(business.areaServed) && business.areaServed.length > 0);
   assert.equal(business.url, "https://customlettersfromsantaclaus.com");
@@ -143,7 +157,11 @@ test("Make Your Own Crap catalog is entirely a placeholder", async () => {
   assert.ok(site.products.every((product) => product.placeholder === true && product.checkoutUrl === ""));
   const docs = storeDocuments(site, "make-your-own-crap");
   const shop = docs.pages.find((page) => page.slug === "shop").html;
-  assert.equal((shop.match(/Sample price/g) || []).length, 6);
+  assert.equal((shop.match(/Sample price/g) || []).length, 0);
+  assert.equal(shop.includes(">Sample<"), false);
+  assert.equal(shop.includes("draft"), false);
+  assert.equal(shop.includes("318-000-0000"), false);
+  assert.match(shop, /rel="canonical" href="https:\/\/makeyourowncrap.com\/shop"/);
   assert.match(shop, /Candle Kit/);
   assert.match(shop, /Hot Sauce Kit/);
   assert.match(shop, /Terrarium Kit/);
@@ -156,6 +174,31 @@ test("Make Your Own Crap catalog is entirely a placeholder", async () => {
   const home = renderStore(site, "make-your-own-crap");
   assert.ok((home.match(/class="product"/g) || []).length >= 3);
   assert.match(home, /But only a little/);
+  assert.equal(blocks(home)[0].telephone, undefined);
+  assert.match(home, /rel="canonical" href="https:\/\/makeyourowncrap.com\/"/);
+  const contact = docs.pages.find((page) => page.slug === "contact").html;
+  assert.equal(contact.includes("mailto:"), false);
+  assert.match(contact, /We'll be in touch/);
+});
+
+test("a store with a real phone still publishes it, and a placeholder stays hidden", async () => {
+  const site = await readSite("custom-letters-from-santa-claus");
+  const live = structuredClone(site);
+  live.phone = "318-555-0142";
+  const html = renderStore(live, "custom-letters-from-santa-claus");
+  assert.match(html, /class="nav-call"/);
+  assert.match(html, /class="mobile-call"/);
+  assert.match(html, />318-555-0142</);
+  assert.equal(blocks(html)[0].telephone, "318-555-0142");
+  const quiet = structuredClone(site);
+  quiet.phone = "";
+  const hidden = renderStore(quiet, "custom-letters-from-santa-claus");
+  assert.equal(hidden.includes('href="tel:'), false);
+  assert.equal(blocks(hidden)[0].telephone, undefined);
+  const withInbox = structuredClone(site);
+  withInbox.contactEmail = "orders@example.com";
+  const contact = storeDocuments(withInbox, "custom-letters-from-santa-claus").pages.find((page) => page.slug === "contact").html;
+  assert.match(contact, /mailto:orders@example.com/);
 });
 
 test("the shop template used by other businesses still renders a menu board", async () => {

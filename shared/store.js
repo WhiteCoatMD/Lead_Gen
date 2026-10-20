@@ -122,7 +122,7 @@ function onProductForm(form) {
       return;
     }
     rememberNotify({ email, slug: line.slug, fields: line.fields });
-    setStatus(panel, "Saved in this browser. Nothing was sent. This site has no public inbox yet.");
+    setStatus(panel, "Thanks. We'll be in touch.");
   });
 }
 
@@ -130,7 +130,7 @@ function renderLine(line) {
   const wrap = el("article", { class: "cart-line" });
   const body = el("div", {});
   body.append(el("h2", {}, [line.name]));
-  const price = line.placeholder ? `${formatPrice(line.price)} · Sample price` : formatPrice(line.price);
+  const price = formatPrice(line.price);
   body.append(el("p", { class: "line-price" }, [price]));
   const list = el("dl", { class: "cart-fields" });
   for (const field of line.fields || []) {
@@ -182,9 +182,9 @@ function renderCart(root) {
   }
   for (const line of cart) root.append(renderLine(line));
   root.append(el("p", { class: "cart-total" }, [formatMoney(cartTotal(cart))]));
-  if (cart.some((line) => line.placeholder || !isCheckoutUrl(line.checkoutUrl))) {
+  if (cart.some((line) => !isCheckoutUrl(line.checkoutUrl))) {
     root.append(el("p", { class: "quiet" }, [
-      "Each product is paid through its own payment link. A line without one stays on coming soon. Sample prices are marked, and they are not a confirmed offer.",
+      "Payment is not open yet. Your details stay in this browser.",
     ]));
   }
 }
@@ -205,7 +205,7 @@ function onContact(form) {
       return;
     }
     rememberNotify({ email, slug: "contact", fields });
-    setStatus(form, "Saved in this browser. Nothing was sent. This site has no public inbox yet.");
+    setStatus(form, "Thanks. We'll be in touch.");
   });
 }
 

@@ -27,10 +27,9 @@
   "aboutHeading": "A letter with their name in it.",
   "sectionKicker": "The letters",
   "servicesHeadline": "Two ways to hear from Santa.",
-  "featuredNote": "The printed letter and the email are the real offer. The sibling bundle is a sample add-on, and its price is not confirmed.",
+  "featuredNote": "A printed letter, an email, or one of each for two children.",
   "primaryCta": "Shop the letters",
   "secondaryCta": "When to order",
-  "navCall": "318-000-0000",
   "footerLine": "Personalized letters and emails from Santa Claus.",
   "checkoutNote": "Add to cart keeps what you typed on this device. Buy now uses the payment link for this letter when one is set.",
   "seoTitle": "Custom Letters from Santa Claus | Personalized Letters",
@@ -145,19 +144,18 @@
       "placeholder": true,
       "price": 28.95,
       "checkoutUrl": "",
-      "kicker": "Sample add-on",
+      "kicker": "Two letters",
       "blurb": "Two printed letters, one for each child, mailed to the same address.",
-      "description": "For a house with more than one believer. You fill in both children, and each gets a letter postmarked from the North Pole USPS facility. This bundle is a suggestion until the offer and the price are confirmed.",
-      "placeholderNote": "Sample add-on. Confirm the offer and the $28.95 price before taking orders.",
+      "description": "For a house with more than one believer. You fill in both children, and each gets a letter postmarked from the North Pole USPS facility.",
       "imageAlt": "Illustrated pair of envelopes",
       "includes": [
         "Two personalized printed letters",
         "Each postmarked from the North Pole USPS facility",
         "Both mailed to one address"
       ],
-      "timing": "Same mail timing as a single printed letter. This add-on is a sample, and the price is not confirmed.",
+      "timing": "Same mail timing as a single printed letter. Order with room for the trip. We do not publish a last-order date.",
       "seoTitle": "Sibling Santa Letters | Two Children, One Order",
-      "seoDescription": "Sample add-on: two printed Santa letters for two children at one address. The $28.95 price is a placeholder until it is confirmed.",
+      "seoDescription": "Two printed Santa letters for two children at one address. $28.95. Each letter is written from the details you share.",
       "fields": [
         { "name": "child1Name", "label": "Child's name", "type": "text", "required": true, "group": "First child", "hint": "The name Santa should use." },
         { "name": "child1Age", "label": "Age", "type": "text", "required": true, "group": "First child" },
@@ -195,16 +193,14 @@
         { "q": "Where is the printed letter postmarked?", "a": "From the North Pole USPS facility. It arrives by post." },
         { "q": "How does the email work?", "a": "You pick the date. The email is sent from Santa's personal email address on that date. We do not publish the address itself on this site." },
         { "q": "When should I order?", "a": "Printed letters travel with the mail, and the mail slows down late in the season. Order with time to spare. If the date you care about is close, choose the email, which goes out on the day you pick. We do not list a last-order day. That day changes every year, and we will not print a guess." },
-        { "q": "Can I order for two children?", "a": "Yes. Use a separate letter for each child so the details stay their own, or look at the sibling bundle. The bundle is a sample add-on and the price is not confirmed." },
-        { "q": "Is checkout open?", "a": "Not yet. Each product has a place for a payment link. Until that link is added, the button says coming soon. You can still fill in the form and keep it in the cart on this device." },
+        { "q": "Can I order for two children?", "a": "Yes. Use a separate letter for each child so the details stay their own, or use the sibling bundle and mail both letters to one address." },
+        { "q": "Is checkout open?", "a": "The button says coming soon until a payment link is on that letter. You can still fill in the form and keep it in the cart on this device. Leave your email and we will be in touch." },
         { "q": "Do you ship outside the United States?", "a": "The printed letter is mailed through the USPS North Pole facility, and this store is set up for the United States. An international option is not listed." },
         { "q": "What if a detail is wrong?", "a": "Use the contact page as soon as you notice. If we made the mistake, we correct it. If the letter has already been mailed, it cannot be pulled out of the post." }
       ]
     },
     "shipping": {
       "slug": "shipping",
-      "draft": true,
-      "draftNote": "Working notes on delivery. No cutoff date and no separate shipping fee are published here, because neither has been set.",
       "kicker": "Shipping",
       "heading": "How the letter gets there",
       "intro": "Two different trips. The printed letter goes through the mail. The email goes out on a date you choose.",
@@ -214,7 +210,7 @@
         { "heading": "Printed letters", "body": "They are postmarked from the North Pole USPS facility and then travel with USPS. We do not publish a number of days, and we do not publish a last day to order. December is slower than October. Order with time to spare." },
         { "heading": "Emails", "body": "You pick the delivery date on the form. The email is sent from Santa's personal email address on that date. Check the spam folder if the day arrives and the inbox looks empty, then write to us." },
         { "heading": "Where we ship", "body": "The United States. An address outside the country is not an option on this site." },
-        { "heading": "What the price covers", "body": "The prices on the letters are the prices we were given: $15.95 for a printed letter and $6.95 for an email. A separate shipping fee is not listed. If one is added later, it will show on this page before you pay." }
+        { "heading": "What the price covers", "body": "The printed letter is $15.95 and the email is $6.95. The sibling bundle is $28.95. A separate shipping fee is not listed on this site." }
       ]
     },
     "about": {
@@ -236,17 +232,16 @@
       "heading": "A question before you order",
       "intro": "The form on the letter you want is what we use to write it. Use this page for anything else.",
       "seoTitle": "Contact | Custom Letters from Santa Claus",
-      "seoDescription": "Contact Custom Letters from Santa Claus. The order form on each letter is what we use to write it. A public email address is not listed yet.",
+      "seoDescription": "Contact Custom Letters from Santa Claus about a letter or an email. Leave a note and we will be in touch.",
       "sections": [
         { "heading": "What to use the form for", "body": "A question about timing, two children, or a detail you are not sure how to phrase. The order itself belongs on the product page, so the answers stay attached to that letter." }
       ]
     },
     "privacy": {
       "slug": "privacy",
-      "draft": true,
       "kicker": "Privacy",
       "heading": "What we hold onto",
-      "intro": "This page describes how this site actually behaves. It is a working draft until the owner confirms it.",
+      "intro": "How this site handles the details you type, the cart in your browser, and a simple page view.",
       "seoTitle": "Privacy Policy | Custom Letters from Santa",
       "seoDescription": "How Custom Letters from Santa Claus handles the details you type, the cart saved in your browser, and the page view sent to our own server.",
       "sections": [
@@ -254,39 +249,35 @@
         { "heading": "This browser", "body": "The cart, and a notify-me note if you leave one, stay in local storage on this device. Clearing the browser clears them. They are not sent anywhere by that form." },
         { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that button sends you to the address in the catalog, and the details you entered are added to the link so they travel with the order. That checkout belongs to the payment provider." },
         { "heading": "Page views", "body": "Opening a page sends a note to our own server with the path and the referrer. It is not an advertising network. We do not sell a list." },
-        { "heading": "Email", "body": "A public inbox is not listed yet. If one is added, the contact form will open a message to it in your mail app. Until then, a note you submit stays on this device." }
+        { "heading": "Email", "body": "Leave your email on the contact page or with a coming-soon note. We will be in touch. The cart itself stays on this device." }
       ]
     },
     "terms": {
       "slug": "terms",
-      "draft": true,
       "kicker": "Terms",
       "heading": "Terms of sale",
-      "intro": "Plain terms for a letter that has not been paid for yet. Checkout opens when a payment link is added. These terms are a working draft.",
+      "intro": "Plain terms for ordering a personalized letter or email from Santa.",
       "seoTitle": "Terms of Sale | Custom Letters from Santa",
-      "seoDescription": "Working terms for ordering a personalized Santa letter or email, including the details you supply and when a payment link applies.",
+      "seoDescription": "Terms for ordering a personalized Santa letter or email, including the details you supply and how payment works.",
       "sections": [
-        { "heading": "The offer", "body": "The printed letter is $15.95. The email is $6.95. The sibling bundle is marked as a sample, and its price is not a confirmed offer." },
+        { "heading": "The offer", "body": "The printed letter is $15.95. The email is $6.95. The sibling bundle is $28.95. Each page lists what that order includes." },
         { "heading": "Your details", "body": "You are responsible for the spelling of the child's name and for the mailing address or email address you type. The letter is written from those answers." },
         { "heading": "The postmark and the date", "body": "A printed letter is postmarked from the North Pole USPS facility. We do not promise a delivery day for the post. An email is sent on the date you choose, from Santa's personal email address." },
-        { "heading": "Payment", "body": "Nothing is charged on this site. When a product has a payment link, that link is where payment happens, and the price on the link is the price that is charged. Until a link is set, no order is placed." },
-        { "heading": "The shop", "body": "Custom Letters from Santa Claus, Grayson, Louisiana. The phone number on this site is not a working order line yet." }
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that link is where payment happens, and the price on the link is the price that is charged. Until a link is set, the button says coming soon and no order is placed." },
+        { "heading": "The shop", "body": "Custom Letters from Santa Claus, Grayson, Louisiana." }
       ]
     },
     "refunds": {
       "slug": "refunds",
-      "draft": true,
-      "draftNote": "Working refund terms. They are not confirmed, and they should be read that way until checkout opens.",
       "kicker": "Refunds",
       "heading": "If something is wrong",
-      "intro": "Personalized letters cannot be un-mailed. This is the working policy for everything that happens before that, and for mistakes that are ours.",
+      "intro": "Personalized letters cannot be un-mailed. This is how we handle a problem before that, and a mistake that is ours.",
       "seoTitle": "Refunds | Custom Letters from Santa Claus",
-      "seoDescription": "Working refund terms for Santa letters and emails. A mailed letter cannot be pulled back. This policy is not confirmed yet.",
+      "seoDescription": "Refunds for Santa letters and emails. A mailed letter cannot be pulled back. Tell us before it goes out if you need to cancel.",
       "sections": [
-        { "heading": "Before it goes out", "body": "If you contact us before a printed letter is mailed, or before an email is sent, the working policy is to cancel and return the payment. Checkout is not open yet, so this has not been used." },
+        { "heading": "Before it goes out", "body": "If you reach us before a printed letter is mailed, or before an email is sent, we cancel the order and return the payment." },
         { "heading": "If we get it wrong", "body": "A name we mistyped, or an email that did not go on the date you chose, is ours to fix. Tell us as soon as you notice." },
-        { "heading": "After it is mailed", "body": "A letter that has entered the post cannot be recalled. If the mistake was in the details you sent, we cannot treat that as a refund. If the mistake was ours, we send a replacement." },
-        { "heading": "Sample products", "body": "The sibling bundle is not on sale until the price is confirmed. A sample price on this site is not a promise to sell at that number." }
+        { "heading": "After it is mailed", "body": "A letter that has entered the post cannot be recalled. If the mistake was in the details you sent, that is not a refund. If the mistake was ours, we send a replacement." }
       ]
     }
   }
