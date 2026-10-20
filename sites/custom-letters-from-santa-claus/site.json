@@ -1,63 +1,284 @@
 {
-  "template": "shop",
+  "template": "store",
+  "brand": "hearth",
   "name": "Custom Letters from Santa Claus",
   "domain": "customlettersfromsantaclaus.com",
   "phone": "318-000-0000",
+  "contactEmail": "",
   "city": "Grayson",
   "state": "Louisiana",
   "schemaType": "Store",
   "accent": "#c2241f",
   "accentDark": "#8e1916",
+  "paper": "#f6efe4",
+  "ink": "#2a2118",
+  "muted": "#5e564e",
+  "line": "#e4d8c8",
+  "card": "#fffaf3",
+  "disc": "#efe0cc",
+  "pine": "#1d4034",
+  "gold": "#c6a36a",
+  "updated": "2026-10-19",
   "kicker": "Postmarked from the North Pole USPS facility",
+  "heroKicker": "Letters and emails from Santa",
   "headline": "A letter from Santa, written just for them.",
-  "intro": "Answer a few questions and we will send a personalised letter from Santa to a special child in your life.",
-  "about": "Custom Letters from Santa Claus sends personalised letters and emails from Santa to a special child in your life. You answer a few questions about the child, and the rest is handled for you. Printed letters are postmarked from the North Pole USPS facility, and emails arrive from Santa's personal email address on the date you choose.",
-  "sectionKicker": "From Santa",
+  "intro": "Tell us about the child. We send a printed letter postmarked from the North Pole USPS facility, or an email from Santa on the day you choose.",
+  "about": "Custom Letters from Santa Claus sends personalized letters and emails from Santa to a child in your life. You answer a few questions about them. Printed letters are postmarked from the North Pole USPS facility. Emails arrive from Santa's personal email address on the date you choose.",
+  "aboutHeading": "A letter with their name in it.",
+  "sectionKicker": "The letters",
   "servicesHeadline": "Two ways to hear from Santa.",
-  "areaHeadline": "Get in touch",
-  "ctaHeadline": "Letters and emails from Santa",
-  "primaryCta": "Order a letter",
-  "navCall": "Order now",
-  "footerLine": "Personalised letters and emails from Santa Claus.",
-  "seoTitle": "Custom Letters from Santa Claus | Personalised Santa Letters",
-  "seoDescription": "Personalised letters from Santa, postmarked from the North Pole USPS facility, and emails from Santa's own address. Letters $15.95, emails $6.95.",
-  "serviceAreas": [
-    "United States"
+  "featuredNote": "A printed letter, an email, or one of each for two children.",
+  "primaryCta": "Shop the letters",
+  "secondaryCta": "When to order",
+  "footerLine": "Personalized letters and emails from Santa Claus.",
+  "checkoutNote": "Add to cart keeps what you typed on this device. Buy now uses the payment link for this letter when one is set.",
+  "seoTitle": "Custom Letters from Santa Claus | Personalized Letters",
+  "seoDescription": "Personalized letters from Santa, postmarked at the North Pole USPS facility, and emails from Santa on a date you choose. Letters $15.95, emails $6.95.",
+  "shopKicker": "Shop",
+  "shopHeading": "Letters from Santa",
+  "shopIntro": "A printed letter for the mantle, or an email that lands on the day you pick. Each one is written from what you tell us about the child.",
+  "shopSeoTitle": "Shop Santa Letters | Personalized for One Child",
+  "shopSeoDescription": "Shop a printed Santa letter postmarked at the North Pole USPS facility, or an email from Santa on the date you choose. Details stay with the order.",
+  "cartHeading": "Your cart",
+  "cartIntro": "Letters you add stay in this browser, along with the details you typed for each child.",
+  "cartSeoTitle": "Your Cart | Custom Letters from Santa",
+  "cartSeoDescription": "Review the Santa letters in your cart, including the details you entered for each child. Payment opens when a checkout link is added.",
+  "areasKicker": "Shipping",
+  "areasHeading": "Mailed in the United States",
+  "serviceAreas": ["United States"],
+  "stepsKicker": "How it works",
+  "stepsHeading": "You tell us. Santa writes.",
+  "steps": [
+    { "title": "Tell us about the child", "text": "Name, age, town, and a few true things. A friend, a pet, a win, something they are working on, a wish list." },
+    { "title": "We write the note", "text": "A printed letter, or an email sent on the date you pick from Santa's personal email address." },
+    { "title": "It arrives", "text": "Printed letters are postmarked from the North Pole USPS facility. Emails land in the inbox on the day you chose." }
   ],
-  "menu": [
+  "timing": {
+    "kicker": "When to order",
+    "heading": "Give the mail a head start.",
+    "body": "Printed letters travel with the post, and the post slows down as Christmas gets closer. Order with time to spare. If the date you care about is close, choose the email. It goes out on the day you pick. We do not publish a last-order date. That day changes every year, and a date we made up would be a guess.",
+    "linkHref": "/shipping",
+    "linkLabel": "Shipping and delivery"
+  },
+  "nav": [
+    { "href": "/shop", "label": "Shop" },
+    { "href": "/about", "label": "About" },
+    { "href": "/faq", "label": "FAQ" },
+    { "href": "/shipping", "label": "Shipping" }
+  ],
+  "products": [
     {
+      "slug": "personalized-letter",
+      "icon": "letter",
       "name": "Personalized Letter from Santa",
-      "note": "$15.95",
-      "description": "Answer a few questions and we will send a personalised letter from Santa to a special child in your life.",
-      "items": [
-        "Personalised to the child",
+      "featured": true,
+      "placeholder": false,
+      "price": 15.95,
+      "checkoutUrl": "",
+      "kicker": "Printed letter",
+      "blurb": "Written for one child and mailed with a North Pole USPS postmark.",
+      "description": "A printed letter from Santa for one child. You share a few true things about them, and the letter comes back by post, postmarked from the North Pole USPS facility.",
+      "imageAlt": "Illustrated envelope sealed with red wax",
+      "includes": [
+        "A printed letter written from the details you send",
         "Postmarked from the North Pole USPS facility",
-        "Arrives by post"
+        "Mailed to the address you give"
+      ],
+      "timing": "Printed letters go out through the mail. December is slow. Order with room for the trip. We do not publish a last-order date, because the postal calendar changes every year. If you are cutting it close, the email is the one that lands on a date you choose.",
+      "seoTitle": "Personalized Santa Letter | North Pole Postmark",
+      "seoDescription": "A printed letter from Santa for one child, postmarked from the North Pole USPS facility. $15.95. Share their name, age, town, and a few true details.",
+      "fields": [
+        { "name": "childName", "label": "Child's name", "type": "text", "required": true, "group": "About the child", "hint": "The name Santa should use." },
+        { "name": "age", "label": "Age", "type": "text", "required": true, "group": "About the child", "hint": "A number is enough." },
+        { "name": "town", "label": "Town", "type": "text", "required": true, "group": "About the child", "hint": "So the letter can mention home." },
+        { "name": "friendOrPet", "label": "A friend or a pet", "type": "text", "required": false, "group": "About the child", "hint": "Optional. A name is enough." },
+        { "name": "accomplishment", "label": "An accomplishment", "type": "textarea", "required": true, "group": "About the child", "hint": "Something they were proud of this year." },
+        { "name": "workOn", "label": "Something to work on", "type": "textarea", "required": false, "group": "About the child", "hint": "Optional. Keep it kind. Santa encourages." },
+        { "name": "wishlist", "label": "Wish list", "type": "textarea", "required": false, "group": "About the child", "hint": "A few things, in their words if you have them." },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "About the child", "hint": "Optional. For the adult who placed the order." },
+        { "name": "shipName", "label": "Who is it going to", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "postal-code" }
       ]
     },
     {
-      "name": "Email from Santa Claus",
-      "note": "$6.95",
-      "description": "Santa has gone high tech. Answer a few questions, tell us when you would like the child to receive it, and the email arrives from Santa's personal email address.",
-      "items": [
-        "Personalised to the child",
-        "Sent from Santa's own email address",
-        "You choose the delivery date"
+      "slug": "email-from-santa",
+      "icon": "email",
+      "name": "Email from Santa",
+      "featured": true,
+      "placeholder": false,
+      "price": 6.95,
+      "checkoutUrl": "",
+      "kicker": "Email",
+      "blurb": "Sent from Santa's personal email address on the date you choose.",
+      "description": "Santa, in the inbox. You pick the day, and the note arrives from Santa's personal email address. Same kind of details as the paper letter: who they are, what they did well, and what they are hoping for.",
+      "imageAlt": "Illustrated note with an at symbol",
+      "includes": [
+        "An email written from the details you send",
+        "Sent from Santa's personal email address",
+        "Delivered on the date you choose"
+      ],
+      "timing": "You choose the day the email arrives. Pick a date that still leaves a little slack if you want to change a detail. We do not publish a season cutoff.",
+      "seoTitle": "Email from Santa | Delivered on Your Date",
+      "seoDescription": "An email from Santa, sent from his personal address on the date you choose. $6.95. Written from the details you share about one child.",
+      "fields": [
+        { "name": "childName", "label": "Child's name", "type": "text", "required": true, "group": "About the child", "hint": "The name Santa should use." },
+        { "name": "age", "label": "Age", "type": "text", "required": true, "group": "About the child", "hint": "A number is enough." },
+        { "name": "town", "label": "Town", "type": "text", "required": true, "group": "About the child", "hint": "So the letter can mention home." },
+        { "name": "friendOrPet", "label": "A friend or a pet", "type": "text", "required": false, "group": "About the child", "hint": "Optional. A name is enough." },
+        { "name": "accomplishment", "label": "An accomplishment", "type": "textarea", "required": true, "group": "About the child", "hint": "Something they were proud of this year." },
+        { "name": "workOn", "label": "Something to work on", "type": "textarea", "required": false, "group": "About the child", "hint": "Optional. Keep it kind. Santa encourages." },
+        { "name": "wishlist", "label": "Wish list", "type": "textarea", "required": false, "group": "About the child", "hint": "A few things, in their words if you have them." },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "About the child", "hint": "Optional. For the adult who placed the order." },
+        { "name": "recipientEmail", "label": "Email address to send it to", "type": "email", "required": true, "group": "The email", "hint": "Where Santa's email should arrive." },
+        { "name": "deliveryDate", "label": "Delivery date", "type": "date", "required": true, "group": "The email", "hint": "The day the email should arrive. Leave a little room. We do not publish a cutoff date." }
       ]
     },
     {
-      "name": "How it works",
-      "items": [
-        "Choose a letter or an email",
-        "Answer a few questions about the child",
-        "Pick the delivery date for emails",
-        "Santa takes it from there"
+      "slug": "sibling-bundle",
+      "icon": "bundle",
+      "name": "Sibling letter bundle",
+      "featured": true,
+      "placeholder": true,
+      "price": 28.95,
+      "checkoutUrl": "",
+      "kicker": "Two letters",
+      "blurb": "Two printed letters, one for each child, mailed to the same address.",
+      "description": "For a house with more than one believer. You fill in both children, and each gets a letter postmarked from the North Pole USPS facility.",
+      "imageAlt": "Illustrated pair of envelopes",
+      "includes": [
+        "Two personalized printed letters",
+        "Each postmarked from the North Pole USPS facility",
+        "Both mailed to one address"
+      ],
+      "timing": "Same mail timing as a single printed letter. Order with room for the trip. We do not publish a last-order date.",
+      "seoTitle": "Sibling Santa Letters | Two Children, One Order",
+      "seoDescription": "Two printed Santa letters for two children at one address. $28.95. Each letter is written from the details you share.",
+      "fields": [
+        { "name": "child1Name", "label": "Child's name", "type": "text", "required": true, "group": "First child", "hint": "The name Santa should use." },
+        { "name": "child1Age", "label": "Age", "type": "text", "required": true, "group": "First child" },
+        { "name": "child1Town", "label": "Town", "type": "text", "required": true, "group": "First child" },
+        { "name": "child1FriendOrPet", "label": "A friend or a pet", "type": "text", "required": false, "group": "First child" },
+        { "name": "child1Accomplishment", "label": "An accomplishment", "type": "textarea", "required": true, "group": "First child" },
+        { "name": "child1WorkOn", "label": "Something to work on", "type": "textarea", "required": false, "group": "First child" },
+        { "name": "child1Wishlist", "label": "Wish list", "type": "textarea", "required": false, "group": "First child" },
+        { "name": "child2Name", "label": "Child's name", "type": "text", "required": true, "group": "Second child" },
+        { "name": "child2Age", "label": "Age", "type": "text", "required": true, "group": "Second child" },
+        { "name": "child2Town", "label": "Town", "type": "text", "required": true, "group": "Second child" },
+        { "name": "child2FriendOrPet", "label": "A friend or a pet", "type": "text", "required": false, "group": "Second child" },
+        { "name": "child2Accomplishment", "label": "An accomplishment", "type": "textarea", "required": true, "group": "Second child" },
+        { "name": "child2WorkOn", "label": "Something to work on", "type": "textarea", "required": false, "group": "Second child" },
+        { "name": "child2Wishlist", "label": "Wish list", "type": "textarea", "required": false, "group": "Second child" },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to mail the letters", "hint": "Optional. For the adult who placed the order." },
+        { "name": "shipName", "label": "Who is it going to", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "postal-code" }
       ]
     }
   ],
-  "navStore": "Letters",
-  "navVisit": "Contact",
-  "navAreas": "Where we ship",
-  "visitKicker": "Contact",
-  "areasKicker": "Where we ship"
+  "info": {
+    "faq": {
+      "slug": "faq",
+      "kicker": "Questions",
+      "heading": "Questions parents actually ask",
+      "intro": "Short answers. If yours is not here, the contact page is the other place to leave it.",
+      "seoTitle": "Santa Letter FAQ | Ordering, Dates, and Delivery",
+      "seoDescription": "Answers about Santa letters and emails: what to tell us, the North Pole postmark, when to order, and what happens before checkout opens.",
+      "items": [
+        { "q": "What do I need to tell you?", "a": "The form on the product page. The child's name, age, and town, something they did well, and anything you want Santa to mention: a friend, a pet, a wish list, or something they are working on." },
+        { "q": "Where is the printed letter postmarked?", "a": "From the North Pole USPS facility. It arrives by post." },
+        { "q": "How does the email work?", "a": "You pick the date. The email is sent from Santa's personal email address on that date. We do not publish the address itself on this site." },
+        { "q": "When should I order?", "a": "Printed letters travel with the mail, and the mail slows down late in the season. Order with time to spare. If the date you care about is close, choose the email, which goes out on the day you pick. We do not list a last-order day. That day changes every year, and we will not print a guess." },
+        { "q": "Can I order for two children?", "a": "Yes. Use a separate letter for each child so the details stay their own, or use the sibling bundle and mail both letters to one address." },
+        { "q": "Is checkout open?", "a": "The button says coming soon until a payment link is on that letter. You can still fill in the form and keep it in the cart on this device. Leave your email and we will be in touch." },
+        { "q": "Do you ship outside the United States?", "a": "The printed letter is mailed through the USPS North Pole facility, and this store is set up for the United States. An international option is not listed." },
+        { "q": "What if a detail is wrong?", "a": "Use the contact page as soon as you notice. If we made the mistake, we correct it. If the letter has already been mailed, it cannot be pulled out of the post." }
+      ]
+    },
+    "shipping": {
+      "slug": "shipping",
+      "kicker": "Shipping",
+      "heading": "How the letter gets there",
+      "intro": "Two different trips. The printed letter goes through the mail. The email goes out on a date you choose.",
+      "seoTitle": "Santa Letter Shipping | North Pole Postmark and Email",
+      "seoDescription": "Printed Santa letters are postmarked at the North Pole USPS facility and mailed in the United States. Emails go out on the date you choose.",
+      "sections": [
+        { "heading": "Printed letters", "body": "They are postmarked from the North Pole USPS facility and then travel with USPS. We do not publish a number of days, and we do not publish a last day to order. December is slower than October. Order with time to spare." },
+        { "heading": "Emails", "body": "You pick the delivery date on the form. The email is sent from Santa's personal email address on that date. Check the spam folder if the day arrives and the inbox looks empty, then write to us." },
+        { "heading": "Where we ship", "body": "The United States. An address outside the country is not an option on this site." },
+        { "heading": "What the price covers", "body": "The printed letter is $15.95 and the email is $6.95. The sibling bundle is $28.95. A separate shipping fee is not listed on this site." }
+      ]
+    },
+    "about": {
+      "slug": "about",
+      "kicker": "About",
+      "heading": "Written for one child",
+      "intro": "You know the stories. We put them in a letter that looks like it came from the North Pole.",
+      "seoTitle": "About Custom Letters from Santa Claus",
+      "seoDescription": "Custom Letters from Santa Claus writes personalized letters and emails for a child in your life. Printed letters are postmarked from the North Pole.",
+      "sections": [
+        { "heading": "What you do", "body": "Answer a few questions. The name, the age, the town, a friend or a pet, something they did well, something they are working on, and a wish list. That is the letter." },
+        { "heading": "What arrives", "body": "A printed letter postmarked from the North Pole USPS facility, or an email from Santa's personal email address on the date you choose. The email address itself is not printed on this site." },
+        { "heading": "Where the shop is", "body": "The business is in Grayson, Louisiana. The postmark on a printed letter is the North Pole facility, which is the point." }
+      ]
+    },
+    "contact": {
+      "slug": "contact",
+      "kicker": "Contact",
+      "heading": "A question before you order",
+      "intro": "The form on the letter you want is what we use to write it. Use this page for anything else.",
+      "seoTitle": "Contact | Custom Letters from Santa Claus",
+      "seoDescription": "Contact Custom Letters from Santa Claus about a letter or an email. Leave a note and we will be in touch.",
+      "sections": [
+        { "heading": "What to use the form for", "body": "A question about timing, two children, or a detail you are not sure how to phrase. The order itself belongs on the product page, so the answers stay attached to that letter." }
+      ]
+    },
+    "privacy": {
+      "slug": "privacy",
+      "kicker": "Privacy",
+      "heading": "What we hold onto",
+      "intro": "How this site handles the details you type, the cart in your browser, and a simple page view.",
+      "seoTitle": "Privacy Policy | Custom Letters from Santa",
+      "seoDescription": "How Custom Letters from Santa Claus handles the details you type, the cart saved in your browser, and the page view sent to our own server.",
+      "sections": [
+        { "heading": "The details you type", "body": "Names, ages, towns, stories, wish lists, dates, and mailing addresses are used to write and send the letter or email. Order them as the adult. We do not ask the child to use the site." },
+        { "heading": "This browser", "body": "The cart, and a notify-me note if you leave one, stay in local storage on this device. Clearing the browser clears them. They are not sent anywhere by that form." },
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that button sends you to the address in the catalog, and the details you entered are added to the link so they travel with the order. That checkout belongs to the payment provider." },
+        { "heading": "Page views", "body": "Opening a page sends a note to our own server with the path and the referrer. It is not an advertising network. We do not sell a list." },
+        { "heading": "Email", "body": "Leave your email on the contact page or with a coming-soon note. We will be in touch. The cart itself stays on this device." }
+      ]
+    },
+    "terms": {
+      "slug": "terms",
+      "kicker": "Terms",
+      "heading": "Terms of sale",
+      "intro": "Plain terms for ordering a personalized letter or email from Santa.",
+      "seoTitle": "Terms of Sale | Custom Letters from Santa",
+      "seoDescription": "Terms for ordering a personalized Santa letter or email, including the details you supply and how payment works.",
+      "sections": [
+        { "heading": "The offer", "body": "The printed letter is $15.95. The email is $6.95. The sibling bundle is $28.95. Each page lists what that order includes." },
+        { "heading": "Your details", "body": "You are responsible for the spelling of the child's name and for the mailing address or email address you type. The letter is written from those answers." },
+        { "heading": "The postmark and the date", "body": "A printed letter is postmarked from the North Pole USPS facility. We do not promise a delivery day for the post. An email is sent on the date you choose, from Santa's personal email address." },
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that link is where payment happens, and the price on the link is the price that is charged. Until a link is set, the button says coming soon and no order is placed." },
+        { "heading": "The shop", "body": "Custom Letters from Santa Claus, Grayson, Louisiana." }
+      ]
+    },
+    "refunds": {
+      "slug": "refunds",
+      "kicker": "Refunds",
+      "heading": "If something is wrong",
+      "intro": "Personalized letters cannot be un-mailed. This is how we handle a problem before that, and a mistake that is ours.",
+      "seoTitle": "Refunds | Custom Letters from Santa Claus",
+      "seoDescription": "Refunds for Santa letters and emails. A mailed letter cannot be pulled back. Tell us before it goes out if you need to cancel.",
+      "sections": [
+        { "heading": "Before it goes out", "body": "If you reach us before a printed letter is mailed, or before an email is sent, we cancel the order and return the payment." },
+        { "heading": "If we get it wrong", "body": "A name we mistyped, or an email that did not go on the date you chose, is ours to fix. Tell us as soon as you notice." },
+        { "heading": "After it is mailed", "body": "A letter that has entered the post cannot be recalled. If the mistake was in the details you sent, that is not a refund. If the mistake was ours, we send a replacement." }
+      ]
+    }
+  }
 }

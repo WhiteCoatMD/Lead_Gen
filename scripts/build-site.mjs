@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { renderSite, renderFavicon } from "../shared/render-site.mjs";
 import { renderBirdsNest } from "../shared/render-birds-nest.mjs";
 import { renderShop } from "../shared/render-shop.mjs";
+import { renderStore, storeDocuments } from "../shared/render-store.mjs";
 import { renderPage } from "../shared/render-page.mjs";
 import { permitPageProblem } from "./lib/permits.mjs";
 import { sitemapXml } from "./lib/sitemap.mjs";
@@ -11,7 +12,7 @@ import { distVercelConfig, rootVercelConfig } from "./lib/redirects.mjs";
 
 // slug in site.json `template` -> renderer. No entry means the shared
 // contractor template in render-site.mjs.
-const RENDERERS = { "birds-nest": renderBirdsNest, shop: renderShop };
+const RENDERERS = { "birds-nest": renderBirdsNest, shop: renderShop, store: renderStore };
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const slug = process.argv[2];
@@ -26,7 +27,7 @@ await fs.mkdir(path.join(outputDir, "assets"), { recursive: true });
 // Every template needs the identity fields; each one also needs the array it
 // actually renders its cards from, so the check follows the renderer rather
 // than assuming every site sells "services".
-const CONTENT_FIELD = { "birds-nest": "products", shop: "menu" };
+const CONTENT_FIELD = { "birds-nest": "products", shop: "menu", store: "products" };
 // `phone` is deliberately absent from this list. A site can legitimately have
 // no contact details for a while, and the build should still produce the
 // page. The launch checklist in scripts/audit.mjs decides whether a site is
@@ -106,6 +107,29 @@ if (pages.some((page) => page.type === "fence-calculator")) {
   for (const file of ["fence-calc.mjs", "fence-calc-ui.mjs"]) {
     await fs.copyFile(path.join(root, "shared", file), path.join(outputDir, file));
   }
+}
+
+// Storefront pages (shop, product, cart, policies) are not `config.pages`.
+// Those entries are rendered with the contractor page chrome. A store keeps
+// its own documents and only borrows the sitemap writer.
+if (config.template === "store") {
+  const docs = storeDocuments(config, slug);
+  for (const file of docs.files) {
+    const dest = path.join(outputDir, file.path);
+    await fs.mkdir(path.dirname(dest), { recursive: true });
+    await fs.writeFile(dest, file.body, "utf8");
+  }
+  for (const page of docs.pages) {
+    if (!page.slug || page.slug.startsWith("/") || page.slug.includes("..")) {
+      throw new Error(`${slug} store page has an unsafe slug "${page.slug}"`);
+    }
+    const pageDir = path.join(outputDir, page.slug);
+    await fs.mkdir(pageDir, { recursive: true });
+    await fs.writeFile(path.join(pageDir, "index.html"), page.html, "utf8");
+    written.push({ slug: page.slug });
+  }
+  await fs.copyFile(path.join(root, "shared", "store.js"), path.join(outputDir, "store.js"));
+  await fs.copyFile(path.join(root, "shared", "store-cart.mjs"), path.join(outputDir, "store-cart.mjs"));
 }
 
 await fs.writeFile(path.join(outputDir, "sitemap.xml"), sitemapXml(config.domain, written, config.updated), "utf8");

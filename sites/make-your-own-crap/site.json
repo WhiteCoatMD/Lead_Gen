@@ -1,72 +1,377 @@
 {
-  "template": "shop",
+  "template": "store",
+  "brand": "workshop",
   "name": "Make Your Own Crap",
   "domain": "makeyourowncrap.com",
   "phone": "318-000-0000",
+  "contactEmail": "",
   "city": "Grayson",
   "state": "Louisiana",
   "schemaType": "Store",
   "accent": "#e04e2a",
   "accentDark": "#a8371c",
-  "kicker": "Draft site — the product line below is a placeholder",
+  "paper": "#f3efe6",
+  "ink": "#161616",
+  "muted": "#5a564f",
+  "line": "#ddd4c6",
+  "card": "#fffdf8",
+  "disc": "#e4ddd2",
+  "pine": "#1c1916",
+  "gold": "#e04e2a",
+  "updated": "2026-10-19",
+  "kicker": "From the creators of Make Your Own Damn Candle",
+  "heroKicker": "Make-it-yourself gift kits",
   "headline": "Gifts for people that you like. But only a little.",
-  "intro": "Want to send someone a thoughtful gift, but think they should have to work for it? You're in the right place.",
-  "about": "Make Your Own Crap sells make-it-yourself gift kits. The recipient gets something genuinely nice — they just have to build the thing themselves before they can enjoy it. It comes from the creators of Make Your Own Damn Candle, which applied the same idea to candles: a real product, a real result, and a small amount of suffering in between.",
-  "sectionKicker": "The idea",
-  "servicesHeadline": "A thoughtful gift, with strings attached.",
-  "menuNote": "Draft site. The kit names, contents and prices below are placeholders to show the shape of the page — replace them with the real line-up. The phone number is a deliberate placeholder too, which keeps this site failing the launch checklist so it cannot go live by accident.",
-  "areaHeadline": "Get in touch",
-  "ctaHeadline": "Made in Grayson, Louisiana",
+  "intro": "The recipient gets something genuinely nice. They also get the box, the parts, and the job of putting it together.",
+  "about": "Make Your Own Crap sells make-it-yourself gift kits. The recipient gets something genuinely nice. They just have to build it before they can enjoy it. It comes from the creators of Make Your Own Damn Candle, which applied the same idea to candles: a real product, a real result, and a small amount of work in between.",
+  "aboutHeading": "Nice gift. Their labor.",
+  "sectionKicker": "The kits",
+  "servicesHeadline": "Three kits to start with.",
+  "featuredNote": "Three kits to start. The rest of the shelf is on the shop page.",
+  "catalogNote": "Six kits. A finished thing at the end of each one, and the work in the middle.",
   "primaryCta": "Shop the kits",
-  "navCall": "Shop kits",
+  "secondaryCta": "The catch",
   "footerLine": "Gifts for people that you like. But only a little.",
+  "checkoutNote": "Add to cart keeps the kit on this device. The buy button stays on coming soon until a payment link is added.",
   "seoTitle": "Make Your Own Crap | Make-It-Yourself Gift Kits",
-  "seoDescription": "Gifts for people that you like, but only a little. Make-it-yourself gift kits from the creators of Make Your Own Damn Candle.",
-  "serviceAreas": [
-    "United States"
+  "seoDescription": "Gifts for people that you like, but only a little. Make-it-yourself kits from the creators of Make Your Own Damn Candle. The recipient builds it.",
+  "shopKicker": "Shop",
+  "shopHeading": "The kits",
+  "shopIntro": "Six kits. A real object at the end of each one, and a job in the middle.",
+  "shopSeoTitle": "Shop the Kits | Make Your Own Crap",
+  "shopSeoDescription": "Make-it-yourself gift kits: candle, hot sauce, terrarium, birdhouse, soap, and cocktail bitters. The recipient builds the gift.",
+  "cartHeading": "Your cart",
+  "cartIntro": "Kits you add stay in this browser, with the address and the note you typed.",
+  "cartSeoTitle": "Your Cart | Make Your Own Crap",
+  "cartSeoDescription": "Review the make-it-yourself kits in your cart, including the address and the note you typed.",
+  "areasKicker": "Shipping",
+  "areasHeading": "Mailed in the United States",
+  "serviceAreas": ["United States"],
+  "stepsKicker": "How it works",
+  "stepsHeading": "You buy the parts. They do the rest.",
+  "steps": [
+    { "title": "Pick a kit", "text": "You choose how much effort to gift. The page says what is in the box and how fussy it is." },
+    { "title": "We mail the parts", "text": "The box goes to them. It is not a finished thing with a bow on it. That would miss the point." },
+    { "title": "They build it", "text": "That is the present. You get the reaction, which is the part you actually wanted." }
   ],
-  "menu": [
+  "timing": {
+    "kicker": "The catch",
+    "heading": "They cannot build it until it shows up.",
+    "body": "Kits are meant to be mailed inside the United States. A shipping price is not set, so this site does not invent one. When a rate exists, it will be on the shipping page before anyone pays.",
+    "linkHref": "/shipping",
+    "linkLabel": "Shipping details"
+  },
+  "nav": [
+    { "href": "/shop", "label": "Shop" },
+    { "href": "/about", "label": "About" },
+    { "href": "/faq", "label": "FAQ" },
+    { "href": "/shipping", "label": "Shipping" }
+  ],
+  "products": [
     {
-      "name": "The idea",
-      "description": "A gift they have to earn. You pick the kit, we send the parts, and they do the work before they get the thing.",
-      "items": [
-        "A real product at the end of it",
-        "Some assembly very much required",
-        "Funnier to give than to receive"
+      "slug": "candle-kit",
+      "icon": "candle",
+      "name": "Candle Kit",
+      "featured": true,
+      "placeholder": true,
+      "price": 34,
+      "checkoutUrl": "",
+      "difficulty": "An easy afternoon",
+      "snark": 2,
+      "snarkLabel": "Mild",
+      "kicker": "Candle",
+      "blurb": "Wax, a wick, a vessel. They supply the patience.",
+      "description": "A candle kit for someone you like, but only a little. They build it. Then they have a candle. You knew the candle company. This is the homework.",
+      "imageAlt": "Illustrated candle in a jar",
+      "includes": [
+        "Wax, a wick, and a vessel they can keep",
+        "A scent",
+        "Instructions written in plain language",
+        "A note on trimming the wick and not leaving it lit alone"
+      ],
+      "timing": "Mailed in the United States. A delivery date is not listed on this page.",
+      "seoTitle": "Candle Kit | Make Your Own Crap",
+      "seoDescription": "A candle kit they build, then get to light. Wax, a wick, a vessel, and a scent. Listed at $34.00.",
+      "fields": [
+        { "name": "shipName", "label": "Recipient", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "postal-code" },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to ship the kit", "hint": "Optional." },
+        { "name": "giftNote", "label": "A note in the box", "type": "textarea", "required": false, "group": "Optional", "hint": "Short. They still have to build it." }
       ]
     },
     {
-      "name": "From the creators of Make Your Own Damn Candle",
-      "description": "The same idea, already proven on candles. Make Your Own Crap is where the format goes next.",
-      "items": [
-        "Make Your Own Damn Candle"
+      "slug": "hot-sauce-kit",
+      "icon": "sauce",
+      "name": "Hot Sauce Kit",
+      "featured": true,
+      "placeholder": true,
+      "price": 28,
+      "checkoutUrl": "",
+      "difficulty": "One messy afternoon",
+      "snark": 4,
+      "snarkLabel": "Sharp",
+      "kicker": "Hot sauce",
+      "blurb": "A bottle of heat. Empty, until they do the work.",
+      "description": "Dried peppers, vinegar, salt, and a bottle. They cook it. You take none of the blame for how hot they make it, which is generous of you.",
+      "imageAlt": "Illustrated hot sauce bottle",
+      "includes": [
+        "Dried peppers",
+        "Vinegar and salt",
+        "A bottle and a funnel",
+        "Instructions, including a warning to taste before they bottle the whole pot"
+      ],
+      "timing": "Mailed in the United States. A delivery date is not listed on this page.",
+      "seoTitle": "Hot Sauce Kit | Make Your Own Crap",
+      "seoDescription": "They cook the sauce, then they get to eat it. Dried peppers, vinegar, salt, and a bottle. Listed at $28.00.",
+      "fields": [
+        { "name": "shipName", "label": "Recipient", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "postal-code" },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to ship the kit", "hint": "Optional." },
+        { "name": "giftNote", "label": "A note in the box", "type": "textarea", "required": false, "group": "Optional", "hint": "Short. They still have to build it." }
       ]
     },
     {
-      "name": "The kits — placeholder",
-      "note": "Replace with the real line-up",
-      "description": "This card shows where the product range goes. Swap these for the actual kits, with real names, contents and prices.",
-      "items": [
-        "Kit one — name, contents and price to be set",
-        "Kit two — name, contents and price to be set",
-        "Kit three — name, contents and price to be set"
+      "slug": "terrarium-kit",
+      "icon": "terrarium",
+      "name": "Terrarium Kit",
+      "featured": true,
+      "placeholder": true,
+      "price": 42,
+      "checkoutUrl": "",
+      "difficulty": "Careful hands",
+      "snark": 2,
+      "snarkLabel": "Gentle",
+      "kicker": "Terrarium",
+      "blurb": "A tiny landscape. They place every rock.",
+      "description": "A glass vessel, soil, stones, and a small plant. They do the landscaping. You take the credit at dinner, which is traditional.",
+      "imageAlt": "Illustrated glass terrarium with a plant",
+      "includes": [
+        "A glass vessel",
+        "Soil and stones",
+        "A small plant",
+        "Instructions for not drowning it"
+      ],
+      "timing": "Mailed in the United States. A delivery date is not listed on this page.",
+      "seoTitle": "Terrarium Kit | Make Your Own Crap",
+      "seoDescription": "They build a tiny landscape, then they get to keep it. A vessel, soil, stones, and a plant. Listed at $42.00.",
+      "fields": [
+        { "name": "shipName", "label": "Recipient", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "postal-code" },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to ship the kit", "hint": "Optional." },
+        { "name": "giftNote", "label": "A note in the box", "type": "textarea", "required": false, "group": "Optional", "hint": "Short. They still have to build it." }
       ]
     },
     {
-      "name": "How it works — placeholder",
-      "note": "Confirm the real process before publishing",
-      "description": "A sketch of the buying flow, to be replaced once ordering and fulfilment are settled.",
-      "items": [
-        "Pick a kit",
-        "We ship the parts",
-        "They build it themselves",
-        "You enjoy their reaction"
+      "slug": "birdhouse-kit",
+      "icon": "birdhouse",
+      "name": "Birdhouse Kit",
+      "featured": false,
+      "placeholder": true,
+      "price": 38,
+      "checkoutUrl": "",
+      "difficulty": "Bring a hammer",
+      "snark": 3,
+      "snarkLabel": "Dry",
+      "kicker": "Birdhouse",
+      "blurb": "Housing for a bird. Labor for a person.",
+      "description": "Pre-cut wood, fasteners, and a diagram. They own the hammer. A bird eventually gets a house, which is more than most gifts accomplish.",
+      "imageAlt": "Illustrated wooden birdhouse",
+      "includes": [
+        "Pre-cut pieces",
+        "Fasteners and a perch",
+        "A diagram",
+        "No hammer. That is already in their house, probably."
+      ],
+      "timing": "Mailed in the United States. A delivery date is not listed on this page.",
+      "seoTitle": "Birdhouse Kit | Make Your Own Crap",
+      "seoDescription": "They swing the hammer. A bird gets a house. Pre-cut wood, fasteners, and a diagram. Listed at $38.00.",
+      "fields": [
+        { "name": "shipName", "label": "Recipient", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "postal-code" },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to ship the kit", "hint": "Optional." },
+        { "name": "giftNote", "label": "A note in the box", "type": "textarea", "required": false, "group": "Optional", "hint": "Short. They still have to build it." }
+      ]
+    },
+    {
+      "slug": "soap-kit",
+      "icon": "soap",
+      "name": "Soap Kit",
+      "featured": false,
+      "placeholder": true,
+      "price": 26,
+      "checkoutUrl": "",
+      "difficulty": "Low",
+      "snark": 2,
+      "snarkLabel": "Light",
+      "kicker": "Soap",
+      "blurb": "A bar of soap at the end. A small project before that.",
+      "description": "Melt, pour, wait, unmold. The base is melt-and-pour, so there is no lye in the box. They still have to do it themselves.",
+      "imageAlt": "Illustrated bar of soap",
+      "includes": [
+        "A melt-and-pour base",
+        "A mold",
+        "Color and scent",
+        "Instructions. No lye."
+      ],
+      "timing": "Mailed in the United States. A delivery date is not listed on this page.",
+      "seoTitle": "Soap Kit | Make Your Own Crap",
+      "seoDescription": "A melt-and-pour soap kit, so there is no lye to handle. A mold, color, and scent. Listed at $26.00.",
+      "fields": [
+        { "name": "shipName", "label": "Recipient", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "postal-code" },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to ship the kit", "hint": "Optional." },
+        { "name": "giftNote", "label": "A note in the box", "type": "textarea", "required": false, "group": "Optional", "hint": "Short. They still have to build it." }
+      ]
+    },
+    {
+      "slug": "cocktail-bitters-kit",
+      "icon": "bitters",
+      "name": "Cocktail Bitters Kit",
+      "featured": false,
+      "placeholder": true,
+      "price": 32,
+      "checkoutUrl": "",
+      "difficulty": "Mostly waiting",
+      "snark": 3,
+      "snarkLabel": "Deadpan",
+      "kicker": "Bitters",
+      "blurb": "The drink is the easy part. The bitters are the assignment.",
+      "description": "Dried peels, spices, bottles, and labels. If the recipe needs high-proof alcohol, they buy that locally. We do not ship it.",
+      "imageAlt": "Illustrated bottle of cocktail bitters",
+      "includes": [
+        "Dried peels and spices",
+        "Bottles and labels",
+        "Instructions",
+        "No alcohol. They buy any high-proof spirit locally if the recipe calls for it."
+      ],
+      "timing": "Mailed in the United States. A delivery date is not listed on this page.",
+      "seoTitle": "Cocktail Bitters Kit | Make Your Own Crap",
+      "seoDescription": "Botanicals, bottles, and instructions for cocktail bitters. No alcohol is shipped. Listed at $32.00.",
+      "fields": [
+        { "name": "shipName", "label": "Recipient", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "name" },
+        { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "street-address" },
+        { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level2" },
+        { "name": "shipState", "label": "State", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "address-level1" },
+        { "name": "shipZip", "label": "ZIP code", "type": "text", "required": true, "group": "Where to ship the kit", "autocomplete": "postal-code" },
+        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to ship the kit", "hint": "Optional." },
+        { "name": "giftNote", "label": "A note in the box", "type": "textarea", "required": false, "group": "Optional", "hint": "Short. They still have to build it." }
       ]
     }
   ],
-  "navStore": "Kits",
-  "navVisit": "Contact",
-  "navAreas": "Where we ship",
-  "visitKicker": "Contact",
-  "areasKicker": "Where we ship"
+  "info": {
+    "faq": {
+      "slug": "faq",
+      "kicker": "Questions",
+      "heading": "Questions, answered without a smile",
+      "intro": "The joke is the gift. The answers should still be plain.",
+      "seoTitle": "Gift Kit FAQ | Make Your Own Crap",
+      "seoDescription": "Answers about Make Your Own Crap kits: who builds them, what is in the box, shipping, alcohol, and checkout.",
+      "items": [
+        { "q": "So they have to build it?", "a": "Yes. That is the gift. The parts make something real. The recipient does the assembly." },
+        { "q": "Is this Make Your Own Damn Candle?", "a": "Same people, same idea, different shelf. Make Your Own Damn Candle was the candle. This is where the format goes next." },
+        { "q": "What is in the box?", "a": "Parts and instructions. Each product page lists what that kit includes. The recipient does the building." },
+        { "q": "How hard are they?", "a": "Each kit says so, as a difficulty line and a snark level. Snark is how much the gift teases them. Difficulty is how much work is in the box. Neither one is a dare to do something unsafe." },
+        { "q": "Do you ship alcohol in the bitters kit?", "a": "No. The bitters kit is botanicals, bottles, and instructions. If a recipe needs high-proof alcohol, they buy that locally." },
+        { "q": "What does shipping cost?", "a": "A separate shipping price is not listed. Kits are mailed inside the United States. The amount on the kit page is the amount listed for the kit." },
+        { "q": "Can I check out?", "a": "The buy button says coming soon until a payment link is on that kit. The cart holds the details in this browser. Leave your email and we will be in touch." },
+        { "q": "What if they hate it?", "a": "Then you liked them about the right amount. For money, read the refund page." }
+      ]
+    },
+    "shipping": {
+      "slug": "shipping",
+      "kicker": "Shipping",
+      "heading": "The box has to arrive before the joke does",
+      "intro": "Kits are mailed to the person who has to build them. That is the whole idea.",
+      "seoTitle": "Shipping the Kits | Make Your Own Crap",
+      "seoDescription": "Make Your Own Crap kits are mailed inside the United States. A separate shipping price is not listed on this site.",
+      "sections": [
+        { "heading": "Where", "body": "The United States. An address outside the country is not an option on this site." },
+        { "heading": "What it costs", "body": "A separate shipping price is not listed. The amount on the kit page is the amount listed for the kit." },
+        { "heading": "When", "body": "No delivery date is published. Order with time for the mail." },
+        { "heading": "What is in the box", "body": "Parts and instructions. Not a finished candle, sauce, terrarium, birdhouse, soap bar, or bottle of bitters. The bitters kit does not include alcohol." }
+      ]
+    },
+    "about": {
+      "slug": "about",
+      "kicker": "About",
+      "heading": "From the candle people",
+      "intro": "Make Your Own Damn Candle was the first version of this idea. Make Your Own Crap is the rest of the shelf.",
+      "seoTitle": "About Make Your Own Crap",
+      "seoDescription": "Make Your Own Crap sells make-it-yourself gift kits from the creators of Make Your Own Damn Candle. The recipient builds the gift.",
+      "sections": [
+        { "heading": "The idea", "body": "You want to send something nice. You also think they can handle a small project. The kit is both. A real result, and the work required to get there." },
+        { "heading": "The lineup", "body": "Six kits: a candle, hot sauce, a terrarium, a birdhouse, soap, and cocktail bitters. Each page lists what is in the box." },
+        { "heading": "Where the shop is", "body": "The business is in Grayson, Louisiana. That is the address on the record. It is not a claim that a factory tour is available." }
+      ]
+    },
+    "contact": {
+      "slug": "contact",
+      "kicker": "Contact",
+      "heading": "Talk to the shop",
+      "intro": "Leave a note and we will be in touch. The order itself belongs on the kit page.",
+      "seoTitle": "Contact | Make Your Own Crap",
+      "seoDescription": "Contact Make Your Own Crap about a kit. Leave a note and we will be in touch.",
+      "sections": [
+        { "heading": "What helps", "body": "Name the kit, and say what you need. A question about the box, the timing, or the person who has to build it." }
+      ]
+    },
+    "privacy": {
+      "slug": "privacy",
+      "kicker": "Privacy",
+      "heading": "What this site stores",
+      "intro": "How this site handles the address you type, the cart in your browser, and a simple page view.",
+      "seoTitle": "Privacy Policy | Make Your Own Crap",
+      "seoDescription": "How Make Your Own Crap handles the address you type, the cart saved in your browser, and the page view sent to our own server.",
+      "sections": [
+        { "heading": "What you type", "body": "A ship-to address, an optional note, and an optional email. Those are for sending a kit and answering you. There is no account." },
+        { "heading": "This browser", "body": "The cart and a notify-me note stay in local storage on this device. They are not uploaded by that form. Clearing the browser clears them." },
+        { "heading": "Payment", "body": "Card numbers are not entered here. When a kit has a payment link, the button sends you there, with the details you typed added to the link. That page belongs to the payment provider." },
+        { "heading": "Page views", "body": "Opening a page sends a note to our own server with the path and the referrer. It is not an advertising network. We do not sell a list." },
+        { "heading": "Email", "body": "Leave your email on the contact page or with a coming-soon note. We will be in touch. The cart itself stays on this device." }
+      ]
+    },
+    "terms": {
+      "slug": "terms",
+      "kicker": "Terms",
+      "heading": "Terms of sale",
+      "intro": "Plain terms for a kit that the recipient has to build.",
+      "seoTitle": "Terms of Sale | Make Your Own Crap",
+      "seoDescription": "Terms for ordering a Make Your Own Crap kit, including what is in the box, alcohol, and how payment works.",
+      "sections": [
+        { "heading": "The offer", "body": "Each kit page lists the price and what is in the box. That is the offer for that kit." },
+        { "heading": "The gift", "body": "The recipient builds the thing. The kit is parts and instructions. The product page says what is in that box." },
+        { "heading": "Alcohol", "body": "The cocktail bitters kit does not include alcohol, and this shop does not ship it." },
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a kit has a payment link, that link is where payment happens, and the price on the link is the price that is charged. Until a link is set, the button says coming soon and no order is placed." },
+        { "heading": "The shop", "body": "Make Your Own Crap, Grayson, Louisiana, from the creators of Make Your Own Damn Candle." }
+      ]
+    },
+    "refunds": {
+      "slug": "refunds",
+      "kicker": "Refunds",
+      "heading": "If something is wrong",
+      "intro": "A kit is parts and instructions. This is how we handle a problem before it ships, and a mistake that is ours.",
+      "seoTitle": "Refunds | Make Your Own Crap",
+      "seoDescription": "Refunds for Make Your Own Crap kits. Reach us before a kit ships to cancel. A started project is not a refund.",
+      "sections": [
+        { "heading": "Before it ships", "body": "If you reach us before a kit ships, we cancel the order and return the payment." },
+        { "heading": "Unopened", "body": "An unopened kit can be returned. Contact the shop and we will tell you where to send it." },
+        { "heading": "Already building", "body": "A kit they have started is parts they have used. We replace anything we packed wrong. A project they did not enjoy is not a refund." }
+      ]
+    }
+  }
 }

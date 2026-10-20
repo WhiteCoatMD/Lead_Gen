@@ -84,9 +84,22 @@ for (const slug of slugs) {
   const ld = between(html, '<script type="application/ld+json">', "</script>");
   let schema = null;
   try { schema = JSON.parse(ld); } catch { check(false, "JSON-LD does not parse"); }
+  // A real NANP number has some variety in the last seven digits. 000-0000
+  // and any other repeated tail is the stand-in this checklist rejects.
+  const phoneIsPublic = (value) => {
+    const d = digits(value || "");
+    return d.length >= 10 && new Set(d.slice(-7)).size > 1;
+  };
+  const shownPhone = cfg.trackingPhone || cfg.phone || "";
+  // Online stores do not need a phone. A missing or stand-in number is
+  // hidden, not published. Lead-gen and contractor templates still fail.
+  const storeSkipsPhone = cfg.template === "store" && !phoneIsPublic(shownPhone);
+
   if (schema) {
     check(schema.name === cfg.name, "schema name");
-    if (cfg.phone) check(digits(schema.telephone) === digits(cfg.phone), "schema telephone");
+    if (cfg.template === "store" && !phoneIsPublic(cfg.phone)) {
+      check(!schema.telephone, "schema telephone on a store without a public phone");
+    } else if (cfg.phone) check(digits(schema.telephone) === digits(cfg.phone), "schema telephone");
     check(!!schema.address && schema.address.addressLocality === cfg.city, "schema address");
     check(Array.isArray(schema.areaServed) && schema.areaServed.length > 0, "schema areaServed");
     check(schema.url === `https://${cfg.domain}`, "schema url");
@@ -106,7 +119,14 @@ for (const slug of slugs) {
   // A site with no number at all fails here by name. Every check below
   // assumes one exists, and computing a tel: href from undefined would throw
   // before the checklist could report anything useful.
-  if (!cfg.phone) {
+  if (storeSkipsPhone) {
+    if (shownPhone) {
+      check(!html.includes(String(shownPhone)), "placeholder phone still visible (" + shownPhone + ")");
+      check(!html.includes(`tel:+1${digits(shownPhone).slice(-10)}`), "placeholder phone tel link still visible");
+    }
+    check(!html.includes('class="nav-call"'), "header call CTA on a store without a public phone");
+    check(!html.includes('class="mobile-call"'), "mobile call button on a store without a public phone");
+  } else if (!cfg.phone) {
     check(false, "no phone number on the site at all");
   } else {
     // Visible and tel: numbers follow trackingPhone when a site sets one,
