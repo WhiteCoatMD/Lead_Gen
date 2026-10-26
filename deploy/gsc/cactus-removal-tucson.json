@@ -2,19 +2,19 @@
   "slug": "cactus-removal-tucson",
   "domain": "cactusremovalservice.com",
   "siteUrl": "sc-domain:cactusremovalservice.com",
-  "startDate": "2025-06-26",
-  "endDate": "2026-10-16",
+  "startDate": "2025-07-03",
+  "endDate": "2026-10-23",
   "clicks": 1,
-  "impressions": 41,
+  "impressions": 51,
   "pages": [
     {
       "keys": [
         "https://cactusremovalservice.com/"
       ],
       "clicks": 1,
-      "impressions": 41,
-      "ctr": 0.024390243902439025,
-      "position": 59.707317073170735
+      "impressions": 51,
+      "ctr": 0.0196078431372549,
+      "position": 59.254901960784316
     }
   ],
   "queries": [
@@ -23,27 +23,27 @@
         "cactus removal"
       ],
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 32,
       "ctr": 0,
-      "position": 78
+      "position": 77.78125
     },
     {
       "keys": [
         "cactus removal service"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 45
+      "position": 64
     },
     {
       "keys": [
         "cactus removal tucson"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 60
+      "position": 52
     }
   ],
   "rebuilt": []

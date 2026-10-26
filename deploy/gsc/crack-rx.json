@@ -2,19 +2,19 @@
   "slug": "crack-rx",
   "domain": "getcrackrx.com",
   "siteUrl": "sc-domain:getcrackrx.com",
-  "startDate": "2025-06-26",
-  "endDate": "2026-10-16",
+  "startDate": "2025-07-03",
+  "endDate": "2026-10-23",
   "clicks": 1,
-  "impressions": 23,
+  "impressions": 29,
   "pages": [
     {
       "keys": [
         "https://getcrackrx.com/"
       ],
       "clicks": 1,
-      "impressions": 19,
-      "ctr": 0.05263157894736842,
-      "position": 7.631578947368421
+      "impressions": 25,
+      "ctr": 0.04,
+      "position": 7.24
     },
     {
       "keys": [
