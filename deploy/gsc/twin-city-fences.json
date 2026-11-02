@@ -2,64 +2,64 @@
   "slug": "twin-city-fences",
   "domain": "twincityfences.com",
   "siteUrl": "sc-domain:twincityfences.com",
-  "startDate": "2025-07-03",
-  "endDate": "2026-10-23",
-  "clicks": 41,
-  "impressions": 2443,
+  "startDate": "2025-07-10",
+  "endDate": "2026-10-30",
+  "clicks": 45,
+  "impressions": 3380,
   "pages": [
     {
       "keys": [
         "https://twincityfences.com/"
       ],
-      "clicks": 19,
-      "impressions": 838,
-      "ctr": 0.022673031026252982,
-      "position": 11.643198090692124
+      "clicks": 21,
+      "impressions": 1097,
+      "ctr": 0.019143117593436645,
+      "position": 11.290793072014585
     },
     {
       "keys": [
         "https://www.twincityfences.com/"
       ],
-      "clicks": 7,
-      "impressions": 215,
-      "ctr": 0.03255813953488372,
-      "position": 9.288372093023256
+      "clicks": 8,
+      "impressions": 245,
+      "ctr": 0.0326530612244898,
+      "position": 8.783673469387754
     },
     {
       "keys": [
         "https://twincityfences.com/fence-permit-monroe"
       ],
       "clicks": 5,
-      "impressions": 48,
-      "ctr": 0.10416666666666667,
-      "position": 25.833333333333332
+      "impressions": 54,
+      "ctr": 0.09259259259259259,
+      "position": 24.88888888888889
     },
     {
       "keys": [
         "https://twincityfences.com/fence-calculator"
       ],
       "clicks": 2,
-      "impressions": 106,
-      "ctr": 0.018867924528301886,
-      "position": 16.58490566037736
+      "impressions": 149,
+      "ctr": 0.013422818791946308,
+      "position": 22.71812080536913
     },
     {
       "keys": [
         "https://twincityfences.com/fence-permit-ouachita-parish"
       ],
       "clicks": 2,
-      "impressions": 78,
-      "ctr": 0.02564102564102564,
-      "position": 12.820512820512821
+      "impressions": 95,
+      "ctr": 0.021052631578947368,
+      "position": 11.642105263157895
     },
     {
       "keys": [
         "https://twincityfences.com/chain-link-fence"
       ],
       "clicks": 1,
-      "impressions": 211,
-      "ctr": 0.004739336492890996,
-      "position": 20.322274881516588
+      "impressions": 353,
+      "ctr": 0.0028328611898017,
+      "position": 16.141643059490086
     },
     {
       "keys": [
@@ -75,27 +75,36 @@
         "https://twincityfences.com/contact"
       ],
       "clicks": 1,
-      "impressions": 102,
-      "ctr": 0.00980392156862745,
-      "position": 19.15686274509804
+      "impressions": 148,
+      "ctr": 0.006756756756756757,
+      "position": 18.804054054054053
     },
     {
       "keys": [
         "https://twincityfences.com/fence-permit-west-monroe"
       ],
       "clicks": 1,
-      "impressions": 61,
-      "ctr": 0.01639344262295082,
-      "position": 25.278688524590162
+      "impressions": 70,
+      "ctr": 0.014285714285714285,
+      "position": 23.62857142857143
     },
     {
       "keys": [
         "https://twincityfences.com/fencing-bastrop-la"
       ],
       "clicks": 1,
-      "impressions": 12,
-      "ctr": 0.08333333333333333,
-      "position": 60.333333333333336
+      "impressions": 16,
+      "ctr": 0.0625,
+      "position": 46.4375
+    },
+    {
+      "keys": [
+        "https://twincityfences.com/fencing-sterlington-la"
+      ],
+      "clicks": 1,
+      "impressions": 19,
+      "ctr": 0.05263157894736842,
+      "position": 36.473684210526315
     },
     {
       "keys": [
@@ -120,18 +129,18 @@
         "https://twincityfences.com/aluminum-fence"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 19,
       "ctr": 0,
-      "position": 76.22222222222223
+      "position": 51.26315789473684
     },
     {
       "keys": [
         "https://twincityfences.com/commercial-fencing"
       ],
       "clicks": 0,
-      "impressions": 72,
+      "impressions": 78,
       "ctr": 0,
-      "position": 34.65277777777778
+      "position": 33.82051282051282
     },
     {
       "keys": [
@@ -147,27 +156,27 @@
         "https://twincityfences.com/fence-cost-monroe"
       ],
       "clicks": 0,
-      "impressions": 38,
+      "impressions": 109,
       "ctr": 0,
-      "position": 21.710526315789473
+      "position": 16.357798165137616
     },
     {
       "keys": [
         "https://twincityfences.com/fence-repair"
       ],
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 43,
       "ctr": 0,
-      "position": 31.428571428571427
+      "position": 18.186046511627907
     },
     {
       "keys": [
         "https://twincityfences.com/fence-replacement"
       ],
       "clicks": 0,
-      "impressions": 104,
+      "impressions": 128,
       "ctr": 0,
-      "position": 24.826923076923077
+      "position": 22.5625
     },
     {
       "keys": [
@@ -183,36 +192,27 @@
         "https://twincityfences.com/fencing-farmerville-la"
       ],
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 19,
       "ctr": 0,
-      "position": 41.333333333333336
+      "position": 39.21052631578947
     },
     {
       "keys": [
         "https://twincityfences.com/fencing-monroe.html"
       ],
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 20,
       "ctr": 0,
-      "position": 9.055555555555555
+      "position": 12.45
     },
     {
       "keys": [
         "https://twincityfences.com/fencing-ruston-la"
       ],
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 34,
       "ctr": 0,
-      "position": 40.75
-    },
-    {
-      "keys": [
-        "https://twincityfences.com/fencing-sterlington-la"
-      ],
-      "clicks": 0,
-      "impressions": 10,
-      "ctr": 0,
-      "position": 65.7
+      "position": 19.529411764705884
     },
     {
       "keys": [
@@ -228,63 +228,63 @@
         "https://twincityfences.com/gate-installation"
       ],
       "clicks": 0,
-      "impressions": 22,
+      "impressions": 23,
       "ctr": 0,
-      "position": 67.86363636363636
+      "position": 65.17391304347827
     },
     {
       "keys": [
         "https://twincityfences.com/privacy"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 10,
       "ctr": 0,
-      "position": 109.375
+      "position": 88.3
     },
     {
       "keys": [
         "https://twincityfences.com/privacy-fence"
       ],
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 26,
       "ctr": 0,
-      "position": 61.333333333333336
+      "position": 40.42307692307692
     },
     {
       "keys": [
         "https://twincityfences.com/storm-damage"
       ],
       "clicks": 0,
-      "impressions": 54,
+      "impressions": 66,
       "ctr": 0,
-      "position": 28.537037037037038
+      "position": 28.46969696969697
     },
     {
       "keys": [
         "https://twincityfences.com/vinyl-fence"
       ],
       "clicks": 0,
-      "impressions": 30,
+      "impressions": 78,
       "ctr": 0,
-      "position": 33.7
+      "position": 22.705128205128204
     },
     {
       "keys": [
         "https://twincityfences.com/west-monroe"
       ],
       "clicks": 0,
-      "impressions": 80,
+      "impressions": 129,
       "ctr": 0,
-      "position": 20.575
+      "position": 20.689922480620154
     },
     {
       "keys": [
         "https://twincityfences.com/wooden-fences"
       ],
       "clicks": 0,
-      "impressions": 120,
+      "impressions": 208,
       "ctr": 0,
-      "position": 15.758333333333333
+      "position": 15.350961538461538
     },
     {
       "keys": [
@@ -319,19 +319,19 @@
       "keys": [
         "fence company near me"
       ],
-      "clicks": 3,
-      "impressions": 41,
-      "ctr": 0.07317073170731707,
-      "position": 6.146341463414634
+      "clicks": 4,
+      "impressions": 50,
+      "ctr": 0.08,
+      "position": 6.5
     },
     {
       "keys": [
         "twin city fence"
       ],
       "clicks": 3,
-      "impressions": 21,
-      "ctr": 0.14285714285714285,
-      "position": 4.285714285714286
+      "impressions": 24,
+      "ctr": 0.125,
+      "position": 4
     },
     {
       "keys": [
@@ -347,9 +347,9 @@
         "fence company monroe la"
       ],
       "clicks": 2,
-      "impressions": 87,
-      "ctr": 0.022988505747126436,
-      "position": 3.793103448275862
+      "impressions": 142,
+      "ctr": 0.014084507042253521,
+      "position": 4.007042253521127
     },
     {
       "keys": [
@@ -446,9 +446,9 @@
         "chain link fence company near me"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 4,
       "ctr": 0,
-      "position": 4
+      "position": 4.25
     },
     {
       "keys": [
@@ -470,21 +470,48 @@
     },
     {
       "keys": [
+        "chain link fence installation monroe"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "keys": [
         "chain link fence installation near me"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 10,
       "ctr": 0,
-      "position": 6.833333333333333
+      "position": 5.7
+    },
+    {
+      "keys": [
+        "chain link fence mandeville"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 22.5
     },
     {
       "keys": [
         "chain link fence shreveport"
       ],
       "clicks": 0,
-      "impressions": 22,
+      "impressions": 28,
       "ctr": 0,
-      "position": 36.22727272727273
+      "position": 39.035714285714285
+    },
+    {
+      "keys": [
+        "chain link fence twin falls"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
     },
     {
       "keys": [
@@ -500,9 +527,18 @@
         "chain link fencing"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "keys": [
+        "chain link fencing near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
     },
     {
       "keys": [
@@ -545,9 +581,18 @@
         "commercial fence contractor west monroe la"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 4.111111111111111
+      "position": 4.1
+    },
+    {
+      "keys": [
+        "commercial fence installer near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
     },
     {
       "keys": [
@@ -563,9 +608,9 @@
         "commercial fence st. amant la"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 11,
       "ctr": 0,
-      "position": 64.77777777777777
+      "position": 63
     },
     {
       "keys": [
@@ -650,6 +695,15 @@
     },
     {
       "keys": [
+        "denham springs vinyl fence"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "keys": [
         "farm boundary fencing"
       ],
       "clicks": 0,
@@ -722,12 +776,21 @@
     },
     {
       "keys": [
+        "fence companies st. amant la"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 50.666666666666664
+    },
+    {
+      "keys": [
         "fence company"
       ],
       "clicks": 0,
-      "impressions": 34,
+      "impressions": 62,
       "ctr": 0,
-      "position": 5.470588235294118
+      "position": 4.274193548387097
     },
     {
       "keys": [
@@ -770,18 +833,18 @@
         "fence company st. amant la"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 62.5
+      "position": 59.75
     },
     {
       "keys": [
         "fence company west monroe la"
       ],
       "clicks": 0,
-      "impressions": 77,
+      "impressions": 135,
       "ctr": 0,
-      "position": 2.6363636363636367
+      "position": 2.888888888888889
     },
     {
       "keys": [
@@ -797,18 +860,18 @@
         "fence contractor"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 2
+      "position": 1.8571428571428572
     },
     {
       "keys": [
         "fence contractor la"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 2
+      "position": 3
     },
     {
       "keys": [
@@ -833,9 +896,9 @@
         "fence contractors"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 5
+      "position": 4.75
     },
     {
       "keys": [
@@ -860,18 +923,18 @@
         "fence installation"
       ],
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 30,
       "ctr": 0,
-      "position": 2.666666666666667
+      "position": 3.566666666666667
     },
     {
       "keys": [
         "fence installation bossier city la"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 39.5
+      "position": 39.25
     },
     {
       "keys": [
@@ -905,18 +968,18 @@
         "fence installation monroe"
       ],
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 29,
       "ctr": 0,
-      "position": 6.0625
+      "position": 5.344827586206897
     },
     {
       "keys": [
         "fence installation near me"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 9,
       "ctr": 0,
-      "position": 5.4
+      "position": 4.666666666666666
     },
     {
       "keys": [
@@ -932,9 +995,9 @@
         "fence installation winchester"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 97
+      "position": 90.6
     },
     {
       "keys": [
@@ -947,6 +1010,15 @@
     },
     {
       "keys": [
+        "fence installer near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 1
+    },
+    {
+      "keys": [
         "fence installer shreveport la"
       ],
       "clicks": 0,
@@ -956,21 +1028,39 @@
     },
     {
       "keys": [
+        "fence lumber calculator"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 61
+    },
+    {
+      "keys": [
         "fence material and post calculator"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 53.333333333333336
+      "position": 51
     },
     {
       "keys": [
         "fence material calculator"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 9,
       "ctr": 0,
-      "position": 43.666666666666664
+      "position": 45
+    },
+    {
+      "keys": [
+        "fence material estimator"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 87
     },
     {
       "keys": [
@@ -980,6 +1070,24 @@
       "impressions": 2,
       "ctr": 0,
       "position": 64.5
+    },
+    {
+      "keys": [
+        "fence materials estimator"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 63.166666666666664
+    },
+    {
+      "keys": [
+        "fence materials near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
     },
     {
       "keys": [
@@ -995,18 +1103,18 @@
         "fence picket estimator"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 18
+      "position": 21
     },
     {
       "keys": [
         "fence post calculator"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 19
+      "position": 14
     },
     {
       "keys": [
@@ -1031,27 +1139,36 @@
         "fence repair"
       ],
       "clicks": 0,
-      "impressions": 70,
+      "impressions": 85,
       "ctr": 0,
-      "position": 5.114285714285714
+      "position": 5.458823529411765
     },
     {
       "keys": [
         "fence repair bossier city la"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 36
+      "position": 42.5
     },
     {
       "keys": [
         "fence repair near me"
       ],
       "clicks": 0,
-      "impressions": 18,
+      "impressions": 24,
       "ctr": 0,
-      "position": 6.055555555555555
+      "position": 5.583333333333333
+    },
+    {
+      "keys": [
+        "fence repair services"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 2.5
     },
     {
       "keys": [
@@ -1091,6 +1208,15 @@
     },
     {
       "keys": [
+        "fence workers near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "keys": [
         "fences for yards near me"
       ],
       "clicks": 0,
@@ -1103,9 +1229,9 @@
         "fencing"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 13,
       "ctr": 0,
-      "position": 9
+      "position": 11
     },
     {
       "keys": [
@@ -1130,18 +1256,18 @@
         "fencing companies near me"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 14,
       "ctr": 0,
-      "position": 4.875
+      "position": 4.928571428571429
     },
     {
       "keys": [
         "fencing company"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 4
+      "position": 3.5
     },
     {
       "keys": [
@@ -1172,12 +1298,21 @@
     },
     {
       "keys": [
+        "fencing contractor near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "keys": [
         "fencing longview"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 11,
       "ctr": 0,
-      "position": 64.57142857142857
+      "position": 68.72727272727273
     },
     {
       "keys": [
@@ -1187,6 +1322,15 @@
       "impressions": 2,
       "ctr": 0,
       "position": 40.5
+    },
+    {
+      "keys": [
+        "fencing monroe"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 2.666666666666667
     },
     {
       "keys": [
@@ -1202,9 +1346,9 @@
         "fencing near me"
       ],
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 21,
       "ctr": 0,
-      "position": 4.545454545454545
+      "position": 4.523809523809524
     },
     {
       "keys": [
@@ -1223,6 +1367,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 32
+    },
+    {
+      "keys": [
+        "fencing replacement"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 30.666666666666668
     },
     {
       "keys": [
@@ -1280,12 +1433,21 @@
     },
     {
       "keys": [
+        "high fence installation"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "keys": [
         "how do i figure out how many fence posts i need for a 100-foot fence?"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 6.5
+      "position": 4.666666666666666
     },
     {
       "keys": [
@@ -1313,6 +1475,24 @@
       "impressions": 1,
       "ctr": 0,
       "position": 11
+    },
+    {
+      "keys": [
+        "how many fence posts do i need"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 30.714285714285715
+    },
+    {
+      "keys": [
+        "how much fence do i need"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 75
     },
     {
       "keys": [
@@ -1391,9 +1571,9 @@
         "louisiana chain link fence"
       ],
       "clicks": 0,
-      "impressions": 35,
+      "impressions": 38,
       "ctr": 0,
-      "position": 21.8
+      "position": 21.92105263157895
     },
     {
       "keys": [
@@ -1406,12 +1586,30 @@
     },
     {
       "keys": [
+        "metal fence calculator"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
         "metal fence installation service shreveport la"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 36
+    },
+    {
+      "keys": [
+        "metal fencing companies near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 4
     },
     {
       "keys": [
@@ -1436,27 +1634,36 @@
         "monroe fence builder"
       ],
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 27,
       "ctr": 0,
-      "position": 18.8
+      "position": 20.25925925925926
     },
     {
       "keys": [
         "monroe fence company"
       ],
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
-      "position": 26.23076923076923
+      "position": 26.714285714285715
     },
     {
       "keys": [
         "monroe fence installation"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 6,
       "ctr": 0,
-      "position": 41.666666666666664
+      "position": 45.666666666666664
+    },
+    {
+      "keys": [
+        "monroe fencing"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 23
     },
     {
       "keys": [
@@ -1496,6 +1703,15 @@
     },
     {
       "keys": [
+        "municipalities fences"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 67
+    },
+    {
+      "keys": [
         "new city fence builder"
       ],
       "clicks": 0,
@@ -1508,18 +1724,18 @@
         "ouachita parish building permits"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 7,
       "ctr": 0,
-      "position": 6.8
+      "position": 6.714285714285714
     },
     {
       "keys": [
         "ouachita parish permit office"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 5,
       "ctr": 0,
-      "position": 8.333333333333332
+      "position": 7
     },
     {
       "keys": [
@@ -1589,9 +1805,9 @@
         "southern louisiana fence builder"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 17
+      "position": 51
     },
     {
       "keys": [
@@ -1616,27 +1832,45 @@
         "storm damage fence repair"
       ],
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 27,
       "ctr": 0,
-      "position": 18.56
+      "position": 20.59259259259259
     },
     {
       "keys": [
         "storm damaged fence repair"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 21.833333333333332
+      "position": 23
     },
     {
       "keys": [
         "storm fence repair"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 19.333333333333332
+      "position": 20.285714285714285
+    },
+    {
+      "keys": [
+        "storm-damaged fence repair"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "keys": [
+        "sunset la vinyl fence"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
     },
     {
       "keys": [
@@ -1688,9 +1922,9 @@
         "twin city fencing"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 2.5
+      "position": 2
     },
     {
       "keys": [
@@ -1730,12 +1964,30 @@
     },
     {
       "keys": [
+        "twin mountain fence company"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "keys": [
         "twin rivers fence"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 6
+    },
+    {
+      "keys": [
+        "twins fencing"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
     },
     {
       "keys": [
@@ -1760,18 +2012,18 @@
         "vinyl fence installation monroe"
       ],
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 30,
       "ctr": 0,
-      "position": 14.357142857142858
+      "position": 9.8
     },
     {
       "keys": [
         "vinyl fence installation near me"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 9,
       "ctr": 0,
-      "position": 14.285714285714286
+      "position": 13.11111111111111
     },
     {
       "keys": [
@@ -1784,6 +2036,15 @@
     },
     {
       "keys": [
+        "vinyl fence supply near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
         "vinyl fences installation near me"
       ],
       "clicks": 0,
@@ -1793,12 +2054,39 @@
     },
     {
       "keys": [
-        "vinyl fencing shreveport la"
+        "vinyl fencing companies near me"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 43
+      "position": 4
+    },
+    {
+      "keys": [
+        "vinyl fencing monroe"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
+    },
+    {
+      "keys": [
+        "vinyl fencing near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "keys": [
+        "vinyl fencing shreveport la"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 38
     },
     {
       "keys": [
@@ -1823,9 +2111,9 @@
         "west bend fencing"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 40
+      "position": 42
     },
     {
       "keys": [
@@ -1844,6 +2132,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 5
+    },
+    {
+      "keys": [
+        "wholesale fence supply near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 12
     },
     {
       "keys": [
@@ -1868,18 +2165,27 @@
         "wood fence installation monroe"
       ],
       "clicks": 0,
-      "impressions": 17,
+      "impressions": 27,
       "ctr": 0,
-      "position": 6.0588235294117645
+      "position": 5.296296296296297
     },
     {
       "keys": [
         "wood fence installation near me"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 7,
       "ctr": 0,
-      "position": 7.5
+      "position": 5.428571428571429
+    },
+    {
+      "keys": [
+        "wood fence monroe"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
     },
     {
       "keys": [
@@ -1904,7 +2210,7 @@
         "wood fencing"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
       "position": 1
     }
@@ -1913,20 +2219,20 @@
     {
       "path": "/wooden-fences",
       "clicks": 0,
-      "impressions": 120,
-      "position": 15.758333333333333
+      "impressions": 208,
+      "position": 15.350961538461538
     },
     {
       "path": "/chain-link-fence",
       "clicks": 1,
-      "impressions": 211,
-      "position": 20.322274881516588
+      "impressions": 353,
+      "position": 16.141643059490086
     },
     {
       "path": "/contact",
       "clicks": 1,
-      "impressions": 102,
-      "position": 19.15686274509804
+      "impressions": 148,
+      "position": 18.804054054054053
     },
     {
       "path": "/split-rail-fences.html",
@@ -1937,8 +2243,8 @@
     {
       "path": "/fencing-monroe.html",
       "clicks": 0,
-      "impressions": 18,
-      "position": 9.055555555555555
+      "impressions": 20,
+      "position": 12.45
     },
     {
       "path": "/farm-fencing",
@@ -1949,32 +2255,32 @@
     {
       "path": "/commercial-fencing",
       "clicks": 0,
-      "impressions": 72,
-      "position": 34.65277777777778
+      "impressions": 78,
+      "position": 33.82051282051282
     },
     {
       "path": "/gate-installation",
       "clicks": 0,
-      "impressions": 22,
-      "position": 67.86363636363636
+      "impressions": 23,
+      "position": 65.17391304347827
     },
     {
       "path": "/fence-replacement",
       "clicks": 0,
-      "impressions": 104,
-      "position": 24.826923076923077
+      "impressions": 128,
+      "position": 22.5625
     },
     {
       "path": "/storm-damage",
       "clicks": 0,
-      "impressions": 54,
-      "position": 28.537037037037038
+      "impressions": 66,
+      "position": 28.46969696969697
     },
     {
       "path": "/west-monroe",
       "clicks": 0,
-      "impressions": 80,
-      "position": 20.575
+      "impressions": 129,
+      "position": 20.689922480620154
     },
     {
       "path": "/fencing-calhoun-la",
@@ -1984,15 +2290,15 @@
     },
     {
       "path": "/fencing-sterlington-la",
-      "clicks": 0,
-      "impressions": 10,
-      "position": 65.7
+      "clicks": 1,
+      "impressions": 19,
+      "position": 36.473684210526315
     },
     {
       "path": "/fencing-ruston-la",
       "clicks": 0,
-      "impressions": 12,
-      "position": 40.75
+      "impressions": 34,
+      "position": 19.529411764705884
     },
     {
       "path": "/fencing-swartz-la",
@@ -2003,74 +2309,74 @@
     {
       "path": "/fencing-bastrop-la",
       "clicks": 1,
-      "impressions": 12,
-      "position": 60.333333333333336
+      "impressions": 16,
+      "position": 46.4375
     },
     {
       "path": "/fencing-farmerville-la",
       "clicks": 0,
-      "impressions": 18,
-      "position": 41.333333333333336
+      "impressions": 19,
+      "position": 39.21052631578947
     },
     {
       "path": "/fence-calculator",
       "clicks": 2,
-      "impressions": 106,
-      "position": 16.58490566037736
+      "impressions": 149,
+      "position": 22.71812080536913
     },
     {
       "path": "/fence-permit-monroe",
       "clicks": 5,
-      "impressions": 48,
-      "position": 25.833333333333332
+      "impressions": 54,
+      "position": 24.88888888888889
     },
     {
       "path": "/fence-permit-west-monroe",
       "clicks": 1,
-      "impressions": 61,
-      "position": 25.278688524590162
+      "impressions": 70,
+      "position": 23.62857142857143
     },
     {
       "path": "/fence-permit-ouachita-parish",
       "clicks": 2,
-      "impressions": 78,
-      "position": 12.820512820512821
+      "impressions": 95,
+      "position": 11.642105263157895
     },
     {
       "path": "/fence-repair",
       "clicks": 0,
-      "impressions": 21,
-      "position": 31.428571428571427
+      "impressions": 43,
+      "position": 18.186046511627907
     },
     {
       "path": "/vinyl-fence",
       "clicks": 0,
-      "impressions": 30,
-      "position": 33.7
+      "impressions": 78,
+      "position": 22.705128205128204
     },
     {
       "path": "/aluminum-fence",
       "clicks": 0,
-      "impressions": 9,
-      "position": 76.22222222222223
+      "impressions": 19,
+      "position": 51.26315789473684
     },
     {
       "path": "/privacy-fence",
       "clicks": 0,
-      "impressions": 12,
-      "position": 61.333333333333336
+      "impressions": 26,
+      "position": 40.42307692307692
     },
     {
       "path": "/fence-cost-monroe",
       "clicks": 0,
-      "impressions": 38,
-      "position": 21.710526315789473
+      "impressions": 109,
+      "position": 16.357798165137616
     },
     {
       "path": "/privacy",
       "clicks": 0,
-      "impressions": 8,
-      "position": 109.375
+      "impressions": 10,
+      "position": 88.3
     }
   ]
 }
