@@ -2,19 +2,19 @@
   "slug": "stucco-repair-chicago",
   "domain": "stuccorepairchicago.com",
   "siteUrl": "sc-domain:stuccorepairchicago.com",
-  "startDate": "2025-07-10",
-  "endDate": "2026-10-30",
-  "clicks": 0,
-  "impressions": 123,
+  "startDate": "2025-07-17",
+  "endDate": "2026-11-06",
+  "clicks": 1,
+  "impressions": 203,
   "pages": [
     {
       "keys": [
         "https://stuccorepairchicago.com/"
       ],
-      "clicks": 0,
-      "impressions": 123,
-      "ctr": 0,
-      "position": 19.414634146341463
+      "clicks": 1,
+      "impressions": 203,
+      "ctr": 0.0049261083743842365,
+      "position": 28.571428571428573
     }
   ],
   "queries": [
@@ -32,9 +32,9 @@
         "chicago stucco repair"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 5,
       "ctr": 0,
-      "position": 4
+      "position": 5.6
     },
     {
       "keys": [
@@ -59,18 +59,18 @@
         "eifs inspection chicago"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 10,
       "ctr": 0,
-      "position": 32.6
+      "position": 38.1
     },
     {
       "keys": [
         "eifs inspections chicago"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 11,
       "ctr": 0,
-      "position": 11.666666666666666
+      "position": 35.18181818181818
     },
     {
       "keys": [
@@ -113,36 +113,45 @@
         "stucco company chicago il"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 45.5
+      "position": 45
+    },
+    {
+      "keys": [
+        "stucco contractor chicago il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
     },
     {
       "keys": [
         "stucco eifs repair"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 43,
       "ctr": 0,
-      "position": 50
+      "position": 47.7906976744186
     },
     {
       "keys": [
         "stucco inspection chicago"
       ],
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 19,
       "ctr": 0,
-      "position": 26.916666666666668
+      "position": 42.36842105263158
     },
     {
       "keys": [
         "stucco inspections chicago"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 34.5
+      "position": 35.285714285714285
     },
     {
       "keys": [
@@ -155,12 +164,30 @@
     },
     {
       "keys": [
+        "stucco installers chicago il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
         "stucco painters chicago"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 8.666666666666668
+      "position": 9.9
+    },
+    {
+      "keys": [
+        "stucco patches chicago il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
     },
     {
       "keys": [
@@ -176,36 +203,36 @@
         "stucco repair chicago"
       ],
       "clicks": 0,
-      "impressions": 25,
+      "impressions": 32,
       "ctr": 0,
-      "position": 10.6
+      "position": 11.375
     },
     {
       "keys": [
         "stucco repair chicago il"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 37
+      "position": 36.333333333333336
     },
     {
       "keys": [
         "stucco repair in chicago il"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 44
+      "position": 41
     },
     {
       "keys": [
         "stucco repair services chicago il"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 33.285714285714285
+      "position": 34.25
     }
   ],
   "rebuilt": [

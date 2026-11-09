@@ -2,19 +2,19 @@
   "slug": "twin-city-handyman",
   "domain": "twincity-handyman.com",
   "siteUrl": "sc-domain:twincity-handyman.com",
-  "startDate": "2025-07-10",
-  "endDate": "2026-10-30",
+  "startDate": "2025-07-17",
+  "endDate": "2026-11-06",
   "clicks": 1,
-  "impressions": 87,
+  "impressions": 108,
   "pages": [
     {
       "keys": [
         "https://twincity-handyman.com/"
       ],
       "clicks": 1,
-      "impressions": 87,
-      "ctr": 0.011494252873563218,
-      "position": 18.724137931034484
+      "impressions": 108,
+      "ctr": 0.009259259259259259,
+      "position": 18.203703703703702
     }
   ],
   "queries": [
@@ -38,30 +38,39 @@
     },
     {
       "keys": [
+        "handy work near me"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 10.5
+    },
+    {
+      "keys": [
         "handyman"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 12,
       "ctr": 0,
-      "position": 18.444444444444443
+      "position": 17.833333333333332
     },
     {
       "keys": [
         "handyman monroe"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 8,
       "ctr": 0,
-      "position": 18.833333333333332
+      "position": 18.75
     },
     {
       "keys": [
         "handyman near me"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 12,
       "ctr": 0,
-      "position": 17.22222222222222
+      "position": 16.583333333333336
     },
     {
       "keys": [
@@ -104,9 +113,9 @@
         "monroe handyman"
       ],
       "clicks": 0,
-      "impressions": 43,
+      "impressions": 50,
       "ctr": 0,
-      "position": 24.186046511627907
+      "position": 23.82
     }
   ],
   "rebuilt": []

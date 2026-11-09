@@ -2,19 +2,19 @@
   "slug": "chicago-eifs-stucco",
   "domain": "eifschicago.com",
   "siteUrl": "sc-domain:eifschicago.com",
-  "startDate": "2025-07-10",
-  "endDate": "2026-10-30",
-  "clicks": 1,
-  "impressions": 289,
+  "startDate": "2025-07-17",
+  "endDate": "2026-11-06",
+  "clicks": 2,
+  "impressions": 382,
   "pages": [
     {
       "keys": [
         "https://eifschicago.com/"
       ],
-      "clicks": 1,
-      "impressions": 289,
-      "ctr": 0.0034602076124567475,
-      "position": 55.22837370242215
+      "clicks": 2,
+      "impressions": 382,
+      "ctr": 0.005235602094240838,
+      "position": 57.94240837696335
     }
   ],
   "queries": [
@@ -23,9 +23,9 @@
         "drainage eifs chicago"
       ],
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 21,
       "ctr": 0,
-      "position": 68.3
+      "position": 67.23809523809524
     },
     {
       "keys": [
@@ -41,9 +41,9 @@
         "eifs chicago"
       ],
       "clicks": 0,
-      "impressions": 30,
+      "impressions": 36,
       "ctr": 0,
-      "position": 36.56666666666667
+      "position": 32.05555555555556
     },
     {
       "keys": [
@@ -104,36 +104,36 @@
         "eifs inspection chicago"
       ],
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 27,
       "ctr": 0,
-      "position": 57.23809523809524
+      "position": 56.888888888888886
     },
     {
       "keys": [
         "eifs inspections chicago"
       ],
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 31,
       "ctr": 0,
-      "position": 64
+      "position": 65.38709677419355
     },
     {
       "keys": [
         "eifs inspector chicago"
       ],
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 31,
       "ctr": 0,
-      "position": 61.96153846153846
+      "position": 63.70967741935484
     },
     {
       "keys": [
         "eifs issues chicago"
       ],
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 28,
       "ctr": 0,
-      "position": 62.130434782608695
+      "position": 57.17857142857143
     },
     {
       "keys": [
@@ -185,9 +185,9 @@
         "stucco eifs repair"
       ],
       "clicks": 0,
-      "impressions": 37,
+      "impressions": 94,
       "ctr": 0,
-      "position": 81.08108108108108
+      "position": 80.8936170212766
     },
     {
       "keys": [

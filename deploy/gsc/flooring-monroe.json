@@ -2,31 +2,40 @@
   "slug": "flooring-monroe",
   "domain": "flooring-monroe.com",
   "siteUrl": "sc-domain:flooring-monroe.com",
-  "startDate": "2025-07-10",
-  "endDate": "2026-10-30",
+  "startDate": "2025-07-17",
+  "endDate": "2026-11-06",
   "clicks": 1,
-  "impressions": 154,
+  "impressions": 180,
   "pages": [
     {
       "keys": [
         "https://www.flooring-monroe.com/"
       ],
       "clicks": 1,
-      "impressions": 38,
-      "ctr": 0.02631578947368421,
-      "position": 24
+      "impressions": 43,
+      "ctr": 0.023255813953488372,
+      "position": 24.6046511627907
     },
     {
       "keys": [
         "https://flooring-monroe.com/"
       ],
       "clicks": 0,
-      "impressions": 116,
+      "impressions": 137,
       "ctr": 0,
-      "position": 19.913793103448278
+      "position": 21.043795620437955
     }
   ],
   "queries": [
+    {
+      "keys": [
+        "carpet installation monroe"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 18
+    },
     {
       "keys": [
         "carpet installation near me"
@@ -131,9 +140,9 @@
         "flooring monroe"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 84
+      "position": 68.5
     },
     {
       "keys": [
@@ -173,6 +182,15 @@
     },
     {
       "keys": [
+        "flooring stores near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "keys": [
         "flooring west monroe la"
       ],
       "clicks": 0,
@@ -203,9 +221,9 @@
         "laminate floor installation near me"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 9,
       "ctr": 0,
-      "position": 22
+      "position": 21.555555555555557
     },
     {
       "keys": [
@@ -221,9 +239,9 @@
         "luxury vinyl flooring near me"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 22
+      "position": 21.875
     },
     {
       "keys": [
@@ -272,12 +290,21 @@
     },
     {
       "keys": [
+        "tile installation monroe"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
         "tile installation near me"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 17.22222222222222
+      "position": 17.4
     },
     {
       "keys": [
@@ -302,9 +329,18 @@
         "wood floor installation near me"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 7,
       "ctr": 0,
-      "position": 12.666666666666666
+      "position": 12.714285714285714
+    },
+    {
+      "keys": [
+        "wood flooring installation monroe"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 46
     },
     {
       "keys": [
