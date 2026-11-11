@@ -30,6 +30,16 @@ import { renderCalculator, renderPermitGuide, renderPlanningLinks, renderPriceGu
  * and a page that is not measured cannot be judged.
  */
 
+// Same-site paths only. A point can name the service page it belongs to;
+// anything else stays plain text so a bad value cannot become an href.
+function localHref(link) {
+  const href = String(link || "").trim();
+  if (!href || href.startsWith("//") || /[\s"'<>]/.test(href)) return "";
+  if (href.startsWith("/")) return href;
+  if (/^[a-z0-9][a-z0-9./_-]*$/i.test(href)) return `/${href}`;
+  return "";
+}
+
 function renderRelated(site, siblings) {
   if (!siblings.length) return "";
   const link = (other) => `<span><a href="/${esc(other.slug)}">${esc(other.navLabel || other.heading)}</a></span>`;
@@ -65,12 +75,15 @@ export function renderPage(site, page, slug = "", extras = {}) {
 
   const points = (page.points || []).length
     ? `<section class="shell services"><div class="section-heading"><p class="eyebrow accent">${esc(page.pointsKicker || "What we build")}</p><h2>${esc(page.pointsHeading || "Options")}</h2></div><div class="service-grid">${
-        page.points.map((point, index) => `
+        page.points.map((point, index) => {
+          const href = localHref(point.link);
+          return `
       <article class="service-card">
         <span>${String(index + 1).padStart(2, "0")}</span>
-        <h3>${esc(point.title)}</h3>
+        <h3>${href ? `<a href="${esc(href)}">${esc(point.title)}</a>` : esc(point.title)}</h3>
         <p>${esc(point.description)}</p>
-      </article>`).join("")
+      </article>`;
+        }).join("")
       }</div></section>`
     : "";
 

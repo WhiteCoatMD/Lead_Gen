@@ -166,6 +166,11 @@
           "kicker": "Height",
           "heading": "Pick the height for the job, not the look.",
           "body": "Height is the decision people most often get wrong, partly because it is hard to picture from a catalogue. Six feet is the usual privacy answer because it breaks sightlines from a neighbouring yard at standing height. Four feet contains pets and marks a front boundary without walling the property off, which is often what a front yard actually wants. Eight feet screens completely where local rules allow it. It is worth knowing that height drives cost more than the extra material suggests, because taller fencing needs deeper posts and more bracing to stay upright in wind. A four-foot fence bought for privacy is money spent on the wrong problem, and it cannot be raised later without starting again."
+        },
+        {
+          "kicker": "What it costs",
+          "heading": "Length is the start. The rest moves the bid.",
+          "body": "We don't publish a price per foot. A straight pine run on flat ground and the same length stepping down a wet yard in Monroe or West Monroe, with a drive gate and an old fence to pull, are different jobs. Pine is the usual privacy fence. Cedar costs more and weathers better. Height costs more than the extra boards, because a taller solid fence needs deeper posts to stand in the wind. A gate costs more than the same width of fence, and a drive gate costs more than a walk gate. Hauling off old posts, especially ones set in concrete, belongs in the quote. The cost guide puts those choices in order. The number for your line is the one we give after we walk it. Call (318) 351-2539."
         }
       ],
       "ctaHeadline": "Get a price on a wood fence.",
@@ -178,6 +183,18 @@
         {
           "q": "Does a wood fence need sealing?",
           "a": "It extends the life, particularly on pine. Cedar tolerates being left alone better than pine does, which is part of what the extra cost buys. Either way the posts fail before the pickets do, so how they were set matters more to the lifespan than what gets put on the surface afterwards."
+        },
+        {
+          "q": "What drives the cost of a wood fence?",
+          "a": "The length, pine or cedar, the height, the gates, and the ground. A slope, trees, wet soil, and pulling out an old fence all add work. We won't invent a rate on this page. Call with a rough length and we'll come look.",
+          "link": {
+            "href": "/fence-cost-monroe",
+            "label": "Fence cost guide"
+          }
+        },
+        {
+          "q": "Pine or cedar?",
+          "a": "Pine if you want the common privacy fence and you'll seal it when it needs it. Cedar costs more and holds up better to weather and bugs. The posts decide how long either one stands. Soft ground around Monroe and West Monroe rots a post at the soil line while the boards still look fine."
         }
       ],
       "kind": "service"
@@ -186,10 +203,10 @@
       "slug": "chain-link-fence",
       "navLabel": "Chain-link fences",
       "kicker": "Chain-link fencing",
-      "heading": "Chain-link fencing in Monroe, LA.",
-      "intro": "Durable, budget-conscious fencing for homes, pets, businesses, and larger properties across Monroe and West Monroe.",
-      "seoTitle": "Chain Link Fence Monroe LA | Twin City Fence",
-      "seoDescription": "Chain-link fencing installed in Monroe, West Monroe and Ouachita Parish for homes, pets, businesses, larger properties and sports enclosures.",
+      "heading": "Chain-link fence installation in Monroe and West Monroe.",
+      "intro": "Chain link for homes, dogs, shops, and long runs across Monroe and West Monroe. It's the fence that covers the most ground per dollar, and the price still depends on height, gauge, and the gates.",
+      "seoTitle": "Chain Link Fence Installation Monroe & West Monroe | Twin City Fence",
+      "seoDescription": "Chain-link fence installation in Monroe and West Monroe. Homes, dogs, shops, and long runs, plus what actually moves the price. Call (318) 351-2539.",
       "service": "Chain-link fence installation",
       "sections": [
         {
@@ -211,6 +228,11 @@
           "kicker": "Where it wins",
           "heading": "Cost per foot is the whole argument.",
           "body": "Chain-link covers more ground per dollar than any other fence we build, which is why it keeps winning on long runs, acreage and commercial yards where the job is containment rather than privacy. It also takes weather without needing to be sealed or painted, and a damaged section can be replaced without touching the rest of the run. What it does not do is screen anything, which is the trade you are making. Slats can be woven through the mesh where some privacy is wanted without the cost of a wood run, though they are a compromise rather than a substitute. If the fence exists to keep something in or out over distance, this is usually the right answer."
+        },
+        {
+          "kicker": "What it costs",
+          "heading": "Height, gauge, gates, and the ground.",
+          "body": "Chain link is usually the lowest cost per foot of the fences we build. That's why it wins on a long yard, a dog run, and a shop perimeter in Monroe or West Monroe. The number still moves. Taller fence needs heavier posts and closer spacing, so a court enclosure is not priced like a four-foot dog fence. The gauge of the wire changes it too. A light residential mesh and a commercial framework are different fences even though both are chain link. Corners, end posts, and gates cost more than the same length of line, and a drive gate is the piece people leave out when they pace the yard. Privacy slats add work, and they are a compromise, not a wood privacy fence. Slope, trees, and an old fence that has to come out all add to the job. We don't print a rate card. Call (318) 351-2539 with the length and what the fence is keeping in or out."
         }
       ],
       "ctaHeadline": "Get a price on chain-link.",
@@ -218,6 +240,30 @@
         {
           "q": "What height of chain-link do I need?",
           "a": "Four feet contains most dogs and marks a boundary. Six feet is the common choice for security and for keeping larger animals in. Taller runs are used for courts and sports enclosures, where the job is keeping a ball in rather than keeping anything out — those need heavier posts and closer spacing."
+        },
+        {
+          "q": "What changes the price of chain link?",
+          "a": "Height, the gauge of the wire, the length, and every gate. A commercial yard wants a heavier fence than a dog run, even though both are chain link. Slats, a slope, and pulling out the old fence move it again. We'll price it after we see the line.",
+          "link": {
+            "href": "/fence-cost-monroe",
+            "label": "What moves a fence price"
+          }
+        },
+        {
+          "q": "Will slats make it a privacy fence?",
+          "a": "They cut the view. They don't match a solid wood or vinyl privacy fence, and they add cost. If the job is really privacy, say so and we'll talk about wood or vinyl instead of dressing up chain link.",
+          "link": {
+            "href": "/privacy-fence",
+            "label": "Privacy fencing"
+          }
+        },
+        {
+          "q": "Do you install chain link for businesses too?",
+          "a": "Yes. Shops, storage yards, and longer perimeters in Monroe and West Monroe are a regular job. The gate is the part that gets used every day, so we size it for the truck that actually has to get in.",
+          "link": {
+            "href": "/commercial-fencing",
+            "label": "Commercial fencing"
+          }
         }
       ],
       "kind": "service"
@@ -421,10 +467,10 @@
       "slug": "commercial-fencing",
       "navLabel": "Commercial",
       "kicker": "Commercial fencing",
-      "heading": "Commercial fencing in Monroe, LA.",
-      "intro": "Fencing for businesses, yards and larger properties, where the job is security and containment rather than looks.",
-      "seoTitle": "Commercial Fencing Monroe LA | Twin City Fence",
-      "seoDescription": "Commercial fencing in Monroe, West Monroe and Ouachita Parish — business premises, yards, storage and larger properties.",
+      "heading": "Commercial fencing in Monroe and West Monroe.",
+      "intro": "Fencing for shops, yards, and longer perimeters, where the job is security and a gate that works every day. We're based in West Monroe and we build on both sides of the river.",
+      "seoTitle": "Commercial Fencing Monroe & West Monroe LA | Twin City Fence",
+      "seoDescription": "Commercial fence installation in Monroe and West Monroe. Chain link, gates, and street frontage, priced after we walk the yard. Call (318) 351-2539.",
       "service": "Commercial fence installation",
       "sections": [
         {
@@ -446,19 +492,55 @@
           "kicker": "Material",
           "heading": "Why commercial runs usually end up chain-link.",
           "body": "Commercial fencing is normally bought by the foot rather than by the panel, and that changes which material makes sense. Chain-link covers distance more economically than anything else, takes weather without being sealed or painted, and can have a damaged section replaced without disturbing the rest of the run — which matters when the fence surrounds something that has to keep operating. It also makes the yard visible, which is a security advantage as often as it is a drawback. Where appearance matters at a street frontage, the usual answer is to treat that stretch differently rather than to pay for the whole perimeter twice. Height is a separate decision from material and worth settling on its own terms."
+        },
+        {
+          "kicker": "Around here",
+          "heading": "Shops on both sides of the river.",
+          "body": "We're at 205 Mane St, Ste C, in West Monroe, and a commercial yard is the same phone call as a house. Cypress Street is US 80, and a lot of the shop yards sit along it. Downtown on Trenton Street is tighter: a short run, a gate, and a truck that has to get in without blocking the street. Over in Monroe it's the same kind of job, a small lot downtown or a longer line on a commercial street. Tell us if the business has to stay open. We'd rather hang the gate so you can still get in and out than shut the yard for a week. A fence you can see through is often what you want out front. A taller chain-link run is what the back and the sides usually get."
+        },
+        {
+          "kicker": "What it costs",
+          "heading": "Feet, the gate, and whether the yard stays open.",
+          "body": "Chain link covers a commercial perimeter for less than wood or aluminum. That's the usual answer for the long sides. The gate is where the money and the complaints concentrate, because it opens every day and it has to fit the biggest truck that will use it, including deliveries. A walk gate is a smaller job. Pulling out an old fence, posts set in concrete, and a line that crosses a ditch or a slope all add work that a price-per-foot chart from the internet leaves out. We don't publish a rate. Call (318) 351-2539, tell us about how long the run is, and we'll come look."
         }
       ],
       "ctaHeadline": "Fencing a commercial property?",
+      "faqs": [
+        {
+          "q": "What fence do you put on a commercial yard?",
+          "a": "Chain link for most of the perimeter. It covers ground, you can see through it, and a damaged section can be replaced without rebuilding the whole run. If the street front needs to look different, we can put aluminum on that stretch instead of paying for it all the way around.",
+          "link": {
+            "href": "/aluminum-fence",
+            "label": "Aluminum fencing"
+          }
+        },
+        {
+          "q": "What drives the cost of a commercial fence?",
+          "a": "The length, the height, the gates, and the ground. A drive gate sized for a box truck costs more than a walk gate, and it should. Haul-off of the old fence and a line that isn't flat move the number too. We'll walk it before we quote it.",
+          "link": {
+            "href": "/fence-cost-monroe",
+            "label": "Fence cost guide"
+          }
+        },
+        {
+          "q": "Can you hang the gate with the fence?",
+          "a": "Yes. On a commercial site the gate is the part that works every day, so we treat the opening as part of the job, not something bolted on after the posts are already set.",
+          "link": {
+            "href": "/gate-installation",
+            "label": "Gate installation"
+          }
+        }
+      ],
       "kind": "service"
     },
     {
       "slug": "gate-installation",
       "navLabel": "Gates",
       "kicker": "Gates",
-      "heading": "Gate installation in Monroe, LA.",
-      "intro": "Walk gates and drive gates fitted to match the fence, and hung so they still swing true in a year.",
-      "seoTitle": "Gate Installation Monroe LA | Twin City Fence",
-      "seoDescription": "Walk gates and drive gates installed across Monroe, West Monroe and Ouachita Parish, matched to wood, chain-link and ornamental fencing.",
+      "heading": "Gate installation in Monroe and West Monroe.",
+      "intro": "Walk gates and drive gates fitted to the fence, and hung on a post that can take the weight. Wood, chain link, and aluminum, on both sides of the Ouachita.",
+      "seoTitle": "Gate Installation Monroe & West Monroe LA | Twin City Fence",
+      "seoDescription": "Walk gates and drive gates in Monroe and West Monroe, hung on posts that can take the weight. Wood, chain link, and aluminum. Call (318) 351-2539.",
       "service": "Gate installation",
       "sections": [
         {
@@ -480,6 +562,11 @@
           "kicker": "Width",
           "heading": "Measure for the trailer, not the car.",
           "body": "The most common regret on a drive gate is width, and it is the one thing that cannot be adjusted afterwards without moving a post. People measure for the vehicle they drive every day and then discover the gate is tight for a trailer, a mower, a delivery truck or a contractor who needs to get a machine into the back yard. A gate that is slightly too narrow gets clipped, and a gate that has been clipped never hangs true again. Walk it through in your head with the widest thing that will ever need to pass, then add room for the fact that nobody lines up perfectly on a first attempt. Extra width costs very little at the start."
+        },
+        {
+          "kicker": "What it costs",
+          "heading": "Width and the post are the price.",
+          "body": "A gate costs more than the same width of fence. The post has to be bigger and deeper, and the hardware takes the weight every time it opens. A walk gate is the small version. A drive gate is the one that costs real money, and the regret is almost always that it's too narrow. Measure the trailer, the mower, and the delivery that has to reach the back, then leave room for a crooked approach. Matching the fence matters too. A wood gate, a chain-link gate, and an aluminum gate are different builds, and on a short ornamental run the gate is a large share of the price. We don't publish a rate for 'a gate.' Call (318) 351-2539 with the width you actually need and what the fence is made of. We'll come look."
         }
       ],
       "ctaHeadline": "Need a gate?",
@@ -488,6 +575,37 @@
         {
           "q": "Why do gates sag?",
           "a": "Almost always because the gate post was set for fence rather than for leverage. A gate is a weight hanging off one side of a post, and the wider the gate the harder it pulls. A gate post wants to be bigger, deeper and better braced than the run it sits in — which is cheap to do at the start and expensive to correct afterwards."
+        },
+        {
+          "q": "What drives the cost of a gate?",
+          "a": "How wide it is, how heavy it is, and whether the post was set for a gate or just for the fence. A drive gate costs more than a walk gate. Extra width is cheap before the posts go in and expensive after. Tell us the widest thing that has to pass.",
+          "link": {
+            "href": "/fence-cost-monroe",
+            "label": "Fence cost guide"
+          }
+        },
+        {
+          "q": "Can you match the fence that's already there?",
+          "a": "Yes. Wood, chain link, and aluminum. The gate should look like part of the run, not a piece bolted on later. A photo of the post and a few feet of fence tells us what we're matching. If the whole line is tired, replacement may be the better buy than a new gate on bad posts."
+        }
+      ],
+      "pointsKicker": "Matched to the fence",
+      "pointsHeading": "The gate has to belong to the run.",
+      "points": [
+        {
+          "title": "Wood gates",
+          "description": "Walk gates and drive gates on pine or cedar privacy fences. The post is bigger than the line posts, or the gate sags.",
+          "link": "/wooden-fences"
+        },
+        {
+          "title": "Chain-link gates",
+          "description": "The usual gate on a dog yard or a shop. Size it for the truck, not just the car you drive every day.",
+          "link": "/chain-link-fence"
+        },
+        {
+          "title": "Aluminum gates",
+          "description": "Open fencing out front. The gate is a big part of the price on a short ornamental run.",
+          "link": "/aluminum-fence"
         }
       ],
       "kind": "service"
@@ -570,37 +688,114 @@
       "slug": "west-monroe",
       "navLabel": "West Monroe",
       "kicker": "West Monroe",
-      "heading": "Fencing in West Monroe, LA.",
-      "intro": "We're based in West Monroe and we build fences all over town and the rest of Ouachita Parish. Call (318) 351-2539 for a free estimate.",
+      "heading": "Fence company in West Monroe, LA.",
+      "intro": "We're based in West Monroe, at 205 Mane St, Ste C, and this is the town we drive home to. Wood, chain link, vinyl, aluminum, gates, and repairs, in the city and out in West Ouachita. Call (318) 351-2539. The estimate is free.",
       "seoTitle": "Fence Company West Monroe LA | Twin City Fence",
-      "seoDescription": "Fence builder based in West Monroe, Louisiana — wood, chain-link, split rail, ornamental, farm and commercial fencing across Ouachita Parish.",
+      "seoDescription": "Fence company in West Monroe and West Ouachita. Wood, chain link, vinyl, aluminum, and gates from 205 Mane St. Call (318) 351-2539.",
       "service": "Fence installation in West Monroe, Louisiana",
       "sections": [
         {
-          "kicker": "Local",
-          "heading": "This is where we are.",
-          "body": "Twin City Fence is based in West Monroe, at 205 Mane St, Ste C. This is home. We build wood, chain link, vinyl, aluminum, farm fence, and gates all over town. Call (318) 351-2539 for a free estimate. A small repair or a whole yard, we'll come look."
+          "kicker": "Downtown",
+          "heading": "Trenton Street and the river.",
+          "body": "Downtown sits on Trenton Street, on the west bank of the Ouachita. Antique Alley is the old storefronts people mean when they say downtown, and the blocks around Natchitoches Street and Alley Park are tight. A fence there is usually a side yard, a back gate, or a small commercial lot, not a pasture. Drives are short. A gate has to clear the car that's already parked close to the building. Tell us which street the truck should use. Some of those blocks are one way, and a load of posts doesn't turn like a pickup. Houses just off the river are the ones that usually need the fence. If the ground slopes toward the bank, say so before we load the truck. We'll price the line that's there, not a flat lot from a brochure."
         },
         {
-          "kicker": "What we build here",
-          "heading": "What we put up around here.",
-          "body": "Wood privacy in pine or cedar. Chain link when you need a long run or a dog fence. Split rail and farm fence on acreage. Aluminum where you want the yard open. Gates, replacements, and storm repair. Houses and commercial. If it's a fence in West Monroe, we build it."
+          "kicker": "Cypress Street",
+          "heading": "US 80 through town, and out toward Calhoun.",
+          "body": "Cypress Street is US 80 through West Monroe, and it's where a lot of the shops and older houses sit. A commercial yard on Cypress and a backyard two streets off it are different fences. Out front, people often want aluminum so the building still shows. Around back it's wood or vinyl privacy, or chain link if they need to see through it. West of the built-up part, US 80 keeps going toward Calhoun. That's West Ouachita, outside the city limits, and the rules change when you cross that line. I-20 is the other way across town, up over the river into Monroe. If you're not sure which side of the city limit the drive is on, say so when you call. We'll sort it before anybody digs."
         },
         {
-          "kicker": "Both sides of the river",
-          "heading": "Both sides of the river.",
-          "body": "The Ouachita splits West Monroe and Monroe on the map. We work both sides, and we work out through the parish. Calhoun, Sterlington, Swartz, Ruston, Bastrop, Farmerville. If you've got an address, call (318) 351-2539. We'll take it from there."
+          "kicker": "Kiroli",
+          "heading": "North of downtown, around the park.",
+          "body": "Kiroli Park, on Kiroli Road, is the landmark people use for the north side of town. The houses around the park are ordinary residential calls: a back yard, a dog, a gate that drags, a run the last storm pushed over. N 7th Street is the other name folks use to get us close, and City Hall is on N 7th. That's the building office if the property is inside West Monroe. Yards up here aren't all flat. A low corner holds water after a hard rain, and a post in that corner rots at the ground while the pickets still look fine. We set posts for the dirt that's there. If your line runs through a wet spot, or it has to step down a slope, tell us on the call. It's cheaper to hear it then than to find it with a shovel."
         },
         {
-          "kicker": "Local ground",
-          "heading": "What the soil here does to a fence.",
-          "body": "The ground around here holds water. A post in a wet line rots at the top of the soil while the boards still look fine. We set posts for that. If your fence line runs through a low spot, tell us. It'll stand in water after a hard rain, and we need to know that before we dig. We see this on both sides of the river. It's normal dirt for Ouachita Parish, and we build for it."
+          "kicker": "West Ouachita",
+          "heading": "Outside the city limits, the job changes.",
+          "body": "West Ouachita is the part of the parish on this side of the river, outside the West Monroe city limits. Lots get bigger. A privacy fence around the house and a farm fence across the field are two jobs, and we price them that way. Two rails mark a boundary. Three hold bigger animals better, because if they can get a head through, they'll try. Chain link still wins when the run is long and you don't need to block the view. The city permit page does not cover a parish lot. Unincorporated Ouachita has its own rules, including the ditch along a public road. Start with the parish guide on this site, then check with the parish office. If an HOA is stricter than either one, their paper wins. Bring it when we come look."
+        },
+        {
+          "kicker": "The ground",
+          "heading": "Wet soil is the thing that kills a fence here.",
+          "body": "The ground in West Monroe holds water. We've seen it downtown by the river, in back yards off Cypress, and on parish lots that look dry until a spring rain sits in the low end. A post rots at the top of the soil while the boards still look fine. Push on the posts before you buy new pickets. If they move, you're decorating a fence that's already done. A solid privacy fence also catches wind, and spring storms coming across an open West Ouachita lot will find the weak post. Chain link lets the wind through. That's one reason a long pasture line is usually not a wood privacy fence. Tell us where the water sits. We'd rather plan the holes than reset the same post next year."
+        },
+        {
+          "kicker": "What it costs",
+          "heading": "Material, length, gates, and the dirt.",
+          "body": "We don't publish a price per foot, because a number without the line in front of us is a guess. Chain link usually covers the most feet per dollar, which is why it wins on a long side line, a dog yard, or a shop. Pine privacy costs more, and it's the usual backyard fence in town. Vinyl lands near pine once you count the style and the gates, and you're paying so you don't have to paint. Cedar costs more than pine. Aluminum is usually the highest per foot of the residential fences we put up, because the posts and the gate are a big share of a shorter run. Height costs more than the extra board, because a taller solid fence needs deeper posts. A drive gate costs more than a walk gate. Pulling out old concrete posts belongs in the quote. Call with a pace count and we'll walk it."
+        }
+      ],
+      "pointsKicker": "What we build here",
+      "pointsHeading": "The fences West Monroe actually calls about.",
+      "points": [
+        {
+          "title": "Wood privacy",
+          "description": "Pine or cedar for a back yard. We'll check the height against the West Monroe rules before the posts go in.",
+          "link": "/wooden-fences"
+        },
+        {
+          "title": "Chain link",
+          "description": "A dog, a long side line, or a shop yard. The lowest cost per foot of the fences we build.",
+          "link": "/chain-link-fence"
+        },
+        {
+          "title": "Vinyl",
+          "description": "Privacy without a paint can. The posts still have to be set for wet ground and wind.",
+          "link": "/vinyl-fence"
+        },
+        {
+          "title": "Aluminum",
+          "description": "An open fence for a front yard or a Cypress Street frontage, so the house or the shop still shows.",
+          "link": "/aluminum-fence"
+        },
+        {
+          "title": "Gates",
+          "description": "Walk gates and drive gates. On a tight downtown drive, the width is the part you don't want to miss.",
+          "link": "/gate-installation"
+        },
+        {
+          "title": "Commercial",
+          "description": "Shop yards and longer perimeters. Chain link on the sides, and a gate the delivery truck can actually use.",
+          "link": "/commercial-fencing"
+        }
+      ],
+      "faqHeading": "Questions about fencing in West Monroe.",
+      "faqs": [
+        {
+          "q": "Do you fence West Monroe and West Ouachita?",
+          "a": "Yes. The shop is at 205 Mane St, Ste C, in West Monroe. We build in town, from Trenton Street and Cypress out to Kiroli, and on the parish lots west of the city limits toward Calhoun. Call (318) 351-2539. A rough length is enough to start."
+        },
+        {
+          "q": "Do I need a fence permit in West Monroe?",
+          "a": "Inside the city, yes. West Monroe requires a permit for fences, and a front yard is not the same rule as a side or back yard. Corner lots have an extra limit so drivers can see. The guide on this site points at the city's own ordinance. Read it, then call us and we'll go over it when we price the job.",
+          "link": {
+            "href": "/fence-permit-west-monroe",
+            "label": "West Monroe fence permit guide"
+          }
+        },
+        {
+          "q": "What if the property is outside the city limits?",
+          "a": "Then the West Monroe city page doesn't cover it. Unincorporated Ouachita Parish has its own rules, including the ditch along a public road. Start with the parish guide and confirm it with the parish. If you're not sure which side of the line you're on, say so. We'll help you sort it before we dig.",
+          "link": {
+            "href": "/fence-permit-ouachita-parish",
+            "label": "Ouachita Parish fence permit guide"
+          }
+        },
+        {
+          "q": "What moves the price?",
+          "a": "The material, how long the run is, the gates, and what the ground is doing. Wet spots, a slope toward the river, and an old fence that has to come out all change the job. We don't give a firm figure until we've seen the line.",
+          "link": {
+            "href": "/fence-cost-monroe",
+            "label": "Fence cost in Monroe and West Monroe"
+          }
         }
       ],
       "ctaHeadline": "Fencing a property in West Monroe?",
+      "ctaCopy": "Call (318) 351-2539. Tell us the street, about how long the run is, and whether it's a house, a shop, or a pasture. The estimate is free.",
       "kind": "area",
       "areaServed": [
-        "West Monroe, Louisiana"
+        "West Monroe, Louisiana",
+        "West Ouachita, Louisiana"
       ]
     },
     {
@@ -1278,10 +1473,10 @@
       "navLabel": "Aluminum fencing",
       "kind": "service",
       "kicker": "Aluminum fencing",
-      "heading": "Aluminum and ornamental fencing in Monroe, LA.",
+      "heading": "Aluminum fencing in Monroe and West Monroe.",
       "intro": "Ornamental fence is for when you want a line and a boundary without hiding the house. Aluminum is the version that does not ask you to paint it every few years. The posts and the gates are the job.",
-      "seoTitle": "Aluminum Fence Monroe LA | Twin City Fence",
-      "seoDescription": "Aluminum and ornamental fencing in Monroe and West Monroe, Louisiana. Open fencing for front yards, pools edges, and commercial frontage, built around the posts and gates.",
+      "seoTitle": "Aluminum Fence Monroe & West Monroe LA | Twin City Fence",
+      "seoDescription": "Aluminum and ornamental fence installation in Monroe and West Monroe. Open fencing for front yards and shop fronts, priced around the posts and gates. Call (318) 351-2539.",
       "service": "Aluminum and ornamental fence installation in Monroe and West Monroe",
       "sections": [
         {
@@ -1303,6 +1498,11 @@
           "kicker": "Where it gets used here",
           "heading": "Front yards, small commercial lots, and pool surrounds.",
           "body": "The usual residential job is a front or side yard that a privacy fence would close off, especially on streets where the house is the thing you want to see. Small commercial lots on the West Monroe side use it along the street and chain-link or a taller fence at the back. Pool surrounds are a different rule set: a fence around a pool has to do a safety job, and the city's pool-barrier rules are not the same as a decorative front fence. We will not guess those on a sales page. If the fence is for a pool, say so on the call and check the permit guide for the city you are actually in. We work from 205 Mane St, Ste C, West Monroe, on both sides of the river."
+        },
+        {
+          "kicker": "What it costs",
+          "heading": "Shorter runs, and the gate is a big piece of the price.",
+          "body": "Aluminum ornamental fence is usually the highest per foot of the residential fences we install in Monroe and West Monroe. You're paying for posts set so a light fence doesn't feel flimsy in the wind, and for a gate that stays square. A walk gate is straightforward. A drive gate is where the price and the sag show up, and the width is the decision you can't undo without moving a post. It does not buy privacy. If that's the job, wood or vinyl is the fence to price instead. A pool is a different rule than a front yard on Cypress Street or a house off Trenton. Say which one you have. We don't print a dollar-per-foot figure. Length, the gates, and the ground decide it, and we want to see the line. Call (318) 351-2539."
         }
       ],
       "ctaHeadline": "Planning an ornamental fence?",
@@ -1317,7 +1517,19 @@
         },
         {
           "q": "Can it go around a pool?",
-          "a": "Only if it meets the barrier rules for that city, which cover height, gaps, and the gate latch. Tell us it is a pool fence at the start, and check the Monroe or West Monroe permit page before anyone digs."
+          "a": "Only if it meets the barrier rules for that city, which cover height, gaps, and the gate latch. Tell us it is a pool fence at the start, and check the Monroe or West Monroe permit page before anyone digs.",
+          "link": {
+            "href": "/fence-permit-west-monroe",
+            "label": "West Monroe fence permit guide"
+          }
+        },
+        {
+          "q": "What drives the cost of an aluminum fence?",
+          "a": "The length, the gates, and how the posts have to be set. It usually costs more per foot than chain link or a pine privacy fence, and it still doesn't block the view. A drive gate is a large share of a short run. We'll price it on site, not from a chart.",
+          "link": {
+            "href": "/fence-cost-monroe",
+            "label": "Fence cost guide"
+          }
         }
       ]
     },
@@ -1408,23 +1620,38 @@
       "points": [
         {
           "title": "Chain-link",
-          "description": "Usually the lowest per foot. The right fence when the job is containment over a long run and you do not need to block a view."
+          "description": "Usually the lowest per foot. The right fence when the job is containment over a long run and you do not need to block a view.",
+          "link": "/chain-link-fence"
         },
         {
           "title": "Pine privacy",
-          "description": "More than chain-link. The common wood privacy fence in Monroe and West Monroe. Upkeep is part of owning it."
+          "description": "More than chain-link. The common wood privacy fence in Monroe and West Monroe. Upkeep is part of owning it.",
+          "link": "/wooden-fences"
         },
         {
           "title": "Vinyl privacy",
-          "description": "Often near pine, sometimes more once gates and style are counted. You are paying to avoid painting it."
+          "description": "Often near pine, sometimes more once gates and style are counted. You are paying to avoid painting it.",
+          "link": "/vinyl-fence"
         },
         {
           "title": "Cedar privacy",
-          "description": "More than pine. The extra is the wood. The posts are still what decide how long the fence stands."
+          "description": "More than pine. The extra is the wood. The posts are still what decide how long the fence stands.",
+          "link": "/wooden-fences"
         },
         {
           "title": "Aluminum ornamental",
-          "description": "Usually the highest per foot of these. It does not provide privacy. Gates and posts are a big part of the price."
+          "description": "Usually the highest per foot of these. It does not provide privacy. Gates and posts are a big part of the price.",
+          "link": "/aluminum-fence"
+        },
+        {
+          "title": "Commercial fencing",
+          "description": "A shop yard or a long perimeter. Chain link is the usual fence, and the drive gate is what moves the price.",
+          "link": "/commercial-fencing"
+        },
+        {
+          "title": "Gates",
+          "description": "A gate costs more than the same width of fence. Width and the post decide it, and both are cheaper to get right first.",
+          "link": "/gate-installation"
         }
       ],
       "faqs": [
@@ -1507,7 +1734,11 @@
     },
     {
       "q": "Should I choose wood or chain-link?",
-      "a": "Wood if you want privacy or the look; chain-link if the job is containment over a longer run. Chain-link covers more ground per dollar than anything else we build, which is why it tends to win on acreage and commercial yards. They are different fences for different problems rather than better and worse."
+      "a": "Wood if you want privacy or the look; chain-link if the job is containment over a longer run. Chain-link covers more ground per dollar than anything else we build, which is why it tends to win on acreage and commercial yards. They are different fences for different problems rather than better and worse.",
+      "link": {
+        "href": "/chain-link-fence",
+        "label": "Chain-link fence installation"
+      }
     },
     {
       "q": "Pine or cedar?",
@@ -1527,7 +1758,27 @@
     },
     {
       "q": "Do you fit gates as well?",
-      "a": "Yes, to wood, chain-link and ornamental fencing. The thing worth settling early is width — a drive gate narrow enough to be awkward gets clipped, and a gate that has been clipped never hangs right again. Measure for the vehicle that actually uses it, including the trailer."
+      "a": "Yes, to wood, chain-link and ornamental fencing. The thing worth settling early is width — a drive gate narrow enough to be awkward gets clipped, and a gate that has been clipped never hangs right again. Measure for the vehicle that actually uses it, including the trailer.",
+      "link": {
+        "href": "/gate-installation",
+        "label": "Gate installation"
+      }
+    },
+    {
+      "q": "Do you fence commercial properties?",
+      "a": "Yes. Shop yards and longer perimeters in Monroe and West Monroe, where the job is security and the gate gets opened all day. Chain link is usually the fence. Call (318) 351-2539 and tell us the address.",
+      "link": {
+        "href": "/commercial-fencing",
+        "label": "Commercial fencing"
+      }
+    },
+    {
+      "q": "Is aluminum a privacy fence?",
+      "a": "No. You can see through it, which is why people put it on a front yard or a shop front. If you need to block the view, that's wood or vinyl. Aluminum costs more per foot than those, and the gate is a big part of a short run.",
+      "link": {
+        "href": "/aluminum-fence",
+        "label": "Aluminum fencing"
+      }
     },
     {
       "q": "What areas do you cover?",
@@ -1550,7 +1801,7 @@
   "_gbpNote": "Owner-supplied Google share link, confirmed 2026-10-18. It redirects to a Search knowledge panel for kgmid /g/11fpss007l (Twin City Fence). A canonical google.com/maps place URL could not be resolved. Do not replace this with a generic Maps search.",
   "_addressNote": "Mitch confirmed 2026-10-18: publish 205 Mane St, Ste C, West Monroe, LA 71292. The 2026-09-21 note that said to hide this address is outdated.",
   "_hoursNote": "Leave hours unset until they are confirmed for this business. MapQuest has listed weekday and Saturday hours; those figures are not in this repo as a confirmed schedule, so they are not published.",
-  "updated": "2026-10-19",
+  "updated": "2026-11-11",
   "footerNav": true,
   "linkPlanningTools": true,
   "priceGuide": [],
