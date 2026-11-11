@@ -111,6 +111,24 @@ test("every print rule in the shared stylesheet is scoped to the calculator page
   }
 });
 
+test("a point link stays on this site, and a bad link stays plain text", () => {
+  const html = renderPage(site, {
+    slug: "fence-cost-monroe",
+    heading: "Fence cost.",
+    seoTitle: "t",
+    seoDescription: "d",
+    points: [
+      { title: "Chain-link", description: "The long run.", link: "/chain-link-fence" },
+      { title: "Wood", description: "Privacy.", link: "wooden-fences" },
+      { title: "Nope", description: "Left as text.", link: "javascript:alert(1)" },
+    ],
+  }, "twin-city-fences");
+  assert.match(html, /<a href="\/chain-link-fence">Chain-link<\/a>/);
+  assert.match(html, /<a href="\/wooden-fences">Wood<\/a>/);
+  assert.match(html, /<h3>Nope<\/h3>/);
+  assert.doesNotMatch(html, /href="javascript/i);
+});
+
 test("the lead form carries the page's own path, and the script refreshes it on submit", () => {
   const html = renderPage(site, site.pages[0], "twin-city-fences");
   assert.match(html, /<input type="hidden" name="page" value="\/fence-calculator">/);

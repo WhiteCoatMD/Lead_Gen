@@ -12,7 +12,7 @@
   "accentDark": "#9c1420",
   "logo": "logo.jpg",
   "kicker": "Fast towing services",
-  "headline": "Dallas towing, day or night.",
+  "headline": "Tow truck in Dallas, day or night.",
   "intro": "24-hour towing, roadside assistance, recovery, and junk-car removal across Dallas and Fort Worth.",
   "sectionKicker": "Prompt help on Dallas roads",
   "sectionHeadline": "A tow truck when you need one most.",
@@ -95,6 +95,10 @@
       "href": "/towing-oak-cliff.html"
     },
     {
+      "name": "Red Bird",
+      "href": "/towing-red-bird.html"
+    },
+    {
       "name": "Pleasant Grove",
       "href": "/towing-pleasant-grove.html"
     },
@@ -107,8 +111,16 @@
       "href": "/towing-desoto.html"
     },
     {
+      "name": "Cedar Hill",
+      "href": "/towing-cedar-hill.html"
+    },
+    {
       "name": "Lancaster",
       "href": "/towing-lancaster.html"
+    },
+    {
+      "name": "I-35E & I-20",
+      "href": "/towing-i-35e-i-20.html"
     },
     {
       "name": "Arlington",
@@ -145,8 +157,8 @@
   "primaryCta": "Call 24/7",
   "navCall": "Call now",
   "footerLine": "24-hour towing and roadside assistance from 1241 Willow Glen Dr, Dallas, Texas",
-  "seoTitle": "24 Hour Towing Dallas TX | Emergency Tow Trucks",
-  "seoDescription": "24-hour towing in Dallas and Fort Worth. Emergency tow trucks, roadside assistance, recovery, and junk-car removal.",
+  "seoTitle": "Tow Truck Dallas TX | 24 Hour Towing & Roadside Help",
+  "seoDescription": "Need a tow truck in Dallas? Call (469) 457-4462. Dispatch answers day and night for breakdowns, wrecks, lockouts, jump starts, and flatbeds.",
   "heroStyle": "plain",
   "assets": [
     "logo.jpg"
@@ -1452,6 +1464,148 @@
           "a": "Both. The freeway, Dallas Avenue, and the neighborhoods off Pleasant Run and Belt Line are the same service. A tight street around the square is worth describing so the truck can get in."
         }
       ]
+    },
+    {
+      "slug": "towing-cedar-hill.html",
+      "navLabel": "Cedar Hill",
+      "kind": "area",
+      "areaServed": [
+        "Cedar Hill, Texas"
+      ],
+      "kicker": "Cedar Hill",
+      "heading": "Towing in Cedar Hill, TX.",
+      "intro": "Cedar Hill is southwest of us, past Duncanville on US 67. The hills are real, Joe Pool Lake is the west edge, and we cover it from 1241 Willow Glen Dr in south Dallas. There is not a Cedar Hill yard.",
+      "seoTitle": "Towing Cedar Hill TX | 24 Hour Towing Dallas",
+      "seoDescription": "Towing in Cedar Hill, Texas, along US 67 and FM 1382. Hills, the old downtown, and Joe Pool Lake, from 1241 Willow Glen Dr. Call 469-457-4462.",
+      "service": "Towing in Cedar Hill, Texas",
+      "sections": [
+        {
+          "kicker": "The roads",
+          "heading": "67 splits the city. 1382 drops toward the lake.",
+          "body": "US 67 is the freeway through Cedar Hill. FM 1382 leaves it and runs west toward Joe Pool Lake and Cedar Hill State Park, across the hills. Pleasant Run Road and Hillside Village, the center people still call Uptown Village, sit up by the freeway. The old downtown is on the hill, not on the frontage road, and a car that quit on one of those slopes is a different call from a car in a store lot. Tell dispatch which one you are. Direction on 67 matters: toward Dallas, or toward Midlothian. The frontage by the shops is a third answer, and it is the one people describe badly."
+        },
+        {
+          "kicker": "How far",
+          "heading": "Past Duncanville. Not a north-Dallas trip.",
+          "body": "1241 Willow Glen Dr, 75232, is north and east of Cedar Hill. Duncanville is the suburb in between. This is a real drive, longer than Oak Cliff and still nothing like a run to Plano. We do not keep a truck parked at 67 and FM 1382. 24 Hour Towing Dallas has one published address, and Cedar Hill is inside the area dispatch covers. If the car is in a live lane, ask what the current run looks like. If it is in a driveway and can wait, the miles are just part of the job."
+        },
+        {
+          "kicker": "The hills",
+          "heading": "Slope and a tight street change the truck.",
+          "body": "Cedar Hill is named for the ground. Driveways pitch, the older streets around the downtown hill are tight, and a flatbed needs a straight run to tilt. A car that died halfway up a drive, or one that will not hold on a slope, needs that said on the phone. Cul-de-sacs west of 67 have the same problem once cars are parked on both sides. If the car is in a garage, the door height and how much driveway is in front of it matter more than the neighborhood name. A car that has sunk into a yard is a winch conversation, not a surprise at the curb."
+        },
+        {
+          "kicker": "Same number",
+          "heading": "Tow, roadside, or a winch. One line.",
+          "body": "Towing, flatbeds, jump starts, tire changes, lockouts, fuel, winch-outs, and accident tows all use the Dallas 24-hour number. Where the vehicle goes is your call: a shop in Cedar Hill, a dealer back up 67, or a house in Duncanville. Have the address if you have picked one. All-wheel drive, a car that will not come out of park, and missing keys all change which truck is sent. Say them while you are on the phone. The line is answered day and night, including for a car that can wait until morning."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Cedar Hill?",
+      "faqs": [
+        {
+          "q": "Are you a Cedar Hill company?",
+          "a": "No. We are 24 Hour Towing Dallas, at 1241 Willow Glen Dr, Dallas, TX 75232. Cedar Hill is covered from that address, past Duncanville on US 67. There is not a second office in Cedar Hill."
+        },
+        {
+          "q": "Do you cover FM 1382 and the lake, or only US 67?",
+          "a": "Both. The freeway, the frontage, the old downtown on the hill, and the roads toward Joe Pool Lake are the same dispatch. A slope or a tight street is worth describing so the truck that shows up can actually load the car."
+        }
+      ]
+    },
+    {
+      "slug": "towing-red-bird.html",
+      "navLabel": "Red Bird",
+      "kind": "area",
+      "areaServed": [
+        "Red Bird, Dallas, Texas",
+        "Southwest Dallas, Texas"
+      ],
+      "kicker": "Red Bird",
+      "heading": "Towing in Red Bird and southwest Dallas.",
+      "intro": "Red Bird is the name people still use for this part of southwest Dallas, around US 67 and Camp Wisdom. Our base at 1241 Willow Glen Dr, 75232, is in this part of the city. This is the short run.",
+      "seoTitle": "Towing Red Bird & Southwest Dallas | 24 Hour Towing Dallas",
+      "seoDescription": "Towing in Red Bird and southwest Dallas, at US 67, Camp Wisdom, and I-20. Dispatched from 1241 Willow Glen Dr, 75232. Call 469-457-4462, 24 hours.",
+      "service": "Towing in Red Bird and southwest Dallas",
+      "sections": [
+        {
+          "kicker": "The landmark",
+          "heading": "The mall, 67, and I-20.",
+          "body": "The place people point at is The Shops at RedBird, the mall folks still call Red Bird Mall or Southwest Center, on Camp Wisdom at Marvin D. Love Freeway. US 67 and I-20 meet on this side of town. Dallas Executive Airport, the field that used to be Redbird Airport, sits along 67 and is the landmark for the west side. A breakdown in a mall lot, on the 67 frontage, or on I-20 are three different places to send a truck. Name the store or the cross street, the direction, and whether you are on the main lanes or the frontage."
+        },
+        {
+          "kicker": "How close",
+          "heading": "The base is in this part of Dallas.",
+          "body": "75232 is southwest Dallas. This page is not a far suburb with the city name swapped in. The published address is 1241 Willow Glen Dr, and Red Bird is the area around it. That does not mean a truck sits in the mall lot waiting on your call. It means the drive is one of the shortest we make. If two companies answer and time is the only difference, ask both what the run looks like right now. A page cannot know which truck is closer at 1 a.m."
+        },
+        {
+          "kicker": "Off the freeway",
+          "heading": "Lots, apartments, and side streets.",
+          "body": "A lot of these calls never touch the freeway. A car that will not start outside a store on Camp Wisdom. A flat in an apartment lot off Wheatland. A lockout. Cars boxed in by other vehicles, and garages under buildings where a flatbed cannot tilt. If you can read a posted clearance, that number saves a wasted trip. Neighborhood streets between Loop 12 and I-20 are ordinary tows once we have a cross street. 'Red Bird' by itself covers too much ground to find a car."
+        },
+        {
+          "kicker": "Same work",
+          "heading": "One number for the tow and the roadside job.",
+          "body": "Jump starts, tires, fuel, lockouts, flatbeds, accident tows, and winch-outs are the same menu as the rest of Dallas. A car that left the pavement off 67, or along a soft shoulder, is a winch job if the tires are in the dirt. Say so. Where the vehicle goes is yours: a shop on Camp Wisdom, a house in Oak Cliff, or a dealer up 67. All-wheel drive, a car that will not come out of park, and a missing key all change the truck. Say them on the call, not when the driver is standing there."
+        }
+      ],
+      "ctaHeadline": "Need a tow in Red Bird?",
+      "faqs": [
+        {
+          "q": "Is your shop in Red Bird?",
+          "a": "The address is 1241 Willow Glen Dr, Dallas, TX 75232, which is this part of southwest Dallas. Customers do not drop cars there. We come to the vehicle. There is not a second counter at the mall."
+        },
+        {
+          "q": "Do you pick up at the mall and on US 67?",
+          "a": "Yes. Tell dispatch whether you are in a lot at The Shops at RedBird, on Camp Wisdom, on the 67 frontage, or on I-20, and which direction you were headed. Those are different places."
+        }
+      ]
+    },
+    {
+      "slug": "towing-i-35e-i-20.html",
+      "navLabel": "I-35E & I-20",
+      "kind": "area",
+      "areaServed": [
+        "I-35E and I-20, Dallas, Texas"
+      ],
+      "kicker": "I-35E and I-20",
+      "heading": "Towing at I-35E and I-20 in south Dallas.",
+      "intro": "I-35E and I-20 cross in south Dallas, a short run from our base at 1241 Willow Glen Dr. The hard part of this call is not the neighborhood name. It is which road you are on, and which side of it.",
+      "seoTitle": "I-35E & I-20 Towing South Dallas | 24 Hour Towing Dallas",
+      "seoDescription": "Towing at the I-35E and I-20 interchange in south Dallas. Main lanes, frontage roads, and Camp Wisdom, from 1241 Willow Glen Dr. Call 469-457-4462.",
+      "service": "Towing at I-35E and I-20 in south Dallas",
+      "sections": [
+        {
+          "kicker": "The interchange",
+          "heading": "35E and 20. Not the downtown mixmaster.",
+          "body": "This is where I-35E, the R.L. Thornton Freeway through south Dallas, crosses I-20. Camp Wisdom Road is the exit just north of the stack. Wheatland Road and Danieldale Road are just south, where Dallas, DeSoto, and Lancaster meet. US 67 is a different freeway, off to the west toward Red Bird. If you say 'the mixmaster,' a lot of people hear I-30 downtown. Say 35E and 20, and say which direction you were going."
+        },
+        {
+          "kicker": "Being found",
+          "heading": "Direction and the frontage road are the whole job.",
+          "body": "Northbound and southbound 35E, and eastbound and westbound 20, are four different shoulders. The frontage roads are another. A truck coming from Willow Glen cannot hop the barrier to the opposite side. Give the direction, whether you are on the main lanes or the frontage, and the last sign you can actually read. A pin from your phone settles it. If you are in a live lane, get out on the side away from traffic when you can do that safely, and put the hazards on. Lead the call with the fact that you are in a live lane. A stopped car on this interchange is not a place to stand at the bumper."
+        },
+        {
+          "kicker": "From the base",
+          "heading": "South Dallas to the stack is a short run.",
+          "body": "The base is in 75232, north of I-20 and west of this interchange, between US 67 and I-35E. It is one of the places that address can reach without crossing the metro. We still do not stage a truck on the ramp. Dispatch is 24 hours. If the car is in a dangerous spot, ask what the timing looks like and decide with that answer, not with a sentence on a website. If you made it onto a frontage road and the car can wait, the drive over is ordinary."
+        },
+        {
+          "kicker": "Off the ramp",
+          "heading": "Frontage roads and Camp Wisdom count too.",
+          "body": "Not every call here is a shoulder. The frontage roads have businesses, and Camp Wisdom has the same parking-lot breakdowns it has over in Red Bird. A car at a shop just off the exit needs the business name. A car that got off 35E and died on a side street needs the cross street. Accident damage goes to the body shop you name. We do not pick it. Roadside work, a flatbed, and a winch-out if the car left the pavement are all on this same number. All-wheel drive and a car that will not roll are worth saying before the truck is chosen."
+        }
+      ],
+      "ctaHeadline": "Stuck at 35E and 20?",
+      "faqs": [
+        {
+          "q": "Which freeway should I name first?",
+          "a": "The one your car is actually on. Then the direction, and whether you are on the main lanes, the shoulder, or a frontage road. I-35E at I-20 is not the downtown mixmaster with I-30. Say 35 and 20 so the truck is not sent to the wrong stack."
+        },
+        {
+          "q": "Are you close to this interchange?",
+          "a": "The base is 1241 Willow Glen Dr in south Dallas, 75232, north of I-20 and west of the I-35E stack. It is a short run compared with north Dallas. Ask on the call if you need the current timing. A page cannot see traffic."
+        }
+      ]
     }
   ],
   "leadForm": {
@@ -1499,7 +1653,7 @@
     },
     {
       "q": "What areas do you cover?",
-      "a": "Dallas, including Oak Cliff and Pleasant Grove, and the southern suburbs closest to the south Dallas base: Duncanville, DeSoto, and Lancaster. Also Arlington, Grand Prairie, Irving, Fort Worth, Garland, Mesquite, and Plano. The address is 1241 Willow Glen Dr, 75232, so the south side is the short run and Plano is the long one. If you are near the edge, ask when you call."
+      "a": "Dallas, including Oak Cliff, Red Bird, and Pleasant Grove, plus the I-35E and I-20 interchange. The southern suburbs closest to the south Dallas base are Duncanville, Cedar Hill, DeSoto, and Lancaster. Also Arlington, Grand Prairie, Irving, Fort Worth, Garland, Mesquite, and Plano. The address is 1241 Willow Glen Dr, 75232, so the south side is the short run and Plano is the long one. If you are near the edge, ask when you call."
     }
   ],
   "streetAddress": "1241 Willow Glen Dr",
@@ -1528,7 +1682,7 @@
       "time": "Open 24 hours"
     }
   ],
-  "updated": "2026-10-18",
+  "updated": "2026-11-11",
   "footerNav": true,
   "stepsKicker": "How a tow works",
   "stepsHeadline": "From the call to the truck.",
