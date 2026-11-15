@@ -1,0 +1,161 @@
+/* Festive layer for Custom Letters from Santa Claus only.
+   Appended after shared/store.css by the site build. Other stores do not load this file. */
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/assets/nunito-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/assets/nunito-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/assets/nunito-800.woff2") format("woff2");
+}
+
+body {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(circle at 6% 8%, rgba(255, 255, 255, 0.95) 0 2px, transparent 3px),
+    radial-gradient(circle at 94% 14%, rgba(255, 255, 255, 0.9) 0 2px, transparent 3px),
+    radial-gradient(circle at 18% 62%, rgba(255, 255, 255, 0.75) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 88% 74%, rgba(255, 255, 255, 0.8) 0 2px, transparent 3px),
+    radial-gradient(circle at 48% 40%, rgba(255, 248, 230, 0.9) 0 1.5px, transparent 2.5px);
+}
+
+body::before {
+  content: "";
+  display: block;
+  height: 8px;
+  background: linear-gradient(90deg, var(--accent) 0 34%, var(--pine) 34% 67%, #c8922a 67% 100%);
+}
+
+.mast {
+  background: rgba(255, 253, 248, 0.92);
+}
+
+h1, h2, .brand-text, legend {
+  font-weight: 800;
+}
+
+.button {
+  border-radius: 999px;
+}
+
+.product,
+.buy-box,
+.faq-item,
+fieldset,
+.pdp-media img,
+.hero-photo,
+.page-figure img {
+  border-radius: 22px;
+}
+
+.product,
+.buy-box,
+.faq-item {
+  box-shadow: 0 10px 28px rgba(120, 42, 24, 0.08);
+}
+
+.hero {
+  align-items: center;
+}
+
+.hero-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 16px 36px rgba(90, 32, 16, 0.16);
+}
+
+.ornament-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0 0.4rem;
+}
+
+.ornament-row img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.product-media {
+  background: #fff;
+}
+
+.product-media img,
+.pdp-media img {
+  object-fit: contain;
+  background: #fff;
+  padding: 0.85rem;
+}
+
+.step-art {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.bundle-note {
+  margin: 0;
+  font-weight: 800;
+  color: var(--pine);
+}
+
+.page-figure {
+  margin: 0 0 1.2rem;
+}
+
+.page-figure img {
+  width: min(100%, 640px);
+  height: auto;
+  display: block;
+  border: 4px solid #fff;
+  box-shadow: 0 12px 28px rgba(90, 32, 16, 0.12);
+}
+
+.band .kicker {
+  color: #ffe08a;
+}
+
+.remove-child,
+[data-remove-child] {
+  justify-self: start;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    align-items: center;
+  }
+  .ornament-row img {
+    width: 84px;
+    height: 84px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-photo,
+  .product,
+  .page-figure img {
+    box-shadow: none;
+  }
+}

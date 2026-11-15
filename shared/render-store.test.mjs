@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import { renderShop } from "./render-shop.mjs";
-import { renderStore, storeDocuments } from "./render-store.mjs";
+import { childBundlePrice, renderStore, storeDocuments } from "./render-store.mjs";
 import { sitemapXml } from "../scripts/lib/sitemap.mjs";
 import {
   addLine,
@@ -189,7 +189,30 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.match(html, /December 24, 2026/);
   assert.match(html, /data-omit-checkout-query="true"/);
   assert.equal(html.includes(">USPS<"), false);
-  assert.match(html, />SANTA</);
+  assert.match(html, /class="hero-photo"/);
+  assert.match(html, /Santa Claus at his desk/);
+  assert.doesNotMatch(html, />SANTA</);
+  assert.match(html, /spot-envelope.webp/);
+  assert.match(html, /loading="lazy"/);
+  assert.match(bundlePage, /One flat price of \$28\.95 for 2 or more children in the same household/);
+  assert.match(bundlePage, /data-extra-child-price="0"/);
+  assert.match(bundlePage, /data-base-price="28.95"/);
+  assert.match(bundlePage, /data-base-children="2"/);
+  assert.match(bundlePage, /Add another child/);
+  assert.match(bundlePage, /name="child1Name"/);
+  assert.match(bundlePage, /name="child2Name"/);
+  assert.equal((bundlePage.match(/data-child-slot/g) || []).length >= 3, true);
+  assert.doesNotMatch(between(bundlePage, 'data-child-slots', "</form>").slice(0, between(bundlePage, 'data-child-slots', "data-child-template").length), /type="email"/);
+  assert.match(bundlePage, /name="buyerEmail"/);
+  assert.match(faq, /one flat price of \$28\.95 for 2 or more children in the same household/i);
+  assert.match(shipping, /one flat price of \$28\.95 for 2 or more children in the same household/);
+  assert.match(terms, /one flat price of \$28\.95 for 2 or more children in the same household/);
+  const bundleLd = blocks(bundlePage).find((block) => block["@type"] === "Product");
+  assert.match(bundleLd.description, /2 or more children in the same household/);
+  assert.match(bundleLd.description, /own envelope/);
+  assert.doesNotMatch([bundlePage, faq, shipping, terms].join("\n"), /mailed together/i);
+  assert.equal(bundleLd.offers.price, "28.95");
+  assert.equal(site.products.find((product) => product.slug === "sibling-bundle").bundlePricing.extraChildPrice, 0);
   const rendered = [html, ...docs.pages.map((page) => page.html), ...docs.files.map((file) => file.body)].join("\n");
   assert.doesNotMatch(rendered, /last-order/i);
   assert.doesNotMatch(rendered, /last day to order/i);
@@ -203,6 +226,14 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.doesNotMatch(rendered, /\$14\.95/);
   assert.equal(rendered.includes("aggregateRating"), false);
   assert.equal(rendered.includes("testimonial"), false);
+});
+
+test("sibling bundle price stays flat unless an extra-child price is configured", () => {
+  assert.equal(childBundlePrice({ basePrice: 28.95, baseChildren: 2, extraChildPrice: 0, count: 2 }), 28.95);
+  assert.equal(childBundlePrice({ basePrice: 28.95, baseChildren: 2, extraChildPrice: 0, count: 6 }), 28.95);
+  assert.equal(childBundlePrice({ basePrice: 28.95, baseChildren: 2, extraChildPrice: 5, count: 2 }), 28.95);
+  assert.equal(childBundlePrice({ basePrice: 28.95, baseChildren: 2, extraChildPrice: 5, count: 4 }), 38.95);
+  assert.equal(childBundlePrice({ basePrice: 28.95, baseChildren: 2, extraChildPrice: -1, count: 5 }), 28.95);
 });
 
 test("North Pole postmark upgrade is absent until the flag is turned on", async () => {

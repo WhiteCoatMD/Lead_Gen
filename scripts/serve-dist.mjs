@@ -8,7 +8,20 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const [slug, port = "4173"] = process.argv.slice(2);
 if (!slug) throw new Error("Usage: node scripts/serve-dist.mjs <slug> [port]");
 const base = path.join(root, "dist", slug);
-const TYPES = { ".html": "text/html", ".mjs": "text/javascript", ".js": "text/javascript", ".css": "text/css", ".svg": "image/svg+xml", ".xml": "application/xml", ".txt": "text/plain" };
+const TYPES = {
+  ".html": "text/html",
+  ".mjs": "text/javascript",
+  ".js": "text/javascript",
+  ".css": "text/css",
+  ".svg": "image/svg+xml",
+  ".xml": "application/xml",
+  ".txt": "text/plain",
+  ".webp": "image/webp",
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".png": "image/png",
+  ".woff2": "font/woff2",
+};
 
 http.createServer(async (req, res) => {
   let p = path.normalize(decodeURIComponent(new URL(req.url, "http://x").pathname)).replace(/^([/\\])+/, "");
