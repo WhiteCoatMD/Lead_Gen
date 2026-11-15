@@ -40,16 +40,32 @@ export function buildPrompt(child) {
   ].join("\n");
 }
 
+function bare(detail) {
+  return String(detail || "").trim().replace(/[.?!]+$/, "");
+}
+
+function accomplishmentSentence(detail) {
+  const text = bare(detail);
+  if (!text) return "";
+  if (/^(I|She|He|They|We|You)\b/.test(text)) return `${text}. That took heart.`;
+  if (/^[A-Z][a-z]+ed\b/.test(text)) return `You ${text.charAt(0).toLowerCase()}${text.slice(1)}. That took heart.`;
+  return `${text}. That took heart.`;
+}
+
 export function fallbackLetter(child) {
   const lines = [
     `Dear ${child.firstName},`,
     "",
     `Merry Christmas. I am glad to write to you in ${child.town}. You are ${child.age}, and I like knowing that.`,
   ];
-  if (child.accomplishment) lines.push("", `I heard about this: ${child.accomplishment}. That took heart.`);
-  if (child.friendOrPet) lines.push("", `${child.friendOrPet} is part of your days, and that is a good thing.`);
-  if (child.workOn) lines.push("", `You are working on ${child.workOn}. I am proud of you for trying. Keep at it kindly.`);
-  if (child.wishlist) lines.push("", `I read what you are hoping for: ${child.wishlist}. I cannot promise those wishes. I am glad to know what matters to you.`);
+  const done = accomplishmentSentence(child.accomplishment);
+  if (done) lines.push("", done);
+  const friend = bare(child.friendOrPet);
+  if (friend) lines.push("", `${friend} is part of your days, and that is a good thing.`);
+  const work = bare(child.workOn);
+  if (work) lines.push("", `You are working on ${work}. I am proud of you for trying. Keep at it kindly.`);
+  const wishes = bare(child.wishlist);
+  if (wishes) lines.push("", `I read what you are hoping for: ${wishes}. I cannot promise those wishes. I am glad to know what matters to you.`);
   lines.push("", "With love,", "Santa");
   return lines.join("\n");
 }
@@ -78,11 +94,22 @@ export async function draftForChild(child, { generate, model = DEFAULT_MODEL } =
   return { body: fallbackLetter(child), model: "fallback" };
 }
 
+// api-key wins when it is set. Otherwise the AI SDK gateway provider uses
+// VERCEL_OIDC_TOKEN. Neither one means the caller should use the template.
+export function gatewayAuthMode(env = process.env) {
+  if (String(env?.AI_GATEWAY_API_KEY || "").trim()) return "api-key";
+  if (String(env?.VERCEL_OIDC_TOKEN || "").trim()) return "oidc";
+  return "none";
+}
+
 export async function generateWithGateway(prompt, env = process.env) {
-  if (!env.AI_GATEWAY_API_KEY) throw new Error("AI_GATEWAY_API_KEY is not set");
-  const { generateText } = await import("ai");
+  const mode = gatewayAuthMode(env);
+  if (mode === "none") throw new Error("AI Gateway credentials are not set");
+  const { generateText, createGateway } = await import("ai");
+  const modelId = env.AI_GATEWAY_MODEL || DEFAULT_MODEL;
+  const model = mode === "api-key" ? modelId : createGateway()(modelId);
   const { text } = await generateText({
-    model: env.AI_GATEWAY_MODEL || DEFAULT_MODEL,
+    model,
     prompt,
     maxRetries: 0,
     timeout: 20000,

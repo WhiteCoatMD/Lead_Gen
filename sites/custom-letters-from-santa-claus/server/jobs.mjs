@@ -1,13 +1,14 @@
 import { letterMessage, sendGraphMail } from "./email.mjs";
 import { cronAuthorized, denyUnlessSanta } from "./gate.mjs";
 import { createLobLetter } from "./lob.mjs";
-import { dueForPurge } from "./retention.mjs";
+import { childPurgeDue, parentIdentityDue, unpaidChildPurgeDue } from "./retention.mjs";
 import { chicagoDateString } from "./time.mjs";
 import { createSupabaseDb } from "./supabase-db.mjs";
 
 // Approved letters only. Email and Lob stay off until their flags are true.
 // While a flag is off, the job logs "would send" or "would mail" and leaves
 // the letter approved. Postmark orders are never given to Lob.
+// One send failure is recorded on that letter and does not stop the others.
 
 export async function handleJobs(request, deps = {}) {
   const env = deps.env || process.env;
@@ -19,7 +20,7 @@ export async function handleJobs(request, deps = {}) {
   const now = deps.now || new Date();
   const log = deps.log || console.log;
   const today = chicagoDateString(now);
-  const summary = { wouldSend: 0, sent: 0, wouldMail: 0, mailed: 0, held: 0, purged: 0 };
+  const summary = { wouldSend: 0, sent: 0, wouldMail: 0, mailed: 0, held: 0, purged: 0, failed: 0 };
 
   for (const order of await db.listQueue()) {
     if (order.status !== "paid") continue;
@@ -44,10 +45,16 @@ export async function handleJobs(request, deps = {}) {
           log(`would send letter ${draft.id} to ${order.recipientEmail || order.parentEmail}`);
           continue;
         }
-        const send = deps.sendMail || ((message) => sendGraphMail(message, env, deps.fetch || globalThis.fetch));
-        await send(letterMessage(order, draft, child));
-        await db.updateDraft(draft.id, { status: "sent", sentAt: now.toISOString(), provider: "graph" });
-        summary.sent += 1;
+        try {
+          const send = deps.sendMail || ((message) => sendGraphMail(message, env, deps.fetch || globalThis.fetch));
+          await send(letterMessage(order, draft, child));
+          await db.updateDraft(draft.id, { status: "sent", sentAt: now.toISOString(), provider: "graph", sendError: "" });
+          summary.sent += 1;
+        } catch (error) {
+          summary.failed += 1;
+          log(`send failed ${draft.id}`);
+          await db.updateDraft(draft.id, { sendError: String(error?.message || "send failed").slice(0, 300) }).catch(() => {});
+        }
         continue;
       }
       if (order.postmark) continue;
@@ -56,18 +63,35 @@ export async function handleJobs(request, deps = {}) {
         log(`would mail letter ${draft.id}`);
         continue;
       }
-      const send = deps.sendLob || ((current, item) => createLobLetter(current, item, env, deps.fetch || globalThis.fetch));
-      const result = await send(order, draft);
-      await db.updateDraft(draft.id, { status: "mailed", sentAt: now.toISOString(), provider: "lob", providerId: result?.id || "" });
-      summary.mailed += 1;
+      try {
+        const send = deps.sendLob || ((current, item) => createLobLetter(current, item, env, deps.fetch || globalThis.fetch));
+        const result = await send(order, draft);
+        await db.updateDraft(draft.id, { status: "mailed", sentAt: now.toISOString(), provider: "lob", providerId: result?.id || "", sendError: "" });
+        summary.mailed += 1;
+      } catch (error) {
+        summary.failed += 1;
+        log(`mail failed ${draft.id}`);
+        await db.updateDraft(draft.id, { sendError: String(error?.message || "mail failed").slice(0, 300) }).catch(() => {});
+      }
     }
   }
 
   for (const order of await db.listQueue()) {
     for (const draft of order.drafts || []) {
-      if (!dueForPurge(draft, now)) continue;
+      if (!childPurgeDue(draft, now)) continue;
       await db.purgeDraft(draft.id, now);
       await db.audit({ orderId: order.id, draftId: draft.id, action: "child_details_deleted", actor: "cron", detail: {} });
+      summary.purged += 1;
+    }
+    if (unpaidChildPurgeDue(order, now)) {
+      await db.purgeOrderChildren(order.id, now);
+      await db.audit({ orderId: order.id, action: "child_details_deleted", actor: "cron", detail: { reason: "unpaid" } });
+      summary.purged += 1;
+    }
+    const fresh = await db.getOrder(order.id);
+    if (parentIdentityDue(fresh, now)) {
+      await db.redactOrderIdentity(order.id, now);
+      await db.audit({ orderId: order.id, action: "parent_details_deleted", actor: "cron", detail: {} });
       summary.purged += 1;
     }
   }

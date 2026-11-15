@@ -52,6 +52,10 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
       deliveryDate: order.delivery_date || "",
       stripeSessionId: order.stripe_session_id || "",
       stripePaymentIntentId: order.stripe_payment_intent_id || "",
+      createdAt: order.created_at || "",
+      updatedAt: order.updated_at || "",
+      identityRedactedAt: order.identity_redacted_at || "",
+      childrenRedactedAt: order.children_redacted_at || "",
       address: {
         name: order.mailing_name || "",
         street: order.mailing_street || "",
@@ -71,7 +75,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
     const ids = rows.map((row) => row.id).join(",");
     const [children, drafts, messages] = await Promise.all([
       call("GET", `children?order_id=in.(${ids})&select=id,order_id,position,first_name,age,town,friend_or_pet,accomplishment,work_on,wishlist&order=position.asc`),
-      call("GET", `letter_drafts?order_id=in.(${ids})&select=id,order_id,child_id,body,model,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id`),
+      call("GET", `letter_drafts?order_id=in.(${ids})&select=id,order_id,child_id,body,model,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id,send_error`),
       call("GET", `order_messages?order_id=in.(${ids})&select=id,order_id,kind,to_email,subject,body,status,created_at`),
     ]);
     return rows.map((row) => view(
@@ -82,7 +86,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
     ));
   }
 
-  const orderSelect = "id,stripe_session_id,stripe_payment_intent_id,product,product_name,product_cents,postmark_cents,amount_cents,status,parent_email,recipient_email,recipient_confirmed,delivery_date,mailing_name,mailing_street,mailing_city,mailing_state,mailing_zip,postmark_addon,letter_count,created_at,updated_at";
+  const orderSelect = "id,stripe_session_id,stripe_payment_intent_id,product,product_name,product_cents,postmark_cents,amount_cents,status,parent_email,recipient_email,recipient_confirmed,delivery_date,mailing_name,mailing_street,mailing_city,mailing_state,mailing_zip,postmark_addon,letter_count,created_at,updated_at,identity_redacted_at,children_redacted_at";
 
   return {
     async insertPending(order) {
@@ -224,7 +228,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
       return hydrate(rows || []);
     },
     async getDraft(id) {
-      const rows = await call("GET", `letter_drafts?id=eq.${id}&select=id,order_id,child_id,body,model,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id`);
+      const rows = await call("GET", `letter_drafts?id=eq.${id}&select=id,order_id,child_id,body,model,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id,send_error`);
       return rows?.[0] ? fromDraft(rows[0]) : null;
     },
     async updateDraft(id, patch) {
@@ -239,6 +243,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
       if ("providerId" in patch) body.provider_id = patch.providerId || null;
       if ("childId" in patch) body.child_id = patch.childId;
       if ("model" in patch) body.model = patch.model;
+      if ("sendError" in patch) body.send_error = patch.sendError || null;
       body.updated_at = new Date().toISOString();
       const rows = await call("PATCH", `letter_drafts?id=eq.${id}`, { prefer: "return=representation", body });
       return fromDraft(rows[0]);
@@ -257,6 +262,55 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
         });
       }
       return this.getDraft(id);
+    },
+    async purgeOrderChildren(orderId, now) {
+      const order = await this.getOrder(orderId);
+      if (!order || order.childrenRedactedAt) return null;
+      await call("PATCH", `letter_drafts?order_id=eq.${orderId}`, {
+        prefer: "return=minimal",
+        body: { body: "", redacted_at: now.toISOString(), child_id: null },
+      });
+      await call("DELETE", `children?order_id=eq.${orderId}`, { prefer: "return=minimal" });
+      await call("PATCH", `orders?id=eq.${orderId}`, {
+        prefer: "return=minimal",
+        body: { children_redacted_at: now.toISOString(), updated_at: now.toISOString() },
+      });
+      await call("PATCH", `order_messages?order_id=eq.${orderId}`, {
+        prefer: "return=minimal",
+        body: { body: "", subject: "Order record" },
+      });
+      return this.getOrder(orderId);
+    },
+    async redactOrderIdentity(orderId, now) {
+      await call("PATCH", `orders?id=eq.${orderId}`, {
+        prefer: "return=minimal",
+        body: {
+          parent_email: "",
+          recipient_email: null,
+          mailing_name: null,
+          mailing_street: null,
+          mailing_city: null,
+          mailing_state: null,
+          mailing_zip: null,
+          identity_redacted_at: now.toISOString(),
+          updated_at: now.toISOString(),
+        },
+      });
+      await call("PATCH", `order_messages?order_id=eq.${orderId}`, {
+        prefer: "return=minimal",
+        body: { body: "", subject: "Order record", to_email: "" },
+      });
+      return this.getOrder(orderId);
+    },
+    async countLoginFailures(ip, since) {
+      const rows = await call("GET", `admin_login_attempts?ip=eq.${encodeURIComponent(ip)}&attempted_at=gte.${encodeURIComponent(since.toISOString())}&select=id`);
+      return Array.isArray(rows) ? rows.length : 0;
+    },
+    async recordLoginFailure(ip, at) {
+      await call("POST", "admin_login_attempts", {
+        prefer: "return=minimal",
+        body: { ip, attempted_at: at.toISOString() },
+      });
     },
   };
 }
@@ -290,6 +344,7 @@ function fromDraft(row) {
     redactedAt: row.redacted_at || "",
     provider: row.provider || "",
     providerId: row.provider_id || "",
+    sendError: row.send_error || "",
   };
 }
 

@@ -35,16 +35,19 @@ export async function handleWebhook(request, deps = {}) {
   const orderId = session.metadata?.order_id || session.client_reference_id;
   let order = orderId ? await db.getOrder(orderId) : null;
   if (!order) return { status: 200, body: { ok: true, missing: true } };
-  if (order.status !== "paid") {
-    if (Number(session.amount_total) !== Number(order.totalCents)) {
-      await db.audit({ orderId: order.id, action: "amount_mismatch", actor: "stripe", detail: { amount: session.amount_total } });
-      if (event.id) await db.saveEvent(event.id);
-      return { status: 200, body: { ok: true, mismatch: true } };
-    }
-    const paymentIntent = typeof session.payment_intent === "string" ? session.payment_intent : session.payment_intent?.id || "";
-    order = await db.markPaid(order.id, paymentIntent);
-    await storeConfirmation(db, env, deps, order);
+  if (order.status === "paid") {
+    if (event.id) await db.saveEvent(event.id);
+    return { status: 200, body: { ok: true, duplicate: true } };
   }
+  if (Number(session.amount_total) !== Number(order.totalCents)) {
+    await db.audit({ orderId: order.id, action: "amount_mismatch", actor: "stripe", detail: { amount: session.amount_total } });
+    if (event.id) await db.saveEvent(event.id);
+    return { status: 200, body: { ok: true, mismatch: true } };
+  }
+  const paymentIntent = typeof session.payment_intent === "string" ? session.payment_intent : session.payment_intent?.id || "";
+  order = await db.markPaid(order.id, paymentIntent);
+  if (order.status !== "paid") return { status: 200, body: { ok: true, duplicate: true } };
+  await storeConfirmation(db, env, deps, order);
 
   const generate = deps.generate || ((prompt) => generateWithGateway(prompt, env));
   const model = env.AI_GATEWAY_MODEL || DEFAULT_MODEL;

@@ -7,25 +7,43 @@ import { chicagoDateString } from "./time.mjs";
 import { createSupabaseDb } from "./supabase-db.mjs";
 
 const LOCKED = new Set(["sent", "mailed"]);
+const WINDOW_MS = 15 * 60 * 1000;
+const MAX_ATTEMPTS = 5;
+
+function clientIp(request) {
+  const forwarded = request.headers?.["x-forwarded-for"] || request.headers?.["x-real-ip"] || "";
+  return String(forwarded).split(",")[0].trim() || "unknown";
+}
 
 export async function handleAdmin(request, deps = {}) {
   const env = deps.env || process.env;
   const denied = denyUnlessSanta(env);
   if (denied) return denied;
-  const db = deps.db || createSupabaseDb(env, deps.fetch);
   const now = deps.now || new Date();
   const secure = String(request.headers?.["x-forwarded-proto"] || "").includes("https");
   const url = new URL(request.url || "/", "http://localhost");
   const body = request.body || {};
+  const database = () => deps.db || createSupabaseDb(env, deps.fetch);
 
   if (request.method === "POST" && body.action === "login") {
     if (!env.ADMIN_PASSWORD) return { status: 503, body: { error: "ADMIN_PASSWORD is not set" } };
-    if (!passwordMatches(body.password, env.ADMIN_PASSWORD)) return { status: 401, body: { error: "Wrong password" } };
-    return {
-      status: 200,
-      headers: { "Set-Cookie": sessionCookie(env.ADMIN_PASSWORD, { now: now.getTime(), secure }) },
-      body: { ok: true },
-    };
+    if (passwordMatches(body.password, env.ADMIN_PASSWORD)) {
+      return {
+        status: 200,
+        headers: { "Set-Cookie": sessionCookie(env.ADMIN_PASSWORD, { now: now.getTime(), secure }) },
+        body: { ok: true },
+      };
+    }
+    try {
+      const db = database();
+      const since = new Date(now.getTime() - WINDOW_MS);
+      const count = await db.countLoginFailures(clientIp(request), since);
+      if (count >= MAX_ATTEMPTS) return { status: 429, body: { error: "Too many sign-in attempts. Try again later." } };
+      await db.recordLoginFailure(clientIp(request), now);
+    } catch {
+      return { status: 401, body: { error: "Wrong password" } };
+    }
+    return { status: 401, body: { error: "Wrong password" } };
   }
   if (request.method === "POST" && body.action === "logout") {
     return { status: 200, headers: { "Set-Cookie": clearCookie(secure) }, body: { ok: true } };
@@ -34,6 +52,7 @@ export async function handleAdmin(request, deps = {}) {
     return { status: 401, body: { error: "Sign in required" } };
   }
 
+  const db = database();
   if (request.method === "GET" && url.searchParams.get("export") === "csv") {
     const queue = await present(db, now);
     return { status: 200, contentType: "text/csv; charset=utf-8", raw: postmarkCsv(queue), filename: "postmark-batch.csv" };
@@ -47,9 +66,26 @@ export async function handleAdmin(request, deps = {}) {
   }
   if (request.method !== "POST") return { status: 405, body: { error: "Use POST" } };
 
+  if (body.action === "delete_family") {
+    const order = body.orderId ? await db.getOrder(body.orderId) : null;
+    if (!order) return { status: 404, body: { error: "Order not found" } };
+    await db.purgeOrderChildren(order.id, now);
+    await db.redactOrderIdentity(order.id, now);
+    await db.audit({ orderId: order.id, action: "family_data_deleted", actor: "owner", detail: {} });
+    return { status: 200, body: { ok: true } };
+  }
+
   const draft = body.draftId ? await db.getDraft(body.draftId) : null;
   if (!draft) return { status: 404, body: { error: "Letter not found" } };
-  if (LOCKED.has(draft.status) && body.action !== "logout") {
+  if (body.action === "mark_shipped") {
+    const order = await db.getOrder(draft.orderId);
+    if (!order?.postmark) return { status: 400, body: { error: "Only a hand-fulfilled postmark letter can be marked shipped." } };
+    if (draft.status !== "approved") return { status: 409, body: { error: "Approve the letter before marking it shipped." } };
+    await db.updateDraft(draft.id, { status: "mailed", sentAt: now.toISOString(), provider: "manual", sendError: "" });
+    await db.audit({ orderId: draft.orderId, draftId: draft.id, action: "marked_shipped", actor: "owner", detail: {} });
+    return { status: 200, body: { ok: true } };
+  }
+  if (LOCKED.has(draft.status)) {
     return { status: 409, body: { error: "That letter has already gone out." } };
   }
 

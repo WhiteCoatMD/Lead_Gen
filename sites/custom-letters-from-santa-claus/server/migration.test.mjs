@@ -16,10 +16,10 @@ test("the migration stays inside schema santa and is safe to re-run", () => {
   assert.doesNotMatch(code, /public\./);
   assert.doesNotMatch(code, /schema public/i);
   assert.doesNotMatch(code, /table public/i);
-  assert.doesNotMatch(code, /\bdrop\b/i);
+  assert.doesNotMatch(code, /\bdrop\s+(table|schema)\b/i);
   assert.doesNotMatch(code, /create policy/i);
   assert.doesNotMatch(code, /security definer/i);
-  assert.equal((sql.match(/enable row level security/gi) || []).length, 6);
+  assert.equal((sql.match(/enable row level security/gi) || []).length, 7);
   assert.match(sql, /grant select, insert, update, delete on table santa\.orders to service_role/i);
   assert.match(sql, /from public, anon, authenticated/i);
   assert.match(sql, /'draft', 'approved', 'rejected', 'sent', 'mailed'/);

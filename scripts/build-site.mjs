@@ -20,6 +20,9 @@ if (!slug) throw new Error("Usage: npm run build:site -- <site-slug>");
 
 const siteDir = path.join(root, "sites", slug);
 const config = JSON.parse(await fs.readFile(path.join(siteDir, "site.json"), "utf8"));
+if (config.checkout && process.env.CHECKOUT_ENABLED === "true" && process.env.VERCEL_ENV !== "production") {
+  config.checkout.enabled = true;
+}
 const outputDir = path.join(root, "dist", slug);
 await fs.rm(outputDir, { recursive: true, force: true });
 await fs.mkdir(path.join(outputDir, "assets"), { recursive: true });
@@ -146,9 +149,16 @@ await fs.writeFile(path.join(outputDir, "sitemap.xml"), sitemapXml(config.domain
 // CLI deploys upload dist/<slug> as the project root, so the redirects have
 // to live here. Git deploys read the repo-root vercel.json instead, which
 // build-all (and a single-site build) refresh from every site.json.
+let vercelConfig = distVercelConfig(config);
+try {
+  const extra = JSON.parse(await fs.readFile(path.join(siteDir, "vercel.json"), "utf8"));
+  if (Array.isArray(extra.crons) && extra.crons.length) vercelConfig = { ...vercelConfig, crons: extra.crons };
+} catch {
+  // A site without its own vercel.json keeps the shared redirect config only.
+}
 await fs.writeFile(
   path.join(outputDir, "vercel.json"),
-  JSON.stringify(distVercelConfig(config), null, 2) + "\n",
+  JSON.stringify(vercelConfig, null, 2) + "\n",
   "utf8"
 );
 await writeRootRedirects(root);

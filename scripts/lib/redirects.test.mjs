@@ -20,7 +20,7 @@ test("santa crons stay on the santa config and do not add redirects for other si
     { domain: "customlettersfromsantaclaus.com", crons: santa.crons },
     { domain: "example.com", redirects: [{ source: "/old", destination: "/new" }] },
   ]);
-  assert.equal(root.crons.length, 1);
+  assert.equal(root.crons, undefined);
   assert.equal(root.redirects.every((rule) => rule.has[0].value.endsWith("example.com")), true);
 });
 

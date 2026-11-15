@@ -47,9 +47,7 @@ export function distVercelConfig(site) {
 
 export function rootVercelConfig(sites) {
   const redirects = sites.flatMap(hostedRedirects);
-  const crons = sites.flatMap(siteCrons);
   const config = {};
   if (redirects.length) config.redirects = redirects;
-  if (crons.length) config.crons = crons;
   return Object.keys(config).length ? config : {};
 }

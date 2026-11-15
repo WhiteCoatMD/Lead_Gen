@@ -135,3 +135,25 @@ grant select, insert, update, delete on table santa.letter_drafts to service_rol
 grant select, insert, update, delete on table santa.order_messages to service_role;
 grant select, insert, update, delete on table santa.audit_log to service_role;
 grant select, insert, update, delete on table santa.stripe_events to service_role;
+
+-- Columns added after the first run. Safe to apply again.
+alter table santa.letter_drafts add column if not exists send_error text;
+alter table santa.orders add column if not exists identity_redacted_at timestamptz;
+alter table santa.orders add column if not exists children_redacted_at timestamptz;
+
+-- Parent email is removed after the retention window. The original format
+-- check would reject an empty value, so it is removed on santa.orders only.
+alter table santa.orders drop constraint if exists orders_parent_email_check;
+alter table santa.orders drop constraint if exists orders_recipient_email_check;
+
+create table if not exists santa.admin_login_attempts (
+  id uuid primary key default gen_random_uuid(),
+  ip text not null,
+  attempted_at timestamptz not null default now()
+);
+
+create index if not exists admin_login_attempts_ip_idx on santa.admin_login_attempts (ip, attempted_at);
+
+alter table santa.admin_login_attempts enable row level security;
+revoke all on table santa.admin_login_attempts from public, anon, authenticated;
+grant select, insert, update, delete on table santa.admin_login_attempts to service_role;

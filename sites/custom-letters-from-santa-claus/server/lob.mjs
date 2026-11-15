@@ -1,11 +1,15 @@
 // Standard printed letters only. The North Pole postmark add-on is never
 // handed to Lob. The return address has to be a real one the owner sets.
-// A live Lob key is refused. Test keys start with test_.
+// A live_ key is refused unless mailing is on and LOB_LIVE_APPROVED=true.
 
-export function assertLobKey(key) {
+export function assertLobKey(key, env = {}) {
   const value = String(key || "");
-  if (!value.startsWith("test_")) throw new Error("Refusing to call Lob without a test API key");
-  return value;
+  if (value.startsWith("test_")) return value;
+  if (value.startsWith("live_")) {
+    if (env.LOB_SENDING_ENABLED === "true" && env.LOB_LIVE_APPROVED === "true") return value;
+    throw new Error("Refusing to call Lob with a live API key");
+  }
+  throw new Error("Refusing to call Lob without a test API key");
 }
 
 export function lobPayload(order, draft, env) {
@@ -41,7 +45,7 @@ export function lobPayload(order, draft, env) {
 }
 
 export async function createLobLetter(order, draft, env, fetchImpl) {
-  const key = assertLobKey(env.LOB_API_KEY);
+  const key = assertLobKey(env.LOB_API_KEY, env);
   const payload = lobPayload(order, draft, env);
   const response = await fetchImpl("https://api.lob.com/v1/letters", {
     method: "POST",

@@ -1,4 +1,4 @@
-import { loadSite } from "./config.mjs";
+import { checkoutOpen, loadSite } from "./config.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
 import { validateOrder } from "./order.mjs";
 import { assertStripeSecret, StripeKeyError } from "./stripe-guard.mjs";
@@ -11,7 +11,7 @@ export async function handleCheckout(request, deps = {}) {
   if (denied) return denied;
   if (request.method !== "POST") return { status: 405, body: { error: "Use POST" } };
   const site = deps.site || loadSite();
-  if (site?.checkout?.enabled !== true) return { status: 403, body: { error: "Checkout is not open." } };
+  if (!checkoutOpen(site, env)) return { status: 403, body: { error: "Checkout is not open." } };
   let secret;
   try {
     secret = assertStripeSecret(env);

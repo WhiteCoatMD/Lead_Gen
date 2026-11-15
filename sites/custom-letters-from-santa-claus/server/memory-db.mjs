@@ -6,6 +6,7 @@ export function createMemoryDb() {
   const messages = [];
   const audits = [];
   const events = new Set();
+  const attempts = [];
 
   function orderOf(id) {
     return orders.find((order) => order.id === id) || null;
@@ -140,14 +141,52 @@ export function createMemoryDb() {
         const child = order.children.find((item) => item.id === childId);
         if (child) child.deleted = true;
       }
-      if (order && order.children.every((child) => child.deleted)) {
-        for (const message of messages) {
-          if (message.orderId !== order.id) continue;
-          message.body = "";
-          message.subject = "Order record";
-        }
-      }
+      blankMessages(messages, order);
       return { ...draft };
     },
+    async purgeOrderChildren(orderId, now) {
+      const order = orderOf(orderId);
+      if (!order || order.childrenRedactedAt) return null;
+      for (const child of order.children) child.deleted = true;
+      for (const draft of drafts) {
+        if (draft.orderId !== orderId) continue;
+        draft.body = "";
+        draft.redactedAt = now.toISOString();
+        draft.childId = null;
+      }
+      order.childrenRedactedAt = now.toISOString();
+      blankMessages(messages, order);
+      return view(order);
+    },
+    async redactOrderIdentity(orderId, now) {
+      const order = orderOf(orderId);
+      if (!order || order.identityRedactedAt) return null;
+      order.parentEmail = "";
+      order.recipientEmail = "";
+      order.address = { name: "", street: "", city: "", state: "", zip: "" };
+      order.identityRedactedAt = now.toISOString();
+      for (const message of messages) {
+        if (message.orderId !== orderId) continue;
+        message.body = "";
+        message.subject = "Order record";
+        message.toEmail = "";
+      }
+      return view(order);
+    },
+    async countLoginFailures(ip, since) {
+      return attempts.filter((item) => item.ip === ip && new Date(item.at).getTime() >= since.getTime()).length;
+    },
+    async recordLoginFailure(ip, at) {
+      attempts.push({ ip, at: at.toISOString() });
+    },
   };
+}
+
+function blankMessages(messages, order) {
+  if (!order || order.children.some((child) => !child.deleted)) return;
+  for (const message of messages) {
+    if (message.orderId !== order.id) continue;
+    message.body = "";
+    message.subject = "Order record";
+  }
 }

@@ -47,6 +47,20 @@ function render(list) {
     meta.className = "meta";
     meta.textContent = fieldList(order);
     article.append(meta);
+    const family = document.createElement("button");
+    family.type = "button";
+    family.className = "quiet";
+    family.textContent = "Delete this family's data";
+    family.addEventListener("click", async () => {
+      if (!window.confirm("Delete this family's child details and contact information?")) return;
+      try {
+        await api("/api/santa/admin", { action: "delete_family", orderId: order.id });
+        await load();
+      } catch (error) {
+        meta.textContent = error.message;
+      }
+    });
+    article.append(family);
     for (const child of order.children || []) {
       const facts = document.createElement("p");
       facts.textContent = [child.firstName, child.age && `age ${child.age}`, child.town, child.friendOrPet, child.accomplishment, child.workOn, child.wishlist].filter(Boolean).join(" · ");
@@ -64,6 +78,12 @@ function render(list) {
         held.textContent = "The delivery date has arrived and this letter is still unapproved. It will not be sent.";
         block.append(held);
       }
+      if (draft.sendError) {
+        const failed = document.createElement("p");
+        failed.className = "held";
+        failed.textContent = `Last send error: ${draft.sendError}`;
+        block.append(failed);
+      }
       const area = document.createElement("textarea");
       area.value = draft.body || "";
       area.setAttribute("aria-label", `Letter for ${child?.firstName || "this child"}`);
@@ -73,7 +93,9 @@ function render(list) {
       const note = document.createElement("p");
       note.className = "status";
       note.setAttribute("role", "status");
-      for (const [action, text] of [["edit", "Save edit"], ["approve", "Approve"], ["reject", "Reject"], ["redraft", "Draft again"]]) {
+      const actions = [["edit", "Save edit"], ["approve", "Approve"], ["reject", "Reject"], ["redraft", "Draft again"]];
+      if (order.postmark && draft.status === "approved") actions.push(["mark_shipped", "Mark shipped"]);
+      for (const [action, text] of actions) {
         const button = document.createElement("button");
         button.type = "button";
         button.textContent = text;

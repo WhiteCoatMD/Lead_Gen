@@ -12,10 +12,10 @@ export function assertStripeSecret(env = process.env) {
   const key = String(env?.STRIPE_SECRET_KEY || "").trim();
   const approved = env?.LIVE_CHECKOUT_APPROVED === "true";
   if (!key) throw new StripeKeyError("STRIPE_SECRET_KEY is not set");
-  if (key.startsWith("sk_live_")) {
+  if (key.startsWith("sk_live_") || key.startsWith("rk_live_")) {
     if (!approved) throw new StripeKeyError("Refusing to run with a live Stripe key");
     return key;
   }
-  if (key.startsWith("sk_test_")) return key;
+  if (key.startsWith("sk_test_") || key.startsWith("rk_test_")) return key;
   throw new StripeKeyError("Refusing to run with an unrecognized Stripe key");
 }

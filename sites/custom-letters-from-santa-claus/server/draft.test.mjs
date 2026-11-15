@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { fallbackLetter, letterProblems, draftForChild } from "./draft.mjs";
+import { fallbackLetter, letterProblems, draftForChild, gatewayAuthMode } from "./draft.mjs";
 
 const child = {
   firstName: "Ada",
@@ -19,7 +19,10 @@ test("the fallback letter uses the form and does not promise gifts or a postmark
   assert.match(letter, /Grayson/);
   assert.match(letter, /waiting her turn/);
   assert.match(letter, /cannot promise/);
-  assert.doesNotMatch(letter, /postmark|guarantee|you will get/i);
+  assert.doesNotMatch(letter, /postmark|guarantee|you will get|I heard about this/i);
+  const fragment = fallbackLetter({ ...child, accomplishment: "Learned to ride a bike" });
+  assert.match(fragment, /You learned to ride a bike\. That took heart\./);
+  assert.doesNotMatch(fragment, /I heard about this/);
 });
 
 test("a model letter that invents a promise or misspells the name is replaced", async () => {
@@ -34,4 +37,11 @@ test("a model letter that invents a promise or misspells the name is replaced", 
   });
   assert.match(good.body, /Dear Ada/);
   assert.notEqual(good.model, "fallback");
+});
+
+test("gateway auth uses the API key, then Vercel OIDC, then neither", () => {
+  assert.equal(gatewayAuthMode({ AI_GATEWAY_API_KEY: "key", VERCEL_OIDC_TOKEN: "token" }), "api-key");
+  assert.equal(gatewayAuthMode({ VERCEL_OIDC_TOKEN: "token" }), "oidc");
+  assert.equal(gatewayAuthMode({ AI_GATEWAY_API_KEY: "  " }), "none");
+  assert.equal(gatewayAuthMode({}), "none");
 });

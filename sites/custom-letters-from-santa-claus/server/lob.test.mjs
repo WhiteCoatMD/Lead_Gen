@@ -3,8 +3,12 @@ import assert from "node:assert/strict";
 import { assertLobKey, lobPayload } from "./lob.mjs";
 
 test("Lob stays on a test key and does not claim a postmark", () => {
-  assert.throws(() => assertLobKey("live_abc"), /test API key/);
   assert.equal(assertLobKey("test_abc"), "test_abc");
+  assert.throws(() => assertLobKey("live_abc"), /live API key/);
+  assert.throws(() => assertLobKey("live_abc", { LOB_SENDING_ENABLED: "true" }), /live API key/);
+  assert.throws(() => assertLobKey("live_abc", { LOB_LIVE_APPROVED: "true" }), /live API key/);
+  assert.equal(assertLobKey("live_abc", { LOB_SENDING_ENABLED: "true", LOB_LIVE_APPROVED: "true" }), "live_abc");
+  assert.throws(() => assertLobKey("live_abc", { LOB_SENDING_ENABLED: "TRUE", LOB_LIVE_APPROVED: "true" }), /live API key/);
   const payload = lobPayload({
     address: { name: "Pat Parent", street: "1 Main", city: "Grayson", state: "LA", zip: "71245" },
   }, { id: "draft-1", body: "Dear Ada,\n\nGrayson is home.\n\nSanta" }, {

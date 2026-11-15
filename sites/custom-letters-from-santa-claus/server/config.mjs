@@ -24,6 +24,14 @@ export const SANTA_SCHEMA = "santa";
 export const FROM_ADDRESS = "santa@customlettersfromsantaclaus.com";
 export const DEFAULT_MODEL = "google/gemini-3.8-flash";
 export const RETENTION_DAYS = 60;
+export const UNPAID_RETENTION_DAYS = 7;
+
+// site.json turns checkout on for every environment. CHECKOUT_ENABLED=true
+// turns it on for preview and local only. Production ignores that override.
+export function checkoutOpen(site = loadSite(), env = {}) {
+  if (site?.checkout?.enabled === true) return true;
+  return env?.CHECKOUT_ENABLED === "true" && env?.VERCEL_ENV !== "production";
+}
 
 let cached;
 

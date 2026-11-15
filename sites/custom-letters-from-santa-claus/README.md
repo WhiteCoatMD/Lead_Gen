@@ -10,20 +10,22 @@ Set these on the Vercel project `custom-letters-from-santa-claus` only. Do not p
 
 | Name | Required | Purpose |
 | --- | --- | --- |
-| `STRIPE_SECRET_KEY` | Checkout | Stripe secret. Use a sandbox `sk_test_...` key. A key that starts with `sk_live_` refuses to run unless `LIVE_CHECKOUT_APPROVED=true`. |
+| `STRIPE_SECRET_KEY` | Checkout | Stripe secret. Use a sandbox `sk_test_` or `rk_test_` key. A key that starts with `sk_live_` or `rk_live_` refuses to run unless `LIVE_CHECKOUT_APPROVED=true`. |
 | `STRIPE_WEBHOOK_SECRET` | Webhook | Signing secret for `/api/santa/webhook` (`whsec_...`). |
-| `LIVE_CHECKOUT_APPROVED` | No | Leave unset. Only the exact value `true` allows an `sk_live_` key. |
+| `LIVE_CHECKOUT_APPROVED` | No | Leave unset. Only the exact value `true` allows an `sk_live_` or `rk_live_` key. |
+| `CHECKOUT_ENABLED` | No | `true` opens the checkout API on preview and local runs. Ignored when `VERCEL_ENV` is `production`, which still requires `checkout.enabled` in `site.json`. |
 | `SUPABASE_URL` | Yes, for orders | `https://oyrcjrcgvmzmkaipapjm.supabase.co` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Yes, for orders | Service role key. Server only. Never in the browser. |
 | `ADMIN_PASSWORD` | Admin | Password for `/admin`. Use a long random value. |
-| `AI_GATEWAY_API_KEY` | Drafts | Vercel AI Gateway key. Drafts are written with the AI SDK (`generateText`) through the gateway. |
+| `AI_GATEWAY_API_KEY` | Drafts | Vercel AI Gateway key. When it is unset, drafting tries Vercel OIDC (`VERCEL_OIDC_TOKEN`) through the AI SDK gateway provider, then the written template. |
 | `AI_GATEWAY_MODEL` | No | Defaults to `google/gemini-3.8-flash`. |
 | `EMAIL_SENDING_ENABLED` | No | Defaults off. `true` sends approved email letters and the parent confirmation. Otherwise the server logs `would send` and does not call Microsoft Graph. |
 | `MS_GRAPH_TENANT_ID` | When email sending is on | Microsoft Entra tenant for the mailbox. |
 | `MS_GRAPH_CLIENT_ID` | When email sending is on | App registration client id. Application permission `Mail.Send`. |
 | `MS_GRAPH_CLIENT_SECRET` | When email sending is on | App client secret. |
 | `LOB_SENDING_ENABLED` | No | Defaults off. `true` creates Lob letters for approved printed orders that are not the postmark add-on. |
-| `LOB_API_KEY` | When Lob is on | Must be a Lob **test** key (`test_...`). Live keys are refused. |
+| `LOB_API_KEY` | When Lob is on | A `test_` key, or a `live_` key only when `LOB_SENDING_ENABLED=true` and `LOB_LIVE_APPROVED=true`. |
+| `LOB_LIVE_APPROVED` | No | Leave unset. A live Lob key is refused without this exact value `true` and mailing turned on. |
 | `LOB_FROM_NAME` | When Lob is on | Return name on the envelope. |
 | `LOB_FROM_LINE1` | When Lob is on | Real return street. Do not invent a North Pole street. |
 | `LOB_FROM_CITY` | When Lob is on | Return city. |
@@ -34,7 +36,7 @@ Set these on the Vercel project `custom-letters-from-santa-claus` only. Do not p
 
 The from-address for email letters is `santa@customlettersfromsantaclaus.com`. It is not printed on the marketing pages. Do not change the domain's MX or existing SPF/TXT records to send mail. Graph sends as that mailbox; the mailbox has to exist first.
 
-`checkout.enabled` in `site.json` defaults to `false`. While it is false, product buttons stay "Coming soon — notify me." The postmark add-on stays hidden while `postmarkUpgrade.enabled` is `false`.
+`checkout.enabled` in `site.json` defaults to `false`. While it is false, product buttons stay "Coming soon — notify me." Set `CHECKOUT_ENABLED=true` on a preview or local run to open the API without editing `site.json`. That override does nothing when `VERCEL_ENV` is `production`. The postmark add-on stays hidden while `postmarkUpgrade.enabled` is `false`.
 
 ## Database
 
@@ -44,7 +46,15 @@ RLS is on for every table. There are no policies for `anon` or `authenticated`, 
 
 The server uses PostgREST (`SUPABASE_URL` + service role) with `Accept-Profile: santa` and `Content-Profile: santa`. **Add `santa` to the project's exposed Data API schemas**, next to the schemas already listed. Do not remove `public` or any schema other apps use. This repo does not change that setting. Exposing the schema does not let the anon key read rows, because RLS is on and there is no policy for that role.
 
-Child rows have no email column. A parent email is required. Child details are deleted 60 days after that letter is sent or mailed. The daily job does the delete. Letters that were never delivered are kept so they can still be fulfilled.
+Child rows have no email column. A parent email is required. The privacy page states the retention rules the job enforces:
+
+- Child details are deleted 60 days after that letter is sent or mailed.
+- A rejected letter's child details are deleted 60 days after the rejection.
+- An unpaid, canceled, or abandoned order's child details are deleted after 7 days.
+- The parent name, email, and mailing address are deleted 60 days after the last letter in the order is delivered. The remaining row keeps the product and the amount.
+- `/admin` can mark a postmark letter shipped, which starts that clock, and can delete a family's data immediately when a parent asks.
+
+Run the migration again if the `santa` schema already exists. The new statements only add columns, a login-attempt table, and relax the email format check on `santa.orders`.
 
 ## Routes
 
@@ -57,7 +67,9 @@ Child rows have no email column. A parent email is required. Child details are d
 | `GET /api/santa/admin?export=pdf` | Same batch as a PDF packing file. |
 | `GET /api/santa/jobs` | Cron. Sends due approved email, mails approved standard print through Lob, purges child details 60 days after delivery, and holds unapproved email whose date has arrived. |
 
-The cron is `0 14,20 * * *` (08:00 and 14:00 CT in winter). Because every Vercel project in this monorepo reads the root `vercel.json`, other projects receive the same schedule. Their handler returns immediately and does not read the database or send mail. Only project `prj_Cooa6zu0wXv87rdhtKX7M4nj5gVG` does the work.
+The cron schedule lives in `sites/custom-letters-from-santa-claus/vercel.json` (`0 14,20 * * *`, 08:00 and 14:00 CT in winter). It is copied into `dist/custom-letters-from-santa-claus/vercel.json` and is not written into the repo-root `vercel.json`.
+
+Every Git-connected project in this monorepo uses the repo root as its Root Directory, so a cron in the root file is registered on every site. That is why it was removed. A CLI deploy of this site's output directory (`scripts/deploy-all.mjs`) uploads that directory as the project root, so the cron is registered on the Santa project only. A Git deploy of the shared root does not register it on the other projects, and it also does not register it from the site file, because Vercel reads crons from the project Root Directory. Changing the Santa project's Root Directory to the site folder would pick up this file, and it would also break the build: the output directory `dist/custom-letters-from-santa-claus` would sit outside that root, which Vercel rejects. The job route is still deployed with `/api` on every project and returns immediately unless the project id is the Santa project.
 
 ## End-to-end test order (Stripe test mode)
 
