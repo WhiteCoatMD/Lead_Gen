@@ -192,7 +192,11 @@ function bundlePriceNote(product) {
   if (pricing.extraChildPrice > 0) {
     return `The price is ${formatPrice(pricing.basePrice)} for ${pricing.baseChildren} children at the same address, plus ${formatPrice(pricing.extraChildPrice)} for each additional child.`;
   }
-  return `One flat price of ${formatPrice(pricing.basePrice)} for 2 or more children in the same household.`;
+  const max = Number(product.repeatChildren?.max);
+  const capped = Number.isInteger(max) && max > pricing.baseChildren;
+  const span = capped ? `${pricing.baseChildren} to ${max}` : "2 or more";
+  const more = capped ? ` Families with more than ${max} children can add a separate letter.` : "";
+  return `One flat price of ${formatPrice(pricing.basePrice)} for ${span} children in the same household.${more}`;
 }
 
 function navItems(site) {
@@ -380,7 +384,11 @@ const CHILD_SLOT_JS = `(function(){
       if(remove) remove.hidden=slots.length<=min;
     });
     var add=root.querySelector("[data-add-child]");
-    if(add) add.disabled=slots.length>=max;
+    if(add){
+      var full=slots.length>=max;
+      add.disabled=full;
+      add.hidden=full;
+    }
   }
   function paint(form){
     var root=form.querySelector("[data-child-slots]");
