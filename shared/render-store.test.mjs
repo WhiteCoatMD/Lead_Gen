@@ -209,6 +209,8 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.match(terms, /one flat price of \$28\.95 for 2 or more children in the same household/);
   const bundleLd = blocks(bundlePage).find((block) => block["@type"] === "Product");
   assert.match(bundleLd.description, /2 or more children in the same household/);
+  assert.match(bundleLd.description, /own envelope/);
+  assert.doesNotMatch([bundlePage, faq, shipping, terms].join("\n"), /mailed together/i);
   assert.equal(bundleLd.offers.price, "28.95");
   assert.equal(site.products.find((product) => product.slug === "sibling-bundle").bundlePricing.extraChildPrice, 0);
   const rendered = [html, ...docs.pages.map((page) => page.html), ...docs.files.map((file) => file.body)].join("\n");
