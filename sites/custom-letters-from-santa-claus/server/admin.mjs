@@ -4,7 +4,7 @@ import { aiDraftingEnabled, draftForChild, fallbackLetter, generateWithGateway, 
 import { postmarkCsv, postmarkPdf } from "./export.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
 import { chicagoDateString } from "./time.mjs";
-import { createSupabaseDb } from "./supabase-db.mjs";
+import { createDb } from "./postgres-db.mjs";
 
 const LOCKED = new Set(["sent", "mailed"]);
 const WINDOW_MS = 15 * 60 * 1000;
@@ -23,7 +23,7 @@ export async function handleAdmin(request, deps = {}) {
   const secure = String(request.headers?.["x-forwarded-proto"] || "").includes("https");
   const url = new URL(request.url || "/", "http://localhost");
   const body = request.body || {};
-  const database = () => deps.db || createSupabaseDb(env, deps.fetch);
+  const database = () => deps.db || createDb(env);
 
   if (request.method === "POST" && body.action === "login") {
     if (!env.ADMIN_PASSWORD) return { status: 503, body: { error: "ADMIN_PASSWORD is not set" } };

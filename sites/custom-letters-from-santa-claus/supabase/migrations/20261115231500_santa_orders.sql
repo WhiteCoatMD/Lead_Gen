@@ -5,16 +5,15 @@
 -- It does not change objects outside schema santa.
 -- It is safe to run more than once.
 --
--- The server uses the service role through PostgREST with Accept-Profile and
--- Content-Profile set to santa. That works only after santa is added to this
--- project's exposed Data API schemas. Add it beside the schemas already
--- listed. Do not remove public or any other schema. This file does not change
--- that setting. RLS stays on and there are no anon or authenticated policies,
--- so exposing the schema does not let those roles read rows.
+-- The server connects with POSTGRES_URL (the Supabase pooler) over SSL.
+-- Schema santa is not added to the exposed Data API schemas. Do not expose it.
+-- RLS stays on and there are no anon or authenticated policies. The pooler
+-- user is the database owner, so it can read and write santa without the
+-- Data API or the service role key.
 
 create schema if not exists santa;
 
-comment on schema santa is 'Custom Letters from Santa Claus. Service role only. No anon or authenticated policies.';
+comment on schema santa is 'Custom Letters from Santa Claus. Not on the Data API. No anon or authenticated policies.';
 
 revoke all on schema santa from public;
 revoke all on schema santa from anon;

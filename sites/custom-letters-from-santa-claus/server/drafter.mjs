@@ -1,7 +1,7 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 import { letterProblems } from "./draft.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
-import { createSupabaseDb } from "./supabase-db.mjs";
+import { createDb } from "./postgres-db.mjs";
 
 export const LETTER_TONE = "Warm Santa voice. Use only the details given. Be kind about anything the child is working on. Do not promise gifts. Do not mention a postmark or a USPS facility.";
 
@@ -49,7 +49,7 @@ export async function handleDrafter(request, deps = {}) {
   const denied = denyUnlessSanta(env);
   if (denied) return denied;
   if (!authorized(request, env)) return { status: 401, body: { error: "Unauthorized" } };
-  const db = deps.db || createSupabaseDb(env, deps.fetch);
+  const db = deps.db || createDb(env);
   const url = new URL(request.url || "/", "http://localhost");
   const letterMatch = url.pathname.match(/\/api\/santa\/drafter\/letters\/([^/]+)$/);
 

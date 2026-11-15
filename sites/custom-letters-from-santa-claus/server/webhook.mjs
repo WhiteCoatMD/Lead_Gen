@@ -3,7 +3,7 @@ import { aiDraftingEnabled, draftForChild, fallbackLetter, generateWithGateway }
 import { confirmationMessage, sendGraphMail } from "./email.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
 import { verifyStripeSignature } from "./stripe-api.mjs";
-import { createSupabaseDb } from "./supabase-db.mjs";
+import { createDb } from "./postgres-db.mjs";
 
 // Payment creates drafts and a confirmation template. It does not send the
 // letter. A duplicate event must not draft the same child twice.
@@ -24,7 +24,7 @@ export async function handleWebhook(request, deps = {}) {
   } catch {
     return { status: 400, body: { error: "Invalid Stripe event" } };
   }
-  const db = deps.db || createSupabaseDb(env, deps.fetch);
+  const db = deps.db || createDb(env);
   if (event?.id && await db.hasEvent(event.id)) return { status: 200, body: { ok: true, duplicate: true } };
 
   const type = event?.type;

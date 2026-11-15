@@ -6,7 +6,7 @@ import { createMemoryDb } from "./memory-db.mjs";
 import { loadSite } from "./config.mjs";
 import { handleCheckout } from "./checkout.mjs";
 import { signStripePayload } from "./stripe-api.mjs";
-import { supabaseCredentials } from "./supabase-db.mjs";
+import { postgresConfig } from "./postgres-db.mjs";
 
 const now = new Date("2026-11-15T18:00:00.000Z");
 const token = "drafter-token-value";
@@ -112,15 +112,16 @@ test("the drafter API requires the bearer token and hides parent contact details
   assert.match((await db.getDraft(saved.id)).body, /lucky to have you/);
 });
 
-test("the database client uses the Supabase URL and service role key", () => {
-  const creds = supabaseCredentials({
+test("the database client uses POSTGRES_URL and not the Data API keys", () => {
+  const config = postgresConfig({
+    POSTGRES_URL: "postgres://postgres.oyrcjrcgvmzmkaipapjm:secret@aws-0.pooler.supabase.com:6543/postgres",
     SUPABASE_URL: "https://oyrcjrcgvmzmkaipapjm.supabase.co",
     SUPABASE_SERVICE_ROLE_KEY: "service-role",
     SUPABASE_SECRET_KEY: "other-secret",
-    POSTGRES_URL: "postgres://should-not-be-used",
   });
-  assert.equal(creds.url, "https://oyrcjrcgvmzmkaipapjm.supabase.co");
-  assert.equal(creds.serviceRoleKey, "service-role");
-  assert.equal(JSON.stringify(creds).includes("should-not-be-used"), false);
-  assert.equal(JSON.stringify(creds).includes("other-secret"), false);
+  assert.match(config.url, /^postgres:/);
+  assert.equal(config.options.prepare, false);
+  assert.equal(config.options.ssl, "require");
+  assert.equal(JSON.stringify(config).includes("service-role"), false);
+  assert.equal(JSON.stringify(config).includes("other-secret"), false);
 });

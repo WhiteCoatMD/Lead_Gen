@@ -3,7 +3,7 @@ import { cronAuthorized, denyUnlessSanta } from "./gate.mjs";
 import { createLobLetter } from "./lob.mjs";
 import { childPurgeDue, parentIdentityDue, unpaidChildPurgeDue } from "./retention.mjs";
 import { chicagoDateString } from "./time.mjs";
-import { createSupabaseDb } from "./supabase-db.mjs";
+import { createDb } from "./postgres-db.mjs";
 
 // Approved letters only. Email and Lob stay off until their flags are true.
 // While a flag is off, the job logs "would send" or "would mail" and leaves
@@ -16,7 +16,7 @@ export async function handleJobs(request, deps = {}) {
   if (denied) return denied;
   if (request.method !== "GET" && request.method !== "POST") return { status: 405, body: { error: "Use GET" } };
   if (!cronAuthorized(request, env)) return { status: 401, body: { error: "Unauthorized" } };
-  const db = deps.db || createSupabaseDb(env, deps.fetch);
+  const db = deps.db || createDb(env);
   const now = deps.now || new Date();
   const log = deps.log || console.log;
   const today = chicagoDateString(now);

@@ -3,7 +3,7 @@ import { denyUnlessSanta } from "./gate.mjs";
 import { validateOrder } from "./order.mjs";
 import { assertStripeSecret, StripeKeyError } from "./stripe-guard.mjs";
 import { createCheckoutSession } from "./stripe-api.mjs";
-import { createSupabaseDb } from "./supabase-db.mjs";
+import { createDb } from "./postgres-db.mjs";
 
 export async function handleCheckout(request, deps = {}) {
   const env = deps.env || process.env;
@@ -21,7 +21,7 @@ export async function handleCheckout(request, deps = {}) {
   }
   const validated = validateOrder(request.body || {}, { now: deps.now || new Date(), site });
   if (!validated.ok) return { status: 400, body: { error: validated.errors.join(" ") } };
-  const db = deps.db || createSupabaseDb(env, deps.fetch);
+  const db = deps.db || createDb(env);
   const pending = await db.insertPending(validated.order);
   const base = publicBase(request);
   try {

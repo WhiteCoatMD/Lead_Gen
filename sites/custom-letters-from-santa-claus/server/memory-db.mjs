@@ -1,3 +1,5 @@
+// In-memory stand-in for the Postgres client in server/postgres-db.mjs.
+// Route tests use this instead of opening a pool. It keeps the same methods.
 import { randomUUID } from "node:crypto";
 
 export function createMemoryDb() {

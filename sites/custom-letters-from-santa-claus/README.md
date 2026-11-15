@@ -14,8 +14,7 @@ Set these on the Vercel project `custom-letters-from-santa-claus` only. Do not p
 | `STRIPE_WEBHOOK_SECRET` | Webhook | Signing secret for `/api/santa/webhook` (`whsec_...`). |
 | `LIVE_CHECKOUT_APPROVED` | No | Leave unset. Only the exact value `true` allows an `sk_live_` or `rk_live_` key. |
 | `CHECKOUT_ENABLED` | No | `true` opens the checkout API on preview and local runs. Ignored when `VERCEL_ENV` is `production`, which still requires `checkout.enabled` in `site.json`. |
-| `SUPABASE_URL` | Yes, for orders | `https://oyrcjrcgvmzmkaipapjm.supabase.co` |
-| `SUPABASE_SERVICE_ROLE_KEY` | Yes, for orders | Service role key. Server only. Never in the browser. |
+| `POSTGRES_URL` | Yes, for orders | Supabase pooler URL (`postgres://...:6543/postgres`). The Vercel Supabase integration sets this. Server only. |
 | `ADMIN_PASSWORD` | Admin | Password for `/admin`. Use a long random value. |
 | `AI_GATEWAY_API_KEY` | No | Off unless this is set. Paid orders then get the template draft (`source` `template`) for an outside assistant to replace. When this key is set, the AI SDK may write the letter instead. |
 | `DRAFTER_API_TOKEN` | Drafter API | Bearer token for `GET /api/santa/drafter/pending` and `POST /api/santa/drafter/letters/:id`. Compared in constant time. Missing or wrong is 401. |
@@ -52,9 +51,9 @@ A missing or wrong token is 401. The compare is constant time.
 
 Run `supabase/migrations/20261115231500_santa_orders.sql` in the Lead Gen Admin SQL editor (or `psql` against that project). It is idempotent: `CREATE SCHEMA IF NOT EXISTS`, `CREATE TABLE IF NOT EXISTS`, and repeated grants. It only touches schema `santa`.
 
-RLS is on for every table. There are no policies for `anon` or `authenticated`, and those roles are revoked. The service role bypasses RLS and is the only role granted access. Serverless functions are the only callers.
+RLS is on for every table. There are no policies for `anon` or `authenticated`, and those roles are revoked. Do not add `santa` to the project's exposed Data API schemas. The server does not use PostgREST or the service role key.
 
-The server uses PostgREST (`SUPABASE_URL` + service role) with `Accept-Profile: santa` and `Content-Profile: santa`. **Add `santa` to the project's exposed Data API schemas**, next to the schemas already listed. Do not remove `public` or any schema other apps use. This repo does not change that setting. Exposing the schema does not let the anon key read rows, because RLS is on and there is no policy for that role.
+Serverless functions connect with the `postgres` package to `POSTGRES_URL`. Prepared statements are off so the transaction pooler (port 6543) accepts the session, SSL is required, and the pool is one connection. Every statement is schema-qualified to `santa` and every value is a parameter.
 
 Child rows have no email column. A parent email is required. The privacy page states the retention rules the job enforces:
 
@@ -83,8 +82,8 @@ Every Git-connected project in this monorepo uses the repo root as its Root Dire
 
 ## End-to-end test order (Stripe test mode)
 
-1. Apply the migration to Lead Gen Admin and add `santa` to Exposed schemas without removing the others.
-2. On Vercel project `custom-letters-from-santa-claus`, the Supabase integration supplies `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`. The server reads those two names. Also set `STRIPE_SECRET_KEY` (`sk_test_...` from the sandbox), `STRIPE_WEBHOOK_SECRET`, `ADMIN_PASSWORD`, `DRAFTER_API_TOKEN`, and `CRON_SECRET`. Leave `LIVE_CHECKOUT_APPROVED` unset. Leave `AI_GATEWAY_API_KEY` unset unless you want the gateway to write letters. Leave both sending flags unset. For a preview only, `CHECKOUT_ENABLED=true` opens the API without editing `site.json`.
+1. Apply the migration to Lead Gen Admin. Leave `santa` off the exposed Data API schemas.
+2. On Vercel project `custom-letters-from-santa-claus`, the Supabase integration supplies `POSTGRES_URL`. The server reads that name. Also set `STRIPE_SECRET_KEY` (`sk_test_...` from the sandbox), `STRIPE_WEBHOOK_SECRET`, `ADMIN_PASSWORD`, `DRAFTER_API_TOKEN`, and `CRON_SECRET`. Leave `LIVE_CHECKOUT_APPROVED` unset. Leave `AI_GATEWAY_API_KEY` unset unless you want the gateway to write letters. Leave both sending flags unset. For a preview only, `CHECKOUT_ENABLED=true` opens the API without editing `site.json`. `SUPABASE_SERVICE_ROLE_KEY` is not used.
 3. Point Stripe at `https://<deployment>/api/santa/webhook`. `*.vercel.app` on this project has Vercel Authentication, so a webhook from Stripe cannot reach it until you use a [protection bypass](https://vercel.com/docs/security/deployment-protection/methods-to-bypass-deployment-protection) or the custom domain is serving this project. Do not change MX.
 4. For a local run, from the repo root:
 
@@ -92,8 +91,7 @@ Every Git-connected project in this monorepo uses the repo root as its Root Dire
 SANTA_ORDERS_ENABLED=true \
 STRIPE_SECRET_KEY=sk_test_replace_me \
 STRIPE_WEBHOOK_SECRET=whsec_replace_me \
-SUPABASE_URL=https://oyrcjrcgvmzmkaipapjm.supabase.co \
-SUPABASE_SERVICE_ROLE_KEY=replace_me \
+POSTGRES_URL=postgres://replace_me \
 ADMIN_PASSWORD=replace_me \
 DRAFTER_API_TOKEN=replace_me \
 CRON_SECRET=replace_me \
