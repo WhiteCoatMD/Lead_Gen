@@ -98,3 +98,40 @@ export function notifyMailto(inbox, { product = "Order", email = "", fields = []
   ].filter(Boolean);
   return `mailto:${to}?subject=${encodeURIComponent(`Order note: ${product}`)}&body=${encodeURIComponent(lines.join("\n"))}`;
 }
+
+const POSTMARK_FIELD = "northPolePostmark";
+
+function postmarkSelected(line) {
+  return (line?.fields || []).some((field) => field?.name === POSTMARK_FIELD && /^(yes|true|on|1)$/i.test(String(field.value ?? "").trim()));
+}
+
+function householdKey(line) {
+  const values = Object.fromEntries((line.fields || []).filter((field) => field?.name).map((field) => [field.name, String(field.value ?? "").trim().toLowerCase().replace(/\s+/g, " ")]));
+  const parts = ["shipStreet", "shipCity", "shipState", "shipZip"].map((name) => values[name] || "");
+  if (parts.some(Boolean)) return parts.join("|");
+  return `line:${line.fieldKey || line.slug || ""}`;
+}
+
+function lettersIn(line) {
+  const per = Number(line.letterCount) > 0 ? Number(line.letterCount) : 1;
+  const qty = Number(line.qty) > 0 ? Number(line.qty) : 1;
+  return per * qty;
+}
+
+// One opted-in letter is singleCents. More than one letter to the same
+// household is householdCents once, not once per letter. Separate addresses
+// are priced on their own. No offer, or nothing selected, is zero.
+export function postmarkFeeCents(cart, offer) {
+  const single = Number(offer?.singleCents);
+  const household = Number(offer?.householdCents);
+  if (!Number.isInteger(single) || !Number.isInteger(household) || single <= 0 || household <= 0) return 0;
+  const groups = new Map();
+  for (const line of cart || []) {
+    if (!postmarkSelected(line)) continue;
+    const key = householdKey(line);
+    groups.set(key, (groups.get(key) || 0) + lettersIn(line));
+  }
+  let total = 0;
+  for (const count of groups.values()) total += count > 1 ? household : single;
+  return total;
+}

@@ -140,10 +140,72 @@ function breadcrumbSchema(site, parts) {
   };
 }
 
+// Official North Pole, AK postmark. Absent unless site.postmarkUpgrade.enabled
+// is exactly true, so a missing flag and an explicit false render nothing.
+function resolvePostmark(site) {
+  const raw = site?.postmarkUpgrade;
+  if (!raw || raw.enabled !== true) return null;
+  const singlePrice = Number(raw.singlePrice);
+  const householdPrice = Number(raw.householdPrice);
+  if (!(singlePrice > 0) || !(householdPrice > 0)) return null;
+  const products = raw.products && typeof raw.products === "object"
+    ? raw.products
+    : { "personalized-letter": 1, "sibling-bundle": 2 };
+  return {
+    singlePrice,
+    householdPrice,
+    products,
+    cutoffLabel: String(raw.cutoffLabel || "Thursday, November 26, 2026, 5:00 PM CT"),
+    singleCents: Math.round(singlePrice * 100),
+    householdCents: Math.round(householdPrice * 100),
+  };
+}
+
+function postmarkSentence(offer) {
+  return `Letters with this option get the real hand-applied North Pole, Alaska postmark through the USPS holiday postmark program. One letter is ${formatPrice(offer.singlePrice)} extra. More than one letter to the same household is a flat ${formatPrice(offer.householdPrice)}. Order by ${offer.cutoffLabel}.`;
+}
+
+function mailedLetterCount(product, offer) {
+  if (!offer) return 0;
+  const count = Number(offer.products?.[product.slug]);
+  return Number.isInteger(count) && count > 0 ? count : 0;
+}
+
+function presentSite(site) {
+  const offer = resolvePostmark(site);
+  if (!offer) return site;
+  const next = structuredClone(site);
+  const sentence = postmarkSentence(offer);
+  if (next.timing?.body) next.timing.body = `${next.timing.body} ${sentence}`;
+  const info = next.info || (next.info = {});
+  const faq = info.faq || (info.faq = {});
+  faq.items = [...(faq.items || []), {
+    q: "Can I add the real North Pole, Alaska postmark?",
+    a: `${sentence} A standard printed letter without this option is printed in full color and mailed First-Class by USPS from the US mainland.`,
+  }];
+  const shipping = info.shipping || (info.shipping = {});
+  shipping.sections = [...(shipping.sections || []), {
+    heading: "North Pole, Alaska postmark",
+    body: `${sentence} This option is separate from a standard printed letter.`,
+  }];
+  const terms = info.terms || (info.terms = {});
+  terms.sections = [...(terms.sections || []), {
+    heading: "The North Pole, Alaska postmark",
+    body: `${sentence} Without this option, a printed letter is mailed First-Class from the US mainland.`,
+  }];
+  const where = info.about?.sections?.find((section) => section.heading === "Where the shop is");
+  if (where) where.body = `${where.body} ${sentence}`;
+  return next;
+}
+
 function fieldControl(field) {
   const required = field.required ? " required" : "";
   const autocomplete = field.autocomplete ? ` autocomplete="${esc(field.autocomplete)}"` : "";
   const hint = field.hint ? `<span class="hint">${esc(field.hint)}</span>` : "";
+  if (field.type === "checkbox") {
+    const value = esc(field.value || "yes");
+    return `<label class="field"><span><input type="checkbox" name="${esc(field.name)}" value="${value}" data-field data-label="${esc(field.label)}"${required}> ${esc(field.label)}</span>${hint}</label>`;
+  }
   const max = field.type === "textarea" ? 800 : 160;
   const common = ` name="${esc(field.name)}" data-field data-label="${esc(field.label)}"${required}${autocomplete} maxlength="${max}"`;
   const control = field.type === "textarea"
@@ -193,10 +255,33 @@ function productCard(product) {
   </article>`;
 }
 
+function fieldsFor(product, offer) {
+  const letters = mailedLetterCount(product, offer);
+  if (!letters) return { fields: product.fields || [], letters: 0 };
+  const price = letters > 1 ? offer.householdPrice : offer.singlePrice;
+  const label = letters > 1
+    ? `Add the North Pole, Alaska postmark for this household (${formatPrice(price)})`
+    : `Add the North Pole, Alaska postmark (+${formatPrice(price)})`;
+  return {
+    letters,
+    fields: [...(product.fields || []), {
+      name: "northPolePostmark",
+      label,
+      type: "checkbox",
+      required: false,
+      value: "yes",
+      group: "Optional postmark",
+      hint: postmarkSentence(offer),
+    }],
+  };
+}
+
 function buyBox(site, product) {
   const checkout = isCheckoutUrl(product.checkoutUrl) ? String(product.checkoutUrl).trim() : "";
   const ready = site.checkoutReadyLabel || "Buy now";
   const waiting = site.checkoutEmptyLabel || "Coming soon — notify me";
+  const offer = resolvePostmark(site);
+  const personalization = fieldsFor(product, offer);
   const action = checkout
     ? `<a class="button ghost" data-buy-link href="${esc(checkout)}">${esc(ready)}</a>`
     : `<button type="button" class="button ghost" data-notify>${esc(waiting)}</button>`;
@@ -216,9 +301,9 @@ function buyBox(site, product) {
     ${product.description ? `<p>${esc(product.description)}</p>` : ""}
     ${meter(product)}
     ${includes}
-    ${product.timing ? `<p class="timing">${esc(product.timing)}</p>` : ""}
-    <form data-product-form data-slug="${esc(product.slug)}" data-name="${esc(product.name)}" data-price="${esc(product.price)}" data-placeholder="${product.placeholder ? "true" : "false"}" data-checkout="${esc(checkout)}">
-      ${fieldsHtml(product.fields)}
+    ${product.timing ? `<p class="timing">${esc(product.timing)}</p>` : ""}${personalization.letters ? `\n    <p class="timing">${esc(postmarkSentence(offer))} A standard letter on this page, without the option, is printed in full color and mailed First-Class by USPS from the US mainland.</p>` : ""}
+    <form data-product-form data-slug="${esc(product.slug)}" data-name="${esc(product.name)}" data-price="${esc(product.price)}" data-placeholder="${product.placeholder ? "true" : "false"}" data-checkout="${esc(checkout)}"${personalization.letters ? ` data-letter-count="${personalization.letters}"` : ""}>
+      ${fieldsHtml(personalization.fields)}
       <label class="field qty-field">Quantity<input type="number" name="qty" min="1" max="20" value="1" required></label>
       <div class="buy-actions">
         <button type="submit" class="button primary">Add to cart</button>
@@ -285,6 +370,8 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   const tel = phone ? phoneHref(phone) : "";
   const canonical = path ? `https://${site.domain}/${path}` : `https://${site.domain}/`;
   const contact = String(site.contactEmail || "").trim();
+  const offer = resolvePostmark(site);
+  const flags = `${site.omitCheckoutQuery ? ` data-omit-checkout-query="true"` : ""}${offer ? ` data-postmark-single="${offer.singleCents}" data-postmark-household="${offer.householdCents}" data-postmark-label="${esc("North Pole, Alaska postmark")}"` : ""}`;
   const nav = navItems(site).map((item) => {
     const on = item.href === current;
     return `<a href="${esc(item.href)}"${on ? ` aria-current="page"` : ""}>${esc(item.label)}</a>`;
@@ -303,7 +390,7 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   const scripts = (schemas || []).map((schema) => `<script type="application/ld+json">${jsonLd(schema)}</script>`).join("");
   const ogImage = image ? `<meta property="og:image" content="${esc(image)}">` : "";
   return `<!doctype html>
-<html lang="en" data-site="${esc(slug)}" data-brand="${brand}"${contact ? ` data-contact-email="${esc(contact)}"` : ""}><head>
+<html lang="en" data-site="${esc(slug)}" data-brand="${brand}"${contact ? ` data-contact-email="${esc(contact)}"` : ""}${flags}><head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">
@@ -438,6 +525,7 @@ function infoMain(site, key, page) {
 }
 
 export function renderStore(site, slug = "") {
+  site = presentSite(site);
   const first = featuredProducts(site)[0];
   return shell(site, slug, {
     title: site.seoTitle,
@@ -451,6 +539,7 @@ export function renderStore(site, slug = "") {
 }
 
 export function storeDocuments(site, slug = "") {
+  site = presentSite(site);
   const products = productsOf(site);
   const palette = paletteOf(site);
   const files = [];

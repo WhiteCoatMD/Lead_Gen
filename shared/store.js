@@ -1,4 +1,4 @@
-import { addLine, cartTotal, checkoutHref, fieldKey, formatMoney, formatPrice, isCheckoutUrl, lineParams, notifyMailto } from "./store-cart.mjs";
+import { addLine, cartTotal, checkoutHref, fieldKey, formatMoney, formatPrice, isCheckoutUrl, lineParams, notifyMailto, postmarkFeeCents } from "./store-cart.mjs";
 
 const CART_KEY = "store-cart-v1";
 const NOTIFY_KEY = "store-notify-v1";
@@ -36,10 +36,13 @@ function el(tag, attrs, children) {
 function formFields(form) {
   const fields = [];
   for (const input of form.querySelectorAll("[data-field]")) {
+    const value = input.type === "checkbox"
+      ? (input.checked ? String(input.value || "yes") : "")
+      : input.value.trim();
     fields.push({
       name: input.name,
       label: input.getAttribute("data-label") || input.name,
-      value: input.value.trim(),
+      value,
     });
   }
   return fields;
@@ -50,6 +53,7 @@ function readLine(form) {
   const qty = Math.max(1, Math.min(20, Number(qtyInput?.value) || 1));
   const fields = formFields(form);
   const slug = form.getAttribute("data-slug") || "";
+  const letterCount = form.getAttribute("data-letter-count");
   return {
     slug,
     name: form.getAttribute("data-name") || slug,
@@ -59,7 +63,23 @@ function readLine(form) {
     qty,
     fields,
     fieldKey: fieldKey(fields),
+    ...(letterCount ? { letterCount: Number(letterCount) || 1 } : {}),
   };
+}
+
+function checkoutParams(line) {
+  if (document.documentElement.getAttribute("data-omit-checkout-query") === "true") {
+    return { product: line.slug || "", qty: String(line.qty || 1) };
+  }
+  return lineParams(line);
+}
+
+function postmarkOfferFromPage() {
+  const root = document.documentElement;
+  const single = Number(root.getAttribute("data-postmark-single"));
+  const household = Number(root.getAttribute("data-postmark-household"));
+  if (!Number.isInteger(single) || !Number.isInteger(household) || single <= 0 || household <= 0) return null;
+  return { singleCents: single, householdCents: household };
 }
 
 function setStatus(scope, message) {
@@ -94,7 +114,8 @@ function onProductForm(form) {
         event.preventDefault();
         return;
       }
-      const href = checkoutHref(readLine(form).checkoutUrl, lineParams(readLine(form)));
+      const line = readLine(form);
+      const href = checkoutHref(line.checkoutUrl, checkoutParams(line));
       if (!href) {
         event.preventDefault();
         return;
@@ -165,7 +186,7 @@ function renderLine(line) {
     if (root) renderCart(root);
   });
   controls.append(remove);
-  const href = checkoutHref(line.checkoutUrl, lineParams(line));
+  const href = checkoutHref(line.checkoutUrl, checkoutParams(line));
   if (href) controls.append(el("a", { class: "button primary", href }, ["Pay for this item"]));
   else controls.append(el("p", { class: "flag" }, ["Coming soon"]));
   wrap.append(controls);
@@ -181,7 +202,10 @@ function renderCart(root) {
     return;
   }
   for (const line of cart) root.append(renderLine(line));
-  root.append(el("p", { class: "cart-total" }, [formatMoney(cartTotal(cart))]));
+  const extra = postmarkFeeCents(cart, postmarkOfferFromPage());
+  const feeLabel = document.documentElement.getAttribute("data-postmark-label");
+  if (extra && feeLabel) root.append(el("p", { class: "cart-fee" }, [`${feeLabel} ${formatMoney(extra)}`]));
+  root.append(el("p", { class: "cart-total" }, [formatMoney(cartTotal(cart) + extra)]));
   if (cart.some((line) => !isCheckoutUrl(line.checkoutUrl))) {
     root.append(el("p", { class: "quiet" }, [
       "Payment is not open yet. Your details stay in this browser.",

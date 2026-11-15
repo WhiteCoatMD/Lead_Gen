@@ -11,6 +11,7 @@ import {
   formatPrice,
   isCheckoutUrl,
   notifyMailto,
+  postmarkFeeCents,
   toCents,
 } from "./store-cart.mjs";
 
@@ -70,10 +71,25 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.equal(letter.price, 15.95);
   assert.equal(email.placeholder, false);
   assert.equal(email.price, 6.95);
-  assert.equal(bundle.placeholder, true);
+  assert.equal(bundle.placeholder, false);
+  assert.equal(bundle.price, 28.95);
   assert.equal(letter.checkoutUrl, "");
   assert.equal(email.checkoutUrl, "");
   assert.equal(bundle.checkoutUrl, "");
+  assert.equal(site.postmarkUpgrade.enabled, false);
+  for (const product of [letter, email, bundle]) {
+    const adult = product.fields.find((field) => field.name === "buyerEmail");
+    assert.equal(adult.required, true, product.slug);
+    assert.match(adult.label, /parent or guardian/i);
+  }
+  const delivery = email.fields.find((field) => field.name === "recipientEmail");
+  assert.match(delivery.label, /parent or guardian/i);
+  assert.match(delivery.hint, /never a child/i);
+  const confirm = email.fields.find((field) => field.name === "adultDeliveryConfirm");
+  assert.equal(confirm.type, "checkbox");
+  assert.equal(confirm.required, true);
+  assert.equal(letter.fields.some((field) => field.name === "adultDeliveryConfirm"), false);
+  assert.equal(letter.fields.some((field) => field.name === "recipientEmail"), false);
 
   const labels = letter.fields.map((field) => field.label);
   for (const label of ["Child's name", "Age", "Town", "A friend or a pet", "An accomplishment", "Something to work on", "Wish list"]) {
@@ -88,15 +104,22 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   const docs = storeDocuments(site, "custom-letters-from-santa-claus");
   const letterPage = docs.pages.find((page) => page.slug === "products/personalized-letter").html;
   const emailPage = docs.pages.find((page) => page.slug === "products/email-from-santa").html;
+  const bundlePage = docs.pages.find((page) => page.slug === "products/sibling-bundle").html;
   assert.match(letterPage, /name="childName"/);
   assert.match(letterPage, /name="wishlist"/);
   assert.doesNotMatch(letterPage, /name="deliveryDate"/);
   assert.match(emailPage, /name="deliveryDate"/);
+  assert.match(emailPage, /type="checkbox"[^>]*name="adultDeliveryConfirm"/);
+  assert.match(emailPage, /parent or guardian email, not a child/);
+  assert.doesNotMatch(letterPage, /name="adultDeliveryConfirm"/);
   assert.match(emailPage, /Coming soon/);
+  assert.match(letterPage, /Coming soon/);
+  assert.match(bundlePage, /December 9, 2026/);
+  assert.match(letterPage, /December 9, 2026/);
+  assert.match(emailPage, /December 24, 2026/);
   assert.equal(letterPage.includes("stripe.com"), false);
   assert.equal(letterPage.includes("shopify.com"), false);
   assert.match(letterPage, /data-checkout=""/);
-  const bundlePage = docs.pages.find((page) => page.slug === "products/sibling-bundle").html;
   assert.equal(bundlePage.includes("Sample price"), false);
   assert.equal(bundlePage.includes(">Sample<"), false);
   assert.match(bundlePage, /\$28\.95/);
@@ -147,6 +170,100 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.match(xml, /https:\/\/customlettersfromsantaclaus.com\/refunds/);
   assert.equal(html.includes("testimonial"), false);
   assert.equal(letterPage.includes("aggregateRating"), false);
+
+  const privacy = docs.pages.find((page) => page.slug === "privacy").html;
+  const shipping = docs.pages.find((page) => page.slug === "shipping").html;
+  const faq = docs.pages.find((page) => page.slug === "faq").html;
+  const terms = docs.pages.find((page) => page.slug === "terms").html;
+  assert.doesNotMatch(privacy, /added to the link/i);
+  assert.match(privacy, /not added to that payment link/);
+  assert.match(privacy, /parent or guardian/i);
+  assert.match(privacy, /refund window/);
+  assert.match(shipping, /December 9, 2026/);
+  assert.match(shipping, /5:00 PM CT/);
+  assert.match(shipping, /December 24, 2026/);
+  assert.match(faq, /December 9, 2026/);
+  assert.match(faq, /December 24, 2026/);
+  assert.match(terms, /December 9, 2026/);
+  assert.match(html, /December 9, 2026/);
+  assert.match(html, /December 24, 2026/);
+  assert.match(html, /data-omit-checkout-query="true"/);
+  assert.equal(html.includes(">USPS<"), false);
+  assert.match(html, />SANTA</);
+  const rendered = [html, ...docs.pages.map((page) => page.html), ...docs.files.map((file) => file.body)].join("\n");
+  assert.doesNotMatch(rendered, /last-order/i);
+  assert.doesNotMatch(rendered, /last day to order/i);
+  assert.doesNotMatch(rendered, /season cutoff/i);
+  assert.doesNotMatch(rendered, /do not publish a number of days/i);
+  assert.doesNotMatch(rendered, /postmark/i);
+  assert.doesNotMatch(rendered, /North Pole USPS/i);
+  assert.doesNotMatch(rendered, /USPS facility/i);
+  assert.doesNotMatch(rendered, /November 26/);
+  assert.doesNotMatch(rendered, /\$9\.95/);
+  assert.doesNotMatch(rendered, /\$14\.95/);
+  assert.equal(rendered.includes("aggregateRating"), false);
+  assert.equal(rendered.includes("testimonial"), false);
+});
+
+test("North Pole postmark upgrade is absent until the flag is turned on", async () => {
+  const site = await readSite("custom-letters-from-santa-claus");
+  const on = structuredClone(site);
+  on.postmarkUpgrade.enabled = true;
+  const home = renderStore(on, "custom-letters-from-santa-claus");
+  const docs = storeDocuments(on, "custom-letters-from-santa-claus");
+  const letter = docs.pages.find((page) => page.slug === "products/personalized-letter").html;
+  const bundle = docs.pages.find((page) => page.slug === "products/sibling-bundle").html;
+  const email = docs.pages.find((page) => page.slug === "products/email-from-santa").html;
+  const faq = docs.pages.find((page) => page.slug === "faq").html;
+  const shipping = docs.pages.find((page) => page.slug === "shipping").html;
+  const terms = docs.pages.find((page) => page.slug === "terms").html;
+  const phrase = /real hand-applied North Pole, Alaska postmark through the USPS holiday postmark program/;
+  for (const page of [home, letter, bundle, faq, shipping, terms]) {
+    assert.match(page, phrase);
+    assert.match(page, /\$9\.95/);
+    assert.match(page, /\$14\.95/);
+    assert.match(page, /November 26, 2026, 5:00 PM CT/);
+  }
+  assert.match(letter, /name="northPolePostmark"/);
+  assert.match(letter, /data-letter-count="1"/);
+  assert.match(bundle, /name="northPolePostmark"/);
+  assert.match(bundle, /\$14\.95/);
+  assert.match(bundle, /data-letter-count="2"/);
+  assert.equal(email.includes("northPolePostmark"), false);
+  assert.doesNotMatch(email, phrase);
+  assert.match(letter, /US mainland/);
+  assert.doesNotMatch(letter, /postmarked from the North Pole/i);
+  assert.doesNotMatch(home, /Postmarked from the North Pole USPS facility/);
+  assert.match(home, /data-postmark-single="995"/);
+  assert.match(home, /data-postmark-household="1495"/);
+  assert.match(home, /data-postmark-label="North Pole, Alaska postmark"/);
+  assert.match(letter, /Coming soon/);
+  assert.match(email, /Coming soon/);
+  assert.equal(letter.includes('data-checkout=""') || letter.includes("data-checkout=\"\""), true);
+});
+
+test("postmark fee is $9.95 for one letter and a flat $14.95 for a household", () => {
+  const offer = { singleCents: 995, householdCents: 1495 };
+  const address = [
+    { name: "northPolePostmark", value: "yes" },
+    { name: "shipStreet", value: "1 Main" },
+    { name: "shipCity", value: "Grayson" },
+    { name: "shipState", value: "LA" },
+    { name: "shipZip", value: "71245" },
+  ];
+  const one = { slug: "personalized-letter", qty: 1, letterCount: 1, fields: address };
+  assert.equal(postmarkFeeCents([], offer), 0);
+  assert.equal(postmarkFeeCents([one], null), 0);
+  assert.equal(postmarkFeeCents([one], offer), 995);
+  assert.equal(postmarkFeeCents([{ ...one, qty: 2 }], offer), 1495);
+  assert.equal(postmarkFeeCents([{ ...one, slug: "sibling-bundle", qty: 1, letterCount: 2 }], offer), 1495);
+  assert.equal(postmarkFeeCents([{ ...one, fields: [{ name: "northPolePostmark", value: "" }] }], offer), 0);
+  const elsewhere = {
+    ...one,
+    fields: address.map((field) => field.name === "shipStreet" ? { ...field, value: "9 Oak" } : { ...field }),
+  };
+  assert.equal(postmarkFeeCents([one, elsewhere], offer), 1990);
+  assert.equal(postmarkFeeCents([one, { ...one, fieldKey: "second" }], offer), 1495);
 });
 
 test("Make Your Own Crap catalog is entirely a placeholder", async () => {
@@ -174,6 +291,10 @@ test("Make Your Own Crap catalog is entirely a placeholder", async () => {
   const home = renderStore(site, "make-your-own-crap");
   assert.ok((home.match(/class="product"/g) || []).length >= 3);
   assert.match(home, /But only a little/);
+  assert.match(home, />BUILD</);
+  assert.equal(home.includes("data-postmark-single"), false);
+  assert.equal(home.includes("data-omit-checkout-query"), false);
+  assert.equal(home.includes(">USPS<"), false);
   assert.equal(blocks(home)[0].telephone, undefined);
   assert.match(home, /rel="canonical" href="https:\/\/makeyourowncrap.com\/"/);
   const contact = docs.pages.find((page) => page.slug === "contact").html;

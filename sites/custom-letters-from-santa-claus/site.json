@@ -18,12 +18,12 @@
   "disc": "#efe0cc",
   "pine": "#1d4034",
   "gold": "#c6a36a",
-  "updated": "2026-10-19",
-  "kicker": "Postmarked from the North Pole USPS facility",
+  "updated": "2026-11-15",
+  "kicker": "Personalized letters and emails from Santa",
   "heroKicker": "Letters and emails from Santa",
   "headline": "A letter from Santa, written just for them.",
-  "intro": "Tell us about the child. We send a printed letter postmarked from the North Pole USPS facility, or an email from Santa on the day you choose.",
-  "about": "Custom Letters from Santa Claus sends personalized letters and emails from Santa to a child in your life. You answer a few questions about them. Printed letters are postmarked from the North Pole USPS facility. Emails arrive from Santa's personal email address on the date you choose.",
+  "intro": "Tell us about the child. We send a printed, North Pole-themed letter, printed in full color and mailed First-Class by USPS from the US mainland, or an email from Santa on the day you choose.",
+  "about": "Custom Letters from Santa Claus sends personalized letters and emails from Santa to a child in your life. You answer a few questions about them. Printed letters are printed in full color and mailed First-Class by USPS from the US mainland, in a North Pole-themed envelope. Emails arrive on the date you choose.",
   "aboutHeading": "A letter with their name in it.",
   "sectionKicker": "The letters",
   "servicesHeadline": "Two ways to hear from Santa.",
@@ -31,14 +31,25 @@
   "primaryCta": "Shop the letters",
   "secondaryCta": "When to order",
   "footerLine": "Personalized letters and emails from Santa Claus.",
-  "checkoutNote": "Add to cart keeps what you typed on this device. Buy now uses the payment link for this letter when one is set.",
+  "checkoutNote": "Add to cart keeps what you typed on this device. Those details are not added to a payment link.",
+  "omitCheckoutQuery": true,
+  "postmarkUpgrade": {
+    "enabled": false,
+    "singlePrice": 9.95,
+    "householdPrice": 14.95,
+    "cutoffLabel": "Thursday, November 26, 2026, 5:00 PM CT",
+    "products": {
+      "personalized-letter": 1,
+      "sibling-bundle": 2
+    }
+  },
   "seoTitle": "Custom Letters from Santa Claus | Personalized Letters",
-  "seoDescription": "Personalized letters from Santa, postmarked at the North Pole USPS facility, and emails from Santa on a date you choose. Letters $15.95, emails $6.95.",
+  "seoDescription": "Personalized, North Pole-themed letters from Santa, mailed First-Class in the United States, and emails from Santa on a date you choose. Letters $15.95, emails $6.95.",
   "shopKicker": "Shop",
   "shopHeading": "Letters from Santa",
   "shopIntro": "A printed letter for the mantle, or an email that lands on the day you pick. Each one is written from what you tell us about the child.",
   "shopSeoTitle": "Shop Santa Letters | Personalized for One Child",
-  "shopSeoDescription": "Shop a printed Santa letter postmarked at the North Pole USPS facility, or an email from Santa on the date you choose. Details stay with the order.",
+  "shopSeoDescription": "Shop a printed Santa letter mailed First-Class in the United States, or an email from Santa on the date you choose. Details stay with the order.",
   "cartHeading": "Your cart",
   "cartIntro": "Letters you add stay in this browser, along with the details you typed for each child.",
   "cartSeoTitle": "Your Cart | Custom Letters from Santa",
@@ -51,12 +62,12 @@
   "steps": [
     { "title": "Tell us about the child", "text": "Name, age, town, and a few true things. A friend, a pet, a win, something they are working on, a wish list." },
     { "title": "We write the note", "text": "A printed letter, or an email sent on the date you pick from Santa's personal email address." },
-    { "title": "It arrives", "text": "Printed letters are postmarked from the North Pole USPS facility. Emails land in the inbox on the day you chose." }
+    { "title": "It arrives", "text": "Printed letters are printed in full color and mailed First-Class by USPS from the US mainland. Emails land in the inbox on the day you chose." }
   ],
   "timing": {
     "kicker": "When to order",
     "heading": "Give the mail a head start.",
-    "body": "Printed letters travel with the post, and the post slows down as Christmas gets closer. Order with time to spare. If the date you care about is close, choose the email. It goes out on the day you pick. We do not publish a last-order date. That day changes every year, and a date we made up would be a guess.",
+    "body": "Printed letters are printed in full color and mailed First-Class by USPS from the US mainland. Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. Email letters can be ordered any day through December 24, 2026, and are delivered on the date you pick.",
     "linkHref": "/shipping",
     "linkLabel": "Shipping and delivery"
   },
@@ -76,17 +87,17 @@
       "price": 15.95,
       "checkoutUrl": "",
       "kicker": "Printed letter",
-      "blurb": "Written for one child and mailed with a North Pole USPS postmark.",
-      "description": "A printed letter from Santa for one child. You share a few true things about them, and the letter comes back by post, postmarked from the North Pole USPS facility.",
+      "blurb": "Written for one child, printed in full color, and mailed First-Class by USPS.",
+      "description": "A printed letter from Santa for one child. You share a few true things about them, and the letter is printed in full color and mailed First-Class by USPS from the US mainland.",
       "imageAlt": "Illustrated envelope sealed with red wax",
       "includes": [
         "A printed letter written from the details you send",
-        "Postmarked from the North Pole USPS facility",
-        "Mailed to the address you give"
+        "Printed in full color and mailed First-Class by USPS",
+        "Mailed to the address you give from the US mainland"
       ],
-      "timing": "Printed letters go out through the mail. December is slow. Order with room for the trip. We do not publish a last-order date, because the postal calendar changes every year. If you are cutting it close, the email is the one that lands on a date you choose.",
-      "seoTitle": "Personalized Santa Letter | North Pole Postmark",
-      "seoDescription": "A printed letter from Santa for one child, postmarked from the North Pole USPS facility. $15.95. Share their name, age, town, and a few true details.",
+      "timing": "Order this printed letter by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. It is printed in full color and mailed First-Class by USPS from the US mainland. Closer than that, the email is delivered on the date you pick, through December 24, 2026.",
+      "seoTitle": "Personalized Santa Letter | Mailed in the United States",
+      "seoDescription": "A printed letter from Santa for one child, printed in full color and mailed First-Class by USPS. $15.95. Name, age, town, and a few true details.",
       "fields": [
         { "name": "childName", "label": "Child's name", "type": "text", "required": true, "group": "About the child", "hint": "The name Santa should use." },
         { "name": "age", "label": "Age", "type": "text", "required": true, "group": "About the child", "hint": "A number is enough." },
@@ -95,7 +106,7 @@
         { "name": "accomplishment", "label": "An accomplishment", "type": "textarea", "required": true, "group": "About the child", "hint": "Something they were proud of this year." },
         { "name": "workOn", "label": "Something to work on", "type": "textarea", "required": false, "group": "About the child", "hint": "Optional. Keep it kind. Santa encourages." },
         { "name": "wishlist", "label": "Wish list", "type": "textarea", "required": false, "group": "About the child", "hint": "A few things, in their words if you have them." },
-        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "About the child", "hint": "Optional. For the adult who placed the order." },
+        { "name": "buyerEmail", "label": "Parent or guardian email", "type": "email", "required": true, "group": "The adult ordering", "hint": "Required. The adult placing this order." },
         { "name": "shipName", "label": "Who is it going to", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "name" },
         { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "street-address" },
         { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to mail the letter", "autocomplete": "address-level2" },
@@ -118,9 +129,10 @@
       "includes": [
         "An email written from the details you send",
         "Sent from Santa's personal email address",
-        "Delivered on the date you choose"
+        "Sent to a parent or guardian email, never a child",
+        "Delivered on the date you choose, through December 24, 2026"
       ],
-      "timing": "You choose the day the email arrives. Pick a date that still leaves a little slack if you want to change a detail. We do not publish a season cutoff.",
+      "timing": "Email letters can be ordered any day through December 24, 2026. The letter is delivered on the date you pick, to a parent or guardian email, never to a child. If you pick today and the letter is still in review, it waits until it is approved.",
       "seoTitle": "Email from Santa | Delivered on Your Date",
       "seoDescription": "An email from Santa, sent from his personal address on the date you choose. $6.95. Written from the details you share about one child.",
       "fields": [
@@ -131,9 +143,10 @@
         { "name": "accomplishment", "label": "An accomplishment", "type": "textarea", "required": true, "group": "About the child", "hint": "Something they were proud of this year." },
         { "name": "workOn", "label": "Something to work on", "type": "textarea", "required": false, "group": "About the child", "hint": "Optional. Keep it kind. Santa encourages." },
         { "name": "wishlist", "label": "Wish list", "type": "textarea", "required": false, "group": "About the child", "hint": "A few things, in their words if you have them." },
-        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "About the child", "hint": "Optional. For the adult who placed the order." },
-        { "name": "recipientEmail", "label": "Email address to send it to", "type": "email", "required": true, "group": "The email", "hint": "Where Santa's email should arrive." },
-        { "name": "deliveryDate", "label": "Delivery date", "type": "date", "required": true, "group": "The email", "hint": "The day the email should arrive. Leave a little room. We do not publish a cutoff date." }
+        { "name": "buyerEmail", "label": "Parent or guardian email", "type": "email", "required": true, "group": "The adult ordering", "hint": "Required. The adult placing this order." },
+        { "name": "recipientEmail", "label": "Parent or guardian email to send it to", "type": "email", "required": true, "group": "The email", "hint": "Must be a parent or guardian email. Never a child's email." },
+        { "name": "adultDeliveryConfirm", "label": "I am a parent or guardian, and this delivery address is a parent or guardian email, not a child's.", "type": "checkbox", "required": true, "value": "yes", "group": "The email" },
+        { "name": "deliveryDate", "label": "Delivery date", "type": "date", "required": true, "group": "The email", "hint": "The day the email should arrive. Any day through December 24, 2026." }
       ]
     },
     {
@@ -141,19 +154,19 @@
       "icon": "bundle",
       "name": "Sibling letter bundle",
       "featured": true,
-      "placeholder": true,
+      "placeholder": false,
       "price": 28.95,
       "checkoutUrl": "",
       "kicker": "Two letters",
       "blurb": "Two printed letters, one for each child, mailed to the same address.",
-      "description": "For a house with more than one believer. You fill in both children, and each gets a letter postmarked from the North Pole USPS facility.",
+      "description": "For a house with more than one believer. You fill in both children, and each gets a North Pole-themed printed letter, mailed together to one address.",
       "imageAlt": "Illustrated pair of envelopes",
       "includes": [
         "Two personalized printed letters",
-        "Each postmarked from the North Pole USPS facility",
-        "Both mailed to one address"
+        "Printed in full color and mailed First-Class by USPS",
+        "Both mailed to one address in the United States"
       ],
-      "timing": "Same mail timing as a single printed letter. Order with room for the trip. We do not publish a last-order date.",
+      "timing": "Order these printed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. They are printed in full color and mailed together, First-Class by USPS, from the US mainland.",
       "seoTitle": "Sibling Santa Letters | Two Children, One Order",
       "seoDescription": "Two printed Santa letters for two children at one address. $28.95. Each letter is written from the details you share.",
       "fields": [
@@ -171,7 +184,7 @@
         { "name": "child2Accomplishment", "label": "An accomplishment", "type": "textarea", "required": true, "group": "Second child" },
         { "name": "child2WorkOn", "label": "Something to work on", "type": "textarea", "required": false, "group": "Second child" },
         { "name": "child2Wishlist", "label": "Wish list", "type": "textarea", "required": false, "group": "Second child" },
-        { "name": "buyerEmail", "label": "Your email", "type": "email", "required": false, "group": "Where to mail the letters", "hint": "Optional. For the adult who placed the order." },
+        { "name": "buyerEmail", "label": "Parent or guardian email", "type": "email", "required": true, "group": "The adult ordering", "hint": "Required. The adult placing this order." },
         { "name": "shipName", "label": "Who is it going to", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "name" },
         { "name": "shipStreet", "label": "Street address", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "street-address" },
         { "name": "shipCity", "label": "City", "type": "text", "required": true, "group": "Where to mail the letters", "autocomplete": "address-level2" },
@@ -187,15 +200,15 @@
       "heading": "Questions parents actually ask",
       "intro": "Short answers. If yours is not here, the contact page is the other place to leave it.",
       "seoTitle": "Santa Letter FAQ | Ordering, Dates, and Delivery",
-      "seoDescription": "Answers about Santa letters and emails: what to tell us, the North Pole postmark, when to order, and what happens before checkout opens.",
+      "seoDescription": "Answers about Santa letters and emails: what to tell us, how a printed letter is mailed, when to order, and what happens before checkout opens.",
       "items": [
         { "q": "What do I need to tell you?", "a": "The form on the product page. The child's name, age, and town, something they did well, and anything you want Santa to mention: a friend, a pet, a wish list, or something they are working on." },
-        { "q": "Where is the printed letter postmarked?", "a": "From the North Pole USPS facility. It arrives by post." },
-        { "q": "How does the email work?", "a": "You pick the date. The email is sent from Santa's personal email address on that date. We do not publish the address itself on this site." },
-        { "q": "When should I order?", "a": "Printed letters travel with the mail, and the mail slows down late in the season. Order with time to spare. If the date you care about is close, choose the email, which goes out on the day you pick. We do not list a last-order day. That day changes every year, and we will not print a guess." },
+        { "q": "How is the printed letter mailed?", "a": "Standard letters are printed in full color and mailed First-Class by USPS from the US mainland, in a North Pole-themed envelope. Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas." },
+        { "q": "How does the email work?", "a": "You pick the date, any day through December 24, 2026. The email is sent to a parent or guardian email, never to a child, on the date you pick. We do not publish Santa's sending address on this site. If you pick today and the letter is still in review, it waits until it is approved." },
+        { "q": "When should I order?", "a": "Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. They are printed in full color and mailed First-Class by USPS from the US mainland. Email letters can be ordered any day through December 24, 2026, and are delivered on the date you pick." },
         { "q": "Can I order for two children?", "a": "Yes. Use a separate letter for each child so the details stay their own, or use the sibling bundle and mail both letters to one address." },
         { "q": "Is checkout open?", "a": "The button says coming soon until a payment link is on that letter. You can still fill in the form and keep it in the cart on this device. Leave your email and we will be in touch." },
-        { "q": "Do you ship outside the United States?", "a": "The printed letter is mailed through the USPS North Pole facility, and this store is set up for the United States. An international option is not listed." },
+        { "q": "Do you ship outside the United States?", "a": "This store mails printed letters in the United States only. An address outside the country is not an option on this site." },
         { "q": "What if a detail is wrong?", "a": "Use the contact page as soon as you notice. If we made the mistake, we correct it. If the letter has already been mailed, it cannot be pulled out of the post." }
       ]
     },
@@ -204,11 +217,11 @@
       "kicker": "Shipping",
       "heading": "How the letter gets there",
       "intro": "Two different trips. The printed letter goes through the mail. The email goes out on a date you choose.",
-      "seoTitle": "Santa Letter Shipping | North Pole Postmark and Email",
-      "seoDescription": "Printed Santa letters are postmarked at the North Pole USPS facility and mailed in the United States. Emails go out on the date you choose.",
+      "seoTitle": "Santa Letter Shipping | Mail and Email",
+      "seoDescription": "Standard printed Santa letters are mailed in the United States by USPS First-Class Mail. Emails go out on the date you choose.",
       "sections": [
-        { "heading": "Printed letters", "body": "They are postmarked from the North Pole USPS facility and then travel with USPS. We do not publish a number of days, and we do not publish a last day to order. December is slower than October. Order with time to spare." },
-        { "heading": "Emails", "body": "You pick the delivery date on the form. The email is sent from Santa's personal email address on that date. Check the spam folder if the day arrives and the inbox looks empty, then write to us." },
+        { "heading": "Printed letters", "body": "Standard printed letters are printed in full color on the US mainland and mailed First-Class by USPS. Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. December is a busy month for the mail, so that date is the one to trust." },
+        { "heading": "Emails", "body": "You pick the delivery date on the form. Email letters can be ordered any day through December 24, 2026, and are delivered on the date you pick. The address has to belong to a parent or guardian, never a child. If you pick today and the letter is still in review, it waits until it is approved. Check the spam folder if the day arrives and the inbox looks empty, then write to us." },
         { "heading": "Where we ship", "body": "The United States. An address outside the country is not an option on this site." },
         { "heading": "What the price covers", "body": "The printed letter is $15.95 and the email is $6.95. The sibling bundle is $28.95. A separate shipping fee is not listed on this site." }
       ]
@@ -219,11 +232,11 @@
       "heading": "Written for one child",
       "intro": "You know the stories. We put them in a letter that looks like it came from the North Pole.",
       "seoTitle": "About Custom Letters from Santa Claus",
-      "seoDescription": "Custom Letters from Santa Claus writes personalized letters and emails for a child in your life. Printed letters are postmarked from the North Pole.",
+      "seoDescription": "Custom Letters from Santa Claus writes personalized letters and emails for a child in your life. Printed letters are North Pole-themed and mailed in the United States.",
       "sections": [
         { "heading": "What you do", "body": "Answer a few questions. The name, the age, the town, a friend or a pet, something they did well, something they are working on, and a wish list. That is the letter." },
-        { "heading": "What arrives", "body": "A printed letter postmarked from the North Pole USPS facility, or an email from Santa's personal email address on the date you choose. The email address itself is not printed on this site." },
-        { "heading": "Where the shop is", "body": "The business is in Grayson, Louisiana. The postmark on a printed letter is the North Pole facility, which is the point." }
+        { "heading": "What arrives", "body": "A printed North Pole-themed letter, printed in full color and mailed First-Class by USPS from the US mainland, or an email from Santa on the date you choose. Santa's sending address is not printed on this site." },
+        { "heading": "Where the shop is", "body": "The business is in Grayson, Louisiana. Standard letters are printed and mailed from the US mainland." }
       ]
     },
     "contact": {
@@ -245,11 +258,12 @@
       "seoTitle": "Privacy Policy | Custom Letters from Santa",
       "seoDescription": "How Custom Letters from Santa Claus handles the details you type, the cart saved in your browser, and the page view sent to our own server.",
       "sections": [
-        { "heading": "The details you type", "body": "Names, ages, towns, stories, wish lists, dates, and mailing addresses are used to write and send the letter or email. Order them as the adult. We do not ask the child to use the site." },
+        { "heading": "The details you type", "body": "Names, ages, towns, stories, wish lists, dates, and mailing addresses are used only to write and send the letter or email you ordered. A parent or guardian places the order, and a parent or guardian email is required. We do not ask a child to use the site, and we do not collect a child's email. The email product is delivered only to a parent or guardian email." },
         { "heading": "This browser", "body": "The cart, and a notify-me note if you leave one, stay in local storage on this device. Clearing the browser clears them. They are not sent anywhere by that form." },
-        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that button sends you to the address in the catalog, and the details you entered are added to the link so they travel with the order. That checkout belongs to the payment provider." },
-        { "heading": "Page views", "body": "Opening a page sends a note to our own server with the path and the referrer. It is not an advertising network. We do not sell a list." },
-        { "heading": "Email", "body": "Leave your email on the contact page or with a coming-soon note. We will be in touch. The cart itself stays on this device." }
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that button sends you to the payment provider, and the price on that link is the price that is charged. The details you entered are not added to that payment link. Until a link is set, the button says coming soon and no order is placed." },
+        { "heading": "Page views", "body": "Opening a page sends a note to our own server with the path and the referrer. It is not an advertising network. We do not use a child's details for ads. We do not sell a list." },
+        { "heading": "How long we keep it", "body": "We keep the personalization and the letter only long enough to fulfill the order and cover the refund window. After that, we delete those details or strip them so they no longer identify the child." },
+        { "heading": "Email", "body": "Leave your email on the contact page or with a coming-soon note. That address should be a parent or guardian. We will be in touch. The cart itself stays on this device." }
       ]
     },
     "terms": {
@@ -261,9 +275,9 @@
       "seoDescription": "Terms for ordering a personalized Santa letter or email, including the details you supply and how payment works.",
       "sections": [
         { "heading": "The offer", "body": "The printed letter is $15.95. The email is $6.95. The sibling bundle is $28.95. Each page lists what that order includes." },
-        { "heading": "Your details", "body": "You are responsible for the spelling of the child's name and for the mailing address or email address you type. The letter is written from those answers." },
-        { "heading": "The postmark and the date", "body": "A printed letter is postmarked from the North Pole USPS facility. We do not promise a delivery day for the post. An email is sent on the date you choose, from Santa's personal email address." },
-        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that link is where payment happens, and the price on the link is the price that is charged. Until a link is set, the button says coming soon and no order is placed." },
+        { "heading": "Your details", "body": "You are the adult placing the order. You are responsible for the spelling of the child's name and for the mailing address or parent email you type. The letter is written from those answers. The email product is sent only to a parent or guardian email, never to a child." },
+        { "heading": "Mailing and the date", "body": "A standard printed letter is printed in full color and mailed First-Class by USPS from the US mainland. We do not promise a delivery day for the post. Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. An email can be ordered any day through December 24, 2026, and is sent on the date you choose after the letter is approved." },
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that link is where payment happens, and the price on the link is the price that is charged. The details you typed are not added to that payment link. Until a link is set, the button says coming soon and no order is placed." },
         { "heading": "The shop", "body": "Custom Letters from Santa Claus, Grayson, Louisiana." }
       ]
     },
