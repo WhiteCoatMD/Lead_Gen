@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Letter review | Custom Letters from Santa Claus</title>
+  <meta name="robots" content="noindex">
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; font-family: Georgia, "Iowan Old Style", serif; background: #fff4e6; color: #2c1810; }
+    main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    h1 { font-size: 1.8rem; line-height: 1.2; }
+    form, article { background: #fffdf8; border: 1px solid #efd3b4; border-radius: 12px; padding: 1rem; margin: 1rem 0; }
+    label { display: block; font-size: 0.95rem; margin: 0.4rem 0; }
+    input, textarea, button { font: inherit; }
+    input, textarea { width: 100%; box-sizing: border-box; padding: 0.5rem; }
+    textarea { min-height: 12rem; }
+    button { background: #9f1d18; color: #fffdf8; border: 0; border-radius: 999px; padding: 0.45rem 0.9rem; cursor: pointer; }
+    button.quiet { background: transparent; color: #7a120e; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .meta { color: #5c4638; }
+    .held { color: #7a120e; }
+    .status { min-height: 1.2em; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Letter review</h1>
+    <p>Approving a letter does not send it. Approved email letters go out on the date the parent chose only when email sending is turned on. Approved printed letters are mailed only when Lob sending is turned on. Postmark letters are exported here for hand fulfillment.</p>
+    <form id="login">
+      <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
+      <button type="submit">Sign in</button>
+      <p class="status" role="status"></p>
+    </form>
+    <section id="queue" hidden>
+      <div class="row">
+        <a href="/api/santa/admin?export=csv">Download postmark CSV</a>
+        <a href="/api/santa/admin?export=pdf">Download postmark PDF</a>
+        <button type="button" class="quiet" id="logout">Sign out</button>
+      </div>
+      <div id="orders"></div>
+    </section>
+  </main>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>

@@ -45,6 +45,7 @@ for (const slug of slugs) {
     try { builtConfig = JSON.parse(await fs.readFile(path.join(dir, "vercel.json"), "utf8")); } catch { /* none yet */ }
     const vercelConfig = { buildCommand: null, outputDirectory: "." };
     if (Array.isArray(builtConfig.redirects) && builtConfig.redirects.length) vercelConfig.redirects = builtConfig.redirects;
+    if (Array.isArray(builtConfig.crons) && builtConfig.crons.length) vercelConfig.crons = builtConfig.crons;
     await fs.writeFile(path.join(dir, "vercel.json"), JSON.stringify(vercelConfig, null, 2) + "\n", "utf8");
     // The serverless functions live in api/ at the repo root, which a git
     // build picks up automatically. This path does not: it uploads only

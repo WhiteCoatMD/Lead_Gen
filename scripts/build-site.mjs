@@ -83,7 +83,10 @@ for (const asset of config.assets || []) {
   await fs.copyFile(path.join(siteDir, "assets", asset), path.join(outputDir, "assets", asset));
 }
 
-await fs.writeFile(path.join(outputDir, "robots.txt"), `User-agent: *\nAllow: /\nSitemap: https://${config.domain}/sitemap.xml\n`, "utf8");
+const robotLines = ["User-agent: *", "Allow: /"];
+if (slug === "custom-letters-from-santa-claus") robotLines.push("Disallow: /admin");
+robotLines.push(`Sitemap: https://${config.domain}/sitemap.xml`);
+await fs.writeFile(path.join(outputDir, "robots.txt"), `${robotLines.join("\n")}\n`, "utf8");
 // Secondary pages, where a site has them. These exist because the rebuilds
 // collapsed multi-page originals into one page and Google kept the old URLs;
 // a rebuilt page that is not in the sitemap is only half recovered.
@@ -157,7 +160,20 @@ await writeRootRedirects(root);
 // file is actually live, which makes it a deploy check as well as a key.
 const indexNow = JSON.parse(await fs.readFile(path.join(root, "deploy", "indexnow.json"), "utf8"));
 await fs.writeFile(path.join(outputDir, `${indexNow.key}.txt`), indexNow.key, "utf8");
+if (slug === "custom-letters-from-santa-claus") await copySantaOrderPages(siteDir, outputDir);
 console.log(`Built ${slug} → dist/${slug}`);
+
+async function copySantaOrderPages(siteDir, outputDir) {
+  await fs.mkdir(path.join(outputDir, "admin"), { recursive: true });
+  await fs.copyFile(path.join(siteDir, "admin", "index.html"), path.join(outputDir, "admin", "index.html"));
+  await fs.copyFile(path.join(siteDir, "admin", "admin.js"), path.join(outputDir, "admin", "admin.js"));
+  await fs.copyFile(path.join(siteDir, "santa-checkout.js"), path.join(outputDir, "santa-checkout.js"));
+  for (const page of ["success", "cancel"]) {
+    const dir = path.join(outputDir, "checkout", page);
+    await fs.mkdir(dir, { recursive: true });
+    await fs.copyFile(path.join(siteDir, "checkout", `${page}.html`), path.join(dir, "index.html"));
+  }
+}
 
 async function writeRootRedirects(repoRoot) {
   const siteRoot = path.join(repoRoot, "sites");
@@ -174,7 +190,7 @@ async function writeRootRedirects(repoRoot) {
   }
   const config = rootVercelConfig(sites);
   const file = path.join(repoRoot, "vercel.json");
-  if (!config.redirects) {
+  if (!config.redirects && !config.crons) {
     await fs.rm(file, { force: true });
     return;
   }

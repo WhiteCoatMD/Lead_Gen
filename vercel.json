@@ -495,5 +495,11 @@
         }
       ]
     }
+  ],
+  "crons": [
+    {
+      "path": "/api/santa/jobs",
+      "schedule": "0 14,20 * * *"
+    }
   ]
 }

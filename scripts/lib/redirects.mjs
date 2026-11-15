@@ -31,14 +31,25 @@ export function hostedRedirects(site) {
   return out;
 }
 
+export function siteCrons(site) {
+  if (!Array.isArray(site?.crons)) return [];
+  return site.crons.filter((cron) => cron && typeof cron.path === "string" && typeof cron.schedule === "string");
+}
+
 export function distVercelConfig(site) {
   const redirects = siteRedirects(site);
+  const crons = siteCrons(site);
   const config = { buildCommand: null, outputDirectory: "." };
   if (redirects.length) config.redirects = redirects;
+  if (crons.length) config.crons = crons;
   return config;
 }
 
 export function rootVercelConfig(sites) {
   const redirects = sites.flatMap(hostedRedirects);
-  return redirects.length ? { redirects } : {};
+  const crons = sites.flatMap(siteCrons);
+  const config = {};
+  if (redirects.length) config.redirects = redirects;
+  if (crons.length) config.crons = crons;
+  return Object.keys(config).length ? config : {};
 }
