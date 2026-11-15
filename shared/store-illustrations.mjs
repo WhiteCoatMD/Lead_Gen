@@ -95,7 +95,7 @@ export function heroMark(brand) {
     <circle cx="80" cy="80" r="72" fill="none" stroke="currentColor" stroke-width="3"/>
     <circle cx="80" cy="80" r="62" fill="none" stroke="currentColor" stroke-width="1"/>
     <text x="80" y="70" text-anchor="middle" font-family="Georgia, serif" font-size="13" letter-spacing="1" fill="currentColor">NORTH POLE</text>
-    <text x="80" y="92" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="currentColor">USPS</text>
+    <text x="80" y="92" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="currentColor">SANTA</text>
     <path d="M28 112 H132" fill="none" stroke="currentColor" stroke-width="1"/>
   </svg>`;
 }
