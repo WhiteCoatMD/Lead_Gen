@@ -1,6 +1,6 @@
 import { clearCookie, cookieToken, passwordMatches, readSession, sessionCookie } from "./admin-auth.mjs";
 import { DEFAULT_MODEL } from "./config.mjs";
-import { draftForChild, generateWithGateway, letterProblems } from "./draft.mjs";
+import { aiDraftingEnabled, draftForChild, fallbackLetter, generateWithGateway, letterProblems } from "./draft.mjs";
 import { postmarkCsv, postmarkPdf } from "./export.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
 import { chicagoDateString } from "./time.mjs";
@@ -117,10 +117,18 @@ export async function handleAdmin(request, deps = {}) {
     const order = await db.getOrder(draft.orderId);
     const child = order?.children?.find((item) => item.id === draft.childId);
     if (!child) return { status: 409, body: { error: "That child's details are no longer on the order." } };
-    const model = env.AI_GATEWAY_MODEL || DEFAULT_MODEL;
-    const generate = deps.generate || ((prompt) => generateWithGateway(prompt, env));
-    const next = await draftForChild(child, { generate, model });
-    await db.updateDraft(draft.id, { body: next.body, model: next.model === "fallback" ? "fallback" : model, status: "draft", reviewer: "", reviewedAt: "" });
+    const useAi = Boolean(deps.generate) || aiDraftingEnabled(env);
+    const next = useAi
+      ? await draftForChild(child, { generate: deps.generate || ((prompt) => generateWithGateway(prompt, env)), model: env.AI_GATEWAY_MODEL || DEFAULT_MODEL })
+      : { body: fallbackLetter(child), model: "template", source: "template" };
+    await db.updateDraft(draft.id, {
+      body: next.body,
+      model: next.source === "template" ? "template" : next.model,
+      source: next.source || "template",
+      status: "draft",
+      reviewer: "",
+      reviewedAt: "",
+    });
     await db.audit({ orderId: draft.orderId, draftId: draft.id, action: "draft_redrafted", actor: "owner", detail: {} });
     return { status: 200, body: { ok: true } };
   }

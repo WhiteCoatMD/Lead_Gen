@@ -86,6 +86,7 @@ export function createMemoryDb() {
         provider: "",
         providerId: "",
         ...draft,
+        source: draft.source === "assistant" ? "assistant" : "template",
       };
       drafts.push(stored);
       return { ...stored };

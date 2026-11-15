@@ -17,7 +17,8 @@ Set these on the Vercel project `custom-letters-from-santa-claus` only. Do not p
 | `SUPABASE_URL` | Yes, for orders | `https://oyrcjrcgvmzmkaipapjm.supabase.co` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Yes, for orders | Service role key. Server only. Never in the browser. |
 | `ADMIN_PASSWORD` | Admin | Password for `/admin`. Use a long random value. |
-| `AI_GATEWAY_API_KEY` | Drafts | Vercel AI Gateway key. When it is unset, drafting tries Vercel OIDC (`VERCEL_OIDC_TOKEN`) through the AI SDK gateway provider, then the written template. |
+| `AI_GATEWAY_API_KEY` | No | Off unless this is set. Paid orders then get the template draft (`source` `template`) for an outside assistant to replace. When this key is set, the AI SDK may write the letter instead. |
+| `DRAFTER_API_TOKEN` | Drafter API | Bearer token for `GET /api/santa/drafter/pending` and `POST /api/santa/drafter/letters/:id`. Compared in constant time. Missing or wrong is 401. |
 | `AI_GATEWAY_MODEL` | No | Defaults to `google/gemini-3.8-flash`. |
 | `EMAIL_SENDING_ENABLED` | No | Defaults off. `true` sends approved email letters and the parent confirmation. Otherwise the server logs `would send` and does not call Microsoft Graph. |
 | `MS_GRAPH_TENANT_ID` | When email sending is on | Microsoft Entra tenant for the mailbox. |
@@ -35,6 +36,15 @@ Set these on the Vercel project `custom-letters-from-santa-claus` only. Do not p
 | `SANTA_ORDERS_ENABLED` | Local only | Set to `true` when running outside the Santa Vercel project. Production uses `VERCEL_PROJECT_ID`. |
 
 The from-address for email letters is `santa@customlettersfromsantaclaus.com`. It is not printed on the marketing pages. Do not change the domain's MX or existing SPF/TXT records to send mail. Graph sends as that mailbox; the mailbox has to exist first.
+
+## Outside assistant
+
+Paid orders start with a template letter (`source` `template`). An assistant polls:
+
+- `GET /api/santa/drafter/pending` with `Authorization: Bearer $DRAFTER_API_TOKEN`. Each item has the order id, letter id, letter type (`printed` or `email`), tone, the child's first name and age, and the writing details (town, friend or pet, accomplishment, something to work on, wish list). It does not include the parent email or mailing address.
+- `POST /api/santa/drafter/letters/:id` with `{ "body": "..." }` replaces the text and sets `source` to `assistant`, but only while the letter is still waiting for review. It does not approve or send the letter.
+
+A missing or wrong token is 401. The compare is constant time.
 
 `checkout.enabled` in `site.json` defaults to `false`. While it is false, product buttons stay "Coming soon — notify me." Set `CHECKOUT_ENABLED=true` on a preview or local run to open the API without editing `site.json`. That override does nothing when `VERCEL_ENV` is `production`. The postmark add-on stays hidden while `postmarkUpgrade.enabled` is `false`.
 
@@ -74,7 +84,7 @@ Every Git-connected project in this monorepo uses the repo root as its Root Dire
 ## End-to-end test order (Stripe test mode)
 
 1. Apply the migration to Lead Gen Admin and add `santa` to Exposed schemas without removing the others.
-2. On the Santa Vercel project, set `STRIPE_SECRET_KEY` to the sandbox test secret (`sk_test_...`), `STRIPE_WEBHOOK_SECRET`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_PASSWORD`, `AI_GATEWAY_API_KEY`, and `CRON_SECRET`. Leave `LIVE_CHECKOUT_APPROVED` unset. Leave `EMAIL_SENDING_ENABLED` and `LOB_SENDING_ENABLED` unset or `false`.
+2. On Vercel project `custom-letters-from-santa-claus`, the Supabase integration supplies `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY`. The server reads those two names. Also set `STRIPE_SECRET_KEY` (`sk_test_...` from the sandbox), `STRIPE_WEBHOOK_SECRET`, `ADMIN_PASSWORD`, `DRAFTER_API_TOKEN`, and `CRON_SECRET`. Leave `LIVE_CHECKOUT_APPROVED` unset. Leave `AI_GATEWAY_API_KEY` unset unless you want the gateway to write letters. Leave both sending flags unset. For a preview only, `CHECKOUT_ENABLED=true` opens the API without editing `site.json`.
 3. Point Stripe at `https://<deployment>/api/santa/webhook`. `*.vercel.app` on this project has Vercel Authentication, so a webhook from Stripe cannot reach it until you use a [protection bypass](https://vercel.com/docs/security/deployment-protection/methods-to-bypass-deployment-protection) or the custom domain is serving this project. Do not change MX.
 4. For a local run, from the repo root:
 
@@ -85,7 +95,7 @@ STRIPE_WEBHOOK_SECRET=whsec_replace_me \
 SUPABASE_URL=https://oyrcjrcgvmzmkaipapjm.supabase.co \
 SUPABASE_SERVICE_ROLE_KEY=replace_me \
 ADMIN_PASSWORD=replace_me \
-AI_GATEWAY_API_KEY=replace_me \
+DRAFTER_API_TOKEN=replace_me \
 CRON_SECRET=replace_me \
 node sites/custom-letters-from-santa-claus/server/dev-server.mjs
 ```

@@ -70,7 +70,7 @@ function render(list) {
       const block = document.createElement("div");
       const child = childFor(order, draft);
       const label = document.createElement("p");
-      label.textContent = `${child?.firstName || "Letter"} · ${draft.status}${draft.model ? ` · ${draft.model}` : ""}`;
+      label.textContent = `${child?.firstName || "Letter"} · ${draft.status}${draft.source ? ` · ${draft.source}` : ""}`;
       block.append(label);
       if (draft.held) {
         const held = document.createElement("p");

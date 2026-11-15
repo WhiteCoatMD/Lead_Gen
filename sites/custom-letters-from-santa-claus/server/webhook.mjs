@@ -1,5 +1,5 @@
 import { DEFAULT_MODEL } from "./config.mjs";
-import { draftForChild, generateWithGateway } from "./draft.mjs";
+import { aiDraftingEnabled, draftForChild, fallbackLetter, generateWithGateway } from "./draft.mjs";
 import { confirmationMessage, sendGraphMail } from "./email.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
 import { verifyStripeSignature } from "./stripe-api.mjs";
@@ -49,17 +49,21 @@ export async function handleWebhook(request, deps = {}) {
   if (order.status !== "paid") return { status: 200, body: { ok: true, duplicate: true } };
   await storeConfirmation(db, env, deps, order);
 
-  const generate = deps.generate || ((prompt) => generateWithGateway(prompt, env));
+  const useAi = Boolean(deps.generate) || aiDraftingEnabled(env);
+  const generate = useAi ? (deps.generate || ((prompt) => generateWithGateway(prompt, env))) : null;
   const model = env.AI_GATEWAY_MODEL || DEFAULT_MODEL;
   const draftedChildren = new Set((order.drafts || []).map((draft) => draft.childId));
   for (const child of order.children || []) {
     if (draftedChildren.has(child.id)) continue;
-    const drafted = await draftForChild(child, { generate, model });
+    const drafted = generate
+      ? await draftForChild(child, { generate, model })
+      : { body: fallbackLetter(child), model: "template", source: "template" };
     await db.insertDraft({
       orderId: order.id,
       childId: child.id,
       body: drafted.body,
-      model: drafted.model === "fallback" ? "fallback" : model,
+      model: drafted.source === "template" ? "template" : drafted.model,
+      source: drafted.source || "template",
     });
   }
   await db.audit({ orderId: order.id, action: "paid", actor: "stripe", detail: { drafts: (order.children || []).length } });

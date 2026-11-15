@@ -2,6 +2,7 @@ import { createServer } from "node:http";
 import { readFileSync } from "node:fs";
 import { handleAdmin } from "./admin.mjs";
 import { handleCheckout } from "./checkout.mjs";
+import { handleDrafter } from "./drafter.mjs";
 import { handleJobs } from "./jobs.mjs";
 import { toRequest, writeResult } from "./node-http.mjs";
 import { handleWebhook } from "./webhook.mjs";
@@ -20,7 +21,7 @@ const server = createServer(async (req, res) => {
     res.end(readFileSync(new URL("../admin/index.html", import.meta.url)));
     return;
   }
-  const fn = routes[url.pathname];
+  const fn = routes[url.pathname] || (url.pathname.startsWith("/api/santa/drafter/") ? handleDrafter : null);
   if (!fn) {
     res.statusCode = 404;
     res.end("Not found");

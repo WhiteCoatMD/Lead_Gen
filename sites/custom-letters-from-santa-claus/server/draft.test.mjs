@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { fallbackLetter, letterProblems, draftForChild, gatewayAuthMode } from "./draft.mjs";
+import { fallbackLetter, letterProblems, draftForChild, gatewayAuthMode, aiDraftingEnabled } from "./draft.mjs";
 
 const child = {
   firstName: "Ada",
@@ -29,19 +29,23 @@ test("a model letter that invents a promise or misspells the name is replaced", 
   const bad = await draftForChild(child, {
     generate: async () => "Dear Adah, I guarantee you will get a pony. It is postmarked from the North Pole USPS facility.",
   });
-  assert.equal(bad.model, "fallback");
+  assert.equal(bad.model, "template");
+  assert.equal(bad.source, "template");
   assert.match(bad.body, /Dear Ada,/);
   assert.equal(letterProblems(bad.body).length, 0);
   const good = await draftForChild(child, {
     generate: async () => "Dear Ada,\n\nGrayson sounds like a good place to be 7. I cannot promise the kite. I am glad Milo is with you.\n\nSanta",
   });
   assert.match(good.body, /Dear Ada/);
-  assert.notEqual(good.model, "fallback");
+  assert.equal(good.source, "assistant");
+  assert.notEqual(good.model, "template");
 });
 
-test("gateway auth uses the API key, then Vercel OIDC, then neither", () => {
+test("gateway drafting stays off unless an API key is set", () => {
   assert.equal(gatewayAuthMode({ AI_GATEWAY_API_KEY: "key", VERCEL_OIDC_TOKEN: "token" }), "api-key");
-  assert.equal(gatewayAuthMode({ VERCEL_OIDC_TOKEN: "token" }), "oidc");
+  assert.equal(gatewayAuthMode({ VERCEL_OIDC_TOKEN: "token" }), "none");
   assert.equal(gatewayAuthMode({ AI_GATEWAY_API_KEY: "  " }), "none");
-  assert.equal(gatewayAuthMode({}), "none");
+  assert.equal(aiDraftingEnabled({}), false);
+  assert.equal(aiDraftingEnabled({ VERCEL_OIDC_TOKEN: "token" }), false);
+  assert.equal(aiDraftingEnabled({ AI_GATEWAY_API_KEY: "key" }), true);
 });

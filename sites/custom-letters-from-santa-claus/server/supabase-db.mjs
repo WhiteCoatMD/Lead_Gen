@@ -5,9 +5,20 @@ import { SANTA_SCHEMA } from "./config.mjs";
 // The schema has to be in the project's exposed Data API schemas or these
 // calls fail closed. This client never addresses public.
 
+// The Vercel Supabase integration injects SUPABASE_URL and
+// SUPABASE_SERVICE_ROLE_KEY. Those are the only names this client reads.
+// POSTGRES_URL and SUPABASE_SECRET_KEY are not substitutes.
+export function supabaseCredentials(env = {}) {
+  return {
+    url: String(env.SUPABASE_URL || "").trim(),
+    serviceRoleKey: String(env.SUPABASE_SERVICE_ROLE_KEY || "").trim(),
+  };
+}
+
 export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
-  const base = String(env.SUPABASE_URL || "").replace(/\/$/, "");
-  const key = env.SUPABASE_SERVICE_ROLE_KEY;
+  const { url, serviceRoleKey } = supabaseCredentials(env);
+  const base = url.replace(/\/$/, "");
+  const key = serviceRoleKey;
   if (!base || !key) throw new Error("SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY are required");
 
   async function call(method, path, { body, prefer } = {}) {
@@ -75,7 +86,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
     const ids = rows.map((row) => row.id).join(",");
     const [children, drafts, messages] = await Promise.all([
       call("GET", `children?order_id=in.(${ids})&select=id,order_id,position,first_name,age,town,friend_or_pet,accomplishment,work_on,wishlist&order=position.asc`),
-      call("GET", `letter_drafts?order_id=in.(${ids})&select=id,order_id,child_id,body,model,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id,send_error`),
+      call("GET", `letter_drafts?order_id=in.(${ids})&select=id,order_id,child_id,body,model,source,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id,send_error`),
       call("GET", `order_messages?order_id=in.(${ids})&select=id,order_id,kind,to_email,subject,body,status,created_at`),
     ]);
     return rows.map((row) => view(
@@ -185,6 +196,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
           child_id: draft.childId,
           body: draft.body,
           model: draft.model || null,
+          source: draft.source === "assistant" ? "assistant" : "template",
           status: "draft",
         },
       });
@@ -228,7 +240,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
       return hydrate(rows || []);
     },
     async getDraft(id) {
-      const rows = await call("GET", `letter_drafts?id=eq.${id}&select=id,order_id,child_id,body,model,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id,send_error`);
+      const rows = await call("GET", `letter_drafts?id=eq.${id}&select=id,order_id,child_id,body,model,source,status,reviewer,reviewed_at,sent_at,redacted_at,provider,provider_id,send_error`);
       return rows?.[0] ? fromDraft(rows[0]) : null;
     },
     async updateDraft(id, patch) {
@@ -243,6 +255,7 @@ export function createSupabaseDb(env, fetchImpl = globalThis.fetch) {
       if ("providerId" in patch) body.provider_id = patch.providerId || null;
       if ("childId" in patch) body.child_id = patch.childId;
       if ("model" in patch) body.model = patch.model;
+      if ("source" in patch) body.source = patch.source === "assistant" ? "assistant" : "template";
       if ("sendError" in patch) body.send_error = patch.sendError || null;
       body.updated_at = new Date().toISOString();
       const rows = await call("PATCH", `letter_drafts?id=eq.${id}`, { prefer: "return=representation", body });
@@ -337,6 +350,7 @@ function fromDraft(row) {
     childId: row.child_id,
     body: row.body || "",
     model: row.model || "",
+    source: row.source === "assistant" ? "assistant" : "template",
     status: row.status,
     reviewer: row.reviewer || "",
     reviewedAt: row.reviewed_at || "",

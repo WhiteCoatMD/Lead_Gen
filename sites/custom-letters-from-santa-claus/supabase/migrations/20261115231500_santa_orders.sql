@@ -157,3 +157,18 @@ create index if not exists admin_login_attempts_ip_idx on santa.admin_login_atte
 alter table santa.admin_login_attempts enable row level security;
 revoke all on table santa.admin_login_attempts from public, anon, authenticated;
 grant select, insert, update, delete on table santa.admin_login_attempts to service_role;
+
+alter table santa.letter_drafts add column if not exists source text not null default 'template';
+
+do $$
+begin
+  if not exists (
+    select 1 from pg_constraint
+    where conname = 'letter_drafts_source_check'
+      and connamespace = 'santa'::regnamespace
+  ) then
+    alter table santa.letter_drafts
+      add constraint letter_drafts_source_check
+      check (source in ('template', 'assistant'));
+  end if;
+end $$;

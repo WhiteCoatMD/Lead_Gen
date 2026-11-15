@@ -87,29 +87,28 @@ export function acceptsModel(text, child) {
 export async function draftForChild(child, { generate, model = DEFAULT_MODEL } = {}) {
   try {
     const text = await generate(buildPrompt(child));
-    if (acceptsModel(text, child)) return { body: String(text).trim(), model };
+    if (acceptsModel(text, child)) return { body: String(text).trim(), model, source: "assistant" };
   } catch {
-    // The safe letter below still goes to the review queue. Nothing is sent.
+    // The template below still goes to the review queue. Nothing is sent.
   }
-  return { body: fallbackLetter(child), model: "fallback" };
+  return { body: fallbackLetter(child), model: "template", source: "template" };
 }
 
-// api-key wins when it is set. Otherwise the AI SDK gateway provider uses
-// VERCEL_OIDC_TOKEN. Neither one means the caller should use the template.
+// Drafting with the AI Gateway is off unless an API key is set. OIDC alone
+// does not turn it on.
+export function aiDraftingEnabled(env = process.env) {
+  return Boolean(String(env?.AI_GATEWAY_API_KEY || "").trim());
+}
+
 export function gatewayAuthMode(env = process.env) {
-  if (String(env?.AI_GATEWAY_API_KEY || "").trim()) return "api-key";
-  if (String(env?.VERCEL_OIDC_TOKEN || "").trim()) return "oidc";
-  return "none";
+  return aiDraftingEnabled(env) ? "api-key" : "none";
 }
 
 export async function generateWithGateway(prompt, env = process.env) {
-  const mode = gatewayAuthMode(env);
-  if (mode === "none") throw new Error("AI Gateway credentials are not set");
-  const { generateText, createGateway } = await import("ai");
-  const modelId = env.AI_GATEWAY_MODEL || DEFAULT_MODEL;
-  const model = mode === "api-key" ? modelId : createGateway()(modelId);
+  if (!aiDraftingEnabled(env)) throw new Error("AI_GATEWAY_API_KEY is not set");
+  const { generateText } = await import("ai");
   const { text } = await generateText({
-    model,
+    model: env.AI_GATEWAY_MODEL || DEFAULT_MODEL,
     prompt,
     maxRetries: 0,
     timeout: 20000,
