@@ -54,10 +54,15 @@ function paletteOf(site) {
 
 function typeStyle(site) {
   const palette = paletteOf(site);
+  const festive = site.brand === "festive";
   const display = site.brand === "workshop"
     ? '"Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif'
-    : 'Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif';
-  const body = '"Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif';
+    : festive
+      ? '"Nunito", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif'
+      : 'Palatino, "Palatino Linotype", "Iowan Old Style", Georgia, serif';
+  const body = festive
+    ? '"Nunito", "Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif'
+    : '"Avenir Next", "Segoe UI", Helvetica, Arial, sans-serif';
   return `:root{--accent:${palette.accent};--accent-dark:${hex(site.accentDark, palette.accent)};--paper:${palette.paper};--ink:${palette.ink};--muted:${hex(site.muted, "#5c564e")};--line:${hex(site.line, "#e3d9cc")};--card:${palette.card};--pine:${palette.pine};--gold:${palette.gold};--disc:${palette.disc};--display:${display};--body:${body}}`;
 }
 
@@ -103,6 +108,91 @@ function imageFile(product) {
 
 function imageSrc(product) {
   return `/assets/${imageFile(product)}`;
+}
+
+function imageDims(product) {
+  return {
+    width: Number(product.imageWidth) || 640,
+    height: Number(product.imageHeight) || 480,
+  };
+}
+
+function assetPath(file) {
+  return `/assets/${String(file || "").replace(/^\/assets\//, "")}`;
+}
+
+function heroVisual(site) {
+  if (!site.heroImage) return heroMark(site.brand);
+  const src = assetPath(site.heroImage);
+  const alt = esc(site.heroImageAlt || site.headline || site.name);
+  const width = Number(site.heroImageWidth) || 1200;
+  const height = Number(site.heroImageHeight) || 900;
+  const sizes = site.heroSizes ? ` sizes="${esc(site.heroSizes)}"` : "";
+  const img = `<img class="hero-photo" src="${esc(src)}" alt="${alt}" width="${width}" height="${height}" decoding="async" fetchpriority="high">`;
+  if (!site.heroWebpSrcset) return img;
+  return `<picture><source type="image/webp" srcset="${esc(site.heroWebpSrcset)}"${sizes}>${img}</picture>`;
+}
+
+function heroPreload(site) {
+  if (!site.heroImage) return "";
+  if (site.heroWebpSrcset) {
+    const sizes = site.heroSizes ? ` imagesizes="${esc(site.heroSizes)}"` : "";
+    return `<link rel="preload" as="image" type="image/webp" imagesrcset="${esc(site.heroWebpSrcset)}"${sizes} fetchpriority="high">\n  `;
+  }
+  return `<link rel="preload" as="image" href="${esc(assetPath(site.heroImage))}" fetchpriority="high">\n  `;
+}
+
+function ornamentRow(items) {
+  if (!Array.isArray(items) || !items.length) return "";
+  const imgs = items.map((item) => {
+    const width = Number(item.width) || 160;
+    const height = Number(item.height) || 160;
+    return `<img src="${esc(assetPath(item.src))}" alt="" width="${width}" height="${height}" loading="lazy" decoding="async">`;
+  }).join("");
+  return `<div class="ornament-row" aria-hidden="true">${imgs}</div>\n    `;
+}
+
+function pageFigure(page) {
+  if (!page?.image) return "";
+  const width = Number(page.imageWidth) || 960;
+  const height = Number(page.imageHeight) || 720;
+  return `<figure class="page-figure"><img src="${esc(assetPath(page.image))}" alt="${esc(page.imageAlt || "")}" width="${width}" height="${height}" loading="lazy" decoding="async"></figure>`;
+}
+
+// Flat household price: basePrice covers baseChildren, and extraChildPrice
+// (default 0) is added only for children beyond that. A non-positive extra
+// stays 0, so 2 or 6 children cost the same until the config says otherwise.
+export function childBundlePrice({ basePrice, baseChildren = 2, extraChildPrice = 0, count = 0 }) {
+  const base = Number(basePrice);
+  const included = Number(baseChildren) > 0 ? Number(baseChildren) : 2;
+  const extra = Number(extraChildPrice) > 0 ? Number(extraChildPrice) : 0;
+  const more = Math.max(0, (Number(count) || 0) - included);
+  return Math.round((base + more * extra) * 100) / 100;
+}
+
+function bundlePricingOf(product) {
+  const raw = product?.bundlePricing;
+  if (!raw || typeof raw !== "object") return null;
+  const basePrice = Number(raw.basePrice);
+  if (!Number.isFinite(basePrice) || basePrice <= 0) {
+    throw new Error(`${product.slug || "product"} bundlePricing.basePrice must be above 0`);
+  }
+  const extra = Number(raw.extraChildPrice);
+  const baseChildren = Number(raw.baseChildren);
+  return {
+    basePrice,
+    extraChildPrice: Number.isFinite(extra) && extra > 0 ? extra : 0,
+    baseChildren: Number.isInteger(baseChildren) && baseChildren > 0 ? baseChildren : 2,
+  };
+}
+
+function bundlePriceNote(product) {
+  const pricing = bundlePricingOf(product);
+  if (!pricing) return "";
+  if (pricing.extraChildPrice > 0) {
+    return `The price is ${formatPrice(pricing.basePrice)} for ${pricing.baseChildren} children at the same address, plus ${formatPrice(pricing.extraChildPrice)} for each additional child.`;
+  }
+  return `One flat price of ${formatPrice(pricing.basePrice)} for 2 or more children in the same household.`;
 }
 
 function navItems(site) {
@@ -202,12 +292,13 @@ function fieldControl(field) {
   const required = field.required ? " required" : "";
   const autocomplete = field.autocomplete ? ` autocomplete="${esc(field.autocomplete)}"` : "";
   const hint = field.hint ? `<span class="hint">${esc(field.hint)}</span>` : "";
+  const key = field.key ? ` data-key="${esc(field.key)}"` : "";
   if (field.type === "checkbox") {
     const value = esc(field.value || "yes");
-    return `<label class="field"><span><input type="checkbox" name="${esc(field.name)}" value="${value}" data-field data-label="${esc(field.label)}"${required}> ${esc(field.label)}</span>${hint}</label>`;
+    return `<label class="field"><span><input type="checkbox" name="${esc(field.name)}" value="${value}" data-field data-label="${esc(field.label)}"${key}${required}> ${esc(field.label)}</span>${hint}</label>`;
   }
   const max = field.type === "textarea" ? 800 : 160;
-  const common = ` name="${esc(field.name)}" data-field data-label="${esc(field.label)}"${required}${autocomplete} maxlength="${max}"`;
+  const common = ` name="${esc(field.name)}" data-field data-label="${esc(field.label)}"${key}${required}${autocomplete} maxlength="${max}"`;
   const control = field.type === "textarea"
     ? `<textarea${common}></textarea>`
     : `<input type="${esc(field.type || "text")}"${common}${field.type === "date" ? "" : ""}>`;
@@ -231,6 +322,119 @@ function fieldsHtml(fields = []) {
   return html;
 }
 
+function childFieldset(index, spec) {
+  const fields = (spec.fields || []).map((field) => {
+    if (!field?.key) throw new Error("A repeat child field needs a key");
+    if (field.type === "email") throw new Error("A repeat child field cannot collect an email");
+    return fieldControl({
+      ...field,
+      name: `child${index}${field.key}`,
+      key: field.key,
+    });
+  }).join("");
+  return `<fieldset data-child-slot data-child-index="${esc(String(index))}"><legend>${esc(`${spec.legend || "Child"} ${index}`)}</legend>${fields}<button type="button" class="text-button" data-remove-child hidden>${esc(spec.removeLabel || "Remove this child")}</button></fieldset>`;
+}
+
+function childSlotsHtml(spec) {
+  if (!spec || !Array.isArray(spec.fields) || !spec.fields.length) return "";
+  const min = Math.max(1, Number(spec.min) || 2);
+  const max = Math.max(min, Number(spec.max) || 8);
+  let html = `<div data-child-slots data-child-min="${min}" data-child-max="${max}">`;
+  for (let index = 1; index <= min; index += 1) html += childFieldset(index, spec);
+  html += `<template data-child-template>${childFieldset("__INDEX__", spec)}</template>`;
+  html += `<button type="button" class="button ghost" data-add-child>${esc(spec.addLabel || "Add another child")}</button>`;
+  html += `<p class="hint" data-child-status role="status"></p></div>`;
+  return html;
+}
+
+const CHILD_SLOT_JS = `(function(){
+  function money(n){
+    var cents=Math.round(Number(n)*100);
+    var abs=Math.abs(cents);
+    return (cents<0?"-":"")+"$"+Math.floor(abs/100)+"."+String(abs%100).padStart(2,"0");
+  }
+  function priceFor(form,count){
+    var base=Number(form.getAttribute("data-base-price"));
+    var included=Number(form.getAttribute("data-base-children"))||2;
+    var extra=Number(form.getAttribute("data-extra-child-price"));
+    if(!(extra>0)) extra=0;
+    var more=Math.max(0,count-included);
+    return Math.round((base+more*extra)*100)/100;
+  }
+  function countOf(root){return root.querySelectorAll("[data-child-slot]").length;}
+  function renumber(root){
+    var min=Number(root.getAttribute("data-child-min"))||2;
+    var max=Number(root.getAttribute("data-child-max"))||8;
+    var slots=root.querySelectorAll("[data-child-slot]");
+    slots.forEach(function(slot,i){
+      var n=String(i+1);
+      slot.setAttribute("data-child-index",n);
+      var legend=slot.querySelector("legend");
+      if(legend) legend.textContent="Child "+n;
+      slot.querySelectorAll("[data-field]").forEach(function(input){
+        var key=input.getAttribute("data-key");
+        if(!key) return;
+        input.name="child"+n+key;
+      });
+      var remove=slot.querySelector("[data-remove-child]");
+      if(remove) remove.hidden=slots.length<=min;
+    });
+    var add=root.querySelector("[data-add-child]");
+    if(add) add.disabled=slots.length>=max;
+  }
+  function paint(form){
+    var root=form.querySelector("[data-child-slots]");
+    if(!root) return 0;
+    var count=countOf(root);
+    var price=priceFor(form,count);
+    form.setAttribute("data-price",String(price));
+    var box=form.closest(".buy-box");
+    var num=box&&box.querySelector(".price-num");
+    if(num) num.textContent=money(price);
+    if(form.hasAttribute("data-letter-count")) form.setAttribute("data-letter-count",String(count));
+    return price;
+  }
+  document.querySelectorAll("[data-product-form]").forEach(function(form){
+    var root=form.querySelector("[data-child-slots]");
+    if(!root) return;
+    renumber(root);
+    paint(form);
+    root.addEventListener("click",function(event){
+      var add=event.target.closest&&event.target.closest("[data-add-child]");
+      var remove=event.target.closest&&event.target.closest("[data-remove-child]");
+      if(add){
+        var max=Number(root.getAttribute("data-child-max"))||8;
+        if(countOf(root)>=max) return;
+        var tpl=root.querySelector("[data-child-template]");
+        if(!tpl||!tpl.content||!tpl.content.firstElementChild) return;
+        var node=tpl.content.firstElementChild.cloneNode(true);
+        add.before(node);
+        renumber(root);
+        var price=paint(form);
+        var status=root.querySelector("[data-child-status]");
+        if(status) status.textContent="Child "+countOf(root)+" added. Household price "+money(price)+".";
+        var focus=node.querySelector("input,textarea");
+        if(focus) focus.focus();
+      } else if(remove){
+        var min=Number(root.getAttribute("data-child-min"))||2;
+        if(countOf(root)<=min) return;
+        var slot=remove.closest("[data-child-slot]");
+        if(slot) slot.remove();
+        renumber(root);
+        var next=paint(form);
+        var note=root.querySelector("[data-child-status]");
+        if(note) note.textContent="A child was removed. "+countOf(root)+" children. Household price "+money(next)+".";
+      }
+    });
+    form.addEventListener("submit",function(){paint(form);},true);
+  });
+})();`;
+
+function childSlotScript(site) {
+  if (!(site.products || []).some((product) => product.repeatChildren)) return "";
+  return `<script>${CHILD_SLOT_JS}</script>\n  `;
+}
+
 function meter(product) {
   const n = Number(product.snark);
   if (!Number.isInteger(n) || n < 1 || n > 5) return "";
@@ -241,9 +445,10 @@ function meter(product) {
 function productCard(product) {
   const href = `/products/${product.slug}`;
   const meta = [product.difficulty, product.snarkLabel].filter(Boolean);
+  const dims = imageDims(product);
   return `<article class="product" data-placeholder="${product.placeholder ? "true" : "false"}">
     <a class="product-media" href="${href}">
-      <img src="${esc(imageSrc(product))}" alt="${esc(product.imageAlt || product.name)}" width="640" height="480" loading="lazy" decoding="async">
+      <img src="${esc(imageSrc(product))}" alt="${esc(product.imageAlt || product.name)}" width="${dims.width}" height="${dims.height}" loading="lazy" decoding="async">
     </a>
     <div class="product-body">
       <h3><a href="${href}">${esc(product.name)}</a></h3>
@@ -282,6 +487,13 @@ function buyBox(site, product) {
   const waiting = site.checkoutEmptyLabel || "Coming soon — notify me";
   const offer = resolvePostmark(site);
   const personalization = fieldsFor(product, offer);
+  const pricing = bundlePricingOf(product);
+  const unit = pricing ? pricing.basePrice : product.price;
+  const note = bundlePriceNote(product);
+  const slots = product.repeatChildren ? childSlotsHtml(product.repeatChildren) : "";
+  const priceAttrs = pricing
+    ? ` data-base-price="${esc(pricing.basePrice)}" data-base-children="${esc(pricing.baseChildren)}" data-extra-child-price="${esc(pricing.extraChildPrice)}"`
+    : "";
   const action = checkout
     ? `<a class="button ghost" data-buy-link href="${esc(checkout)}">${esc(ready)}</a>`
     : `<button type="button" class="button ghost" data-notify>${esc(waiting)}</button>`;
@@ -297,13 +509,13 @@ function buyBox(site, product) {
     ? `<div><p class="kicker">What's included</p><ul class="includes">${product.includes.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div>`
     : "";
   return `<div class="buy-box">
-    <p class="price"><span class="price-num">${esc(formatPrice(product.price))}</span></p>
+    <p class="price"><span class="price-num">${esc(formatPrice(unit))}</span></p>${note ? `\n    <p class="bundle-note">${esc(note)}</p>` : ""}
     ${product.description ? `<p>${esc(product.description)}</p>` : ""}
     ${meter(product)}
     ${includes}
     ${product.timing ? `<p class="timing">${esc(product.timing)}</p>` : ""}${personalization.letters ? `\n    <p class="timing">${esc(postmarkSentence(offer))} A standard letter on this page, without the option, is printed in full color and mailed First-Class by USPS from the US mainland.</p>` : ""}
-    <form data-product-form data-slug="${esc(product.slug)}" data-name="${esc(product.name)}" data-price="${esc(product.price)}" data-placeholder="${product.placeholder ? "true" : "false"}" data-checkout="${esc(checkout)}"${personalization.letters ? ` data-letter-count="${personalization.letters}"` : ""}>
-      ${fieldsHtml(personalization.fields)}
+    <form data-product-form data-slug="${esc(product.slug)}" data-name="${esc(product.name)}" data-price="${esc(unit)}" data-placeholder="${product.placeholder ? "true" : "false"}" data-checkout="${esc(checkout)}"${priceAttrs}${personalization.letters ? ` data-letter-count="${personalization.letters}"` : ""}>
+      ${slots}${fieldsHtml(personalization.fields)}
       <label class="field qty-field">Quantity<input type="number" name="qty" min="1" max="20" value="1" required></label>
       <div class="buy-actions">
         <button type="submit" class="button primary">Add to cart</button>
@@ -365,7 +577,7 @@ function businessSchema(site) {
 
 function shell(site, slug, { title, description, path, current, main, schemas, image, ogType = "website" }) {
   assertSeo(path || "home", title, description);
-  const brand = site.brand === "workshop" ? "workshop" : "hearth";
+  const brand = site.brand === "workshop" ? "workshop" : site.brand === "festive" ? "festive" : "hearth";
   const phone = publicPhone(site);
   const tel = phone ? phoneHref(phone) : "";
   const canonical = path ? `https://${site.domain}/${path}` : `https://${site.domain}/`;
@@ -404,7 +616,7 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   ${ogImage}
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/site.css">
+  ${heroPreload(site)}<link rel="stylesheet" href="/site.css">
   <style>${typeStyle(site)}</style>
   ${scripts}
 </head><body>
@@ -429,7 +641,7 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   </div></footer>
   ${phone ? `<a class="mobile-call" href="${tel}" aria-label="Call ${esc(phone)}">${esc(phone)}</a>` : ""}
   <script src="/site.js" defer></script>
-  <script src="/store.js" type="module"></script>
+  ${childSlotScript(site)}<script src="/store.js" type="module"></script>
   ${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}
 </body></html>`;
 }
@@ -441,8 +653,13 @@ function homeMain(site) {
   const more = productsOf(site).length > featured.length
     ? `<p class="featured-note"><a class="text-link" href="/shop">See the full shop</a></p>`
     : "";
-  const steps = (site.steps || []).map((step, index) => `
-    <article class="step"><span>${String(index + 1).padStart(2, "0")}</span><h3>${esc(step.title)}</h3><p>${esc(step.text)}</p></article>`).join("");
+  const steps = (site.steps || []).map((step, index) => {
+    const art = step.image
+      ? `<img class="step-art" src="${esc(assetPath(step.image))}" alt="${esc(step.imageAlt || "")}" width="${Number(step.imageWidth) || 160}" height="${Number(step.imageHeight) || 160}" loading="lazy" decoding="async">`
+      : "";
+    return `
+    <article class="step">${art}<span>${String(index + 1).padStart(2, "0")}</span><h3>${esc(step.title)}</h3><p>${esc(step.text)}</p></article>`;
+  }).join("");
   const timing = site.timing ? `<section class="band" id="timing"><div class="shell"><p class="kicker">${esc(site.timing.kicker || "Timing")}</p><h2>${esc(site.timing.heading)}</h2><p>${esc(site.timing.body)}</p>${site.timing.linkHref ? `<p><a href="${esc(site.timing.linkHref)}">${esc(site.timing.linkLabel || "Read more")}</a></p>` : ""}</div></section>` : "";
   const faqs = (site.info?.faq?.items || []).slice(0, 3);
   const faqBlock = faqs.length ? `<section class="section shell" id="faq"><div class="section-head"><p class="kicker">FAQ</p><h2>${esc(site.info.faq.heading || "Questions")}</h2></div><div class="faq-list">${faqItems(faqs)}</div><p class="featured-note"><a class="text-link" href="/faq">All questions</a></p></section>` : "";
@@ -458,9 +675,9 @@ function homeMain(site) {
           <a class="button ghost" href="#timing">${esc(site.secondaryCta || "Ordering")}</a>
         </div>
       </div>
-      ${heroMark(site.brand)}
+      ${heroVisual(site)}
     </section>
-    <section class="section shell" id="store">
+    ${ornamentRow(site.ornaments)}<section class="section shell" id="store">
       <div class="section-head"><p class="kicker">${esc(site.sectionKicker || "Shop")}</p><h2>${esc(site.servicesHeadline || "Featured")}</h2></div>
       <div class="product-grid cols-3">${featured.map(productCard).join("")}</div>
       ${site.featuredNote ? `<p class="featured-note">${esc(site.featuredNote)}</p>` : ""}
@@ -521,7 +738,7 @@ function infoMain(site, key, page) {
       </section>`;
   }
   const sections = (page.sections || []).map((section) => `<section><h2>${esc(section.heading)}</h2>${paragraphs(section.body)}</section>`).join("");
-  return `${trail}<section class="shell page-hero"><p class="kicker">${esc(page.kicker || "")}</p><h1>${esc(page.heading)}</h1>${page.intro ? `<p class="lede">${esc(page.intro)}</p>` : ""}</section><section class="shell prose">${sections}</section>`;
+  return `${trail}<section class="shell page-hero"><p class="kicker">${esc(page.kicker || "")}</p><h1>${esc(page.heading)}</h1>${page.intro ? `<p class="lede">${esc(page.intro)}</p>` : ""}</section>${pageFigure(page)}<section class="shell prose">${sections}</section>`;
 }
 
 export function renderStore(site, slug = "") {
@@ -589,7 +806,7 @@ export function storeDocuments(site, slug = "") {
         schemas: [productSchema(site, product), breadcrumbSchema(site, trail)],
         main: `${crumbs(trail)}
           <article class="shell pdp">
-            <div class="pdp-media"><img src="${esc(imageSrc(product))}" alt="${esc(product.imageAlt || product.name)}" width="640" height="480" decoding="async" fetchpriority="high"></div>
+            <div class="pdp-media"><img src="${esc(imageSrc(product))}" alt="${esc(product.imageAlt || product.name)}" width="${imageDims(product).width}" height="${imageDims(product).height}" decoding="async" fetchpriority="high"></div>
             <div>
               <p class="kicker">${esc(product.kicker || site.name)}</p>
               <h1>${esc(product.name)}</h1>

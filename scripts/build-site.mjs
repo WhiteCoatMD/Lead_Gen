@@ -65,11 +65,18 @@ await fs.writeFile(path.join(outputDir, "favicon.svg"), renderFavicon(config), "
 // Stylesheet falls back in order: this site's own, then the one belonging to
 // its template, then the shared contractor stylesheet.
 const exists = async (file) => fs.stat(file).then(() => file, () => null);
-const cssFile =
-  (await exists(path.join(siteDir, "site.css"))) ||
-  (config.template ? await exists(path.join(root, "shared", `${config.template}.css`)) : null) ||
-  path.join(root, "shared", "site.css");
-await fs.copyFile(cssFile, path.join(outputDir, "site.css"));
+const templateCss = config.template ? await exists(path.join(root, "shared", `${config.template}.css`)) : null;
+const siteCss = await exists(path.join(siteDir, "site.css"));
+// A site stylesheet layers on top of its template. Sites with only one of
+// the two keep the previous single-file copy, so other storefronts are unchanged.
+if (siteCss && templateCss) {
+  const base = await fs.readFile(templateCss, "utf8");
+  const extra = await fs.readFile(siteCss, "utf8");
+  await fs.writeFile(path.join(outputDir, "site.css"), base.endsWith("\n") ? base + extra : `${base}\n${extra}`, "utf8");
+} else {
+  const cssFile = siteCss || templateCss || path.join(root, "shared", "site.css");
+  await fs.copyFile(cssFile, path.join(outputDir, "site.css"));
+}
 await fs.copyFile(path.join(root, "shared", "site.js"), path.join(outputDir, "site.js"));
 
 for (const asset of config.assets || []) {
