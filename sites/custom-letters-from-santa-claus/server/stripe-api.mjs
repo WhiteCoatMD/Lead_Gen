@@ -53,6 +53,28 @@ function addLine(params, index, name, amount) {
   params.set(`line_items[${index}][price_data][product_data][name]`, name);
 }
 
+export function stripeCustomerId(value) {
+  const id = typeof value === "string" ? value : value?.id;
+  return /^cus_[A-Za-z0-9]+$/.test(id || "") ? id : "";
+}
+
+export async function deleteStripeCustomer(customerId, secret, fetchImpl) {
+  const id = stripeCustomerId(customerId);
+  if (!id || !secret) return { deleted: false };
+  const response = await fetchImpl(`https://api.stripe.com/v1/customers/${id}`, {
+    method: "DELETE",
+    headers: { Authorization: `Bearer ${secret}` },
+  });
+  if (response.status === 404) return { deleted: false };
+  const payload = await response.json().catch(() => ({}));
+  if (!response.ok) {
+    const error = new Error("Stripe did not delete the customer");
+    error.status = response.status;
+    throw error;
+  }
+  return { deleted: payload.deleted === true };
+}
+
 export async function createCheckoutSession({ order, successUrl, cancelUrl, secret, fetchImpl }) {
   const body = checkoutSessionBody({ order, successUrl, cancelUrl });
   const response = await fetchImpl("https://api.stripe.com/v1/checkout/sessions", {

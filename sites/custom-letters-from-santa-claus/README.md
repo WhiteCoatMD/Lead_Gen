@@ -61,9 +61,9 @@ Child rows have no email column. A parent email is required. The privacy page st
 - A rejected letter's child details are deleted 60 days after the rejection.
 - An unpaid, canceled, or abandoned order's child details are deleted after 7 days.
 - The parent name, email, and mailing address are deleted 60 days after the last letter in the order is delivered. The remaining row keeps the product and the amount.
-- `/admin` can mark a postmark letter shipped, which starts that clock, and can delete a family's data immediately when a parent asks.
+- `/admin` can mark a postmark letter shipped, which starts that clock, and can delete a family's data immediately when a parent asks. That removes the child details and the parent name, email, and address from this database. If the order has a Stripe Customer, that Customer is deleted too. Stripe keeps the payment transaction records under its own legal obligations.
 
-Run the migration again if the `santa` schema already exists. The new statements only add columns, a login-attempt table, and relax the email format check on `santa.orders`.
+Run the migration again if the `santa` schema already exists. The added statements include `stripe_customer_id` on `santa.orders` and an index so the daily login-attempt purge can delete old rows.
 
 ## Routes
 
@@ -74,11 +74,9 @@ Run the migration again if the `santa` schema already exists. The new statements
 | `/admin` | Password form. Lists orders and drafts. Edit, approve, reject, or draft again. |
 | `GET /api/santa/admin?export=csv` | Approved postmark-add-on letters only, as CSV. |
 | `GET /api/santa/admin?export=pdf` | Same batch as a PDF packing file. |
-| `GET /api/santa/jobs` | Cron. Sends due approved email, mails approved standard print through Lob, purges child details 60 days after delivery, and holds unapproved email whose date has arrived. |
+| `GET /api/santa/jobs` | Cron. Sends due approved email, mails approved standard print through Lob, purges child details 60 days after delivery, deletes login-attempt rows older than a day, and holds unapproved email whose date has arrived. |
 
-The cron schedule lives in `sites/custom-letters-from-santa-claus/vercel.json` (`0 14,20 * * *`, 08:00 and 14:00 CT in winter). It is copied into `dist/custom-letters-from-santa-claus/vercel.json` and is not written into the repo-root `vercel.json`.
-
-Every Git-connected project in this monorepo uses the repo root as its Root Directory, so a cron in the root file is registered on every site. That is why it was removed. A CLI deploy of this site's output directory (`scripts/deploy-all.mjs`) uploads that directory as the project root, so the cron is registered on the Santa project only. A Git deploy of the shared root does not register it on the other projects, and it also does not register it from the site file, because Vercel reads crons from the project Root Directory. Changing the Santa project's Root Directory to the site folder would pick up this file, and it would also break the build: the output directory `dist/custom-letters-from-santa-claus` would sit outside that root, which Vercel rejects. The job route is still deployed with `/api` on every project and returns immediately unless the project id is the Santa project.
+The cron is in the repo-root `vercel.json` (`0 14,20 * * *`, 08:00 and 14:00 CT in winter). Every Git-connected project uses the repo root as its Root Directory, so Vercel registers that job on each of them. A cron in `sites/custom-letters-from-santa-claus/vercel.json` is not read. `/api/santa/jobs` returns 200 and does no database work unless `VERCEL_PROJECT_ID` is `prj_Cooa6zu0wXv87rdhtKX7M4nj5gVG` or `SANTA_ORDERS_ENABLED=true`. Every other project gets `{ "ok": true, "skipped": true }`. A site build rewrites the root file from the redirect rules and puts this cron back, so the job is not dropped.
 
 ## End-to-end test order (Stripe test mode)
 

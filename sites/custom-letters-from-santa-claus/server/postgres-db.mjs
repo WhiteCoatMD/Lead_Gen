@@ -110,7 +110,7 @@ export function createDb(env, injected) {
     async getOrder(id) {
       const sql = await open();
       const rows = await sql`
-        select id, stripe_session_id, stripe_payment_intent_id, product, product_name,
+        select id, stripe_session_id, stripe_payment_intent_id, stripe_customer_id, product, product_name,
                product_cents, postmark_cents, amount_cents, status, parent_email, recipient_email,
                recipient_confirmed, delivery_date, mailing_name, mailing_street, mailing_city,
                mailing_state, mailing_zip, postmark_addon, letter_count, created_at, updated_at,
@@ -122,7 +122,7 @@ export function createDb(env, injected) {
     async findOrderBySession(sessionId) {
       const sql = await open();
       const rows = await sql`
-        select id, stripe_session_id, stripe_payment_intent_id, product, product_name,
+        select id, stripe_session_id, stripe_payment_intent_id, stripe_customer_id, product, product_name,
                product_cents, postmark_cents, amount_cents, status, parent_email, recipient_email,
                recipient_confirmed, delivery_date, mailing_name, mailing_street, mailing_city,
                mailing_state, mailing_zip, postmark_addon, letter_count, created_at, updated_at,
@@ -131,11 +131,14 @@ export function createDb(env, injected) {
       const [order] = await hydrate(sql, rows);
       return order || null;
     },
-    async markPaid(orderId, paymentIntentId) {
+    async markPaid(orderId, paymentIntentId, customerId) {
       const sql = await open();
       await sql`
         update santa.orders
-        set status = 'paid', stripe_payment_intent_id = ${paymentIntentId || null}, updated_at = now()
+        set status = 'paid',
+            stripe_payment_intent_id = ${paymentIntentId || null},
+            stripe_customer_id = ${customerId || null},
+            updated_at = now()
         where id = ${orderId} and status = 'pending'`;
       return this.getOrder(orderId);
     },
@@ -185,7 +188,7 @@ export function createDb(env, injected) {
     async listQueue() {
       const sql = await open();
       const rows = await sql`
-        select id, stripe_session_id, stripe_payment_intent_id, product, product_name,
+        select id, stripe_session_id, stripe_payment_intent_id, stripe_customer_id, product, product_name,
                product_cents, postmark_cents, amount_cents, status, parent_email, recipient_email,
                recipient_confirmed, delivery_date, mailing_name, mailing_street, mailing_city,
                mailing_state, mailing_zip, postmark_addon, letter_count, created_at, updated_at,
@@ -277,6 +280,11 @@ export function createDb(env, injected) {
       const sql = await open();
       await sql`insert into santa.admin_login_attempts (ip, attempted_at) values (${ip}, ${at})`;
     },
+    async purgeLoginAttempts(before) {
+      const sql = await open();
+      const rows = await sql`delete from santa.admin_login_attempts where attempted_at < ${before} returning id`;
+      return rows.length;
+    },
   };
 }
 
@@ -314,6 +322,7 @@ function view(order, children, drafts, messages) {
     deliveryDate: dateOnly(order.delivery_date),
     stripeSessionId: order.stripe_session_id || "",
     stripePaymentIntentId: order.stripe_payment_intent_id || "",
+    stripeCustomerId: order.stripe_customer_id || "",
     createdAt: iso(order.created_at),
     updatedAt: iso(order.updated_at),
     identityRedactedAt: iso(order.identity_redacted_at),

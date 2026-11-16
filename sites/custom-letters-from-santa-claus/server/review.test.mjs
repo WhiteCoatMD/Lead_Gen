@@ -27,7 +27,7 @@ function loginRequest(password, ip = "203.0.113.8") {
   };
 }
 
-test("admin login checks the password before the database and limits failures", async () => {
+test("admin login checks the lockout before the password", async () => {
   const calls = [];
   const broken = {
     async countLoginFailures() { calls.push("count"); throw new Error("database down"); },
@@ -35,7 +35,7 @@ test("admin login checks the password before the database and limits failures", 
   };
   const ok = await handleAdmin(loginRequest("correct horse"), { env, db: broken, now });
   assert.equal(ok.status, 200);
-  assert.equal(calls.length, 0);
+  assert.deepEqual(calls, ["count"]);
 
   const down = await handleAdmin(loginRequest("nope"), { env, db: broken, now });
   assert.equal(down.status, 401);
@@ -48,10 +48,91 @@ test("admin login checks the password before the database and limits failures", 
   }
   const blocked = await handleAdmin(loginRequest("nope"), { env, db, now });
   assert.equal(blocked.status, 429);
-  const other = await handleAdmin(loginRequest("nope", "203.0.113.9"), { env, db, now });
-  assert.equal(other.status, 401);
-  const still = await handleAdmin(loginRequest("correct horse"), { env, db, now });
-  assert.equal(still.status, 200);
+  const blockedRight = await handleAdmin(loginRequest("correct horse"), { env, db, now });
+  assert.equal(blockedRight.status, 429);
+  const other = await handleAdmin(loginRequest("correct horse", "203.0.113.9"), { env, db, now });
+  assert.equal(other.status, 200);
+  const later = new Date(now.getTime() + 15 * 60 * 1000 + 1000);
+  const again = await handleAdmin(loginRequest("correct horse"), { env, db, now: later });
+  assert.equal(again.status, 200);
+});
+
+test("the jobs run deletes login attempts older than one day", async () => {
+  const db = createMemoryDb();
+  await db.recordLoginFailure("203.0.113.8", new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000));
+  await db.recordLoginFailure("203.0.113.8", new Date(now.getTime() - 2 * 60 * 60 * 1000));
+  const result = await handleJobs(
+    { method: "GET", headers: { authorization: "Bearer cron-secret" } },
+    { env, db, now, log: () => {} },
+  );
+  assert.equal(result.status, 200);
+  assert.equal(result.body.loginAttemptsPurged, 1);
+  assert.equal(await db.countLoginFailures("203.0.113.8", new Date(0)), 1);
+});
+
+test("delete family removes a Stripe customer when the order has one", async () => {
+  const db = createMemoryDb();
+  const pending = await db.insertPending({
+    slug: "personalized-letter",
+    productName: "Personalized Letter from Santa",
+    productCents: 1595,
+    postmarkCents: 0,
+    totalCents: 1595,
+    postmark: false,
+    letterCount: 1,
+    parentEmail: "parent@example.com",
+    recipientEmail: "",
+    recipientConfirmed: false,
+    deliveryDate: "",
+    address: { name: "Pat", street: "1 Main", city: "Grayson", state: "LA", zip: "71245" },
+    children: [{ firstName: "Ada", age: "7", town: "Grayson", accomplishment: "She learned to ride a bike" }],
+  });
+  await db.markPaid(pending.id, "pi_test", "cus_test123");
+  const calls = [];
+  const fetch = async (url, init) => {
+    calls.push({ url, method: init.method, auth: init.headers.Authorization });
+    return { status: 200, ok: true, json: async () => ({ id: "cus_test123", deleted: true }) };
+  };
+  const cookie = (await handleAdmin(loginRequest("correct horse"), { env, db, now })).headers["Set-Cookie"];
+  const removed = await handleAdmin({
+    method: "POST",
+    url: "/api/santa/admin",
+    headers: { cookie },
+    body: { action: "delete_family", orderId: pending.id },
+  }, { env, db, now, fetch });
+  assert.equal(removed.status, 200);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].method, "DELETE");
+  assert.equal(calls[0].url, "https://api.stripe.com/v1/customers/cus_test123");
+  assert.equal(calls[0].auth, "Bearer sk_test_123");
+  const gone = await db.getOrder(pending.id);
+  assert.equal(gone.parentEmail, "");
+  assert.equal(gone.children.length, 0);
+
+  const plain = await db.insertPending({
+    slug: "email-from-santa",
+    productName: "Email from Santa",
+    productCents: 695,
+    postmarkCents: 0,
+    totalCents: 695,
+    postmark: false,
+    letterCount: 1,
+    parentEmail: "parent@example.com",
+    recipientEmail: "parent@example.com",
+    recipientConfirmed: true,
+    deliveryDate: "2026-12-20",
+    address: { name: "", street: "", city: "", state: "", zip: "" },
+    children: [{ firstName: "Ada", age: "7", town: "Grayson" }],
+  });
+  calls.length = 0;
+  const skipped = await handleAdmin({
+    method: "POST",
+    url: "/api/santa/admin",
+    headers: { cookie },
+    body: { action: "delete_family", orderId: plain.id },
+  }, { env, db, now, fetch });
+  assert.equal(skipped.status, 200);
+  assert.equal(calls.length, 0);
 });
 
 test("CHECKOUT_ENABLED opens checkout only outside production", async () => {

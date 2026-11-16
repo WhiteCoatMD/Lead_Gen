@@ -20,7 +20,7 @@ export async function handleJobs(request, deps = {}) {
   const now = deps.now || new Date();
   const log = deps.log || console.log;
   const today = chicagoDateString(now);
-  const summary = { wouldSend: 0, sent: 0, wouldMail: 0, mailed: 0, held: 0, purged: 0, failed: 0 };
+  const summary = { wouldSend: 0, sent: 0, wouldMail: 0, mailed: 0, held: 0, purged: 0, failed: 0, loginAttemptsPurged: 0 };
 
   for (const order of await db.listQueue()) {
     if (order.status !== "paid") continue;
@@ -95,5 +95,6 @@ export async function handleJobs(request, deps = {}) {
       summary.purged += 1;
     }
   }
+  summary.loginAttemptsPurged = await db.purgeLoginAttempts(new Date(now.getTime() - 24 * 60 * 60 * 1000));
   return { status: 200, body: { ok: true, ...summary } };
 }

@@ -179,6 +179,7 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.match(privacy, /not added to that payment link/);
   assert.match(privacy, /parent or guardian/i);
   assert.match(privacy, /refund window/);
+  assert.match(privacy, /Stripe keeps the payment transaction records under its own legal obligations/);
   assert.match(shipping, /December 9, 2026/);
   assert.match(shipping, /5:00 PM CT/);
   assert.match(shipping, /December 24, 2026/);

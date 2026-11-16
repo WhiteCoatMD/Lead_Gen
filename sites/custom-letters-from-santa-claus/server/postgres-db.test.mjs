@@ -96,6 +96,18 @@ test("order writes are parameterized and stay in the santa schema", async () => 
   assert.equal(calls[0].values.includes("parent@example.com"), true);
 });
 
+test("login attempts older than the cutoff are deleted by parameter", async () => {
+  const calls = [];
+  const before = new Date("2026-11-14T18:00:00.000Z");
+  const sql = fakeSql(calls, () => [{ id: "attempt-1" }]);
+  const db = createDb({ POSTGRES_URL: "postgres://example" }, sql);
+  const removed = await db.purgeLoginAttempts(before);
+  assert.equal(removed, 1);
+  assert.match(calls[0].text, /delete from santa\.admin_login_attempts where attempted_at </i);
+  assert.equal(calls[0].text.includes("2026-11-14"), false);
+  assert.equal(calls[0].values[0], before);
+});
+
 function fakeSql(calls, handler) {
   function sql(first, ...values) {
     if (first && Array.isArray(first.raw)) {

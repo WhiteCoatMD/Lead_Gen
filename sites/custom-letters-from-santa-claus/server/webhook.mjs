@@ -2,7 +2,7 @@ import { DEFAULT_MODEL } from "./config.mjs";
 import { aiDraftingEnabled, draftForChild, fallbackLetter, generateWithGateway } from "./draft.mjs";
 import { confirmationMessage, sendGraphMail } from "./email.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
-import { verifyStripeSignature } from "./stripe-api.mjs";
+import { verifyStripeSignature, stripeCustomerId } from "./stripe-api.mjs";
 import { createDb } from "./postgres-db.mjs";
 
 // Payment creates drafts and a confirmation template. It does not send the
@@ -45,7 +45,8 @@ export async function handleWebhook(request, deps = {}) {
     return { status: 200, body: { ok: true, mismatch: true } };
   }
   const paymentIntent = typeof session.payment_intent === "string" ? session.payment_intent : session.payment_intent?.id || "";
-  order = await db.markPaid(order.id, paymentIntent);
+  const customerId = stripeCustomerId(session.customer);
+  order = await db.markPaid(order.id, paymentIntent, customerId);
   if (order.status !== "paid") return { status: 200, body: { ok: true, duplicate: true } };
   await storeConfirmation(db, env, deps, order);
 

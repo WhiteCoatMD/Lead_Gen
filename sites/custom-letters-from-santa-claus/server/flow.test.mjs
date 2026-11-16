@@ -55,6 +55,7 @@ test("other projects skip the cron and checkout is hidden there", async () => {
   assert.equal(santaDeployment({ VERCEL_PROJECT_ID: "prj_other" }), false);
   assert.equal(santaDeployment({ VERCEL_PROJECT_ID: "prj_Cooa6zu0wXv87rdhtKX7M4nj5gVG" }), true);
   const skipped = await handleJobs({ method: "GET", headers: {} }, { env: { VERCEL_PROJECT_ID: "prj_other", CRON_SECRET: "x" } });
+  assert.equal(skipped.status, 200);
   assert.equal(skipped.body.skipped, true);
   const hidden = await handleCheckout({ method: "POST", headers: {}, body: orderBody() }, { env: { VERCEL_PROJECT_ID: "prj_other" }, site: site() });
   assert.equal(hidden.status, 404);

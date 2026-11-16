@@ -139,6 +139,9 @@ grant select, insert, update, delete on table santa.stripe_events to service_rol
 alter table santa.letter_drafts add column if not exists send_error text;
 alter table santa.orders add column if not exists identity_redacted_at timestamptz;
 alter table santa.orders add column if not exists children_redacted_at timestamptz;
+alter table santa.orders add column if not exists stripe_customer_id text;
+
+comment on column santa.orders.stripe_customer_id is 'Stripe Customer id when Checkout created one. Null when Checkout did not.';
 
 -- Parent email is removed after the retention window. The original format
 -- check would reject an empty value, so it is removed on santa.orders only.
@@ -152,6 +155,7 @@ create table if not exists santa.admin_login_attempts (
 );
 
 create index if not exists admin_login_attempts_ip_idx on santa.admin_login_attempts (ip, attempted_at);
+create index if not exists admin_login_attempts_attempted_at_idx on santa.admin_login_attempts (attempted_at);
 
 alter table santa.admin_login_attempts enable row level security;
 revoke all on table santa.admin_login_attempts from public, anon, authenticated;

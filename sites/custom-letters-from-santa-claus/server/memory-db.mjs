@@ -33,6 +33,7 @@ export function createMemoryDb() {
         status: "pending",
         stripeSessionId: "",
         stripePaymentIntentId: "",
+        stripeCustomerId: "",
         address: { ...order.address },
         children: order.children.map((child, index) => ({ ...child, id: randomUUID(), position: index + 1 })),
         createdAt: new Date().toISOString(),
@@ -61,12 +62,13 @@ export function createMemoryDb() {
     async findOrderBySession(sessionId) {
       return view(orders.find((order) => order.stripeSessionId === sessionId));
     },
-    async markPaid(orderId, paymentIntentId) {
+    async markPaid(orderId, paymentIntentId, customerId) {
       const order = orderOf(orderId);
       if (!order) throw new Error("Order not found");
       if (order.status !== "paid") {
         order.status = "paid";
         order.stripePaymentIntentId = paymentIntentId || "";
+        order.stripeCustomerId = customerId || "";
         order.updatedAt = new Date().toISOString();
       }
       return view(order);
@@ -181,6 +183,17 @@ export function createMemoryDb() {
     },
     async recordLoginFailure(ip, at) {
       attempts.push({ ip, at: at.toISOString() });
+    },
+    async purgeLoginAttempts(before) {
+      const cutoff = before.getTime();
+      let removed = 0;
+      for (let index = attempts.length - 1; index >= 0; index -= 1) {
+        if (new Date(attempts[index].at).getTime() < cutoff) {
+          attempts.splice(index, 1);
+          removed += 1;
+        }
+      }
+      return removed;
     },
   };
 }

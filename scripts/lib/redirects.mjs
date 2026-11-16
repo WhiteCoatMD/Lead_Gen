@@ -45,9 +45,15 @@ export function distVercelConfig(site) {
   return config;
 }
 
+// Git deploys of every Lead_Gen project read this one file. The Santa job is
+// registered on each of them. /api/santa/jobs returns 200 and does nothing
+// unless the request is for the Santa project.
+export const SANTA_JOBS_CRON = { path: "/api/santa/jobs", schedule: "0 14,20 * * *" };
+
 export function rootVercelConfig(sites) {
   const redirects = sites.flatMap(hostedRedirects);
   const config = {};
   if (redirects.length) config.redirects = redirects;
-  return Object.keys(config).length ? config : {};
+  config.crons = [SANTA_JOBS_CRON];
+  return config;
 }

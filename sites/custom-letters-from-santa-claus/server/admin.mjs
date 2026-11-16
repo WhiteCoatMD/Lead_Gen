@@ -4,6 +4,8 @@ import { aiDraftingEnabled, draftForChild, fallbackLetter, generateWithGateway, 
 import { postmarkCsv, postmarkPdf } from "./export.mjs";
 import { denyUnlessSanta } from "./gate.mjs";
 import { chicagoDateString } from "./time.mjs";
+import { deleteStripeCustomer, stripeCustomerId } from "./stripe-api.mjs";
+import { assertStripeSecret } from "./stripe-guard.mjs";
 import { createDb } from "./postgres-db.mjs";
 
 const LOCKED = new Set(["sent", "mailed"]);
@@ -27,6 +29,14 @@ export async function handleAdmin(request, deps = {}) {
 
   if (request.method === "POST" && body.action === "login") {
     if (!env.ADMIN_PASSWORD) return { status: 503, body: { error: "ADMIN_PASSWORD is not set" } };
+    const ip = clientIp(request);
+    const since = new Date(now.getTime() - WINDOW_MS);
+    try {
+      const count = await database().countLoginFailures(ip, since);
+      if (count >= MAX_ATTEMPTS) return { status: 429, body: { error: "Too many sign-in attempts. Try again later." } };
+    } catch {
+      // A database outage does not invent a lockout. The password check still runs.
+    }
     if (passwordMatches(body.password, env.ADMIN_PASSWORD)) {
       return {
         status: 200,
@@ -35,11 +45,7 @@ export async function handleAdmin(request, deps = {}) {
       };
     }
     try {
-      const db = database();
-      const since = new Date(now.getTime() - WINDOW_MS);
-      const count = await db.countLoginFailures(clientIp(request), since);
-      if (count >= MAX_ATTEMPTS) return { status: 429, body: { error: "Too many sign-in attempts. Try again later." } };
-      await db.recordLoginFailure(clientIp(request), now);
+      await database().recordLoginFailure(ip, now);
     } catch {
       return { status: 401, body: { error: "Wrong password" } };
     }
@@ -71,7 +77,8 @@ export async function handleAdmin(request, deps = {}) {
     if (!order) return { status: 404, body: { error: "Order not found" } };
     await db.purgeOrderChildren(order.id, now);
     await db.redactOrderIdentity(order.id, now);
-    await db.audit({ orderId: order.id, action: "family_data_deleted", actor: "owner", detail: {} });
+    const stripeCustomer = await deleteFamilyCustomer(order, env, deps);
+    await db.audit({ orderId: order.id, action: "family_data_deleted", actor: "owner", detail: { stripeCustomer } });
     return { status: 200, body: { ok: true } };
   }
 
@@ -150,4 +157,17 @@ async function present(db, now) {
         && draft.status !== "mailed",
     })),
   }));
+}
+
+async function deleteFamilyCustomer(order, env, deps) {
+  const customerId = stripeCustomerId(order.stripeCustomerId);
+  if (!customerId) return "none";
+  try {
+    const secret = assertStripeSecret(env);
+    const remove = deps.deleteCustomer || ((id, key) => deleteStripeCustomer(id, key, deps.fetch || globalThis.fetch));
+    await remove(customerId, secret);
+    return "deleted";
+  } catch {
+    return "failed";
+  }
 }

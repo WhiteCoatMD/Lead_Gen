@@ -147,15 +147,9 @@ if (config.template === "store") {
 
 await fs.writeFile(path.join(outputDir, "sitemap.xml"), sitemapXml(config.domain, written, config.updated), "utf8");
 // CLI deploys upload dist/<slug> as the project root, so the redirects have
-// to live here. Git deploys read the repo-root vercel.json instead, which
-// build-all (and a single-site build) refresh from every site.json.
-let vercelConfig = distVercelConfig(config);
-try {
-  const extra = JSON.parse(await fs.readFile(path.join(siteDir, "vercel.json"), "utf8"));
-  if (Array.isArray(extra.crons) && extra.crons.length) vercelConfig = { ...vercelConfig, crons: extra.crons };
-} catch {
-  // A site without its own vercel.json keeps the shared redirect config only.
-}
+// to live here. Git deploys read the repo-root vercel.json. That shared file
+// carries the Santa cron; writeRootRedirects puts it back on every build.
+const vercelConfig = distVercelConfig(config);
 await fs.writeFile(
   path.join(outputDir, "vercel.json"),
   JSON.stringify(vercelConfig, null, 2) + "\n",
