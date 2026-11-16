@@ -2,73 +2,73 @@
   "slug": "lake-charles-fences",
   "domain": "fenceslakecharles.com",
   "siteUrl": "sc-domain:fenceslakecharles.com",
-  "startDate": "2025-07-17",
-  "endDate": "2026-11-06",
-  "clicks": 22,
-  "impressions": 1595,
+  "startDate": "2025-07-24",
+  "endDate": "2026-11-13",
+  "clicks": 25,
+  "impressions": 1886,
   "pages": [
     {
       "keys": [
         "http://www.fenceslakecharles.com/"
       ],
       "clicks": 7,
-      "impressions": 572,
-      "ctr": 0.012237762237762238,
-      "position": 4.611888111888112
+      "impressions": 692,
+      "ctr": 0.010115606936416185,
+      "position": 4.3106936416184976
     },
     {
       "keys": [
         "https://fenceslakecharles.com/fence-permit-calcasieu-parish"
       ],
       "clicks": 5,
-      "impressions": 113,
-      "ctr": 0.04424778761061947,
-      "position": 6.150442477876106
+      "impressions": 132,
+      "ctr": 0.03787878787878788,
+      "position": 6.401515151515151
+    },
+    {
+      "keys": [
+        "https://fenceslakecharles.com/fence-permit-sulphur"
+      ],
+      "clicks": 5,
+      "impressions": 107,
+      "ctr": 0.04672897196261682,
+      "position": 9.401869158878505
+    },
+    {
+      "keys": [
+        "https://fenceslakecharles.com/"
+      ],
+      "clicks": 4,
+      "impressions": 478,
+      "ctr": 0.008368200836820083,
+      "position": 25.110878661087867
     },
     {
       "keys": [
         "https://fenceslakecharles.com/fence-permit-lake-charles"
       ],
       "clicks": 4,
-      "impressions": 110,
-      "ctr": 0.03636363636363636,
-      "position": 6.3545454545454545
-    },
-    {
-      "keys": [
-        "https://fenceslakecharles.com/"
-      ],
-      "clicks": 3,
-      "impressions": 421,
-      "ctr": 0.007125890736342043,
-      "position": 25.850356294536816
-    },
-    {
-      "keys": [
-        "https://fenceslakecharles.com/fence-permit-sulphur"
-      ],
-      "clicks": 3,
-      "impressions": 81,
-      "ctr": 0.037037037037037035,
-      "position": 10.641975308641975
+      "impressions": 139,
+      "ctr": 0.02877697841726619,
+      "position": 6.618705035971223
     },
     {
       "keys": [
         "https://fenceslakecharles.com/fence-calculator"
       ],
       "clicks": 0,
-      "impressions": 49,
+      "impressions": 62,
       "ctr": 0,
-      "position": 24.224489795918366
+      "position": 20.370967741935484
     },
     {
       "keys": [
         "https://fenceslakecharles.com/fence-permit-westlake"
       ],
       "clicks": 0,
-      "impressions": 47,
+      "impressions": 57,
       "ctr": 0,
-      "position": 9.936170212765957
+      "position": 9.368421052631579
     },
     {
       "keys": [
@@ -84,9 +84,9 @@
         "https://www.fenceslakecharles.com/chain-link-fence"
       ],
       "clicks": 0,
-      "impressions": 103,
+      "impressions": 120,
       "ctr": 0,
-      "position": 12.718446601941748
+      "position": 12.141666666666667
     },
     {
       "keys": [
@@ -152,6 +152,15 @@
       "impressions": 7,
       "ctr": 0,
       "position": 4.285714285714286
+    },
+    {
+      "keys": [
+        "aluminum gate"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
     },
     {
       "keys": [
@@ -239,18 +248,18 @@
         "bonney lake fence builder"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 45.333333333333336
+      "position": 46.75
     },
     {
       "keys": [
         "breaux bridge fence builder"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 53.25
+      "position": 55.6
     },
     {
       "keys": [
@@ -287,6 +296,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 8
+    },
+    {
+      "keys": [
+        "calcasieu parish permit"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
     },
     {
       "keys": [
@@ -443,6 +461,15 @@
     },
     {
       "keys": [
+        "city of sulphur permit office"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
         "commercial fence contractor"
       ],
       "clicks": 0,
@@ -545,9 +572,9 @@
         "deck and fence contractors near me"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 4,
       "ctr": 0,
-      "position": 62
+      "position": 73.75
     },
     {
       "keys": [
@@ -587,6 +614,15 @@
     },
     {
       "keys": [
+        "deck builders near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 3
+    },
+    {
+      "keys": [
         "deck fence"
       ],
       "clicks": 0,
@@ -608,9 +644,9 @@
         "deck installation lake charles la"
       ],
       "clicks": 0,
-      "impressions": 30,
+      "impressions": 35,
       "ctr": 0,
-      "position": 1.7
+      "position": 1.6857142857142857
     },
     {
       "keys": [
@@ -788,9 +824,9 @@
         "fence builder"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 19
+      "position": 16.714285714285715
     },
     {
       "keys": [
@@ -833,9 +869,9 @@
         "fence companies near me"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 6,
       "ctr": 0,
-      "position": 9
+      "position": 9.166666666666666
     },
     {
       "keys": [
@@ -851,18 +887,18 @@
         "fence company lake charles"
       ],
       "clicks": 0,
-      "impressions": 55,
+      "impressions": 59,
       "ctr": 0,
-      "position": 7.745454545454545
+      "position": 7.52542372881356
     },
     {
       "keys": [
         "fence company near me"
       ],
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 16,
       "ctr": 0,
-      "position": 10.066666666666666
+      "position": 10.3125
     },
     {
       "keys": [
@@ -876,6 +912,15 @@
     {
       "keys": [
         "fence for carport"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 4
+    },
+    {
+      "keys": [
+        "fence gate"
       ],
       "clicks": 0,
       "impressions": 1,
@@ -1013,9 +1058,9 @@
         "fence repair near me"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 4.333333333333334
+      "position": 4.75
     },
     {
       "keys": [
@@ -1043,6 +1088,15 @@
       "impressions": 2,
       "ctr": 0,
       "position": 69.5
+    },
+    {
+      "keys": [
+        "fences installer"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6
     },
     {
       "keys": [
@@ -1175,9 +1229,9 @@
         "fencing near me"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 8
+      "position": 5.666666666666667
     },
     {
       "keys": [
@@ -1196,6 +1250,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 8
+    },
+    {
+      "keys": [
+        "front gate repair"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 1
     },
     {
       "keys": [
@@ -1319,9 +1382,9 @@
         "lake charles permit office"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 17,
       "ctr": 0,
-      "position": 12
+      "position": 9.588235294117647
     },
     {
       "keys": [
@@ -1367,6 +1430,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 2
+    },
+    {
+      "keys": [
+        "metal fence companies near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
     },
     {
       "keys": [
@@ -1430,6 +1502,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 9
+    },
+    {
+      "keys": [
+        "outdoor deck"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 2
     },
     {
       "keys": [
@@ -1523,6 +1604,15 @@
     },
     {
       "keys": [
+        "privacy fencing"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "keys": [
         "residential fence company"
       ],
       "clicks": 0,
@@ -1595,6 +1685,15 @@
     },
     {
       "keys": [
+        "sliding gate for wooden fence"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
         "spring lake fence builder"
       ],
       "clicks": 0,
@@ -1616,18 +1715,18 @@
         "st charles fence company"
       ],
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 29,
       "ctr": 0,
-      "position": 75.44444444444444
+      "position": 76.17241379310344
     },
     {
       "keys": [
         "st. charles fence builder"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 83.25
+      "position": 83.2
     },
     {
       "keys": [
@@ -1643,9 +1742,9 @@
         "st. charles fence installation"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 68
+      "position": 70.75
     },
     {
       "keys": [
@@ -1661,9 +1760,9 @@
         "temporary fence rental lake charles"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 8,
       "ctr": 0,
-      "position": 8
+      "position": 6.5
     },
     {
       "keys": [
@@ -1715,9 +1814,9 @@
         "vinyl fencing near me"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 1
+      "position": 4.25
     },
     {
       "keys": [
@@ -1757,12 +1856,21 @@
     },
     {
       "keys": [
+        "where can i get fence and deck quotes?"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "keys": [
         "white picket fence"
       ],
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 14,
       "ctr": 0,
-      "position": 3.3636363636363638
+      "position": 3.5
     },
     {
       "keys": [
@@ -1832,9 +1940,9 @@
         "wood fence westlake"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 26.75
+      "position": 26.4
     },
     {
       "keys": [
@@ -1862,6 +1970,15 @@
       "impressions": 1,
       "ctr": 0,
       "position": 1
+    },
+    {
+      "keys": [
+        "wooden fence installers"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 6.5
     },
     {
       "keys": [
@@ -1940,32 +2057,32 @@
     {
       "path": "/fence-calculator",
       "clicks": 0,
-      "impressions": 49,
-      "position": 24.224489795918366
+      "impressions": 62,
+      "position": 20.370967741935484
     },
     {
       "path": "/fence-permit-lake-charles",
       "clicks": 4,
-      "impressions": 110,
-      "position": 6.3545454545454545
+      "impressions": 139,
+      "position": 6.618705035971223
     },
     {
       "path": "/fence-permit-sulphur",
-      "clicks": 3,
-      "impressions": 81,
-      "position": 10.641975308641975
+      "clicks": 5,
+      "impressions": 107,
+      "position": 9.401869158878505
     },
     {
       "path": "/fence-permit-westlake",
       "clicks": 0,
-      "impressions": 47,
-      "position": 9.936170212765957
+      "impressions": 57,
+      "position": 9.368421052631579
     },
     {
       "path": "/fence-permit-calcasieu-parish",
       "clicks": 5,
-      "impressions": 113,
-      "position": 6.150442477876106
+      "impressions": 132,
+      "position": 6.401515151515151
     }
   ]
 }

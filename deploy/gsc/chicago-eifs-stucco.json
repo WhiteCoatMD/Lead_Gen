@@ -2,19 +2,19 @@
   "slug": "chicago-eifs-stucco",
   "domain": "eifschicago.com",
   "siteUrl": "sc-domain:eifschicago.com",
-  "startDate": "2025-07-17",
-  "endDate": "2026-11-06",
+  "startDate": "2025-07-24",
+  "endDate": "2026-11-13",
   "clicks": 2,
-  "impressions": 382,
+  "impressions": 461,
   "pages": [
     {
       "keys": [
         "https://eifschicago.com/"
       ],
       "clicks": 2,
-      "impressions": 382,
-      "ctr": 0.005235602094240838,
-      "position": 57.94240837696335
+      "impressions": 461,
+      "ctr": 0.004338394793926247,
+      "position": 58.800433839479396
     }
   ],
   "queries": [
@@ -23,9 +23,9 @@
         "drainage eifs chicago"
       ],
       "clicks": 0,
-      "impressions": 21,
+      "impressions": 23,
       "ctr": 0,
-      "position": 67.23809523809524
+      "position": 63.869565217391305
     },
     {
       "keys": [
@@ -38,12 +38,21 @@
     },
     {
       "keys": [
+        "efis repairs"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "keys": [
         "eifs chicago"
       ],
       "clicks": 0,
-      "impressions": 36,
+      "impressions": 38,
       "ctr": 0,
-      "position": 32.05555555555556
+      "position": 31.157894736842106
     },
     {
       "keys": [
@@ -59,9 +68,9 @@
         "eifs contractor"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 6
+      "position": 7
     },
     {
       "keys": [
@@ -104,36 +113,36 @@
         "eifs inspection chicago"
       ],
       "clicks": 0,
-      "impressions": 27,
+      "impressions": 32,
       "ctr": 0,
-      "position": 56.888888888888886
+      "position": 59
     },
     {
       "keys": [
         "eifs inspections chicago"
       ],
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 38,
       "ctr": 0,
-      "position": 65.38709677419355
+      "position": 66.44736842105263
     },
     {
       "keys": [
         "eifs inspector chicago"
       ],
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 39,
       "ctr": 0,
-      "position": 63.70967741935484
+      "position": 64.66666666666666
     },
     {
       "keys": [
         "eifs issues chicago"
       ],
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 33,
       "ctr": 0,
-      "position": 57.17857142857143
+      "position": 48.78787878787879
     },
     {
       "keys": [
@@ -185,9 +194,9 @@
         "stucco eifs repair"
       ],
       "clicks": 0,
-      "impressions": 94,
+      "impressions": 134,
       "ctr": 0,
-      "position": 80.8936170212766
+      "position": 81.55970149253731
     },
     {
       "keys": [
@@ -203,9 +212,9 @@
         "water managed eifs chicago"
       ],
       "clicks": 0,
-      "impressions": 15,
+      "impressions": 16,
       "ctr": 0,
-      "position": 66.26666666666667
+      "position": 66.75
     }
   ],
   "rebuilt": [

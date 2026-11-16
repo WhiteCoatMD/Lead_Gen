@@ -2,19 +2,19 @@
   "slug": "twin-city-handyman",
   "domain": "twincity-handyman.com",
   "siteUrl": "sc-domain:twincity-handyman.com",
-  "startDate": "2025-07-17",
-  "endDate": "2026-11-06",
-  "clicks": 1,
-  "impressions": 108,
+  "startDate": "2025-07-24",
+  "endDate": "2026-11-13",
+  "clicks": 2,
+  "impressions": 129,
   "pages": [
     {
       "keys": [
         "https://twincity-handyman.com/"
       ],
-      "clicks": 1,
-      "impressions": 108,
-      "ctr": 0.009259259259259259,
-      "position": 18.203703703703702
+      "clicks": 2,
+      "impressions": 129,
+      "ctr": 0.015503875968992248,
+      "position": 17.511627906976745
     }
   ],
   "queries": [
@@ -29,12 +29,30 @@
     },
     {
       "keys": [
+        "cheap handyman services near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
         "cheap local handyman near me"
       ],
       "clicks": 0,
       "impressions": 1,
       "ctr": 0,
       "position": 10
+    },
+    {
+      "keys": [
+        "general handyman services"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 16
     },
     {
       "keys": [
@@ -50,9 +68,9 @@
         "handyman"
       ],
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 17,
       "ctr": 0,
-      "position": 17.833333333333332
+      "position": 17.058823529411764
     },
     {
       "keys": [
@@ -65,12 +83,21 @@
     },
     {
       "keys": [
+        "handyman monroe la"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
         "handyman near me"
       ],
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 13,
       "ctr": 0,
-      "position": 16.583333333333336
+      "position": 16.46153846153846
     },
     {
       "keys": [
@@ -104,18 +131,18 @@
         "local handyman services"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 11
+      "position": 10.5
     },
     {
       "keys": [
         "monroe handyman"
       ],
       "clicks": 0,
-      "impressions": 50,
+      "impressions": 55,
       "ctr": 0,
-      "position": 23.82
+      "position": 23.4
     }
   ],
   "rebuilt": []

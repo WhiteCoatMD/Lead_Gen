@@ -2,19 +2,19 @@
   "slug": "mbs-pressure-washing-new-orleans",
   "domain": "pressurewashing-neworleans.com",
   "siteUrl": "sc-domain:pressurewashing-neworleans.com",
-  "startDate": "2025-07-17",
-  "endDate": "2026-11-06",
+  "startDate": "2025-07-24",
+  "endDate": "2026-11-13",
   "clicks": 0,
-  "impressions": 20,
+  "impressions": 23,
   "pages": [
     {
       "keys": [
         "https://pressurewashing-neworleans.com/"
       ],
       "clicks": 0,
-      "impressions": 20,
+      "impressions": 23,
       "ctr": 0,
-      "position": 74.25
+      "position": 64.69565217391305
     }
   ],
   "queries": [
