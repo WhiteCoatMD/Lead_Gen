@@ -31,14 +31,29 @@ export function hostedRedirects(site) {
   return out;
 }
 
+export function siteCrons(site) {
+  if (!Array.isArray(site?.crons)) return [];
+  return site.crons.filter((cron) => cron && typeof cron.path === "string" && typeof cron.schedule === "string");
+}
+
 export function distVercelConfig(site) {
   const redirects = siteRedirects(site);
+  const crons = siteCrons(site);
   const config = { buildCommand: null, outputDirectory: "." };
   if (redirects.length) config.redirects = redirects;
+  if (crons.length) config.crons = crons;
   return config;
 }
 
+// Git deploys of every Lead_Gen project read this one file. The Santa job is
+// registered on each of them. /api/santa/jobs returns 200 and does nothing
+// unless the request is for the Santa project.
+export const SANTA_JOBS_CRON = { path: "/api/santa/jobs", schedule: "0 14,20 * * *" };
+
 export function rootVercelConfig(sites) {
   const redirects = sites.flatMap(hostedRedirects);
-  return redirects.length ? { redirects } : {};
+  const config = {};
+  if (redirects.length) config.redirects = redirects;
+  config.crons = [SANTA_JOBS_CRON];
+  return config;
 }

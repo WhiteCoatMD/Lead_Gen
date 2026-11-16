@@ -265,7 +265,26 @@ function mailedLetterCount(product, offer) {
   return Number.isInteger(count) && count > 0 ? count : 0;
 }
 
+function checkoutEnabled(site) {
+  return site?.checkout?.enabled === true;
+}
+
+function presentCheckout(site) {
+  if (!checkoutEnabled(site)) return site;
+  const next = structuredClone(site);
+  next.checkoutNote = "Checkout sends the details to our server. They are not added to the address bar or a payment link.";
+  const faq = next.info?.faq?.items?.find((item) => item.q === "Is checkout open?");
+  if (faq) faq.a = "Yes. Checkout takes payment on Stripe. The letter is still reviewed before anything is sent or mailed. The details you type are not added to the payment link.";
+  const payment = "Card numbers are not typed into this site. Checkout opens Stripe, and the price there is the price that is charged. The details you entered are posted to our server. They are not added to the payment link.";
+  const privacy = next.info?.privacy?.sections?.find((section) => section.heading === "Payment");
+  if (privacy) privacy.body = payment;
+  const terms = next.info?.terms?.sections?.find((section) => section.heading === "Payment");
+  if (terms) terms.body = payment;
+  return next;
+}
+
 function presentSite(site) {
+  site = presentCheckout(site);
   const offer = resolvePostmark(site);
   if (!offer) return site;
   const next = structuredClone(site);
@@ -493,6 +512,7 @@ function buyBox(site, product) {
   const checkout = isCheckoutUrl(product.checkoutUrl) ? String(product.checkoutUrl).trim() : "";
   const ready = site.checkoutReadyLabel || "Buy now";
   const waiting = site.checkoutEmptyLabel || "Coming soon — notify me";
+  const ownCheckout = !checkout && checkoutEnabled(site);
   const offer = resolvePostmark(site);
   const personalization = fieldsFor(product, offer);
   const pricing = bundlePricingOf(product);
@@ -504,8 +524,10 @@ function buyBox(site, product) {
     : "";
   const action = checkout
     ? `<a class="button ghost" data-buy-link href="${esc(checkout)}">${esc(ready)}</a>`
-    : `<button type="button" class="button ghost" data-notify>${esc(waiting)}</button>`;
-  const notify = checkout ? "" : `<div class="notify-panel" data-notify-panel hidden>
+    : ownCheckout
+      ? `<button type="button" class="button primary" data-stripe-checkout>Checkout</button>`
+      : `<button type="button" class="button ghost" data-notify>${esc(waiting)}</button>`;
+  const notify = checkout || ownCheckout ? "" : `<div class="notify-panel" data-notify-panel hidden>
       <p>Leave your email. We'll be in touch.</p>
       <form>
         <label class="field">Email<input type="email" name="notifyEmail" required autocomplete="email" maxlength="160"></label>
@@ -532,13 +554,13 @@ function buyBox(site, product) {
       <p class="form-status" role="status"></p>
     </form>
     ${notify}
-    <p class="quiet">${esc(site.checkoutNote || "Add to cart keeps the details in this browser. Buy now uses the payment link on this product when one is set.")}</p>
+    <p class="quiet">${esc(ownCheckout ? "Checkout sends these details to our server. They are not added to the address bar." : (site.checkoutNote || "Add to cart keeps the details in this browser. Buy now uses the payment link on this product when one is set."))}</p>
   </div>`;
 }
 
 function productSchema(site, product) {
   const url = `https://${site.domain}/products/${product.slug}`;
-  const availability = product.placeholder || !isCheckoutUrl(product.checkoutUrl)
+  const availability = product.placeholder || (!isCheckoutUrl(product.checkoutUrl) && !checkoutEnabled(site))
     ? "https://schema.org/PreOrder"
     : "https://schema.org/InStock";
   return {
@@ -591,7 +613,7 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   const canonical = path ? `https://${site.domain}/${path}` : `https://${site.domain}/`;
   const contact = String(site.contactEmail || "").trim();
   const offer = resolvePostmark(site);
-  const flags = `${site.omitCheckoutQuery ? ` data-omit-checkout-query="true"` : ""}${offer ? ` data-postmark-single="${offer.singleCents}" data-postmark-household="${offer.householdCents}" data-postmark-label="${esc("North Pole, Alaska postmark")}"` : ""}`;
+  const flags = `${site.omitCheckoutQuery ? ` data-omit-checkout-query="true"` : ""}${checkoutEnabled(site) ? ` data-checkout-enabled="true"` : ""}${offer ? ` data-postmark-single="${offer.singleCents}" data-postmark-household="${offer.householdCents}" data-postmark-label="${esc("North Pole, Alaska postmark")}"` : ""}`;
   const nav = navItems(site).map((item) => {
     const on = item.href === current;
     return `<a href="${esc(item.href)}"${on ? ` aria-current="page"` : ""}>${esc(item.label)}</a>`;
@@ -650,6 +672,7 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   ${phone ? `<a class="mobile-call" href="${tel}" aria-label="Call ${esc(phone)}">${esc(phone)}</a>` : ""}
   <script src="/site.js" defer></script>
   ${childSlotScript(site)}<script src="/store.js" type="module"></script>
+  ${checkoutEnabled(site) ? `<script src="/santa-checkout.js" type="module"></script>` : ""}
   ${site.analytics === false ? "" : `<script>${ANALYTICS_SCRIPT}</script>`}
 </body></html>`;
 }

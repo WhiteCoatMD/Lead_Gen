@@ -58,6 +58,13 @@
   "footerLine": "Personalized letters and emails from Santa Claus.",
   "checkoutNote": "Add to cart keeps what you typed on this device. Those details are not added to a payment link.",
   "omitCheckoutQuery": true,
+  "checkout": { "enabled": false },
+  "ordering": {
+    "timezone": "America/Chicago",
+    "printed": { "year": 2026, "month": 12, "day": 9, "hour": 17, "minute": 0 },
+    "emailThrough": "2026-12-24",
+    "postmark": { "year": 2026, "month": 11, "day": 26, "hour": 17, "minute": 0 }
+  },
   "postmarkUpgrade": {
     "enabled": false,
     "singlePrice": 9.95,
@@ -308,7 +315,7 @@
         { "heading": "This browser", "body": "The cart, and a notify-me note if you leave one, stay in local storage on this device. Clearing the browser clears them. They are not sent anywhere by that form." },
         { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that button sends you to the payment provider, and the price on that link is the price that is charged. The details you entered are not added to that payment link. Until a link is set, the button says coming soon and no order is placed." },
         { "heading": "Page views", "body": "Opening a page sends a note to our own server with the path and the referrer. It is not an advertising network. We do not use a child's details for ads. We do not sell a list." },
-        { "heading": "How long we keep it", "body": "We keep the personalization and the letter only long enough to fulfill the order and cover the refund window. After that, we delete those details or strip them so they no longer identify the child." },
+        { "heading": "How long we keep it", "body": "We keep what you send long enough to write the letter, deliver it, and cover the refund window. Child details are deleted 60 days after that letter is sent or mailed. If a letter is rejected, those child details are deleted 60 days after the rejection. If an order is unpaid, canceled, or abandoned, child details are deleted after 7 days. The parent name, email, and mailing address are deleted 60 days after the last letter in the order is delivered. The order record that remains keeps the product and the amount, not the child's name or the family's contact details. A parent can ask us to delete the family's data sooner, and we delete the child details and the parent name, email, and address from our records. If Stripe created a Customer for the order, we delete that Customer. Stripe keeps the payment transaction records under its own legal obligations." },
         { "heading": "Email", "body": "Leave your email on the contact page or with a coming-soon note. That address should be a parent or guardian. We will be in touch. The cart itself stays on this device." }
       ]
     },

@@ -179,6 +179,7 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.match(privacy, /not added to that payment link/);
   assert.match(privacy, /parent or guardian/i);
   assert.match(privacy, /refund window/);
+  assert.match(privacy, /Stripe keeps the payment transaction records under its own legal obligations/);
   assert.match(shipping, /December 9, 2026/);
   assert.match(shipping, /5:00 PM CT/);
   assert.match(shipping, /December 24, 2026/);
@@ -366,4 +367,30 @@ test("the shop template used by other businesses still renders a menu board", as
   assert.match(html, /class="shop-hero"/);
   assert.match(html, /id="store"/);
   assert.equal(html.includes("/store.js"), false);
+});
+
+test("Santa checkout stays on the coming-soon path until checkout.enabled is true", async () => {
+  const site = await readSite("custom-letters-from-santa-claus");
+  assert.equal(site.checkout.enabled, false);
+  const off = storeDocuments(site, "custom-letters-from-santa-claus").pages.find((page) => page.slug === "products/personalized-letter").html;
+  assert.match(off, /Coming soon/);
+  assert.equal(off.includes("data-stripe-checkout"), false);
+  assert.equal(off.includes("santa-checkout.js"), false);
+  const on = structuredClone(site);
+  on.checkout = { enabled: true };
+  const docs = storeDocuments(on, "custom-letters-from-santa-claus");
+  const letter = docs.pages.find((page) => page.slug === "products/personalized-letter").html;
+  assert.match(letter, /data-stripe-checkout/);
+  assert.match(letter, /\/santa-checkout\.js/);
+  assert.equal(letter.includes("Coming soon"), false);
+  assert.equal(letter.includes("childName="), false);
+  assert.equal(blocks(letter).find((block) => block["@type"] === "Product").offers.availability, "https://schema.org/InStock");
+  const home = renderStore(on, "custom-letters-from-santa-claus");
+  assert.match(home, /data-checkout-enabled="true"/);
+  const quiet = renderStore(site, "custom-letters-from-santa-claus");
+  assert.equal(quiet.includes("data-checkout-enabled"), false);
+  assert.equal(quiet.includes("santa-checkout.js"), false);
+  const other = renderStore(await readSite("make-your-own-crap"), "make-your-own-crap");
+  assert.equal(other.includes("data-checkout-enabled"), false);
+  assert.equal(other.includes("santa-checkout.js"), false);
 });

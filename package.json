@@ -20,6 +20,11 @@
     "leads": "node scripts/lead-report.mjs",
     "outreach:vet": "node scripts/outreach-vet.mjs",
     "outreach:import": "node scripts/outreach-vet.mjs --import",
-    "test:scripts": "node --test scripts/**/*.test.mjs shared/**/*.test.mjs"
+    "test:scripts": "node --test scripts/*.test.mjs scripts/lib/*.test.mjs shared/*.test.mjs",
+    "test": "node --test scripts/*.test.mjs scripts/lib/*.test.mjs shared/*.test.mjs sites/custom-letters-from-santa-claus/server/*.test.mjs"
+  },
+  "dependencies": {
+    "ai": "7.0.173",
+    "postgres": "3.4.9"
   }
 }
