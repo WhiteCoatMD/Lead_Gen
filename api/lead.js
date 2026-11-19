@@ -36,6 +36,13 @@ export const RECIPIENTS = {
     business: "24 Hour Towing Dallas",
     domain: "dallastowtrucks.com",
   },
+  // Rebuilt 2026-11-19 for the buyer of the sold site. Leads go to Mitch until
+  // the buyer's inbox is known; swap `to` then.
+  "stucco-repair-los-angeles": {
+    to: "mitch@whitecoat-md.com",
+    business: "Stucco Repair Los Angeles",
+    domain: "stuccorepairlosangeles.com",
+  },
   // The three porta potty sites have no operator yet. Leads go to Mitch until
   // one is signed per city; swap each `to` line for the operator's address then.
   "porta-potty-tulsa": {

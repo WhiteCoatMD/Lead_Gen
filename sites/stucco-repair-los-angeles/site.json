@@ -1,0 +1,159 @@
+{
+  "name": "Stucco Repair Los Angeles",
+  "domain": "stuccorepairlosangeles.com",
+  "phone": "555-555-0100",
+  "city": "Los Angeles",
+  "state": "California",
+  "schemaType": "GeneralContractor",
+  "accent": "#c0703a",
+  "accentDark": "#86461e",
+  "kicker": "Stucco work across Los Angeles",
+  "headline": "Los Angeles stucco, repaired to match.",
+  "intro": "Stucco crack repair, patching, re-stucco and colour coats for homes and commercial buildings across Los Angeles.",
+  "sectionKicker": "Why it matters here",
+  "sectionHeadline": "Sun, settling and the odd tremor all find the weak spots.",
+  "about": "Los Angeles stucco takes years of hard sun, seasonal rain and ground movement. Hairline cracks open, patches pull away and water gets behind the wall. We look at what caused the damage, repair it, and blend the finish so the fix does not show.",
+  "servicesHeadline": "Stucco repair, re-stucco and refinishing.",
+  "services": [
+    {
+      "title": "Stucco Crack Repair",
+      "description": "Hairline and structural cracks opened, filled and textured to match the wall around them.",
+      "link": "stucco-repair.html"
+    },
+    {
+      "title": "Patching & Damage Repair",
+      "description": "Holes, impact damage and failed old patches cut out and rebuilt in layers."
+    },
+    {
+      "title": "Re-Stucco & Colour Coat",
+      "description": "A fresh finish coat over sound stucco to refresh tired, faded or patchy walls.",
+      "link": "restucco.html"
+    },
+    {
+      "title": "Water Damage Repair",
+      "description": "Wet, bulging or stained areas opened up so the cause is fixed, not just the surface.",
+      "link": "water-damage.html"
+    },
+    {
+      "title": "New Stucco Installation",
+      "description": "Three-coat stucco for additions, ADUs, garden walls and remodels."
+    },
+    {
+      "title": "Exterior Painting",
+      "description": "Elastomeric and standard exterior coatings to finish and protect repaired stucco."
+    }
+  ],
+  "serviceAreas": [
+    "Los Angeles",
+    "Santa Monica",
+    "Beverly Hills",
+    "Culver City",
+    "Pasadena",
+    "Glendale",
+    "Burbank",
+    "San Fernando Valley"
+  ],
+  "areaHeadline": "Stucco repair across Los Angeles.",
+  "ctaHeadline": "Get the wall looked at.",
+  "ctaCopy": "Call for an estimate before a small crack turns into a water problem.",
+  "footerLine": "Stucco repair, re-stucco and installation in Los Angeles",
+  "seoTitle": "Stucco Repair Los Angeles | Crack Repair & Re-Stucco",
+  "seoDescription": "Los Angeles stucco repair: crack repair, patching, water damage, re-stucco and colour coats for homes and businesses.",
+  "assets": [],
+  "pages": [
+    {
+      "slug": "stucco-repair.html",
+      "navLabel": "Stucco repair",
+      "kicker": "Stucco repair",
+      "heading": "Stucco crack and patch repair in Los Angeles.",
+      "intro": "Cracks and damaged sections repaired and blended back into the existing texture and colour.",
+      "seoTitle": "Stucco Crack Repair Los Angeles CA | Stucco Repair Los Angeles",
+      "seoDescription": "Stucco crack and patch repair in Los Angeles, matched to the existing texture and colour of the wall.",
+      "service": "Stucco repair",
+      "sections": [
+        {
+          "kicker": "Not every crack is the same",
+          "heading": "Hairline cracks and structural cracks need different fixes.",
+          "body": "Fine surface cracks are usually shrinkage or minor movement and can be filled and refinished. Wider or stepped cracks, or cracks running from window and door corners, can point to movement underneath, and those need opening up and rebuilding rather than a skim of filler."
+        },
+        {
+          "kicker": "Matching the wall",
+          "heading": "The texture is what makes a repair disappear.",
+          "body": "Most Los Angeles homes have a sand, lace or smooth finish. A repair that is structurally sound but has the wrong texture still looks like a patch, so the finish coat is matched to the wall around it before colour goes on."
+        }
+      ],
+      "ctaHeadline": "Got a crack that keeps growing?"
+    },
+    {
+      "slug": "restucco.html",
+      "navLabel": "Re-stucco",
+      "kicker": "Re-stucco and colour coat",
+      "heading": "Re-stucco and colour coats in Los Angeles.",
+      "intro": "A new finish coat over sound stucco, for walls that are faded, patchy or covered in old repairs.",
+      "seoTitle": "Re-Stucco & Colour Coat Los Angeles CA | Stucco Repair Los Angeles",
+      "seoDescription": "Re-stucco and colour coat services in Los Angeles to refresh faded, patchy or heavily repaired stucco walls.",
+      "service": "Re-stucco and colour coat",
+      "sections": [
+        {
+          "kicker": "When it makes sense",
+          "heading": "A colour coat resets the whole wall.",
+          "body": "When a house has years of patches in slightly different shades, or the colour has faded unevenly in the sun, repairing piece by piece never quite matches. A new finish coat over the sound base gives one even texture and colour across the wall."
+        },
+        {
+          "kicker": "What comes first",
+          "heading": "The base has to be sound.",
+          "body": "A colour coat is a finish, not a fix. Loose, cracked or water-damaged areas are repaired first so the new coat bonds to solid stucco and does not crack along the old faults."
+        }
+      ],
+      "ctaHeadline": "Thinking about a fresh finish?"
+    },
+    {
+      "slug": "water-damage.html",
+      "navLabel": "Water damage",
+      "kicker": "Water damage",
+      "heading": "Stucco water damage repair.",
+      "intro": "Staining, bubbling and soft spots opened up so the cause is found and fixed.",
+      "seoTitle": "Stucco Water Damage Repair Los Angeles CA | Stucco Repair Los Angeles",
+      "seoDescription": "Stucco water damage repair in Los Angeles: stains, bubbling and soft areas opened up, the cause fixed and the wall rebuilt.",
+      "service": "Stucco water damage repair",
+      "sections": [
+        {
+          "kicker": "The signs",
+          "heading": "Stains, bubbling and crumbling near the base.",
+          "body": "Dark streaks below windows, bubbled or flaking paint, stucco that sounds hollow when tapped, and crumbling along the bottom of the wall are the usual signs that water is getting behind the finish."
+        },
+        {
+          "kicker": "Fixing the cause",
+          "heading": "Patching over wet stucco hides the problem.",
+          "body": "Water usually gets in at windows, roof lines, penetrations or a missing weep screed. The damaged section is opened, the paper and lath checked, the entry point dealt with, and the wall rebuilt so it can shed water again."
+        }
+      ],
+      "ctaHeadline": "Seeing stains or soft spots?"
+    },
+    {
+      "slug": "contact.html",
+      "navLabel": "Contact",
+      "kicker": "Get in touch",
+      "heading": "Contact Stucco Repair Los Angeles.",
+      "intro": "Tell us what the wall is doing and roughly how much of it, and we can say what the work involves.",
+      "seoTitle": "Contact | Stucco Repair Los Angeles CA",
+      "seoDescription": "Contact Stucco Repair Los Angeles for stucco crack repair, patching, water damage repair and re-stucco across Los Angeles.",
+      "sections": [
+        {
+          "kicker": "What helps",
+          "heading": "A few photos go a long way.",
+          "body": "Pictures of the crack, the stain or the damaged section, plus one of the whole wall, usually tell us whether it is a repair or a refinish before anyone visits."
+        }
+      ],
+      "ctaHeadline": "Get a free estimate."
+    }
+  ],
+  "leadForm": {
+    "kicker": "Request an estimate",
+    "heading": "Tell us about the wall.",
+    "intro": "Call if that is easier. Otherwise leave the details and we will get back to you.",
+    "placeholder": "What you are seeing (cracks, stains, bubbling or water inside), roughly how much area, and when you would like it looked at.",
+    "submit": "Send request",
+    "fineprint": "We use this to get back to you about the job. Nothing else."
+  }
+}

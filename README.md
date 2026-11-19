@@ -65,12 +65,12 @@ consistent `tel:` links, service and service-area sections, local assets,
 - Cactus Removal Tucson
 - Twin City Handyman
 - The Bird's Nest Flower Shop
+- Stucco Repair Los Angeles (sold; rebuilt 2026-11-19 for the buyer)
 
 ## Excluded sold sites
 
 These are not rebuilt, redeployed, or reconnected:
 
-- Stucco Repair Los Angeles
 - Stucco Repair Orlando
 - DunRite Towing Metairie
 
