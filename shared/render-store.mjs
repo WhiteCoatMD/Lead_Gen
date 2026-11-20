@@ -269,6 +269,19 @@ function checkoutEnabled(site) {
   return site?.checkout?.enabled === true;
 }
 
+// Visitor-facing closed season. Checkout logic is unchanged: this only
+// replaces "Coming soon" and order buttons while checkout stays off.
+function seasonText(site) {
+  if (checkoutEnabled(site)) return "";
+  return String(site.seasonNotice || "").trim();
+}
+
+function seasonMarkup(site, className) {
+  const text = seasonText(site);
+  if (!text) return "";
+  return `<p class="${className}">${esc(text)}</p>`;
+}
+
 function presentCheckout(site) {
   if (!checkoutEnabled(site)) return site;
   const next = structuredClone(site);
@@ -469,10 +482,13 @@ function meter(product) {
   return `<p class="meter"><span class="meter-label">Snark</span><span class="meter-bar" style="--n:${n}" aria-hidden="true"></span><span>${esc(`${label}${n} of 5`)}</span></p>`;
 }
 
-function productCard(product) {
+function productCard(site, product) {
   const href = `/products/${product.slug}`;
   const meta = [product.difficulty, product.snarkLabel].filter(Boolean);
   const dims = imageDims(product);
+  const action = seasonText(site)
+    ? seasonMarkup(site, "season-card")
+    : `<a class="text-link" href="${href}">View details</a>`;
   return `<article class="product" data-placeholder="${product.placeholder ? "true" : "false"}">
     <a class="product-media" href="${href}">
       <img src="${esc(imageSrc(product))}" alt="${esc(product.imageAlt || product.name)}" width="${dims.width}" height="${dims.height}" loading="lazy" decoding="async">
@@ -482,7 +498,7 @@ function productCard(product) {
       <p class="price"><span class="price-num">${esc(formatPrice(product.price))}</span></p>
       ${meta.length ? `<p class="meta">${esc(meta.join(" · "))}</p>` : ""}
       ${product.blurb ? `<p class="blurb">${esc(product.blurb)}</p>` : ""}
-      <a class="text-link" href="${href}">View details</a>
+      ${action}
     </div>
   </article>`;
 }
@@ -513,6 +529,7 @@ function buyBox(site, product) {
   const ready = site.checkoutReadyLabel || "Buy now";
   const waiting = site.checkoutEmptyLabel || "Coming soon — notify me";
   const ownCheckout = !checkout && checkoutEnabled(site);
+  const closed = Boolean(seasonText(site)) && !checkout && !ownCheckout;
   const offer = resolvePostmark(site);
   const personalization = fieldsFor(product, offer);
   const pricing = bundlePricingOf(product);
@@ -527,7 +544,7 @@ function buyBox(site, product) {
     : ownCheckout
       ? `<button type="button" class="button primary" data-stripe-checkout>Checkout</button>`
       : `<button type="button" class="button ghost" data-notify>${esc(waiting)}</button>`;
-  const notify = checkout || ownCheckout ? "" : `<div class="notify-panel" data-notify-panel hidden>
+  const notify = closed || checkout || ownCheckout ? "" : `<div class="notify-panel" data-notify-panel hidden>
       <p>Leave your email. We'll be in touch.</p>
       <form>
         <label class="field">Email<input type="email" name="notifyEmail" required autocomplete="email" maxlength="160"></label>
@@ -538,23 +555,25 @@ function buyBox(site, product) {
   const includes = (product.includes || []).length
     ? `<div><p class="kicker">What's included</p><ul class="includes">${product.includes.map((item) => `<li>${esc(item)}</li>`).join("")}</ul></div>`
     : "";
+  const orderActions = closed ? "" : `<div class="buy-actions">
+        <button type="submit" class="button primary">Add to cart</button>
+        ${action}
+      </div>`;
   return `<div class="buy-box">
     <p class="price"><span class="price-num">${esc(formatPrice(unit))}</span></p>${note ? `\n    <p class="bundle-note">${esc(note)}</p>` : ""}
     ${product.description ? `<p>${esc(product.description)}</p>` : ""}
     ${meter(product)}
     ${includes}
     ${product.timing ? `<p class="timing">${esc(product.timing)}</p>` : ""}${personalization.letters ? `\n    <p class="timing">${esc(postmarkSentence(offer))} A standard letter on this page, without the option, is printed in full color and mailed First-Class by USPS from the US mainland.</p>` : ""}
-    <form data-product-form data-slug="${esc(product.slug)}" data-name="${esc(product.name)}" data-price="${esc(unit)}" data-placeholder="${product.placeholder ? "true" : "false"}" data-checkout="${esc(checkout)}"${priceAttrs}${personalization.letters ? ` data-letter-count="${personalization.letters}"` : ""}>
+    ${closed ? seasonMarkup(site, "season-banner") : ""}
+    <form data-product-form data-slug="${esc(product.slug)}" data-name="${esc(product.name)}" data-price="${esc(unit)}" data-placeholder="${product.placeholder ? "true" : "false"}" data-checkout="${esc(checkout)}"${priceAttrs}${personalization.letters ? ` data-letter-count="${personalization.letters}"` : ""}${closed ? " hidden" : ""}>
       ${slots}${fieldsHtml(personalization.fields)}
       <label class="field qty-field">Quantity<input type="number" name="qty" min="1" max="20" value="1" required></label>
-      <div class="buy-actions">
-        <button type="submit" class="button primary">Add to cart</button>
-        ${action}
-      </div>
+      ${orderActions}
       <p class="form-status" role="status"></p>
     </form>
     ${notify}
-    <p class="quiet">${esc(ownCheckout ? "Checkout sends these details to our server. They are not added to the address bar." : (site.checkoutNote || "Add to cart keeps the details in this browser. Buy now uses the payment link on this product when one is set."))}</p>
+    ${closed ? "" : `<p class="quiet">${esc(ownCheckout ? "Checkout sends these details to our server. They are not added to the address bar." : (site.checkoutNote || "Add to cart keeps the details in this browser. Buy now uses the payment link on this product when one is set."))}</p>`}
   </div>`;
 }
 
@@ -613,7 +632,8 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
   const canonical = path ? `https://${site.domain}/${path}` : `https://${site.domain}/`;
   const contact = String(site.contactEmail || "").trim();
   const offer = resolvePostmark(site);
-  const flags = `${site.omitCheckoutQuery ? ` data-omit-checkout-query="true"` : ""}${checkoutEnabled(site) ? ` data-checkout-enabled="true"` : ""}${offer ? ` data-postmark-single="${offer.singleCents}" data-postmark-household="${offer.householdCents}" data-postmark-label="${esc("North Pole, Alaska postmark")}"` : ""}`;
+  const notice = seasonText(site);
+  const flags = `${site.omitCheckoutQuery ? ` data-omit-checkout-query="true"` : ""}${checkoutEnabled(site) ? ` data-checkout-enabled="true"` : ""}${notice ? ` data-season-notice="${esc(notice)}"` : ""}${offer ? ` data-postmark-single="${offer.singleCents}" data-postmark-household="${offer.householdCents}" data-postmark-label="${esc("North Pole, Alaska postmark")}"` : ""}`;
   const nav = navItems(site).map((item) => {
     const on = item.href === current;
     return `<a href="${esc(item.href)}"${on ? ` aria-current="page"` : ""}>${esc(item.label)}</a>`;
@@ -657,12 +677,13 @@ function shell(site, slug, { title, description, path, current, main, schemas, i
       <a class="brand" href="/" aria-label="${esc(site.name)} home"><span class="brand-text">${esc(site.name)}</span></a>
       <nav id="site-nav" aria-label="Primary">${nav}</nav>
       <div class="header-actions">
-        <a class="button primary header-shop" href="/shop">${esc(site.primaryCta || "Shop")}</a>
+        ${notice ? "" : `<a class="button primary header-shop" href="/shop">${esc(site.primaryCta || "Shop")}</a>`}
         <a class="cart-link" href="/cart">Cart <span data-cart-count>0</span></a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">Menu</button>
       </div>
     </header>
   </div>
+  ${notice ? `<div class="season-ribbon"><p>${esc(notice)}</p></div>` : ""}
   <main id="main">${main}</main>
   <footer><div class="shell footer-grid">
     <div><p class="brand-text">${esc(site.name)}</p><p class="legal">${esc(site.footerLine || "")}</p><p class="legal">${esc(site.city)}, ${esc(stateCode(site.state))}</p><p class="legal">© <span id="year"></span> ${esc(site.name)}</p></div>
@@ -701,16 +722,16 @@ function homeMain(site) {
         <p class="kicker">${esc(site.heroKicker || site.kicker || "")}</p>
         <h1>${esc(site.headline)}</h1>
         ${site.intro ? `<p class="lede">${esc(site.intro)}</p>` : ""}
-        <div class="hero-actions">
+        ${seasonText(site) ? seasonMarkup(site, "season-banner") : `<div class="hero-actions">
           <a class="button primary" href="/shop">${esc(site.primaryCta || "Shop")}</a>
           <a class="button ghost" href="#timing">${esc(site.secondaryCta || "Ordering")}</a>
-        </div>
+        </div>`}
       </div>
       ${heroVisual(site)}
     </section>
     ${ornamentRow(site.ornaments)}<section class="section shell" id="store">
       <div class="section-head"><p class="kicker">${esc(site.sectionKicker || "Shop")}</p><h2>${esc(site.servicesHeadline || "Featured")}</h2></div>
-      <div class="product-grid cols-3">${featured.map(productCard).join("")}</div>
+      <div class="product-grid cols-3">${featured.map((product) => productCard(site, product)).join("")}</div>
       ${site.featuredNote ? `<p class="featured-note">${esc(site.featuredNote)}</p>` : ""}
       ${site.catalogNote ? `<p class="catalog-note">${esc(site.catalogNote)}</p>` : ""}
       ${more}
@@ -813,7 +834,7 @@ export function storeDocuments(site, slug = "") {
       schemas: [breadcrumbSchema(site, [{ href: "/", label: "Home" }, { href: "/shop", label: site.shopHeading || "Shop" }])],
       main: `${crumbs([{ href: "/", label: "Home" }, { href: "/shop", label: site.shopHeading || "Shop" }])}
         <section class="shell page-hero"><p class="kicker">${esc(site.shopKicker || "Shop")}</p><h1>${esc(site.shopHeading || "Shop")}</h1>${site.shopIntro ? `<p class="lede">${esc(site.shopIntro)}</p>` : ""}</section>
-        <section class="section shell"><div class="product-grid cols-3">${products.map(productCard).join("")}</div>${site.catalogNote ? `<p class="catalog-note">${esc(site.catalogNote)}</p>` : ""}</section>`,
+        <section class="section shell"><div class="product-grid cols-3">${products.map((product) => productCard(site, product)).join("")}</div>${site.catalogNote ? `<p class="catalog-note">${esc(site.catalogNote)}</p>` : ""}</section>`,
     }),
   });
 
@@ -844,7 +865,7 @@ export function storeDocuments(site, slug = "") {
               ${buyBox(site, product)}
             </div>
           </article>
-          ${related.length ? `<section class="shell related"><h2>Also in the shop</h2><div class="product-grid">${related.map(productCard).join("")}</div></section>` : ""}`,
+          ${related.length ? `<section class="shell related"><h2>Also in the shop</h2><div class="product-grid">${related.map((product) => productCard(site, product)).join("")}</div></section>` : ""}`,
       }),
     });
   }
