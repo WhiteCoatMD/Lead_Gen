@@ -112,8 +112,11 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.match(emailPage, /type="checkbox"[^>]*name="adultDeliveryConfirm"/);
   assert.match(emailPage, /parent or guardian email, not a child/);
   assert.doesNotMatch(letterPage, /name="adultDeliveryConfirm"/);
-  assert.match(emailPage, /Coming soon/);
-  assert.match(letterPage, /Coming soon/);
+  assert.match(emailPage, /workshop is closed for 2026/);
+  assert.match(letterPage, /workshop is closed for 2026/);
+  assert.doesNotMatch(emailPage, /Coming soon/i);
+  assert.doesNotMatch(letterPage, /Coming soon/i);
+  assert.doesNotMatch(letterPage, /Add to cart/);
   assert.match(bundlePage, /December 9, 2026/);
   assert.match(letterPage, /December 9, 2026/);
   assert.match(emailPage, /December 24, 2026/);
@@ -232,6 +235,8 @@ test("Santa storefront keeps the real offers and does not invent a payment link"
   assert.doesNotMatch(rendered, /November 26/);
   assert.doesNotMatch(rendered, /\$9\.95/);
   assert.doesNotMatch(rendered, /\$14\.95/);
+  assert.doesNotMatch(rendered, /coming soon/i);
+  assert.match(rendered, /workshop is closed for 2026/);
   assert.equal(rendered.includes("aggregateRating"), false);
   assert.equal(rendered.includes("testimonial"), false);
 });
@@ -276,8 +281,10 @@ test("North Pole postmark upgrade is absent until the flag is turned on", async 
   assert.match(home, /data-postmark-single="995"/);
   assert.match(home, /data-postmark-household="1495"/);
   assert.match(home, /data-postmark-label="North Pole, Alaska postmark"/);
-  assert.match(letter, /Coming soon/);
-  assert.match(email, /Coming soon/);
+  assert.match(letter, /workshop is closed for 2026/);
+  assert.match(email, /workshop is closed for 2026/);
+  assert.doesNotMatch(letter, /Coming soon/i);
+  assert.doesNotMatch(email, /Coming soon/i);
   assert.equal(letter.includes('data-checkout=""') || letter.includes("data-checkout=\"\""), true);
 });
 
@@ -373,7 +380,8 @@ test("Santa checkout stays on the coming-soon path until checkout.enabled is tru
   const site = await readSite("custom-letters-from-santa-claus");
   assert.equal(site.checkout.enabled, false);
   const off = storeDocuments(site, "custom-letters-from-santa-claus").pages.find((page) => page.slug === "products/personalized-letter").html;
-  assert.match(off, /Coming soon/);
+  assert.match(off, /workshop is closed for 2026/);
+  assert.doesNotMatch(off, /Coming soon/i);
   assert.equal(off.includes("data-stripe-checkout"), false);
   assert.equal(off.includes("santa-checkout.js"), false);
   const on = structuredClone(site);
@@ -383,13 +391,18 @@ test("Santa checkout stays on the coming-soon path until checkout.enabled is tru
   assert.match(letter, /data-stripe-checkout/);
   assert.match(letter, /\/santa-checkout\.js/);
   assert.equal(letter.includes("Coming soon"), false);
+  assert.equal(letter.includes("workshop is closed for 2026"), false);
   assert.equal(letter.includes("childName="), false);
   assert.equal(blocks(letter).find((block) => block["@type"] === "Product").offers.availability, "https://schema.org/InStock");
   const home = renderStore(on, "custom-letters-from-santa-claus");
   assert.match(home, /data-checkout-enabled="true"/);
+  assert.match(home, /Shop the letters/);
   const quiet = renderStore(site, "custom-letters-from-santa-claus");
   assert.equal(quiet.includes("data-checkout-enabled"), false);
   assert.equal(quiet.includes("santa-checkout.js"), false);
+  assert.match(quiet, /Santa&#39;s workshop is closed for 2026\. See you next season!/);
+  assert.equal(quiet.includes("Coming soon"), false);
+  assert.equal(quiet.includes("Shop the letters"), false);
   const other = renderStore(await readSite("make-your-own-crap"), "make-your-own-crap");
   assert.equal(other.includes("data-checkout-enabled"), false);
   assert.equal(other.includes("santa-checkout.js"), false);

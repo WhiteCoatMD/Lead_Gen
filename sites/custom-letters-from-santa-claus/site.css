@@ -120,6 +120,58 @@ fieldset,
   color: var(--pine);
 }
 
+.season-ribbon {
+  background: var(--pine);
+  color: #fff8ea;
+  text-align: center;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 4px solid #c8922a;
+}
+
+.season-ribbon p {
+  margin: 0 auto;
+  max-width: 46rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.season-banner {
+  margin-top: 1.35rem;
+  max-width: 36rem;
+  padding: 1.05rem 1.2rem 1.1rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(#c8922a, #c8922a) 0 0 / 100% 6px no-repeat,
+    var(--pine);
+  color: #fff8ea;
+  font-weight: 800;
+  font-size: 1.15rem;
+  line-height: 1.45;
+  border: 3px solid #fff;
+  box-shadow: 0 12px 28px rgba(27, 67, 50, 0.16);
+}
+
+.buy-box .season-banner {
+  margin-top: 0.15rem;
+  max-width: none;
+}
+
+#cart-root .season-banner {
+  margin-top: 0.35rem;
+  max-width: 36rem;
+}
+
+.season-card {
+  margin: 0.35rem 0 0;
+  padding: 0.8rem 0.9rem;
+  border-radius: 16px;
+  background: var(--pine);
+  color: #fff8ea;
+  font-weight: 800;
+  line-height: 1.4;
+  border-top: 4px solid #c8922a;
+}
+
 .page-figure {
   margin: 0 0 1.2rem;
 }

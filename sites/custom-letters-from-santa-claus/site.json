@@ -55,6 +55,7 @@
   "featuredNote": "A printed letter, an email, or one flat price for 2 to 5 children in the same household. Families with more than 5 children can add a separate letter.",
   "primaryCta": "Shop the letters",
   "secondaryCta": "When to order",
+  "seasonNotice": "Santa's workshop is closed for 2026. See you next season!",
   "footerLine": "Personalized letters and emails from Santa Claus.",
   "checkoutNote": "Add to cart keeps what you typed on this device. Those details are not added to a payment link.",
   "omitCheckoutQuery": true,
@@ -83,7 +84,7 @@
   "shopSeoTitle": "Shop Santa Letters | Personalized for One Child",
   "shopSeoDescription": "Shop a printed Santa letter mailed First-Class in the United States, or an email from Santa on the date you choose. Details stay with the order.",
   "cartHeading": "Your cart",
-  "cartIntro": "Letters you add stay in this browser, along with the details you typed for each child.",
+  "cartIntro": "Santa's workshop is closed for 2026. See you next season!",
   "cartSeoTitle": "Your Cart | Custom Letters from Santa",
   "cartSeoDescription": "Review the Santa letters in your cart, including the details you entered for each child. Payment opens when a checkout link is added.",
   "areasKicker": "Shipping",
@@ -97,9 +98,9 @@
     { "title": "It arrives", "text": "Printed letters are printed in full color and mailed First-Class by USPS from the US mainland. Emails land in the inbox on the day you chose.", "image": "spot-reindeer.webp", "imageAlt": "Smiling cartoon reindeer with a red nose", "imageWidth": 360, "imageHeight": 360 }
   ],
   "timing": {
-    "kicker": "When to order",
-    "heading": "Give the mail a head start.",
-    "body": "Printed letters are printed in full color and mailed First-Class by USPS from the US mainland. Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. Email letters can be ordered any day through December 24, 2026, and are delivered on the date you pick.",
+    "kicker": "This season",
+    "heading": "Closed for 2026.",
+    "body": "Santa's workshop is closed for 2026. See you next season! Printed letters are printed in full color and mailed First-Class by USPS from the US mainland. Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. Email letters can be ordered any day through December 24, 2026, and are delivered on the date you pick.",
     "linkHref": "/shipping",
     "linkLabel": "Shipping and delivery"
   },
@@ -256,7 +257,7 @@
         { "q": "How does the email work?", "a": "You pick the date, any day through December 24, 2026. The email is sent to a parent or guardian email, never to a child, on the date you pick. We do not publish Santa's sending address on this site. If you pick today and the letter is still in review, it waits until it is approved." },
         { "q": "When should I order?", "a": "Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. They are printed in full color and mailed First-Class by USPS from the US mainland. Email letters can be ordered any day through December 24, 2026, and are delivered on the date you pick." },
         { "q": "Can I order for more than one child?", "a": "Yes. Order a separate letter for each child, or use the sibling bundle. The bundle is one flat price of $28.95 for 2 to 5 children in the same household. Each child gets their own letter in its own envelope, all mailed to the same address, First-Class by USPS. Families with more than 5 children can add a separate letter." },
-        { "q": "Is checkout open?", "a": "The button says coming soon until a payment link is on that letter. You can still fill in the form and keep it in the cart on this device. Leave your email and we will be in touch." },
+        { "q": "Is checkout open?", "a": "Santa's workshop is closed for 2026. See you next season! No order is placed from this site this year." },
         { "q": "Do you ship outside the United States?", "a": "This store mails printed letters in the United States only. An address outside the country is not an option on this site." },
         { "q": "What if a detail is wrong?", "a": "Use the contact page as soon as you notice. If we made the mistake, we correct it. If the letter has already been mailed, it cannot be pulled out of the post." }
       ]
@@ -295,12 +296,12 @@
     "contact": {
       "slug": "contact",
       "kicker": "Contact",
-      "heading": "A question before you order",
-      "intro": "The form on the letter you want is what we use to write it. Use this page for anything else.",
+      "heading": "A note for the workshop",
+      "intro": "Santa's workshop is closed for 2026. See you next season! Use this page if you still need to reach us.",
       "seoTitle": "Contact | Custom Letters from Santa Claus",
       "seoDescription": "Contact Custom Letters from Santa Claus about a letter or an email. Leave a note and we will be in touch.",
       "sections": [
-        { "heading": "What to use the form for", "body": "A question about timing, 2 or more children at one address, or a detail you are not sure how to phrase. The order itself belongs on the product page, so the answers stay attached to that letter." }
+        { "heading": "What to use the form for", "body": "A question about timing, 2 or more children at one address, or a detail you are not sure how to phrase. Santa's workshop is closed for 2026. See you next season!" }
       ]
     },
     "privacy": {
@@ -312,11 +313,11 @@
       "seoDescription": "How Custom Letters from Santa Claus handles the details you type, the cart saved in your browser, and the page view sent to our own server.",
       "sections": [
         { "heading": "The details you type", "body": "Names, ages, towns, stories, wish lists, dates, and mailing addresses are used only to write and send the letter or email you ordered. A parent or guardian places the order, and a parent or guardian email is required. We do not ask a child to use the site, and we do not collect a child's email. The email product is delivered only to a parent or guardian email." },
-        { "heading": "This browser", "body": "The cart, and a notify-me note if you leave one, stay in local storage on this device. Clearing the browser clears them. They are not sent anywhere by that form." },
-        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that button sends you to the payment provider, and the price on that link is the price that is charged. The details you entered are not added to that payment link. Until a link is set, the button says coming soon and no order is placed." },
+        { "heading": "This browser", "body": "The cart stays in local storage on this device. Clearing the browser clears it. It is not sent anywhere by that page." },
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that button sends you to the payment provider, and the price on that link is the price that is charged. The details you entered are not added to that payment link. Santa's workshop is closed for 2026. See you next season! No order is placed." },
         { "heading": "Page views", "body": "Opening a page sends a note to our own server with the path and the referrer. It is not an advertising network. We do not use a child's details for ads. We do not sell a list." },
         { "heading": "How long we keep it", "body": "We keep what you send long enough to write the letter, deliver it, and cover the refund window. Child details are deleted 60 days after that letter is sent or mailed. If a letter is rejected, those child details are deleted 60 days after the rejection. If an order is unpaid, canceled, or abandoned, child details are deleted after 7 days. The parent name, email, and mailing address are deleted 60 days after the last letter in the order is delivered. The order record that remains keeps the product and the amount, not the child's name or the family's contact details. A parent can ask us to delete the family's data sooner, and we delete the child details and the parent name, email, and address from our records. If Stripe created a Customer for the order, we delete that Customer. Stripe keeps the payment transaction records under its own legal obligations." },
-        { "heading": "Email", "body": "Leave your email on the contact page or with a coming-soon note. That address should be a parent or guardian. We will be in touch. The cart itself stays on this device." }
+        { "heading": "Email", "body": "Leave your email on the contact page. That address should be a parent or guardian. We will be in touch. The cart itself stays on this device." }
       ]
     },
     "terms": {
@@ -330,7 +331,7 @@
         { "heading": "The offer", "body": "The printed letter is $15.95. The email is $6.95. The sibling bundle is one flat price of $28.95 for 2 to 5 children in the same household. Families with more than 5 children can add a separate letter. Each page lists what that order includes." },
         { "heading": "Your details", "body": "You are the adult placing the order. You are responsible for the spelling of the child's name and for the mailing address or parent email you type. The letter is written from those answers. The email product is sent only to a parent or guardian email, never to a child." },
         { "heading": "Mailing and the date", "body": "A standard printed letter is printed in full color and mailed First-Class by USPS from the US mainland. We do not promise a delivery day for the post. Order mailed letters by Wednesday, December 9, 2026, 5:00 PM CT, for delivery before Christmas. An email can be ordered any day through December 24, 2026, and is sent on the date you choose after the letter is approved." },
-        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that link is where payment happens, and the price on the link is the price that is charged. The details you typed are not added to that payment link. Until a link is set, the button says coming soon and no order is placed." },
+        { "heading": "Payment", "body": "Card numbers are not typed into this site. When a product has a payment link, that link is where payment happens, and the price on the link is the price that is charged. The details you typed are not added to that payment link. Santa's workshop is closed for 2026. See you next season! No order is placed." },
         { "heading": "The shop", "body": "Custom Letters from Santa Claus, Grayson, Louisiana." }
       ]
     },

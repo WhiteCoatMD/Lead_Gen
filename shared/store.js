@@ -22,6 +22,10 @@ function paintCount(cart = loadCart()) {
   for (const node of document.querySelectorAll("[data-cart-count]")) node.textContent = String(count);
 }
 
+function seasonNotice() {
+  return document.documentElement.getAttribute("data-season-notice") || "";
+}
+
 function el(tag, attrs, children) {
   const node = document.createElement(tag);
   for (const [key, value] of Object.entries(attrs || {})) {
@@ -187,7 +191,9 @@ function renderLine(line) {
   });
   controls.append(remove);
   const href = checkoutHref(line.checkoutUrl, checkoutParams(line));
+  const notice = seasonNotice();
   if (href) controls.append(el("a", { class: "button primary", href }, ["Pay for this item"]));
+  else if (notice) controls.append(el("p", { class: "season-banner" }, [notice]));
   else controls.append(el("p", { class: "flag" }, ["Coming soon"]));
   wrap.append(controls);
   return wrap;
@@ -198,7 +204,13 @@ function renderCart(root) {
   root.replaceChildren();
   if (!cart.length) {
     root.append(el("p", { class: "empty-cart" }, ["Your cart is empty."]));
-    root.append(el("a", { class: "button primary", href: "/shop" }, ["Visit the shop"]));
+    const notice = seasonNotice();
+    if (notice) {
+      root.append(el("p", { class: "season-banner" }, [notice]));
+      root.append(el("a", { class: "text-link", href: "/shop" }, ["Look at the letters"]));
+    } else {
+      root.append(el("a", { class: "button primary", href: "/shop" }, ["Visit the shop"]));
+    }
     return;
   }
   for (const line of cart) root.append(renderLine(line));
@@ -206,7 +218,7 @@ function renderCart(root) {
   const feeLabel = document.documentElement.getAttribute("data-postmark-label");
   if (extra && feeLabel) root.append(el("p", { class: "cart-fee" }, [`${feeLabel} ${formatMoney(extra)}`]));
   root.append(el("p", { class: "cart-total" }, [formatMoney(cartTotal(cart) + extra)]));
-  if (cart.some((line) => !isCheckoutUrl(line.checkoutUrl))) {
+  if (!seasonNotice() && cart.some((line) => !isCheckoutUrl(line.checkoutUrl))) {
     root.append(el("p", { class: "quiet" }, [
       "Payment is not open yet. Your details stay in this browser.",
     ]));

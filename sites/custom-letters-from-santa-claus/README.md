@@ -45,7 +45,7 @@ Paid orders start with a template letter (`source` `template`). An assistant pol
 
 A missing or wrong token is 401. The compare is constant time.
 
-`checkout.enabled` in `site.json` defaults to `false`. While it is false, product buttons stay "Coming soon — notify me." Set `CHECKOUT_ENABLED=true` on a preview or local run to open the API without editing `site.json`. That override does nothing when `VERCEL_ENV` is `production`. The postmark add-on stays hidden while `postmarkUpgrade.enabled` is `false`.
+`checkout.enabled` in `site.json` defaults to `false`. While it is false, and `seasonNotice` is set, the public pages say the workshop is closed instead of offering a cart or a "Coming soon" button. Other stores without `seasonNotice` still show "Coming soon — notify me." Set `CHECKOUT_ENABLED=true` on a preview or local run to open the API without editing `site.json`. That override does nothing when `VERCEL_ENV` is `production`. The postmark add-on stays hidden while `postmarkUpgrade.enabled` is `false`.
 
 ## Database
 
@@ -98,7 +98,7 @@ node sites/custom-letters-from-santa-claus/server/dev-server.mjs
 
 In another terminal: `stripe listen --forward-to localhost:8787/api/santa/webhook`.
 
-5. Turn checkout on only for the preview you are testing (`"checkout": { "enabled": true }` in `site.json`). This branch leaves it `false`, so production buttons stay "Coming soon."
+5. Turn checkout on only for the preview you are testing (`"checkout": { "enabled": true }` in `site.json`). This branch leaves it `false`, so the public site keeps the closed-for-2026 notice.
 6. Open a printed letter or the email, fill the parent email and the child fields, and choose Checkout. Pay with card `4242 4242 4242 4242`, any future expiry, any CVC, any ZIP.
 7. The webhook stores the order and a draft. Open `http://localhost:8787/admin` (or `/admin` on the deployment), sign in, and approve one letter.
 8. Call the job:
